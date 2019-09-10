@@ -1,0 +1,51 @@
+
+{
+    "niopdcgatewayApp": {
+        "requestFilterElement" : {
+            "home": {
+                "title": "Request Filter Elements",
+                "createLabel": "Create a new Request Filter Element",
+                "createOrEditLabel": "Create or edit a Request Filter Element"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Request Filter Element {{ id }}?"
+            },
+            "detail": {
+                "title": "Request Filter Element"
+            },
+            "filterNumber": "Filter Number",
+            "lastChangeDate": "Last Change Date",
+            "microFilter": "Micro Filter",
+            "coalescer": "Coalescer",
+            "separator": "Separator",
+            "monitor": "Monitor",
+            "clay": "Clay",
+            "productId": "Product Id",
+            "filterLocation": "Filter Location",
+            "psi": "Psi",
+            "microFilterModel": "Micro Filter Model",
+            "microFilterModelCount": "Micro Filter Model Count",
+            "coalesceModel": "Coalesce Model",
+            "coalesceModelCount": "Coalesce Model Count",
+            "monitorModel": "Monitor Model",
+            "monitorModelCount": "Monitor Model Count",
+            "separatorModel": "Separator Model",
+            "separatorModelCount": "Separator Model Count",
+            "clayModel": "Clay Model",
+            "clayModelCount": "Clay Model Count",
+            "elementRequestReason": "Element Request Reason",
+            "amountFuelPassed": "Amount Fuel Passed",
+            "description": "Description",
+            "isSend": "Is Send",
+            "oilTank": "Oil Tank",
+            "refuelCenter": "RefuelCenter"
+        }
+    },
+    "niopdcaoApp": {
+        "requestFilterElement" : {
+            "created": "A new Request Filter Element is created with identifier {{ param }}",
+            "updated": "A Request Filter Element is updated with identifier {{ param }}",
+            "deleted": "A Request Filter Element is deleted with identifier {{ param }}"
+        }
+    }
+}

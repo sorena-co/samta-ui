@@ -1,0 +1,36 @@
+
+<div *ngIf="userRefuelCenter">
+    <h2><span jhiTranslate="niopdcgatewayApp.userRefuelCenter.detail.title">User RefuelCenter</span> {{userRefuelCenter.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="niopdcgatewayApp.userRefuelCenter.username">Username</span></dt>
+        <dd>
+            <span>{{userRefuelCenter.username}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.userRefuelCenter.accessType">Access Type</span></dt>
+        <dd>
+            <span jhiTranslate="{{'niopdcgatewayApp.AccessType.' + userRefuelCenter.accessType}}">{{userRefuelCenter.accessType}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.userRefuelCenter.refuelCenter">RefuelCenter</span></dt>
+        <dd>
+            <span *ngFor="let refuelCenter of userRefuelCenter.refuelCenters; let last = last">
+                <a [routerLink]="['/refuel-center', refuelCenter?.id ]">{{refuelCenter.persianTitle}}</a>{{last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'user-refuel-center/'+ userRefuelCenter.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

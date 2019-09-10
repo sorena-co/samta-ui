@@ -1,0 +1,33 @@
+{
+    "niopdcgatewayApp": {
+        "carRfId": {
+            "home": {
+                "title": "تگ ها",
+                "createLabel": "ایجاد",
+                "createOrEditLabel": "ویرایش",
+                "customerTitle": "مشتری"
+            },
+            "delete": {
+                "question": "آیا برای حذف این تگ مطمئن هستید؟"
+            },
+            "detail": {
+                "title": "تگ"
+            },
+            "code": "کد",
+            "active": "فعال",
+            "activeTrue": "فعال",
+            "activeFalse": "غیر فعال",
+            "customer": "مشتری",
+            "buyDate": "تاریخ خرید",
+            "price": "قیمت",
+            "tagRate": "نرخ تگ"
+        }
+    },
+    "niopdcbaseApp": {
+        "carRfId": {
+            "created": "تگ با موفقیت ایجاد شد.",
+            "updated": "تگ با موفقیت ویرایش شد.",
+            "deleted": "تگ با موفقیت حذف شد."
+        }
+    }
+}

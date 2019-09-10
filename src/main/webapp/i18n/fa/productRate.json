@@ -1,0 +1,47 @@
+
+{
+    "niopdcgatewayApp": {
+        "productRate": {
+            "home": {
+                "homeTitle": "خانه",
+                "productTitle":"فرآورده",
+                "containerTitle":"ظرف فرآورده",
+                "title": "نرخ فرآورده",
+                "createLabel":"ایجاد نرخ فرآورده",
+                "createOrEditLabel":"ویرایش نرخ فرآورده",
+                "view":"نمایش نرخ فرآورده",
+                "search": "جستجو"
+            },
+            "delete": {
+                "question": "آیا برای حذف این نرخ مطمئن هستید؟"
+            },
+            "detail": {
+                "title": "نرخ فرآورده"
+            },
+            "productId": "Product Id",
+            "containerId": "Container Id",
+            "src": "رمز فرآورده",
+            "title": "نام نرخ",
+            "special": "ويژه",
+            "price": "بهاي فرآورده",
+            "galon": "گالن",
+            "hasTax": "مشمول محاسبه",
+            "isPublic": "فرآورده آزاد",
+            "startDate": "تاريخ شروع",
+            "finishDate": "تاریخ پايان",
+            "currency": "واحد پولی",
+            "product": "فرآورده",
+            "rateGroup": "گروه نرخی",
+            "regionId":"تقسیمات کشوری",
+            "locationId":"منطقه/ناحیه",
+            "customerTypeId":"نوع مشتری"
+        }
+    },
+    "niopdcrateApp": {
+        "productRate": {
+            "created": "نرخ فرآورده با موفقیت ایجاد شد.",
+            "updated": "نرخ فرآورده با موفقیت ویرایش شد.",
+            "deleted": "نرخ با موفقیت حذف شد."
+        }
+    }
+}

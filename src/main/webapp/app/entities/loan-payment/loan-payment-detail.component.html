@@ -1,0 +1,46 @@
+
+<div *ngIf="loanPayment">
+    <h2><span jhiTranslate="niopdcgatewayApp.loanPayment.detail.title">Loan Payment</span> {{loanPayment.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="niopdcgatewayApp.loanPayment.paymentId">Payment Id</span></dt>
+        <dd>
+            <span>{{loanPayment.paymentId}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.loanPayment.price">Price</span></dt>
+        <dd>
+            <span>{{loanPayment.price}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.loanPayment.data">Data</span></dt>
+        <dd>
+            <span>{{loanPayment.data | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.loanPayment.loan">Loan</span></dt>
+        <dd>
+            <div *ngIf="loanPayment.loanId">
+                <a [routerLink]="['/loan', loanPayment.loanId]">{{loanPayment.loanId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.loanPayment.billItem">Bill Item</span></dt>
+        <dd>
+            <div *ngIf="loanPayment.billItemId">
+                <a [routerLink]="['/bill-item', loanPayment.billItemId]">{{loanPayment.billItemId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'loan-payment/'+ loanPayment.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

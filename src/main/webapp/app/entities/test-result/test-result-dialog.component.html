@@ -1,0 +1,262 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 *ngIf="testResult.id==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.testResult.home.createLabel">
+            Create</h4>
+        <h4 *ngIf="testResult.id!=null && !isView" class="modal-title" id="editLabel"
+            jhiTranslate="niopdcgatewayApp.testResult.home.createOrEditLabel">
+            Edit</h4>
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.testResult.home.view">
+            View</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;
+        </button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.appearance"
+                       for="field_appearance">Appearance</label>
+                <input [disabled]="isView" type="text" class="form-control" name="appearance" id="field_appearance"
+                       [(ngModel)]="testResult.appearance" required/>
+                <div [hidden]="!(editForm.controls.appearance?.dirty && editForm.controls.appearance?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.appearance?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.densityAt15"
+                       for="field_densityAt15">Density At 15</label>
+                <input [disabled]="isView" type="text" class="form-control" name="densityAt15" id="field_densityAt15"
+                       [(ngModel)]="testResult.densityAt15" required/>
+                <div [hidden]="!(editForm.controls.densityAt15?.dirty && editForm.controls.densityAt15?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.densityAt15?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.distillation"
+                       for="field_distillation">Distillation</label>
+                <input [disabled]="isView" type="text" class="form-control" name="distillation" id="field_distillation"
+                       [(ngModel)]="testResult.distillation" required/>
+                <div [hidden]="!(editForm.controls.distillation?.dirty && editForm.controls.distillation?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.distillation?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.ibp"
+                       for="field_ibp">Ibp</label>
+                <input [disabled]="isView" type="text" class="form-control" name="ibp" id="field_ibp"
+                       [(ngModel)]="testResult.ibp" required/>
+                <div [hidden]="!(editForm.controls.ibp?.dirty && editForm.controls.ibp?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.ibp?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.tenPresentRecovered"
+                       for="field_tenPresentRecovered">Ten Present Recovered</label>
+                <input [disabled]="isView" type="text" class="form-control" name="tenPresentRecovered"
+                       id="field_tenPresentRecovered"
+                       [(ngModel)]="testResult.tenPresentRecovered" required/>
+                <div
+                    [hidden]="!(editForm.controls.tenPresentRecovered?.dirty && editForm.controls.tenPresentRecovered?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.tenPresentRecovered?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.fiftyPresentRecovered"
+                       for="field_fiftyPresentRecovered">Fifty Present Recovered</label>
+                <input [disabled]="isView" type="text" class="form-control" name="fiftyPresentRecovered"
+                       id="field_fiftyPresentRecovered"
+                       [(ngModel)]="testResult.fiftyPresentRecovered" required/>
+                <div
+                    [hidden]="!(editForm.controls.fiftyPresentRecovered?.dirty && editForm.controls.fiftyPresentRecovered?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.fiftyPresentRecovered?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.ninetyPresentRecovered"
+                       for="field_ninetyPresentRecovered">Ninety Present Recovered</label>
+                <input [disabled]="isView" type="text" class="form-control" name="ninetyPresentRecovered"
+                       id="field_ninetyPresentRecovered"
+                       [(ngModel)]="testResult.ninetyPresentRecovered" required/>
+                <div
+                    [hidden]="!(editForm.controls.ninetyPresentRecovered?.dirty && editForm.controls.ninetyPresentRecovered?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.ninetyPresentRecovered?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.fbp"
+                       for="field_fbp">Fbp</label>
+                <input [disabled]="isView" type="text" class="form-control" name="fbp" id="field_fbp"
+                       [(ngModel)]="testResult.fbp" required/>
+                <div [hidden]="!(editForm.controls.fbp?.dirty && editForm.controls.fbp?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.fbp?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.rl"
+                       for="field_rl">Rl</label>
+                <input [disabled]="isView" type="text" class="form-control" name="rl" id="field_rl"
+                       [(ngModel)]="testResult.rl" required/>
+                <div [hidden]="!(editForm.controls.rl?.dirty && editForm.controls.rl?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.rl?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.existentGum"
+                       for="field_existentGum">Existent Gum</label>
+                <input [disabled]="isView" type="text" class="form-control" name="existentGum" id="field_existentGum"
+                       [(ngModel)]="testResult.existentGum" required/>
+                <div [hidden]="!(editForm.controls.existentGum?.dirty && editForm.controls.existentGum?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.existentGum?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.flashPoint"
+                       for="field_flashPoint">Flash Point</label>
+                <input [disabled]="isView" type="text" class="form-control" name="flashPoint" id="field_flashPoint"
+                       [(ngModel)]="testResult.flashPoint" required/>
+                <div [hidden]="!(editForm.controls.flashPoint?.dirty && editForm.controls.flashPoint?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.flashPoint?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.copperCorrosion"
+                       for="field_copperCorrosion">Copper Corrosion</label>
+                <input [disabled]="isView" type="text" class="form-control" name="copperCorrosion"
+                       id="field_copperCorrosion"
+                       [(ngModel)]="testResult.copperCorrosion" required/>
+                <div
+                    [hidden]="!(editForm.controls.copperCorrosion?.dirty && editForm.controls.copperCorrosion?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.copperCorrosion?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.freezing"
+                       for="field_freezing">Freezing</label>
+                <input [disabled]="isView" type="text" class="form-control" name="freezing" id="field_freezing"
+                       [(ngModel)]="testResult.freezing" required/>
+                <div [hidden]="!(editForm.controls.freezing?.dirty && editForm.controls.freezing?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.freezing?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.conductivity"
+                       for="field_conductivity">Conductivity</label>
+                <input [disabled]="isView" type="text" class="form-control" name="conductivity" id="field_conductivity"
+                       [(ngModel)]="testResult.conductivity" required/>
+                <div [hidden]="!(editForm.controls.conductivity?.dirty && editForm.controls.conductivity?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.conductivity?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-4" style="text-align: center;margin-top: auto">
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.isSend" for="field_isSend">Is
+                    Send</label>
+                <input [disabled]="isView" type="checkbox" class="form-control" name="isSend" id="field_isSend"
+                       [(ngModel)]="testResult.isSend"/>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button *ngIf="!isView" type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

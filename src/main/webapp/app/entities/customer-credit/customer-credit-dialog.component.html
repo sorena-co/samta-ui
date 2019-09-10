@@ -1,0 +1,289 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 *ngIf="customerCredit.id==null" class="modal-title" id="createLabel"
+            jhiTranslate="niopdcgatewayApp.{{customerCredit.personId?'personCredit':'customerCredit'}}.home.createLabel">
+            Create</h4>
+        <h4 *ngIf="customerCredit.id!=null && !isView" class="modal-title" id="editLabel"
+            jhiTranslate="niopdcgatewayApp.{{customerCredit.personId?'personCredit':'customerCredit'}}.home.createOrEditLabel">
+            Edit</h4>
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel"
+            jhiTranslate="niopdcgatewayApp.{{customerCredit.personId?'personCredit':'customerCredit'}}.home.view">
+            View</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;
+        </button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.startDate"
+                           for="field_startDate">Start Date</label>
+                    <div class="d-flex">
+                        <ng2-datetimepicker [disableTime]="true" [disabled]="isView" [rtlActive]="true" time="00:00:00"
+                                            id="field_startDate"
+                                            class="form-control"
+                                            name="startDate" [(ngModel)]="customerCredit.startDate"
+                                            [required]="true"></ng2-datetimepicker>
+                    </div>
+                    <div [hidden]="!(editForm.controls.startDate?.dirty && editForm.controls.startDate?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.startDate?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.startDate?.errors?.ZonedDateTimelocal"
+                               jhiTranslate="entity.validation.ZonedDateTimelocal">
+                            This field should be a date and time.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6"
+            >
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.finishDate"
+                           for="field_finishDate">Finish Date</label>
+                    <div class="d-flex">
+                        <ng2-datetimepicker [disableTime]="true" [disabled]="isView" [rtlActive]="true" time="23:59:59"
+                                            id="field_finishDate"
+                                            class="form-control"
+                                            name="finishDate" [(ngModel)]="customerCredit.finishDate"
+                                            required></ng2-datetimepicker>
+                    </div>
+                    <div [hidden]="!(editForm.controls.finishDate?.dirty && editForm.controls.finishDate?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.finishDate?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.finishDate?.errors?.ZonedDateTimelocal"
+                               jhiTranslate="entity.validation.ZonedDateTimelocal">
+                            This field should be a date and time.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-3" [hidden]="!customerCredit.id">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.creditNumber"
+                           for="field_creditNumber">Credit Number</label>
+                    <input disabled type="text" class
+                        ="form-control" name="creditNumber" id="field_creditNumber"
+                           [(ngModel)]="customerCredit.creditNumber"
+                           [numeric]="{min:0}"
+                           required/>
+                    <div
+                        [hidden]="!(editForm.controls.creditNumber?.dirty && editForm.controls.creditNumber?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.creditNumber?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.parentBuyType"
+                           for="field_parentBuyType">Parent Credit</label>
+                    <select
+                        class="form-control"
+                        id="field_parentBuyType"
+                        name="parentBuyType"
+                        (ngModelChange)="onParentBuyTypeChange($event)"
+                        [(ngModel)]="customerCredit.parentBuyTypeId"
+                        [disabled]="isView"
+                    >
+                        <option *ngFor="let buyTypeOption of buyTypes; trackBy: trackBuyTypeById"
+                                [ngValue]="buyTypeOption.id">{{buyTypeOption.title}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-3" *ngIf="customerCredit.parentBuyGroup !== buyGroup[buyGroup.QUOTA]">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.credit"
+                           for="field_credit">Credit</label>
+                    <input [disabled]="isView || customerCredit.parentTypeEffect === typeEffect[typeEffect.AMOUNT]"
+                           type="number"
+                           class="form-control"
+                           [ngClass]="{'ng-invalid': expressionErrorCredit,'ng-valid': !expressionErrorCredit,'ng-dirty': expressionErrorCredit}"
+                           name="credit" id="field_credit"
+                           [(ngModel)]="customerCredit.credit"
+                           [required]="customerCredit.parentBuyGroup!==buyGroup[buyGroup.FINANCIAL_LICENSE]"/>
+                    <div [hidden]="!(editForm.controls.credit?.dirty && editForm.controls.credit?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.credit?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.credit?.errors?.number"
+                               jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                        <small class="form-text text-danger"
+                               jhiTranslate="niopdcgatewayApp.customerCredit.creditError">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3" *ngIf="customerCredit.parentBuyGroup !== buyGroup[buyGroup.QUOTA]">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.currentCredit"
+                           for="field_currentCredit">Current Credit</label>
+                    <input disabled type="number" class="form-control" name="currentCredit"
+                           id="field_currentCredit"
+                           [(ngModel)]="customerCredit.currentCredit"
+                    />
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3" *ngIf="customerCredit.parentBuyGroup!==buyGroup[buyGroup.CREDIT]">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.amount"
+                           for="field_amount">Amount</label>
+                    <input [disabled]="isView || customerCredit.parentTypeEffect===typeEffect[typeEffect.CREDIT]"
+                           type="number"
+                           class="form-control"
+                           [ngClass]="{'ng-invalid': expressionErrorAmount,'ng-valid': !expressionErrorAmount,'ng-dirty': expressionErrorAmount}"
+                           name="amount" id="field_amount"
+                           [numeric]="{min:0}"
+                           [(ngModel)]="customerCredit.amount"
+                           [required]="customerCredit.parentBuyGroup!==buyGroup[buyGroup.FINANCIAL_LICENSE]&&customerCredit.parentBuyGroup!==buyGroup[buyGroup.CREDIT]"/>
+                    <div [hidden]="!(editForm.controls.amount?.dirty && editForm.controls.amount?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.amount?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.amount?.errors?.number"
+                               jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3" *ngIf="customerCredit.parentBuyGroup!==buyGroup[buyGroup.CREDIT]">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.currentAmount"
+                           for="field_currentAmount">Current Amount</label>
+                    <input [disabled]="isView" disabled type="number" class="form-control" name="currentAmount"
+                           id="field_currentAmount"
+                           [(ngModel)]="customerCredit.currentAmount"
+                    />
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4" *ngIf="(customerId ) && !sellContractProductId">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.product"
+                           for="field_product">Product</label>
+                    <sell-contract-product-selector
+                        [multiSelect]="false"
+                        [(ngModel)]="customerCredit.productId" class="form-control"
+                        id="field_product"
+                        widthGrid="500px"
+                        [ngModelOptions]="{standalone: true}"
+                        ngDefaultControl
+                        [showFields]="{sellContractNumber:true,productTitle:true,currencyRateGroupTitle:true}"
+                        [sellContractProducts]="sellcontractproducts"
+                        required
+                        [disabled]="isView"
+                        name="product"
+                    >
+                    </sell-contract-product-selector>
+                    <!--<select class="form-control" id="field_product" name="product"
+                            [disabled]="isView"
+                            [(ngModel)]="customerCredit.productId"
+                            [required]="(customerCredit.customerId)?true:false">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="sellContractProductOption.id"
+                                *ngFor="let sellContractProductOption of sellcontractproducts; trackBy: trackSellContractProductById">
+                            {{sellContractProductOption.productTitle}}
+                        </option>
+                    </select>-->
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4" *ngIf="customerCredit.parentTypeEffect!==typeEffect[typeEffect.AMOUNT]">
+                <div class="form-group">
+                    <label jhiTranslate="niopdcgatewayApp.customerCredit.currencyId"
+                           for="field_currency">Currency</label>
+                    <select [disabled]="isView" class="form-control" id="field_currency"
+                            (change)="changeCurrency()" name="currency"
+                            [(ngModel)]="customerCredit.currencyId"
+                            [required]="true"
+                    >
+                        <option [ngValue]="null"></option>
+                        <option *ngFor="let currencyOption of currencies; trackBy: trackCurrencyById"
+                                [ngValue]="currencyOption.id">
+                            {{currencyOption.title}}
+                        </option>
+                    </select>
+                    <div
+                        [hidden]="!(editForm.controls.currency?.dirty && editForm.controls.currency?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.currency?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4" *ngIf="customerCredit.parentBuyGroup===buyGroup[buyGroup.FINANCIAL_LICENSE]||customerCredit.parentBuyGroup===buyGroup[buyGroup.CREDIT]">
+                <div class="form-group">
+                    <label class="form-control-label"
+                           jhiTranslate="niopdcgatewayApp.customerCredit.currencyRateGroupId"
+                           for="field_currencyRateGroupId">Currency Rate Type</label>
+                    <select class="form-control" name="currencyRateGroupId"
+                            [disabled]="isView"
+                            [(ngModel)]="customerCredit.currencyRateGroupId"
+                            id="field_currencyRateGroupId"
+                            [required]="true"
+                    >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="currencyRateGroupOption.id"
+                                *ngFor="let currencyRateGroupOption of currencyRateGroups; trackBy: trackcurrencyRateGroupById">
+                            {{currencyRateGroupOption.title}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div *ngIf="customerCredit.parentTypeEffect=='CREDIT'|| customerCredit.parentTypeEffect=='BOTH'" class="col-md-3">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.minCredit"
+                           for="field_minCredit">minCredit</label>
+                    <input [disabled]="isView" type="number" class="form-control" name="minCredit" id="field_minCredit"
+                           [(ngModel)]="customerCredit.minCredit"/>
+                </div>
+            </div>
+            <div *ngIf="customerCredit.parentTypeEffect=='AMOUNT'|| customerCredit.parentTypeEffect=='BOTH'" class="col-md-3">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.minAmount"
+                           for="field_minAmount">minAmount</label>
+                    <input [disabled]="isView" type="number" class="form-control" name="minAmount" id="field_minAmount"
+                           [(ngModel)]="customerCredit.minAmount"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" *ngIf="!isView" [disabled]="editForm.form.invalid || isSaving"
+                class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

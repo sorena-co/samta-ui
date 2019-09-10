@@ -1,0 +1,12 @@
+{
+    "niopdcgatewayApp": {
+        "BuyGroup" : {
+            "null": "",
+            "QUOTA": "سهمیه",
+            "CASH": "نقدی",
+            "CREDIT": "اعتبار",
+            "PREBUY": "پیش خرید",
+            "FINANCIAL_LICENSE": "مجوز مالی"
+        }
+    }
+}

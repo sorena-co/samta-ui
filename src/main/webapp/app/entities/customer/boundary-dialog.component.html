@@ -1,0 +1,96 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+    <div class="modal-header">
+        <h4 *ngIf="customer.id==null" class="modal-title" id="createLabel"
+            jhiTranslate="niopdcgatewayApp.customer.home.createLabel">
+            Create</h4>
+        <h4 *ngIf="customer.id!=null && !isView" class="modal-title" id="editLabel"
+            jhiTranslate="niopdcgatewayApp.customer.home.createOrEditLabel">
+            Edit</h4>
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.customer.home.view">
+            View</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;
+        </button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label"
+                           jhiTranslate="niopdcgatewayApp.vehicleModel.home.title"
+                           for="field_vehicleModel">Vehicle Model</label>
+                    <select [disabled]="isView"
+                            (ngModelChange)="onChangeVehicleModel($event)"
+                            class="form-control" id="field_vehicleModel" name="vehicleModel"
+                            [(ngModel)]="customer.vehicleModelId" required>
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="vehicleModelOption.id"
+                                *ngFor="let vehicleModelOption of vehicleModels; trackBy: trackVehicleModelById">
+                            {{vehicleModelOption.title}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.plaque"
+                           for="field_plaque">Name</label>
+                    <!--<input [disabled]="isView" type="text" class="form-control" name="plaque" id="field_plaque"
+                           [(ngModel)]="customer.plaque"/>-->
+                    <jhi-plaque [disabled]="isView" [plaqueId]="customer.plaqueTemplateId"
+                                id="field_plaque"
+                                [required]="true"
+                                (selectedItem)="onChangePlaque($event)"
+                                [(ngModel)]="customer.plaque" class="form-control"
+                                [ngModelOptions]="{standalone: true}"></jhi-plaque>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" *ngIf="vehicleModel.havePrimitiveMeasure">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.productId"
+                           for="field_product">Product</label>
+                    <p-dropdown [options]="customProducts" [(ngModel)]="selectedProduct"
+                                [filter]="true"
+                                [disabled]="isView"
+                                class="form-control"
+                                (onChange)="onChangeProduct($event.value)"
+                                filterBy="label"
+                                id="field_product"
+                                name="productId"
+                                ngDefaultControl
+                    >
+                    </p-dropdown>
+                </div>
+                <div [hidden]="!(editForm.controls.product?.dirty && editForm.controls.product?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.product?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            <div class="col-md-6" *ngIf="vehicleModel && vehicleModel.havePrimitiveMeasure">
+                <div class="form-group">
+                    <label class="form-control-label"
+                           jhiTranslate="niopdcgatewayApp.carRfId.detail.title"
+                           for="field_vehicleModel">Vehicle Model</label>
+                    <input [disabled]="customer.id"
+                           class="form-control" id="field_carRfId" name="carRfId"
+                           [(ngModel)]="customer.carRfId" required/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button *ngIf="!isView" type="submit" [disabled]="editForm.form.invalid || isSaving"
+                class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

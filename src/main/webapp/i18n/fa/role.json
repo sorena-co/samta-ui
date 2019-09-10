@@ -1,0 +1,35 @@
+{
+    "niopdcgatewayApp": {
+        "role": {
+            "home": {
+                "title": "نقش ها",
+                "createLabel": "ایجاد نقش",
+                "createOrEditLabel": "ویرایش نقش",
+                "view": "نمایش نقش"
+            },
+            "delete": {
+                "question": "آیا برای حذف نقش  {{ id }} مطمئن هستید؟"
+            },
+            "detail": {
+                "title": "نقش"
+            },
+            "name": "نام",
+            "activated": "فعال",
+            "activatedTrue": "فعال",
+            "activatedFalse": "غیر فعال",
+            "authorities": "دسترسی ها",
+            "denyAuthorities": "عدم دسترسی ها",
+            "roleType":"نوع نقش",
+            "ROLE":"نقش",
+            "userType": "نوع کاربر",
+            "PERSON":"شخص"
+        }
+    },
+    "niopdcuaaApp": {
+        "Role": {
+            "created": "نقش با موفقیت ایجاد شد.",
+            "updated": "نقش با موفقیت ویرایش شد.",
+            "deleted": "نقش با موفقیت حذف شد."
+        }
+    }
+}

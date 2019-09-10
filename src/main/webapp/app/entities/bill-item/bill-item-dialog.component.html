@@ -1,0 +1,139 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myBillItemLabel" jhiTranslate="niopdcgatewayApp.billItem.home.createOrEditLabel">Create or edit a Bill Item</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!billItem.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="billItem.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.title" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                [(ngModel)]="billItem.title" required/>
+            <div [hidden]="!(editForm.controls.title?.dirty && editForm.controls.title?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.title?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.productId" for="field_productId">Product Id</label>
+            <input type="number" class="form-control" name="productId" id="field_productId"
+                [(ngModel)]="billItem.productId" required/>
+            <div [hidden]="!(editForm.controls.productId?.dirty && editForm.controls.productId?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.productId?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.productId?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.litre" for="field_litre">Litre</label>
+            <input type="number" class="form-control" name="litre" id="field_litre"
+                [(ngModel)]="billItem.litre" required/>
+            <div [hidden]="!(editForm.controls.litre?.dirty && editForm.controls.litre?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.litre?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.litre?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.costId" for="field_costId">Cost Id</label>
+            <input type="number" class="form-control" name="costId" id="field_costId"
+                [(ngModel)]="billItem.costId" required/>
+            <div [hidden]="!(editForm.controls.costId?.dirty && editForm.controls.costId?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.costId?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.costId?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.price" for="field_price">Price</label>
+            <input type="number" class="form-control" name="price" id="field_price"
+                [(ngModel)]="billItem.price" required/>
+            <div [hidden]="!(editForm.controls.price?.dirty && editForm.controls.price?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.price?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.price?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.costRatePrice" for="field_costRatePrice">Cost Rate Price</label>
+            <input type="number" class="form-control" name="costRatePrice" id="field_costRatePrice"
+                [(ngModel)]="billItem.costRatePrice" required/>
+            <div [hidden]="!(editForm.controls.costRatePrice?.dirty && editForm.controls.costRatePrice?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.costRatePrice?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.costRatePrice?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.costElementId" for="field_costElementId">Cost Element Id</label>
+            <input type="number" class="form-control" name="costElementId" id="field_costElementId"
+                [(ngModel)]="billItem.costElementId" required/>
+            <div [hidden]="!(editForm.controls.costElementId?.dirty && editForm.controls.costElementId?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.costElementId?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.costElementId?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.bill" for="field_bill">Bill</label>
+            <select class="form-control" id="field_bill" name="bill" [(ngModel)]="billItem.billId"  required>
+                <option *ngIf="!editForm.value.bill" [ngValue]="null" selected></option>
+                <option [ngValue]="billOption.id" *ngFor="let billOption of bills; trackBy: trackBillById">{{billOption.id}}</option>
+            </select>
+        </div>
+        <div [hidden]="!(editForm.controls.bill?.dirty && editForm.controls.bill?.invalid)">
+            <small class="form-text text-danger"
+                [hidden]="!editForm.controls.bill?.errors?.required" jhiTranslate="entity.validation.required">
+                This field is required.
+            </small>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

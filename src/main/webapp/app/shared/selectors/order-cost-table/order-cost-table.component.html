@@ -1,0 +1,30 @@
+<div>
+    <div>
+        <label [style.color]="productColor"
+               (focus)="showTable()"
+        >
+            {{productCost}}
+        <a class="text-primary" (click)="showTable()">
+            <span class="fa fa-search"></span>
+        </a>
+        </label>
+    </div>
+    <div [style.visibility]="!overlayVisible ? 'collapse' : 'visible'"
+         [style.height]="!overlayVisible ? '0' : 'none'"
+         [style.overflow]="!overlayVisible ? 'hidden' : 'visible'"
+         [style.width]="widthGrid" style="padding: 0;"
+         class="d-inline-block rounded dataGrid">
+        <p-dataTable [value]="costResponses"
+                     [responsive]="true"
+                     [stacked]="false"
+
+        >
+            <p-column field="costGroupTitle"  [sortable]="true"
+                      [header]="'niopdcgatewayApp.orderProduct.amount' | translate"></p-column>
+            <p-column field="price"  [sortable]="true"
+                      [header]="'niopdcgatewayApp.location.level3name' | translate"></p-column>
+        </p-dataTable>
+    </div>
+</div>
+
+

@@ -1,0 +1,91 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="mySellContractCustomerLabel" jhiTranslate="niopdcgatewayApp.sellContractCustomer.home.createOrEditLabel">Create or edit a Sell Contract Customer</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!sellContractCustomer.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="sellContractCustomer.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.sellContractCustomer.hasTransport" for="field_hasTransport">Has Transport</label>
+            <input type="checkbox" class="form-control" name="hasTransport" id="field_hasTransport"
+                [(ngModel)]="sellContractCustomer.hasTransport" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.sellContractCustomer.startDate" for="field_startDate">Start Date</label>
+            <div class="d-flex">
+                <input id="field_startDate" type="datetime-local" class="form-control" name="startDate" [(ngModel)]="sellContractCustomer.startDate"
+                required/>
+            </div>
+            <div [hidden]="!(editForm.controls.startDate?.dirty && editForm.controls.startDate?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.startDate?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.startDate?.errors?.ZonedDateTimelocal" jhiTranslate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.sellContractCustomer.active" for="field_active">Active</label>
+            <input type="checkbox" class="form-control" name="active" id="field_active"
+                [(ngModel)]="sellContractCustomer.active" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.sellContractCustomer.sellContract" for="field_sellContract">Sell Contract</label>
+            <select class="form-control" id="field_sellContract" name="sellContract" [(ngModel)]="sellContractCustomer.sellContractId"  required>
+                <option *ngIf="!editForm.value.sellContract" [ngValue]="null" selected></option>
+                <option [ngValue]="sellContractOption.id" *ngFor="let sellContractOption of sellcontracts; trackBy: trackSellContractById">{{sellContractOption.id}}</option>
+            </select>
+        </div>
+        <div [hidden]="!(editForm.controls.sellContract?.dirty && editForm.controls.sellContract?.invalid)">
+            <small class="form-text text-danger"
+                [hidden]="!editForm.controls.sellContract?.errors?.required" jhiTranslate="entity.validation.required">
+                This field is required.
+            </small>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.sellContractCustomer.customer" for="field_customer">Customer</label>
+            <select class="form-control" id="field_customer" name="customer" [(ngModel)]="sellContractCustomer.customerId"  required>
+                <option *ngIf="!editForm.value.customer" [ngValue]="null" selected></option>
+                <option [ngValue]="customerOption.id" *ngFor="let customerOption of customers; trackBy: trackCustomerById">{{customerOption.id}}</option>
+            </select>
+        </div>
+        <div [hidden]="!(editForm.controls.customer?.dirty && editForm.controls.customer?.invalid)">
+            <small class="form-text text-danger"
+                [hidden]="!editForm.controls.customer?.errors?.required" jhiTranslate="entity.validation.required">
+                This field is required.
+            </small>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.sellContractCustomer.location" for="field_location">Location</label>
+            <select class="form-control" id="field_location" name="location" [(ngModel)]="sellContractCustomer.locationId"  required>
+                <option *ngIf="!editForm.value.location" [ngValue]="null" selected></option>
+                <option [ngValue]="locationOption.id" *ngFor="let locationOption of locations; trackBy: trackLocationById">{{locationOption.name}}</option>
+            </select>
+        </div>
+        <div [hidden]="!(editForm.controls.location?.dirty && editForm.controls.location?.invalid)">
+            <small class="form-text text-danger"
+                [hidden]="!editForm.controls.location?.errors?.required" jhiTranslate="entity.validation.required">
+                This field is required.
+            </small>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

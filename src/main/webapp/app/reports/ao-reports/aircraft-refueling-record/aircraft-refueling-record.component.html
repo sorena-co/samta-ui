@@ -1,0 +1,244 @@
+<div class="component">
+    <p-breadcrumb [model]="breadcrumbItems"></p-breadcrumb>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <form name="editForm" role="form" novalidate (ngSubmit)="loadAll()" #editForm="ngForm">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <h5 class="col-md-3"
+                        jhiTranslate="report.search">Search
+                    </h5>
+                </div>
+            </div>
+            <div class="card-block container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.refuelCenter"
+                                   for="field_refuelCenter">RefuelCenter</label>
+                            <select class="form-control" id="field_refuelCenter"
+                                    name="refuelCenter"
+                                    [(ngModel)]="req.refuelCenterId"
+                                    required
+                            >
+                                <option [ngValue]="null" selected></option>
+                                <option [ngValue]="refuelCenterOption.id"
+                                        *ngFor="let refuelCenterOption of refuelCenters">
+                                    {{refuelCenterOption.persianTitle}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.home.title"
+                                   for="field_person">Person</label>
+                            <select
+                                class="form-control"
+                                id="field_person"
+                                name="person"
+                                [(ngModel)]="req.personId"
+                                >
+                                <option [ngValue]="null" selected></option>
+                                <option [ngValue]="personOption.id"
+                                        *ngFor="let personOption of persons">
+                                    {{personOption.fullName}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.home.title"
+                                   for="field_customer">customer</label>
+                            <select
+                                class="form-control"
+                                id="field_customer"
+                                name="customer"
+                                [(ngModel)]="req.customerId"
+                                >
+                                <option [ngValue]="null" selected></option>
+                                <option [ngValue]="customerOption.id"
+                                        *ngFor="let customerOption of customers">
+                                    {{customerOption.name}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label"
+                                   jhiTranslate="niopdcgatewayApp.aircraftRefuelingRecord.startDate"
+                                   for="field_startDate">startDate</label>
+                            <div class="d-flex">
+                                <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00:00"
+                                                    id="field_startDate"
+                                                    class="form-control"
+                                                    name="startDate" [(ngModel)]="req.startDate"
+                                                    required></ng2-datetimepicker>
+                            </div>
+                            <div
+                                [hidden]="!(editForm.controls.startDate?.dirty && editForm.controls.startDate?.invalid)">
+                                <small class="form-text text-danger"
+                                       [hidden]="!editForm.controls.startDate?.errors?.required"
+                                       jhiTranslate="entity.validation.required">
+                                    This field is required.
+                                </small>
+                                <small class="form-text text-danger"
+                                       [hidden]="!editForm.controls.startDate?.errors?.ZonedDateTimelocal"
+                                       jhiTranslate="entity.validation.ZonedDateTimelocal">
+                                    This field should be a date and time.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label"
+                                   jhiTranslate="niopdcgatewayApp.aircraftRefuelingRecord.finishDate"
+                                   for="field_finishDate">finishDate</label>
+                            <div class="d-flex">
+                                <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="23:59:59"
+                                                    id="field_finishDate"
+                                                    class="form-control"
+                                                    name="finishDate"
+                                                    [(ngModel)]="req.finishDate"
+                                                    required></ng2-datetimepicker>
+                            </div>
+                            <div
+                                [hidden]="!(editForm.controls.finishDate?.dirty && editForm.controls.finishDate?.invalid)">
+                                <small class="form-text text-danger"
+                                       [hidden]="!editForm.controls.finishDate?.errors?.required"
+                                       jhiTranslate="entity.validation.required">
+                                    This field is required.
+                                </small>
+                                <small class="form-text text-danger"
+                                       [hidden]="!editForm.controls.finishDate?.errors?.ZonedDateTimelocal"
+                                       jhiTranslate="entity.validation.ZonedDateTimelocal">
+                                    This field should be a date and time.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer text-center">
+                <button type="submit" class="btn btn-primary "
+                        [disabled]="editForm.form.invalid ">
+                    <span class="fa fa-search"></span>&nbsp;<span
+                    jhiTranslate="report.search">Save</span>
+                </button>
+            </div>
+        </div>
+    </form>
+    <br/>
+
+    <kendo-grid
+        [disabled]="editForm.form.invalid "
+        [data]="gridData"
+        [pageSize]="state.take"
+        [skip]="state.skip"
+        [sort]="state.sort"
+        [group]="state.group"
+        [resizable]="true"
+        [sortable]="{ mode: 'multiple' }"
+        [pageable]="{ pageSizes: [ 10,25,50,100,aircraftRefuelingRecord?.length] }"
+        [groupable]="{ showFooter: true}"
+        scrollable="scrollable"
+        (dataStateChange)="dataStateChange($event)">
+        <ng-template kendoGridToolbarTemplate>
+            <button kendoGridPDFCommand icon="file-pdf" jhiTranslate="report.exportToPdf">Export to PDF</button>
+            <button type="button" kendoGridExcelCommand icon="file-excel" jhiTranslate="report.exportToExcel">Export to
+                Excel
+            </button>
+        </ng-template>
+
+        <kendo-grid-column field="receiptNo" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.receiptNo' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="dateTime" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.dateTime' | translate"
+                           width="130">
+            <ng-template kendoGridCellTemplate let-dataItem>
+                <span>{{dataItem.dateTime | dateTimeJalali}}</span>
+            </ng-template>
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="airportName"
+                           [title]="'niopdcgatewayApp.aircraftRefuelingRecord.airportName' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="amount" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.amount' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="productCode" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.productCode' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="productTitle" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.productTitle' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="type" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.type' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="personName" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.personName' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="personName" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.personName' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="customerName" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.customerName' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="currencyTitle" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.currencyTitle' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="costAmount" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.costAmount' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="userName" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.userName' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+
+
+        <kendo-grid-messages
+            [pagerOf]="'report.pagerOf' | translate"
+            [pagerItems]="'report.pagerItems' | translate"
+            [groupPanelEmpty]="'report.headerMessage' | translate"
+            [noRecords]="'global.messages.info.emptyRecords' | translate"
+            [pagerItemsPerPage]="'report.pagerItemsPerPage' | translate">
+        </kendo-grid-messages>
+
+        <kendo-grid-pdf fileName="aircraftRefuelingRecord.pdf" [allPages]="true" paperSize="A4" [repeatHeaders]="true"
+                        [landscape]="true">
+            <kendo-grid-pdf-margin top="2cm" left="1cm" right="1cm" bottom="2cm"></kendo-grid-pdf-margin>
+            <ng-template kendoGridPDFTemplate let-pageNum="pageNum" let-totalPages="totalPages">
+                <div class="page-template">
+                    <div class="header">
+                        <div style="float: right">{{ pageNum + ('report.pageOf'|translate) + totalPages }}</div>
+                    </div>
+                    <div class="footer">
+                        {{ pageNum + ('report.pageOf'|translate) + totalPages }}
+                    </div>
+                </div>
+            </ng-template>
+        </kendo-grid-pdf>
+        <kendo-grid-excel fileName="aircraftRefuelingRecord.xlsx"></kendo-grid-excel>
+    </kendo-grid>
+    <br/>
+</div>

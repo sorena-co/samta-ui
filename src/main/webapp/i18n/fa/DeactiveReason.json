@@ -1,0 +1,8 @@
+{
+    "niopdcgatewayApp": {
+        "DeactiveReason" : {
+            "null": "",
+            "DEBTOR": "تخلف"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+
+{
+    "niopdcgatewayApp": {
+        "rateGroup" : {
+            "home": {
+                "title": "گروه نرخی فرآورده",
+                "createLabel":"ایجاد گروه نرخی فرآورده",
+                "createOrEditLabel":"ویرایش گروه نرخی فرآورده",
+                "view":"نمایش گروه نرخی فرآورده"
+            },
+            "delete": {
+                "question": "آیا برای حذف گروه نرخی فرآورده {{ id }} مطمئن هستید؟"
+            },
+            "detail": {
+                "title": "گروه نرخی فرآورده"
+            },
+            "title": "عنوان",
+            "contractType": "نوع قرارداد",
+            "rateGroupType": "نوع",
+            "regionId":"تقسیمات کشوری",
+            "locationId":"منطقه/ناحیه",
+            "customerTypeId":"نوع مشتری",
+            "contractTypeId":"نوع قرارداد"
+        }
+    },
+    "niopdcrateApp": {
+        "rateGroup" : {
+            "created": "گروه نرخی فرآورده با موفقیت ایجاد شد.",
+            "updated": "گروه نرخی فرآورده با موفقیت ویرایش شد.",
+            "deleted": "گروه نرخی فرآورده با موفقیت حذف شد."
+        }
+    }
+}

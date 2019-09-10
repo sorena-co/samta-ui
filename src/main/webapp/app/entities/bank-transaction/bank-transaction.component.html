@@ -1,0 +1,81 @@
+<div>
+    <h2>
+        <span jhiTranslate="niopdcgatewayApp.bankTransaction.home.title">Bank Transactions</span>
+        <button class="btn btn-primary float-right jh-create-entity create-bank-transaction" [routerLink]="['/', { outlets: { popup: ['bank-transaction-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="niopdcgatewayApp.bankTransaction.home.createLabel">
+            Create new Bank Transaction
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="bankTransactions">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="identifier"><span jhiTranslate="niopdcgatewayApp.bankTransaction.identifier">Identifier</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="username"><span jhiTranslate="niopdcgatewayApp.bankTransaction.username">Username</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="requestDate"><span jhiTranslate="niopdcgatewayApp.bankTransaction.requestDate">Request Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="bankTransactionState"><span jhiTranslate="niopdcgatewayApp.bankTransaction.bankTransactionState">Bank Transaction State</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="type"><span jhiTranslate="niopdcgatewayApp.bankTransaction.type">Type</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="responseBody"><span jhiTranslate="niopdcgatewayApp.bankTransaction.responseBody">Response Body</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="responseDate"><span jhiTranslate="niopdcgatewayApp.bankTransaction.responseDate">Response Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="error"><span jhiTranslate="niopdcgatewayApp.bankTransaction.error">Error</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let bankTransaction of bankTransactions ;trackBy: trackId">
+                <td><a [routerLink]="['../bank-transaction', bankTransaction.id ]">{{bankTransaction.id}}</a></td>
+                <td>{{bankTransaction.identifier}}</td>
+                <td>{{bankTransaction.username}}</td>
+                <td>{{bankTransaction.requestDate | date:'medium'}}</td>
+                <td jhiTranslate="{{'niopdcgatewayApp.BankTransactionState.' + bankTransaction.bankTransactionState}}">{{bankTransaction.bankTransactionState}}</td>
+                <td jhiTranslate="{{'niopdcgatewayApp.SpentType.' + bankTransaction.type}}">{{bankTransaction.type}}</td>
+                <td>{{bankTransaction.responseBody}}</td>
+                <td>{{bankTransaction.responseDate | date:'medium'}}</td>
+                <td>{{bankTransaction.error}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../bank-transaction', bankTransaction.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'bank-transaction/'+ bankTransaction.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'bank-transaction/'+ bankTransaction.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Pager is not implemented yet, so this is normal pagination instead -->
+    <div *ngIf="bankTransactions && bankTransactions.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="queryCount" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

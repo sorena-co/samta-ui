@@ -1,0 +1,103 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 *ngIf="carTypeLimit.id==null" class="modal-title" id="createLabel"
+            jhiTranslate="niopdcgatewayApp.carTypeLimit.home.createLabel">
+            Create</h4>
+        <h4 *ngIf="carTypeLimit.id!=null && !isView" class="modal-title" id="editLabel"
+            jhiTranslate="niopdcgatewayApp.carTypeLimit.home.createOrEditLabel">
+            Edit</h4>
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.carTypeLimit.home.view">
+            View</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;
+        </button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTypeLimit.hour"
+                           for="field_hour">Hour</label>
+                    <input [disabled]="isView" type="number" class="form-control" name="hour" id="field_hour"
+                           [(ngModel)]="carTypeLimit.hour" required/>
+                    <div [hidden]="!(editForm.controls.hour?.dirty && editForm.controls.hour?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.hour?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.hour?.errors?.number"
+                               jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTypeLimit.fromDate"
+                           for="field_fromDate">From Date</label>
+                    <div class="d-flex">
+                        <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00" id="field_fromDate"
+                                            class="form-control"
+                                            name="fromDate" [(ngModel)]="carTypeLimit.fromDate"
+                                            required></ng2-datetimepicker>
+                    </div>
+                    <div [hidden]="!(editForm.controls.fromDate?.dirty && editForm.controls.fromDate?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.fromDate?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.fromDate?.errors?.ZonedDateTimelocal"
+                               jhiTranslate="entity.validation.ZonedDateTimelocal">
+                            This field should be a date and time.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTypeLimit.toDate"
+                           for="field_toDate">To Date</label>
+                    <div class="d-flex">
+                        <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="23:59:59" id="field_toDate"
+                                            class="form-control"
+                                            name="toDate" [(ngModel)]="carTypeLimit.toDate"
+                        ></ng2-datetimepicker>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTypeLimit.location"
+                           for="field_location">Location</label>
+                    <input-location-selector [disabled]="isView" class="form-control"
+                                             [(ngModel)]="carTypeLimit.locationId"
+                                             [oneSelection]="true"
+                                             id="field_locationId"
+                                             name="location"
+                                             [selectOfLevel]="[2]"
+                                             [selectByPriority]="true"
+                                             [idSelector]="true"
+                    ></input-location-selector>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button *ngIf="!isView" type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

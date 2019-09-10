@@ -1,0 +1,19 @@
+{
+    "niopdcgatewayApp": {
+        "amountReport": {
+            "home": {
+                "title": "صورت تحویلی بدون ظرف"
+            },
+            "startDate": "از تاریخ",
+            "finishDate": "تا تاریخ",
+            "personName": "‫نام شرکت‬",
+            "price": "مبلغ",
+            "countFuelReceipt": "تعداد رسید سوخت",
+            "currency": "واحد پولی",
+            "currencyRateGroup": "نرخ واحد پولی",
+            "rateGroup": "گروه نرخ فراوده",
+            "product": "فراورده",
+            "refuelCenter": "مرکز سوختگیری"
+        }
+    }
+}

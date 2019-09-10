@@ -1,0 +1,302 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 *ngIf="user.id==null" class="modal-title" id="createLabel" jhiTranslate="userManagement.home.createLabel">
+            Create</h4>
+        <h4 *ngIf="user.id!=null && !isView" class="modal-title" id="editLabel"
+            jhiTranslate="userManagement.home.createOrEditLabel">
+            Edit</h4>
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="userManagement.home.view">
+            View</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;
+        </button>
+    </div>
+
+
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <p-tabView>
+            <p-tabPanel [header]="'userManagement.userInfo'| translate">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" jhiTranslate="userManagement.login">Login</label>
+                                    <input [disabled]="isView || user.id" type="text" class="form-control" name="login"
+                                           #loginInput="ngModel"
+                                           [(ngModel)]="user.login" required minlength="1" maxlength="50"
+                                           pattern="^[_'.@A-Za-z0-9-]*$">
+
+                                    <div *ngIf="loginInput.dirty && loginInput.invalid">
+                                        <small class="form-text text-danger"
+                                               *ngIf="loginInput.errors.required"
+                                               jhiTranslate="entity.validation.required">
+                                            This field is required.
+                                        </small>
+
+                                        <small class="form-text text-danger"
+                                               *ngIf="loginInput.errors.maxlength"
+                                               jhiTranslate="entity.validation.maxlength"
+                                               translate-value-max="{50}">
+                                            This field cannot be longer than 50 characters.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" jhiTranslate="userManagement.email">Email</label>
+                                    <input [disabled]="isView" type="email" class="form-control" name="email"
+                                           #emailInput="ngModel"
+                                           [(ngModel)]="user.email" minlength="5" required maxlength="100" email>
+
+                                    <div *ngIf="emailInput.dirty && emailInput.invalid">
+                                        <small class="form-text text-danger"
+                                               *ngIf="emailInput.errors.required"
+                                               jhiTranslate="entity.validation.required">
+                                            This field is required.
+                                        </small>
+
+                                        <small class="form-text text-danger"
+                                               *ngIf="emailInput.errors.maxlength"
+                                               jhiTranslate="entity.validation.maxlength"
+                                               translateValues="{max: 100}">
+                                            This field cannot be longer than 100 characters.
+                                        </small>
+
+                                        <small class="form-text text-danger"
+                                               *ngIf="emailInput.errors.minlength"
+                                               jhiTranslate="entity.validation.minlength"
+                                               translateValues="{min: 5}">
+                                            This field is required to be at least 5 characters.
+                                        </small>
+                                        <small class="form-text text-danger"
+                                               *ngIf="emailInput.errors.email"
+                                               jhiTranslate="global.messages.validate.email.invalid">
+                                            Your email is invalid.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" jhiTranslate="userManagement.firstName">First
+                                        Name</label>
+                                    <input [disabled]="isView" type="text" class="form-control" name="firstName"
+                                           #firstNameInput="ngModel"
+                                           [(ngModel)]="user.firstName" maxlength="50">
+
+                                    <div *ngIf="firstNameInput.dirty && firstNameInput.invalid">
+                                        <small class="form-text text-danger"
+                                               *ngIf="firstNameInput.errors.maxlength"
+                                               jhiTranslate="entity.validation.maxlength"
+                                               translateValues="{max: 50}">
+                                            This field cannot be longer than 50 characters.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <label jhiTranslate="userManagement.lastName">Last Name</label>
+                                    <input [disabled]="isView" type="text" class="form-control" name="lastName"
+                                           #lastNameInput="ngModel"
+                                           [(ngModel)]="user.lastName" maxlength="50">
+
+                                    <div *ngIf="lastNameInput.dirty && lastNameInput.invalid">
+                                        <small class="form-text text-danger"
+                                               *ngIf="lastNameInput.errors.maxlength"
+                                               jhiTranslate="entity.validation.maxlength"
+                                               translateValues="{max: 50}">
+                                            This field cannot be longer than 50 characters.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="password"
+                                           jhiTranslate="global.form.password">New password</label>
+                                    <input [disabled]="isView" type="password" class="form-control" id="password"
+                                           name="password" #password="ngModel"
+                                           placeholder="{{'global.form.newpassword.placeholder' | translate}}"
+                                           [(ngModel)]="user.password" minlength=4 maxlength=50 [required]="!user.id">
+                                    <div *ngIf="password.dirty && password.invalid">
+                                        <small class="form-text text-danger" *ngIf="password.errors.required"
+                                               jhiTranslate="global.messages.validate.newpassword.required">
+                                            Your password is required.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="password.errors.minlength"
+                                               jhiTranslate="global.messages.validate.newpassword.minlength">
+                                            Your password is required to be at least 4 characters.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="password.errors.maxlength"
+                                               jhiTranslate="global.messages.validate.newpassword.maxlength">
+                                            Your password cannot be longer than 50 characters.
+                                        </small>
+                                    </div>
+                                    <jhi-password-strength-bar
+                                        [passwordToCheck]="user.password"></jhi-password-strength-bar>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="confirm_password"
+                                           jhiTranslate="global.form.confirmpassword">confirm password</label>
+                                    <input [disabled]="isView" type="password" class="form-control"
+                                           id="confirm_password"
+                                           name="confirm_password" #confirmPassword="ngModel"
+                                           placeholder="{{user.id?'': ('global.form.newconfirmpassword.placeholder' | translate)}}"
+                                           equals-input-validation [equals]="user.password"
+                                           [(ngModel)]="confirmPass" minlength=4 maxlength=50 [required]="!user.id">
+                                    <div *ngIf="confirmPassword.dirty && confirmPassword.invalid">
+                                        <small class="form-text text-danger" *ngIf="confirmPassword.errors.required"
+                                               jhiTranslate="global.messages.validate.confirmpassword.required">
+                                            Your password is required.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="confirmPassword.errors.equals"
+                                               jhiTranslate="global.messages.validate.confirmpassword.confirm">
+                                            Your password is required.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="confirmPassword.errors.minlength"
+                                               jhiTranslate="global.messages.validate.confirmpassword.minlength">
+                                            Your password is required to be at least 4 characters.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="confirmPassword.errors.maxlength"
+                                               jhiTranslate="global.messages.validate.confirmpassword.maxlength">
+                                            Your password cannot be longer than 50 characters.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <input [disabled]="isView"
+                                       type="checkbox" id="activated"
+                                       name="activated" [(ngModel)]="user.activated">
+                                <label class="form-check-label" for="activated">
+                                    <span jhiTranslate="userManagement.activated">Activated</span>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel [header]="'userManagement.userAccess'| translate">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="col-md-12">
+                            <div class="form-group">
+
+                                <label class="form-control-label" jhiTranslate="userManagement.userType"
+                                       for="field_userType">Oil Tank Type</label>
+                                <select [disabled]="isView" class="form-control" name="userType"
+                                        (change)="userTypeChange()"
+                                        [(ngModel)]="user.userType" id="field_userType" required>
+                                    <option *ngIf="currentUserType==='HEAD'" value="HEAD">
+                                        {{'niopdcgatewayApp.userType.HEAD'| translate}}
+                                    </option>
+                                    <option *ngIf="currentUserType==='HEAD'||currentUserType==='AREA'" value="AREA">
+                                        {{'niopdcgatewayApp.userType.AREA' | translate}}
+                                    </option>
+                                    <option *ngIf="currentUserType==='HEAD'||currentUserType==='REFUEL_CENTER'"
+                                            value="REFUEL_CENTER">{{'niopdcgatewayApp.userType.REFUEL_CENTER'
+                                        |translate}}
+                                    </option>
+                                    <option
+                                        *ngIf="currentUserType==='HEAD'||currentUserType==='AREA'||currentUserType==='ZONE'"
+                                        value="ZONE">{{'niopdcgatewayApp.userType.ZONE' | translate}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="form-control-label"
+                                       jhiTranslate="userManagement.role" for="field_roles">Roles</label>
+                                <p-multiSelect [disabled]="isView" class="form-control" id="field_roles"
+                                               [options]="roles"
+                                               (onChange)="onChangeRoles()"
+                                               name="role"
+                                               [(ngModel)]="roleSelected"
+                                               [ngModelOptions]="{standalone: true}"
+                                ></p-multiSelect>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="form-control-label"
+                                       jhiTranslate="niopdcgatewayApp.userDataAccess.location"
+                                       for="field_location">Location</label>
+
+                                <input-location-selector class="form-control" [idSelector]="true"
+                                                         [oneSelection]="false"
+                                                         [(ngModel)]="user.locationIds"
+                                                         [selectByPriority]="true"
+                                                         [selectOfLevel]="'all'"
+                                                         id="field_location" name="location"
+                                ></input-location-selector>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row" *jhiHasAnyAuthority="['ROLE_ADMIN']">
+                            <div class="col-xs-12 col-md-12">
+                                <input [disabled]="isView"
+                                       type="checkbox" id="adminRole"
+                                       name="adminRole" [(ngModel)]="adminRole">
+                                <label class="form-check-label" for="adminRole">
+                                    <span jhiTranslate="userManagement.adminRole">adminRole</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12">
+                                <div *ngIf="canAuth != null" class="form-group">
+                                    <label jhiTranslate="niopdcgatewayApp.role.authorities"
+                                           for="field_authorities">Authorities</label>
+                                    <app-authority-selector class="form-control" id="field_authorities"
+                                                            (onAuthorities)="authoritiesSelected($event)"
+                                                            (onDenyAuthorities)="denyAuthoritiesSelected($event)"
+                                                            [authGroup]="parentAuthorities"
+                                                            [authorities]="authorities1"
+                                                            [roleAuthorities]="roleAuthorities"
+                                                            [denyAuthorities]="denyAuthorities1"
+                                                            [denyRoleAuthorities]="denyRoleAuthorities"
+                                                            [enableAuthorities]="canAuth"
+                                                            [disabled]="adminRole || disabledAuthorities || isView"
+                                    >
+
+                                    </app-authority-selector>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p-tabPanel>
+        </p-tabView>
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span
+            jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button *ngIf="!isView" type="submit" [disabled]="editForm.form.invalid || isSaving"
+                class="btn btn-primary">
+            <span class="fa fa-floppy-o"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

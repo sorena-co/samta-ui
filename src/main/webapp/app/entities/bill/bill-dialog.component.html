@@ -1,0 +1,257 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 *ngIf="bill.id==null" class="modal-title" id="createLabel"
+            jhiTranslate="entity.action.create">
+            Create</h4>
+        <h4 *ngIf="bill.id!=null && !isView" class="modal-title" id="editLabel"
+            jhiTranslate="entity.action.edit">
+            Edit</h4>
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="entity.action.view">
+            View</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;
+        </button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bill.paymentPeriod"
+                           for="field_paymentPeriod">Payment Period</label>
+                    <select
+                        [disabled]="isView"
+                        class="form-control"
+                        name="paymentPeriod"
+                        [(ngModel)]="bill.paymentPeriod"
+                        id="field_paymentPeriod"
+                        required
+                        (ngModelChange)="paymentPeriodChanged($event)"
+                    >
+
+                        <option value="DAY">{{'niopdcgatewayApp.PaymentPeriod.DAY' | translate}}</option>
+                        <option value="MONTH">{{'niopdcgatewayApp.PaymentPeriod.MONTH' | translate}}</option>
+                        <option value="SEASON">{{'niopdcgatewayApp.PaymentPeriod.SEASON' | translate}}</option>
+                        <option value="YEAR">{{'niopdcgatewayApp.PaymentPeriod.YEAR' | translate}}</option>
+                    </select>
+                    <div
+                        [hidden]="!(editForm.controls.paymentPeriod?.dirty && editForm.controls.paymentPeriod?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.paymentPeriod?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bill.day"
+                           for="field_day">Day</label>
+                    <select [disabled]="isView || bill.paymentPeriod!='DAY'" class="form-control" name="day"
+                            id="field_day"
+                            (ngModelChange)="onChangeDay($event)"
+                            [(ngModel)]="bill.day"
+                            required>
+                        <option value=""></option>
+                        <option *ngFor="let dayOptions of days" [ngValue]="dayOptions">
+                            {{dayOptions}}
+                        </option>
+                    </select>
+                    <div [hidden]="!(editForm.controls.day?.dirty && editForm.controls.day?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.day?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.day?.errors?.number"
+                               jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label *ngIf="bill.paymentPeriod!='SEASON'" class="form-control-label"
+                           jhiTranslate="niopdcgatewayApp.bill.month"
+                           for="field_month">Month</label>
+                    <label *ngIf="bill.paymentPeriod=='SEASON'" class="form-control-label"
+                           jhiTranslate="niopdcgatewayApp.PaymentPeriod.SEASON"
+                           for="field_month">SEASON</label>
+                    <select [disabled]="isView|| bill.paymentPeriod=='YEAR'" class="form-control" name="month"
+                            (ngModelChange)="onChangeMonth($event)"
+                            [(ngModel)]="bill.month" id="field_month" required>
+                        <option *ngIf="bill.paymentPeriod=='YEAR'" value="0">{{'niopdcgatewayApp.Month.1' |
+                            translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="0">
+                            {{'niopdcgatewayApp.Month.1' | translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="1">
+                            {{'niopdcgatewayApp.Month.2' | translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="2">
+                            {{'niopdcgatewayApp.Month.3' | translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="3">
+                            {{'niopdcgatewayApp.Month.4' | translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="4">
+                            {{'niopdcgatewayApp.Month.5' | translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="5">
+                            {{'niopdcgatewayApp.Month.6' | translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="6">
+                            {{'niopdcgatewayApp.Month.7' | translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="7">
+                            {{'niopdcgatewayApp.Month.8' | translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="8">
+                            {{'niopdcgatewayApp.Month.9' | translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="9">
+                            {{'niopdcgatewayApp.Month.10' | translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="10">
+                            {{'niopdcgatewayApp.Month.11' | translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="11">
+                            {{'niopdcgatewayApp.Month.12' | translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='SEASON'" value="2">{{'niopdcgatewayApp.Month.spring' |
+                            translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='SEASON'" value="5">{{'niopdcgatewayApp.Month.summer' |
+                            translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='SEASON'" value="8">{{'niopdcgatewayApp.Month.autumn' |
+                            translate}}
+                        </option>
+                        <option *ngIf="bill.paymentPeriod=='SEASON'" value="11">{{'niopdcgatewayApp.Month.winter' |
+                            translate}}
+                        </option>
+                    </select>
+                    <div
+                        [hidden]="!(editForm.controls.month?.dirty && editForm.controls.month?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.month?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bill.year"
+                           for="field_year">Year</label>
+                    <select [disabled]="isView" class="form-control" name="year" id="field_year"
+                            [(ngModel)]="bill.year"
+                            (ngModelChange)="onChangeYear($event)"
+                            required>
+                        <option value=""></option>
+                        <option *ngFor="let yearOptions of years" [ngValue]="yearOptions">
+                            {{yearOptions}}
+                        </option>
+                    </select>
+                    <div [hidden]="!(editForm.controls.year?.dirty && editForm.controls.year?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.year?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.year?.errors?.number"
+                               jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bill.customerId"
+                           for="field_customerSellContracts">Customer Id</label>
+                    <sell-contract-customer-selector
+                        [selectObject]="true"
+                        (selectedItem)="changeCustomerSellContract($event)"
+                        [(ngModel)]="customerSellContract"
+                        class="form-control"
+                        id="field_customerSellContracts"
+                        widthGrid="300x"
+                        [ngModelOptions]="{standalone: true}"
+                        ngDefaultControl
+                        [customerSellContracts]="customerSellContracts"
+                        required
+                        name="customerSellContracts"
+                    >
+                    </sell-contract-customer-selector>
+
+                </div>
+                <div *ngIf="!isActive">
+                    <small class="form-text text-danger"
+                           jhiTranslate="error.customer.not.active"></small>
+                </div>
+            </div>
+            <!-- <div class="col-md-3">
+                 <div class="form-group">
+                     <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bill.sellContractId"
+                            for="field_sellContractId">Sell Contract Id</label>
+                     <input [disabled]="isView" type="number" class="form-control" name="sellContractId"
+                            id="field_sellContractId"
+                            [(ngModel)]="bill.sellContractId" required/>
+                     <div
+                         [hidden]="!(editForm.controls.sellContractId?.dirty && editForm.controls.sellContractId?.invalid)">
+                         <small class="form-text text-danger"
+                                [hidden]="!editForm.controls.sellContractId?.errors?.required"
+                                jhiTranslate="entity.validation.required">
+                             This field is required.
+                         </small>
+                         <small class="form-text text-danger"
+                                [hidden]="!editForm.controls.sellContractId?.errors?.number"
+                                jhiTranslate="entity.validation.number">
+                             This field should be a number.
+                         </small>
+                     </div>
+                 </div>
+             </div>-->
+            <div class="col-md-3">
+                <div *ngIf="bill.totalPrice!=null" class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bill.totalPrice"
+                           for="field_totalPrice">Total Price</label>
+                    <input [disabled]="true" type="number" class="form-control" name="totalPrice"
+                           id="field_totalPrice"
+                           [(ngModel)]="bill.totalPrice" required/>
+                    <div [hidden]="!(editForm.controls.totalPrice?.dirty && editForm.controls.totalPrice?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.totalPrice?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.totalPrice?.errors?.number"
+                               jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button *ngIf="!isView" type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,35 @@
+
+{
+    "niopdcgatewayApp": {
+        "bill" : {
+            "home": {
+                "title": "صورت حساب",
+                "createLabel": "ایجاد",
+                "createOrEditLabel": "ایجاد یا ویرایش",
+                "report":"گزارش کارمزد"
+            },
+            "delete": {
+                "question": "آیا برای حذف صورت حساب {{ id }} مطمئن هستید؟"
+            },
+            "detail": {
+                "title": "صورت حساب"
+            },
+            "customerId": "مشتری",
+            "sellContractId": "قرارداد",
+            "customerScore": "Customer Score",
+            "paymentPeriod": "دوره پرداخت",
+            "day": "روز",
+            "month": "ماه",
+            "year": "سال",
+            "totalPrice": "مبلغ کل",
+            "billItem": "Bill Item"
+        }
+    },
+    "niopdcaccountingApp": {
+        "bill" : {
+            "created": "صورت حساب با موفقیت  ایجاد شد.",
+            "updated": "صورت حساب با موفقیت  ویرایش شد.",
+            "deleted": "صورت حساب با موفقیت  حذف شد."
+        }
+    }
+}

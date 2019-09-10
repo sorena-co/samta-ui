@@ -1,0 +1,123 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myOrderProductLabel" jhiTranslate="niopdcgatewayApp.orderProduct.home.createOrEditLabel">Create or edit a Order Product</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!orderProduct.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="orderProduct.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderProduct.sellContractProductId" for="field_sellContractProductId">Sell Contract Product Id</label>
+            <input type="number" class="form-control" name="sellContractProductId" id="field_sellContractProductId"
+                [(ngModel)]="orderProduct.sellContractProductId" required/>
+            <div [hidden]="!(editForm.controls.sellContractProductId?.dirty && editForm.controls.sellContractProductId?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.sellContractProductId?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.sellContractProductId?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderProduct.productId" for="field_productId">Product Id</label>
+            <input type="number" class="form-control" name="productId" id="field_productId"
+                [(ngModel)]="orderProduct.productId" required/>
+            <div [hidden]="!(editForm.controls.productId?.dirty && editForm.controls.productId?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.productId?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.productId?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderProduct.rateGroupId" for="field_rateGroupId">Rate Group Id</label>
+            <input type="number" class="form-control" name="rateGroupId" id="field_rateGroupId"
+                [(ngModel)]="orderProduct.rateGroupId" required/>
+            <div [hidden]="!(editForm.controls.rateGroupId?.dirty && editForm.controls.rateGroupId?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.rateGroupId?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.rateGroupId?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderProduct.totalPrice" for="field_totalPrice">Total Price</label>
+            <input type="number" class="form-control" name="totalPrice" id="field_totalPrice"
+                [(ngModel)]="orderProduct.totalPrice" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderProduct.basePrice" for="field_basePrice">Base Price</label>
+            <input type="number" class="form-control" name="basePrice" id="field_basePrice"
+                [(ngModel)]="orderProduct.basePrice" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderProduct.productRatePrice" for="field_productRatePrice">Product Rate Price</label>
+            <input type="number" class="form-control" name="productRatePrice" id="field_productRatePrice"
+                [(ngModel)]="orderProduct.productRatePrice" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderProduct.productRateId" for="field_productRateId">Product Rate Id</label>
+            <input type="number" class="form-control" name="productRateId" id="field_productRateId"
+                [(ngModel)]="orderProduct.productRateId" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderProduct.containerRateId" for="field_containerRateId">Container Rate Id</label>
+            <input type="number" class="form-control" name="containerRateId" id="field_containerRateId"
+                [(ngModel)]="orderProduct.containerRateId" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderProduct.containerRatePrice" for="field_containerRatePrice">Container Rate Price</label>
+            <input type="number" class="form-control" name="containerRatePrice" id="field_containerRatePrice"
+                [(ngModel)]="orderProduct.containerRatePrice" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderProduct.costPrice" for="field_costPrice">Cost Price</label>
+            <input type="number" class="form-control" name="costPrice" id="field_costPrice"
+                [(ngModel)]="orderProduct.costPrice" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderProduct.amount" for="field_amount">Amount</label>
+            <input type="number" class="form-control" name="amount" id="field_amount"
+                [(ngModel)]="orderProduct.amount" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderProduct.order" for="field_order">Order</label>
+            <select class="form-control" id="field_order" name="order" [(ngModel)]="orderProduct.orderId"  required>
+                <option *ngIf="!editForm.value.order" [ngValue]="null" selected></option>
+                <option [ngValue]="orderOption.id" *ngFor="let orderOption of orders; trackBy: trackOrderById">{{orderOption.orderNo}}</option>
+            </select>
+        </div>
+        <div [hidden]="!(editForm.controls.order?.dirty && editForm.controls.order?.invalid)">
+            <small class="form-text text-danger"
+                [hidden]="!editForm.controls.order?.errors?.required" jhiTranslate="entity.validation.required">
+                This field is required.
+            </small>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

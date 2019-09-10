@@ -1,0 +1,16 @@
+{
+    "niopdcgatewayApp": {
+        "metreReport": {
+            "home": {
+                "title": "واحد"
+            },
+            "startDate": "از تاریخ",
+            "finishDate": "تا تاریخ",
+            "unitName": "واحد",
+            "metreName": "واحد",
+            "productCode": "نام فراورده",
+            "productName": "کد فراورده",
+            "amount": "مقدار"
+        }
+    }
+}

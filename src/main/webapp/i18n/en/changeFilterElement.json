@@ -1,0 +1,72 @@
+
+{
+    "niopdcgatewayApp": {
+        "changeFilterElement" : {
+            "home": {
+                "title": "Change Filter Elements",
+                "createLabel": "Create a new Change Filter Element",
+                "createOrEditLabel": "Create or edit a Change Filter Element"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Change Filter Element {{ id }}?"
+            },
+            "detail": {
+                "title": "Change Filter Element"
+            },
+            "model": "Model",
+            "capacity": "Capacity",
+            "operatingFlow": "Operating Flow",
+            "pdMax": "Pd Max",
+            "microFilter": "Micro Filter",
+            "microFilterCount": "Micro Filter Count",
+            "coalescer": "Coalescer",
+            "coalescerCount": "Coalescer Count",
+            "separator": "Separator",
+            "separatorCount": "Separator Count",
+            "monitor": "Monitor",
+            "monitorCount": "Monitor Count",
+            "lastChangeDate": "Last Change Date",
+            "reasonOfChange": "Reason Of Change",
+            "conditionOfCartridges": "Condition Of Cartridges",
+            "conditionOfSeals": "Condition Of Seals",
+            "conditionOfCoating": "Condition Of Coating",
+            "pdGauge": "Pd Gauge",
+            "airEliminator": "Air Eliminator",
+            "reliefValue": "Relief Value",
+            "sampleDrainValue": "Sample Drain Value",
+            "namePlate": "Name Plate",
+            "microFilterType": "Micro Filter Type",
+            "microFilterTypeCount": "Micro Filter Type Count",
+            "coalescerType": "Coalescer Type",
+            "coalescerTypeCount": "Coalescer Type Count",
+            "separatorType": "Separator Type",
+            "separatorTypeCount": "Separator Type Count",
+            "monitorType": "Monitor Type",
+            "monitorTypeCount": "Monitor Type Count",
+            "microFilterTorque": "Micro Filter Torque",
+            "microFilterTorqueCount": "Micro Filter Torque Count",
+            "coalescerTorque": "Coalescer Torque",
+            "coalescerTorqueCount": "Coalescer Torque Count",
+            "separatorTorque": "Separator Torque",
+            "separatorTorqueCount": "Separator Torque Count",
+            "monitorTorque": "Monitor Torque",
+            "monitorTorqueCount": "Monitor Torque Count",
+            "pdReading": "Pd Reading",
+            "flowTest": "Flow Test",
+            "installedBy": "Installed By",
+            "supervisedBy": "Supervised By",
+            "isSend": "Is Send",
+            "requestFilterElement": "Request Filter Element",
+            "manufacture": "Manufacture",
+            "oilTank": "Oil Tank",
+            "refuelCenter": "RefuelCenter"
+        }
+    },
+    "niopdcaoApp": {
+        "changeFilterElement" : {
+            "created": "A new Change Filter Element is created with identifier {{ param }}",
+            "updated": "A Change Filter Element is updated with identifier {{ param }}",
+            "deleted": "A Change Filter Element is deleted with identifier {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,45 @@
+
+{
+    "niopdcgatewayApp": {
+        "testResult": {
+            "home": {
+                "title": "قابلیت مصرف نمونه سوخت",
+                "createLabel": "ایجاد قابلیت مصرف نمونه سوخت",
+                "createOrEditLabel": "ویرایش قابلیت مصرف نمونه سوخت",
+                "view": "نمایش قابلیت مصرف نمونه سوخت",
+                "requestTestResultTitle": "تقاضای آزمایش سوخت"
+            },
+            "delete": {
+                "question": "آیا برای حذف این قابلیت مصرف نمونه سوخت مطمئن هستید ؟"
+            },
+            "detail": {
+                "title": "قابلیت مصرف نمونه سوخت"
+            },
+            "appearance": "Appearance",
+            "densityAt15": "Density At 15",
+            "distillation": "Distillation",
+            "ibp": "Ibp",
+            "tenPresentRecovered": "Ten Present Recovered",
+            "fiftyPresentRecovered": "Fifty Present Recovered",
+            "ninetyPresentRecovered": "Ninety Present Recovered",
+            "fbp": "Fbp",
+            "rl": "Rl",
+            "existentGum": "Existent Gum",
+            "flashPoint": "Flash Point",
+            "copperCorrosion": "Copper Corrosion",
+            "freezing": "Freezing",
+            "conductivity": "Conductivity",
+            "isSend": "Is Send",
+            "isSendTrue": "فعال",
+            "isSendFalse": "غیر فعال",
+            "requestTestResult": "Request Test Result"
+        }
+    },
+    "niopdcaoApp": {
+        "testResult": {
+            "created": "قابلیت مصرف نمونه سوخت با موفقیت ایجاد شد.",
+            "updated": "قابلیت مصرف نمونه سوخت با موفقیت ویرایش شد.",
+            "deleted": "قابلیت مصرف نمونه سوخت با موفقیت حذف شد."
+        }
+    }
+}

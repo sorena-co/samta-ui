@@ -1,0 +1,170 @@
+<div class="component">
+    <p-breadcrumb [model]="breadcrumbItems"></p-breadcrumb>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <p-dataTable [sortField]="predicate" [sortOrder]="reverse ? -1 : 1" #dt [value]="productRates" [lazy]="true" [rows]="itemsPerPage"
+                 [rowsPerPageOptions]="[5,10,20,totalItems]"
+                 [paginator]="true" [responsive]="true" [stacked]="false"
+                 [totalRecords]="totalItems" (onLazyLoad)="loadLazy($event)"
+                 [emptyMessage]="'global.messages.info.emptyRecords' | translate">
+        <p-header>
+            <div class="ui-helper-clearfix">
+                <ng-container *ngIf="productId">
+                <button class="btn btn-primary float-right create-entity"
+                        *jhiHasAnyAuthority="['ROLE_ADMIN', 'CREATE_PRODUCT_RATE']"
+                        [routerLink]="['/', { outlets: { popup: ['product-rate-new' , 'product',productId] } }]">
+                    <span class="fa fa-plus"></span>
+                    <span jhiTranslate="entity.action.create">Create</span>
+                </button>
+                </ng-container>
+                <ng-container *ngIf="containerId">
+                <button class="btn btn-primary float-right create-entity"
+                        *jhiHasAnyAuthority="['ROLE_ADMIN', 'CREATE_PRODUCT_RATE']"
+                        [routerLink]="['/', { outlets: { popup: ['container-rate-new' , 'container',containerId] } }]">
+                    <span class="fa fa-plus"></span>
+                    <span jhiTranslate="entity.action.create">Create</span>
+                </button>
+                </ng-container>
+            </div>
+        </p-header>
+
+        <p-headerColumnGroup>
+            <p-row>
+                <p-column field="src" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span *ngIf="containerId" jhiTranslate="niopdcgatewayApp.containerRate.src">Src</span>
+                        <span *ngIf="!containerId" jhiTranslate="niopdcgatewayApp.productRate.src">Src</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="price" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span *ngIf="containerId" jhiTranslate="niopdcgatewayApp.containerRate.price">Price</span>
+                        <span *ngIf="!containerId" jhiTranslate="niopdcgatewayApp.productRate.price">Price</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="currencyTitle" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.productRate.currency">Currency</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="rateGroupTitle" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.productRate.rateGroup">Rate Group</span>
+                    </ng-template>
+                </p-column>
+                <p-column styleClass="col-button"></p-column>
+            </p-row>
+            <p-row>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="src" id="field_src"
+                               [(ngModel)]="productRate.src"
+                               search-after-typed (onSearch)="search()"/>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="price" id="field_price"
+                               [(ngModel)]="productRate.price"
+                               [numeric]
+                               search-after-typed (onSearch)="search()"/>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" id="field_currency" name="currency" (change)="search()"
+                                [(ngModel)]="productRate.currencyId">
+                            <option [ngValue]="null"></option>
+                            <option *ngFor="let currencyOption of currencies; trackBy: trackCurrencyById"
+                                    [ngValue]="currencyOption.id">{{currencyOption.title}}
+                            </option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" id="field_rateGroup" name="rateGroup" (change)="search()"
+                                [(ngModel)]="productRate.rateGroupId">
+                            <option [ngValue]="null"></option>
+                            <option *ngFor="let rateGroupOption of rategroups; trackBy: trackRateGroupById"
+                                    [ngValue]="rateGroupOption.id">{{rateGroupOption.title}}
+                            </option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <button class="btn btn-info" (click)="search()">
+                            <span class="fa fa-search"></span>
+                        </button>
+                        <button class=" btn btn-danger" (click)="clear()">
+                            <span class="fa fa-trash-o"></span>
+                        </button>
+                    </ng-template>
+                </p-column>
+            </p-row>
+        </p-headerColumnGroup>
+
+        <p-column field="src" [header]="'niopdcgatewayApp.'+(containerId?'containerRate':'productRate')+'.src' | translate"></p-column>
+        <p-column field="price"
+                  [header]="'niopdcgatewayApp.'+(containerId?'containerRate':'productRate')+'.price'| translate"></p-column>
+        <p-column field="currencyTitle" [header]="'niopdcgatewayApp.productRate.currency' | translate"></p-column>
+        <p-column field="rateGroupTitle" [header]="'niopdcgatewayApp.productRate.rateGroup' | translate"></p-column>
+        <p-column class="component">
+            <ng-template let-item="rowData" pTemplate="body">
+                <div class="btn-group" ngbDropdown placement="right">
+                    <ng-container *ngIf="containerId">
+                    <button type="button" class="btn btn-primary"
+                            *jhiHasAnyAuthorityDisabled="['ROLE_ADMIN', 'EDIT_PRODUCT_RATE']"
+                            replaceUrl="true"
+                            [routerLink]="['/', { outlets: { popup: 'container-rate/'+ item.id + '/container/'+containerId+'/edit'} }]">
+                        <span class="fa fa-edit"></span>
+                        <span jhiTranslate="entity.action.edit">ویرایش</span>
+                    </button>
+                    </ng-container>
+                    <ng-container *ngIf="productId">
+                    <button type="button" class="btn btn-primary"
+                            *jhiHasAnyAuthorityDisabled="['ROLE_ADMIN', 'EDIT_PRODUCT_RATE']"
+                            replaceUrl="true"
+                            [routerLink]="['/', { outlets: { popup: 'product-rate/'+ item.id + '/product/'+productId+'/edit'} }]">
+                        <span class="fa fa-edit"></span>
+                        <span jhiTranslate="entity.action.edit">ویرایش</span>
+                    </button>
+                    </ng-container>
+                    <button class="btn btn-primary" *jhiHasAnyAuthorityDisabled="['ROLE_ADMIN', 'VIEW_PRODUCT_RATE', 'DELETE_PRODUCT_RATE']"
+                            ngbDropdownToggle></button>
+                    <div class="dropdown-menu" ngbDropdownMenu>
+                        <ng-container *ngIf="containerId">
+                        <button class="dropdown-item"
+                                *jhiHasAnyAuthority="['ROLE_ADMIN', 'VIEW_PRODUCT_RATE']"
+                                replaceUrl="true"
+                                [routerLink]="['/', { outlets: { popup: 'container-rate/'+ item.id +'/container/'+ containerId+  '/view'} }]">
+                            <span class="fa fa-eye"></span>
+                            <span jhiTranslate="entity.action.view">نمایش</span>
+                        </button>
+                        </ng-container>
+                        <ng-container *ngIf="productId">
+                        <button class="dropdown-item"
+                                *jhiHasAnyAuthority="['ROLE_ADMIN', 'VIEW_PRODUCT_RATE']"
+                                replaceUrl="true"
+                                [routerLink]="['/', { outlets: { popup: 'product-rate/'+ item.id +'/product/'+ productId+  '/view'} }]">
+                            <span class="fa fa-eye"></span>
+                            <span jhiTranslate="entity.action.view">نمایش</span>
+                        </button></ng-container>
+                        <button class="dropdown-item"
+                                *jhiHasAnyAuthority="['ROLE_ADMIN', 'DELETE_PRODUCT_RATE']"
+                                replaceUrl="true"
+                                [routerLink]="['/', { outlets: { popup: 'product-rate/'+ item.id + '/delete'} }]">
+                            <span class="fa fa-remove"></span>
+                            <span jhiTranslate="entity.action.delete">delete</span>
+                        </button>
+
+                    </div>
+                </div>
+            </ng-template>
+        </p-column>
+    </p-dataTable>
+
+</div>

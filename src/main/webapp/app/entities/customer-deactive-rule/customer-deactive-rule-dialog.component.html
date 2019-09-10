@@ -1,0 +1,156 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 *ngIf="customerDeactiveRule.id==null" class="modal-title" id="createLabel"
+            jhiTranslate="entity.action.create">
+            Create</h4>
+        <h4 *ngIf="customerDeactiveRule.id!=null && !isView" class="modal-title" id="editLabel"
+            jhiTranslate="entity.action.edit">
+            Edit</h4>
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="entity.action.view">
+            View</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;
+        </button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerDeactiveRule.startDate"
+                           for="field_startDate">Start Date</label>
+                    <div class="d-flex">
+                        <ng2-datetimepicker [disabled]="isView" [disableTime]="true" [rtlActive]="true"
+                                            id="field_startDate" class="form-control"
+                                            name="startDate" [(ngModel)]="customerDeactiveRule.startDate"
+                                            required></ng2-datetimepicker>
+                    </div>
+                    <div [hidden]="!(editForm.controls.startDate?.dirty && editForm.controls.startDate?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.startDate?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.startDate?.errors?.ZonedDateTimelocal"
+                               jhiTranslate="entity.validation.ZonedDateTimelocal">
+                            This field should be a date and time.
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerDeactiveRule.finishDate"
+                           for="field_finishDate">Finish Date</label>
+                    <div class="d-flex">
+                        <ng2-datetimepicker [disabled]="isView" [disableTime]="true" [rtlActive]="true"
+                                            id="field_finishDate" class="form-control"
+                                            name="finishDate" [(ngModel)]="customerDeactiveRule.finishDate"
+                        ></ng2-datetimepicker>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label jhiTranslate="niopdcgatewayApp.customerDeactiveRule.location"
+                           for="field_location">Location</label>
+                    <input-location-selector [disabled]="isView" class="form-control" id="field_location"
+                                             name="location"
+                                             [(ngModel)]="customerDeactiveRule.locations"
+                                             [ngModelOptions]="{standalone: true}"
+                                             [idSelector]="false"
+                                             [selectOfLevel]="[2]"
+                    ></input-location-selector>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+
+                <div class="form-group">
+                    <label class="form-control-label"
+                           jhiTranslate="niopdcgatewayApp.customerDeactiveRule.sellContractCode"
+                           for="field_sellContractCode">Sell Contract Code</label>
+                    <input [disabled]="isView" type="text" class="form-control" name="sellContractCode"
+                           id="field_sellContractCode"
+                           [(ngModel)]="customerDeactiveRule.sellContractCode"/>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+
+                <div class="form-group">
+                    <label class="form-control-label"
+                           jhiTranslate="niopdcgatewayApp.customerDeactiveRule.customerCode"
+                           for="field_sellContractCode">Customer Code</label>
+                    <jhi-customer-selector
+                        [multiSelect]="false"
+                        [selectObject]="false"
+                        [creator]="true"
+                        [disabled]="isView"
+                        [(ngModel)]="customerDeactiveRule.customerId"
+                        class="form-control"
+                        id="field_customer"
+                        [widthGrid]="'800px'"
+                        name="customer" required
+                    >
+
+                    </jhi-customer-selector>
+                    <!--<input [disabled]="isView" type="text" class="form-control" name="customerCode"
+                           id="field_customerCode"
+                           [(ngModel)]="customerDeactiveRule.customerCode"/>-->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="form-group">
+                    <label jhiTranslate="niopdcgatewayApp.customerDeactiveRule.customerType" for="field_customerType">Customer
+                        Type</label>
+                    <p-multiSelect [disabled]="isView" class="form-control" id="field_customerType"
+                                   [options]="customertypes"
+                                   name="customerType"
+                                   [(ngModel)]="selectedCustomertypes"
+                                   [ngModelOptions]="{standalone: true}"
+
+                    ></p-multiSelect>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="form-group">
+                    <label jhiTranslate="niopdcgatewayApp.customerDeactiveRule.deactiveReason"
+                           for="field_deactiveReasons">Customer Type</label>
+                    <p-multiSelect [disabled]="isView" class="form-control" id="field_deactiveReasons"
+                                   [options]="deactiveReasons"
+                                   name="deactiveReasons"
+                                   [(ngModel)]="customerDeactiveRule.deactiveReasons"
+                                   [ngModelOptions]="{standalone: true}"
+                                   required="true"
+                    ></p-multiSelect>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerDeactiveRule.description"
+                           for="field_description">Description</label>
+                    <textarea [disabled]="isView" type="text" class="form-control" name="description"
+                              id="field_description"
+                              [(ngModel)]="customerDeactiveRule.description"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button *ngIf="!isView" type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

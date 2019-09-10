@@ -1,0 +1,15 @@
+{
+    "niopdcgatewayApp": {
+        "ContractType" : {
+            "null": "",
+            "SUPPLY_CHANNEL": "مجاری عرضه",
+            "MILITARY": "نظامی",
+            "EXPORT": "صادراتی",
+            "EXCHANGE": "بورس",
+            "CONSUMER": "مصرف کننده",
+            "AIRPLANE": "شرکت های هواپیمایی",
+            "LIQUID_GAS": "موزع گاز مایع",
+            "BRAND": "برند"
+        }
+    }
+}

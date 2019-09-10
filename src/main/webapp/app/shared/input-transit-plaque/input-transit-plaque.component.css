@@ -1,0 +1,12 @@
+jhi-transit-plaque input {
+    background-size: contain;
+    height: 43px;
+    background: url(/content/images/transit-plaque.jpg);
+    padding-bottom: 7px;
+    width: 300px;
+    text-shadow: 1px 1px white;
+    font-family: "DejaVu Sans", "Arial", sans-serif !important;
+    font-size: 25px;
+    direction: rtl;
+    text-align: right !important;
+}

@@ -1,0 +1,62 @@
+<div class="modal-header">
+    <h4 class="modal-title" jhiTranslate="entityAudit.detail.title">
+        Audit Details
+    </h4>
+    <button
+        attr.aria-label="{{ 'entityAudit.detail.close' | translate }}"
+        data-dismiss="modal" class="close" type="button"
+        (click)="activeModal.dismiss('closed')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body pad">
+    <div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <del class="diff diff-key" jhiTranslate="entityAudit.detail.old">
+                        Old/Removed value
+                    </del>
+                </div>
+
+                <div class="col-md-6">
+                    <ins class="diff diff-key" jhiTranslate="entityAudit.detail.new">
+                        New/Added value
+                    </ins>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <p>تاریخ ویرایش قبلی</p>
+                </div>
+                <div class="row">
+                    <p>{{previousModifiedDate|dateTimeJalali}}</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <p>تاریخ ویرایش جدید</p>
+                </div>
+                <div class="row">
+                    <p>{{currentModifiedDate|dateTimeJalali}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <label jhiTranslate="entityAudit.detail.changedFields">Changed Fields</label>
+    <pre style="direction: ltr;text-align: left" class="code" id="resultChanges" diff [left]="left"
+         [right]="right"></pre>
+</div>
+<div class="modal-footer">
+    <button
+        data-dismiss="modal" class="btn btn-secondary float-left"
+        type="button" (click)="activeModal.dismiss('closed')">
+        <span jhiTranslate="entity.action.close">ویرایش</span>
+    </button>
+</div>

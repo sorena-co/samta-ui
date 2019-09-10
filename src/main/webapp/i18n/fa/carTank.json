@@ -1,0 +1,32 @@
+{
+    "niopdcgatewayApp": {
+        "carTank": {
+            "home": {
+                "title": "مخازن ماشین",
+                "createLabel": "Create a new Car Tank",
+                "createOrEditLabel": "Create or edit a Car Tank",
+                "customerTitle": "مشتری"
+            },
+            "delete": {
+                "question": "آیا برای حذف مخزن تانک مطمئن هستید ؟ "
+            },
+            "detail": {
+                "title": "Car Tank"
+            },
+            "longitude": "طول(سانتی متر)",
+            "latitude": "عرض(سانتی متر)",
+            "height": "ارتفاع(میلیمتر)",
+            "radius": "شعاع(سانتی متر)",
+            "tankType": "نوع باک",
+            "customer": "مشتری",
+            "tankNo": "شماره باک"
+        }
+    },
+    "niopdcbaseApp": {
+        "carTank": {
+            "created": "مخزن ماشین با موفقیت ایجاد شد.",
+            "updated": "مخزن ماشین با موفقیت ویرایش شد.",
+            "deleted": "مخزن ماشین با موفقیت حذف شد."
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "niopdcgatewayApp": {
+        "costGroup": {
+            "home": {
+                "title": "گروه هزینه ها",
+                "createLabel": "ایجاد گروه هزینه",
+                "createOrEditLabel": "ویرایش گروه هزینه",
+                "view": "نمایش گروه هزینه"
+            },
+            "delete": {
+                "question": "آیا برای حذف گروه هزینه {{param}} مطمئن هستید ؟"
+            },
+            "detail": {
+                "title": "گروه هزینه"
+            },
+            "title": "عنوان",
+            "code": "کد",
+            "costGroupType": "نوع گروه هزینه",
+            "costMethod": "کاربرد هزینه",
+            "costGroupAccessType": "فرآورده/حواله/رسید سوخت",
+            "product": "فرآورده",
+            "customerType": "نوع مشتری",
+            "forced": "اختیاری",
+            "paymentPeriod": "دوره پرداخت",
+            "costGroup": "گروه هزینه",
+            "contractTypeId": "نوع قرارداد"
+        }
+    },
+    "niopdcrateApp": {
+        "costGroup": {
+            "created": "گروه نرخی با موفقیت ایجاد شد.",
+            "updated": "گروه نرخی با موفقیت ویرایش شد.",
+            "deleted": "گروه نرخی با موفقیت حذف شد."
+        }
+    }
+}

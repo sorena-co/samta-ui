@@ -1,0 +1,31 @@
+
+{
+    "niopdcgatewayApp": {
+        "boundaryDiscount" : {
+            "home": {
+                "title": "معافیت مرزی",
+                "createLabel": "ایجاد معافیت مرزی",
+                "createOrEditLabel": "ویرایش  معافیت مرزی"
+            },
+            "delete": {
+                "question": "آیا برای حذف معافیت مرزی مطمئن هستید؟"
+            },
+            "detail": {
+                "title": "معافیت مرزی"
+            },
+            "liter": "مقدار لیتر",
+            "kilometer": "کیلومتر",
+            "product": "فرآورده",
+            "location": "ناحیه مرزی",
+            "country": "کشور",
+            "vehicleModel": "مدل وسیله نقلیه"
+        }
+    },
+    "niopdcbaseApp": {
+        "boundaryDiscount" : {
+            "created": "معافیت مرزی با موفقیت ایجاد شد.",
+            "updated": "معافیت مرزی با موفقیت ویرایش شد.",
+            "deleted": "معافیت مرزی با موفقیت حذف شد."
+        }
+    }
+}

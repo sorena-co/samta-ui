@@ -1,0 +1,32 @@
+
+{
+    "niopdcgatewayApp": {
+        "carTypeLimit" : {
+            "home": {
+                "title": "محدودیت های عبور",
+                "createLabel": "ایجاد محدودیت عبور",
+                "createOrEditLabel": "ویرایش محدودیت عبور",
+                "view": "نمایش",
+                "customerTypeTitle":"نوع مشتری"
+            },
+            "delete": {
+                "question": "آیا برای حذف محدویت عبور مطمئن هستید ؟ "
+            },
+            "detail": {
+                "title": "محدودیت عبور"
+            },
+            "hour": "ساعت",
+            "fromDate": "از تاریخ",
+            "toDate": "تا تاریخ",
+            "customerType": "نوع مشتری",
+            "location": "ناحیه"
+        }
+    },
+    "niopdcbaseApp": {
+        "carTypeLimit" : {
+            "created": "محدودیت عبور با موفقیت ایجاد شد.",
+            "updated": "محدودیت عبور با موفقیت ویرایش شد.",
+            "deleted": "محدودیت عبور با موفقیت حذف شد."
+        }
+    }
+}

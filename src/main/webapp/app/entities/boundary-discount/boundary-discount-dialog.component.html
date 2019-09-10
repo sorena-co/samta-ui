@@ -1,0 +1,155 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 *ngIf="boundaryDiscount.id==null" class="modal-title" id="createLabel"
+            jhiTranslate="entity.action.create">
+            Create</h4>
+        <h4 *ngIf="boundaryDiscount.id!=null && !isView" class="modal-title" id="editLabel"
+            jhiTranslate="entity.action.edit">
+            Edit</h4>
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="entity.action.view">
+            View</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;
+        </button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.boundaryDiscount.liter"
+                           for="field_liter">Liter</label>
+                    <input [disabled]="isView" type="number" class="form-control" name="liter" id="field_liter"
+                           [(ngModel)]="boundaryDiscount.liter" required/>
+                    <div [hidden]="!(editForm.controls.liter?.dirty && editForm.controls.liter?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.liter?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.liter?.errors?.number"
+                               jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.boundaryDiscount.kilometer"
+                           for="field_kilometer">Kilometer</label>
+                    <input [disabled]="isView" type="number" class="form-control" name="kilometer" id="field_kilometer"
+                           [(ngModel)]="boundaryDiscount.kilometer" required/>
+                    <div [hidden]="!(editForm.controls.kilometer?.dirty && editForm.controls.kilometer?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.kilometer?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.kilometer?.errors?.number"
+                               jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.boundaryDiscount.product"
+                           for="field_product">Product</label>
+                    <p-dropdown [options]="customProducts" [(ngModel)]="boundaryDiscount.productId"
+                                [filter]="true"
+                                [disabled]="isView"
+                                class="form-control"
+                                filterBy="label"
+                                id="field_product"
+                                name="productId"
+                                ngDefaultControl
+                    >
+                    </p-dropdown>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.boundaryDiscount.location"
+                           for="field_location">Location</label>
+                    <p-dropdown required [options]="customLocation" [(ngModel)]="boundaryDiscount.locationId"
+                                [filter]="true"
+                                [disabled]="isView"
+                                class="form-control"
+                                filterBy="label"
+                                id="field_location"
+                                name="location"
+                                ngDefaultControl
+                    ></p-dropdown>
+                </div>
+                <div [hidden]="!(editForm.controls.location?.dirty && editForm.controls.location?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.location?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.boundaryDiscount.country"
+                           for="field_country">Country</label>
+                    <p-dropdown required [options]="customCountry" [(ngModel)]="boundaryDiscount.countryId"
+                                [filter]="true"
+                                [disabled]="isView"
+                                class="form-control"
+                                filterBy="label"
+                                id="field_country"
+                                name="country"
+                                ngDefaultControl
+                    ></p-dropdown>
+                </div>
+                <div [hidden]="!(editForm.controls.country?.dirty && editForm.controls.country?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.country?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.boundaryDiscount.vehicleModel"
+                           for="field_vehicleModel">Vehicle Model</label>
+                    <p-dropdown required [options]="customVehicleModels" [(ngModel)]="boundaryDiscount.vehicleModelId"
+                                [filter]="true"
+                                [disabled]="isView"
+                                class="form-control"
+                                filterBy="label"
+                                id="field_vehicleModel"
+                                name="vehicleModel"
+                                ngDefaultControl
+                    ></p-dropdown>
+                </div>
+                <div [hidden]="!(editForm.controls.vehicleModel?.dirty && editForm.controls.vehicleModel?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.vehicleModel?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button *ngIf="!isView" type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

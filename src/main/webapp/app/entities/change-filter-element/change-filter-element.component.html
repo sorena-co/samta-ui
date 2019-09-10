@@ -1,0 +1,823 @@
+<div class="component">
+    <p-breadcrumb [model]="breadcrumbItems"></p-breadcrumb>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <p-dataTable [sortField]="predicate" [sortOrder]="reverse ? -1 : 1" #dt [value]="changeFilterElements" [lazy]="true" [rows]="itemsPerPage" [rowsPerPageOptions]="[5,10,20,totalItems]"
+                 [paginator]="true" [responsive]="true" [stacked]="false"
+                 [totalRecords]="totalItems" (onLazyLoad)="loadLazy($event)"
+                 [emptyMessage]="'global.messages.info.emptyRecords' | translate">
+        <p-header>
+            <div class="ui-helper-clearfix">
+                <button class="btn btn-primary float-right create-entity"
+                        *jhiHasAnyAuthority="['ROLE_ADMIN', 'CREATE_CHANGE_FILTER_ELEMENT']"
+                        [routerLink]="['/', { outlets: { popup: ['change-filter-element-new' , requestFilterElementId] } }]">
+                    <span class="fa fa-plus"></span>
+                    <span jhiTranslate="entity.action.create">Create</span>
+                </button>
+            </div>
+        </p-header>
+
+        <p-headerColumnGroup>
+            <p-row>
+                <!--<p-column field="model" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.model">Model</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="capacity" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.capacity">Capacity</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="operatingFlow" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.operatingFlow">Operating Flow</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="pdMax" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.pdMax">Pd Max</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="microFilter" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.microFilter">Micro Filter</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="microFilterCount" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.microFilterCount">Micro Filter Count</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="coalescer" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.coalescer">Coalescer</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="coalescerCount" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.coalescerCount">Coalescer Count</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="separator" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.separator">Separator</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="separatorCount" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.separatorCount">Separator Count</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="monitor" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.monitor">Monitor</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="monitorCount" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.monitorCount">Monitor Count</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="lastChangeDate" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.lastChangeDate">Last Change Date</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="reasonOfChange" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.reasonOfChange">Reason Of Change</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="conditionOfCartridges" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.conditionOfCartridges">Condition Of Cartridges</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="conditionOfSeals" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.conditionOfSeals">Condition Of Seals</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="conditionOfCoating" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.conditionOfCoating">Condition Of Coating</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="pdGauge" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.pdGauge">Pd Gauge</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="airEliminator" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.airEliminator">Air Eliminator</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="reliefValue" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.reliefValue">Relief Value</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="sampleDrainValue" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.sampleDrainValue">Sample Drain Value</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="namePlate" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.namePlate">Name Plate</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="microFilterType" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.microFilterType">Micro Filter Type</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="microFilterTypeCount" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.microFilterTypeCount">Micro Filter Type Count</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="coalescerType" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.coalescerType">Coalescer Type</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="coalescerTypeCount" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.coalescerTypeCount">Coalescer Type Count</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="separatorType" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.separatorType">Separator Type</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="separatorTypeCount" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.separatorTypeCount">Separator Type Count</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="monitorType" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.monitorType">Monitor Type</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="monitorTypeCount" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.monitorTypeCount">Monitor Type Count</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="microFilterTorque" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.microFilterTorque">Micro Filter Torque</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="microFilterTorqueCount" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.microFilterTorqueCount">Micro Filter Torque Count</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="coalescerTorque" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.coalescerTorque">Coalescer Torque</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="coalescerTorqueCount" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.coalescerTorqueCount">Coalescer Torque Count</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="separatorTorque" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.separatorTorque">Separator Torque</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="separatorTorqueCount" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.separatorTorqueCount">Separator Torque Count</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="monitorTorque" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.monitorTorque">Monitor Torque</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="monitorTorqueCount" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.monitorTorqueCount">Monitor Torque Count</span>
+                    </ng-template>
+                </p-column>-->
+                <p-column field="pdReading" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.pdReading">Pd Reading</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="flowTest" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.flowTest">Flow Test</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="installedBy" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.installedBy">Installed By</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="supervisedBy" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.supervisedBy">Supervised By</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="isSend" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.isSend">Is Send</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="manufactureName" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.manufacture">Manufacture</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="oilTankRegisterNo" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.oilTank">Oil Tank</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="refuelCenterPersianTitle" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.changeFilterElement.refuelCenter">RefuelCenter</span>
+                    </ng-template>
+                </p-column>
+                <p-column styleClass="col-button"></p-column>
+            </p-row>
+            <p-row>
+                <!--<p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="model" id="field_model"
+                               [(ngModel)]="changeFilterElement.model"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="capacity" id="field_capacity"
+                               [(ngModel)]="changeFilterElement.capacity"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="operatingFlow" id="field_operatingFlow"
+                               [(ngModel)]="changeFilterElement.operatingFlow"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="pdMax" id="field_pdMax"
+                               [(ngModel)]="changeFilterElement.pdMax"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="microFilter" id="field_microFilter"
+                               [(ngModel)]="changeFilterElement.microFilter"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="microFilterCount" id="field_microFilterCount"
+                               [(ngModel)]="changeFilterElement.microFilterCount"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="coalescer" id="field_coalescer"
+                               [(ngModel)]="changeFilterElement.coalescer"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="coalescerCount" id="field_coalescerCount"
+                               [(ngModel)]="changeFilterElement.coalescerCount"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="separator" id="field_separator"
+                               [(ngModel)]="changeFilterElement.separator"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="separatorCount" id="field_separatorCount"
+                               [(ngModel)]="changeFilterElement.separatorCount"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="monitor" id="field_monitor"
+                               [(ngModel)]="changeFilterElement.monitor"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="monitorCount" id="field_monitorCount"
+                               [(ngModel)]="changeFilterElement.monitorCount"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <ng2-datetimepicker class="form-control" name="lastChangeDate"
+                                            [rtlActive]="true" time="08:00"
+                                            [(ngModel)]="changeFilterElement.lastChangeDate">
+                        </ng2-datetimepicker>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="reasonOfChange" id="field_reasonOfChange"
+                               [(ngModel)]="changeFilterElement.reasonOfChange"
+                               maxlength="43"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" name="conditionOfCartridges"
+                                [(ngModel)]="changeFilterElement.conditionOfCartridges">
+                            <option></option>
+                            <option value="true" jhiTranslate="niopdcgatewayApp.changeFilterElement.conditionOfCartridgesTrue">
+                                true
+                            </option>
+                            <option value="false" jhiTranslate="niopdcgatewayApp.changeFilterElement.conditionOfCartridgesFalse">
+                                false
+                            </option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" name="conditionOfSeals"
+                                [(ngModel)]="changeFilterElement.conditionOfSeals">
+                            <option></option>
+                            <option value="true" jhiTranslate="niopdcgatewayApp.changeFilterElement.conditionOfSealsTrue">
+                                true
+                            </option>
+                            <option value="false" jhiTranslate="niopdcgatewayApp.changeFilterElement.conditionOfSealsFalse">
+                                false
+                            </option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" name="conditionOfCoating"
+                                [(ngModel)]="changeFilterElement.conditionOfCoating">
+                            <option></option>
+                            <option value="true" jhiTranslate="niopdcgatewayApp.changeFilterElement.conditionOfCoatingTrue">
+                                true
+                            </option>
+                            <option value="false" jhiTranslate="niopdcgatewayApp.changeFilterElement.conditionOfCoatingFalse">
+                                false
+                            </option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" name="pdGauge"
+                                [(ngModel)]="changeFilterElement.pdGauge">
+                            <option></option>
+                            <option value="true" jhiTranslate="niopdcgatewayApp.changeFilterElement.pdGaugeTrue">
+                                true
+                            </option>
+                            <option value="false" jhiTranslate="niopdcgatewayApp.changeFilterElement.pdGaugeFalse">
+                                false
+                            </option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" name="airEliminator"
+                                [(ngModel)]="changeFilterElement.airEliminator">
+                            <option></option>
+                            <option value="true" jhiTranslate="niopdcgatewayApp.changeFilterElement.airEliminatorTrue">
+                                true
+                            </option>
+                            <option value="false" jhiTranslate="niopdcgatewayApp.changeFilterElement.airEliminatorFalse">
+                                false
+                            </option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" name="reliefValue"
+                                [(ngModel)]="changeFilterElement.reliefValue">
+                            <option></option>
+                            <option value="true" jhiTranslate="niopdcgatewayApp.changeFilterElement.reliefValueTrue">
+                                true
+                            </option>
+                            <option value="false" jhiTranslate="niopdcgatewayApp.changeFilterElement.reliefValueFalse">
+                                false
+                            </option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" name="sampleDrainValue"
+                                [(ngModel)]="changeFilterElement.sampleDrainValue">
+                            <option></option>
+                            <option value="true" jhiTranslate="niopdcgatewayApp.changeFilterElement.sampleDrainValueTrue">
+                                true
+                            </option>
+                            <option value="false" jhiTranslate="niopdcgatewayApp.changeFilterElement.sampleDrainValueFalse">
+                                false
+                            </option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" name="namePlate"
+                                [(ngModel)]="changeFilterElement.namePlate">
+                            <option></option>
+                            <option value="true" jhiTranslate="niopdcgatewayApp.changeFilterElement.namePlateTrue">
+                                true
+                            </option>
+                            <option value="false" jhiTranslate="niopdcgatewayApp.changeFilterElement.namePlateFalse">
+                                false
+                            </option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="microFilterType" id="field_microFilterType"
+                               [(ngModel)]="changeFilterElement.microFilterType"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="microFilterTypeCount" id="field_microFilterTypeCount"
+                               [(ngModel)]="changeFilterElement.microFilterTypeCount"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="coalescerType" id="field_coalescerType"
+                               [(ngModel)]="changeFilterElement.coalescerType"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="coalescerTypeCount" id="field_coalescerTypeCount"
+                               [(ngModel)]="changeFilterElement.coalescerTypeCount"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="separatorType" id="field_separatorType"
+                               [(ngModel)]="changeFilterElement.separatorType"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="separatorTypeCount" id="field_separatorTypeCount"
+                               [(ngModel)]="changeFilterElement.separatorTypeCount"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="monitorType" id="field_monitorType"
+                               [(ngModel)]="changeFilterElement.monitorType"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="monitorTypeCount" id="field_monitorTypeCount"
+                               [(ngModel)]="changeFilterElement.monitorTypeCount"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="microFilterTorque" id="field_microFilterTorque"
+                               [(ngModel)]="changeFilterElement.microFilterTorque"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="microFilterTorqueCount" id="field_microFilterTorqueCount"
+                               [(ngModel)]="changeFilterElement.microFilterTorqueCount"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="coalescerTorque" id="field_coalescerTorque"
+                               [(ngModel)]="changeFilterElement.coalescerTorque"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="coalescerTorqueCount" id="field_coalescerTorqueCount"
+                               [(ngModel)]="changeFilterElement.coalescerTorqueCount"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="separatorTorque" id="field_separatorTorque"
+                               [(ngModel)]="changeFilterElement.separatorTorque"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="separatorTorqueCount" id="field_separatorTorqueCount"
+                               [(ngModel)]="changeFilterElement.separatorTorqueCount"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="monitorTorque" id="field_monitorTorque"
+                               [(ngModel)]="changeFilterElement.monitorTorque"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="monitorTorqueCount" id="field_monitorTorqueCount"
+                               [(ngModel)]="changeFilterElement.monitorTorqueCount"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>-->
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="pdReading" id="field_pdReading"
+                               [(ngModel)]="changeFilterElement.pdReading"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control"
+                               name="flowTest" id="field_flowTest"
+                               [(ngModel)]="changeFilterElement.flowTest"
+                               [numeric]
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="installedBy" id="field_installedBy"
+                               [(ngModel)]="changeFilterElement.installedBy"
+                               maxlength="43"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="supervisedBy" id="field_supervisedBy"
+                               [(ngModel)]="changeFilterElement.supervisedBy"
+                        />
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" name="isSend"
+                                [(ngModel)]="changeFilterElement.isSend">
+                            <option></option>
+                            <option value="true" jhiTranslate="niopdcgatewayApp.changeFilterElement.isSendTrue">
+                                true
+                            </option>
+                            <option value="false" jhiTranslate="niopdcgatewayApp.changeFilterElement.isSendFalse">
+                                false
+                            </option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" id="field_manufacture" name="manufacture" [(ngModel)]="changeFilterElement.manufactureId">
+                            <option [ngValue]="null"></option>
+                            <option *ngFor="let manufactureOption of manufactures; trackBy: trackManufactureById"
+                                [ngValue]="manufactureOption.id">{{manufactureOption.name}}</option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" id="field_oilTank" name="oilTank" [(ngModel)]="changeFilterElement.oilTankId">
+                            <option [ngValue]="null"></option>
+                            <option *ngFor="let oilTankOption of oiltanks; trackBy: trackOilTankById"
+                                [ngValue]="oilTankOption.id">{{oilTankOption.title}}</option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <select class="form-control" id="field_refuelCenter" name="refuelCenter" [(ngModel)]="changeFilterElement.refuelCenterId">
+                            <option [ngValue]="null"></option>
+                            <option *ngFor="let refuelCenterOption of refuelCenters; trackBy: trackRefuelCenterById"
+                                [ngValue]="refuelCenterOption.id">{{refuelCenterOption.persianTitle}}</option>
+                        </select>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <button class="btn btn-info" (click)="search()">
+                            <span class="fa fa-search"></span>
+                        </button>
+                        <button class=" btn btn-danger" (click)="clear()">
+                            <span class="fa fa-trash-o"></span>
+                        </button>
+                    </ng-template>
+                </p-column>
+            </p-row>
+        </p-headerColumnGroup>
+
+      <!--  <p-column field="model" [header]="'niopdcgatewayApp.changeFilterElement.model' | translate"></p-column>
+        <p-column field="capacity" [header]="'niopdcgatewayApp.changeFilterElement.capacity' | translate"></p-column>
+        <p-column field="operatingFlow" [header]="'niopdcgatewayApp.changeFilterElement.operatingFlow' | translate"></p-column>
+        <p-column field="pdMax" [header]="'niopdcgatewayApp.changeFilterElement.pdMax' | translate"></p-column>
+        <p-column field="microFilter" [header]="'niopdcgatewayApp.changeFilterElement.microFilter' | translate"></p-column>
+        <p-column field="microFilterCount" [header]="'niopdcgatewayApp.changeFilterElement.microFilterCount' | translate"></p-column>
+        <p-column field="coalescer" [header]="'niopdcgatewayApp.changeFilterElement.coalescer' | translate"></p-column>
+        <p-column field="coalescerCount" [header]="'niopdcgatewayApp.changeFilterElement.coalescerCount' | translate"></p-column>
+        <p-column field="separator" [header]="'niopdcgatewayApp.changeFilterElement.separator' | translate"></p-column>
+        <p-column field="separatorCount" [header]="'niopdcgatewayApp.changeFilterElement.separatorCount' | translate"></p-column>
+        <p-column field="monitor" [header]="'niopdcgatewayApp.changeFilterElement.monitor' | translate"></p-column>
+        <p-column field="monitorCount" [header]="'niopdcgatewayApp.changeFilterElement.monitorCount' | translate"></p-column>
+        <p-column field="lastChangeDate" [header]="'niopdcgatewayApp.changeFilterElement.lastChangeDate' | translate">
+            <ng-template let-item="rowData" pTemplate="body">
+                <span>{{item.lastChangeDate | dateTimeJalali}}</span>
+            </ng-template></p-column>
+        <p-column field="reasonOfChange" [header]="'niopdcgatewayApp.changeFilterElement.reasonOfChange' | translate"></p-column>
+        <p-column field="conditionOfCartridges" [header]="'niopdcgatewayApp.changeFilterElement.conditionOfCartridges' | translate">
+            <ng-template let-item="rowData" pTemplate="body">
+                <span class="fa" [ngClass]="{'fa-check':item.conditionOfCartridges,'fa-close':!item.conditionOfCartridges}"></span>
+            </ng-template></p-column>
+        <p-column field="conditionOfSeals" [header]="'niopdcgatewayApp.changeFilterElement.conditionOfSeals' | translate">
+            <ng-template let-item="rowData" pTemplate="body">
+                <span class="fa" [ngClass]="{'fa-check':item.conditionOfSeals,'fa-close':!item.conditionOfSeals}"></span>
+            </ng-template></p-column>
+        <p-column field="conditionOfCoating" [header]="'niopdcgatewayApp.changeFilterElement.conditionOfCoating' | translate">
+            <ng-template let-item="rowData" pTemplate="body">
+                <span class="fa" [ngClass]="{'fa-check':item.conditionOfCoating,'fa-close':!item.conditionOfCoating}"></span>
+            </ng-template></p-column>
+        <p-column field="pdGauge" [header]="'niopdcgatewayApp.changeFilterElement.pdGauge' | translate">
+            <ng-template let-item="rowData" pTemplate="body">
+                <span class="fa" [ngClass]="{'fa-check':item.pdGauge,'fa-close':!item.pdGauge}"></span>
+            </ng-template></p-column>
+        <p-column field="airEliminator" [header]="'niopdcgatewayApp.changeFilterElement.airEliminator' | translate">
+            <ng-template let-item="rowData" pTemplate="body">
+                <span class="fa" [ngClass]="{'fa-check':item.airEliminator,'fa-close':!item.airEliminator}"></span>
+            </ng-template></p-column>
+        <p-column field="reliefValue" [header]="'niopdcgatewayApp.changeFilterElement.reliefValue' | translate">
+            <ng-template let-item="rowData" pTemplate="body">
+                <span class="fa" [ngClass]="{'fa-check':item.reliefValue,'fa-close':!item.reliefValue}"></span>
+            </ng-template></p-column>
+        <p-column field="sampleDrainValue" [header]="'niopdcgatewayApp.changeFilterElement.sampleDrainValue' | translate">
+            <ng-template let-item="rowData" pTemplate="body">
+                <span class="fa" [ngClass]="{'fa-check':item.sampleDrainValue,'fa-close':!item.sampleDrainValue}"></span>
+            </ng-template></p-column>
+        <p-column field="namePlate" [header]="'niopdcgatewayApp.changeFilterElement.namePlate' | translate">
+            <ng-template let-item="rowData" pTemplate="body">
+                <span class="fa" [ngClass]="{'fa-check':item.namePlate,'fa-close':!item.namePlate}"></span>
+            </ng-template></p-column>
+        <p-column field="microFilterType" [header]="'niopdcgatewayApp.changeFilterElement.microFilterType' | translate"></p-column>
+        <p-column field="microFilterTypeCount" [header]="'niopdcgatewayApp.changeFilterElement.microFilterTypeCount' | translate"></p-column>
+        <p-column field="coalescerType" [header]="'niopdcgatewayApp.changeFilterElement.coalescerType' | translate"></p-column>
+        <p-column field="coalescerTypeCount" [header]="'niopdcgatewayApp.changeFilterElement.coalescerTypeCount' | translate"></p-column>
+        <p-column field="separatorType" [header]="'niopdcgatewayApp.changeFilterElement.separatorType' | translate"></p-column>
+        <p-column field="separatorTypeCount" [header]="'niopdcgatewayApp.changeFilterElement.separatorTypeCount' | translate"></p-column>
+        <p-column field="monitorType" [header]="'niopdcgatewayApp.changeFilterElement.monitorType' | translate"></p-column>
+        <p-column field="monitorTypeCount" [header]="'niopdcgatewayApp.changeFilterElement.monitorTypeCount' | translate"></p-column>
+        <p-column field="microFilterTorque" [header]="'niopdcgatewayApp.changeFilterElement.microFilterTorque' | translate"></p-column>
+        <p-column field="microFilterTorqueCount" [header]="'niopdcgatewayApp.changeFilterElement.microFilterTorqueCount' | translate"></p-column>
+        <p-column field="coalescerTorque" [header]="'niopdcgatewayApp.changeFilterElement.coalescerTorque' | translate"></p-column>
+        <p-column field="coalescerTorqueCount" [header]="'niopdcgatewayApp.changeFilterElement.coalescerTorqueCount' | translate"></p-column>
+        <p-column field="separatorTorque" [header]="'niopdcgatewayApp.changeFilterElement.separatorTorque' | translate"></p-column>
+        <p-column field="separatorTorqueCount" [header]="'niopdcgatewayApp.changeFilterElement.separatorTorqueCount' | translate"></p-column>
+        <p-column field="monitorTorque" [header]="'niopdcgatewayApp.changeFilterElement.monitorTorque' | translate"></p-column>
+        <p-column field="monitorTorqueCount" [header]="'niopdcgatewayApp.changeFilterElement.monitorTorqueCount' | translate"></p-column>-->
+        <p-column field="pdReading" [header]="'niopdcgatewayApp.changeFilterElement.pdReading' | translate"></p-column>
+        <p-column field="flowTest" [header]="'niopdcgatewayApp.changeFilterElement.flowTest' | translate"></p-column>
+        <p-column field="installedBy" [header]="'niopdcgatewayApp.changeFilterElement.installedBy' | translate"></p-column>
+        <p-column field="supervisedBy" [header]="'niopdcgatewayApp.changeFilterElement.supervisedBy' | translate"></p-column>
+        <p-column field="isSend" [header]="'niopdcgatewayApp.changeFilterElement.isSend' | translate">
+            <ng-template let-item="rowData" pTemplate="body">
+                <span class="fa" [ngClass]="{'fa-check':item.isSend,'fa-close':!item.isSend}"></span>
+            </ng-template></p-column>
+        <p-column field="manufactureName" [header]="'niopdcgatewayApp.changeFilterElement.manufacture' | translate"></p-column>
+        <p-column field="oilTankTitle" [header]="'niopdcgatewayApp.changeFilterElement.oilTank' | translate"></p-column>
+        <p-column field="refuelCenterPersianTitle" [header]="'niopdcgatewayApp.changeFilterElement.refuelCenter' | translate"></p-column>
+        <p-column class="component">
+            <ng-template let-item="rowData" pTemplate="body">
+                <div class="btn-group" ngbDropdown placement="right">
+                    <button type="button" class="btn btn-primary"
+                            *jhiHasAnyAuthorityDisabled="['ROLE_ADMIN', 'EDIT_CHANGE_FILTER_ELEMENT']"
+                            replaceUrl="true"
+                            [routerLink]="['/', { outlets: { popup: 'change-filter-element/'+ item.id + '/edit'} }]">
+                        <span class="fa fa-edit"></span>
+                        <span jhiTranslate="entity.action.edit">ویرایش</span>
+                    </button>
+
+                    <button class="btn btn-primary" *jhiHasAnyAuthorityDisabled="['ROLE_ADMIN', 'VIEW_CHANGE_FILTER_ELEMENT', 'DELETE_CHANGE_FILTER_ELEMENT']"
+                            ngbDropdownToggle></button>
+                    <div class="dropdown-menu" ngbDropdownMenu>
+                        <button class="dropdown-item"
+                                *jhiHasAnyAuthority="['ROLE_ADMIN', 'VIEW_CHANGE_FILTER_ELEMENT']"
+                                replaceUrl="true"
+                                [routerLink]="['/', { outlets: { popup: 'change-filter-element/'+ item.id + '/view'} }]">
+                            <span class="fa fa-eye"></span>
+                            <span jhiTranslate="entity.action.view">نمایش</span>
+                        </button>
+                        <button class="dropdown-item"
+                                *jhiHasAnyAuthority="['ROLE_ADMIN', 'DELETE_CHANGE_FILTER_ELEMENT']"
+                                replaceUrl="true"
+                                [routerLink]="['/', { outlets: { popup: 'change-filter-element/'+ item.id + '/delete'} }]">
+                            <span class="fa fa-remove"></span>
+                            <span jhiTranslate="entity.action.delete">delete</span>
+                        </button>
+
+                    </div>
+                </div>
+            </ng-template>
+        </p-column>
+    </p-dataTable>
+
+</div>

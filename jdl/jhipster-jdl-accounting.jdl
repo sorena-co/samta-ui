@@ -1,0 +1,162 @@
+entity VoucherMaster {
+  locationId Long required,
+  confirmDate ZonedDateTime required,
+  userConfirm String required,
+  docNumber String  maxlength(30),
+  description String minlength(3) maxlength(200),
+  status VoucherMasterStatus required
+}
+entity VoucherItem {
+  rowNo Integer required,
+  extra String  maxlength(20) required,
+  special String  maxlength(20) required,
+  credit Long required,
+  debit Long required,
+  description String minlength(3) maxlength(200),
+  accountNo String  maxlength(23) required,
+  Suffix String maxlength(8) required,
+  key String,
+}
+
+entity VoucherTypeGroup {
+ title String  maxlength(30) required
+}
+entity VoucherType {
+ title String  maxlength(30) required
+}
+entity BaseQuery {
+ title String  maxlength(30) required,
+ tempQuery String  maxlength(1000) required
+}
+entity VoucherTemplate{
+ referrer Referrer required
+}
+entity VoucherMapping{
+ rowNoMap String  maxlength(2500) required,
+ extraMap String  maxlength(2500) required,
+ specialMap String  maxlength(2500) required,
+ creditMap String  maxlength(2500) required,
+ debitMap String  maxlength(2500) required,
+ descriptionMap String  maxlength(2500) required,
+ accountNoMap String  maxlength(2500) required,
+ SuffixMap String  maxlength(2500) required,
+ keyMap String  maxlength(2500) required
+}
+
+entity Bill {
+  customerId Long required,
+  sellContractId Long required,
+  customerScore Double required,
+  paymentPeriod PaymentPeriod required,
+  day Integer required,
+  Month Integer required,
+  Year Integer required,
+  totalPrice Double required
+}
+entity VoucherPayment{
+  locationId Long required,
+}
+
+entity BillItem{
+  title String required,
+  productId Long required,
+  litre Long required,
+  costId Long required,
+  price Double required,
+  costRatePrice Double required,
+  costElementId Long required,
+}
+
+enum PaymentPeriod{
+    DAY,MONTH,SEASON,YEAR
+}
+enum Referrer{
+    BILL,ORDER,NORMAL
+}
+
+
+entity Factor {
+  registerDate ZonedDateTime required,
+  personId Long required,
+  factorNo Long required,
+  startDate ZonedDateTime required,
+  finishDate ZonedDateTime required,
+  price Double,
+  active Boolean
+}
+
+entity FactorItem {
+    orderId Long required,
+    orderNo String required,
+    orderProductId Long required,
+    description String,
+    amount Integer required,
+    productUnit String required,
+    productRatePrice Double required,
+    basePrice Double required,
+    costPrice Double,
+    totalPrice Double
+}
+enum VoucherMasterStatus{
+    CONFIRM,PENDING
+}
+
+entity LoanType {
+    penalty Double,
+    title String required,
+    description String,
+    maxAmount Integer,
+    startDate ZonedDateTime,
+    finishDate ZonedDateTime,
+    maxInstallmentCount Integer
+    interest Integer,
+    calcPenaltyAfterDay Integer
+}
+
+entity Loan {
+    customerId Long,
+    amount Double,
+    reason LoanReason,
+    description String,
+    installmentCount Integer,
+    firstPaymentDate ZonedDateTime required,
+    completed Boolean,
+    payByBill Boolean,
+    penaltyDay Integer
+}
+
+entity LoanPayment {
+    paymentId Long required,
+    price Double required,
+    data ZonedDateTime required
+}
+
+enum LoanReason {
+    REPAIRS
+}
+
+
+
+relationship OneToMany {
+ VoucherMaster to VoucherItem{voucherMaster required},
+ VoucherTemplate to VoucherMapping{voucherTemplate required},
+ Bill to BillItem {bill required}
+}
+
+relationship ManyToOne {
+ VoucherPayment{voucherType required} to VoucherType,
+ VoucherTemplate{voucherType required} to VoucherType,
+ VoucherMaster{voucherType required} to VoucherType,
+ VoucherType{voucherTypeGroup required} to VoucherTypeGroup,
+ VoucherMapping{baseQuery required} to BaseQuery,
+ FactorItem{factor required} to Factor,
+ Loan{loanType required} to LoanType,
+ LoanPayment{loan required} to Loan,
+ LoanPayment{billItem} to BillItem
+}
+
+
+dto * with mapstruct
+paginate * with pager
+service * with serviceClass
+microservice * with niopdcaccounting

@@ -1,0 +1,15 @@
+{
+    "niopdcgatewayApp": {
+        "CustomerGroup" : {
+            "null": "",
+            "STATION": "STATION",
+            "SELLER": "SELLER",
+            "MAJOR_CONSUMER": "MAJOR_CONSUMER",
+            "CONSUMER": "CONSUMER",
+            "AIRPLANE": "AIRPLANE",
+            "EXPORT": "EXPORT",
+            "LIQUID_GAS": "LIQUID_GAS",
+            "BOUNDARY": "BOUNDARY"
+        }
+    }
+}

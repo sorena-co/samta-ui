@@ -1,0 +1,17 @@
+{
+    "niopdcgatewayApp": {
+        "totalSellGround": {
+            "home": {
+                "title": "فروش سوخت زمینی"
+            },
+            "startDate": "از تاریخ",
+            "finishDate": "تا تاریخ",
+            "amount": "مقدار",
+            "rate": "نرخ",
+            "totalPrice": "مبلغ",
+            "productTitle": "نام فراورده",
+            "productCode": "کد فراورده",
+            "sellToDifferent": "فروش به غیر"
+        }
+    }
+}

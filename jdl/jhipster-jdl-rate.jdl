@@ -1,0 +1,148 @@
+entity Currency (currency) {
+  title String required minlength(3) maxlength(42),
+  isNationalCurrency Boolean
+}
+
+entity CurrencyRate (currency_Rate) {
+  rate Integer required,
+  activeStartDate ZonedDateTime required,
+  activeFinishDate ZonedDateTime
+}
+
+entity CurrencyRateGroup {
+    title String
+}
+
+entity ProductRate{
+  productId Long ,
+  containerId Long ,
+  src String required minlength(3) minlength(3),
+  price Float required,
+  startDate ZonedDateTime required,
+  finishDate ZonedDateTime
+}
+
+entity RateGroup {
+    title String,
+    type RateGroupType,
+}
+
+entity ContainerRate {
+  containerId Long required,
+  src String required minlength(3) minlength(3),
+  title String required minlength(3) maxlength(42),
+  price Float required,
+  hasTax Boolean ,
+  startDate ZonedDateTime required,
+  finishDate ZonedDateTime
+}
+
+entity CostGroup{
+  title String required  minlength(3) maxlength(42),
+  code String required minlength(4) maxlength(4),
+  costGroupType CostGroupType required,
+  costMethod CostMethod required,
+  forced Forced required,
+  paymentPeriod PaymentPeriod,
+  costGroupAccessType CostGroupAccessType required,
+  costType CostType required
+}
+
+entity Cost{
+  rateType RateType,
+  effect Effect,
+  costAction CostAction,
+  startLitre Long,
+  endLitre Long,
+  costRelated CostRelated
+}
+entity CostRate {
+  startDate ZonedDateTime required,
+  finishDate ZonedDateTime ,
+  rate Float required min(0),
+}
+
+entity CostElement{
+    code String required,
+    customerGroup CustomerGroup required
+}
+
+enum CostRelated{
+    TAX, COMPLICATION, RENOVATION, POLLUTION
+}
+enum CustomerGroup{
+    STATION,SELLER
+}
+
+enum RateGroupType {
+    SUBSIDY,
+    NON_SUBSIDY
+}
+
+
+enum Forced{
+    FORCE,OPTIONAL
+}
+
+enum PaymentPeriod{
+    DAY,MONTH,SEASON,YEAR
+}
+
+enum RateType{
+    PERCENT,
+    CONST,
+    PER_LITRE,
+    PER_LITRE_SCORE
+}
+enum Effect{
+    BASE,
+    TOTAL,
+    PARENT_COST
+}
+enum CostType{
+   WITH_ORDER,
+   BILL
+}
+enum CostGroupType{
+   CASH,
+   LADDER,
+   ENCOURAGEMENT,
+   SUPPLEMENT
+}
+enum CostMethod {
+    NORMAL_SALES,DEFUEL
+}
+
+enum CostAction{
+   REDUCER,
+   MULTIPLIER
+}
+enum CostGroupAccessType{
+   PRODUCT,
+   CUSTOMER
+}
+
+relationship ManyToOne {
+
+  ProductRate{currency(title) required} to Currency,
+  ProductRate{rateGroup(title)} to RateGroup,
+
+  ContainerRate{currency(title) required} to Currency,
+  ContainerRate{currencyRateGroup(title) required} to CurrencyRateGroup,
+
+  CurrencyRate {currency(title) required} to Currency,
+  CurrencyRate {currencyRateGroup(title) required} to CurrencyRateGroup,
+
+  CostRate{currency(title)} to Currency,
+
+  Cost{costGroup(title) required} to CostGroup,
+  Cost{parent} to Cost,
+  CostRate{cost required} to Cost ,
+  CostElement{costGroup(title) required} to CostGroup,
+  CostElement{cost} to Cost
+}
+
+dto * with mapstruct
+paginate * with pager
+service * with serviceClass
+microservice * with niopdcrate

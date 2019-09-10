@@ -1,0 +1,257 @@
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {HttpErrorResponse, HttpResponse} from '@angular/common/http';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Subscription} from 'rxjs/Subscription';
+import {JhiAlertService, JhiEventManager, JhiParseLinks} from 'ng-jhipster';
+
+import {CarTypeLimit} from './car-type-limit.model';
+import {CarTypeLimitService} from './car-type-limit.service';
+import {ITEMS_PER_PAGE, Principal} from '../../shared';
+import {Location, LocationService} from '../location/.';
+import {LazyLoadEvent} from 'primeng/primeng';
+import {TranslateService} from '@ngx-translate/core';
+import {CustomerType, CustomerTypeService} from '../customer-type';
+
+@Component({
+    selector: 'jhi-car-type-limit',
+    templateUrl: './car-type-limit.component.html'
+})
+export class CarTypeLimitComponent implements OnInit, OnDestroy {
+
+
+    currentAccount: any;
+    carTypeLimits: CarTypeLimit[];
+    carTypeLimit: CarTypeLimit = new CarTypeLimit();
+    error: any;
+    success: any;
+    eventSubscriber: Subscription;
+    currentSearch: string;
+    routeData: any;
+    links: any;
+    totalItems: any;
+    queryCount: any;
+    itemsPerPage: any;
+    page: any;
+    predicate: any;
+    previousPage: any;
+    reverse: any;
+    customerTypeId: number;
+    breadcrumbItems: any[];
+    customerType: CustomerType;
+    locations: Location[];
+
+
+    constructor(
+        private carTypeLimitService: CarTypeLimitService,
+        private locationService: LocationService,
+        private customerTypeService: CustomerTypeService,
+        private parseLinks: JhiParseLinks,
+        private jhiAlertService: JhiAlertService,
+        private principal: Principal,
+        private activatedRoute: ActivatedRoute,
+        private router: Router,
+        private translateService: TranslateService,
+        private eventManager: JhiEventManager
+    ) {
+        this.itemsPerPage = ITEMS_PER_PAGE;
+        this.routeData = this.activatedRoute.data.subscribe((data) => {
+            this.page = data.pagingParams.page;
+            this.previousPage = data.pagingParams.page;
+            this.reverse = !data.pagingParams.ascending;
+            this.predicate = data.pagingParams.predicate;
+        });
+        this.currentSearch = activatedRoute.snapshot.queryParams['search'] ? activatedRoute.snapshot.queryParams['search'] : '';
+        this.customerTypeId = activatedRoute.snapshot.params['customerTypeId'];
+
+        const x = this.currentSearch.split('&');
+        for (const key of x) {
+            let value = key.split('$');
+            if (key.lastIndexOf('#') >= 0) { // enum
+                value = key.split('#');
+            } else if (key.lastIndexOf(';') >= 0) { // Boolean
+                value = key.split(';');
+            } else if (key.lastIndexOf('☼') >= 0) { // equal number
+                value = key.split('☼');
+            } else if (key.lastIndexOf('>') >= 0) { // number
+                value = key.split('>');
+            } else if (key.lastIndexOf('<') >= 0) { // number
+                value = key.split('<');
+            } else if (key.lastIndexOf('→') >= 0) { // start date
+                value = key.split('→');
+            } else if (key.lastIndexOf('←') >= 0) { // end date
+                value = key.split('←');
+            }
+
+            if (value.length > 1) {
+                if (value[0].indexOf('.') > 0) {
+                    const z = value[0].split('.');
+                    value[0] = z[0] + z[1].substring(0, 1).toUpperCase() + z[1].substring(1);
+                    this.carTypeLimit[value[0]] = Number(value[1]);
+                }
+                else {
+                    this.carTypeLimit[value[0]] = value[1];
+                }
+            }
+        }
+    }
+
+    loadAll() {
+        this.carTypeLimitService.query(this.customerTypeId, {
+            query: this.currentSearch.length > 0 ? this.currentSearch : null,
+            page: this.page - 1,
+            size: this.itemsPerPage,
+            sort: this.sort()
+        }).subscribe(
+            (res: HttpResponse<CarTypeLimit[]>) => this.onSuccess(res.body, res.headers),
+            (res: HttpErrorResponse) => this.onError(res.message)
+        );
+    }
+
+    clear() {
+        this.page = 0;
+        this.currentSearch = '';
+
+        this.router.navigate(['customer-type/' + this.customerTypeId + '/car-type-limit'], {
+            queryParams: {
+                page: this.page,
+                sort: this.predicate + ',' + (this.reverse ? 'desc' : 'asc')
+            }
+        });
+        this.carTypeLimit = new CarTypeLimit();
+        this.loadAll();
+    }
+
+    search() {
+        this.page = 0;
+        this.currentSearch = '';
+        if (this.carTypeLimit.hour) {
+            this.currentSearch += 'hour☼' + this.carTypeLimit.hour + '&';
+        }
+        if (this.carTypeLimit.fromDate) {
+            this.currentSearch += 'fromDate→' + this.carTypeLimit.fromDate.toISOString() + '&';
+        }
+        if (this.carTypeLimit.toDate) {
+            this.currentSearch += 'toDate→' + this.carTypeLimit.toDate.toISOString() + '&';
+        }
+        if (this.carTypeLimit.customerTypeId) {
+            this.currentSearch += 'customerType.id☼' + this.carTypeLimit.customerTypeId + '&';
+        }
+        if (this.carTypeLimit.locationTitle) {
+            this.currentSearch += 'location|name$' + this.carTypeLimit.locationTitle + '&';
+        }
+        if (this.currentSearch.length > 0) {
+            this.currentSearch = this.currentSearch.substring(0, this.currentSearch.length - 1);
+        }
+
+
+        this.router.navigate(['customer-type/' + this.customerTypeId + '/car-type-limit'], {
+            queryParams: {
+                search: this.currentSearch,
+                page: this.page,
+                sort: this.predicate + ',' + (this.reverse ? 'desc' : 'asc')
+            }
+        });
+        this.loadAll();
+    }
+
+    setBreadCrumb() {
+        this.breadcrumbItems = [];
+        this.translateService.get('global.menu.home').subscribe((title) => {
+            this.breadcrumbItems.push({label: title, routerLink: ['/']});
+        });
+        this.translateService.get('niopdcgatewayApp.carTypeLimit.home.customerTypeTitle').subscribe((title) => {
+            this.breadcrumbItems.push({label: title + ` (${this.customerType.title})`, routerLink: ['/customer-type']});
+        });
+        this.translateService.get('niopdcgatewayApp.carTypeLimit.home.title').subscribe((title) => {
+            this.breadcrumbItems.push({label: title});
+        });
+    }
+
+    ngOnInit() {
+        this.principal.identity().then((account) => {
+            this.currentAccount = account;
+        });
+        this.locationService.query().subscribe(
+            (res) => {
+                this.locations = res.body;
+            }
+        );
+
+        this.registerChangeInCarTypeLimits();
+
+        this.customerTypeService.find(this.customerTypeId).subscribe(
+            (customerType) => {
+                this.customerType = customerType.body;
+                this.setBreadCrumb();
+            }
+        );
+    }
+
+    ngOnDestroy() {
+        this.eventManager.destroy(this.eventSubscriber);
+    }
+
+    trackId(index: number, item: CarTypeLimit) {
+        return item.id;
+    }
+
+    trackLocationById(index: number, item: Location) {
+        return item.id;
+    }
+
+    registerChangeInCarTypeLimits() {
+        this.eventSubscriber = this.eventManager.subscribe('carTypeLimitListModification', (response) => this.loadAll());
+    }
+
+    sort() {
+        const result = [this.predicate + ',' + (this.reverse ? 'desc' : 'asc')];
+
+        return result;
+    }
+
+    loadLazy(event: LazyLoadEvent) {
+        let predicate = this.predicate;
+        let reverse = this.reverse;
+        let page = this.page;
+        let itemsPerPage = this.itemsPerPage;
+        this.page = (event.first / event.rows) + 1;
+        this.itemsPerPage = event.rows;
+        if (event.sortField) {
+            this.predicate = event.sortField;
+            this.reverse = event.sortOrder !== 1;
+        }
+
+        if (this.page > 1 ||
+            this.page !== page ||
+            this.itemsPerPage !== itemsPerPage ||
+            this.predicate !== predicate ||
+            this.reverse != reverse) {
+
+
+            this.router.navigate(['customer-type', this.customerTypeId, 'car-type-limit'], {
+                queryParams: {
+                    page: this.page,
+                    size: this.itemsPerPage,
+                    search: this.currentSearch,
+                    sort: this.predicate + ',' + (this.reverse ? 'desc' : 'asc')
+                }
+            });
+        }
+
+        this.loadAll();
+    }
+
+    private onSuccess(data, headers) {
+        this.links = this.parseLinks.parse(headers.get('link'));
+        this.totalItems = headers.get('X-Total-Count');
+        this.queryCount = this.totalItems;
+        // this.page = pagingParams.page;
+        this.carTypeLimits = data;
+    }
+
+    private onError(error) {
+        this.jhiAlertService.error(error.message, null, null);
+    }
+
+
+}

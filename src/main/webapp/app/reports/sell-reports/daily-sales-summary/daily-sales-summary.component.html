@@ -1,0 +1,262 @@
+<div class="component">
+    <p-breadcrumb [model]="breadcrumbItems"></p-breadcrumb>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <form name="editForm" role="form" novalidate (ngSubmit)="loadAll()" #editForm="ngForm">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <h5 class="col-md-3"
+                        jhiTranslate="report.search">Search
+                    </h5>
+                </div>
+            </div>
+            <div class="card-block container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label"
+                                           jhiTranslate="niopdcgatewayApp.dailySalesSummary.date"
+                                           for="field_date">date</label>
+                                    <div class="d-flex">
+                                        <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00:00"
+                                                            id="field_date"
+                                                            class="form-control"
+                                                            name="date" [(ngModel)]="req.date"
+                                                            required></ng2-datetimepicker>
+                                    </div>
+                                    <div
+                                        [hidden]="!(editForm.controls.date?.dirty && editForm.controls.date?.invalid)">
+                                        <small class="form-text text-danger"
+                                               [hidden]="!editForm.controls.date?.errors?.required"
+                                               jhiTranslate="entity.validation.required">
+                                            This field is required.
+                                        </small>
+                                        <small class="form-text text-danger"
+                                               [hidden]="!editForm.controls.date?.errors?.ZonedDateTimelocal"
+                                               jhiTranslate="entity.validation.ZonedDateTimelocal">
+                                            This field should be a date and time.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label"
+                                           jhiTranslate="niopdcgatewayApp.dailySalesSummary.timeBy"
+                                           for="field_timeBy">timeBy</label>
+                                    <select class="form-control" name="timeByOrderCreate"
+                                            [(ngModel)]="req.timeByOrderCreate" id="field_timeBy"
+                                    >
+                                        <option [ngValue]="true">
+                                            {{'niopdcgatewayApp.dailySalesSummary.timeByOrderCreate' | translate}}
+                                        </option>
+                                        <option [ngValue]="false">
+                                            {{'niopdcgatewayApp.dailySalesSummary.timeByExportFromDepot' | translate}}
+                                        </option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="checkbox" class="form-control"
+                                           name="allProducts" id="field_product"
+                                           [(ngModel)]="allProducts"/>
+                                    <label jhiTranslate="niopdcgatewayApp.dailySalesSummary.product"
+                                           for="field_product">product</label>
+                                    <p-multiSelect *ngIf="!allProducts" class="form-control"
+                                                   [options]="products"
+                                                   name="products"
+                                                   required
+                                                   [(ngModel)]="req.products"
+                                                   [ngModelOptions]="{standalone: true}"
+                                    ></p-multiSelect>
+                                    <input *ngIf="allProducts" disabled type="text"
+                                           class="form-control"
+                                           name="products"
+                                           [ngModel]="'همه'"/>
+                                    <div
+                                        [hidden]="!(editForm.controls.products?.dirty && editForm.controls.products?.invalid)">
+                                        <small class="form-text text-danger"
+                                               [hidden]="!editForm.controls.products?.errors?.required"
+                                               jhiTranslate="entity.validation.required">
+                                            This field is required.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="checkbox" class="form-control"
+                                           name="allBuyGroups" id="field_BuyGroup"
+                                           [(ngModel)]="allBuyGroups"/>
+                                    <label jhiTranslate="niopdcgatewayApp.dailySalesSummary.buyGroup"
+                                           for="field_BuyGroup">BuyGroup</label>
+                                    <p-multiSelect *ngIf="!allBuyGroups" class="form-control"
+                                                   [options]="buyGroups"
+                                                   name="buyGroups"
+                                                   required
+                                                   [(ngModel)]="req.buyGroups"
+                                                   [ngModelOptions]="{standalone: true}"
+                                    ></p-multiSelect>
+                                    <input *ngIf="allBuyGroups" disabled type="text"
+                                           class="form-control"
+                                           name="buyGroups"
+                                           [ngModel]="'همه'"/>
+                                    <div
+                                        [hidden]="!(editForm.controls.buyGroups?.dirty && editForm.controls.buyGroups?.invalid)">
+                                        <small class="form-text text-danger"
+                                               [hidden]="!editForm.controls.buyGroups?.errors?.required"
+                                               jhiTranslate="entity.validation.required">
+                                            This field is required.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <input type="checkbox" class="form-control"
+                                   name="allLocations" id="field_location"
+                                   [(ngModel)]="allLocations"/>
+                            <label jhiTranslate="niopdcgatewayApp.dailySalesSummary.location"
+                                   for="field_location">Location</label>
+
+                            <input-location-selector *ngIf="!allLocations"
+                                                   class="form-control" required
+                                                   [oneSelection]="false"
+                                                   [idSelector]="true"
+                                                   [(ngModel)]="req.locations"
+                                                   name="locations"
+                                                   [selectOfLevel]="'all'">
+                            </input-location-selector>
+                            <input *ngIf="allLocations" disabled type="text"
+                                   class="form-control"
+                                   name="locations"
+                                   [ngModel]="'همه'"/>
+                            <div
+                                [hidden]="!(editForm.controls.location?.dirty && editForm.controls.location?.invalid)">
+                                <small class="form-text text-danger"
+                                       [hidden]="!editForm.controls.location?.errors?.required"
+                                       jhiTranslate="entity.validation.required">
+                                    This field is required.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-center">
+                <button type="submit" class="btn btn-primary "
+                        [disabled]="editForm.form.invalid ">
+                    <span class="fa fa-search"></span>&nbsp;<span
+                    jhiTranslate="report.search">Save</span>
+                </button>
+            </div>
+        </div>
+    </form>
+    <br/>
+
+    <kendo-grid
+        [disabled]="editForm.form.invalid "
+        [data]="gridData"
+        [pageSize]="state.take"
+        [skip]="state.skip"
+        [sort]="state.sort"
+        [group]="state.group"
+        [resizable]="true"
+        [sortable]="{ mode: 'multiple' }"
+        [pageable]="{ pageSizes: [ 10,25,50,100,dailySalesSummary?.length] }"
+        [groupable]="{ showFooter: true}"
+        scrollable="scrollable"
+        (dataStateChange)="dataStateChange($event)">
+        <ng-template kendoGridToolbarTemplate>
+            <button kendoGridPDFCommand icon="file-pdf" jhiTranslate="report.exportToPdf">Export to PDF</button>
+            <button type="button" kendoGridExcelCommand icon="file-excel" jhiTranslate="report.exportToExcel">Export to
+                Excel
+            </button>
+        </ng-template>
+        <kendo-grid-column field="count"
+                           [title]="'niopdcgatewayApp.dailySalesSummary.count' | translate" width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+
+        <kendo-grid-column field="personName" [title]="'niopdcgatewayApp.dailySalesSummary.personName' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="customerName"
+                           [title]="'niopdcgatewayApp.dailySalesSummary.customerName' | translate" width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="productTitle"
+                           [title]="'niopdcgatewayApp.dailySalesSummary.productTitle' | translate" width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="locationTitle"
+                           [title]="'niopdcgatewayApp.dailySalesSummary.locationTitle' | translate" width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="amount" [title]="'niopdcgatewayApp.dailySalesSummary.amount' | translate" width="130">
+            <ng-template
+                kendoGridGroupFooterTemplate
+                let-group="group"
+                let-aggregates>{{('report.sum' | translate) + ':' + aggregates['amount']?.sum }}
+            </ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="ratePrice" [title]="'niopdcgatewayApp.dailySalesSummary.ratePrice' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="totalPrice" [title]="'niopdcgatewayApp.dailySalesSummary.totalPrice' | translate"
+                           width="130">
+            <ng-template
+                kendoGridGroupFooterTemplate
+                let-group="group"
+                let-aggregates>{{('report.sum' | translate) + ':' + aggregates['totalPrice']?.sum }}
+            </ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="basePrice" [title]="'niopdcgatewayApp.dailySalesSummary.basePrice' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="buyGroup" [title]="'niopdcgatewayApp.dailySalesSummary.buyGroup' | translate"
+                           width="130">
+            <ng-template kendoGridCellTemplate let-dataItem>
+                <span jhiTranslate="{{'niopdcgatewayApp.BuyGroup.' + dataItem.buyGroup}}">{{dataItem.buyGroup}}</span>
+            </ng-template>
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+
+        <kendo-grid-messages
+            [pagerOf]="'report.pagerOf' | translate"
+            [pagerItems]="'report.pagerItems' | translate"
+            [groupPanelEmpty]="'report.headerMessage' | translate"
+            [noRecords]="'global.messages.info.emptyRecords' | translate"
+            [pagerItemsPerPage]="'report.pagerItemsPerPage' | translate">
+        </kendo-grid-messages>
+
+        <kendo-grid-pdf fileName="dailySalesSummary.pdf" [allPages]="true" paperSize="A4" [repeatHeaders]="true"
+                        [landscape]="true">
+            <kendo-grid-pdf-margin top="2cm" left="1cm" right="1cm" bottom="2cm"></kendo-grid-pdf-margin>
+            <ng-template kendoGridPDFTemplate let-pageNum="pageNum" let-totalPages="totalPages">
+                <div class="page-template">
+                    <div class="header">
+                        <div style="float: right">{{ pageNum + ('report.pageOf'|translate) + totalPages }}</div>
+                    </div>
+                    <div class="footer">
+                        {{ pageNum + ('report.pageOf'|translate) + totalPages }}
+                    </div>
+                </div>
+            </ng-template>
+        </kendo-grid-pdf>
+        <kendo-grid-excel fileName="dailySalesSummary.xlsx"></kendo-grid-excel>
+    </kendo-grid>
+    <br/>
+</div>

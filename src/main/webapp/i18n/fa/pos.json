@@ -1,0 +1,29 @@
+
+{
+    "niopdcgatewayApp": {
+        "pos" : {
+            "home": {
+                "title": "پزها",
+                "createLabel": "ایجاد پز",
+                "createOrEditLabel": "ویرایش پز",
+                "view":"نمایش پز",
+                "airportTitle":"فرودگاه"
+            },
+            "delete": {
+                "question": "آیا برای حذف پز مطمئن هستید ؟"
+            },
+            "detail": {
+                "title": "پز"
+            },
+            "serial": "شماره سریال",
+            "airport": "فرودگاه"
+        }
+    },
+    "niopdcaoApp": {
+        "pos" : {
+            "created": "پز با موفقیت ایجاد شد.",
+            "updated": "پز با موفقیت ویرایش شد.",
+            "deleted": "پز با موفقیت حذف شد."
+        }
+    }
+}

@@ -1,0 +1,53 @@
+
+{
+    "niopdcgatewayApp": {
+        "cleaningReportOilTank" : {
+            "home": {
+                "title": "بازدید و لایروبی مخزن واحد سوختگیری",
+                "createLabel": "ایجاد بازدید و لایروبی مخزن واحد سوختگیری",
+                "createOrEditLabel": "ویرایش بازدید و لایروبی مخزن واحد سوختگیری",
+                "view":"نمایش بازدید و لایروبی مخزن واحد سوختگیری"
+            },
+            "delete": {
+                "question": "آیا برای حذف این بازدید و لایروبی مخزن واحد سوختگیری مطمئن هستید ؟ "
+            },
+            "detail": {
+                "title": "بازدید و لایروبی مخزن واحد سوختگیری"
+            },
+            "capacity": "ظرفیت مخزن",
+            "typeOfAlloy": "جنس مخزن",
+            "productId": "فرآورده",
+            "periodicTankInspection": "بازدید ادواری مخزن",
+            "cleaningType": "نوع لایروبی",
+            "modification": "اصلاح یا تعمیرات",
+            "cleaningReportNumber": "شماره صادر کننده مجوز ورود",
+            "registerDate": "تاریخ صادر کننده مجوز ورود",
+            "exporterName": "نام صادر کننده مجوز ورود به مخزن",
+            "highLevelSensor": "کنترل کننده پر شدن مخزن",
+            "pAndVValue": "شیر ورود و خروج هوا",
+            "manhole": "دریچه های آدم رو",
+            "dipStick": "میله عمق سنج",
+            "flameTrap": "جرقه گیر",
+            "contentGauge": "نشانگر موجودی",
+            "footValue": "شیر تحتانی",
+            "drainSump": "حوضچه درین",
+            "sampleDrainValue": "اتصالات نمونه گیری",
+            "description": "توضیحات",
+            "confirm": "تایید",
+            "confirmTrue":"تایید",
+            "confirmFalse":"عدم تایید",
+            "isSend": "ارسال",
+            "isSendTrue":"فعال",
+            "isSendFalse":"غیر فعال",
+            "oilTank": "مخزن",
+            "refuelCenter": "مرکز سوخت گیری"
+        }
+    },
+    "niopdcaoApp": {
+        "cleaningReportOilTank" : {
+            "created": "بازدید و لایروبی مخزن واحد سوختگیری با موفقیت ایجاد شد.",
+            "updated": "بازدید و لایروبی مخزن واحد سوختگیری با موفقیت ویرایش شد.",
+            "deleted": "بازدید و لایروبی مخزن واحد سوختگیری با موفقیت حذف شد."
+        }
+    }
+}

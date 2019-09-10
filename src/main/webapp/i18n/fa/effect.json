@@ -1,0 +1,10 @@
+{
+    "niopdcgatewayApp": {
+        "Effect" : {
+            "null": "",
+            "BASE": "پایه",
+            "TOTAL": "کل",
+            "PARENT_COST": "پدر"
+        }
+    }
+}

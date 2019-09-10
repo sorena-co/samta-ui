@@ -1,0 +1,52 @@
+
+<div *ngIf="sellContractCustomer">
+    <h2><span jhiTranslate="niopdcgatewayApp.sellContractCustomer.detail.title">Sell Contract Customer</span> {{sellContractCustomer.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="niopdcgatewayApp.sellContractCustomer.hasTransport">Has Transport</span></dt>
+        <dd>
+            <span>{{sellContractCustomer.hasTransport}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.sellContractCustomer.startDate">Start Date</span></dt>
+        <dd>
+            <span>{{sellContractCustomer.startDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.sellContractCustomer.active">Active</span></dt>
+        <dd>
+            <span>{{sellContractCustomer.active}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.sellContractCustomer.sellContract">Sell Contract</span></dt>
+        <dd>
+            <div *ngIf="sellContractCustomer.sellContractId">
+                <a [routerLink]="['/sell-contract', sellContractCustomer.sellContractId]">{{sellContractCustomer.sellContractId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.sellContractCustomer.customer">Customer</span></dt>
+        <dd>
+            <div *ngIf="sellContractCustomer.customerId">
+                <a [routerLink]="['/customer', sellContractCustomer.customerId]">{{sellContractCustomer.customerId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.sellContractCustomer.location">Location</span></dt>
+        <dd>
+            <div *ngIf="sellContractCustomer.locationId">
+                <a [routerLink]="['/location', sellContractCustomer.locationId]">{{sellContractCustomer.locationName}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'sell-contract-customer/'+ sellContractCustomer.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

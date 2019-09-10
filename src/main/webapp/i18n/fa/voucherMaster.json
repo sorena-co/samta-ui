@@ -1,0 +1,38 @@
+{
+    "niopdcgatewayApp": {
+        "voucherMaster": {
+            "home": {
+                "title": "اسناد حسابداری",
+                "createLabel": "ایجاد اسناد حسابداری",
+                "createOrEditLabel": "ویرایش اسناد حسابداری",
+                "report": "گزارش M41",
+                "view":"نمایش اسناد حسابداری"
+            },
+            "delete": {
+                "question": "آیا برای حذف سند حسابداری مطمئن هستید ؟"
+            },
+            "detail": {
+                "title": "سند حسابداری"
+            },
+            "confirm": {
+                "question": "آیا برای تایید مطمئن هستید ؟"
+            },
+            "locationId": "ناحیه",
+            "confirmDate": "تاریخ تایید",
+            "userConfirm": "کاربر تایید کننده",
+            "docNumber": "شماره سند",
+            "description": "توضیحات",
+            "status": "وضعیت",
+            "voucherItem": "Voucher Item",
+            "voucherType": "نوع سند"
+        }
+    },
+    "niopdcaccountingApp": {
+        "voucherMaster": {
+            "created": "سند حسابداری با موفقیت ایجاد شد.",
+            "updated": "سند حسابداری با موفقیت ویرایش شد.",
+            "deleted": "سند حسابداری با موفقیت حذف شد.",
+            "confirmed": "سند حسابداری با موفقیت تایید شد."
+        }
+    }
+}

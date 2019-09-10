@@ -1,0 +1,32 @@
+
+{
+    "niopdcgatewayApp": {
+        "transportContract": {
+            "home": {
+                "title": "قرارداد حمل و نقل",
+                "createLabel": "ایجاد قرارداد حمل و نقل",
+                "createOrEditLabel": "ویرایش قرارداد حمل و نقل",
+                "view": "نمایش قرارداد حمل و نقل",
+                "customerTitle": "مشتری"
+            },
+            "delete": {
+                "question": "آیا برای حذف این قرارداد حمل و نقل مطمئن هستید ؟"
+            },
+            "detail": {
+                "title": "قرارداد حمل و نقل"
+            },
+            "contractCode": "کد قرارداد",
+            "startDate": "تاریخ شروع",
+            "finishDate": "تاریخ پایان",
+            "customer": "مشتری",
+            "person": "پیمانکار حمل"
+        }
+    },
+    "niopdcbaseApp": {
+        "transportContract": {
+            "created": "قرارداد حمل و نقل با موفقیت ایجاد شد.",
+            "updated": "قرارداد حمل و نقل با موفقیت ویرایش شد.",
+            "deleted": "قرارداد حمل و نقل با موفقیت حذف شد."
+        }
+    }
+}

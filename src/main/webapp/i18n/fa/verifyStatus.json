@@ -1,0 +1,11 @@
+{
+    "niopdcgatewayApp": {
+        "VerifyStatus" : {
+            "null": "",
+            "ACTIVE": "فعال",
+            "DEACTIVE": "غیر فعال",
+            "PENDING": "فعال نشده",
+            "REJECT": "رد شده"
+        }
+    }
+}

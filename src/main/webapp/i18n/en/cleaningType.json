@@ -1,0 +1,9 @@
+{
+    "niopdcgatewayApp": {
+        "CleaningType" : {
+            "null": "",
+            "VISIT": "VISIT",
+            "CLEAN": "CLEAN"
+        }
+    }
+}

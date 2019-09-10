@@ -1,0 +1,378 @@
+{
+    "global": {
+        "title": "شرکت پخش فرآورده های نفتی",
+        "browsehappy": "شما از مرورگر <strong>قدیمی</strong> استفاده می‌کنید. لطفا <a href=\"http://browsehappy.com/?locale=en\">مرورگر خود را به روز کنید</a>",
+        "menu": {
+            "home": "خانه",
+            "sell": {
+                "title": "فروش",
+                "createOrder": "صدور حواله",
+                "order": "حواله",
+                "creditNotDepositedOrder": "تسویه حواله اعتباری",
+                "order_airplane": "رسید سوخت",
+                "createOrderAirplane": "ثبت رسید سوخت",
+                "creditNotDepositedOrderAirplane": "تسویه رسید سوخت اعتباری",
+                "order_exchange": "بورس",
+                "order_export": "صادراتی",
+                "order_exchange_create": "ثبت بورس",
+                "order_export_create": "ثبت صادراتی",
+                "connectDepot": "ارتباط با انبار",
+                "boundarySell": "فروش مرزی"
+            },
+            "entities": {
+                "baseInformation": "اطلاعات پایه",
+                "airport": "فرودگاه",
+                "costGroup": "گروه هزینه",
+                "main": "اطلاعات اصلی",
+                "location": "منطقه/ناحیه",
+                "depot": "انبارها",
+                "product": "فرآورده",
+                "productGroup": "گروه فرآورده",
+                "customerType": "نوع مشتری",
+                "stakeholder": "ذینفع",
+                "country": "تقسیمات کشوری",
+                "person": "اشخاص",
+                "customer": "مشتری",
+                "region": "تقسیمات کشوری",
+                "consumption": "انواع مصرف",
+                "productUnit": "واحد فرآورده",
+                "cost": "هزینه",
+                "container": "ظرف فرآورده",
+                "customerCost": "هزینه های مشتری",
+                "buyType": "نوع خرید",
+                "customerCredit": "اعتبارات مشتری",
+                "sellContract": "قرارداد فروش",
+                "customerTypeProductConsumption": "Customer Type Product Consumption",
+                "userLocation": "مکان کاربر",
+                "userCustomerType": "User Customer Type",
+                "userCustomer": "User Customer",
+                "userPerson": "User Person",
+                "sellContractPerson": "قرارداد فروش شخصی",
+                "sellContractProduct": "قرارداد فروش فرآورده",
+                "customerTypeCost": "Customer Type Cost",
+                "refuelCenter": "مرکز سوخت گیری",
+                "metre": "میتر",
+                "metreLog": "گزارش میتر",
+                "oilTank": "مخزن",
+                "serviceOilTank": "سرویس مخزن تانک",
+                "measurementOilTank": "اندازه گیری مخزن نفت",
+                "sendProduct": "ارسال فرآورده",
+                "sendContainerProduct": "ارسال فرآورده مظروف",
+                "transferType": "نوع انتقال",
+                "transfer": "انتقال",
+                "transferPlatformToUnit": "انتقال سکو به واحد",
+                "receivedProduct": "فرآورده دریافتی",
+                "receivedProductContainer": "فرآورده دریافتی مظروف",
+                "logBook": "Log Book",
+                "mainDayDepot": "حساب روز انبار",
+                "mainDayOilTank": "حساب روز مخزن تانک",
+                "mainDayOperation": "عملیات روزانه",
+                "dayOilTank": "روز مخزن تانک",
+                "dayOilTankContainer": "Day Oil Tank Container",
+                "sellGroundFuel": "فروش سوخت زمینی",
+                "literatureVolumeOilTank": "Literature Volume Oil Tank",
+                "oilTankContainerEmpty": "ظرف خالی",
+                "oilTankContainerFull": "مخزن مظروف",
+                "changeContainer": "تعویض ظرف",
+                "waterMethanolMixer": "مخلوط متانول و آب",
+                "currency": "واحد پولی",
+                "currencyRate": "نرخ واحد پولی",
+                "currencyRateGroup": "گروه نرخ واحد پولی",
+                "productRate": "نرخ فرآورده",
+                "containerRate": "نرخ مخزن",
+                "rateGroup": "گروه نرخی فرآورده",
+                "taxRate": "نرخ مالیات",
+                "costRate": "نرخ هزینه",
+                "productTaxRate": "نرخ مالیات فرآآورده",
+                "ao": "عملیات",
+                "lab": "آزمایشگاه",
+                "cleaningReportOilTank": "بازدید و لایروبی مخزن واحد سوختگیری",
+                "milliPoor": "میلی پور",
+                "requestTestResult": "تقاضای آزمایش سوخت",
+                "requestFilterElement": "درخواست المنت فیلتر",
+                "manufacture": "شرکت سازنده",
+                "requestPlunging": "درخواست آزمایش غوطه وری",
+                "wallet": "کیف پول",
+                "news": "اخبار",
+                "accounting": "حسابداری",
+                "baseQuery": "کوئری پایه",
+                "voucherMapping": "نگاشت سند",
+                "voucherMaster": "اسناد حسابداری",
+                "bill": "صورت حساب جایگاه",
+                "voucherTemplate": "الگوی سند",
+                "voucherTypeGroup": "گروه سند",
+                "voucherType": "نوع سند",
+                "momentSheetAo": "گزارش مومنت شیت عملیات",
+                "momentSheetDepot": "گزارش مومنت شیت انبار",
+                "pos": "پز",
+                "factor": "فاکتور",
+                "customerRating": "Customer Rating",
+                "factorItem": "Factor Item",
+                "airplaneModel": "Airplane Model",
+                "payment": "فیش",
+                "carType": "Car Type",
+                "carTypeLimit": "Car Type Limit",
+                "shiftWork": "Shift Work",
+                "carRfId": "تگ",
+                "carTank": "مخزن ماشین",
+                "niopdcConfig": "Niopdc Config",
+                "voucherPayment": "سند پرداخت",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
+                "customerDeactiveRule": "غیر فعال کردن فروش",
+                "boundarySell": "فروش مرزی",
+                "vehicleModel": "مدل وسیله نقلیه",
+                "boundaryCustomer": "وسایل نقلیه",
+                "boundaryDiscount": "معافیت مرزی",
+                "plaque": "پلاک",
+                "loan":"وام",
+                "loanType":"نوع وام"
+            },
+            "account": {
+                "main": "حساب",
+                "settings": "تنظیمات",
+                "password": "رمزعبور",
+                "sessions": "نشست ها",
+                "login": "ورود",
+                "logout": "خروج",
+                "register": "ثبت نام",
+                "chargeWallet": "شارژ کیف پول",
+                "walletRemain": "مانده: {{remain}} ریال"
+            },
+            "admin": {
+                "main": "مدیریت سیستم",
+                "gateway": "دروازه",
+                "userManagement": "مدیریت کاربر",
+                "userToken": "نشست های کاربر",
+                "role": "نقش های کاربران",
+                "parentAuthority": "مدیریت دسترسی ها",
+                "tracker": "ردیاب کاربر",
+                "metrics": "معیارها",
+                "health": "سلامتی",
+                "configuration": "پیکربندی",
+                "logs": "وقایع ثبت شده",
+                "audits": "وقایع بازرسی",
+                "apidocs": "ای‌پی‌آی",
+                "database": "پایگاه داده",
+                "news": "اخبار",
+                "entityAudit": "لاگ",
+                "entity-audit": "لاگ",
+                "niopdcConfig": "تنظیمات",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+            },
+            "report": {
+                "main": "گزارشات",
+                "dailySales": "فروش روزانه",
+                "dailySalesStatistical": "آماری فروش روزانه",
+                "dailySalesSummary": "خلاصه فروش روزانه",
+                "consumption": "انواع مصرف",
+                "detailsBuy": " ریز فروش"
+            },
+            "reportAo": {
+                "main": "گزارشات عملیات",
+                "momentSheetAo": "گزارش مومنت شیت عملیات",
+                "momentSheetDepot": "گزارش مومنت شیت انبار",
+                "metreSheet": "گزارش میتر شیت",
+                "aircraftRefuelingRecords": "سوابق سوختگيري هواپيماها",
+                "airplanes": "هواپیما",
+                "airports": "فرودگاها",
+                "airlines": "شرکت های هواپیمایی",
+                "total-sell": "جمع فروش",
+                "unit": "واحد",
+                "metre": "میتر",
+                "amount-report": "گزارش مقداری",
+                "twenty-four-ao": "تعداد سوختگیری 24 ساعته ",
+                "sell-report-by-product": "گزارش فروش بر اساس فراورده",
+                "receipt-no-detail": "صورت ريز رسيدهاي سوختي",
+                "bill-without-containers": "صورت تحویلی بیظرف",
+                "total-sell-ground": "جمع فروش سوخت زمینی",
+                "ao-mount-report": "گزارش ماهانه اداره سوختگیری"
+            },
+            "language": "زبان"
+        },
+        "form": {
+            "username": "نام کاربری",
+            "username.placeholder": "نام کاربری شما",
+            "password": "رمزعبور",
+            "newpassword": "رمزعبور جدید",
+            "newpassword.placeholder": "رمزعبور جدید",
+            "confirmpassword": "تصدیق رمزعبور",
+            "newconfirmpassword": "تصدیق رمزعبور جدید",
+            "newconfirmpassword.placeholder": "تصدیق رمزعبور جدید",
+            "email": "ایمیل",
+            "email.placeholder": "آدرس ایمیل شما"
+        },
+        "messages": {
+            "info": {
+                "emptyRecords": "هیچ اطلاعاتی برای نمایش یافت نشد.",
+                "authenticated": {
+                    "prefix": "اگر شما می‌خواهید",
+                    "link": "ورود",
+                    "suffix": ", می‌توانید از حساب پایه:<br/>- مدیریت برتر (login=\"admin\" and password=\"admin\") <br/>- کاربر (login=\"user\" and password=\"user\")."
+                },
+                "register": {
+                    "noaccount": "آیا هنوز حساب کاربری ندارید؟",
+                    "link": "ثبت نام حساب کاربری جدید"
+                }
+            },
+            "error": {
+                "dontmatch": "رمزعبور و تصدیق رمزعبور یکی نیستند!"
+            },
+            "validate": {
+                "newpassword": {
+                    "required": "رمزعبور شما ضروری است",
+                    "minlength": "رمزعبور شما باید حداقل ۴ کرکتر باشد",
+                    "maxlength": "رمز عبور شما نمی‌تواند بیش از ۵۰ کرکتر باشد.",
+                    "strength": "قدرتمندی رمزعبور:"
+                },
+                "confirmpassword": {
+                    "confirm": "رمزعبور و تصدیق رمزعبور یکسان نیستند.",
+                    "required": "تصدیق رمزعبور شما ضروری است",
+                    "minlength": "تصدیق رمزعبور شما باید حداقل ۴ کرکتر باشد",
+                    "maxlength": "تصدیق رمز عبور شما نمی‌تواند بیش از ۵۰ کرکتر باشد."
+                },
+                "email": {
+                    "required": "آدرس ایمیل شما ضروری است",
+                    "invalid": "آدرس ایمیل شما نامعتبر است",
+                    "minlength": "آدرس ایمیل شما حداقل باید ۵ کرکتر باشد",
+                    "maxlength": "آدرس ایمیل شما نمی‌تواند بیش از ۵۰ کرکتر باشد."
+                }
+            }
+        },
+        "string": {
+            "all": "همه"
+        },
+        "field": {
+            "id": "شناسه"
+        },
+        "ribbon": {
+            "dev": "در حال توسعه"
+        },
+        "item-count": "نمایش {{first}} - {{second}} از {{total}} مورد."
+    },
+    "report": {
+        "headerMessage": "برای گروه بندی بر اساس ستون روی عنوان ستون مربوطه کلیک کرده و به اینجا بکشید",
+        "pagerOf": "از",
+        "pagerItems": "ایتم",
+        "pagerItemsPerPage": "ایتم در هر صفحه",
+        "sum": "جمع",
+        "search": "جستجو",
+        "exportToPdf": "خروجی pdf",
+        "exportToExcel": "خروجی اکسل"
+    },
+    "entity": {
+        "action": {
+            "uploadFromExcel": "بازگزاری از فایل اکسل",
+            "addblob": "اضافه کردن فایل",
+            "addimage": "اضافه کردن تصویر",
+            "back": "برگشت",
+            "cancel": "انصراف",
+            "cancelProduct": "انصراف فراورده",
+            "delete": "حذف",
+            "fullEndMeasurement": "مخزن بالااستفاده",
+            "revocation": "ابطال",
+            "executeQuery": "ساخت سند",
+            "close": "بستن",
+            "update": "به روز رسانی",
+            "edit": "ویرایش",
+            "open": "باز کردن",
+            "openDay": "باز کردن",
+            "save": "ذخیره",
+            "saveProduct": "ذخیره فراورده",
+            "show": "نمایش اطلاعات",
+            "saveAndNext": "ذخیره و بعدی",
+            "saveAndNextLevel": "ذخیره و مرحله بعدی",
+            "view": "مشاهده",
+            "print": "چاپ",
+            "printAgain": "چاپ مجدد",
+            "create": "ایجاد",
+            "createTransit": "Transit",
+            "createTranship": "Tranship",
+            "createExportOrder": "ایجاد حواله صادراتی",
+            "createOrder": "ایجاد حواله",
+            "addendum": "الحاقیه",
+            "confirm": "تایید",
+            "active": "فعال کردن",
+            "deActive": "غیر فعال کردن",
+            "reject": "رد کردن",
+            "revertConfirm": "انصراف از تایید",
+            "upload": "بارگذاری",
+            "download": "دریافت",
+            "search": "جستجو",
+            "carInformation": "اطلاعات ماشین",
+            "discount": "تخفیف",
+            "carTankInformation": "اطلاعات باک",
+            "orderInformation": "اطلاعات حواله",
+            "boundaryDiscountInformation": "معافیت مرزی",
+            "primitiveOrderProductInformation": "اطلاعات سوخت گیری اولیه",
+            "finalOrderProductInformation": "اطلاعات سوخت گیری نهایی",
+            "orderProductInformation": "اطلاعات سوخت گیری",
+            "orderPriceInformation": "نرخ",
+            "calculatePrice": "محاسبه"
+        },
+        "detail": {
+            "field": "فیلد",
+            "value": "مقدار"
+        },
+        "delete": {
+            "title": "تصدیق عملیات حذف"
+        },
+        "fullEndMeasurement": {
+            "title": "مخزن بالااستفاده"
+        },
+        "revocation": {
+            "title": "تصدیق عملیات ابطال"
+        },
+        "executeQuery": {
+            "title": "تصدیق عملیات ساخت سند"
+        },
+        "open": {
+            "title": "تصدیق عملیات باز کردن"
+        },
+        "close": {
+            "title": "تصدیق عملیات بستن"
+        },
+        "confirm": {
+            "title": "تصدیق عملیات تایید"
+        },
+        "active": {
+            "title": "تصدیق عملیات فعال کردن"
+        },
+        "de-active": {
+            "title": "تصدیق عملیات غیر فعال کردن"
+        },
+        "reject": {
+            "title": "تصدیق عملیات رد کردن"
+        },
+        "revertConfirm": {
+            "title": "تایید"
+        },
+        "close": {
+            "title": "تصدیق عملیات بستن روز"
+        },
+        "validation": {
+            "required": "وارد کردن این فیلد ضروری است",
+            "date.not.equal": "سیستم فروش برای امروز بسته شده است. لذا درخواست شما برای تاریخ{{ day }} ثبت خواهد شد",
+            "minlength": "این فیلد باید حداقل {{ min }} کراکتر باشد.",
+            "maxlength": "این فیلد نمی‌تواند بیشتر از {{ max }} کرکتر باشد",
+            "min": "این فیلد باید بیشتر از {{ min }} باشد.",
+            "max": "این فیلد نمی‌تواند بیش از {{ max }} باشد.",
+            "minbytes": "این فیلد باید بیش از {{ min }} بایت باشد.",
+            "maxbytes": "این فیلد نمی‌تواند بیش از {{ max }} بایت باشد.",
+            "pattern": "این فیلد باید بر طبق این الگو {{ pattern }} باشد.",
+            "number": "این فیلد باید عدد باشد.",
+            "datetimelocal": "این فیلد باید زمان باشد.",
+            "existPostalCode": "این کد پستی وجود دارد."
+        }
+    },
+    "error": {
+        "internalServerError": "خطای داخلی در سرور",
+        "server.not.reachable": "سرور در دسترس نیست",
+        "url.not.found": "پیدا نشد",
+        "NotNull": "فیلد {{ fieldName }} نمی‌تواند خالی باشد!",
+        "Size": "فیلد{{ fieldName }} نیازمندی‌های حداقل/حداکثر را ندارد!",
+        "userexists": "این نام کاربر در سیستم وجود دارد!",
+        "emailexists": "این آدرس ایمیل در سیستم وجود دارد!",
+        "idexists": "موجودیت جدید {{ entityName }} نمی‌تواند شناسه داشته‌باشد."
+    },
+    "footer": "این پاورقی است"
+}

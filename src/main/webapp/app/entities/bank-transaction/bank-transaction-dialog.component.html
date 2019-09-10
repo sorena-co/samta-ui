@@ -1,0 +1,78 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myBankTransactionLabel" jhiTranslate="niopdcgatewayApp.bankTransaction.home.createOrEditLabel">Create or edit a Bank Transaction</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!bankTransaction.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="bankTransaction.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bankTransaction.identifier" for="field_identifier">Identifier</label>
+            <input type="text" class="form-control" name="identifier" id="field_identifier"
+                [(ngModel)]="bankTransaction.identifier" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bankTransaction.username" for="field_username">Username</label>
+            <input type="text" class="form-control" name="username" id="field_username"
+                [(ngModel)]="bankTransaction.username" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bankTransaction.requestDate" for="field_requestDate">Request Date</label>
+            <div class="d-flex">
+                <input id="field_requestDate" type="datetime-local" class="form-control" name="requestDate" [(ngModel)]="bankTransaction.requestDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bankTransaction.bankTransactionState" for="field_bankTransactionState">Bank Transaction State</label>
+            <select class="form-control" name="bankTransactionState" [(ngModel)]="bankTransaction.bankTransactionState" id="field_bankTransactionState" >
+                <option value="BEGIN">{{'niopdcgatewayApp.BankTransactionState.BEGIN' | translate}}</option>
+                <option value="PENDING">{{'niopdcgatewayApp.BankTransactionState.PENDING' | translate}}</option>
+                <option value="SYS_ERROR">{{'niopdcgatewayApp.BankTransactionState.SYS_ERROR' | translate}}</option>
+                <option value="CANCEL">{{'niopdcgatewayApp.BankTransactionState.CANCEL' | translate}}</option>
+                <option value="BANK_ERROR">{{'niopdcgatewayApp.BankTransactionState.BANK_ERROR' | translate}}</option>
+                <option value="COMPLETE">{{'niopdcgatewayApp.BankTransactionState.COMPLETE' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bankTransaction.type" for="field_type">Type</label>
+            <select class="form-control" name="type" [(ngModel)]="bankTransaction.type" id="field_type" >
+                <option value="PRODUCT">{{'niopdcgatewayApp.SpentType.PRODUCT' | translate}}</option>
+                <option value="COST">{{'niopdcgatewayApp.SpentType.COST' | translate}}</option>
+                <option value="WALLET">{{'niopdcgatewayApp.SpentType.WALLET' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bankTransaction.responseBody" for="field_responseBody">Response Body</label>
+            <input type="text" class="form-control" name="responseBody" id="field_responseBody"
+                [(ngModel)]="bankTransaction.responseBody" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bankTransaction.responseDate" for="field_responseDate">Response Date</label>
+            <div class="d-flex">
+                <input id="field_responseDate" type="datetime-local" class="form-control" name="responseDate" [(ngModel)]="bankTransaction.responseDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bankTransaction.error" for="field_error">Error</label>
+            <input type="text" class="form-control" name="error" id="field_error"
+                [(ngModel)]="bankTransaction.error" />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

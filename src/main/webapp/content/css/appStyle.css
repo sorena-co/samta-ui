@@ -1,0 +1,226 @@
+@import url(fontiran.css);
+
+body, h1, h2, h3, h4, input, button, textarea, select, .ui-widget, ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-weight: 300;
+    font-family: "IRANSans", IRANSans, Helvetica, Arial, sans-serif;
+}
+
+p-dropdown.form-control {
+    padding: 0;
+}
+
+p-dropdown.form-control .ui-dropdown {
+    width: 100% !important;
+    border: 0;
+}
+
+.tree-selector {
+    height: auto;
+    max-height: 200px;
+    min-width: 200px !important;
+    overflow: auto;
+    position: absolute;
+    background-color: aliceblue !important;
+    z-index: 1001;
+    box-shadow: 1px 5px 10px 1px #888888;
+
+}
+
+.ui-corner-all {
+    -moz-border-radius: 0px;
+     -webkit-border-radius: 0px;
+     border-radius: 0px;
+}
+
+.dataGrid {
+    padding: 0;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #292b2c;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+    max-width: none;
+}
+
+@media screen and (max-width: 560px) {
+    .dataGrid {
+        max-width: fit-content;
+    }
+}
+
+.rtl-btn {
+    margin-right: 0;
+    border-color: #ced4da;
+    border-width: 0 1px 0 0;
+    border-radius: .25rem 0 0 .25rem;
+}
+
+.mid-btn {
+    margin-left: 0;
+    border-color: #ced4da;
+    border-width: 0 0 0 1px;
+    border-radius: 0;
+}
+
+.modal-header {
+    border: 1px solid #aed0ea;
+    background: #deedf7;
+    border-radius: .3rem .3rem 0 0;
+}
+
+.modal-footer {
+    border: 1px solid #aed0ea;
+    background: #deedf7;
+    border-radius: 0 0 .3rem .3rem;
+}
+
+.dataGrid .ui-datatable-reflow {
+    box-shadow: 1px 5px 10px 1px #888888;
+}
+
+.vertical-center-group {
+    margin: auto;
+}
+
+.dropdown-menu {
+    left: unset !important;
+}
+
+.ui-tree.ui-widget.ui-widget-content.ui-corner-all.ui-tree-selectable,
+.ui-multiselect.ui-widget.ui-state-default.ui-corner-all,
+.ui-tree.ui-widget.ui-widget-content.ui-corner-all {
+    border: none;
+    background: none;
+    color: #080808;
+
+}
+
+.ui-multiselect-trigger.ui-state-default.ui-corner-right {
+    border: none;
+    background: none;
+    color: #080808;
+}
+
+.ui-overlaypanel-content {
+    padding: 0
+}
+
+.create-entity {
+    width: 150px;
+}
+
+.ui-datatable-thead {
+    text-align: center;
+}
+
+app-authority-selector.form-control {
+    margin: 0;
+    padding: 0
+}
+
+p-breadcrumb a.ui-state-active {
+    border-color: #000;
+    background: none;
+}
+
+.component {
+    margin: 15px;
+}
+
+.col-button {
+    width: 170px;
+}
+
+.col-button2 {
+    width: 190px;
+}
+
+.ui-megamenu-panel {
+    left: inherit !important;
+}
+
+.fa-chevron-right:before {
+    content: "\F053";
+}
+
+.fa-backward:before {
+    content: "\F04E";
+}
+
+.fa-forward:before {
+    content: "\F04A";
+}
+
+.fa-step-backward:before {
+    content: "\F051";
+}
+
+.fa-step-forward:before {
+    content: "\F048";
+}
+
+select.form-control {
+    padding: .0rem .0rem;
+}
+
+.customer-component.form-control {
+    padding: .0rem .0rem;
+}
+
+.ui-datatable-data tr {
+    text-align: center;
+}
+
+.fa-chevron-right:before {
+    content: "\f053";
+}
+
+.fa-chevron-left:before {
+    content: "\F054";
+}
+
+.ui-multiselect:not(.ui-state-disabled):hover {
+    background: transparent;
+}
+
+p-multiSelect.form-control {
+    padding: .0rem .0rem;
+}
+
+p-multiSelect.form-control div {
+
+    display: inherit;
+}
+
+input[type="checkbox"].form-control {
+    width: auto;
+    display: inline;
+}
+
+.form-control[readonly] {
+    background-color: #ffffffff !important;
+}
+
+.ui-tree {
+    width: unset;
+}
+
+.div-link {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+.div-link:hover {
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #555;
+}

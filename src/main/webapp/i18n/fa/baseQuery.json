@@ -1,0 +1,28 @@
+
+{
+    "niopdcgatewayApp": {
+        "baseQuery" : {
+            "home": {
+                "title": "کوئری های پایه",
+                "createLabel": "ایجاد کوئری پایه",
+                "createOrEditLabel": "ویرایش کوئری پایه",
+                "view":"نمایش کوئری پایه"
+            },
+            "delete": {
+                "question": "آیا برای حذف کوئری پایه {{param}} مطمئن هستید ؟"
+            },
+            "detail": {
+                "title": "کوئری پایه"
+            },
+            "title": "عنوان",
+            "tempQuery": "متن کوئری"
+        }
+    },
+    "niopdcaccountingApp": {
+        "baseQuery" : {
+            "created": "کوئری با موفقیت ایجاد شد.",
+            "updated": "کوئری با موفقیت ویرایش شد.",
+            "deleted": "کوئری با موفقیت حذف شد."
+        }
+    }
+}

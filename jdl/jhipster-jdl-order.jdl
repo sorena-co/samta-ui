@@ -1,0 +1,107 @@
+entity Order(jOrder){
+ customerId Long required,
+ personId Long required,
+ locationId Long required,
+ orderNo String required,
+ registerDate ZonedDateTime,
+ depotExitDate ZonedDateTime,
+ price Float,
+ productPrice Float,
+ containerPrice Float,
+ costPrice Float,
+ expires Integer,
+ status OrderStatus,
+ currencyId Long,
+ modifyStatusDate ZonedDateTime,
+ depotId Long required,
+ currencyRateGroupId Long,
+ flightConditions FlightConditions,
+ sourceRefuelCenter Integer,
+ targetRefuelCenter Integer,
+ typeOfFuelReceipt TypeOfFuelReceipt
+}
+
+entity OrderProduct{
+ sellContractProductId Long required,
+ productId Long required,
+ rateGroupId Long required,
+ totalPrice Float,
+ BasePrice Float,
+ productRatePrice Float,
+ productRateId Long,
+ containerRateId Long,
+ containerRatePrice Float,
+ costPrice Float,
+ amount Integer
+}
+
+entity OrderPayment{
+ paymentId Long,
+ decreasedPrice Float
+}
+
+entity OrderCredit{
+ customerCreditId Long,
+ decreasedCredit Integer,
+ decreasedAmount Integer,
+ decreasedCost Integer,
+ creditNumber Long,
+ buyTypeUsage BuyTypeUsage,
+ settled Boolean,
+ buyGroup BuyGroup
+}
+
+entity OrderCost{
+  costId Long,
+  rate Float required,
+  productId Long
+}
+
+enum BuyGroup{
+  QUOTA,
+  CREDIT,
+  PREBUY,
+  FINANCIAL_LICENSE
+}
+
+enum OrderStatus{
+    DRAFT,
+    PENDING,
+    PAID,
+    CONFIRM,
+    SEND_TO_DEPOT,
+    EXIT_FROM_DEPOT,
+    BACK_FROM_SALE,
+    BACK_FROM_DEPOT
+}
+
+enum FlightConditions{
+    VIP,EMERGENCY,NORMAL
+}
+
+
+enum BuyTypeUsage {
+    'COST',
+    'PRODUCT',
+    'BOTH'
+}
+enum TypeOfFuelReceipt{
+    TANKER_SALES,
+    PIPE_LINE_SALES,
+    UNIT_TO_AIRPLANE,
+    UNIT_TO_CUSTOMERS
+}
+relationship ManyToOne {
+  OrderProduct{order(orderNo) required} to Order,
+  OrderPayment{order(orderNo) required} to Order,
+  OrderCredit{order(orderNo) required} to Order{orderCredits},
+  OrderCredit{orderProduct} to OrderProduct,
+  OrderCost{order(orderNo) required} to Order,
+  OrderCost{orderProduct required} to OrderProduct
+}
+
+dto * with mapstruct
+paginate * with pager
+service * with serviceClass
+microservice * with niopdcorder
+

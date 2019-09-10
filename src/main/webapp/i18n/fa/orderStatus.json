@@ -1,0 +1,16 @@
+{
+    "niopdcgatewayApp": {
+        "OrderStatus" : {
+            "null": "",
+            "DRAFT": "پیش نویش",
+            "PENDING": "در انتظار",
+            "PAID": "پرداخت شده",
+            "CONFIRM": "تایید شده",
+            "SEND_TO_DEPOT": "ارسال به انبار",
+            "EXIT_FROM_DEPOT": "خروج از انبار",
+            "BACK_FROM_SALE": "برگشت از فروش",
+            "BACK_FROM_DEPOT": "برگشت از انبار",
+            "REVOCATION": "ابطال"
+        }
+    }
+}

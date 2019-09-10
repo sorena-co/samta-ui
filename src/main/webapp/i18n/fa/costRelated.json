@@ -1,0 +1,11 @@
+{
+    "niopdcgatewayApp": {
+        "CostRelated" : {
+            "null": "",
+            "TAX": "مالیات",
+            "COMPLICATION": "عوارض",
+            "RENOVATION": "نوسازی",
+            "POLLUTION": "آلایندگی"
+        }
+    }
+}

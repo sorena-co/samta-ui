@@ -1,0 +1,30 @@
+
+{
+    "niopdcgatewayApp": {
+        "loanPayment" : {
+            "home": {
+                "title": "Loan Payments",
+                "createLabel": "Create a new Loan Payment",
+                "createOrEditLabel": "Create or edit a Loan Payment"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Loan Payment {{ id }}?"
+            },
+            "detail": {
+                "title": "Loan Payment"
+            },
+            "paymentId": "Payment Id",
+            "price": "Price",
+            "data": "Data",
+            "loan": "Loan",
+            "billItem": "Bill Item"
+        }
+    },
+    "niopdcaccountingApp": {
+        "loanPayment" : {
+            "created": "A new Loan Payment is created with identifier {{ param }}",
+            "updated": "A Loan Payment is updated with identifier {{ param }}",
+            "deleted": "A Loan Payment is deleted with identifier {{ param }}"
+        }
+    }
+}

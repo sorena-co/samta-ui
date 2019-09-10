@@ -1,0 +1,15 @@
+{
+    "niopdcgatewayApp": {
+        "unit": {
+            "home": {
+                "title": "واحد"
+            },
+            "startDate": "از تاریخ",
+            "finishDate": "تا تاریخ",
+            "unitName": "واحد",
+            "productCode": "نام فراورده",
+            "productName": "کد فراورده",
+            "amount": "مقدار"
+        }
+    }
+}

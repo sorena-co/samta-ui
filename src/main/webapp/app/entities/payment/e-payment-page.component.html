@@ -1,0 +1,109 @@
+<!--<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">-->
+
+<form #formipg ngNoForm action="https://85.133.186.11:7676/ipgapp/start" method="POST">
+    <div class="component">
+        <p-breadcrumb [model]="breadcrumbItems"></p-breadcrumb>
+        <jhi-alert></jhi-alert>
+        <br/>
+
+        <div>
+            <div class="card" *ngIf="message">
+                <div class="messages ui-g ui-fluid ">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4" >
+                                <img *ngIf="message?.icon === 'error'" src="../../../content/images/error.png"/>
+                                <img *ngIf="message?.icon === 'warning'"  src="../../../content/images/warning.png"/>
+                                <img *ngIf="message?.icon === 'good'"  src="../../../content/images/good.png"/>
+                            </div>
+                            <div class="col-md-8" style="margin: auto">
+                                <div class="row ttl">{{message?.title}}
+                                </div>
+                                <div class="row"  style="text-align:right">
+                                    <div> {{message?.body}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" *ngIf="message.reload">
+                            <div class="col-md-12" style="text-align: center">
+                                <button type="button" class="btn btn-info" (click)="loadBankTransaction()">بار گذاری</button>
+                            </div>
+                        </div>
+                        <div class="row" *ngIf="message.redirectUrl">
+                            <div class="col-md-12" style="text-align: center">
+                                <button type="button" class="btn btn-info" [routerLink]="[message.redirectUrl]">بازگشت</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card" *ngIf="state === BankTransactionState[BankTransactionState.BEGIN]">
+                <div class="card-header">
+                    <div class="col-md-12" style="text-align: center">
+                        <span>تایید پرداخت</span>
+                    </div>
+                </div>
+                <div class="card-body">
+
+                    <input type='text' hidden name='RequestIdentifier' value='{{requestIdentifier}}'/>
+                    <input type='text' hidden name='ProviderIdentifier' value='100000223'/>
+                    <input type='text' hidden name='RedirectUrl' value= '{{this.baseUrl}}/niopdcpayment/validate'/>
+                    <input type='text' hidden name='DepositIdentifier' value='3000'/>
+
+                    <div class="row">
+
+                        <div class="col-md-12" style="text-align: center; margin-bottom: 10px">
+                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.payment.lastPayment"
+                                   for="payment">Payment</label>
+                        </div>
+                        <jhi-payment-selector style="margin: auto; border: 2px solid #ccc;"
+                                              class="form-control" [multiSelect]="true"
+                                              [(ngModel)]="payments"
+                                              (selectedItem)="paymentSelected($event)"
+                                              [selectObject]="true"
+                                              [requestIdentifier]="requestIdentifier"
+                                              name="payment" id="payment">
+                        </jhi-payment-selector>
+                        <div *ngIf="!onlyPayment" class="col-md-12" style="text-align: center; margin-bottom: 10px;margin-top: 10px; ">
+                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.payment.amountPay"
+                                   for="Amount">Amount</label>
+                        </div>
+                        <div *ngIf="!onlyPayment" class="flex" style="margin: auto">
+                            <input id="Amount" name="Amount"
+                                   type="text"
+                                   [numeric]="{max:amount}"
+                                   [ngModel]="amount"
+                                   required autofocus
+                            />
+                            <span class="currency">ریال</span>
+                        </div>
+                    </div>
+
+                    <div style="margin: 10px; text-align: center">کد پرداخت : {{requestIdentifier}}</div>
+                    <br/>
+                    <div class="banks" style="text-align: center">
+                        <img class="img-responsive" style="margin: auto"
+                             src="../../../content/images/cbi-logo.svg"
+                             width="200px"/>
+
+                    </div>
+                </div>
+                <div class="card-footer" style="text-align: center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="button" *ngIf="onlyPayment" (click)="pay()"class="btn btn-success">پرداخت</button>
+                            <button type="button" *ngIf="!onlyPayment" (click)="payAndBuy()"class="btn btn-success">پرداخت و اتصال به درگاه بانک</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</form>

@@ -1,0 +1,548 @@
+
+entity RefuelCenter {
+  persianTitle String required  minlength(3) maxlength(42),
+  englishTitle String required  minlength(3) maxlength(42),
+  code String required  minlength(3) maxlength(4),
+  locationId Long ,
+  fuelReceiptStartNumber String,
+  fuelReceiptEndNumber String,
+  fuelReceiptCurrentNumber String,
+  wayBillStartNumber String,
+  wayBillEndNumber String,
+  wayBillCurrentNumber String,
+}
+entity Airport {
+  persianTitle String required  minlength(3) maxlength(42),
+  englishTitle String required  minlength(3) maxlength(42),
+  code String required  minlength(3) maxlength(4),
+  regionId Long required,
+  countryId Long required
+}
+
+entity Pos{
+    serial String required
+}
+entity Metre{
+  title String required  minlength(3) maxlength(42),
+  maxMetre Long required,
+  amount Long required,
+  active Boolean
+}
+entity MetreLog{
+  startMeter Long required,
+  endMeter Long required,
+  amount Long required,
+  registerDate ZonedDateTime required,
+  fuelType FuelType required,
+  draft Boolean
+
+}
+entity OilTank{
+  title String required minlength(3) maxlength(40),
+  code String required  minlength(4) maxlength(4),
+  virtualCapacity Integer,
+  capacity Integer,
+  productId Long required,
+  oilTankType OilTankType required,
+  oilTankStatus OilTankStatus required,
+  measureType MeasureType required
+}
+enum OilTankStatus{
+    UNDER_REPAIR,
+    STAGNANT,
+    ACTIVE
+}
+entity ServiceOilTank{
+  title String required minlength(3) maxlength(40),
+  code String required  minlength(4) maxlength(4),
+  virtualCapacity Integer required,
+  capacity Integer required,
+  oilTankStatus OilTankStatus required
+}
+entity MeasurementOilTank{
+  amount Long required,
+  amountDeep Long required,
+  sixtyAmount Integer required,
+  specialWeight Float required,
+  environmentTemperature Float required,
+  productTemperature Float required,
+  registerDate ZonedDateTime required
+}
+
+entity SendProduct{
+  sendDate ZonedDateTime required,
+  receivedDate ZonedDateTime required,
+  waybillNumber String,
+
+  receivedNatureAmount Integer required,
+  receivedSixtyAmount Integer required,
+  receivedSpecialWeight Float required,
+  receivedEnvironmentTemperature Float required,
+  receivedProductTemperature Float required,
+
+  sendNatureAmount Integer required,
+  sendSixtyAmount Integer required,
+  sendSpecialWeight Float required,
+  sendEnvironmentTemperature Float required,
+  sendProductTemperature Float required,
+
+  inventoryId Long required,
+  driverName String required minlength(3) maxlength(40),
+  vehicleId String required
+}
+entity SendContainerProduct{
+  sendDate ZonedDateTime required,
+  receivedDate ZonedDateTime required,
+  sendAmount Integer required,
+  receivedAmount Integer required,
+  sendCount Integer required,
+  receivedCount Integer required,
+  waybillNumber String,
+  inventoryId Long required,
+  driverName String required minlength(3) maxlength(40),
+  truckNumber String required minlength(6) maxlength(6),
+  truckSerial String required minlength(1) maxlength(40)
+}
+entity TransferType{
+  title String required  minlength(3) maxlength(42),
+  transferFrom OilTankType required,
+  transferTo OilTankType,
+  activeMetre ActiveMetre,
+  transferToHimself Boolean
+}
+entity Transfer{
+  registerDate ZonedDateTime required,
+
+  natureAmount Integer required,
+  sixtyAmount Integer required,
+  specialWeight Float required,
+  environmentTemperature Float required,
+  productTemperature Float required,
+
+  transferByMetre Boolean required,
+  description String minlength(3) maxlength(200)
+}
+entity TransferPlatformToUnit{
+  registerDate ZonedDateTime required,
+
+  natureAmount Integer required,
+  sixtyAmount Integer required,
+  specialWeight Float required,
+  environmentTemperature Float required,
+  productTemperature Float required,
+
+  unitMetreNumber Long
+}
+entity ReceivedProduct{
+  registerDate ZonedDateTime required,
+  receivedProductType ReceivedProductType required
+  startDate ZonedDateTime required,
+  finishDate ZonedDateTime required,
+  productId Long required,
+  inventoryId Long required,
+  vehicleId String,
+  waybillNumber String  minlength(8) maxlength(8),
+  driverName String  minlength(3) maxlength(40),
+  contractorNumber Long ,
+
+
+  receivedNatureAmount Integer required,
+  receivedSixtyAmount Integer required,
+  receivedSpecialWeight Float required,
+  receivedEnvironmentTemperature Float required,
+  receivedProductTemperature Float required,
+
+  sendNatureAmount Integer required,
+  sendSixtyAmount Integer required,
+  sendSpecialWeight Float required,
+  sendEnvironmentTemperature Float required,
+  sendProductTemperature Float required,
+
+
+  description String  minlength(3) maxlength(200),
+}
+
+entity ReceivedProductContainer{
+  registerDate ZonedDateTime required,
+  inventoryId Long required,
+  truckNumber String required minlength(6) maxlength(6),
+  truckSerial String required minlength(1) maxlength(40),
+  waybillNumber String required minlength(8) maxlength(8),
+  driverName String required minlength(3) maxlength(40),
+  contractorNumber Long required,
+  sendCount Integer required,
+  receiveCount Integer required,
+  description String required minlength(3) maxlength(200)
+}
+entity LogBook{
+  orderId Long required,
+  orderProductId Long required,
+  amount Long required,
+  fuelType FuelType required,
+  status Boolean
+}
+
+entity MainDayDepot{
+  day ZonedDateTime required,
+  close Boolean,
+  description String minlength(3) maxlength(200)
+}
+entity MainDayOperation{
+  day ZonedDateTime required,
+  close Boolean,
+  description String minlength(3) maxlength(200)
+}
+
+entity DayDepot{
+  natureDeductible Integer required,
+  natureAddition Integer required,
+  sixtyDeductible Integer required,
+  sixtyAddition Integer required,
+  natureSystemAmount Long required,
+  sixtySystemAmount Long required,
+  description String minlength(3) maxlength(200)
+}
+entity DayDepotServiceOilTank{
+  description String minlength(3) maxlength(200)
+}
+entity DayDepotContainer{
+  deductible Integer required,
+  addition Integer required,
+  systemAmount Long required,
+  startCount Long,
+  endCount Long,
+  description String minlength(3) maxlength(200)
+}
+entity SellGroundFuel{
+	amount Integer required,
+    sellToDifferent Boolean,
+    rate Float,
+    totalPrice Integer
+}
+entity LiteratureVolumeOilTank{
+	millimeter Integer required,
+    liter Integer required
+}
+entity OilTankContainer{
+  productId Long,
+  productUnitId Long,
+  amount Integer required
+}
+entity ChangeContainer{
+  amount Integer required,
+  count Integer required,
+  changeContainerType ChangeContainerType required
+}
+entity WaterMethanolMixer{
+	waterAmount Integer required,
+    methanolAmount Integer required,
+}
+entity UserRefuelCenter{
+    username String required,
+    accessType AccessType required,
+}
+entity CleaningReportOilTank{
+    capacity Integer required,
+    typeOfAlloy TypeOfAlloy required,
+    productId Integer required,
+    periodicTankInspection Boolean,
+    cleaningType CleaningType required,
+    modification Boolean,
+    cleaningReportNumber String minlength(3) maxlength(42) required,
+    registerDate ZonedDateTime required,
+    exporterName String required,
+    highLevelSensor Boolean,
+    pAndVValue Boolean,
+    manhole Boolean,
+    dipStick Boolean,
+    flameTrap Boolean,
+    contentGauge Boolean,
+    footValue Boolean,
+    drainSump Boolean,
+    sampleDrainValue Boolean,
+    description String,
+    confirm Boolean,
+    isSend Boolean
+}
+
+entity MilliPoor{
+    wet ColorimetricType required,
+    dry ColorimetricType required,
+    gravimetric Integer required,
+    date ZonedDateTime required,
+    isSend Boolean
+}
+
+entity RequestTestResult{
+    productId Integer required,
+    date ZonedDateTime required,
+    sampleValue Integer required,
+    oilTankInventory Integer required,
+    sourceOilTankNumber String required,
+    isSend Boolean
+}
+
+entity TestResult{
+    appearance String required,
+    densityAt15 String required,
+    distillation String required,
+    ibp String required,
+    tenPresentRecovered String required,
+    fiftyPresentRecovered String required,
+    ninetyPresentRecovered String required,
+    fbp String required,
+    rl String required,
+    existentGum String required,
+    flashPoint String required,
+    copperCorrosion String required,
+    freezing String required,
+    conductivity String required,
+    isSend Boolean
+}
+
+entity RequestFilterElement{
+    filterNumber String minlength(1) maxlength(43) required,
+    lastChangeDate ZonedDateTime required,
+    microFilter String minlength(1) maxlength(43),
+    coalescer String,
+    separator String,
+    monitor String,
+    clay String,
+    productId Integer,
+    filterLocation FilterLocation required,
+    psi Integer,
+    microFilterModel String,
+    microFilterModelCount Integer,
+    coalesceModel String,
+    coalesceModelCount Integer,
+    monitorModel String,
+    monitorModelCount Integer,
+    separatorModel String,
+    separatorModelCount Integer,
+    clayModel String,
+    clayModelCount Integer,
+    elementRequestReason ElementRequestReason required,
+    amountFuelPassed Integer required,
+    description String,
+    isSend Boolean
+}
+
+entity ChangeFilterElement{
+    model String required,
+    capacity Integer required,
+    operatingFlow Integer required,
+    pdMax Integer required,
+    microFilter String,
+    microFilterCount Integer,
+    coalescer String,
+    coalescerCount Integer,
+    separator String,
+    separatorCount Integer,
+    monitor String,
+    monitorCount Integer,
+    lastChangeDate ZonedDateTime required,
+    reasonOfChange String minlength(1) maxlength(43) required,
+    conditionOfCartridges Boolean,
+    conditionOfSeals Boolean,
+    conditionOfCoating Boolean,
+    pdGauge Boolean,
+    airEliminator Boolean,
+    reliefValue Boolean,
+    sampleDrainValue Boolean,
+    namePlate Boolean,
+    microFilterType String,
+    microFilterTypeCount Integer,
+    coalescerType String,
+    coalescerTypeCount Integer,
+    separatorType String,
+    separatorTypeCount Integer,
+    monitorType String,
+    monitorTypeCount Integer,
+    microFilterTorque String,
+    microFilterTorqueCount Integer,
+    coalescerTorque String,
+    coalescerTorqueCount Integer,
+    separatorTorque String,
+    separatorTorqueCount Integer,
+    monitorTorque String,
+    monitorTorqueCount Integer,
+    pdReading Integer required,
+    flowTest Integer required,
+    installedBy String minlength(1) maxlength(43) required,
+    supervisedBy String required,
+    isSend Boolean
+}
+
+entity Manufacture{
+    name String required
+}
+
+entity RequestPlunging{
+    requestDate ZonedDateTime required,
+    description String,
+    isSend Boolean
+}
+
+entity ResponsePlunging{
+    confirm Boolean,
+    description String,
+    responseDate ZonedDateTime required,
+    isSend Boolean
+}
+
+enum FilterLocation{
+    DRAIN_TANKER,
+    BETWEEN_MAIN_AND_SERVICE,
+    LADING_UNIT,
+    OIL_DEPOT,
+    UNIT
+}
+enum ElementRequestReason{
+    MAX_DIFF,
+    MAX_TIME_ELAPSED,
+    UNACCEPTABLE_DROP,
+    UNACCEPTABLE_RESULT,
+    ABNORMAL_RESULT,
+    TEARING_ELEMENT,
+    SUDDEN_DROP
+}
+
+enum ColorimetricType{
+    A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,
+    B0,B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,
+    C0,C1,C2,C3,C4,C5,C6,C7,C8,C9,C10
+}
+
+enum CleaningType{
+    VISIT,CLEAN
+}
+
+enum TypeOfAlloy{
+    AL,SS,CS
+}
+
+enum ChangeContainerType{
+  WITH_CONTAINER,
+  WITHOUT_CONTAINER
+}
+
+enum FuelType{
+  FUEL,
+  DE_FUEL
+}
+
+enum OilTankType{
+  MAIN,
+  CONTAMINATED,
+  SERVICE_TANK,
+  UNIT,
+  PLATFORM,
+  WATER_METHANOL,
+  BASE_PRODUCT,
+  EARTH,
+  RECYCLE
+}
+
+enum ReceivedProductType{
+	TANKER,
+    PIPE
+}
+enum ActiveMetre{
+	SOURCE,
+    TARGET
+}
+enum AccessType{
+    ACCESS,
+    READ
+}
+
+enum MeasureType{
+    NORMAL,
+    RATIO
+}
+
+relationship ManyToOne {
+  Metre{oilTank(title) required} to OilTank,
+  MetreLog{metre required} to Metre,
+  OilTank{refuelCenter(persianTitle) required} to RefuelCenter,
+  MeasurementOilTank{oilTank(title) required} to OilTank,
+  ServiceOilTank{oilTank(title) required} to OilTank,
+  SendProduct{dayDepot required} to DayDepot,
+  SendContainerProduct{oilTankContainer required} to OilTankContainer,
+  SendContainerProduct{dayDepotContainer required} to DayDepotContainer,
+
+  Transfer{transferType(title) required} to TransferType,
+  Transfer{fromDayDepot required} to DayDepot,
+  Transfer{toDayDepot } to DayDepot,
+  Transfer{metre(amount)} to Metre,
+
+  SendProduct{oilTank(title) required} to OilTank,
+
+  TransferPlatformToUnit{metre(amount) required} to Metre,
+  TransferPlatformToUnit{platform required} to DayDepot,
+  TransferPlatformToUnit{unit required} to DayDepot,
+
+  ReceivedProduct{dayDepot required} to DayDepot,
+  ReceivedProduct{dayDepot required} to DayDepot,
+  ReceivedProductContainer{oilTankContainer required} to OilTankContainer,
+  ReceivedProductContainer{dayDepotContainer required} to DayDepotContainer,
+  LogBook{dayDepot required} to DayDepot,
+  DayDepot{oilTank(title) required} to OilTank,
+  DayDepot{mainDayDepot} to MainDayDepot,
+  DayDepotServiceOilTank{oilTankService(title) required} to ServiceOilTank,
+  DayDepotServiceOilTank{dayDepot} to DayDepot,
+  DayDepot{mainDayOperation} to MainDayOperation,
+  DayDepotContainer{oilTankContainer required} to OilTankContainer,
+  DayDepotContainer{mainDayDepot required} to MainDayDepot,
+  SellGroundFuel{dayDepot required} to DayDepot,
+  LiteratureVolumeOilTank{oilTank(title) } to OilTank,
+  LiteratureVolumeOilTank{serviceOilTank(title) } to ServiceOilTank,
+  OilTankContainer{refuelCenter(persianTitle) required} to RefuelCenter,
+  ChangeContainer{source required} to DayDepotContainer,
+  ChangeContainer{target required} to DayDepotContainer,
+  ChangeContainer{dayDepot required} to DayDepot,
+  WaterMethanolMixer {water(title) required} to OilTank,
+  WaterMethanolMixer {methanol(title) required} to OilTank,
+  WaterMethanolMixer {methanolMixer(title) required} to OilTank,
+  MainDayDepot {refuelCenter(persianTitle) required} to RefuelCenter,
+  MainDayOperation {refuelCenter(persianTitle) required} to RefuelCenter,
+  CleaningReportOilTank {oilTank(title) required} to OilTank,
+  CleaningReportOilTank {refuelCenter(persianTitle) required} to RefuelCenter,
+  RequestTestResult {oilTank(title) required} to OilTank,
+  RequestTestResult {refuelCenter(persianTitle) required} to RefuelCenter,
+  RequestFilterElement {oilTank(title) required} to OilTank,
+  RequestFilterElement {refuelCenter(persianTitle) required} to RefuelCenter,
+  ChangeFilterElement {manufacture(name) required} to Manufacture,
+  ChangeFilterElement {oilTank(title) required} to OilTank,
+  ChangeFilterElement {refuelCenter(persianTitle) required} to RefuelCenter,
+  Pos {airport(persianTitle) required} to Airport
+
+}
+
+relationship ManyToMany{
+  RefuelCenter {Airports(persianTitle) required} to Airport,
+ UserRefuelCenter {refuelCenter(persianTitle) required} to RefuelCenter,
+ RefuelCenter {transferType(title) } to TransferType,
+ Airport {targetAirports(persianTitle) required} to Airport
+}
+
+relationship OneToOne {
+  Transfer{metreLog} to MetreLog,
+  TransferPlatformToUnit{metreLog required} to MetreLog,
+  LogBook{metreLog } to MetreLog,
+  MetreLog{transfer} to Transfer,
+  MetreLog{transferPlatformToUnit} to TransferPlatformToUnit,
+  MetreLog{logBook} to LogBook,
+  DayDepot{startMeasurementOilTank} to MeasurementOilTank,
+  DayDepot{endMeasurementOilTank} to MeasurementOilTank,
+  DayDepotServiceOilTank{startMeasurementOilTank} to MeasurementOilTank,
+  DayDepotServiceOilTank{endMeasurementOilTank} to MeasurementOilTank,
+  TestResult{requestTestResult} to RequestTestResult,
+  ChangeFilterElement{requestFilterElement} to RequestFilterElement,
+  ResponsePlunging{requestPlunging} to RequestPlunging
+}
+
+dto * with mapstruct
+paginate * with pager
+service * with serviceClass
+microservice * with niopdcao

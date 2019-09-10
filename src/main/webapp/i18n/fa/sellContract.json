@@ -1,0 +1,46 @@
+
+{
+    "niopdcgatewayApp": {
+        "sellContract" : {
+            "home": {
+                "title": "قرارداد فروش",
+                "createLabel": "ایجاد",
+                "editLabel": "ویرایش",
+                "createOrEditLabel": "ایجاد یا ویرایش"
+            },
+            "delete": {
+                "question": "آیا برای حذف موارد تایید نشده این قرارداد فروش مطمئن هستید؟"
+            },
+            "confirm": {
+                "question": "آیا برای تایید این قرارداد فروش مطمئن هستید؟"
+            },
+            "detail": {
+                "title": "قرارداد فروش"
+            },
+            "startDate": "تاريخ شروع قرارداد",
+            "finishDate": "تاريخ پايان قرارداد",
+            "exportationDate": "تاريخ صدور قرارداد",
+            "contractNo": "شماره قرارداد",
+            "description": "توضيحات",
+            "contractType": "نوع قرارداد",
+            "active": "تایید شده",
+            "activeFalse": "پیش نویس",
+            "activeTrue": "تایید شده",
+            "customer": "مشتریان طرف قرارداد",
+            "person": "اشخاص طرف قرارداد",
+            "sellContractOwner":"صاحب امتیاز قرارداد",
+            "sellContractProduct":"فرآورده های قرارداد",
+            "customers":"مشتریان",
+            "calculateTax":"محاسبه ارزش افزوده",
+            "people":"صاحب امتیازان"
+        }
+    },
+    "niopdcbaseApp": {
+        "sellContract" : {
+            "created": "قرارداد فروش با موفقیت ایجاد شد.",
+            "updated": "قرارداد فروش با موفقیت ویرایش شد.",
+            "deleted": "موارد تایید نشده قرارداد فروش با موفقیت حذف شد.",
+            "confirmed": "قرارداد فروش با شماره {{param}} موفقیت تایید شد."
+        }
+    }
+}

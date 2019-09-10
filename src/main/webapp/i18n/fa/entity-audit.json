@@ -1,0 +1,53 @@
+{
+    "entityAudit": {
+        "home": {
+            "title": "Entity Audits",
+            "filter": "فیلتر",
+            "entityOrTable": "Entity/Table",
+            "limitTo": "محدود کردن",
+            "loadChangeList": "بارگزاری لیست",
+            "microService": "سرویس",
+            "username":"نام کاربری"
+        },
+        "result": {
+            "showInfo": "Last <strong>{{ limit }}</strong> Changes for <strong>{{ entity }}</strong>",
+            "searchFieldLabel": "فیلتر:",
+            "globalFilter": "global filter",
+            "entityIdFilter": "جدول",
+            "tableHeader": {
+                "entityId": "Entity Id",
+                "action": "عملیات",
+                "version": "ورژن",
+                "value": "مقدار",
+                "modifiedDate": "تاریخ ویرایش",
+                "modifiedBy": "ویرایش توسط",
+                "commitVersion": "Commit Version",
+                "entityType": "جدول"
+            },
+            "tableBody": {
+                "field": "فیلد",
+                "value": "مقدار",
+                "viewDetails": "نمایش جزئیات تغییرات"
+            },
+            "noDataFound": "داده ای برای نمایش پیدا نشد",
+            "firstAuditEntry": "There is no previous version available for this entry.\nThis is the first audit entry captured for this object."
+        },
+        "detail": {
+            "close": "بستن",
+            "title": "عنوان",
+            "action": "{{action}}بر روی داده های زیر انجام شده.",
+            "old": "قدیمی - مقادیر پاک شده",
+            "new": "جدید - مقادیر اضافه شده",
+            "changedFields": "تغییرات",
+            "allFields": "تمامی فیلد ها",
+            "done": "انجام شده"
+        },
+        "microServices": {
+            "ao": "عملیات",
+            "base": "پایه",
+            "rate": "نرخ",
+            "order": "حواله/رسید سوخت",
+            "accounting": "حسابداری"
+        }
+    }
+}

@@ -1,0 +1,499 @@
+
+entity Location (location) {
+  name String required minlength(3) maxlength(42),
+  code String required minlength(2) maxlength(4),
+  financialCode String minlength(4) maxlength(4),
+  costAccount String minlength(5) maxlength(20),
+  startOrderNumber String,
+  endOrderNumber String,
+  currentOrderNumber String,
+  level Integer
+}
+
+entity Depot (depot) {
+  title String required minlength(3) maxlength(42),
+  code String required  minlength(4) maxlength(4),
+  accCode String minlength(4) maxlength(4),
+  refuelCenterId Long,
+  depotType DepotType required
+}
+
+entity Product (product) {
+  code String required minlength(6) maxlength(6),
+  title String required minlength(3) maxlength(42),
+  hasContainer Boolean,
+  calculateContainerPrice Boolean
+}
+
+entity ProductGroup (product_group) {
+  title String required  minlength(3) maxlength(42),
+  code String required minlength(4) maxlength(4)
+}
+
+entity CustomerType (customer_type) {
+  title String required minlength(3) maxlength(42),
+  code  String required minlength(4) maxlength(4),
+  locationType LocationType ,
+  customerGroup CustomerGroup required,
+  taxExempt Boolean,
+  hasGsId Boolean,
+  customerCodeTitle String minlength(3) maxlength(42)
+}
+
+entity Stakeholder  {
+  sharePercent Integer,
+  stakeholderType StakeholderType
+}
+
+entity Country (country) {
+  name String required  minlength(3) maxlength(42),
+  code String required  minlength(4) maxlength(4),
+  checkNationalCode Boolean
+}
+
+entity Person (person) {
+  name String minlength(3) maxlength(42) ,
+  firstName String minlength(3) maxlength(42) ,
+  lastName String minlength(3) maxlength(42) ,
+  code String minlength(10) maxlength(20),
+  fatherName String minlength(3) maxlength(42),
+  idCode String maxlength(42),
+  telephone String minlength(3) maxlength(12),
+  cellphone String minlength(3) maxlength(15),
+  email String minlength(5) maxlength(42)
+  postalCode String minlength(10) maxlength(10),
+  registerNo String minlength(1) maxlength(42),
+  creditAccount String minlength(1) maxlength(20),
+  costAccount String minlength(1) maxlength(20),
+  address String minlength(3) maxlength(80),
+  birthday ZonedDateTime,
+  economicCode String minlength(12) maxlength(12) ,
+  personality Personality required,
+  status VerifyStatus required
+}
+
+entity TransportContract{
+    contractCode String required,
+    startDate ZonedDateTime required,
+    finishDate ZonedDateTime required
+}
+
+entity Customer (customer) {
+    name String required minlength(3) maxlength(42),
+    code String required minlength(10) maxlength(10),
+    postalCode String minlength(10) maxlength(10),
+    registerCode String minlength(1) maxlength(25),
+    movableCode String minlength(1) maxlength(20),
+    registerDate ZonedDateTime required,
+    startDate ZonedDateTime required,
+    finishDate ZonedDateTime ,
+    telephone String minlength(3) maxlength(12),
+    address String minlength(3) maxlength(255),
+    buyOneToMany Boolean,
+    salesPermit Boolean,
+    identifyCode String,
+    gsId String maxlength(4)
+}
+
+
+entity Region (region) {
+  name String required  minlength(3) maxlength(42),
+  code String  required minlength(2) maxlength(6),
+  level Integer,
+  globalCode String minlength(5) maxlength(5)
+}
+
+entity Consumption (consumption) {
+  title String required  minlength(3) maxlength(42),
+  code String required  minlength(4) maxlength(4)
+}
+
+entity ProductUnit{
+  title String required  minlength(3) maxlength(42),
+  code String required  minlength(4) maxlength(4)
+}
+
+entity Container{
+  title String required  minlength(3) maxlength(42),
+  code String required  minlength(4) maxlength(4),
+  capacity Integer required
+}
+
+entity CustomerCredit{
+  startDate ZonedDateTime ,
+  finishDate ZonedDateTime ,
+  exportationDate ZonedDateTime required,
+  creditNumber Integer required,
+  currentCredit Double ,
+  credit Double ,
+  currentAmount Integer ,
+  amount Integer ,
+  currencyId Long
+  currencyRateGroupId Long
+}
+
+entity BuyType {
+  title String required  minlength(3) maxlength(42),
+  buyGroup BuyGroup required,
+  effectDate Long ,
+  buyTypeUsage BuyTypeUsage required,
+  typeEffect TypeEffect,
+  sellLimit Boolean
+}
+
+entity SellContract {
+  startDate ZonedDateTime required,
+  finishDate ZonedDateTime required,
+  exportationDate ZonedDateTime required,
+  contractNo String required minlength(5) maxlength(15),
+  description String minlength(3) maxlength(255),
+  contractType ContractType,
+  active Boolean
+}
+
+entity CustomerTypeProductConsumption{
+
+}
+
+entity CustomerTypeProductConsumption (customer_type_p_c){
+
+}
+
+entity UserDataAccess{
+    username String required minlength(1) maxlength(50),
+    contractType ContractType
+}
+
+entity SellContractCustomer{
+    hasTransport Boolean,
+    startDate ZonedDateTime required,
+    active Boolean
+}
+
+entity SellContractPerson{
+    sharePercent Integer,
+    startDate ZonedDateTime required,
+    creditAccount String minlength(1) maxlength(20),
+    costAccount String minlength(1) maxlength(20),
+    active Boolean
+}
+
+entity SellContractProduct{
+    rateGroupId Long required,
+    currencyRateGroupId Long required,
+    startDate ZonedDateTime required,
+    finishDate ZonedDateTime required,
+    active Boolean
+}
+
+entity News{
+    title String required,
+    summary String,
+    startDate ZonedDateTime required,
+    finishDate ZonedDateTime,
+    picture ImageBlob,
+    content String,
+    newsType NewsType required,
+    newsAccessType NewsAccessType required
+}
+
+entity SalesCode{
+    code String required,
+    receivedDate ZonedDateTime
+}
+
+entity CustomerScore{
+    score Double required,
+    startDate ZonedDateTime required,
+    finishDate ZonedDateTime required
+}
+
+entity CustomerRating{
+    title String required,
+    level Integer required,
+    fromDate ZonedDateTime required,
+    toDate ZonedDateTime required,
+    fromScore Double required,
+    toScore Double required
+}
+
+entity AirplaneModel{
+    title String required,
+    capacity Long required
+}
+
+
+entity CarTypeLimit{
+    hour Integer required,
+    fromDate ZonedDateTime required,
+    toDate ZonedDateTime
+}
+
+entity ShiftWork{
+    fromDate ZonedDateTime required,
+    toDate ZonedDateTime
+}
+
+entity CarRfId{
+    code String required,
+    active Boolean,
+    price Double,
+    buyDate ZonedDateTime
+}
+
+entity CarTank{
+    longitude Double,
+    latitude Double,
+    height Double required
+    radius Double,
+    tankType TankType required
+}
+
+entity NiopdcConfig{
+    startDate ZonedDateTime required,
+    finishDate ZonedDateTime,
+    boundaryCurrencyRateGroupId Integer
+}
+
+entity CustomerDeactiveRule{
+    sellContractCode String,
+    startDate ZonedDateTime required,
+    finishDate ZonedDateTime,
+    description String
+}
+
+entity VehicleModel{
+    title String required,
+    customerGroup CustomerGroup,
+    havePrimitiveMeasure Boolean
+}
+
+entity VehicleCapacity{
+    capacity Long required
+}
+
+entity BoundaryDiscount{
+    liter Long required,
+    kilometer Long required
+}
+
+entity BoundaryTag{
+    amount Long required,
+    buyPrice Double required,
+    buyDate ZonedDateTime
+}
+
+entity TagRate{
+    sellPrice Double required,
+    startDate ZonedDateTime required,
+    finishDate ZonedDateTime
+}
+
+entity Plaque{
+    title String required
+}
+
+entity PlaqueRule{
+    digit Integer required,
+    priority Integer required,
+    digitType DigitType required
+}
+
+enum DigitType{
+    NUMBER,PERSIAN_WORD,ENGLISH_WORD
+}
+
+enum TankType{
+    CUBE,CONE
+}
+
+enum NewsType{
+    ALERT,NEWS,EVENT,INFO
+}
+
+enum VerifyStatus {
+    ACTIVE, FAILED, PENDING, REJECT, CONFIRM
+}
+
+enum NewsAccessType{
+    PUBLIC,INTERNAL
+}
+
+enum DepotType{
+    DEPOT,REFUELING_UNIT
+}
+
+enum LocationType{
+    FIXED,
+    MOVABLE
+}
+
+
+enum ContractType{
+   SUPPLY_CHANNEL,
+   EXPORT,
+   EXCHANGE,
+   MILITARY,
+   CONSUMER
+}
+enum TypeEffect{
+   CREDIT,
+   AMOUNT,
+   BOTH
+}
+
+enum CustomerGroup {
+  STATION,
+  SELLER,
+  MAJOR_CONSUMER,
+  CONSUMER,
+  AIRPLANE,
+  EXPORT,
+  LIQUID_GAS,
+  BOUNDARY
+}
+
+enum Personality {
+  LEGAL,
+  NATURAL
+}
+
+enum StakeholderType {
+  CEO,
+  OTHER
+}
+
+enum OrganizationType {
+  GOVERNMENTAL,
+  NONGOVERNMENTAL
+}
+
+enum BuyTypeUsage {
+    COST,
+    PRODUCT,
+    BOTH
+}
+
+enum BuyGroup{
+  CASH,
+  QUOTA,
+  CREDIT,
+  PREBUY,
+  FINANCIAL_LICENSE
+}
+
+
+enum RateType{
+    PERCENT,
+    CONST
+}
+
+enum DeactiveReason{
+    DEBTOR
+}
+
+relationship OneToMany {
+  Region{subRegion} to Region{parent(name)},
+  Person{salesCode(code)} to SalesCode,
+  VehicleModel{vehicleCapacity(capacity)} to VehicleCapacity
+}
+
+relationship ManyToOne {
+
+  Depot {location(name) required} to Location{depot},
+  CustomerCredit {customer } to Customer,
+  Region {country(name) } to Country,
+  CustomerCredit {parentBuyType(title) } to BuyType,
+  CustomerCredit {person(name) } to Person,
+  CustomerCredit {product} to SellContractProduct,
+
+
+  Stakeholder{company(name)} to Person,
+  Stakeholder{person(name)} to Person,
+
+  Location{location} to Location,
+
+  Product{productGroup required} to ProductGroup,
+  Product{productUnit required} to ProductUnit,
+  Product{container } to Container,
+
+  Person{birthRegion(name)} to Region,
+  Person{region(name)} to Region,
+  Person{country(name) required} to Country,
+  Person{nationality(name)} to Country,
+
+
+  Customer{type(title) required} to CustomerType,
+  Customer{region(name) required} to Region,
+  Customer{airplaneModel(title) } to AirplaneModel,
+
+
+  SellContractProduct{consumption(title) required} to Consumption{sellContractProduct},
+  SellContractProduct{product(title) required} to Product{sellContractProduct},
+  SellContractProduct{sellContractCustomer} to SellContractCustomer{sellContractProduct},
+  SellContractProduct{sellContract} to SellContract{sellContractProduct},
+
+  SellContractCustomer{sellContract required} to SellContract{sellContractCustomer},
+  SellContractCustomer{customer required} to Customer{sellContractCustomer},
+  SellContractCustomer{location(name) required} to Location{sellContractCustomer},
+
+  SellContractPerson{sellContract(contractNo) required} to SellContract{sellContractPerson},
+  SellContractPerson{person(name) required} to Person{sellContractPerson},
+
+
+  CustomerTypeProductConsumption {customerType required} to CustomerType,
+  CustomerTypeProductConsumption {product(title) required} to Product,
+  CustomerTypeProductConsumption {consumption(title) required} to Consumption,
+
+  UserDataAccess {location(name)} to Location,
+  UserDataAccess {region(name)} to Region,
+  UserDataAccess {person(name)} to Person,
+  UserDataAccess {customer(name)} to Customer,
+  UserDataAccess {customerType(title)} to CustomerType,
+
+  Container {productUnit(title) required} to ProductUnit,
+
+  TransportContract {customer(name)} to Customer,
+  TransportContract {person(name)} to Person,
+  CustomerScore {customer(name)} to Customer,
+
+  AirplaneModel{product(title) required} to Product,
+
+  CarTypeLimit{customerType(title)} to CustomerType,
+  CarTypeLimit{location(name)} to Location,
+  ShiftWork{location(name)} to Location,
+  CarRfId{customer(name)required} to Customer,
+  CarRfId{tagRate(sellPrice)} to TagRate,
+  CarTank{customer(name)required} to Customer,
+  Customer{vehicleModel(title)} to VehicleModel,
+  VehicleCapacity{product(title) required} to Product,
+  BoundaryDiscount{product(title)} to Product,
+  BoundaryDiscount{location(name) required} to Location,
+  BoundaryDiscount{country(name) required} to Country,
+  BoundaryDiscount{vehicleModel(title) required} to VehicleModel,
+  TagRate{location(name) required} to Location,
+  BoundaryTag {location(name) required} to Location,
+  PlaqueRule {plaque(title) required} to Plaque
+
+}
+
+relationship ManyToMany {
+  Location{depot} to Depot {location},
+  Location{region} to Region {location},
+  Depot {product(title) } to Product,
+  Person {location(name)} to Location {person},
+  Customer {location(name) required} to Location {customer},
+  News {location(name)} to Location{news(title)},
+  SellContractProduct {depot(name) required} to Depot {sellContractProduct},
+  SellContractProduct {buyType(title) required} to BuyType {sellContractProduct},
+  SellContract {location(name) } to Location{sellContract},
+  CustomerRating {location(name)} to Location,
+  CustomerType {customerTypeIgnore(title)} to CustomerType,
+  CustomerDeactiveRule {location(name) } to Location {CustomerDeactiveRule},
+  CustomerDeactiveRule {customerType(name) } to CustomerType {CustomerDeactiveRule}
+}
+
+dto * with mapstruct
+paginate * with pager
+service * with serviceClass
+microservice * with niopdcbase

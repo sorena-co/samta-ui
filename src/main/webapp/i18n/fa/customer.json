@@ -1,0 +1,66 @@
+{
+    "niopdcgatewayApp": {
+        "customer": {
+            "home": {
+                "homeTitle": "خانه",
+                "title": "مشتری",
+                "createLabel": "ایجاد مشتری",
+                "createOrEditLabel": "ویرایش مشتری",
+                "view": "نمایش مشتری",
+                "search": "جستجو",
+                "detail": "فرم مشخصات عمومی",
+                "PersonDetail": "فرم مشخصات فردي",
+                "CustomerDataPage": "فرم اطلاعات مشتري",
+                "selectOperation": "انتخاب عملیات",
+                "editLabel": "ویرایش"
+            },
+            "delete": {
+                "question": "آیا برای حذف مشتری {{ id }} مطمئن هستید؟"
+            },
+            "detail": {
+                "title": "مشتری"
+            },
+            "name": "نام مشتری",
+            "code": "کد",
+            "postalCode": "کدپستی",
+            "registerCode": "شماره رجیستری",
+            "createCodeBySystem": "ایجاد کد توسط سیستم",
+            "registerDate": "تاریخ ثبت",
+            "telephone": "تلفن",
+            "address": "آدرس",
+            "buyOneToMany": "خريد يك به چند",
+            "salesPermit": "مجوز فروش",
+            "identifyCode": "کد 9 رقمی فروش",
+            "gsId": "Gs Id",
+            "type": "نوع مشتری",
+            "location": "حوزه فعالیت",
+            "sellContractCustomer": "Sell Contract Customer",
+            "region": "شهر",
+            "airplaneModel": "نوع هواپیما",
+            "customerGroup": "گروه مشتری",
+            "selfCode": "شناسه",
+            "rfId": "تگ",
+            "plaque": "شماره پلاک",
+            "transitPlaque": "شماره پلاک ترانزیت",
+            "searchRfId": "جستجو بر اساس تگ",
+            "searchPlaque": "جستجو بر اساس شماره پلاک",
+            "searchTransitPlaque": "جستجو بر اساس   شماره پلاک ترانزیت",
+            "carType": "نوع ماشین",
+            "product": "فرآورده",
+            "creditAccount": "حساب اعتباری",
+            "contractNo":"شماره قرارداد",
+            "vehicleModel":"نوع وسیله نقلیه",
+            "refuelCenterIds":"مراکز سوختگیری",
+            "capacity":"ظرفیت"
+        }
+    },
+    "niopdcbaseApp": {
+        "customer": {
+            "created": "مشتری با موفقیت  ایجاد شد.",
+            "carCreated": "ماشین با موفقیت  ایجاد شد.",
+            "updated": "مشتری با موفقیت  ویرایش شد.",
+            "carUpdated": "ماشین با موفقیت  ویرایش شد.",
+            "deleted": "مشتری با موفقیت  حذف شد."
+        }
+    }
+}

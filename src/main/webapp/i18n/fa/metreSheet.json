@@ -1,0 +1,33 @@
+{
+    "niopdcgatewayApp": {
+        "metreSheet": {
+            "home": {
+                "title": "گزارش میتر شیت"
+            },
+            "startDate": "از تاریخ",
+            "finishDate": "تا تاریخ",
+            "metre":"میتر",
+            "receiptNo": "شماره رسید",
+            "date": "زمان سوختگیری",
+            "dayDate": "تاریخ",
+            "time": "ساعت",
+            "personName": "گیرنده",
+            "productCode": "کد فرآورده",
+            "productGroupTitle": "نوع فرآوده",
+            "type": "نوع انتقال",
+            "amount": "مقدار",
+            "agoMetre": "میتر قبل",
+            "agoMetre.min": "میتر شروع",
+            "nextMetre": "میتر بعد",
+            "nextMetre.max": "میتر پایان",
+            "diffMetre": "تفاوت",
+            "createUser": "کاربر",
+            "airplaneName": "هواپیما",
+            "airplaneModel": "مدل هواپیما",
+            "reportType": " نوع گزارش ",
+            "meterSheet": "گزارش میتر شیت",
+            "hourToHour": "ساعت به ساعت",
+            "oilTank": "مخزن"
+        }
+    }
+}

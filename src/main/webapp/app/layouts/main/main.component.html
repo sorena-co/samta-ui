@@ -1,0 +1,189 @@
+<jhi-page-ribbon xmlns="http://www.w3.org/1999/html"></jhi-page-ribbon>
+<div class="flat-blue">
+    <div class="app-container" [ngClass]="{expanded:expanded}" [ngSwitch]="isAuthenticated()">
+        <div class="content-container">
+
+            <nav class="navbar-new navbar-inverse navbar-fixed-top navbar-top">
+                <div class="container-fluid-w">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-expand-toggle" [ngClass]="{'fa-rotate-90':expanded}"
+                                (click)="navbarToggle()">
+                            <i class="fa fa-bars icon"></i>
+                        </button>
+                        <ol class="breadcrumb navbar-breadcrumb">
+                            <li class="active"></li>
+                        </ol>
+                        <button type="button" class="navbar-right-expand-toggle pull-right visible-xs"
+                                (click)="navbarRightToggle()"
+                                [ngClass]="{'fa-rotate-90':expandedRight}">
+                            <i class="fa fa-th icon"></i>
+                        </button>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-up navbar-right"
+                        [ngClass]="{'expanded':expandedRight}">
+                        <button type="button" class="navbar-right-expand-toggle pull-right visible-xs light"
+                                (click)="navbarRightToggle()"
+                                [ngClass]="{'fa-rotate-90':expandedRight}">
+                            <i class="fa fa-times icon"></i>
+                        </button>
+                       <!-- <button type="button" class="navbar-right-expand-toggle pull-right visible-xs light">
+                            Register
+                        </button>-->
+<!--
+
+                        <li class="top-nav" *ngSwitchCase="false">
+                            <a routerLink="register">
+                                <span class="icon fa fa-fw fa-plus"></span>
+                                <span jhiTranslate="global.menu.account.register">Register</span>
+                            </a>
+                        </li>
+-->
+                        <li class="top-nav" *ngSwitchCase="false">
+                            <a (click)="register()">
+                                <span class="icon fa fa-fw fa-user-plus"></span>
+                                <span jhiTranslate="global.menu.account.register">Sign in</span>
+                            </a>
+                        </li>
+                        <li class="top-nav" *ngSwitchCase="false">
+                            <a (click)="login()">
+                                <span class="icon fa fa-fw fa-arrow-right"></span>
+                                <span jhiTranslate="global.menu.account.login">Sign in</span>
+                            </a>
+                        </li>
+
+                        <li *ngSwitchCase="true" class="top-nav" ngbDropdown placement="right-bottom">
+                            <a class="dropdown-toggle" (click)="op.toggle($event)">
+                                <img *ngIf="identity?.imageUrl!=null&& identity?.imageUrl !== ''" src="{{identity?.imageUrl}}" width="35" alt="Bill"
+                                     class="img-circle">
+                                <img *ngIf="identity?.imageUrl==null|| identity?.imageUrl === ''" src="../../../content/images/profile.png"
+                                     width="35" alt="Bill" class="img-circle">
+                                {{identity.firstName+' ' +identity.lastName}}
+                                <span class="caret"></span>
+                            </a>
+                            <p-overlayPanel #op appendTo="body">
+                                <div class="profile">
+                                    <div>
+                                        <img *ngIf="identity?.imageUrl && identity?.imageUrl !== ''" src="{{identity.imageUrl}}"
+                                             class="img-circle img-profile">
+                                        <div class="text-center profile-name">
+                                            <h6>{{identity?.login}}</h6>
+                                        </div>
+                                    </div>
+                                    <ul class="list-group">
+                                        <a class="list-group-item" *ngIf="identity?.personId" (click)="chargeWallet()">
+                                            <span class="icon fa fa-fw fa-university"></span>
+                                            <span jhiTranslate="global.menu.account.chargeWallet">Charge Wallet</span>
+                                            <div class="text-center profile-name">
+                                                <span jhiTranslate="global.menu.account.walletRemain"
+                                                      translateValues="{remain: '{{identity.walletAmount}}'}"></span></div>
+                                        </a>
+                                        <a class="list-group-item" routerLink="settings" *jhiHasAnyAuthority="['ROLE_ADMIN','CHANGE_USER_INFO']">
+                                            <span class="icon fa fa-fw fa-cog"></span>
+                                            <span jhiTranslate="global.menu.account.settings">Settings</span>
+                                        </a>
+                                        <a class="list-group-item" routerLink="password" *jhiHasAnyAuthority="['ROLE_ADMIN','CHANGE_PASSWORD']">
+                                            <span class="icon fa fa-fw fa-key"></span>
+                                            <span jhiTranslate="global.menu.account.password">Password</span>
+                                        </a>
+                                        <a class="list-group-item" (click)="logout()">
+                                            <span class="icon fa fa-fw fa-arrow-left"></span>
+                                            <span jhiTranslate="global.menu.account.logout">Sign out</span>
+                                        </a>
+
+                                    </ul>
+                                </div>
+                            </p-overlayPanel>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+            <div class="side-menu sidebar-inverse" (mouseenter)="sidebarActive(true)"
+                 (mouseleave)="sidebarActive(false)">
+                <nav class="navbar-new navbar-default">
+                    <div class="side-menu-container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" routerLink="/">
+                                <div class="icon"><img src="../../../content/images/logo.png"
+                                                       height="50px"></div>
+                                <div class="title brand">
+                                    <img src="../../../content/images/logo_name.png" height="50px"></div>
+                            </a>
+                            <button type="button" class="navbar-expand-toggle pull-right visible-xs"
+                                    (click)="navbarToggle()">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a routerLink="/">
+                                    <span class="icon fa fa-home"></span>
+                                    <span class="title" jhiTranslate="global.menu.home">Home</span>
+                                </a>
+                            </li>
+                            <li class="panel panel-default dropdown" *ngFor="let menu of menus"
+                                [hidden]="menu.count<=0">
+                                <a data-toggle="collapse" (click)="timerToggle(menu)">
+                                    <span class="icon fa fa-fw {{menu.icon}}"></span>
+                                    <span class="title" jhiTranslate="{{menu.translate}}">{{menu.name}}</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-2" class="panel-collapse"
+                                     [ngClass]="getClass(menu)"
+                                     [ngStyle]="getStyle(menu)">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li *ngFor="let item of menu.subMenu">
+                                                <a class="dropdown-item" routerLinkActive="active"
+                                                   [routerLink]="item.routerLink"
+                                                   *jhiHasAnyAuthority="['ROLE_ADMIN', item.auth]"
+                                                   [routerLinkActiveOptions]="{ exact: true }"
+                                                >
+                                                    <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
+                                                    <span jhiTranslate="{{item.translate}}">{{item.name}}</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+
+            <router-outlet name="navbar"></router-outlet>
+
+            <!-- Main Content -->
+
+            <div id="page-wrapper" class="container-fluid-w">
+                <div class="side-body" id="page-top">
+                    <div class="home-container card">
+                        <router-outlet></router-outlet>
+                        <router-outlet name="popup"></router-outlet>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+    </div>
+</div>
+<!--
+<div>
+    <router-outlet name="navbar"></router-outlet>
+</div>
+<div class="container-fluid">
+    <div class="card jh-card">
+        <router-outlet></router-outlet>
+        <router-outlet name="popup"></router-outlet>
+    </div>
+    <jhi-footer></jhi-footer>
+</div>
+-->

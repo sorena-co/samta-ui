@@ -1,0 +1,31 @@
+
+{
+    "niopdcgatewayApp": {
+        "voucherTemplate" : {
+            "home": {
+                "title": "الگوهای سند",
+                "createLabel": "ایجاد الگوی سند",
+                "createOrEditLabel": "ویرایش الگوی سند",
+                "view":"نمایش الگوی سند"
+            },
+            "delete": {
+                "question": "آیا برای حذف الگوی سند مطمئن هستید؟"
+            },
+            "detail": {
+                "title": "الگوی سند"
+            },
+            "voucherMapping": "نگاشت سند",
+            "referrer": "ساخت سند",
+            "date": "تاریخ",
+            "voucherType": "نوع سند",
+            "voucherTypeGroup": "گروه سند"
+        }
+    },
+    "niopdcaccountingApp": {
+        "voucherTemplate" : {
+            "created": "الگوی سند با موفقیت ایجاد شد.",
+            "updated": "الگوی سند با موفقیت ویرایش شد.",
+            "deleted": "الگوی سند با موفقیت حذف شد."
+        }
+    }
+}

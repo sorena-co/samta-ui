@@ -1,0 +1,79 @@
+
+{
+    "niopdcgatewayApp": {
+        "changeFilterElement" : {
+            "home": {
+                "title": "بازرسی فیلتر و تعویض المنت",
+                "createLabel": "ایجاد بازرسی فیلتر و تعویض المنت",
+                "createOrEditLabel": "ویرایش بازرسی فیلتر و تعویض المنت",
+                "view": "نمایش بازرسی فیلتر و تعویض المنت",
+                "requestFilterElementTitle":"درخواست المنت فیلتر",
+                "elementFilterType":"نوع المنت های فیلتر",
+                "elementInstalledType":"نوع المنت های نصب شده",
+                "torqueOfCartridgesMounting":"میزان گشتاور نصب المنت"
+            },
+            "delete": {
+                "question": "آیا برای حذف این بازرسی فیلتر و تعویض المنت مطمئن هستید ؟"
+            },
+            "detail": {
+                "title": "بازرسی فیلتر و تعویض المنت"
+            },
+            "model": "مشخصات بدنه وسل",
+            "capacity": "ظرفیت",
+            "operatingFlow": "دبی عملیاتی",
+            "pdMax": "حداکثر اختلاف فشار مجاز",
+            "microFilter": "میکرو فیلتر",
+            "microFilterCount": "تعداد میکروفیلتر",
+            "coalescer": "ذره گیر",
+            "coalescerCount": "تعداد ذره گیر",
+            "separator": "آبگیر",
+            "separatorCount": "تعداد آبگیر",
+            "monitor": "مانیتور",
+            "monitorCount": "تعداد مانیتور",
+            "lastChangeDate": "تاریخ آخرین تعویض المنت",
+            "reasonOfChange": "دلیل تعویض",
+            "conditionOfCartridges": "وضعیت المنت ها",
+            "conditionOfSeals": "وضعیت واشرهاو رینگها و ...",
+            "conditionOfCoating": "وضعیت پوشش داخلی",
+            "pdGauge": "اختلاف فشار سنج",
+            "airEliminator": "جدا کننده هوا",
+            "reliefValue": "شیر تخلیه فشار",
+            "sampleDrainValue": "شیر نمونه گیری",
+            "namePlate": "تابلوی مشخصات",
+            "microFilterType": "میکروفیلتر",
+            "microFilterTypeCount": "تعداد میکروفیلتر",
+            "coalescerType": "ذره گیر",
+            "coalescerTypeCount": "تعداد ذره گیر",
+            "separatorType": "آبگیر",
+            "separatorTypeCount": "تعداد آبگیر",
+            "monitorType": "مانیتور",
+            "monitorTypeCount": "تعداد مانیتور",
+            "microFilterTorque": "میکرو فیلتر",
+            "microFilterTorqueCount": "تعداد میکروفیلتر",
+            "coalescerTorque": "ذره گیر",
+            "coalescerTorqueCount": "تعداد ذره گیر",
+            "separatorTorque": "آبگیر",
+            "separatorTorqueCount": "تعداد آبگیر",
+            "monitorTorque": "مانیتور",
+            "monitorTorqueCount": "تعداد مانیتور",
+            "pdReading": "اختلاف فشار خوانده شده",
+            "flowTest": "دبی تست",
+            "installedBy": "نصب کننده",
+            "supervisedBy": "مس",
+            "isSend": "ارسال",
+            "isSendTrue":"فعال",
+            "isSendFalse":"غیر فعال",
+            "requestFilterElement": "درخواست المنت فیلتر",
+            "manufacture": "شرکت سازنده",
+            "oilTank": "مخزن",
+            "refuelCenter": "مرکز سوخت گیری"
+        }
+    },
+    "niopdcaoApp": {
+        "changeFilterElement" : {
+            "created": "بازرسی فیلتر و تعویض المنت با موفقیت ایجاد شد.",
+            "updated": "بازرسی فیلتر و تعویض المنت با موفقیت ویرایش شد.",
+            "deleted": "بازرسی فیلتر و تعویض المنت با موفقیت حذف شد."
+        }
+    }
+}

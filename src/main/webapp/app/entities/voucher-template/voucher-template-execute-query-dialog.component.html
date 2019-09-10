@@ -1,0 +1,57 @@
+<form  name="executeQueryForm" (ngSubmit)="confirmDelete(voucherTemplate.id)" #editForm="ngForm">
+    <div class="modal-header">
+        <h4 class="modal-title" jhiTranslate="entity.executeQuery.title">Confirm executeQuery operation</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;
+        </button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="form-control-label"
+                       jhiTranslate="niopdcgatewayApp.voucherTemplate.date"
+                       for="field_startTime">Register Date</label>
+                <div class="d-flex">
+                    <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00"
+                                        id="field_startTime"
+                                        class="form-control"
+                                        name="startTime"
+                                        [(ngModel)]="dateTime"
+                                        required
+                    >
+                    </ng2-datetimepicker>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="form-control-label"
+                                   jhiTranslate="niopdcgatewayApp.person.location"
+                                   for="field_location">Location</label>
+                            <input-location-selector [disabled]="isView"
+                                                     [idSelector]="true"
+                                                     [oneSelection]="true"
+                                                     [selectByPriority]="true"
+                                                     class="form-control" id="field_location"
+                                                     name="location"
+                                                     [(ngModel)]="locationId"
+                                                     required
+                            >
+                            </input-location-selector>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-check"></span>&nbsp;<span jhiTranslate="entity.action.executeQuery">executeQuery</span>
+        </button>
+    </div>
+</form>

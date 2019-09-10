@@ -1,0 +1,36 @@
+
+{
+    "niopdcgatewayApp": {
+        "requestTestResult": {
+            "home": {
+                "title": "تقاضای آزمایش سوخت",
+                "createLabel": "ایجاد تقاضای آزمایش سوخت",
+                "createOrEditLabel": "ویرایش تقاضای آزمایش سوخت",
+                "view": "نمایش تقاضای آزمایش سوخت"
+            },
+            "delete": {
+                "question": "آیا برای حذف این تقاضای آزمایش سوخت مطمئن هستید ؟"
+            },
+            "detail": {
+                "title": "تقاضای آزمایش سوخت"
+            },
+            "productId": "فرآورده",
+            "date": "تاریخ",
+            "sampleValue": "مقدار نمونه",
+            "oilTankInventory": "موجودی مخزن",
+            "sourceOilTankNumber": "شماره مخزن انبار مبدا",
+            "isSend": "ارسال",
+            "isSendTrue": "فعال",
+            "isSendFalse": "غیر فعال",
+            "oilTank": "مخزن",
+            "refuelCenter": "مرکز سوخت گیری"
+        }
+    },
+    "niopdcaoApp": {
+        "requestTestResult": {
+            "created": "تقاضای آزمایش سوخت با موفقیت ایجاد شد.",
+            "updated": "تقاضای آزمایش سوخت با موفقیت ویرایش شد.",
+            "deleted": "تقاضای آزمایش سوخت با موفقیت حذف شد."
+        }
+    }
+}

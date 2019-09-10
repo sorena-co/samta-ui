@@ -1,0 +1,10 @@
+{
+    "niopdcgatewayApp": {
+        "RateGroupType" : {
+            "null":"",
+            "SUBSIDY": "یارانه ای",
+            "NON_SUBSIDY": "غیر یارانه ای",
+            "DIFFERENCE":"ما به تفاوت"
+        }
+    }
+}

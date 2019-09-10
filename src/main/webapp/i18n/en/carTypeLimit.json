@@ -1,0 +1,30 @@
+
+{
+    "niopdcgatewayApp": {
+        "carTypeLimit" : {
+            "home": {
+                "title": "Car Type Limits",
+                "createLabel": "Create a new Car Type Limit",
+                "createOrEditLabel": "Create or edit a Car Type Limit"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Car Type Limit {{ id }}?"
+            },
+            "detail": {
+                "title": "Car Type Limit"
+            },
+            "hour": "Hour",
+            "fromDate": "From Date",
+            "toDate": "To Date",
+            "customerType": "Customer Type",
+            "location": "Location"
+        }
+    },
+    "niopdcbaseApp": {
+        "carTypeLimit" : {
+            "created": "A new Car Type Limit is created with identifier {{ param }}",
+            "updated": "A Car Type Limit is updated with identifier {{ param }}",
+            "deleted": "A Car Type Limit is deleted with identifier {{ param }}"
+        }
+    }
+}

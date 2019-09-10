@@ -1,0 +1,85 @@
+{
+    "niopdcgatewayApp": {
+        "order": {
+            "home": {
+                "title": "لیست حواله ها",
+                "boundarySell": "فروش سوخت مرزی",
+                "titleInfo": "اطلاعات حواله",
+                "report": "چاپ",
+                "createLabel": "Create a new Order",
+                "createOrEditLabel": "Create or edit a Order"
+            },
+            "delete": {
+                "question": "ایا برای حذف این حواله مطمئن هستید ؟",
+                "questionFuelReceipt": "ایا برای حذف این رسید سوخت مطمئن هستید ؟"
+            },
+            "confirm": {
+                "question": "ایا برای تایید این حواله مطمئن هستید ؟"
+            },
+            "revertConfirm": {
+                "question": "ایا برای انصراف تایید این حواله مطمئن هستید ؟"
+            },
+            "revocation": {
+                "question": "ایا برای ابطال این حواله مطمئن هستید ؟"
+            },
+            "detail": {
+                "title": "Order"
+            },
+            "customerId": "مشتری",
+            "personId": "صاحب امتیاز",
+            "locationId": "ناحیه",
+            "locationCustomer": "حوضه فعالیت مشتری",
+            "orderNo": "شماره حواله",
+            "orderNoFuelReceipt": "شماره رسیدسوخت",
+            "registerDate": "تاریخ",
+            "lastModifiedDate": "تاریخ",
+            "price": "مبلغ کل",
+            "priceAmount": "مبلغ",
+            "paymentCredit": "پرداخت",
+            "productPrice": "مبلغ فرآورده",
+            "containerPrice": "مبلغ ظرف",
+            "costPrice": "مبلغ هزینه",
+            "expires": "Expires",
+            "status": "وضعیت",
+            "currencyId": "واحد پولی",
+            "modifyStatusDate": "Modify Status Date",
+            "depotId": "انبار",
+            "currencyRateGroupId": "گروه نرخی واحد پولی",
+            "buyGroup": "نوع",
+            "buyType": "نوع خرید",
+            "paymentFinal": "ذخیره و پرداخت",
+            "paymentFinalAgain": "تلاش مجدد",
+            "payment": "ذخیره و پرداخت",
+            "nextStep": "ذخیره و مرحله بعد",
+            "back": "بازگشت",
+            "reserve": "رزرو اعتبار",
+            "flightConditions": "شرایط پرواز",
+            "sourceAirport": "فرودگاه مبدا",
+            "targetAirport": "فرودگاه مقصد",
+            "typeOfFuelReceipt": "نحوه فروش",
+            "depotNew":"انبار جدید",
+            "depotOld":"انبار قدیم",
+            "depotSendDate": "تاریخ ارسال به انبار",
+            "depotSendCode": "کد فایل انبار",
+            "targetCountry": "کشور مقصد",
+            "cmr": "CMR",
+            "carnet": "کارنه",
+            "currency":"واحد پولی",
+            "currencyRateGroup":"گروه نرخ واحد پولی",
+            "orderType":"نوع حواله",
+            "description": "توضیحات"
+        }
+    },
+    "niopdcorderApp": {
+        "order": {
+            "created": "حواله سوخت با شماره {{param}} ثبت شد.",
+            "createdFuelReceipt": "رسید سوخت با شماره {{param}} ثبت شد.",
+            "updated": "حواله با شماره {{param}} ثبت شد.",
+            "updatedFuelReceipt": "رسید سوخت با شماره {{param}} ثبت شد.",
+            "deleted": "حواله با شماره {{param}} ثبت شد.",
+            "deletedFuelReceipt": "رسید سوخت با شماره {{param}} ثبت شد.",
+            "confirmed": "حواله با شماره {{param}} تایید شد.",
+            "updateDepotFileItem": "فایل انبار با موفقیت ارسال شد."
+        }
+    }
+}

@@ -1,0 +1,92 @@
+
+entity Payment {
+    currencyId Long,
+    bankAccountNumber String,
+    customerId Long,
+    personId Long,
+    receiptNo String required,
+    receiptDateTime ZonedDateTime required,
+    amount Float required,
+    currentAmount Float required,
+    registerMethod ReceiptMethod required,
+    verified Boolean,
+    bank Bank
+}
+
+entity PaymentBill{
+    spentDate ZonedDateTime required,
+    amount Float,
+    customerId Long,
+    personId Long,
+    type SpentType,
+    billId Long,
+}
+
+entity Wallet {
+    personId Long,
+    customerId Long,
+    amount Float
+}
+
+entity BankTransaction{
+    identifier String,
+    username String,
+    requestDate ZonedDateTime,
+    bankTransactionState BankTransactionState,
+    type SpentType,
+    responseBody String,
+    responseDate ZonedDateTime,
+    error String
+}
+
+entity BankTransactionRef {
+    orderId Long,
+    personId Long,
+    customerId Long,
+    amount Float
+}
+
+
+enum BankTransactionState {
+    BEGIN,
+    PENDING,
+    SYS_ERROR,
+    CANCEL,
+    BANK_ERROR,
+    COMPLETE
+}
+
+enum Bank {
+    MARKAZI
+}
+
+enum ReceiptUse {
+    PUBLICPRODUCT,
+    PRODUCTPRICE,
+    PREPAYMENT,
+    TANKBALANCE,
+    DEPT
+}
+
+enum ReceiptMethod{
+    BRANCH,
+    EPAYMENT
+}
+
+enum SpentType{
+    PRODUCT,
+    COST,
+    WALLET
+}
+
+
+relationship ManyToOne {
+  PaymentBill {payment required} to Payment,
+  BankTransactionRef {bankTransaction} to BankTransaction {bankTransactionRef}
+}
+
+
+dto * with mapstruct
+paginate * with pager
+service * with serviceClass
+microservice * with niopdcpayment

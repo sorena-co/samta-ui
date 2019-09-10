@@ -1,0 +1,9 @@
+{
+    "niopdcgatewayApp": {
+        "StakeholderType" : {
+            "null": "",
+            "CEO": "مدیر عامل",
+            "OTHER": "صاحب امتیاز"
+        }
+    }
+}

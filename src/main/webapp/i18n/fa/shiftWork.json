@@ -1,0 +1,30 @@
+
+{
+    "niopdcgatewayApp": {
+        "shiftWork" : {
+            "home": {
+                "title": "ساعات کاری",
+                "createLabel": "ایجاد ساعت کاری",
+                "createOrEditLabel": "ویرایش ساعت کاری",
+                "view": "نمایش ساعت کاری",
+                "locationTitle":"ناحیه"
+            },
+            "delete": {
+                "question": "آیا برای حذف ساعت کاری مطمئن هستید ؟"
+            },
+            "detail": {
+                "title": "ساعت کاری"
+            },
+            "fromDate": "از تاریخ",
+            "toDate": "تا تاریخ",
+            "location": "ناحیه"
+        }
+    },
+    "niopdcbaseApp": {
+        "shiftWork" : {
+            "created": "ساعت کاری با موفقیت ایجاد شد.",
+            "updated": "ساعت کاری با موفقیت ویرایش شد.",
+            "deleted": "ساعت کاری با موفقیت حذف شد."
+        }
+    }
+}

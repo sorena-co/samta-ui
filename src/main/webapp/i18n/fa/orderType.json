@@ -1,0 +1,9 @@
+{
+    "niopdcgatewayApp": {
+        "OrderType" : {
+            "null": "",
+            "BOUNDARY_TRANSIT": "مرزی-ترانزیت",
+            "BOUNDARY_TRANSHIP": "مرزی-ترانشیپ"
+        }
+    }
+}

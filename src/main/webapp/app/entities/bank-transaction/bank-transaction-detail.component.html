@@ -1,0 +1,54 @@
+
+<div *ngIf="bankTransaction">
+    <h2><span jhiTranslate="niopdcgatewayApp.bankTransaction.detail.title">Bank Transaction</span> {{bankTransaction.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="niopdcgatewayApp.bankTransaction.identifier">Identifier</span></dt>
+        <dd>
+            <span>{{bankTransaction.identifier}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.bankTransaction.username">Username</span></dt>
+        <dd>
+            <span>{{bankTransaction.username}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.bankTransaction.requestDate">Request Date</span></dt>
+        <dd>
+            <span>{{bankTransaction.requestDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.bankTransaction.bankTransactionState">Bank Transaction State</span></dt>
+        <dd>
+            <span jhiTranslate="{{'niopdcgatewayApp.BankTransactionState.' + bankTransaction.bankTransactionState}}">{{bankTransaction.bankTransactionState}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.bankTransaction.type">Type</span></dt>
+        <dd>
+            <span jhiTranslate="{{'niopdcgatewayApp.SpentType.' + bankTransaction.type}}">{{bankTransaction.type}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.bankTransaction.responseBody">Response Body</span></dt>
+        <dd>
+            <span>{{bankTransaction.responseBody}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.bankTransaction.responseDate">Response Date</span></dt>
+        <dd>
+            <span>{{bankTransaction.responseDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.bankTransaction.error">Error</span></dt>
+        <dd>
+            <span>{{bankTransaction.error}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'bank-transaction/'+ bankTransaction.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

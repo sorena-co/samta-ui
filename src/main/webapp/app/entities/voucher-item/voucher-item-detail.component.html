@@ -1,0 +1,64 @@
+
+<div *ngIf="voucherItem">
+    <h2><span jhiTranslate="niopdcgatewayApp.voucherItem.detail.title">Voucher Item</span> {{voucherItem.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.rowNo">Row No</span></dt>
+        <dd>
+            <span>{{voucherItem.rowNo}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.extra">Extra</span></dt>
+        <dd>
+            <span>{{voucherItem.extra}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.special">Special</span></dt>
+        <dd>
+            <span>{{voucherItem.special}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.credit">Credit</span></dt>
+        <dd>
+            <span>{{voucherItem.credit}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.debit">Debit</span></dt>
+        <dd>
+            <span>{{voucherItem.debit}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.description">Description</span></dt>
+        <dd>
+            <span>{{voucherItem.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.accountNo">Account No</span></dt>
+        <dd>
+            <span>{{voucherItem.accountNo}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.suffix">Suffix</span></dt>
+        <dd>
+            <span>{{voucherItem.suffix}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.key">Key</span></dt>
+        <dd>
+            <span>{{voucherItem.key}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.voucherMaster">Voucher Master</span></dt>
+        <dd>
+            <div *ngIf="voucherItem.voucherMasterId">
+                <a [routerLink]="['/voucher-master', voucherItem.voucherMasterId]">{{voucherItem.voucherMasterId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'voucher-item/'+ voucherItem.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

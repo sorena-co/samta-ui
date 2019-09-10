@@ -1,0 +1,125 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 *ngIf="userDataAccess.id==null" class="modal-title" id="createLabel"
+            jhiTranslate="niopdcgatewayApp.userDataAccess.home.createLabel">
+            Create</h4>
+        <h4 *ngIf="userDataAccess.id!=null && !isView" class="modal-title" id="editLabel"
+            jhiTranslate="niopdcgatewayApp.userDataAccess.home.createOrEditLabel">
+            Edit</h4>
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.userDataAccess.home.view">
+            View</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;
+        </button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userDataAccess.location"
+                           for="field_location">Location</label>
+
+                    <input-location-selector class="form-control" [idSelector]="true"
+                                           [oneSelection]="true"
+                                           [(ngModel)]="userDataAccess.locationId"
+                                           (ngModelChange)="locationChanged()"
+                                           [selectOfLevel]="'all'"
+                                           id="field_location" name="location"
+                    ></input-location-selector>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userDataAccess.region"
+                           for="field_region">Region</label>
+
+                    <input-region-selector class="form-control" [idSelector]="true"
+                                         [disabled]="!userDataAccess.locationId"
+                                         [oneSelection]="true"
+                                         [options]="regions"
+                                         [(ngModel)]="userDataAccess.regionId"
+                                         [selectOfLevel]="'all'"
+                                         id="field_region" name="region"
+                    ></input-region-selector>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userDataAccess.person"
+                           for="field_person">Person</label>
+                    <select class="form-control" id="field_person" name="person"
+                            [disabled]="!userDataAccess.locationId"
+                            [(ngModel)]="userDataAccess.personId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="personOption.id"
+                                *ngFor="let personOption of people; trackBy: trackPersonById">{{personOption.fullName}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userDataAccess.customer"
+                           for="field_customer">Customer</label>
+                    <select class="form-control" id="field_customer" name="customer"
+                            [disabled]="!userDataAccess.personId"
+                            [(ngModel)]="userDataAccess.customerId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="customerOption.id"
+                                *ngFor="let customerOption of customers; trackBy: trackCustomerById">
+                            {{customerOption.name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userDataAccess.contractType"
+                           for="field_contractType">Contract Type</label>
+                    <select [disabled]="isView || userDataAccess.personId" class="form-control" name="contractType"
+                            [(ngModel)]="userDataAccess.contractType"
+                            id="field_contractType">
+                        <option [ngValue]="contractTypeOption"
+                                *ngFor="let contractTypeOption of contractTypes">
+                            {{('niopdcgatewayApp.ContractType.' + contractTypeOption) |
+                            translate}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userDataAccess.customerType"
+                           for="field_customerType">Customer Type</label>
+                    <select [disabled]="isView || userDataAccess.personId" class="form-control" id="field_customerType"
+                            name="customerType"
+                            [(ngModel)]="userDataAccess.customerTypeId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="customerTypeOption.id"
+                                *ngFor="let customerTypeOption of customertypes; trackBy: trackCustomerTypeById">
+                            {{customerTypeOption.title}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button *ngIf="!isView" type="submit" [disabled]="editForm.form.invalid || isSaving"
+                class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

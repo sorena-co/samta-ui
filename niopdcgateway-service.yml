@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: niopdcgateway
+  namespace: default
+  labels:
+    app: niopdcgateway
+spec:
+  selector:
+    app: niopdcgateway
+  type: LoadBalancer
+  ports:
+  - name: web
+    port: 8080

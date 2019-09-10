@@ -1,0 +1,16 @@
+{
+    "niopdcgatewayApp": {
+        "CustomerGroup": {
+            "null": "",
+            "STATION": "جایگاه",
+            "SELLER": "فروشندگی",
+            "MAJOR_CONSUMER": "مصرف کننده عمده",
+            "AIRPLANE": "تجهیزات هواپیمایی",
+            "EXPORT": "صادراتی",
+            "LIQUID_GAS": "گروه موزع گاز مایع",
+            "BOUNDARY": "مرزی",
+            "BOUNDARY_VEHICLE": "وسیله نقلیه زمینی",
+            "AIRPLANE_VEHICLE": "وسیله نقلیه هوایی"
+        }
+    }
+}

@@ -1,0 +1,149 @@
+<form #formipg ngNoForm action="https://85.133.186.11:7676/ipgapp/start" method="POST">
+    <div class="component">
+        <div class="card">
+            <div class="card-body">
+                <div class="row" *ngIf="state === BankTransactionState[BankTransactionState.BEGIN]">
+                    <div class="col-md-12" style="text-align: center; margin-bottom: 10px">
+                        <label class="form-control-label"
+                               jhiTranslate="niopdcgatewayApp.payment.lastPayment"
+                               for="payment">Payment</label>
+                    </div>
+                    <jhi-payment-selector style="margin: auto; border: 2px solid #ccc;"
+                                          class="form-control" [multiSelect]="true"
+                                          [(ngModel)]="payments"
+                                          (selectedItem)="paymentSelected($event)"
+                                          [selectObject]="true"
+                                          [rightZero]="true"
+                                          [requestIdentifier]="requestIdentifier"
+                                          name="payment" id="payment">
+                    </jhi-payment-selector>
+                    <br>
+                </div>
+                <ngb-tabset (tabChange)="changeType($event)"
+                    *ngIf="!onlyPayment && state === BankTransactionState[BankTransactionState.BEGIN]">
+                    <ngb-tab id="EPAYMENT"  [title]="'niopdcgatewayApp.payment.ePayment' | translate">
+                        <ng-template ngbTabContent>
+                            <div>
+                                <input type='text' hidden name='RequestIdentifier' value='{{requestIdentifier}}'/>
+                                <input type='text' hidden name='ProviderIdentifier' value='100000223'/>
+                                <input type='text' hidden name='RedirectUrl'
+                                       value='{{this.baseUrl}}/niopdcpayment/validate'/>
+                                <input type='text' hidden name='DepositIdentifier' value='3000'/>
+                                <div class="row">
+                                    <div class="col-md-12"
+                                         style="text-align: center; margin-bottom: 10px;margin-top: 10px; ">
+                                        <label class="form-control-label"
+                                               jhiTranslate="niopdcgatewayApp.payment.amountPay"
+                                               for="Amount">Amount</label>
+                                    </div>
+                                    <div class="flex" style="margin: auto">
+                                        <input id="Amount" name="Amount" class="input-pay"
+                                               type="text"
+                                               [numeric]="{max:amount}"
+                                               [ngModel]="payAmount"
+                                               required autofocus
+                                        />
+                                        <span class="currency">ریال</span>
+                                    </div>
+                                </div>
+
+                                <div style="margin: 10px; text-align: center">کد پرداخت : {{requestIdentifier}}</div>
+                                <br/>
+                                <div class="banks" style="text-align: center">
+                                    <img class="img-responsive" style="margin: auto"
+                                         src="../../../content/images/cbi-logo.svg"
+                                         width="200px"/>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab id="POS" [title]="'niopdcgatewayApp.payment.pos' | translate" *ngIf="this.pos.ip">
+                        <ng-template ngbTabContent>
+                            <div class="row">
+                                <div class="col-md-12"
+                                     style="text-align: center; margin-bottom: 10px;margin-top: 10px; ">
+                                    <label jhiTranslate="niopdcgatewayApp.payment.device"
+                                           for="field_device">device</label>
+                                </div>
+                                <div class="col-md-4" style="margin: auto">
+                                    <select class="form-control select-device" id="field_device" name="device"
+                                            [(ngModel)]="pos.device" required>
+                                        <option [ngValue]="deviceOption"
+                                                *ngFor="let deviceOption of devices">
+                                            {{deviceOption.MerchantName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12"
+                                     style="text-align: center; margin-bottom: 10px;margin-top: 10px; ">
+                                    <label class="form-control-label"
+                                           jhiTranslate="niopdcgatewayApp.payment.amountPay"
+                                           for="Amount2">Amount</label>
+                                </div>
+                                <div class="flex col-md-4" style="margin: auto">
+                                    <input id="Amount2" name="Amount" class="input-pay"
+                                           type="text"
+                                           [numeric]="{max:amount}"
+                                           [ngModel]="payAmount"
+                                           required autofocus
+                                    />
+                                    <span class="currency">ریال</span>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ngb-tab>
+                </ngb-tabset>
+                <div class="card" *ngIf="message">
+                    <div class="messages ui-g ui-fluid ">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img *ngIf="message?.icon === 'error'" src="../../../content/images/error.png"/>
+                                    <img *ngIf="message?.icon === 'warning'" src="../../../content/images/warning.png"/>
+                                    <img *ngIf="message?.icon === 'good'" src="../../../content/images/good.png"/>
+                                </div>
+                                <div class="col-md-8" style="margin: auto">
+                                    <div class="row ttl">{{message?.title}}
+                                    </div>
+                                    <div class="row" style="text-align:right">
+                                        <div> {{message?.body}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" *ngIf="message.reload">
+                                <div class="col-md-12" style="text-align: center">
+                                    <button type="button" class="btn btn-info" (click)="loadBankTransaction()">بار گذاری
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row" *ngIf="message.redirectUrl && showButton">
+                                <div class="col-md-12" style="text-align: center">
+                                    <button type="button" class="btn btn-info" [routerLink]="[message.redirectUrl]">
+                                        بازگشت
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="showButton" class="card-footer" style="text-align: center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" *ngIf="onlyPayment" (click)="pay()"
+                                class="btn btn-success">
+                            پرداخت
+                        </button>
+                        <button type="button" *ngIf="!onlyPayment" (click)="pay()"
+                                class="btn btn-success">
+                            پرداخت و اتصال به درگاه بانک
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

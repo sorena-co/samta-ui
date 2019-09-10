@@ -1,0 +1,180 @@
+<div class="component">
+    <p-breadcrumb [model]="breadcrumbItems"></p-breadcrumb>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <form name="editForm" role="form" novalidate (ngSubmit)="loadAll()" #editForm="ngForm">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <h5 class="col-md-3"
+                        jhiTranslate="report.search">Search
+                    </h5>
+                </div>
+            </div>
+            <div class="card-block container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.refuelCenter"
+                                   for="field_refuelCenter">RefuelCenter</label>
+                            <select class="form-control" id="field_refuelCenter"
+                                    name="refuelCenter"
+                                    [(ngModel)]="req.refuelCenterId"
+                                    required
+                            >
+                                <option [ngValue]="null" selected></option>
+                                <option [ngValue]="refuelCenterOption.id"
+                                        *ngFor="let refuelCenterOption of refuelCenters">
+                                    {{refuelCenterOption.persianTitle}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="form-control-label"
+                                   jhiTranslate="niopdcgatewayApp.amountReport.startDate"
+                                   for="field_startDate">startDate</label>
+                            <div class="d-flex">
+                                <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00:00"
+                                                    id="field_startDate"
+                                                    class="form-control"
+                                                    name="startDate" [(ngModel)]="req.startDate"
+                                                    required></ng2-datetimepicker>
+                            </div>
+                            <div
+                                [hidden]="!(editForm.controls.startDate?.dirty && editForm.controls.startDate?.invalid)">
+                                <small class="form-text text-danger"
+                                       [hidden]="!editForm.controls.startDate?.errors?.required"
+                                       jhiTranslate="entity.validation.required">
+                                    This field is required.
+                                </small>
+                                <small class="form-text text-danger"
+                                       [hidden]="!editForm.controls.startDate?.errors?.ZonedDateTimelocal"
+                                       jhiTranslate="entity.validation.ZonedDateTimelocal">
+                                    This field should be a date and time.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="form-control-label"
+                                   jhiTranslate="niopdcgatewayApp.amountReport.finishDate"
+                                   for="field_finishDate">finishDate</label>
+                            <div class="d-flex">
+                                <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="23:59:59"
+                                                    id="field_finishDate"
+                                                    class="form-control"
+                                                    name="finishDate"
+                                                    [(ngModel)]="req.finishDate"
+                                                    required></ng2-datetimepicker>
+                            </div>
+                            <div
+                                [hidden]="!(editForm.controls.finishDate?.dirty && editForm.controls.finishDate?.invalid)">
+                                <small class="form-text text-danger"
+                                       [hidden]="!editForm.controls.finishDate?.errors?.required"
+                                       jhiTranslate="entity.validation.required">
+                                    This field is required.
+                                </small>
+                                <small class="form-text text-danger"
+                                       [hidden]="!editForm.controls.finishDate?.errors?.ZonedDateTimelocal"
+                                       jhiTranslate="entity.validation.ZonedDateTimelocal">
+                                    This field should be a date and time.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer text-center">
+                <button type="submit" class="btn btn-primary "
+                        [disabled]="editForm.form.invalid ">
+                    <span class="fa fa-search"></span>&nbsp;<span
+                    jhiTranslate="report.search">Save</span>
+                </button>
+            </div>
+        </div>
+    </form>
+    <br/>
+
+    <kendo-grid
+        [disabled]="editForm.form.invalid "
+        [data]="gridData"
+        [pageSize]="state.take"
+        [skip]="state.skip"
+        [sort]="state.sort"
+        [group]="state.group"
+        [resizable]="true"
+        [sortable]="{ mode: 'multiple' }"
+        [pageable]="{ pageSizes: [ 10,25,50,100,amountReport?.length] }"
+        [groupable]="{ showFooter: true}"
+        scrollable="scrollable"
+        [style.maxHeight.px]="600"
+        (dataStateChange)="dataStateChange($event)">
+        <ng-template kendoGridToolbarTemplate>
+            <button kendoGridPDFCommand icon="file-pdf" jhiTranslate="report.exportToPdf">Export to PDF</button>
+            <button type="button" kendoGridExcelCommand icon="file-excel" jhiTranslate="report.exportToExcel">Export to
+                Excel
+            </button>
+        </ng-template>
+
+        <kendo-grid-column field="personName" [title]="'niopdcgatewayApp.amountReport.personName' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="price" [title]="'niopdcgatewayApp.amountReport.price' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="countFuelReceipt" [title]="'niopdcgatewayApp.amountReport.countFuelReceipt' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="currency" [title]="'niopdcgatewayApp.amountReport.currency' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="currencyRateGroup" [title]="'niopdcgatewayApp.amountReport.currencyRateGroup' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="rateGroup" [title]="'niopdcgatewayApp.amountReport.rateGroup' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="product" [title]="'niopdcgatewayApp.amountReport.product' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="refuelCenter" [title]="'niopdcgatewayApp.amountReport.refuelCenter' | translate"
+                           width="130">
+            <ng-template kendoGridGroupHeaderTemplatе></ng-template>
+        </kendo-grid-column>
+        <kendo-grid-messages
+            [pagerOf]="'report.pagerOf' | translate"
+            [pagerItems]="'report.pagerItems' | translate"
+            [groupPanelEmpty]="'report.headerMessage' | translate"
+            [noRecords]="'global.messages.info.emptyRecords' | translate"
+            [pagerItemsPerPage]="'report.pagerItemsPerPage' | translate">
+        </kendo-grid-messages>
+
+        <kendo-grid-pdf fileName="amountReport.pdf" [allPages]="true" paperSize="A4" [repeatHeaders]="true"
+                        [landscape]="true">
+            <kendo-grid-pdf-margin top="2cm" left="1cm" right="1cm" bottom="2cm"></kendo-grid-pdf-margin>
+            <ng-template kendoGridPDFTemplate let-pageNum="pageNum" let-totalPages="totalPages">
+                <div class="page-template">
+                    <div class="header">
+                        <div style="float: right">{{ pageNum + ('report.pageOf'|translate) + totalPages }}</div>
+                    </div>
+                    <div class="footer">
+                        {{ pageNum + ('report.pageOf'|translate) + totalPages }}
+                    </div>
+                </div>
+            </ng-template>
+        </kendo-grid-pdf>
+        <kendo-grid-excel fileName="amountReport.xlsx"></kendo-grid-excel>
+    </kendo-grid>
+    <br/>
+</div>

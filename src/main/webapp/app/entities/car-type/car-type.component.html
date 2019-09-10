@@ -1,0 +1,93 @@
+<div class="component">
+    <p-breadcrumb [model]="breadcrumbItems"></p-breadcrumb>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <p-dataTable #dt [value]="carTypes" [lazy]="true" [rows]="10" [rowsPerPageOptions]="[5,10,20,totalItems]"
+                 [paginator]="true" [responsive]="true" [stacked]="false"
+                 [totalRecords]="totalItems" (onLazyLoad)="loadLazy($event)">
+        <p-header>
+            <div class="ui-helper-clearfix">
+                <button class="btn btn-primary float-right create-entity"
+                        *jhiHasAnyAuthority="['ROLE_ADMIN','CREATE_CAR_TYPE']"
+                        [routerLink]="['/', { outlets: { popup: ['car-type-new' ] } }]">
+                    <span class="fa fa-plus"></span>
+                    <span jhiTranslate="entity.action.create">Create</span>
+                </button>
+            </div>
+        </p-header>
+
+        <p-headerColumnGroup>
+            <p-row>
+                <p-column field="title" [sortable]="true">
+                    <ng-template pTemplate="header">
+                        <span jhiTranslate="niopdcgatewayApp.carType.title">Title</span>
+                    </ng-template>
+                </p-column>
+                <p-column styleClass="col-button"></p-column>
+            </p-row>
+            <p-row>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <input class="form-control" type="text"
+                               name="title" id="field_title"
+                               [(ngModel)]="carType.title"
+                               search-after-typed (onSearch)="search()"/>
+                    </ng-template>
+                </p-column>
+                <p-column>
+                    <ng-template pTemplate="header">
+                        <button class="btn btn-info" (click)="search()">
+                            <span class="fa fa-search"></span>
+                        </button>
+                        <button class=" btn btn-danger" (click)="clear()">
+                            <span class="fa fa-trash-o"></span>
+                        </button>
+                    </ng-template>
+                </p-column>
+            </p-row>
+        </p-headerColumnGroup>
+
+        <p-column field="title" [header]="'niopdcgatewayApp.carType.title' | translate"></p-column>
+        <p-column class="component">
+            <ng-template let-item="rowData" pTemplate="body">
+                <div class="btn-group" ngbDropdown placement="right">
+                    <button type="button" class="btn btn-primary"
+                            replaceUrl="true"
+                            *jhiHasAnyAuthority="['ROLE_ADMIN','EDIT_CAR_TYPE']"
+                            [routerLink]="['/', { outlets: { popup: 'car-type/'+ item.id + '/edit'} }]">
+                        <span class="fa fa-edit"></span>
+                        <span jhiTranslate="entity.action.edit">ویرایش</span>
+                    </button>
+
+                    <button class="btn btn-primary" ngbDropdownToggle
+                            *jhiHasAnyAuthority="['ROLE_ADMIN','VIEW_CAR_TYPE','DELETE_CAR_TYPE','LIST_CAR_TYPE_LIMIT']"
+                    ></button>
+                    <div class="dropdown-menu" ngbDropdownMenu>
+                        <button class="dropdown-item"
+                                replaceUrl="true"
+                                *jhiHasAnyAuthority="['ROLE_ADMIN','VIEW_CAR_TYPE']"
+                                [routerLink]="['/', { outlets: { popup: 'car-type/'+ item.id + '/view'} }]">
+                            <span class="fa fa-eye"></span>
+                            <span jhiTranslate="entity.action.view">نمایش</span>
+                        </button>
+                        <button class="dropdown-item"
+                                replaceUrl="true"
+                                *jhiHasAnyAuthority="['ROLE_ADMIN','DELETE_CAR_TYPE']"
+                                [routerLink]="['/', { outlets: { popup: 'car-type/'+ item.id + '/delete'} }]">
+                            <span class="fa fa-remove"></span>
+                            <span jhiTranslate="entity.action.delete">delete</span>
+                        </button>
+
+                        <button class="dropdown-item"
+                                *jhiHasAnyAuthority="['ROLE_ADMIN','LIST_CAR_TYPE_LIMIT']"
+                                [routerLink]="['/car-type', item.id, 'car-type-limit']">
+                            <span class="fa fa-external-link"></span>
+                            <span jhiTranslate="niopdcgatewayApp.carTypeLimit.home.title">Car Type Limit</span>
+                        </button>
+                    </div>
+                </div>
+            </ng-template>
+        </p-column>
+    </p-dataTable>
+
+</div>

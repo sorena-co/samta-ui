@@ -1,0 +1,19 @@
+<form name="revocationForm" (ngSubmit)="revocation(order.id)">
+    <div class="modal-header">
+        <h4 class="modal-title" jhiTranslate="entity.revocation.title">Confirm revocation operation</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <p jhiTranslate="niopdcgatewayApp.order.revocation.question" translateValues="{id: '{{order.id}}'}">Are you sure you want to revocation this Order?</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" class="btn btn-primary">
+            <span class="fa fa-check"></span>&nbsp;<span jhiTranslate="entity.action.revocation">Revocation</span>
+        </button>
+    </div>
+</form>

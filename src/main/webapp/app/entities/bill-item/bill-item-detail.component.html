@@ -1,0 +1,56 @@
+
+<div *ngIf="billItem">
+    <h2><span jhiTranslate="niopdcgatewayApp.billItem.detail.title">Bill Item</span> {{billItem.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="niopdcgatewayApp.billItem.title">Title</span></dt>
+        <dd>
+            <span>{{billItem.title}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.billItem.productId">Product Id</span></dt>
+        <dd>
+            <span>{{billItem.productId}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.billItem.litre">Litre</span></dt>
+        <dd>
+            <span>{{billItem.litre}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.billItem.costId">Cost Id</span></dt>
+        <dd>
+            <span>{{billItem.costId}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.billItem.price">Price</span></dt>
+        <dd>
+            <span>{{billItem.price}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.billItem.costRatePrice">Cost Rate Price</span></dt>
+        <dd>
+            <span>{{billItem.costRatePrice}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.billItem.costElementId">Cost Element Id</span></dt>
+        <dd>
+            <span>{{billItem.costElementId}}</span>
+        </dd>
+        <dt><span jhiTranslate="niopdcgatewayApp.billItem.bill">Bill</span></dt>
+        <dd>
+            <div *ngIf="billItem.billId">
+                <a [routerLink]="['/bill', billItem.billId]">{{billItem.billId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'bill-item/'+ billItem.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,55 @@
+
+{
+    "niopdcgatewayApp": {
+        "requestFilterElement" : {
+            "home": {
+                "title": "درخواست المنت فیلترها",
+                "createLabel":"ایجاد درخواست المنت فیلتر",
+                "createOrEditLabel":"ویرایش درخواست المنت فیلتر",
+                "view":"نمایش درخواست المنت فیلتر",
+                "detail":"شماره مدل و تعداد المنت های درخواستی"
+            },
+            "delete": {
+                "question": "ایا برای حذف این درخواست المنت فیلترها مطمئن هستید ؟"
+            },
+            "detail": {
+                "title": "درخواست المنت فیلترها"
+            },
+            "filterNumber": "شماره فیلتر",
+            "lastChangeDate": "آخرین تاریخ تعویض",
+            "microFilter": "المنت میکروفیلتر",
+            "coalescer": "المنت ذره گیر فیلتر دو مرحله ای",
+            "separator": "المنت جدا کننده آب دو مرحله ای",
+            "monitor": "المنت فیلتر مانیتور",
+            "clay": "المنت کلی فیلتر",
+            "productId": "فرآورده",
+            "filterLocation": "محل نصب فیلتر",
+            "psi": "حداکثر اختلاف فشار فعلی فیلتر",
+            "microFilterModel": "المنت میکروفیلتر",
+            "microFilterModelCount": "تعداد المنت میکروفیلتر",
+            "coalesceModel": "المنت ذره گیر فیلتر دو مرحله ای",
+            "coalesceModelCount": "تعداد المنت ذره گیر فیلتر دو مرحله ای",
+            "monitorModel": "المنت فیلتر مانیتور",
+            "monitorModelCount": "تعداد المنت فیلتر مانیتور",
+            "separatorModel": "المنت جدا کننده آب دو مرحله ای",
+            "separatorModelCount": "تعداد المنت جدا کننده آب دو مرحله ای",
+            "clayModel": "المنت کلی فیلتر",
+            "clayModelCount": "تعداد المنت کلی فیلتر",
+            "elementRequestReason": "دلیل درخواست المنت",
+            "amountFuelPassed": "مقدار سوخت عبور کرده از فیلتر طی تعویض قبلی تا کنون",
+            "description": "توضیحات",
+            "isSend": "ارسال",
+            "isSendTrue":"فعال",
+            "isSendFalse":"غیر فعال",
+            "oilTank": "مخزن",
+            "refuelCenter": "مرکز سوخت گیری"
+        }
+    },
+    "niopdcaoApp": {
+        "requestFilterElement" : {
+            "created": "درخواست المنت فیلتر با موفقیت ایجاد شد.",
+            "updated": "درخواست المنت فیلتر با موفقیت ویرایش شد.",
+            "deleted": "درخواست المنت فیلتر با موفقیت حذف شد."
+        }
+    }
+}

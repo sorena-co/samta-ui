@@ -1,0 +1,33 @@
+
+{
+    "niopdcgatewayApp": {
+        "customerDeactiveRule" : {
+            "home": {
+                "title": " غیر فعال کردن فروش",
+                "createLabel": "ایجاد غیر فعال کردن فروش",
+                "createOrEditLabel": "بروز رسانی قوانین فعالیت  مشتری"
+            },
+            "delete": {
+                "question": "آیا مطمعن به حذف هستید?"
+            },
+            "detail": {
+                "title": "تعیین غیر فعال کردن فروش"
+            },
+            "sellContractCode": "کد قرارداد مشتری",
+            "customerCode": "مشتری",
+            "startDate": "تاریخ شروع",
+            "finishDate": "تاریخ پایان",
+            "description": "توضیحات",
+            "location": "ناحیه",
+            "customerType": "نوع مشتری",
+            "deactiveReason": "علت "
+        }
+    },
+    "niopdcbaseApp": {
+        "customerDeactiveRule" : {
+            "created": "با موفقیت ایجاد شد",
+            "updated": "با موفقیت بروز رسانی شد",
+            "deleted": "با موفقیت حذف شد"
+        }
+    }
+}

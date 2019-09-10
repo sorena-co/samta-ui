@@ -1,0 +1,438 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 *ngIf="requestFilterElement.id==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.requestFilterElement.home.createLabel">
+            Create</h4>
+        <h4 *ngIf="requestFilterElement.id!=null && !isView" class="modal-title" id="editLabel"
+            jhiTranslate="niopdcgatewayApp.requestFilterElement.home.createOrEditLabel">
+            Edit</h4>
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.requestFilterElement.home.view">
+            View</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;
+        </button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.filterNumber"
+                           for="field_filterNumber">Filter Number</label>
+                    <input [disabled]="isView" type="text" class="form-control" name="filterNumber"
+                           id="field_filterNumber"
+                           [(ngModel)]="requestFilterElement.filterNumber" required minlength="1" maxlength="43"/>
+                    <div [hidden]="!(editForm.controls.filterNumber?.dirty && editForm.controls.filterNumber?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.filterNumber?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.filterNumber?.errors?.minlength"
+                               jhiTranslate="entity.validation.minlength" translateValues="{ min: 1 }">
+                            This field is required to be at least 1 characters.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.filterNumber?.errors?.maxlength"
+                               jhiTranslate="entity.validation.maxlength" translateValues="{ max: 43 }">
+                            This field cannot be longer than 43 characters.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label"
+                           jhiTranslate="niopdcgatewayApp.requestFilterElement.lastChangeDate"
+                           for="field_lastChangeDate">Last Change Date</label>
+                    <div class="d-flex">
+                        <ng2-datetimepicker [disableTime]="true"[disabled]="isView" [rtlActive]="true" time="00:00:00"
+                                            id="field_lastChangeDate"
+                                            class="form-control"
+                                            name="lastChangeDate" [(ngModel)]="requestFilterElement.lastChangeDate"
+                                            required></ng2-datetimepicker>
+                    </div>
+                    <div
+                        [hidden]="!(editForm.controls.lastChangeDate?.dirty && editForm.controls.lastChangeDate?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.lastChangeDate?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.lastChangeDate?.errors?.ZonedDateTimelocal"
+                               jhiTranslate="entity.validation.ZonedDateTimelocal">
+                            This field should be a date and time.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.microFilter"
+                           for="field_microFilter">Micro Filter</label>
+                    <input [disabled]="isView" type="text" class="form-control" name="microFilter"
+                           id="field_microFilter"
+                           [(ngModel)]="requestFilterElement.microFilter" minlength="1" maxlength="43"/>
+                    <div [hidden]="!(editForm.controls.microFilter?.dirty && editForm.controls.microFilter?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.microFilter?.errors?.minlength"
+                               jhiTranslate="entity.validation.minlength" translateValues="{ min: 1 }">
+                            This field is required to be at least 1 characters.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.microFilter?.errors?.maxlength"
+                               jhiTranslate="entity.validation.maxlength" translateValues="{ max: 43 }">
+                            This field cannot be longer than 43 characters.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.coalescer"
+                           for="field_coalescer">Coalescer</label>
+                    <input [disabled]="isView" type="text" class="form-control" name="coalescer" id="field_coalescer"
+                           [(ngModel)]="requestFilterElement.coalescer"/>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.separator"
+                           for="field_separator">Separator</label>
+                    <input [disabled]="isView" type="text" class="form-control" name="separator" id="field_separator"
+                           [(ngModel)]="requestFilterElement.separator"/>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.monitor"
+                           for="field_monitor">Monitor</label>
+                    <input [disabled]="isView" type="text" class="form-control" name="monitor" id="field_monitor"
+                           [(ngModel)]="requestFilterElement.monitor"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.clay"
+                           for="field_clay">Clay</label>
+                    <input [disabled]="isView" type="text" class="form-control" name="clay" id="field_clay"
+                           [(ngModel)]="requestFilterElement.clay"/>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.productId"
+                           for="field_productId">Product Id</label>
+                    <select [disabled]="isView" class="form-control" id="field_productID" name="product"
+                            [(ngModel)]="requestFilterElement.productId"
+                            required>
+                        <option [ngValue]="productOption.id"
+                                *ngFor="let productOption of products; trackBy: trackProductById">
+                            {{productOption.title}}
+                        </option>
+                    </select>
+                    <div [hidden]="!(editForm.controls.productId?.dirty && editForm.controls.productId?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.productId?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.productId?.errors?.number"
+                               jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label"
+                           jhiTranslate="niopdcgatewayApp.requestFilterElement.filterLocation"
+                           for="field_filterLocation">Filter Location</label>
+                    <select [disabled]="isView" class="form-control" name="filterLocation"
+                            [(ngModel)]="requestFilterElement.filterLocation" id="field_filterLocation" required>
+                        <option value="DRAIN_TANKER">{{'niopdcgatewayApp.FilterLocation.DRAIN_TANKER' | translate}}
+                        </option>
+                        <option value="BETWEEN_MAIN_AND_SERVICE">
+                            {{'niopdcgatewayApp.FilterLocation.BETWEEN_MAIN_AND_SERVICE' | translate}}
+                        </option>
+                        <option value="LADING_UNIT">{{'niopdcgatewayApp.FilterLocation.LADING_UNIT' | translate}}
+                        </option>
+                        <option value="OIL_DEPOT">{{'niopdcgatewayApp.FilterLocation.OIL_DEPOT' | translate}}</option>
+                        <option value="UNIT">{{'niopdcgatewayApp.FilterLocation.UNIT' | translate}}</option>
+                    </select>
+                    <div
+                        [hidden]="!(editForm.controls.filterLocation?.dirty && editForm.controls.filterLocation?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.filterLocation?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.psi"
+                           for="field_psi">Psi</label>
+                    <input [disabled]="isView" type="number" class="form-control" name="psi" id="field_psi"
+                           [(ngModel)]="requestFilterElement.psi"/>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"
+                    jhiTranslate="niopdcgatewayApp.requestFilterElement.home.detail">
+                    Create or edit a Customer
+                </h5>
+            </div>
+            <div class="card-block container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label"
+                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.microFilterModel"
+                                   for="field_microFilterModel">Micro Filter Model</label>
+                            <input [disabled]="isView" type="text" class="form-control" name="microFilterModel"
+                                   id="field_microFilterModel"
+                                   [(ngModel)]="requestFilterElement.microFilterModel"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label"
+                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.microFilterModelCount"
+                                   for="field_microFilterModelCount">Micro Filter Model Count</label>
+                            <input [disabled]="isView" type="number" class="form-control" name="microFilterModelCount"
+                                   id="field_microFilterModelCount"
+                                   [(ngModel)]="requestFilterElement.microFilterModelCount"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.coalesceModel"
+                                   for="field_coalesceModel">Coalesce Model</label>
+                            <input [disabled]="isView" type="text" class="form-control" name="coalesceModel"
+                                   id="field_coalesceModel"
+                                   [(ngModel)]="requestFilterElement.coalesceModel"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label"
+                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.coalesceModelCount"
+                                   for="field_coalesceModelCount">Coalesce Model Count</label>
+                            <input [disabled]="isView" type="number" class="form-control" name="coalesceModelCount"
+                                   id="field_coalesceModelCount"
+                                   [(ngModel)]="requestFilterElement.coalesceModelCount"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.monitorModel"
+                                   for="field_monitorModel">Monitor Model</label>
+                            <input [disabled]="isView" type="text" class="form-control" name="monitorModel"
+                                   id="field_monitorModel"
+                                   [(ngModel)]="requestFilterElement.monitorModel"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label"
+                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.monitorModelCount"
+                                   for="field_monitorModelCount">Monitor Model Count</label>
+                            <input [disabled]="isView" type="number" class="form-control" name="monitorModelCount"
+                                   id="field_monitorModelCount"
+                                   [(ngModel)]="requestFilterElement.monitorModelCount"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label"
+                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.separatorModel"
+                                   for="field_separatorModel">Separator Model</label>
+                            <input [disabled]="isView" type="text" class="form-control" name="separatorModel"
+                                   id="field_separatorModel"
+                                   [(ngModel)]="requestFilterElement.separatorModel"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label"
+                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.separatorModelCount"
+                                   for="field_separatorModelCount">Separator Model Count</label>
+                            <input [disabled]="isView" type="number" class="form-control" name="separatorModelCount"
+                                   id="field_separatorModelCount"
+                                   [(ngModel)]="requestFilterElement.separatorModelCount"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.clayModel"
+                                   for="field_clayModel">Clay Model</label>
+                            <input [disabled]="isView" type="text" class="form-control" name="clayModel" id="field_clayModel"
+                                   [(ngModel)]="requestFilterElement.clayModel"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label"
+                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.clayModelCount"
+                                   for="field_clayModelCount">Clay Model Count</label>
+                            <input [disabled]="isView" type="number" class="form-control" name="clayModelCount"
+                                   id="field_clayModelCount"
+                                   [(ngModel)]="requestFilterElement.clayModelCount"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label"
+                           jhiTranslate="niopdcgatewayApp.requestFilterElement.amountFuelPassed"
+                           for="field_amountFuelPassed">Amount Fuel Passed</label>
+                    <input [disabled]="isView" type="number" class="form-control" name="amountFuelPassed"
+                           id="field_amountFuelPassed"
+                           [(ngModel)]="requestFilterElement.amountFuelPassed" required/>
+                    <div
+                        [hidden]="!(editForm.controls.amountFuelPassed?.dirty && editForm.controls.amountFuelPassed?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.amountFuelPassed?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.amountFuelPassed?.errors?.number"
+                               jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.oilTank"
+                           for="field_oilTank">Oil Tank</label>
+                    <select [disabled]="isView" class="form-control" id="field_oilTank" name="oilTank"
+                            [(ngModel)]="requestFilterElement.oilTankId" required>
+                        <option *ngIf="!editForm.value.oilTank" [ngValue]="null" selected></option>
+                        <option [ngValue]="oilTankOption.id"
+                                *ngFor="let oilTankOption of oiltanks; trackBy: trackOilTankById">
+                            {{oilTankOption.title}}
+                        </option>
+                    </select>
+                </div>
+                <div [hidden]="!(editForm.controls.oilTank?.dirty && editForm.controls.oilTank?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.oilTank?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label"
+                           jhiTranslate="niopdcgatewayApp.requestFilterElement.elementRequestReason"
+                           for="field_elementRequestReason">Element Request Reason</label>
+                    <select [disabled]="isView" class="form-control" name="elementRequestReason"
+                            [(ngModel)]="requestFilterElement.elementRequestReason" id="field_elementRequestReason"
+                            required>
+                        <option value="MAX_DIFF">{{'niopdcgatewayApp.ElementRequestReason.MAX_DIFF' | translate}}
+                        </option>
+                        <option value="MAX_TIME_ELAPSED">{{'niopdcgatewayApp.ElementRequestReason.MAX_TIME_ELAPSED' |
+                            translate}}
+                        </option>
+                        <option value="UNACCEPTABLE_DROP">{{'niopdcgatewayApp.ElementRequestReason.UNACCEPTABLE_DROP' |
+                            translate}}
+                        </option>
+                        <option value="UNACCEPTABLE_RESULT">
+                            {{'niopdcgatewayApp.ElementRequestReason.UNACCEPTABLE_RESULT' |
+                            translate}}
+                        </option>
+                        <option value="ABNORMAL_RESULT">{{'niopdcgatewayApp.ElementRequestReason.ABNORMAL_RESULT' |
+                            translate}}
+                        </option>
+                        <option value="TEARING_ELEMENT">{{'niopdcgatewayApp.ElementRequestReason.TEARING_ELEMENT' |
+                            translate}}
+                        </option>
+                        <option value="SUDDEN_DROP">{{'niopdcgatewayApp.ElementRequestReason.SUDDEN_DROP' | translate}}
+                        </option>
+                    </select>
+                    <div
+                        [hidden]="!(editForm.controls.elementRequestReason?.dirty && editForm.controls.elementRequestReason?.invalid)">
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.elementRequestReason?.errors?.required"
+                               jhiTranslate="entity.validation.required">
+                            This field is required.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.refuelCenter"
+                           for="field_refuelCenter">RefuelCenter</label>
+                    <select [disabled]="isView" class="form-control" id="field_refuelCenter" name="refuelCenter"
+                            [(ngModel)]="requestFilterElement.refuelCenterId" required>
+                        <option *ngIf="!editForm.value.refuelCenter" [ngValue]="null" selected></option>
+                        <option [ngValue]="refuelCenterOption.id"
+                                *ngFor="let refuelCenterOption of refuelCenters; trackBy: trackRefuelCenterById">
+                            {{refuelCenterOption.persianTitle}}
+                        </option>
+                    </select>
+                </div>
+                <div [hidden]="!(editForm.controls.refuelCenter?.dirty && editForm.controls.refuelCenter?.invalid)">
+                    <small class="form-text text-danger"
+                           [hidden]="!editForm.controls.refuelCenter?.errors?.required"
+                           jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.description"
+                           for="field_description">Description</label>
+                    <textarea [disabled]="isView" type="text" class="form-control" name="description"
+                           id="field_description"
+                           [(ngModel)]="requestFilterElement.description"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button *ngIf="!isView" type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

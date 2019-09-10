@@ -1,0 +1,44 @@
+
+{
+    "niopdcgatewayApp": {
+        "payment" : {
+            "home": {
+                "title": "فیش ها",
+                "createLabel": "Create a new Payment",
+                "createOrEditLabel": "Create or edit a Payment"
+            },
+            "electronic": {
+                "title": "پرداخت الکترونیک"
+            },
+            "delete": {
+                "question": "ایا برای حذف فیش مطمئن هستید ؟"
+            },
+            "detail": {
+                "title": "فیش"
+            },
+            "currency": "واحد پولی",
+            "bankAccountNumber": "Bank Account Number",
+            "customerId": "مشتری",
+            "personId": "صاحب امتیاز",
+            "receiptNo": "شماره فیش",
+            "receiptDateTime": "تاریخ",
+            "amount": "مبلغ",
+            "amountPay": "مبلغ قابل پرداخت",
+            "currentAmount": "مبلغ",
+            "registerMethod": "نوع",
+            "verified": "تایید شده",
+            "bank": "Bank",
+            "lastPayment":"فیش های موجود",
+            "pos":"دستگاه های pos",
+            "ePayment":"اینترنتی",
+            "device":"دستگاه های موجود"
+        }
+    },
+    "niopdcpaymentApp": {
+        "payment" : {
+            "created": "فیش با موفقیت ایجاد شد.",
+            "updated": "A Payment is updated with identifier {{ param }}",
+            "deleted": "فیش با موفقیت حذف شد."
+        }
+    }
+}

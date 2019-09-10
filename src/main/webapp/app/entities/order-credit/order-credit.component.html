@@ -1,0 +1,93 @@
+<div>
+    <h2>
+        <span jhiTranslate="niopdcgatewayApp.orderCredit.home.title">Order Credits</span>
+        <button class="btn btn-primary float-right jh-create-entity create-order-credit" [routerLink]="['/', { outlets: { popup: ['order-credit-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="niopdcgatewayApp.orderCredit.home.createLabel">
+            Create new Order Credit
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="orderCredits">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="customerCreditId"><span jhiTranslate="niopdcgatewayApp.orderCredit.customerCreditId">Customer Credit Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="decreasedCredit"><span jhiTranslate="niopdcgatewayApp.orderCredit.decreasedCredit">Decreased Credit</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="decreasedAmount"><span jhiTranslate="niopdcgatewayApp.orderCredit.decreasedAmount">Decreased Amount</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="decreasedCost"><span jhiTranslate="niopdcgatewayApp.orderCredit.decreasedCost">Decreased Cost</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="creditNumber"><span jhiTranslate="niopdcgatewayApp.orderCredit.creditNumber">Credit Number</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="buyTypeUsage"><span jhiTranslate="niopdcgatewayApp.orderCredit.buyTypeUsage">Buy Type Usage</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="settled"><span jhiTranslate="niopdcgatewayApp.orderCredit.settled">Settled</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="buyGroup"><span jhiTranslate="niopdcgatewayApp.orderCredit.buyGroup">Buy Group</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="orderOrderNo"><span jhiTranslate="niopdcgatewayApp.orderCredit.order">Order</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="orderProductId"><span jhiTranslate="niopdcgatewayApp.orderCredit.orderProduct">Order Product</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let orderCredit of orderCredits ;trackBy: trackId">
+                <td><a [routerLink]="['../order-credit', orderCredit.id ]">{{orderCredit.id}}</a></td>
+                <td>{{orderCredit.customerCreditId}}</td>
+                <td>{{orderCredit.decreasedCredit}}</td>
+                <td>{{orderCredit.decreasedAmount}}</td>
+                <td>{{orderCredit.decreasedCost}}</td>
+                <td>{{orderCredit.creditNumber}}</td>
+                <td jhiTranslate="{{'niopdcgatewayApp.BuyTypeUsage.' + orderCredit.buyTypeUsage}}">{{orderCredit.buyTypeUsage}}</td>
+                <td>{{orderCredit.settled}}</td>
+                <td jhiTranslate="{{'niopdcgatewayApp.BuyGroup.' + orderCredit.buyGroup}}">{{orderCredit.buyGroup}}</td>
+                <td>
+                    <div *ngIf="orderCredit.orderId">
+                        <a [routerLink]="['../order', orderCredit.orderId  ]" >{{orderCredit.orderOrderNo}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="orderCredit.orderProductId">
+                        <a [routerLink]="['../order-product', orderCredit.orderProductId  ]" >{{orderCredit.orderProductId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../order-credit', orderCredit.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'order-credit/'+ orderCredit.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'order-credit/'+ orderCredit.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Pager is not implemented yet, so this is normal pagination instead -->
+    <div *ngIf="orderCredits && orderCredits.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="queryCount" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

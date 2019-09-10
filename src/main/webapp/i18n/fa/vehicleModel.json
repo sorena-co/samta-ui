@@ -1,0 +1,31 @@
+
+{
+    "niopdcgatewayApp": {
+        "vehicleModel" : {
+            "home": {
+                "title": "مدل وسیله نقلیه",
+                "createLabel": "ایجاد مدل وسیله نقلیه",
+                "createOrEditLabel": "ویرایش مدل وسیله نقلیه"
+            },
+            "delete": {
+                "question": "آیا برای حذف مدل وسیله نقلیه مطمئن هستید ؟"
+            },
+            "detail": {
+                "title": "مدل وسیله نقلیه"
+            },
+            "title": "عنوان",
+            "customerGroup": "نوع",
+            "havePrimitiveMeasure": "اندازه گیری دارد",
+            "havePrimitiveMeasureTrue": "فعال",
+            "havePrimitiveMeasureFalse": "غیر فعال",
+            "vehicleCapacity": "اندازه گیری"
+        }
+    },
+    "niopdcbaseApp": {
+        "vehicleModel" : {
+            "created": "مدل وسیله نقلیه با موفقیت ایجاد شد.",
+            "updated": "مدل وسیله نقلیه با موفقیت ویرایش شد.",
+            "deleted": "مدل وسیله نقلیه با موفقیت حذف شد."
+        }
+    }
+}
