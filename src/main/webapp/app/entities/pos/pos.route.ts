@@ -34,7 +34,7 @@ export const posRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_POS'],
-            pageTitle: 'niopdcgatewayApp.pos.home.title'
+            pageTitle: 'samtagatewayApp.pos.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -46,7 +46,7 @@ export const posPopupRoute: Routes = [
         component: PosPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_POS'],
-            pageTitle: 'niopdcgatewayApp.pos.home.title'
+            pageTitle: 'samtagatewayApp.pos.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -56,7 +56,7 @@ export const posPopupRoute: Routes = [
         component: PosPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_POS'],
-            pageTitle: 'niopdcgatewayApp.pos.home.title'
+            pageTitle: 'samtagatewayApp.pos.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -66,7 +66,7 @@ export const posPopupRoute: Routes = [
         component: PosDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_POS'],
-            pageTitle: 'niopdcgatewayApp.pos.home.title'
+            pageTitle: 'samtagatewayApp.pos.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -76,7 +76,7 @@ export const posPopupRoute: Routes = [
         component: PosPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_POS'],
-            pageTitle: 'niopdcgatewayApp.pos.home.title'
+            pageTitle: 'samtagatewayApp.pos.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

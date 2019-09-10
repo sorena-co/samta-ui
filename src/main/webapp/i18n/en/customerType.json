@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "customerType" : {
             "home": {
                 "title": "Customer Types",

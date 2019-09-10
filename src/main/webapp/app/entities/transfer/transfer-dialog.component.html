@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="transfer.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.transfer.home.createLabel">
+            jhiTranslate="samtagatewayApp.transfer.home.createLabel">
             Create</h4>
         <h4 *ngIf="transfer.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.transfer.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.transfer.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.transfer.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.transfer.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.registerDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.registerDate"
                            for="field_registerDate">Register Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00"
@@ -44,7 +44,7 @@
             </div>
             <div class="col-md-5">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.sixtyAmount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.sixtyAmount"
                            for="field_sixtyAmount">Sixty Degree</label>
                     <input [disabled]="true" type="number" class="form-control" name="sixtyAmount"
                            [numeric]="{min:0}"
@@ -78,7 +78,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.natureAmount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.natureAmount"
                            for="field_natureAmount">Nature Amount</label>
                     <input type="number" class="form-control" name="natureAmount" id="field_natureAmount"
                            [disabled]="isView"
@@ -101,7 +101,7 @@
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.specialWeight"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.specialWeight"
                            for="field_specialWeight">Special Weight</label>
                     <input [disabled]="isView" type="number" class="form-control" name="specialWeight"
                            id="field_specialWeight"
@@ -123,7 +123,7 @@
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.environmentTemperature"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.environmentTemperature"
                            for="field_environmentTemperature">Environment Temperature</label>
                     <input [disabled]="isView" type="number" class="form-control" name="environmentTemperature"
                            id="field_environmentTemperature"
@@ -145,7 +145,7 @@
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.productTemperature"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.productTemperature"
                            for="field_productTemperature">Product Temperature</label>
                     <input [disabled]="isView" type="number" class="form-control" name="productTemperature"
                            id="field_productTemperature"
@@ -169,7 +169,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.transferType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.transferType"
                            for="field_transferType">Transfer Type</label>
                     <select [disabled]="isView" class="form-control" id="field_transferType" name="transferType"
                             [(ngModel)]="transfer.transferTypeId"
@@ -192,7 +192,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.fromOilTank"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.fromOilTank"
                            for="field_fromOilTank">From Oil Tank</label>
                     <input [disabled]="true" class="form-control" id="field_fromOilTank" name="fromOilTank"
                            [(ngModel)]="fromTitle"/>
@@ -216,7 +216,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.toOilTank"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.toOilTank"
                            for="field_toOilTank">To Oil Tank</label>
                     <select [disabled]="isView||transfer.transferTypeId===null||disableTarget" class="form-control"
                             id="field_toOilTank"
@@ -234,7 +234,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.transferByMetre"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.transferByMetre"
                            for="field_transferByMetre">Transfer By Metre</label>
                     <input [disabled]="isView||activeMetre===null||(transfer.toDayDepotId===null&&!disableTarget)"
                            type="checkbox"
@@ -257,7 +257,7 @@
         <div class="row">
             <div *ngIf="transfer.transferByMetre" class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.metre" for="field_metre">Metre</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.metre" for="field_metre">Metre</label>
                     <select [disabled]="isView" class="form-control" id="field_metre" name="metre"
                             [(ngModel)]="transfer.metreId"
                             (ngModelChange)="changeMetre($event)"
@@ -271,7 +271,7 @@
             </div>
             <div *ngIf="transfer.transferByMetre" class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.startMeter"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.startMeter"
                            for="field_startMeter">Start Meter</label>
                     <input type="number" class="form-control" name="startMeter" id="field_startMeter"
                            [disabled]="true"
@@ -292,7 +292,7 @@
             </div>
             <div *ngIf="transfer.transferByMetre" class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.endMeter"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.endMeter"
                            for="field_endMeter">End Meter</label>
                     <input type="number" class="form-control" name="endMeter" id="field_endMeter"
                            [disabled]="true"
@@ -313,7 +313,7 @@
             </div>
             <div *ngIf="transfer.transferByMetre" class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.amount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.amount"
                            for="field_amount">Amount</label>
                     <input [disabled]="true" type="number" class="form-control" name="amount" id="field_amount"
                            [numeric]="{min:0,max:(metre)?maxEndMetreNumber:0}"
@@ -336,7 +336,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.description"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.description"
                            for="field_description">Description</label>
                     <textarea [disabled]="isView" type="text" class="form-control" name="description"
                               id="field_description"

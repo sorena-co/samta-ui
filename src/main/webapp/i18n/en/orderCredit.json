@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "orderCredit" : {
             "home": {
                 "title": "Order Credits",

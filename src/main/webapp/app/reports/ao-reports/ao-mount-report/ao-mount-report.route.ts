@@ -10,7 +10,7 @@ export const AoMountReportRoute: Routes = [
         component: AoMountReportComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_AO_MOUNT_REPORT'],
-            pageTitle: 'niopdcgatewayApp.AoMountReport.home.title'
+            pageTitle: 'samtagatewayApp.AoMountReport.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

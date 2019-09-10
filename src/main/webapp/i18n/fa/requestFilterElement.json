@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "requestFilterElement" : {
             "home": {
                 "title": "درخواست المنت فیلترها",

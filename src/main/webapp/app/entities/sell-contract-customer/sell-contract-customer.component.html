@@ -1,9 +1,9 @@
 <div>
     <h2>
-        <span jhiTranslate="niopdcgatewayApp.sellContractCustomer.home.title">Sell Contract Customers</span>
+        <span jhiTranslate="samtagatewayApp.sellContractCustomer.home.title">Sell Contract Customers</span>
         <button class="btn btn-primary float-right jh-create-entity create-sell-contract-customer" [routerLink]="['/', { outlets: { popup: ['sell-contract-customer-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="niopdcgatewayApp.sellContractCustomer.home.createLabel">
+            <span  jhiTranslate="samtagatewayApp.sellContractCustomer.home.createLabel">
             Create new Sell Contract Customer
             </span>
         </button>
@@ -17,12 +17,12 @@
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="hasTransport"><span jhiTranslate="niopdcgatewayApp.sellContractCustomer.hasTransport">Has Transport</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="startDate"><span jhiTranslate="niopdcgatewayApp.sellContractCustomer.startDate">Start Date</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="active"><span jhiTranslate="niopdcgatewayApp.sellContractCustomer.active">Active</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="sellContractId"><span jhiTranslate="niopdcgatewayApp.sellContractCustomer.sellContract">Sell Contract</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="customerId"><span jhiTranslate="niopdcgatewayApp.sellContractCustomer.customer">Customer</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="locationName"><span jhiTranslate="niopdcgatewayApp.sellContractCustomer.location">Location</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="hasTransport"><span jhiTranslate="samtagatewayApp.sellContractCustomer.hasTransport">Has Transport</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="startDate"><span jhiTranslate="samtagatewayApp.sellContractCustomer.startDate">Start Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="active"><span jhiTranslate="samtagatewayApp.sellContractCustomer.active">Active</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="sellContractId"><span jhiTranslate="samtagatewayApp.sellContractCustomer.sellContract">Sell Contract</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="customerId"><span jhiTranslate="samtagatewayApp.sellContractCustomer.customer">Customer</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="locationName"><span jhiTranslate="samtagatewayApp.sellContractCustomer.location">Location</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>

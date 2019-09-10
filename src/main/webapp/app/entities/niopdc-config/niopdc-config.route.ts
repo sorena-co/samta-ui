@@ -33,7 +33,7 @@ export const niopdcConfigRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_NIOPDC_CONFIG'],
-            pageTitle: 'niopdcgatewayApp.niopdcConfig.home.title'
+            pageTitle: 'samtagatewayApp.niopdcConfig.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const niopdcConfigPopupRoute: Routes = [
     component: NiopdcConfigPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_NIOPDC_CONFIG'],
-        pageTitle: 'niopdcgatewayApp.niopdcConfig.home.title'
+        pageTitle: 'samtagatewayApp.niopdcConfig.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const niopdcConfigPopupRoute: Routes = [
     component: NiopdcConfigPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_NIOPDC_CONFIG'],
-        pageTitle: 'niopdcgatewayApp.niopdcConfig.home.title'
+        pageTitle: 'samtagatewayApp.niopdcConfig.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const niopdcConfigPopupRoute: Routes = [
     component: NiopdcConfigDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_NIOPDC_CONFIG'],
-        pageTitle: 'niopdcgatewayApp.niopdcConfig.home.title'
+        pageTitle: 'samtagatewayApp.niopdcConfig.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const niopdcConfigPopupRoute: Routes = [
       component: NiopdcConfigPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_NIOPDC_CONFIG'],
-          pageTitle: 'niopdcgatewayApp.niopdcConfig.home.title'
+          pageTitle: 'samtagatewayApp.niopdcConfig.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

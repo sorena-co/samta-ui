@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="carType.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.carType.home.createLabel">
+            jhiTranslate="samtagatewayApp.carType.home.createLabel">
             Create</h4>
         <h4 *ngIf="carType.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.carType.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.carType.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.carType.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.carType.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carType.title" for="field_title">Title</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.carType.title" for="field_title">Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="title" id="field_title"
                            [(ngModel)]="carType.title" required/>
                     <div [hidden]="!(editForm.controls.title?.dirty && editForm.controls.title?.invalid)">

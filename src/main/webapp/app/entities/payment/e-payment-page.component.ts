@@ -66,7 +66,7 @@ export class EPaymentPageComponent implements OnInit {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.payment.electronic.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.payment.electronic.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

@@ -36,7 +36,7 @@ export const rateGroupRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_RATE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.rateGroup.home.title'
+            pageTitle: 'samtagatewayApp.rateGroup.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const rateGroupPopupRoute: Routes = [
         component: RateGroupPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_RATE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.rateGroup.home.title'
+            pageTitle: 'samtagatewayApp.rateGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const rateGroupPopupRoute: Routes = [
         component: RateGroupPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_RATE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.rateGroup.home.title'
+            pageTitle: 'samtagatewayApp.rateGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const rateGroupPopupRoute: Routes = [
         component: RateGroupDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_RATE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.rateGroup.home.title'
+            pageTitle: 'samtagatewayApp.rateGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const rateGroupPopupRoute: Routes = [
         component: RateGroupPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_RATE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.rateGroup.home.title'
+            pageTitle: 'samtagatewayApp.rateGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

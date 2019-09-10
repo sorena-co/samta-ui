@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "niopdcConfig" : {
             "home": {
                 "title": "Niopdc Configs",

@@ -10,7 +10,7 @@ export const twentyFourAoRoute: Routes = [
         component: TwentyFourAoComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_TWENTY_FOUR_AO'],
-            pageTitle: 'niopdcgatewayApp.twentyFourAo.home.title'
+            pageTitle: 'samtagatewayApp.twentyFourAo.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

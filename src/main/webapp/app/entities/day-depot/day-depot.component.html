@@ -11,37 +11,37 @@
             <p-row>
                 <p-column field="oilTankTitle" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.dayDepot.oilTank">Oil Tank</span>
+                        <span jhiTranslate="samtagatewayApp.dayDepot.oilTank">Oil Tank</span>
                     </ng-template>
                 </p-column>
                 <p-column field="startMeasurementOilTankAmount" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.dayDepot.startMeasurementOilTankAmountList">System Amount</span>
+                        <span jhiTranslate="samtagatewayApp.dayDepot.startMeasurementOilTankAmountList">System Amount</span>
                     </ng-template>
                 </p-column>
                 <p-column field="endMeasurementOilTankAmount" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.dayDepot.endMeasurementOilTankAmountList">System Amount</span>
+                        <span jhiTranslate="samtagatewayApp.dayDepot.endMeasurementOilTankAmountList">System Amount</span>
                     </ng-template>
                 </p-column>
                 <p-column field="natureSystemAmount" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.dayDepot.natureSystemAmount">System Amount</span>
+                        <span jhiTranslate="samtagatewayApp.dayDepot.natureSystemAmount">System Amount</span>
                     </ng-template>
                 </p-column>
                 <p-column field="natureAddition" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.dayDepot.natureAddition">System Amount</span>
+                        <span jhiTranslate="samtagatewayApp.dayDepot.natureAddition">System Amount</span>
                     </ng-template>
                 </p-column>
                 <p-column field="natureDeductible" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.dayDepot.natureDeductible">System Amount</span>
+                        <span jhiTranslate="samtagatewayApp.dayDepot.natureDeductible">System Amount</span>
                     </ng-template>
                 </p-column>
                 <p-column field="oilTankOilTankType" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.dayDepot.oilTankOilTankType">System Amount</span>
+                        <span jhiTranslate="samtagatewayApp.dayDepot.oilTankOilTankType">System Amount</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -106,19 +106,19 @@
                                 [(ngModel)]="dayDepot.oilTankOilTankType"
                                 id="field_oilTankOilTankType">
                             <option></option>
-                            <option value="MAIN">{{'niopdcgatewayApp.oilTankType.MAIN' | translate}}</option>
-                            <option value="CONTAMINATED">{{'niopdcgatewayApp.oilTankType.CONTAMINATED' | translate}}
+                            <option value="MAIN">{{'samtagatewayApp.oilTankType.MAIN' | translate}}</option>
+                            <option value="CONTAMINATED">{{'samtagatewayApp.oilTankType.CONTAMINATED' | translate}}
                             </option>
-                            <option value="SERVICE_TANK">{{'niopdcgatewayApp.oilTankType.SERVICE_TANK' | translate}}
+                            <option value="SERVICE_TANK">{{'samtagatewayApp.oilTankType.SERVICE_TANK' | translate}}
                             </option>
-                            <option value="UNIT">{{'niopdcgatewayApp.oilTankType.UNIT' | translate}}</option>
-                            <option value="PLATFORM">{{'niopdcgatewayApp.oilTankType.PLATFORM' | translate}}</option>
-                            <option value="WATER_METHANOL">{{'niopdcgatewayApp.oilTankType.WATER_METHANOL' |
+                            <option value="UNIT">{{'samtagatewayApp.oilTankType.UNIT' | translate}}</option>
+                            <option value="PLATFORM">{{'samtagatewayApp.oilTankType.PLATFORM' | translate}}</option>
+                            <option value="WATER_METHANOL">{{'samtagatewayApp.oilTankType.WATER_METHANOL' |
                                 translate}}
                             </option>
-                            <option value="EARTH">{{'niopdcgatewayApp.oilTankType.EARTH' | translate}}</option>
-                            <option value="BASE_PRODUCT">{{'niopdcgatewayApp.oilTankType.BASE_PRODUCT' | translate}}
-                            <option value="RECYCLE">{{'niopdcgatewayApp.oilTankType.RECYCLE' | translate}}
+                            <option value="EARTH">{{'samtagatewayApp.oilTankType.EARTH' | translate}}</option>
+                            <option value="BASE_PRODUCT">{{'samtagatewayApp.oilTankType.BASE_PRODUCT' | translate}}
+                            <option value="RECYCLE">{{'samtagatewayApp.oilTankType.RECYCLE' | translate}}
                             </option>
                         </select>
                     </ng-template>
@@ -135,15 +135,15 @@
                 </p-column>
             </p-row>
         </p-headerColumnGroup>
-        <p-column field="oilTankTitle" [header]="'niopdcgatewayApp.dayDepot.oilTank' | translate"></p-column>
-        <p-column field="startMeasurementOilTankAmount" [header]="'niopdcgatewayApp.dayDepot.startMeasurementOilTankAmount' | translate"></p-column>
-        <p-column field="endMeasurementOilTankAmount" [header]="'niopdcgatewayApp.dayDepot.endMeasurementOilTankAmount' | translate"></p-column>
-        <p-column field="natureSystemAmount" [header]="'niopdcgatewayApp.dayDepot.natureSystemAmount' | translate"></p-column>
-        <p-column field="natureAddition" [header]="'niopdcgatewayApp.dayDepot.natureSystemAmount' | translate"></p-column>
-        <p-column field="natureDeductible" [header]="'niopdcgatewayApp.dayDepot.natureSystemAmount' | translate"></p-column>
-        <p-column field="oilTankOilTankType" [header]="'niopdcgatewayApp.dayDepot.oilTankOilTankType' | translate">
+        <p-column field="oilTankTitle" [header]="'samtagatewayApp.dayDepot.oilTank' | translate"></p-column>
+        <p-column field="startMeasurementOilTankAmount" [header]="'samtagatewayApp.dayDepot.startMeasurementOilTankAmount' | translate"></p-column>
+        <p-column field="endMeasurementOilTankAmount" [header]="'samtagatewayApp.dayDepot.endMeasurementOilTankAmount' | translate"></p-column>
+        <p-column field="natureSystemAmount" [header]="'samtagatewayApp.dayDepot.natureSystemAmount' | translate"></p-column>
+        <p-column field="natureAddition" [header]="'samtagatewayApp.dayDepot.natureSystemAmount' | translate"></p-column>
+        <p-column field="natureDeductible" [header]="'samtagatewayApp.dayDepot.natureSystemAmount' | translate"></p-column>
+        <p-column field="oilTankOilTankType" [header]="'samtagatewayApp.dayDepot.oilTankOilTankType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.oilTankType.' + item.oilTankOilTankType}}">{{item.oilTankOilTankType}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.oilTankType.' + item.oilTankOilTankType}}">{{item.oilTankOilTankType}}</span>
             </ng-template>
         </p-column>
         <p-column class="component">
@@ -185,7 +185,7 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_DAY_DEPOT_SERVICE_OIL_TANK']"
                                     [routerLink]="['/main-day-depot/'+mainDayDepotId+'/day-depot', item.id,'day-depot-service-oil-tank']">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.serviceOilTank.home.title">Service Oil Tank</span>
+                                <span jhiTranslate="samtagatewayApp.serviceOilTank.home.title">Service Oil Tank</span>
                             </button>
                         </ng-container>
                         <ng-container *ngIf="item.oilTankOilTankType==='UNIT'">
@@ -193,7 +193,7 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_TRANSFER_PLATFORM_TO_UNIT']"
                                     [routerLink]="['/main-day-operation/'+mainDayOperationId+'/day-depot', item.id,'transfer-platform-to-unit']">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.home.title">Transfer Platform To Unit</span>
+                                <span jhiTranslate="samtagatewayApp.transferPlatformToUnit.home.title">Transfer Platform To Unit</span>
                             </button>
                         </ng-container>
                         <ng-container *ngIf="item.oilTankOilTankType==='PLATFORM'">
@@ -201,7 +201,7 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_TRANSFER_PLATFORM_TO_UNIT']"
                                     [routerLink]="['/main-day-depot/'+mainDayDepotId+'/day-depot', item.id,'transfer-platform-to-unit']">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.home.title">Transfer Platform To Unit</span>
+                                <span jhiTranslate="samtagatewayApp.transferPlatformToUnit.home.title">Transfer Platform To Unit</span>
                             </button>
                         </ng-container>
                         <ng-container
@@ -210,7 +210,7 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_RECEIVED_PRODUCT']"
                                     [routerLink]="['/main-day-depot/'+mainDayDepotId+'/day-depot', item.id,'received-product']">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.receivedProduct.home.title">Received Product</span>
+                                <span jhiTranslate="samtagatewayApp.receivedProduct.home.title">Received Product</span>
                             </button>
                         </ng-container>
                         <ng-container *ngIf="item.oilTankOilTankType==='CONTAMINATED'">
@@ -218,7 +218,7 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_SEND_PRODUCT']"
                                     [routerLink]="['/main-day-depot/'+mainDayDepotId+'/day-depot', item.id,'send-product']">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.sendProduct.home.title">Send Product</span>
+                                <span jhiTranslate="samtagatewayApp.sendProduct.home.title">Send Product</span>
                             </button>
                         </ng-container>
                         <ng-container *ngIf="mainDayDepot">
@@ -226,7 +226,7 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_TRANSFER']"
                                     [routerLink]="['/main-day-depot/'+mainDayDepotId+'/day-depot', item.id, 'transfer','to']">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.transfer.home.transferToTitle">Transfer To</span>
+                                <span jhiTranslate="samtagatewayApp.transfer.home.transferToTitle">Transfer To</span>
                             </button>
                         </ng-container>
                         <ng-container *ngIf="mainDayOperation">
@@ -234,7 +234,7 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_TRANSFER']"
                                     [routerLink]="['/main-day-operation/'+mainDayOperationId+'/day-depot', item.id, 'transfer','to']">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.transfer.home.transferToTitle">Transfer To</span>
+                                <span jhiTranslate="samtagatewayApp.transfer.home.transferToTitle">Transfer To</span>
                             </button>
                         </ng-container>
                         <ng-container *ngIf="mainDayDepot">
@@ -243,7 +243,7 @@
                                     [routerLink]="['/main-day-depot/'+mainDayDepotId+'/day-depot', item.id, 'transfer','from']">
                                 <span class="fa fa-external-link"></span>
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.transfer.home.transferFromTitle">Transfer From</span>
+                                    jhiTranslate="samtagatewayApp.transfer.home.transferFromTitle">Transfer From</span>
                             </button>
                         </ng-container>
                         <ng-container *ngIf="mainDayOperation">
@@ -252,7 +252,7 @@
                                     [routerLink]="['/main-day-operation/'+mainDayOperationId+'/day-depot', item.id, 'transfer','from']">
                                 <span class="fa fa-external-link"></span>
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.transfer.home.transferFromTitle">Transfer From</span>
+                                    jhiTranslate="samtagatewayApp.transfer.home.transferFromTitle">Transfer From</span>
                             </button>
                         </ng-container>
                         <ng-container *ngIf="item.oilTankOilTankType==='EARTH'">
@@ -260,7 +260,7 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_SELL_GROUND_FUEL']"
                                     [routerLink]="['/main-day-depot/'+mainDayDepotId+'/day-depot', item.id,'sell-ground-fuel']">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.sellGroundFuel.home.title">Sell Ground Fuel</span>
+                                <span jhiTranslate="samtagatewayApp.sellGroundFuel.home.title">Sell Ground Fuel</span>
                             </button>
                         </ng-container>
                         <ng-container *ngIf="item.oilTankOilTankType!=='PLATFORM'">
@@ -269,7 +269,7 @@
                                     [routerLink]="(mainDayDepot)?['/main-day-depot/'+mainDayDepotId+'/day-depot', item.id,'change-container']
                                         :['/main-day-operation/'+mainDayOperationId+'/day-depot', item.id,'change-container']">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.changeContainer.home.title">تعویض ظرف</span>
+                                <span jhiTranslate="samtagatewayApp.changeContainer.home.title">تعویض ظرف</span>
                             </button>
                         </ng-container>
                         <ng-container *ngIf="(item.oilTankOilTankType!=='PLATFORM'&& item.oilTankOilTankType!=='SERVICE_TANK')&& item.endMeasurementOilTankAmount==null">
@@ -287,7 +287,7 @@
                                 [routerLink]="(mainDayDepot)?['/main-day-depot/'+mainDayDepotId+'/day-depot', item.id,'log-book']
                                         :['/main-day-operation/'+mainDayOperationId+'/day-depot', item.id,'log-book']">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.logBook.home.title">تعویض ظرف</span>
+                            <span jhiTranslate="samtagatewayApp.logBook.home.title">تعویض ظرف</span>
                         </button>
                     </div>
                 </div>

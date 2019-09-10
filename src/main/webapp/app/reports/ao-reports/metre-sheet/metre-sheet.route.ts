@@ -10,7 +10,7 @@ export const metreSheetRoute: Routes = [
         component: MetreSheetComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_REPORT_METRE_SHEET'],
-            pageTitle: 'niopdcgatewayApp.metreSheet.home.title'
+            pageTitle: 'samtagatewayApp.metreSheet.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

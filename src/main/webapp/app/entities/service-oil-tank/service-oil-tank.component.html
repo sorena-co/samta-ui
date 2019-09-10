@@ -21,28 +21,28 @@
             <p-row>
                 <p-column field="title" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.serviceOilTank.title">Title</span>
+                        <span jhiTranslate="samtagatewayApp.serviceOilTank.title">Title</span>
                     </ng-template>
                 </p-column>
                 <p-column field="code" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.serviceOilTank.code">Code</span>
+                        <span jhiTranslate="samtagatewayApp.serviceOilTank.code">Code</span>
                     </ng-template>
                 </p-column>
                 <p-column field="virtualCapacity" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.serviceOilTank.virtualCapacity">Virtual Capacity</span>
+                        <span jhiTranslate="samtagatewayApp.serviceOilTank.virtualCapacity">Virtual Capacity</span>
                     </ng-template>
                 </p-column>
                 <p-column field="capacity" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.serviceOilTank.capacity">Capacity</span>
+                        <span jhiTranslate="samtagatewayApp.serviceOilTank.capacity">Capacity</span>
                     </ng-template>
                 </p-column>
 
                 <p-column field="oilTankStatus" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.serviceOilTank.oilTankStatus">Active</span>
+                        <span jhiTranslate="samtagatewayApp.serviceOilTank.oilTankStatus">Active</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -87,9 +87,9 @@
                     <ng-template pTemplate="header">
                         <select class="form-control" name="oilTankStatus" (change)="search()"
                                 [(ngModel)]="serviceOilTank.oilTankStatus" id="field_oilTankStatus" >
-                            <option value="UNDER_REPAIR">{{'niopdcgatewayApp.OilTankStatus.UNDER_REPAIR' | translate}}</option>
-                            <option value="STAGNANT">{{'niopdcgatewayApp.OilTankStatus.STAGNANT' | translate}}</option>
-                            <option value="ACTIVE">{{'niopdcgatewayApp.OilTankStatus.ACTIVE' | translate}}</option>
+                            <option value="UNDER_REPAIR">{{'samtagatewayApp.OilTankStatus.UNDER_REPAIR' | translate}}</option>
+                            <option value="STAGNANT">{{'samtagatewayApp.OilTankStatus.STAGNANT' | translate}}</option>
+                            <option value="ACTIVE">{{'samtagatewayApp.OilTankStatus.ACTIVE' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -106,14 +106,14 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="title" [header]="'niopdcgatewayApp.serviceOilTank.title' | translate"></p-column>
-        <p-column field="code" [header]="'niopdcgatewayApp.serviceOilTank.code' | translate"></p-column>
+        <p-column field="title" [header]="'samtagatewayApp.serviceOilTank.title' | translate"></p-column>
+        <p-column field="code" [header]="'samtagatewayApp.serviceOilTank.code' | translate"></p-column>
         <p-column field="virtualCapacity"
-                  [header]="'niopdcgatewayApp.serviceOilTank.virtualCapacity' | translate"></p-column>
-        <p-column field="capacity" [header]="'niopdcgatewayApp.serviceOilTank.capacity' | translate"></p-column>
-        <p-column field="oilTankStatus" [header]="'niopdcgatewayApp.oilTank.oilTankStatus' | translate">
+                  [header]="'samtagatewayApp.serviceOilTank.virtualCapacity' | translate"></p-column>
+        <p-column field="capacity" [header]="'samtagatewayApp.serviceOilTank.capacity' | translate"></p-column>
+        <p-column field="oilTankStatus" [header]="'samtagatewayApp.oilTank.oilTankStatus' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.OilTankStatus.' + item.oilTankStatus}}">{{item.oilTankStatus}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.OilTankStatus.' + item.oilTankStatus}}">{{item.oilTankStatus}}</span>
             </ng-template>
         </p-column>
         <p-column class="component">
@@ -147,7 +147,7 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN','LIST_LITERATURE_VOLUME_OIL_TANK']"
                                     [routerLink]="['/oil-tank', item.oilTankId,'service-oil-tank',item.id, 'literature-volume-oil-tank']">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.literatureVolumeOilTank.home.title">Literature Volume Oil Tank</span>
+                                <span jhiTranslate="samtagatewayApp.literatureVolumeOilTank.home.title">Literature Volume Oil Tank</span>
                             </button>
                         </div>
                     </div>

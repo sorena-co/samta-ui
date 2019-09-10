@@ -151,10 +151,10 @@ export class CustomerTypeProductConsumptionComponent implements OnInit, OnDestro
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.customerTypeProductConsumption.home.customerTypeTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.customerTypeProductConsumption.home.customerTypeTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + ` (${this.customerType.title})`, routerLink: ['/customer-type']});
         });
-        this.translateService.get('niopdcgatewayApp.customerTypeProductConsumption.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.customerTypeProductConsumption.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

@@ -71,7 +71,7 @@ export class BillWithoutContainerComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.billWithoutContainer.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.billWithoutContainer.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

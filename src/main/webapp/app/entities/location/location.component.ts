@@ -125,13 +125,13 @@ export class LocationComponent implements OnInit, OnDestroy {
         });
         if (this.location0) {
             this.parentCode += this.location0.code;
-            this.translateService.get('niopdcgatewayApp.location.home.title0').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.location.home.title0').subscribe((title) => {
                 this.breadcrumbItems.push({label: title + ` (${this.location0.name})`, routerLink: ['/location']});
             });
 
             if (this.location1) {
                 this.parentCode += this.location1.code;
-                this.translateService.get('niopdcgatewayApp.location.home.title1').subscribe((title) => {
+                this.translateService.get('samtagatewayApp.location.home.title1').subscribe((title) => {
                     this.breadcrumbItems.push({
                         label: title + ` (${this.location1.name})`,
                         routerLink: ['/location/' + this.location0.id + '/sub-locations']
@@ -139,29 +139,29 @@ export class LocationComponent implements OnInit, OnDestroy {
                 });
                 if (this.location2) {
                     this.parentCode += this.location2.code;
-                    this.translateService.get('niopdcgatewayApp.location.home.title2').subscribe((title) => {
+                    this.translateService.get('samtagatewayApp.location.home.title2').subscribe((title) => {
                         this.breadcrumbItems.push({
                             label: title + ` (${this.location2.name})`,
                             routerLink: ['/location/' + this.location1.id + '/sub-locations']
                         });
                     });
-                    this.translateService.get('niopdcgatewayApp.location.home.title3').subscribe((title) => {
+                    this.translateService.get('samtagatewayApp.location.home.title3').subscribe((title) => {
                         this.breadcrumbItems.push({label: title});
                     });
                 } else {
-                    this.translateService.get('niopdcgatewayApp.location.home.title2').subscribe((title) => {
+                    this.translateService.get('samtagatewayApp.location.home.title2').subscribe((title) => {
                         this.breadcrumbItems.push({label: title});
                     });
                 }
             } else {
-                this.translateService.get('niopdcgatewayApp.location.home.title1').subscribe((title) => {
+                this.translateService.get('samtagatewayApp.location.home.title1').subscribe((title) => {
                     this.breadcrumbItems.push({label: title});
                 });
             }
         } else {
-            this.translateService.get('niopdcgatewayApp.location.home.title0').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.location.home.title0').subscribe((title) => {
                 this.breadcrumbItems.push({label: title});
-                this.activatedRoute.data['pageTitle'] = 'niopdcgatewayApp.location.home.title0';
+                this.activatedRoute.data['pageTitle'] = 'samtagatewayApp.location.home.title0';
             });
         }
     }

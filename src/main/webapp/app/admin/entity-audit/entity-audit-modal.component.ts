@@ -96,7 +96,7 @@ export class EntityAuditModalComponent {
         const et = this.convertEntityType((entityType) ? entityType : child);
         for (let p in obj) {
             if (obj.hasOwnProperty(p)) {
-                this.translateService.get(`niopdcgatewayApp.${et}.${p}`).subscribe((title) => {
+                this.translateService.get(`samtagatewayApp.${et}.${p}`).subscribe((title) => {
                     if (!title.includes('translation-not-found')) {
                         obj[title] = obj[p];
                         console.log(typeof obj[p]);

@@ -1,18 +1,18 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: niopdcgateway
+  name: samtagateway
   namespace: default
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: niopdcgateway
+        app: samtagateway
     spec:
       containers:
-      - name: niopdcgateway-app
-        image: 172.17.66.13/niopdcgateway
+      - name: samtagateway-app
+        image: 172.17.66.13/samtagateway
         imagePullPolicy: IfNotPresent
         env:
         - name: SPRING_PROFILES_ACTIVE

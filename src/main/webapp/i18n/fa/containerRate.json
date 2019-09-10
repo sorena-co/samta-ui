@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "containerRate" : {
             "home": {
                 "titleContainer": "نرخ ظرف فرآورده",

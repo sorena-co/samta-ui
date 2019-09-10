@@ -205,31 +205,31 @@ export class CostElementComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.costElement.home.costGroupTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.costElement.home.costGroupTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + ` (${this.costGroup.title})`, routerLink: ['/cost-group']});
         });
         if (this.parentCost) {
-            this.translateService.get('niopdcgatewayApp.costElement.home.costTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.costElement.home.costTitle').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: title,
                     routerLink: [`/cost-group/${this.costGroupId}/cost/${this.parentCostId}/cost`]
                 });
             });
-            this.translateService.get('niopdcgatewayApp.costElement.home.costTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.costElement.home.costTitle').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: title,
                     routerLink: [`/cost-group/${this.costGroupId}/cost`]
                 });
             });
         } else if (this.costId) {
-            this.translateService.get('niopdcgatewayApp.costElement.home.costTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.costElement.home.costTitle').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: title,
                     routerLink: [`/cost-group/${this.costGroupId}/cost`]
                 });
             });
         }
-        this.translateService.get('niopdcgatewayApp.costElement.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.costElement.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

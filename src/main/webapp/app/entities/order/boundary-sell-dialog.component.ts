@@ -665,7 +665,7 @@ export class BoundarySellDialogComponent implements OnInit {
                 tankTitle = ` (${carTank.radius} × ${carTank.height})`;
             }
 
-            this.translateService.get('niopdcgatewayApp.TankType.' + carTank.tankType).subscribe((title) => {
+            this.translateService.get('samtagatewayApp.TankType.' + carTank.tankType).subscribe((title) => {
                 carTank.title = title + tankTitle;
             });
         }

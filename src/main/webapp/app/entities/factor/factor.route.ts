@@ -36,7 +36,7 @@ export const factorRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_FACTOR'],
-            pageTitle: 'niopdcgatewayApp.factor.home.title'
+            pageTitle: 'samtagatewayApp.factor.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -47,7 +47,7 @@ export const factorRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_FACTOR_REPORT'],
-            pageTitle: 'niopdcgatewayApp.factor.home.title'
+            pageTitle: 'samtagatewayApp.factor.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -58,7 +58,7 @@ export const factorRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_FACTOR_REPORT_AGGREGATE'],
-            pageTitle: 'niopdcgatewayApp.factor.home.title'
+            pageTitle: 'samtagatewayApp.factor.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -70,7 +70,7 @@ export const factorPopupRoute: Routes = [
         component: FactorPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_FACTOR'],
-            pageTitle: 'niopdcgatewayApp.factor.home.title'
+            pageTitle: 'samtagatewayApp.factor.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -80,7 +80,7 @@ export const factorPopupRoute: Routes = [
         component: FactorPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_FACTOR'],
-            pageTitle: 'niopdcgatewayApp.factor.home.title'
+            pageTitle: 'samtagatewayApp.factor.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -90,7 +90,7 @@ export const factorPopupRoute: Routes = [
         component: FactorDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_FACTOR'],
-            pageTitle: 'niopdcgatewayApp.factor.home.title'
+            pageTitle: 'samtagatewayApp.factor.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -100,7 +100,7 @@ export const factorPopupRoute: Routes = [
         component: FactorPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_FACTOR'],
-            pageTitle: 'niopdcgatewayApp.factor.home.title'
+            pageTitle: 'samtagatewayApp.factor.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

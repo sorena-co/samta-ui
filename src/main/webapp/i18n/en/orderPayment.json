@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "orderPayment" : {
             "home": {
                 "title": "Order Payments",

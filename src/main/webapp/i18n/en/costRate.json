@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "costRate" : {
             "home": {
                 "title": "Cost Rates",

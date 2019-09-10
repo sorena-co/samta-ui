@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "billItem" : {
             "home": {
                 "title": "Bill Items",

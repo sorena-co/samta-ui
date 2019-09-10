@@ -21,12 +21,12 @@
             <p-row>
                 <p-column field="confirm" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.responsePlunging.confirm">Confirm</span>
+                        <span jhiTranslate="samtagatewayApp.responsePlunging.confirm">Confirm</span>
                     </ng-template>
                 </p-column>
                 <p-column field="isSend" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.responsePlunging.isSend">Is Send</span>
+                        <span jhiTranslate="samtagatewayApp.responsePlunging.isSend">Is Send</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -37,10 +37,10 @@
                         <select class="form-control" name="confirm" (change)="search()"
                                 [(ngModel)]="responsePlunging.confirm">
                             <option></option>
-                            <option value="true" jhiTranslate="niopdcgatewayApp.responsePlunging.confirmTrue">
+                            <option value="true" jhiTranslate="samtagatewayApp.responsePlunging.confirmTrue">
                                 true
                             </option>
-                            <option value="false" jhiTranslate="niopdcgatewayApp.responsePlunging.confirmFalse">
+                            <option value="false" jhiTranslate="samtagatewayApp.responsePlunging.confirmFalse">
                                 false
                             </option>
                         </select>
@@ -51,10 +51,10 @@
                         <select class="form-control" name="isSend" (change)="search()"
                                 [(ngModel)]="responsePlunging.isSend">
                             <option></option>
-                            <option value="true" jhiTranslate="niopdcgatewayApp.responsePlunging.isSendTrue">
+                            <option value="true" jhiTranslate="samtagatewayApp.responsePlunging.isSendTrue">
                                 true
                             </option>
-                            <option value="false" jhiTranslate="niopdcgatewayApp.responsePlunging.isSendFalse">
+                            <option value="false" jhiTranslate="samtagatewayApp.responsePlunging.isSendFalse">
                                 false
                             </option>
                         </select>
@@ -73,11 +73,11 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="confirm" [header]="'niopdcgatewayApp.responsePlunging.confirm' | translate">
+        <p-column field="confirm" [header]="'samtagatewayApp.responsePlunging.confirm' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span class="fa" [ngClass]="{'fa-check':item.confirm,'fa-close':!item.confirm}"></span>
             </ng-template></p-column>
-        <p-column field="isSend" [header]="'niopdcgatewayApp.responsePlunging.isSend' | translate">
+        <p-column field="isSend" [header]="'samtagatewayApp.responsePlunging.isSend' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span class="fa" [ngClass]="{'fa-check':item.isSend,'fa-close':!item.isSend}"></span>
             </ng-template></p-column>

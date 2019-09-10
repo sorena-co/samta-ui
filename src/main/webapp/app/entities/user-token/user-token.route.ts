@@ -36,7 +36,7 @@ export const userTokenRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_USER_TOKEN'],
-            pageTitle: 'niopdcgatewayApp.userToken.home.title'
+            pageTitle: 'samtagatewayApp.userToken.home.title'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -48,7 +48,7 @@ export const userTokenRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_USER_TOKEN'],
-            pageTitle: 'niopdcgatewayApp.userToken.home.title'
+            pageTitle: 'samtagatewayApp.userToken.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -60,7 +60,7 @@ export const userTokenPopupRoute: Routes = [
         component: UserTokenPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_USER_TOKEN'],
-            pageTitle: 'niopdcgatewayApp.userToken.home.title'
+            pageTitle: 'samtagatewayApp.userToken.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -70,7 +70,7 @@ export const userTokenPopupRoute: Routes = [
         component: UserTokenPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_USER_TOKEN'],
-            pageTitle: 'niopdcgatewayApp.userToken.home.title'
+            pageTitle: 'samtagatewayApp.userToken.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -80,7 +80,7 @@ export const userTokenPopupRoute: Routes = [
         component: UserTokenDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_USER_TOKEN'],
-            pageTitle: 'niopdcgatewayApp.userToken.home.title'
+            pageTitle: 'samtagatewayApp.userToken.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -90,7 +90,7 @@ export const userTokenPopupRoute: Routes = [
         component: UserTokenPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_USER_TOKEN'],
-            pageTitle: 'niopdcgatewayApp.userToken.home.title'
+            pageTitle: 'samtagatewayApp.userToken.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

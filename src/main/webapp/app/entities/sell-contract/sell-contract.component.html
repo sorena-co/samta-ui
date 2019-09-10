@@ -24,22 +24,22 @@
             <p-row>
                 <p-column field="contractNo" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.sellContract.contractNo">Contract No</span>
+                        <span jhiTranslate="samtagatewayApp.sellContract.contractNo">Contract No</span>
                     </ng-template>
                 </p-column>
                 <p-column field="people" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.sellContract.people">Contract No</span>
+                        <span jhiTranslate="samtagatewayApp.sellContract.people">Contract No</span>
                     </ng-template>
                 </p-column>
                 <p-column field="customers" [sortable]="false">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.sellContract.customers">Contract No</span>
+                        <span jhiTranslate="samtagatewayApp.sellContract.customers">Contract No</span>
                     </ng-template>
                 </p-column>
                 <p-column field="active" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.sellContract.active">Active</span>
+                        <span jhiTranslate="samtagatewayApp.sellContract.active">Active</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -71,10 +71,10 @@
                         <select class="form-control" name="active" (change)="search()"
                                 [(ngModel)]="sellContract.active">
                             <option></option>
-                            <option value="true" jhiTranslate="niopdcgatewayApp.sellContract.activeTrue">
+                            <option value="true" jhiTranslate="samtagatewayApp.sellContract.activeTrue">
                                 true
                             </option>
-                            <option value="false" jhiTranslate="niopdcgatewayApp.sellContract.activeFalse">
+                            <option value="false" jhiTranslate="samtagatewayApp.sellContract.activeFalse">
                                 false
                             </option>
                         </select>
@@ -93,7 +93,7 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="contractNo" [header]="'niopdcgatewayApp.sellContract.contractNo' | translate"></p-column>
+        <p-column field="contractNo" [header]="'samtagatewayApp.sellContract.contractNo' | translate"></p-column>
         <p-column class="component">
             <ng-template let-item="rowData" pTemplate="body">
                 <span data-toggle="tooltip" title="{{item.people}}" class="glyphicon">{{item.people|truncate}}</span>
@@ -105,7 +105,7 @@
                       class="glyphicon">{{item.customers|truncate}}</span>
             </ng-template>
         </p-column>
-        <p-column field="active" [header]="'niopdcgatewayApp.sellContract.active' | translate">
+        <p-column field="active" [header]="'samtagatewayApp.sellContract.active' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span *ngIf="item.active" class="fa fa-check"></span>
                 <ng-container *ngIf="!item.active">
@@ -177,7 +177,7 @@
                                 [routerLink]="['/sell-contract', item.id, 'sell-contract-product']">
                             <span class="fa fa-external-link"></span>
                             <span
-                                jhiTranslate="niopdcgatewayApp.sellContractProduct.home.title">Sell Contract Product</span>
+                                jhiTranslate="samtagatewayApp.sellContractProduct.home.title">Sell Contract Product</span>
                         </button>
                     </div>
                 </div>

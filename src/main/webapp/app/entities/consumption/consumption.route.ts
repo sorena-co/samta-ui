@@ -34,7 +34,7 @@ export const consumptionRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CONSUMPTION'],
-            pageTitle: 'niopdcgatewayApp.consumption.home.title'
+            pageTitle: 'samtagatewayApp.consumption.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -46,7 +46,7 @@ export const consumptionPopupRoute: Routes = [
         component: ConsumptionPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_CONSUMPTION'],
-            pageTitle: 'niopdcgatewayApp.consumption.home.title'
+            pageTitle: 'samtagatewayApp.consumption.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -56,7 +56,7 @@ export const consumptionPopupRoute: Routes = [
         component: ConsumptionPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_CONSUMPTION'],
-            pageTitle: 'niopdcgatewayApp.consumption.home.title'
+            pageTitle: 'samtagatewayApp.consumption.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -66,7 +66,7 @@ export const consumptionPopupRoute: Routes = [
         component: ConsumptionDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_CONSUMPTION'],
-            pageTitle: 'niopdcgatewayApp.consumption.home.title'
+            pageTitle: 'samtagatewayApp.consumption.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -76,7 +76,7 @@ export const consumptionPopupRoute: Routes = [
         component: ConsumptionPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_CONSUMPTION'],
-            pageTitle: 'niopdcgatewayApp.bank.home.title'
+            pageTitle: 'samtagatewayApp.bank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

@@ -1,12 +1,12 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 *ngIf="transferType.id==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.transferType.home.createLabel">
+        <h4 *ngIf="transferType.id==null" class="modal-title" id="createLabel" jhiTranslate="samtagatewayApp.transferType.home.createLabel">
             Create</h4>
         <h4 *ngIf="transferType.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.transferType.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.transferType.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.transferType.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.transferType.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transferType.title"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transferType.title"
                            for="field_title">Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="title" id="field_title"
                            [(ngModel)]="transferType.title" required minlength="3" maxlength="42"/>
@@ -42,26 +42,26 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transferType.transferFrom"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transferType.transferFrom"
                            for="field_transferFrom">Transfer From</label>
                     <select [disabled]="isView" class="form-control" name="transferFrom"
                             [(ngModel)]="transferType.transferFrom" id="field_transferFrom" (ngModelChange)="transferFromHandle($event)" required>
-                        <option value="MAIN">{{'niopdcgatewayApp.oilTankType.MAIN' | translate}}</option>
-                        <option value="CONTAMINATED">{{'niopdcgatewayApp.oilTankType.CONTAMINATED' |
+                        <option value="MAIN">{{'samtagatewayApp.oilTankType.MAIN' | translate}}</option>
+                        <option value="CONTAMINATED">{{'samtagatewayApp.oilTankType.CONTAMINATED' |
                             translate}}
                         </option>
-                        <option value="SERVICE_TANK">{{'niopdcgatewayApp.oilTankType.SERVICE_TANK' |
+                        <option value="SERVICE_TANK">{{'samtagatewayApp.oilTankType.SERVICE_TANK' |
                             translate}}
                         </option>
-                        <option value="UNIT">{{'niopdcgatewayApp.oilTankType.UNIT' | translate}}</option>
-                        <option value="PLATFORM">{{'niopdcgatewayApp.oilTankType.PLATFORM' | translate}}
+                        <option value="UNIT">{{'samtagatewayApp.oilTankType.UNIT' | translate}}</option>
+                        <option value="PLATFORM">{{'samtagatewayApp.oilTankType.PLATFORM' | translate}}
                         </option>
-                        <option value="WATER_METHANOL">{{'niopdcgatewayApp.oilTankType.WATER_METHANOL' |
+                        <option value="WATER_METHANOL">{{'samtagatewayApp.oilTankType.WATER_METHANOL' |
                             translate}}
                         </option>
-                        <option value="EARTH">{{'niopdcgatewayApp.oilTankType.EARTH' | translate}}</option>
-                        <option value="BASE_PRODUCT">{{'niopdcgatewayApp.oilTankType.BASE_PRODUCT' | translate}}</option>
-                        <option value="RECYCLE">{{'niopdcgatewayApp.oilTankType.RECYCLE' | translate}}
+                        <option value="EARTH">{{'samtagatewayApp.oilTankType.EARTH' | translate}}</option>
+                        <option value="BASE_PRODUCT">{{'samtagatewayApp.oilTankType.BASE_PRODUCT' | translate}}</option>
+                        <option value="RECYCLE">{{'samtagatewayApp.oilTankType.RECYCLE' | translate}}
                         </option>
                     </select>
                     <div
@@ -76,26 +76,26 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transferType.transferTo"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transferType.transferTo"
                            for="field_transferTo">Transfer To</label>
                     <select [disabled]="isView || disableTransferTo" class="form-control" name="transferTo"
                             [(ngModel)]="transferType.transferTo" id="field_transferTo" (ngModelChange)="transferToHandle($event)" [required]="!transferType.transferToHimself" >
-                        <option value="MAIN">{{'niopdcgatewayApp.oilTankType.MAIN' | translate}}</option>
-                        <option value="CONTAMINATED">{{'niopdcgatewayApp.oilTankType.CONTAMINATED' |
+                        <option value="MAIN">{{'samtagatewayApp.oilTankType.MAIN' | translate}}</option>
+                        <option value="CONTAMINATED">{{'samtagatewayApp.oilTankType.CONTAMINATED' |
                             translate}}
                         </option>
-                        <option value="SERVICE_TANK">{{'niopdcgatewayApp.oilTankType.SERVICE_TANK' |
+                        <option value="SERVICE_TANK">{{'samtagatewayApp.oilTankType.SERVICE_TANK' |
                             translate}}
                         </option>
-                        <option value="UNIT">{{'niopdcgatewayApp.oilTankType.UNIT' | translate}}</option>
-                        <option value="PLATFORM">{{'niopdcgatewayApp.oilTankType.PLATFORM' | translate}}
+                        <option value="UNIT">{{'samtagatewayApp.oilTankType.UNIT' | translate}}</option>
+                        <option value="PLATFORM">{{'samtagatewayApp.oilTankType.PLATFORM' | translate}}
                         </option>
-                        <option value="WATER_METHANOL">{{'niopdcgatewayApp.oilTankType.WATER_METHANOL' |
+                        <option value="WATER_METHANOL">{{'samtagatewayApp.oilTankType.WATER_METHANOL' |
                             translate}}
                         </option>
-                        <option value="EARTH">{{'niopdcgatewayApp.oilTankType.EARTH' | translate}}</option>
-                        <option value="BASE_PRODUCT">{{'niopdcgatewayApp.oilTankType.BASE_PRODUCT' | translate}}</option>
-                        <option value="RECYCLE">{{'niopdcgatewayApp.oilTankType.RECYCLE' | translate}}
+                        <option value="EARTH">{{'samtagatewayApp.oilTankType.EARTH' | translate}}</option>
+                        <option value="BASE_PRODUCT">{{'samtagatewayApp.oilTankType.BASE_PRODUCT' | translate}}</option>
+                        <option value="RECYCLE">{{'samtagatewayApp.oilTankType.RECYCLE' | translate}}
                         </option>
                     </select>
                 </div>
@@ -104,20 +104,20 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transferType.activeMetre"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transferType.activeMetre"
                            for="field_activeMetre">Active Metre</label>
                     <select [disabled]="isView" class="form-control" name="activeMetre"
                             [(ngModel)]="transferType.activeMetre" id="field_activeMetre">
                         <option value=""></option>
-                        <option *ngIf="showSource" value="SOURCE">{{'niopdcgatewayApp.ActiveMetre.SOURCE' | translate}}</option>
-                        <option *ngIf="showTarget" value="TARGET">{{'niopdcgatewayApp.ActiveMetre.TARGET' | translate}}</option>
+                        <option *ngIf="showSource" value="SOURCE">{{'samtagatewayApp.ActiveMetre.SOURCE' | translate}}</option>
+                        <option *ngIf="showTarget" value="TARGET">{{'samtagatewayApp.ActiveMetre.TARGET' | translate}}</option>
                     </select>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4" style="text-align: center;margin-top: auto">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.transferType.transferToHimself"
+                           jhiTranslate="samtagatewayApp.transferType.transferToHimself"
                            for="field_transferToHimself">Transfer To Himself</label>
                     <input [disabled]="isView" type="checkbox" class="form-control" name="transferToHimself"
                            id="field_transferToHimself"

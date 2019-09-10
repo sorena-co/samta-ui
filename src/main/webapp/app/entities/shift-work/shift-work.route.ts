@@ -33,7 +33,7 @@ export const shiftWorkRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_SHIFT_WORK'],
-            pageTitle: 'niopdcgatewayApp.shiftWork.home.title'
+            pageTitle: 'samtagatewayApp.shiftWork.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const shiftWorkPopupRoute: Routes = [
     component: ShiftWorkPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_SHIFT_WORK'],
-        pageTitle: 'niopdcgatewayApp.shiftWork.home.title'
+        pageTitle: 'samtagatewayApp.shiftWork.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const shiftWorkPopupRoute: Routes = [
     component: ShiftWorkPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_SHIFT_WORK'],
-        pageTitle: 'niopdcgatewayApp.shiftWork.home.title'
+        pageTitle: 'samtagatewayApp.shiftWork.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const shiftWorkPopupRoute: Routes = [
     component: ShiftWorkDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_SHIFT_WORK'],
-        pageTitle: 'niopdcgatewayApp.shiftWork.home.title'
+        pageTitle: 'samtagatewayApp.shiftWork.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const shiftWorkPopupRoute: Routes = [
       component: ShiftWorkPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_SHIFT_WORK'],
-          pageTitle: 'niopdcgatewayApp.shiftWork.home.title'
+          pageTitle: 'samtagatewayApp.shiftWork.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

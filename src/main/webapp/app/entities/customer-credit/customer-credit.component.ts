@@ -202,30 +202,30 @@ export class CustomerCreditComponent implements OnInit, OnDestroy {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
         if (this.customerId) {
-            this.translateService.get('niopdcgatewayApp.customerCredit.home.customerTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.customerCredit.home.customerTitle').subscribe((title) => {
                 this.breadcrumbItems.push({label: title + ` (${this.customer.name})`, routerLink: ['/customer']});
             });
-            this.translateService.get('niopdcgatewayApp.customerCredit.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.customerCredit.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({label: title});
             });
         } else if (this.personId) {
-            this.translateService.get('niopdcgatewayApp.personCredit.home.personTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.personCredit.home.personTitle').subscribe((title) => {
                 this.breadcrumbItems.push({label: title + ` (${this.person.fullName})`, routerLink: ['/person']});
             });
-            this.translateService.get('niopdcgatewayApp.personCredit.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.personCredit.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({label: title});
             });
         } else if (this.sellContractProductId) {
-            this.translateService.get('niopdcgatewayApp.sellContractProductCredit.home.sellContractTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.sellContractProductCredit.home.sellContractTitle').subscribe((title) => {
                 this.breadcrumbItems.push({label: title, routerLink: [`/sell-contract`]});
             });
-            this.translateService.get('niopdcgatewayApp.sellContractProductCredit.home.sellContractProductTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.sellContractProductCredit.home.sellContractProductTitle').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: title,
                     routerLink: [`/sell-contract/${this.sellContractProduct.sellContractId}/sell-contract-product/`]
                 });
             });
-            this.translateService.get('niopdcgatewayApp.sellContractProductCredit.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.sellContractProductCredit.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({label: title});
             });
         }

@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="depot.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.depot.home.createLabel">
+            jhiTranslate="samtagatewayApp.depot.home.createLabel">
             Create</h4>
         <h4 *ngIf="depot.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.depot.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.depot.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.depot.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.depot.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.depot.title"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.depot.title"
                            for="field_title">Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="title" id="field_title"
                            [(ngModel)]="depot.title"
@@ -46,7 +46,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.depot.code"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.depot.code"
                            for="field_code">Code</label>
                     <input [disabled]="isView" type="text" class="form-control" name="code" id="field_code"
                            [(ngModel)]="depot.code"
@@ -73,7 +73,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.depot.accCode"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.depot.accCode"
                            for="field_accCode">Acc Code</label>
                     <input [disabled]="isView" type="text" class="form-control" name="accCode" id="field_accCode"
                            [(ngModel)]="depot.accCode"
@@ -97,7 +97,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.depot.product"
+                    <label jhiTranslate="samtagatewayApp.depot.product"
                            for="field_product">Product</label>
                     <p-multiSelect [disabled]="isView" class="form-control" id="field_product"
                                    [options]="products"
@@ -110,7 +110,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.depot.location"
+                    <label jhiTranslate="samtagatewayApp.depot.location"
                            for="field_locations">location</label>
 
                     <input-location-selector [disabled]="isView" class="form-control" required
@@ -128,7 +128,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.depot.locationId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.depot.locationId"
                            for="field_location">Location</label>
                     <select [disabled]="isView" class="form-control" id="field_location" name="location" [(ngModel)]="depot.locationId"
                             required>
@@ -151,14 +151,14 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.depot.depotType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.depot.depotType"
                            for="field_depotType">Depot Type</label>
                     <select  [disabled]="isView" class="form-control" name="depotType" [(ngModel)]="depot.depotType"
                             (ngModelChange)="onChangeDepotType($event)"
                             id="field_depotType"
                             required>
-                        <option value="DEPOT">{{'niopdcgatewayApp.DepotType.DEPOT' | translate}}</option>
-                        <option value="REFUELING_UNIT">{{'niopdcgatewayApp.DepotType.REFUELING_UNIT' | translate}}
+                        <option value="DEPOT">{{'samtagatewayApp.DepotType.DEPOT' | translate}}</option>
+                        <option value="REFUELING_UNIT">{{'samtagatewayApp.DepotType.REFUELING_UNIT' | translate}}
                         </option>
                     </select>
                     <div [hidden]="!(editForm.controls.depotType?.dirty && editForm.controls.depotType?.invalid)">
@@ -172,7 +172,7 @@
             </div>
             <div class="col-xs-12 col-md-6" *ngIf="depot.depotType===DepotType[DepotType.REFUELING_UNIT]">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.depot.refuelCenterId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.depot.refuelCenterId"
                            for="field_refuelCenter">refuel Center</label>
                     <select [disabled]="isView" class="form-control" id="field_refuelCenter" name="refuelCenter" [(ngModel)]="depot.refuelCenterId"
                             required>

@@ -136,13 +136,13 @@ export class BoundaryTagComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.boundaryTag.home.locationTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.boundaryTag.home.locationTitle').subscribe((title) => {
             this.breadcrumbItems.push({
                 label: title + ` (${this.location.name})`,
                 routerLink: ['/location/' + this.location.locationId + '/sub-locations']
             });
         });
-        this.translateService.get('niopdcgatewayApp.boundaryTag.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.boundaryTag.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

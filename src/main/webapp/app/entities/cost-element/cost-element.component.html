@@ -28,12 +28,12 @@
             <p-row>
                 <p-column field="code" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.costElement.code">Code</span>
+                        <span jhiTranslate="samtagatewayApp.costElement.code">Code</span>
                     </ng-template>
                 </p-column>
                 <p-column field="customerGroup" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.costElement.customerGroup">Customer Group</span>
+                        <span jhiTranslate="samtagatewayApp.costElement.customerGroup">Customer Group</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -53,8 +53,8 @@
                                 [(ngModel)]="costElement.customerGroup"
                                 id="field_customerGroup">
                             <option></option>
-                            <option value="STATION">{{'niopdcgatewayApp.CustomerGroup.STATION' | translate}}</option>
-                            <option value="SELLER">{{'niopdcgatewayApp.CustomerGroup.SELLER' | translate}}</option>
+                            <option value="STATION">{{'samtagatewayApp.CustomerGroup.STATION' | translate}}</option>
+                            <option value="SELLER">{{'samtagatewayApp.CustomerGroup.SELLER' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -71,11 +71,11 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="code" [header]="'niopdcgatewayApp.costElement.code' | translate"></p-column>
-        <p-column field="customerGroup" [header]="'niopdcgatewayApp.costElement.customerGroup' | translate">
+        <p-column field="code" [header]="'samtagatewayApp.costElement.code' | translate"></p-column>
+        <p-column field="customerGroup" [header]="'samtagatewayApp.costElement.customerGroup' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span
-                    jhiTranslate="{{'niopdcgatewayApp.CustomerGroup.' + item.customerGroup}}">{{item.customerGroup}}</span>
+                    jhiTranslate="{{'samtagatewayApp.CustomerGroup.' + item.customerGroup}}">{{item.customerGroup}}</span>
             </ng-template>
         </p-column>
         s

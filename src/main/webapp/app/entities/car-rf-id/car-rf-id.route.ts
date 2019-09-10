@@ -33,7 +33,7 @@ export const carRfIdRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CAR_RF_ID'],
-            pageTitle: 'niopdcgatewayApp.carRfId.home.title'
+            pageTitle: 'samtagatewayApp.carRfId.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const carRfIdPopupRoute: Routes = [
     component: CarRfIdPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_CAR_RF_ID'],
-        pageTitle: 'niopdcgatewayApp.carRfId.home.title'
+        pageTitle: 'samtagatewayApp.carRfId.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const carRfIdPopupRoute: Routes = [
     component: CarRfIdPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_CAR_RF_ID'],
-        pageTitle: 'niopdcgatewayApp.carRfId.home.title'
+        pageTitle: 'samtagatewayApp.carRfId.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const carRfIdPopupRoute: Routes = [
     component: CarRfIdDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_CAR_RF_ID'],
-        pageTitle: 'niopdcgatewayApp.carRfId.home.title'
+        pageTitle: 'samtagatewayApp.carRfId.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const carRfIdPopupRoute: Routes = [
       component: CarRfIdPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_CAR_RF_ID'],
-          pageTitle: 'niopdcgatewayApp.carRfId.home.title'
+          pageTitle: 'samtagatewayApp.carRfId.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

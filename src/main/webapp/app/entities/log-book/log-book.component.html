@@ -11,32 +11,32 @@
             <p-row>
                 <p-column field="orderId" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.logBook.customer">Order Id</span>
+                        <span jhiTranslate="samtagatewayApp.logBook.customer">Order Id</span>
                     </ng-template>
                 </p-column>
                 <p-column field="orderId" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.logBook.person">Order Id</span>
+                        <span jhiTranslate="samtagatewayApp.logBook.person">Order Id</span>
                     </ng-template>
                 </p-column>
                 <p-column field="orderId" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.logBook.fuelReceipt">Order Id</span>
+                        <span jhiTranslate="samtagatewayApp.logBook.fuelReceipt">Order Id</span>
                     </ng-template>
                 </p-column>
                 <p-column field="amount" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.logBook.amount">Amount</span>
+                        <span jhiTranslate="samtagatewayApp.logBook.amount">Amount</span>
                     </ng-template>
                 </p-column>
                 <p-column field="fuelType" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.logBook.fuelType">Fuel Type</span>
+                        <span jhiTranslate="samtagatewayApp.logBook.fuelType">Fuel Type</span>
                     </ng-template>
                 </p-column>
                 <p-column field="status" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.logBook.status">Status</span>
+                        <span jhiTranslate="samtagatewayApp.logBook.status">Status</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -77,8 +77,8 @@
                         <select class="form-control" name="fuelType" (change)="search()"
                                 [(ngModel)]="logBook.fuelType" id="field_fuelType">
                             <option></option>
-                            <option value="FUEL">{{'niopdcgatewayApp.FuelType.FUEL' | translate}}</option>
-                            <option value="DE_FUEL">{{'niopdcgatewayApp.FuelType.DE_FUEL' | translate}}</option>
+                            <option value="FUEL">{{'samtagatewayApp.FuelType.FUEL' | translate}}</option>
+                            <option value="DE_FUEL">{{'samtagatewayApp.FuelType.DE_FUEL' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -87,10 +87,10 @@
                         <select class="form-control" name="status" (change)="search()"
                                 [(ngModel)]="logBook.status">
                             <option></option>
-                            <option value="true" jhiTranslate="niopdcgatewayApp.logBook.statusTrue">
+                            <option value="true" jhiTranslate="samtagatewayApp.logBook.statusTrue">
                                 true
                             </option>
-                            <option value="false" jhiTranslate="niopdcgatewayApp.logBook.statusFalse">
+                            <option value="false" jhiTranslate="samtagatewayApp.logBook.statusFalse">
                                 false
                             </option>
                         </select>
@@ -109,16 +109,16 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="customerTitle" [header]="'niopdcgatewayApp.logBook.orderId' | translate"></p-column>
-        <p-column field="personTitle" [header]="'niopdcgatewayApp.logBook.orderId' | translate"></p-column>
-        <p-column field="fuelReceipt" [header]="'niopdcgatewayApp.logBook.orderId' | translate"></p-column>
-        <p-column field="amount" [header]="'niopdcgatewayApp.logBook.amount' | translate"></p-column>
-        <p-column field="fuelType" [header]="'niopdcgatewayApp.logBook.fuelType' | translate">
+        <p-column field="customerTitle" [header]="'samtagatewayApp.logBook.orderId' | translate"></p-column>
+        <p-column field="personTitle" [header]="'samtagatewayApp.logBook.orderId' | translate"></p-column>
+        <p-column field="fuelReceipt" [header]="'samtagatewayApp.logBook.orderId' | translate"></p-column>
+        <p-column field="amount" [header]="'samtagatewayApp.logBook.amount' | translate"></p-column>
+        <p-column field="fuelType" [header]="'samtagatewayApp.logBook.fuelType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.FuelType.' + item.fuelType}}">{{item.fuelType}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.FuelType.' + item.fuelType}}">{{item.fuelType}}</span>
             </ng-template>
         </p-column>
-        <p-column field="status" [header]="'niopdcgatewayApp.logBook.status' | translate">
+        <p-column field="status" [header]="'samtagatewayApp.logBook.status' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span class="fa" [ngClass]="{'fa-check':item.status,'fa-close':!item.status}"></span>
             </ng-template>

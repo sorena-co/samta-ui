@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="shiftWork.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.shiftWork.home.createLabel">
+            jhiTranslate="samtagatewayApp.shiftWork.home.createLabel">
             Create</h4>
         <h4 *ngIf="shiftWork.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.shiftWork.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.shiftWork.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.shiftWork.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.shiftWork.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.shiftWork.fromDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.shiftWork.fromDate"
                            for="field_fromDate">From Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00" id="field_fromDate"
@@ -44,7 +44,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.shiftWork.toDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.shiftWork.toDate"
                            for="field_toDate">To
                         Date</label>
                     <div class="d-flex">

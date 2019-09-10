@@ -21,12 +21,12 @@
             <p-row>
                 <p-column field="title" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.currency.title">Title</span>
+                        <span jhiTranslate="samtagatewayApp.currency.title">Title</span>
                     </ng-template>
                 </p-column>
                 <p-column field="isNationalCurrency" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.currency.isNationalCurrency">Active</span>
+                        <span jhiTranslate="samtagatewayApp.currency.isNationalCurrency">Active</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -46,10 +46,10 @@
                         <select class="form-control" name="active" (change)="search()"
                                 [(ngModel)]="currency.isNationalCurrency">
                             <option></option>
-                            <option value="true" jhiTranslate="niopdcgatewayApp.currency.isNationalCurrencyTrue">
+                            <option value="true" jhiTranslate="samtagatewayApp.currency.isNationalCurrencyTrue">
                                 true
                             </option>
-                            <option value="false" jhiTranslate="niopdcgatewayApp.currency.isNationalCurrencyFalse">
+                            <option value="false" jhiTranslate="samtagatewayApp.currency.isNationalCurrencyFalse">
                                 false
                             </option>
                         </select>
@@ -68,8 +68,8 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="title" [header]="'niopdcgatewayApp.currency.title' | translate"></p-column>
-        <p-column field="isNationalCurrency" [header]="'niopdcgatewayApp.currency.isNationalCurrency' | translate">
+        <p-column field="title" [header]="'samtagatewayApp.currency.title' | translate"></p-column>
+        <p-column field="isNationalCurrency" [header]="'samtagatewayApp.currency.isNationalCurrency' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span class="fa" [ngClass]="{'fa-check':item.isNationalCurrency,'fa-close':!item.isNationalCurrency}"></span>
             </ng-template></p-column>
@@ -106,7 +106,7 @@
                                 *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_CURRENCY_RATE']"
                                 [routerLink]="['/currency', item.id, 'currency-rate']">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.currencyRate.home.title">Currency Rate</span>
+                            <span jhiTranslate="samtagatewayApp.currencyRate.home.title">Currency Rate</span>
                         </button>
                     </div>
                 </div>

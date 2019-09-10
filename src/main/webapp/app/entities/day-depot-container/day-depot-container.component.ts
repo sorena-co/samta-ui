@@ -166,10 +166,10 @@ export class DayDepotContainerComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.dayDepotContainer.home.mainDayDepotTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.dayDepotContainer.home.mainDayDepotTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/main-day-depot']});
         });
-        this.translateService.get('niopdcgatewayApp.dayDepotContainer.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.dayDepotContainer.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

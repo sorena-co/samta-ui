@@ -20,17 +20,17 @@
             <p-row>
                 <p-column field="score" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.customerScore.score">Score</span>
+                        <span jhiTranslate="samtagatewayApp.customerScore.score">Score</span>
                     </ng-template>
                 </p-column>
                 <p-column field="startDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.customerScore.startDate">Start Date</span>
+                        <span jhiTranslate="samtagatewayApp.customerScore.startDate">Start Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="finishDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.customerScore.finishDate">Finish Date</span>
+                        <span jhiTranslate="samtagatewayApp.customerScore.finishDate">Finish Date</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -73,12 +73,12 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="score" [header]="'niopdcgatewayApp.customerScore.score' | translate"></p-column>
-        <p-column field="startDate" [header]="'niopdcgatewayApp.customerScore.startDate' | translate">
+        <p-column field="score" [header]="'samtagatewayApp.customerScore.score' | translate"></p-column>
+        <p-column field="startDate" [header]="'samtagatewayApp.customerScore.startDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.startDate | dateTimeJalali}}</span>
             </ng-template></p-column>
-        <p-column field="finishDate" [header]="'niopdcgatewayApp.customerScore.finishDate' | translate">
+        <p-column field="finishDate" [header]="'samtagatewayApp.customerScore.finishDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.finishDate | dateTimeJalali}}</span>
             </ng-template></p-column>

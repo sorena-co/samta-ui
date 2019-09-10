@@ -143,7 +143,7 @@ export class MomentSheetComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.momentSheet.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.momentSheet.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

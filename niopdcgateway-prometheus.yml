@@ -1,14 +1,14 @@
 apiVersion: monitoring.coreos.com/v1alpha1
 kind: ServiceMonitor
 metadata:
-  name: niopdcgateway-app
+  name: samtagateway-app
   namespace: default
   labels:
     team: default
 spec:
   selector:
     matchLabels:
-      app: niopdcgateway
+      app: samtagateway
   endpoints:
   - port: web
     path: /prometheusMetrics

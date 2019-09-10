@@ -158,19 +158,19 @@ export class DayDepotServiceOilTankComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.dayDepotServiceOilTank.home.mainDayDepotTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.dayDepotServiceOilTank.home.mainDayDepotTitle').subscribe((title) => {
             this.breadcrumbItems.push({
                 label: title,
                 routerLink: ['/main-day-depot']
             });
         });
-        this.translateService.get('niopdcgatewayApp.dayDepotServiceOilTank.home.dayDepotTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.dayDepotServiceOilTank.home.dayDepotTitle').subscribe((title) => {
             this.breadcrumbItems.push({
                 label: title + ` (${this.dayDepot.oilTankTitle})`,
                 routerLink: ['/main-day-depot/' + this.dayDepot.mainDayDepotId + '/day-depot']
             });
         });
-        this.translateService.get('niopdcgatewayApp.dayDepotServiceOilTank.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.dayDepotServiceOilTank.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

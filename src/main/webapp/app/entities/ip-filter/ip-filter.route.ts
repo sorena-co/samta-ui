@@ -36,7 +36,7 @@ export const ipFilterRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_IP_FILTER'],
-            pageTitle: 'niopdcgatewayApp.ipFilter.home.title'
+            pageTitle: 'samtagatewayApp.ipFilter.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const ipFilterPopupRoute: Routes = [
         component: IpFilterPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_IP_FILTER'],
-            pageTitle: 'niopdcgatewayApp.ipFilter.home.title'
+            pageTitle: 'samtagatewayApp.ipFilter.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const ipFilterPopupRoute: Routes = [
         component: IpFilterPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_IP_FILTER'],
-            pageTitle: 'niopdcgatewayApp.ipFilter.home.title'
+            pageTitle: 'samtagatewayApp.ipFilter.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const ipFilterPopupRoute: Routes = [
         component: IpFilterDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_IP_FILTER'],
-            pageTitle: 'niopdcgatewayApp.ipFilter.home.title'
+            pageTitle: 'samtagatewayApp.ipFilter.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const ipFilterPopupRoute: Routes = [
         component: IpFilterPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_IP_FILTER'],
-            pageTitle: 'niopdcgatewayApp.ipFilter.home.title'
+            pageTitle: 'samtagatewayApp.ipFilter.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

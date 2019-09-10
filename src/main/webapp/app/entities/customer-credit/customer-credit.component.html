@@ -33,32 +33,32 @@
             <p-row>
                 <p-column field="startDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.customerCredit.startDate">Start Date</span>
+                        <span jhiTranslate="samtagatewayApp.customerCredit.startDate">Start Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="finishDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.customerCredit.finishDate">Finish Date</span>
+                        <span jhiTranslate="samtagatewayApp.customerCredit.finishDate">Finish Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="creditNumber" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.customerCredit.creditNumber">Credit Number</span>
+                        <span jhiTranslate="samtagatewayApp.customerCredit.creditNumber">Credit Number</span>
                     </ng-template>
                 </p-column>
                 <p-column field="currentCredit" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.customerCredit.currentCredit">Current Credit</span>
+                        <span jhiTranslate="samtagatewayApp.customerCredit.currentCredit">Current Credit</span>
                     </ng-template>
                 </p-column>
                 <p-column field="currentAmount" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.customerCredit.currentAmount">Current Amount</span>
+                        <span jhiTranslate="samtagatewayApp.customerCredit.currentAmount">Current Amount</span>
                     </ng-template>
                 </p-column>
                 <p-column field="parentBuyTypeTitle" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.customerCredit.parentBuyType">Title</span>
+                        <span jhiTranslate="samtagatewayApp.customerCredit.parentBuyType">Title</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -116,7 +116,7 @@
                                 [ngModel]="customerCredit.parentBuyTypeId">
                             <option></option>
                             <option *ngFor="let buyTypeOption of buyTypes" [ngValue]="buyTypeOption.id">
-                                <span>{{buyTypeOption.title + ' (' + ('niopdcgatewayApp.BuyGroup.' + buyTypeOption.buyGroup | translate) + ')'}}</span>
+                                <span>{{buyTypeOption.title + ' (' + ('samtagatewayApp.BuyGroup.' + buyTypeOption.buyGroup | translate) + ')'}}</span>
                             </option>
                         </select>
                     </ng-template>
@@ -134,24 +134,24 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="startDate" [header]="'niopdcgatewayApp.customerCredit.startDate' | translate">
+        <p-column field="startDate" [header]="'samtagatewayApp.customerCredit.startDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.startDate | dateJalali}}</span>
             </ng-template>
         </p-column>
-        <p-column field="finishDate" [header]="'niopdcgatewayApp.customerCredit.finishDate' | translate">
+        <p-column field="finishDate" [header]="'samtagatewayApp.customerCredit.finishDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.finishDate | dateJalali}}</span>
             </ng-template>
         </p-column>
-        <p-column field="creditNumber" [header]="'niopdcgatewayApp.customerCredit.creditNumber' | translate"></p-column>
+        <p-column field="creditNumber" [header]="'samtagatewayApp.customerCredit.creditNumber' | translate"></p-column>
         <p-column field="currentCredit"
-                  [header]="'niopdcgatewayApp.customerCredit.currentCredit' | translate"></p-column>
+                  [header]="'samtagatewayApp.customerCredit.currentCredit' | translate"></p-column>
         <p-column field="currentAmount"
-                  [header]="'niopdcgatewayApp.customerCredit.currentAmount' | translate"></p-column>
-        <p-column field="parentBuyTypeId" [header]="'niopdcgatewayApp.customerCredit.parentBuyType' | translate">
+                  [header]="'samtagatewayApp.customerCredit.currentAmount' | translate"></p-column>
+        <p-column field="parentBuyTypeId" [header]="'samtagatewayApp.customerCredit.parentBuyType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span *ngIf="item.parentBuyTypeTitle">{{item.parentBuyTypeTitle + '(' + ('niopdcgatewayApp.BuyGroup.' + item.parentBuyGroup | translate) + ')'}}</span>
+                <span *ngIf="item.parentBuyTypeTitle">{{item.parentBuyTypeTitle + '(' + ('samtagatewayApp.BuyGroup.' + item.parentBuyGroup | translate) + ')'}}</span>
             </ng-template>
         </p-column>
         <p-column class="component">

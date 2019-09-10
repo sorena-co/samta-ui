@@ -36,7 +36,7 @@ export const costRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_COST'],
-            pageTitle: 'niopdcgatewayApp.cost.home.title'
+            pageTitle: 'samtagatewayApp.cost.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -47,7 +47,7 @@ export const costRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_COST'],
-            pageTitle: 'niopdcgatewayApp.cost.home.title'
+            pageTitle: 'samtagatewayApp.cost.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -59,7 +59,7 @@ export const costPopupRoute: Routes = [
         component: CostPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_COST'],
-            pageTitle: 'niopdcgatewayApp.cost.home.title'
+            pageTitle: 'samtagatewayApp.cost.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -69,7 +69,7 @@ export const costPopupRoute: Routes = [
         component: CostPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_COST'],
-            pageTitle: 'niopdcgatewayApp.cost.home.title'
+            pageTitle: 'samtagatewayApp.cost.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -79,7 +79,7 @@ export const costPopupRoute: Routes = [
         component: CostPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_COST'],
-            pageTitle: 'niopdcgatewayApp.cost.home.title'
+            pageTitle: 'samtagatewayApp.cost.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -89,7 +89,7 @@ export const costPopupRoute: Routes = [
         component: CostPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_COST'],
-            pageTitle: 'niopdcgatewayApp.cost.home.title'
+            pageTitle: 'samtagatewayApp.cost.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -99,7 +99,7 @@ export const costPopupRoute: Routes = [
         component: CostDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_COST'],
-            pageTitle: 'niopdcgatewayApp.cost.home.title'
+            pageTitle: 'samtagatewayApp.cost.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -109,7 +109,7 @@ export const costPopupRoute: Routes = [
         component: CostPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_COST'],
-            pageTitle: 'niopdcgatewayApp.cost.home.title'
+            pageTitle: 'samtagatewayApp.cost.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -119,7 +119,7 @@ export const costPopupRoute: Routes = [
         component: CostPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_COST'],
-            pageTitle: 'niopdcgatewayApp.cost.home.title'
+            pageTitle: 'samtagatewayApp.cost.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

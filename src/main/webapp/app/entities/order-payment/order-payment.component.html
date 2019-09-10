@@ -1,9 +1,9 @@
 <div>
     <h2>
-        <span jhiTranslate="niopdcgatewayApp.orderPayment.home.title">Order Payments</span>
+        <span jhiTranslate="samtagatewayApp.orderPayment.home.title">Order Payments</span>
         <button class="btn btn-primary float-right jh-create-entity create-order-payment" [routerLink]="['/', { outlets: { popup: ['order-payment-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="niopdcgatewayApp.orderPayment.home.createLabel">
+            <span  jhiTranslate="samtagatewayApp.orderPayment.home.createLabel">
             Create new Order Payment
             </span>
         </button>
@@ -17,9 +17,9 @@
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="paymentId"><span jhiTranslate="niopdcgatewayApp.orderPayment.paymentId">Payment Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="decreasedPrice"><span jhiTranslate="niopdcgatewayApp.orderPayment.decreasedPrice">Decreased Price</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="orderOrderNo"><span jhiTranslate="niopdcgatewayApp.orderPayment.order">Order</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="paymentId"><span jhiTranslate="samtagatewayApp.orderPayment.paymentId">Payment Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="decreasedPrice"><span jhiTranslate="samtagatewayApp.orderPayment.decreasedPrice">Decreased Price</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="orderOrderNo"><span jhiTranslate="samtagatewayApp.orderPayment.order">Order</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>

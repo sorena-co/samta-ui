@@ -98,16 +98,16 @@ export class SellContractDialogComponent implements OnInit {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.mapSiteItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.sellContract.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.sellContract.home.title').subscribe((title) => {
             //todo fix router
             this.mapSiteItems.push({label: title, routerLink: ['/sell-contract'], queryParams: {customer:this.customerId,person:this.personId}});
         });
         if (this.sellContract && this.sellContract.id) {
-            this.translateService.get('niopdcgatewayApp.sellContract.home.editLabel').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.sellContract.home.editLabel').subscribe((title) => {
                 this.mapSiteItems.push({label: title});
             });
         } else {
-            this.translateService.get('niopdcgatewayApp.sellContract.home.createLabel').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.sellContract.home.createLabel').subscribe((title) => {
                 this.mapSiteItems.push({label: title});
             });
         }

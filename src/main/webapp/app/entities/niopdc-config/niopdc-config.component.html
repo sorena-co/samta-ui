@@ -19,17 +19,17 @@
             <p-row>
                 <p-column field="startDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.niopdcConfig.startDate">Start Date</span>
+                        <span jhiTranslate="samtagatewayApp.niopdcConfig.startDate">Start Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="finishDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.niopdcConfig.finishDate">Finish Date</span>
+                        <span jhiTranslate="samtagatewayApp.niopdcConfig.finishDate">Finish Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="configType" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.niopdcConfig.configType">Finish Date</span>
+                        <span jhiTranslate="samtagatewayApp.niopdcConfig.configType">Finish Date</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -55,9 +55,9 @@
                     <ng-template pTemplate="header">
                         <select [disabled]="isView" class="form-control" name="configType"
                                 [(ngModel)]="niopdcConfig.configType" id="field_configType">
-                            <option value="BOUNDARY_SELL">{{'niopdcgatewayApp.ConfigType.BOUNDARY_SELL' | translate}}</option>
-                            <option value="NORMAL_SELL">{{'niopdcgatewayApp.ConfigType.NORMAL_SELL' | translate}}</option>
-                            <option value="NIOPDC_AO">{{'niopdcgatewayApp.ConfigType.NIOPDC_AO' | translate}}</option>
+                            <option value="BOUNDARY_SELL">{{'samtagatewayApp.ConfigType.BOUNDARY_SELL' | translate}}</option>
+                            <option value="NORMAL_SELL">{{'samtagatewayApp.ConfigType.NORMAL_SELL' | translate}}</option>
+                            <option value="NIOPDC_AO">{{'samtagatewayApp.ConfigType.NIOPDC_AO' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -74,19 +74,19 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="startDate" [header]="'niopdcgatewayApp.niopdcConfig.startDate' | translate">
+        <p-column field="startDate" [header]="'samtagatewayApp.niopdcConfig.startDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.startDate | dateTimeJalali}}</span>
             </ng-template>
         </p-column>
-        <p-column field="finishDate" [header]="'niopdcgatewayApp.niopdcConfig.finishDate' | translate">
+        <p-column field="finishDate" [header]="'samtagatewayApp.niopdcConfig.finishDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.finishDate | dateTimeJalali}}</span>
             </ng-template>
         </p-column>
-        <p-column field="configType" [header]="'niopdcgatewayApp.niopdcConfig.configType' | translate">
+        <p-column field="configType" [header]="'samtagatewayApp.niopdcConfig.configType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span>{{'niopdcgatewayApp.ConfigType.'+item.configType | translate}}</span>
+                <span>{{'samtagatewayApp.ConfigType.'+item.configType | translate}}</span>
             </ng-template>
         </p-column>
         <p-column class="component">

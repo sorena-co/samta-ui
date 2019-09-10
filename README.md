@@ -1,4 +1,4 @@
-# niopdcgateway
+# samtagateway
 This application was generated using JHipster 4.14.0, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.14.0](http://www.jhipster.tech/documentation-archive/v4.14.0).
 
 This is a "gateway" application intended to be part of a microservice architecture, please refer to the [Doing microservices with JHipster][] page of the documentation for more information.
@@ -93,7 +93,7 @@ will generate few files:
 
 ## Building for production
 
-To optimize the niopdcgateway application for production, run:
+To optimize the samtagateway application for production, run:
 
     ./mvnw -Pprod clean package
 

@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="ipFilter.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.ipFilter.home.createLabel">
+            jhiTranslate="samtagatewayApp.ipFilter.home.createLabel">
             Create</h4>
         <h4 *ngIf="ipFilter.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.ipFilter.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.ipFilter.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.ipFilter.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.ipFilter.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.ipFilter.ip"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.ipFilter.ip"
                            for="field_ip">ip</label>
                     <input [disabled]="isView" type="text" class="form-control" name="ip" id="field_ip"
                            [(ngModel)]="ipFilter.ip" [pattern]="regexCode"
@@ -45,7 +45,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.ipFilter.netMask"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.ipFilter.netMask"
                                for="field_netMask">netMask</label>
                         <input [disabled]="isView" type="text" class="form-control" name="netMask" id="field_netMask"
                                [(ngModel)]="ipFilter.netMask" [pattern]="regexCode"
@@ -72,12 +72,12 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.ipFilter.accessStatus"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.ipFilter.accessStatus"
                            for="field_accessStatus">Oil Tank Type</label>
                     <select [disabled]="isView" class="form-control" name="accessStatus"
                             [(ngModel)]="ipFilter.accessStatus" id="field_accessStatus" required>
-                        <option value="ACCESS">{{'niopdcgatewayApp.accessStatus.ACCESS' | translate}}</option>
-                        <option value="DENY">{{'niopdcgatewayApp.accessStatus.DENY' | translate}}</option>
+                        <option value="ACCESS">{{'samtagatewayApp.accessStatus.ACCESS' | translate}}</option>
+                        <option value="DENY">{{'samtagatewayApp.accessStatus.DENY' | translate}}</option>
                     </select>
                     <div
                         [hidden]="!(editForm.controls.accessStatus?.dirty && editForm.controls.accessStatus?.invalid)">

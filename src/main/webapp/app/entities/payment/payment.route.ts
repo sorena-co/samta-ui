@@ -37,7 +37,7 @@ export const paymentRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_PAYMENT'],
-            pageTitle: 'niopdcgatewayApp.payment.home.title'
+            pageTitle: 'samtagatewayApp.payment.home.title'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -49,7 +49,7 @@ export const paymentRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'PAY_ELECTRONIC_PAYMENT'],
-            pageTitle: 'niopdcgatewayApp.payment.electronic.title'
+            pageTitle: 'samtagatewayApp.payment.electronic.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -61,7 +61,7 @@ export const paymentPopupRoute: Routes = [
         component: PaymentPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN','CREATE_PAYMENT'],
-            pageTitle: 'niopdcgatewayApp.payment.home.title'
+            pageTitle: 'samtagatewayApp.payment.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -71,7 +71,7 @@ export const paymentPopupRoute: Routes = [
         component: PaymentPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN','VIEW_PAYMENT'],
-            pageTitle: 'niopdcgatewayApp.payment.home.title'
+            pageTitle: 'samtagatewayApp.payment.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -81,7 +81,7 @@ export const paymentPopupRoute: Routes = [
         component: PaymentDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_PAYMENT'],
-            pageTitle: 'niopdcgatewayApp.payment.home.title'
+            pageTitle: 'samtagatewayApp.payment.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

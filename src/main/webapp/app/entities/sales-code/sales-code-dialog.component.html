@@ -1,7 +1,7 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="mySalesCodeLabel" jhiTranslate="niopdcgatewayApp.salesCode.home.createOrEditLabel">Create or edit a Sales Code</h4>
+        <h4 class="modal-title" id="mySalesCodeLabel" jhiTranslate="samtagatewayApp.salesCode.home.createOrEditLabel">Create or edit a Sales Code</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;</button>
     </div>
@@ -13,7 +13,7 @@
                    [(ngModel)]="salesCode.id" readonly />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.salesCode.code" for="field_code">Code</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.salesCode.code" for="field_code">Code</label>
             <input type="text" class="form-control" name="code" id="field_code"
                 [(ngModel)]="salesCode.code" required/>
             <div [hidden]="!(editForm.controls.code?.dirty && editForm.controls.code?.invalid)">
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.salesCode.receivedDate" for="field_receivedDate">Received Date</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.salesCode.receivedDate" for="field_receivedDate">Received Date</label>
             <div class="d-flex">
                 <input id="field_receivedDate" type="datetime-local" class="form-control" name="receivedDate" [(ngModel)]="salesCode.receivedDate"
                 />
@@ -32,7 +32,7 @@
         </div>
 
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.salesCode.person" for="field_person">Person</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.salesCode.person" for="field_person">Person</label>
             <select class="form-control" id="field_person" name="person" [(ngModel)]="salesCode.personId" >
                 <option [ngValue]="null"></option>
                 <option [ngValue]="personOption.id" *ngFor="let personOption of people; trackBy: trackPersonById">{{personOption.id}}</option>

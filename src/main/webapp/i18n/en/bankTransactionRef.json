@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "bankTransactionRef" : {
             "home": {
                 "title": "Bank Transaction Refs",

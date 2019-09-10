@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "orderCost" : {
             "home": {
                 "title": "Order Costs",

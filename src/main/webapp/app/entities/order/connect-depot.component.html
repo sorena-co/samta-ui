@@ -13,7 +13,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.connectDepot.location"
+                                               jhiTranslate="samtagatewayApp.connectDepot.location"
                                                for="field_locationId">Location Id</label>
                                         <app-location-level-selector
                                             [multiSelect]="false"
@@ -32,7 +32,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.connectDepot.depot"
+                                               jhiTranslate="samtagatewayApp.connectDepot.depot"
                                                for="field_depotId">Depot Id</label>
                                         <p-dropdown [options]="depots"
                                                     [(ngModel)]="req.depotId"
@@ -50,7 +50,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.connectDepot.product"
+                                               jhiTranslate="samtagatewayApp.connectDepot.product"
                                                for="field_product">Product</label>
                                         <select [disabled]="isView" class="form-control" id="field_product"
                                                 name="product"
@@ -68,7 +68,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.connectDepot.startOrderNumber"
+                                               jhiTranslate="samtagatewayApp.connectDepot.startOrderNumber"
                                                for="field_startOrderNumber">Start Order Number</label>
                                         <input type="text"
                                                class="form-control"
@@ -79,7 +79,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.connectDepot.endOrderNumber"
+                                               jhiTranslate="samtagatewayApp.connectDepot.endOrderNumber"
                                                for="field_endOrderNumber">Start Order Number</label>
                                         <input type="text"
                                                class="form-control"
@@ -89,7 +89,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.connectDepot.startDate"
+                                        <label class="form-control-label" jhiTranslate="samtagatewayApp.connectDepot.startDate"
                                                for="field_startDate">Start Date</label>
                                         <div class="d-flex">
                                             <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00"
@@ -102,7 +102,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.connectDepot.endDate"
+                                        <label class="form-control-label" jhiTranslate="samtagatewayApp.connectDepot.endDate"
                                                for="field_endDate">Start Date</label>
                                         <div class="d-flex">
                                             <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="23:59:59"
@@ -124,10 +124,10 @@
                                     </button>
                                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                                         <button class="dropdown-item" (click)="download('NEW')"
-                                                jhiTranslate="niopdcgatewayApp.connectDepot.newDepot">New Depot
+                                                jhiTranslate="samtagatewayApp.connectDepot.newDepot">New Depot
                                         </button>
                                         <button class="dropdown-item" (click)="download('OLD')"
-                                                jhiTranslate="niopdcgatewayApp.connectDepot.oldDepot">Old Depot
+                                                jhiTranslate="samtagatewayApp.connectDepot.oldDepot">Old Depot
                                         </button>
                                     </div>
                                 </div>
@@ -149,36 +149,36 @@
                         <p-row>
                             <p-column field="depotSendCode">
                                 <ng-template pTemplate="header">
-                                    <span jhiTranslate="niopdcgatewayApp.connectDepot.depotSendCode">depotSendCode</span>
+                                    <span jhiTranslate="samtagatewayApp.connectDepot.depotSendCode">depotSendCode</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="depotSendDate">
                                 <ng-template pTemplate="header">
-                                    <span jhiTranslate="niopdcgatewayApp.connectDepot.depotSendDate">depotSendDate</span>
+                                    <span jhiTranslate="samtagatewayApp.connectDepot.depotSendDate">depotSendDate</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="productId">
                                 <ng-template pTemplate="header">
-                                    <span jhiTranslate="niopdcgatewayApp.connectDepot.product">depotSendCode</span>
+                                    <span jhiTranslate="samtagatewayApp.connectDepot.product">depotSendCode</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="startOrderNo">
                                 <ng-template pTemplate="header">
-                                    <span jhiTranslate="niopdcgatewayApp.connectDepot.startOrderNumber">depotSendCode</span>
+                                    <span jhiTranslate="samtagatewayApp.connectDepot.startOrderNumber">depotSendCode</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="endOrderNo">
                                 <ng-template pTemplate="header">
-                                    <span jhiTranslate="niopdcgatewayApp.connectDepot.endOrderNumber">endOrderNo</span>
+                                    <span jhiTranslate="samtagatewayApp.connectDepot.endOrderNumber">endOrderNo</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="startDate">
                                 <ng-template pTemplate="header">
-                                    <span jhiTranslate="niopdcgatewayApp.connectDepot.startDate">endDate</span>
+                                    <span jhiTranslate="samtagatewayApp.connectDepot.startDate">endDate</span>
                                 </ng-template>
                             </p-column> <p-column field="endDate">
                                 <ng-template pTemplate="header">
-                                    <span jhiTranslate="niopdcgatewayApp.connectDepot.endDate">endDate</span>
+                                    <span jhiTranslate="samtagatewayApp.connectDepot.endDate">endDate</span>
                                 </ng-template>
                             </p-column>
 
@@ -187,43 +187,43 @@
                         </p-row>
                     </p-headerColumnGroup>
                     <p-column field="depotSendCode"
-                              [header]="'niopdcgatewayApp.connectDepot.depotSendCode' | translate">
+                              [header]="'samtagatewayApp.connectDepot.depotSendCode' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span>{{item.depotSendCode}}</span>
                         </ng-template>
                     </p-column>
                     <p-column field="sendToDepotDate"
-                              [header]="'niopdcgatewayApp.order.depotSendDate' | translate">
+                              [header]="'samtagatewayApp.order.depotSendDate' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span>{{item.depotSendDate | dateJalali}}</span>
                         </ng-template>
                     </p-column>
                     <p-column field="productId"
-                              [header]="'niopdcgatewayApp.connectDepot.product' | translate">
+                              [header]="'samtagatewayApp.connectDepot.product' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span>{{item.productId}}</span>
                         </ng-template>
                     </p-column>
                     <p-column field="startOrderNo"
-                              [header]="'niopdcgatewayApp.connectDepot.startOrderNo' | translate">
+                              [header]="'samtagatewayApp.connectDepot.startOrderNo' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span>{{item.startOrderNo}}</span>
                         </ng-template>
                     </p-column>
                     <p-column field="endOrderNo"
-                              [header]="'niopdcgatewayApp.connectDepot.endOrderNo' | translate">
+                              [header]="'samtagatewayApp.connectDepot.endOrderNo' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span>{{item.endOrderNo}}</span>
                         </ng-template>
                     </p-column>
                     <p-column field="startDate"
-                              [header]="'niopdcgatewayApp.connectDepot.startDate' | translate">
+                              [header]="'samtagatewayApp.connectDepot.startDate' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span>{{item.startDate | dateJalali}}</span>
                         </ng-template>
                     </p-column>
                     <p-column field="endDate"
-                              [header]="'niopdcgatewayApp.connectDepot.endDate' | translate">
+                              [header]="'samtagatewayApp.connectDepot.endDate' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span>{{item.endDate | dateJalali}}</span>
                         </ng-template>
@@ -239,10 +239,10 @@
                                 </button>
                                 <div ngbDropdownMenu>
                                     <button class="dropdown-item" (click)="download('NEW', item)"
-                                            jhiTranslate="niopdcgatewayApp.order.depotNew">New Depot
+                                            jhiTranslate="samtagatewayApp.order.depotNew">New Depot
                                     </button>
                                     <button class="dropdown-item" (click)="download('OLD', item)"
-                                            jhiTranslate="niopdcgatewayApp.order.depotOld">Old Depot
+                                            jhiTranslate="samtagatewayApp.order.depotOld">Old Depot
                                     </button>
                                 </div>
                             </div>
@@ -261,7 +261,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.order.depotSendCode"
+                                               jhiTranslate="samtagatewayApp.order.depotSendCode"
                                                for="field_locationId">Location Id</label>
                                         <input type="text"
                                                [(ngModel)]="req.depotSendCode"
@@ -295,7 +295,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.order.depotSendCode"
+                                               jhiTranslate="samtagatewayApp.order.depotSendCode"
                                                for="field_locationId">Location Id</label>
                                         <input type="text"
                                                [(ngModel)]="req.depotSendCode"
@@ -329,7 +329,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.order.depotSendCode"
+                                               jhiTranslate="samtagatewayApp.order.depotSendCode"
                                                for="field_locationId">Location Id</label>
                                         <input type="text"
                                                [(ngModel)]="req.depotSendCode"

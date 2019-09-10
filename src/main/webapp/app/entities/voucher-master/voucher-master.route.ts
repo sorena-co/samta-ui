@@ -38,7 +38,7 @@ export const voucherMasterRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_VOUCHER_MASTER'],
-            pageTitle: 'niopdcgatewayApp.voucherMaster.home.title'
+            pageTitle: 'samtagatewayApp.voucherMaster.home.title'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -50,7 +50,7 @@ export const voucherMasterRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_VOUCHER_MASTER'],
-            pageTitle: 'niopdcgatewayApp.voucherMaster.home.title'
+            pageTitle: 'samtagatewayApp.voucherMaster.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -62,7 +62,7 @@ export const voucherMasterPopupRoute: Routes = [
         component: VoucherMasterPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_VOUCHER_MASTER'],
-            pageTitle: 'niopdcgatewayApp.voucherMaster.home.title'
+            pageTitle: 'samtagatewayApp.voucherMaster.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -72,7 +72,7 @@ export const voucherMasterPopupRoute: Routes = [
         component: VoucherMasterPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_VOUCHER_MASTER'],
-            pageTitle: 'niopdcgatewayApp.voucherMaster.home.title'
+            pageTitle: 'samtagatewayApp.voucherMaster.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -82,7 +82,7 @@ export const voucherMasterPopupRoute: Routes = [
         component: VoucherMasterDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_VOUCHER_MASTER'],
-            pageTitle: 'niopdcgatewayApp.voucherMaster.home.title'
+            pageTitle: 'samtagatewayApp.voucherMaster.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -92,7 +92,7 @@ export const voucherMasterPopupRoute: Routes = [
         component: VoucherMasterConfirmPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CONFIRM_VOUCHER_MASTER'],
-            pageTitle: 'niopdcgatewayApp.voucherMaster.home.title'
+            pageTitle: 'samtagatewayApp.voucherMaster.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -102,7 +102,7 @@ export const voucherMasterPopupRoute: Routes = [
         component: VoucherMasterPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_VOUCHER_MASTER'],
-            pageTitle: 'niopdcgatewayApp.voucherMaster.home.title'
+            pageTitle: 'samtagatewayApp.voucherMaster.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

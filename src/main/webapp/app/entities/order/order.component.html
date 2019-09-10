@@ -23,37 +23,37 @@
             <p-row>
                 <p-column field="orderNo" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.orderNo">Order No</span>
+                        <span jhiTranslate="samtagatewayApp.order.orderNo">Order No</span>
                     </ng-template>
                 </p-column>
                 <p-column field="personId" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.personId">Customer Id</span>
+                        <span jhiTranslate="samtagatewayApp.order.personId">Customer Id</span>
                     </ng-template>
                 </p-column>
                 <p-column field="customerId" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.customerId">Customer Id</span>
+                        <span jhiTranslate="samtagatewayApp.order.customerId">Customer Id</span>
                     </ng-template>
                 </p-column>
                 <p-column field="lastModifiedDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.lastModifiedDate">Register Date</span>
+                        <span jhiTranslate="samtagatewayApp.order.lastModifiedDate">Register Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="price" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.price">Price</span>
+                        <span jhiTranslate="samtagatewayApp.order.price">Price</span>
                     </ng-template>
                 </p-column>
                 <p-column field="status" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.status">Order Status</span>
+                        <span jhiTranslate="samtagatewayApp.order.status">Order Status</span>
                     </ng-template>
                 </p-column>
                 <p-column field="buyGroup" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.buyGroup">buy Group</span>
+                        <span jhiTranslate="samtagatewayApp.order.buyGroup">buy Group</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -105,19 +105,19 @@
                         <select class="form-control" name="status" [(ngModel)]="order.status" (change)="search()"
                                 id="field_status">
                             <option></option>
-                            <option value="DRAFT">{{'niopdcgatewayApp.OrderStatus.DRAFT' | translate}}</option>
-                            <option value="PENDING">{{'niopdcgatewayApp.OrderStatus.PENDING' | translate}}</option>
-                            <option value="PAID">{{'niopdcgatewayApp.OrderStatus.PAID' | translate}}</option>
-                            <option value="CONFIRM">{{'niopdcgatewayApp.OrderStatus.CONFIRM' | translate}}</option>
-                            <option value="SEND_TO_DEPOT">{{'niopdcgatewayApp.OrderStatus.SEND_TO_DEPOT' | translate}}
+                            <option value="DRAFT">{{'samtagatewayApp.OrderStatus.DRAFT' | translate}}</option>
+                            <option value="PENDING">{{'samtagatewayApp.OrderStatus.PENDING' | translate}}</option>
+                            <option value="PAID">{{'samtagatewayApp.OrderStatus.PAID' | translate}}</option>
+                            <option value="CONFIRM">{{'samtagatewayApp.OrderStatus.CONFIRM' | translate}}</option>
+                            <option value="SEND_TO_DEPOT">{{'samtagatewayApp.OrderStatus.SEND_TO_DEPOT' | translate}}
                             </option>
-                            <option value="EXIT_FROM_DEPOT">{{'niopdcgatewayApp.OrderStatus.EXIT_FROM_DEPOT' |
+                            <option value="EXIT_FROM_DEPOT">{{'samtagatewayApp.OrderStatus.EXIT_FROM_DEPOT' |
                                 translate}}
                             </option>
-                            <option value="BACK_FROM_SALE">{{'niopdcgatewayApp.OrderStatus.BACK_FROM_SALE' |
+                            <option value="BACK_FROM_SALE">{{'samtagatewayApp.OrderStatus.BACK_FROM_SALE' |
                                 translate}}
                             </option>
-                            <option value="BACK_FROM_DEPOT">{{'niopdcgatewayApp.OrderStatus.BACK_FROM_DEPOT' |
+                            <option value="BACK_FROM_DEPOT">{{'samtagatewayApp.OrderStatus.BACK_FROM_DEPOT' |
                                 translate}}
                             </option>
                         </select>
@@ -127,11 +127,11 @@
                         <select class="form-control" name="buyGroup" [(ngModel)]="order.buyGroup" (change)="search()"
                                 id="field_buyGroup">
                             <option></option>
-                            <option value="CASH">{{'niopdcgatewayApp.BuyGroup.CASH' | translate}}</option>
-                            <option value="CREDIT">{{'niopdcgatewayApp.BuyGroup.CREDIT' | translate}}</option>
-                            <option value="QUOTA">{{'niopdcgatewayApp.BuyGroup.QUOTA' | translate}}</option>
-                            <option value="PREBUY">{{'niopdcgatewayApp.BuyGroup.PREBUY' | translate}}</option>
-                            <option value="FINANCIAL_LICENSE">{{'niopdcgatewayApp.BuyGroup.FINANCIAL_LICENSE' |
+                            <option value="CASH">{{'samtagatewayApp.BuyGroup.CASH' | translate}}</option>
+                            <option value="CREDIT">{{'samtagatewayApp.BuyGroup.CREDIT' | translate}}</option>
+                            <option value="QUOTA">{{'samtagatewayApp.BuyGroup.QUOTA' | translate}}</option>
+                            <option value="PREBUY">{{'samtagatewayApp.BuyGroup.PREBUY' | translate}}</option>
+                            <option value="FINANCIAL_LICENSE">{{'samtagatewayApp.BuyGroup.FINANCIAL_LICENSE' |
                                 translate}}
                             </option>
                         </select>
@@ -148,20 +148,20 @@
                 </p-column>
             </p-row>
         </p-headerColumnGroup>
-        <p-column field="orderNo" [header]="'niopdcgatewayApp.order.orderNo' | translate"></p-column>
-        <p-column field="personName" [header]="'niopdcgatewayApp.order.personId' | translate"></p-column>
-        <p-column field="customerName" [header]="'niopdcgatewayApp.order.customerId' | translate"></p-column>
-        <p-column field="lastModifiedDate" [header]="'niopdcgatewayApp.order.lastModifiedDate' | translate">
+        <p-column field="orderNo" [header]="'samtagatewayApp.order.orderNo' | translate"></p-column>
+        <p-column field="personName" [header]="'samtagatewayApp.order.personId' | translate"></p-column>
+        <p-column field="customerName" [header]="'samtagatewayApp.order.customerId' | translate"></p-column>
+        <p-column field="lastModifiedDate" [header]="'samtagatewayApp.order.lastModifiedDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.lastModifiedDate | dateJalali}}</span>
             </ng-template>
         </p-column>
-        <p-column field="price" [header]="'niopdcgatewayApp.order.price' | translate"></p-column>
-        <p-column field="status" [header]="'niopdcgatewayApp.order.status' | translate">
+        <p-column field="price" [header]="'samtagatewayApp.order.price' | translate"></p-column>
+        <p-column field="status" [header]="'samtagatewayApp.order.status' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span
                     *ngIf="item.status!==OrderStatus[OrderStatus.PAID] && item.status!==OrderStatus[OrderStatus.CONFIRM] "
-                    jhiTranslate="{{'niopdcgatewayApp.OrderStatus.' + item.status}}">{{item.status}}</span>
+                    jhiTranslate="{{'samtagatewayApp.OrderStatus.' + item.status}}">{{item.status}}</span>
                 <ng-container
                     *ngIf="item.status===OrderStatus[OrderStatus.PAID]">
                     <button class="btn btn-primary"
@@ -184,9 +184,9 @@
                 </ng-container>
             </ng-template>
         </p-column>
-        <p-column field="buyGroup" [header]="'niopdcgatewayApp.order.buyGroup' | translate">
+        <p-column field="buyGroup" [header]="'samtagatewayApp.order.buyGroup' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span *ngIf="item.buyGroup" jhiTranslate="{{'niopdcgatewayApp.BuyGroup.' + item.buyGroup}}">{{item.buyGroup}}</span>
+                <span *ngIf="item.buyGroup" jhiTranslate="{{'samtagatewayApp.BuyGroup.' + item.buyGroup}}">{{item.buyGroup}}</span>
             </ng-template>
         </p-column>
         <p-column class="component">

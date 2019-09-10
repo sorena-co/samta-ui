@@ -36,7 +36,7 @@ export const voucherMappingRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_VOUCHER_MAPPING'],
-            pageTitle: 'niopdcgatewayApp.voucherMapping.home.title'
+            pageTitle: 'samtagatewayApp.voucherMapping.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const voucherMappingPopupRoute: Routes = [
         component: VoucherMappingPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_VOUCHER_MAPPING'],
-            pageTitle: 'niopdcgatewayApp.voucherMapping.home.title'
+            pageTitle: 'samtagatewayApp.voucherMapping.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const voucherMappingPopupRoute: Routes = [
         component: VoucherMappingPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_VOUCHER_MAPPING'],
-            pageTitle: 'niopdcgatewayApp.voucherMapping.home.title'
+            pageTitle: 'samtagatewayApp.voucherMapping.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const voucherMappingPopupRoute: Routes = [
         component: VoucherMappingDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_VOUCHER_MAPPING'],
-            pageTitle: 'niopdcgatewayApp.voucherMapping.home.title'
+            pageTitle: 'samtagatewayApp.voucherMapping.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const voucherMappingPopupRoute: Routes = [
         component: VoucherMappingPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_VOUCHER_MAPPING'],
-            pageTitle: 'niopdcgatewayApp.voucherMapping.home.title'
+            pageTitle: 'samtagatewayApp.voucherMapping.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

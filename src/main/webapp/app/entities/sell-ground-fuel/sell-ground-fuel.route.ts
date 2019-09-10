@@ -35,7 +35,7 @@ export const sellGroundFuelRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_SELL_GROUND_FUEL'],
-            pageTitle: 'niopdcgatewayApp.sellGroundFuel.home.title'
+            pageTitle: 'samtagatewayApp.sellGroundFuel.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -47,7 +47,7 @@ export const sellGroundFuelPopupRoute: Routes = [
         component: SellGroundFuelPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_SELL_GROUND_FUEL'],
-            pageTitle: 'niopdcgatewayApp.sellGroundFuel.home.title'
+            pageTitle: 'samtagatewayApp.sellGroundFuel.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -57,7 +57,7 @@ export const sellGroundFuelPopupRoute: Routes = [
         component: SellGroundFuelPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_SELL_GROUND_FUEL'],
-            pageTitle: 'niopdcgatewayApp.sellGroundFuel.home.title'
+            pageTitle: 'samtagatewayApp.sellGroundFuel.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -67,7 +67,7 @@ export const sellGroundFuelPopupRoute: Routes = [
         component: SellGroundFuelDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_SELL_GROUND_FUEL'],
-            pageTitle: 'niopdcgatewayApp.sellGroundFuel.home.title'
+            pageTitle: 'samtagatewayApp.sellGroundFuel.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -77,7 +77,7 @@ export const sellGroundFuelPopupRoute: Routes = [
         component: SellGroundFuelPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_SELL_GROUND_FUEL'],
-            pageTitle: 'niopdcgatewayApp.sellGroundFuel.home.title'
+            pageTitle: 'samtagatewayApp.sellGroundFuel.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

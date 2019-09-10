@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "changeFilterElement" : {
             "home": {
                 "title": "Change Filter Elements",

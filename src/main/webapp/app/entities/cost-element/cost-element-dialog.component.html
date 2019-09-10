@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.costElement.code" for="field_code">Code</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.costElement.code" for="field_code">Code</label>
                     <input [disabled]="isView" type="text" class="form-control" name="code" id="field_code"
                            [(ngModel)]="costElement.code" required/>
                     <div [hidden]="!(editForm.controls.code?.dirty && editForm.controls.code?.invalid)">
@@ -33,12 +33,12 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.costElement.customerGroup"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.costElement.customerGroup"
                            for="field_customerGroup">Customer Group</label>
                     <select [disabled]="isView" class="form-control" name="customerGroup"
                             [(ngModel)]="costElement.customerGroup" id="field_customerGroup" required>
-                        <option value="STATION">{{'niopdcgatewayApp.CustomerGroup.STATION' | translate}}</option>
-                        <option value="SELLER">{{'niopdcgatewayApp.CustomerGroup.SELLER' | translate}}</option>
+                        <option value="STATION">{{'samtagatewayApp.CustomerGroup.STATION' | translate}}</option>
+                        <option value="SELLER">{{'samtagatewayApp.CustomerGroup.SELLER' | translate}}</option>
                     </select>
                     <div
                         [hidden]="!(editForm.controls.customerGroup?.dirty && editForm.controls.customerGroup?.invalid)">
@@ -52,7 +52,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.productId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.productId"
                            for="field_product">Product</label>
                     <p-dropdown [options]="customProducts" [(ngModel)]="selectedProduct"
                                 [filter]="true"

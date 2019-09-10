@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "MeasureType" : {
             "null": "",
             "NORMAL": "NORMAL",

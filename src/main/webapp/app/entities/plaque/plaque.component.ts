@@ -123,7 +123,7 @@ currentAccount: any;
         this.translateService.get('global.menu.home').subscribe((title) => {
         this.breadcrumbItems.push({label: title, routerLink: ['/']});
             });
-        this.translateService.get('niopdcgatewayApp.plaque.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.plaque.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

@@ -1,54 +1,54 @@
 
 <div *ngIf="orderProduct">
-    <h2><span jhiTranslate="niopdcgatewayApp.orderProduct.detail.title">Order Product</span> {{orderProduct.id}}</h2>
+    <h2><span jhiTranslate="samtagatewayApp.orderProduct.detail.title">Order Product</span> {{orderProduct.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
-        <dt><span jhiTranslate="niopdcgatewayApp.orderProduct.sellContractProductId">Sell Contract Product Id</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderProduct.sellContractProductId">Sell Contract Product Id</span></dt>
         <dd>
             <span>{{orderProduct.sellContractProductId}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderProduct.productId">Product Id</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderProduct.productId">Product Id</span></dt>
         <dd>
             <span>{{orderProduct.productId}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderProduct.rateGroupId">Rate Group Id</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderProduct.rateGroupId">Rate Group Id</span></dt>
         <dd>
             <span>{{orderProduct.rateGroupId}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderProduct.totalPrice">Total Price</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderProduct.totalPrice">Total Price</span></dt>
         <dd>
             <span>{{orderProduct.totalPrice}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderProduct.basePrice">Base Price</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderProduct.basePrice">Base Price</span></dt>
         <dd>
             <span>{{orderProduct.basePrice}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderProduct.productRatePrice">Product Rate Price</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderProduct.productRatePrice">Product Rate Price</span></dt>
         <dd>
             <span>{{orderProduct.productRatePrice}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderProduct.productRateId">Product Rate Id</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderProduct.productRateId">Product Rate Id</span></dt>
         <dd>
             <span>{{orderProduct.productRateId}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderProduct.containerRateId">Container Rate Id</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderProduct.containerRateId">Container Rate Id</span></dt>
         <dd>
             <span>{{orderProduct.containerRateId}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderProduct.containerRatePrice">Container Rate Price</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderProduct.containerRatePrice">Container Rate Price</span></dt>
         <dd>
             <span>{{orderProduct.containerRatePrice}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderProduct.costPrice">Cost Price</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderProduct.costPrice">Cost Price</span></dt>
         <dd>
             <span>{{orderProduct.costPrice}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderProduct.amount">Amount</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderProduct.amount">Amount</span></dt>
         <dd>
             <span>{{orderProduct.amount}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderProduct.order">Order</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderProduct.order">Order</span></dt>
         <dd>
             <div *ngIf="orderProduct.orderId">
                 <a [routerLink]="['/order', orderProduct.orderId]">{{orderProduct.orderOrderNo}}</a>

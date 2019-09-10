@@ -1,26 +1,26 @@
 
 <div *ngIf="bankTransactionRef">
-    <h2><span jhiTranslate="niopdcgatewayApp.bankTransactionRef.detail.title">Bank Transaction Ref</span> {{bankTransactionRef.id}}</h2>
+    <h2><span jhiTranslate="samtagatewayApp.bankTransactionRef.detail.title">Bank Transaction Ref</span> {{bankTransactionRef.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
-        <dt><span jhiTranslate="niopdcgatewayApp.bankTransactionRef.orderId">Order Id</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.bankTransactionRef.orderId">Order Id</span></dt>
         <dd>
             <span>{{bankTransactionRef.orderId}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.bankTransactionRef.personId">Person Id</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.bankTransactionRef.personId">Person Id</span></dt>
         <dd>
             <span>{{bankTransactionRef.personId}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.bankTransactionRef.customerId">Customer Id</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.bankTransactionRef.customerId">Customer Id</span></dt>
         <dd>
             <span>{{bankTransactionRef.customerId}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.bankTransactionRef.amount">Amount</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.bankTransactionRef.amount">Amount</span></dt>
         <dd>
             <span>{{bankTransactionRef.amount}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.bankTransactionRef.bankTransaction">Bank Transaction</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.bankTransactionRef.bankTransaction">Bank Transaction</span></dt>
         <dd>
             <div *ngIf="bankTransactionRef.bankTransactionId">
                 <a [routerLink]="['/bank-transaction', bankTransactionRef.bankTransactionId]">{{bankTransactionRef.bankTransactionId}}</a>

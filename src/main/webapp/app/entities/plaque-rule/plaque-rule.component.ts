@@ -147,10 +147,10 @@ export class PlaqueRuleComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.plaqueRule.home.plaqueTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.plaqueRule.home.plaqueTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + ` (${this.plaque.title})`, routerLink: ['/plaque']});
         });
-        this.translateService.get('niopdcgatewayApp.plaqueRule.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.plaqueRule.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

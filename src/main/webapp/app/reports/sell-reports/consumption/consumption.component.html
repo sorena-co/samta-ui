@@ -18,7 +18,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="form-control-label"
-                                           jhiTranslate="niopdcgatewayApp.consumptionReport.startDate"
+                                           jhiTranslate="samtagatewayApp.consumptionReport.startDate"
                                            for="field_startDate">startDate</label>
                                     <div class="d-flex">
                                         <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00:00"
@@ -45,7 +45,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="form-control-label"
-                                           jhiTranslate="niopdcgatewayApp.consumptionReport.finishDate"
+                                           jhiTranslate="samtagatewayApp.consumptionReport.finishDate"
                                            for="field_finishDate">finishDate</label>
                                     <div class="d-flex">
                                         <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="23:59:59"
@@ -73,16 +73,16 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="form-control-label"
-                                           jhiTranslate="niopdcgatewayApp.consumptionReport.timeBy"
+                                           jhiTranslate="samtagatewayApp.consumptionReport.timeBy"
                                            for="field_timeBy">timeBy</label>
                                     <select class="form-control" name="timeByOrderCreate"
                                             [(ngModel)]="req.timeByOrderCreate" id="field_timeBy"
                                     >
                                         <option [ngValue]="true">
-                                            {{'niopdcgatewayApp.consumptionReport.timeByOrderCreate' | translate}}
+                                            {{'samtagatewayApp.consumptionReport.timeByOrderCreate' | translate}}
                                         </option>
                                         <option [ngValue]="false">
-                                            {{'niopdcgatewayApp.consumptionReport.timeByExportFromDepot' | translate}}
+                                            {{'samtagatewayApp.consumptionReport.timeByExportFromDepot' | translate}}
                                         </option>
 
                                     </select>
@@ -95,7 +95,7 @@
                                     <input type="checkbox" class="form-control"
                                            name="allProducts" id="field_product"
                                            [(ngModel)]="allProducts"/>
-                                    <label jhiTranslate="niopdcgatewayApp.consumptionReport.product"
+                                    <label jhiTranslate="samtagatewayApp.consumptionReport.product"
                                            for="field_product">product</label>
                                     <p-multiSelect *ngIf="!allProducts" class="form-control"
                                                    [options]="products"
@@ -124,7 +124,7 @@
                                     <input type="checkbox" class="form-control"
                                            name="allLocations" id="field_location"
                                            [(ngModel)]="allLocations"/>
-                                    <label jhiTranslate="niopdcgatewayApp.consumptionReport.location"
+                                    <label jhiTranslate="samtagatewayApp.consumptionReport.location"
                                            for="field_location">Location</label>
 
                                     <input-location-selector *ngIf="!allLocations"
@@ -185,18 +185,18 @@
         </ng-template>
 
         <kendo-grid-column field="productSrc"
-                           [title]="'niopdcgatewayApp.consumptionReport.productSrc' | translate" width="130">
+                           [title]="'samtagatewayApp.consumptionReport.productSrc' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="productTitle"
-                           [title]="'niopdcgatewayApp.consumptionReport.productTitle' | translate" width="130">
+                           [title]="'samtagatewayApp.consumptionReport.productTitle' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
 
-        <kendo-grid-column field="amount" [title]="'niopdcgatewayApp.consumptionReport.amount' | translate" width="130">
+        <kendo-grid-column field="amount" [title]="'samtagatewayApp.consumptionReport.amount' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="count" [title]="'niopdcgatewayApp.consumptionReport.count' | translate" width="130">
+        <kendo-grid-column field="count" [title]="'samtagatewayApp.consumptionReport.count' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column *ngFor="let col of cols" [field]="col" [title]="col" width="130">

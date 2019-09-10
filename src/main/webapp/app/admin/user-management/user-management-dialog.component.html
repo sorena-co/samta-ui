@@ -204,18 +204,18 @@
                                         (change)="userTypeChange()"
                                         [(ngModel)]="user.userType" id="field_userType" required>
                                     <option *ngIf="currentUserType==='HEAD'" value="HEAD">
-                                        {{'niopdcgatewayApp.userType.HEAD'| translate}}
+                                        {{'samtagatewayApp.userType.HEAD'| translate}}
                                     </option>
                                     <option *ngIf="currentUserType==='HEAD'||currentUserType==='AREA'" value="AREA">
-                                        {{'niopdcgatewayApp.userType.AREA' | translate}}
+                                        {{'samtagatewayApp.userType.AREA' | translate}}
                                     </option>
                                     <option *ngIf="currentUserType==='HEAD'||currentUserType==='REFUEL_CENTER'"
-                                            value="REFUEL_CENTER">{{'niopdcgatewayApp.userType.REFUEL_CENTER'
+                                            value="REFUEL_CENTER">{{'samtagatewayApp.userType.REFUEL_CENTER'
                                         |translate}}
                                     </option>
                                     <option
                                         *ngIf="currentUserType==='HEAD'||currentUserType==='AREA'||currentUserType==='ZONE'"
-                                        value="ZONE">{{'niopdcgatewayApp.userType.ZONE' | translate}}
+                                        value="ZONE">{{'samtagatewayApp.userType.ZONE' | translate}}
                                     </option>
                                 </select>
                             </div>
@@ -236,7 +236,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.userDataAccess.location"
+                                       jhiTranslate="samtagatewayApp.userDataAccess.location"
                                        for="field_location">Location</label>
 
                                 <input-location-selector class="form-control" [idSelector]="true"
@@ -264,7 +264,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-12">
                                 <div *ngIf="canAuth != null" class="form-group">
-                                    <label jhiTranslate="niopdcgatewayApp.role.authorities"
+                                    <label jhiTranslate="samtagatewayApp.role.authorities"
                                            for="field_authorities">Authorities</label>
                                     <app-authority-selector class="form-control" id="field_authorities"
                                                             (onAuthorities)="authoritiesSelected($event)"

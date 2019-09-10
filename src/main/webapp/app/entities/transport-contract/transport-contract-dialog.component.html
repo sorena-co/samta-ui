@@ -1,12 +1,12 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 *ngIf="transportContract.id==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.transportContract.home.createLabel">
+        <h4 *ngIf="transportContract.id==null" class="modal-title" id="createLabel" jhiTranslate="samtagatewayApp.transportContract.home.createLabel">
             Create</h4>
         <h4 *ngIf="transportContract.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.transportContract.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.transportContract.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.transportContract.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.transportContract.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transportContract.contractCode"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transportContract.contractCode"
                            for="field_contractCode"
                            maxlength="40">Contract Code</label>
                     <input [disabled]="isView" type="text" class="form-control" name="contractCode"
@@ -40,7 +40,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transportContract.startDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transportContract.startDate"
                            for="field_startDate">Start Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="true"[disabled]="isView" [rtlActive]="true" time="00:00:00" id="field_startDate"
@@ -64,7 +64,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transportContract.finishDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transportContract.finishDate"
                            for="field_finishDate">Finish Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="true"[disabled]="isView" [rtlActive]="true" time="23:59:59" id="field_finishDate"
@@ -89,7 +89,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-md-12">
-                <label jhiTranslate="niopdcgatewayApp.transportContract.person"
+                <label jhiTranslate="samtagatewayApp.transportContract.person"
                        for="field_person">Person</label>
                 <app-person-selector widthGrid="600px"
                                      [selectObject]="false"

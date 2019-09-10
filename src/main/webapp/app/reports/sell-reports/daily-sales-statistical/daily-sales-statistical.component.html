@@ -18,7 +18,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="form-control-label"
-                                           jhiTranslate="niopdcgatewayApp.dailySalesStatistical.startDate"
+                                           jhiTranslate="samtagatewayApp.dailySalesStatistical.startDate"
                                            for="field_startDate">startDate</label>
                                     <div class="d-flex">
                                         <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00:00"
@@ -45,7 +45,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="form-control-label"
-                                           jhiTranslate="niopdcgatewayApp.dailySalesStatistical.finishDate"
+                                           jhiTranslate="samtagatewayApp.dailySalesStatistical.finishDate"
                                            for="field_finishDate">finishDate</label>
                                     <div class="d-flex">
                                         <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="23:59:59"
@@ -73,12 +73,12 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="form-control-label"
-                                           jhiTranslate="niopdcgatewayApp.dailySalesStatistical.timeBy"
+                                           jhiTranslate="samtagatewayApp.dailySalesStatistical.timeBy"
                                            for="field_timeBy">timeBy</label>
                                     <select class="form-control" name="timeByOrderCreate" [(ngModel)]="req.timeByOrderCreate" id="field_timeBy"
                                     >
-                                        <option [ngValue]="true">{{'niopdcgatewayApp.dailySalesStatistical.timeByOrderCreate' | translate}}</option>
-                                        <option [ngValue]="false">{{'niopdcgatewayApp.dailySalesStatistical.timeByExportFromDepot' | translate}}</option>
+                                        <option [ngValue]="true">{{'samtagatewayApp.dailySalesStatistical.timeByOrderCreate' | translate}}</option>
+                                        <option [ngValue]="false">{{'samtagatewayApp.dailySalesStatistical.timeByExportFromDepot' | translate}}</option>
 
                                     </select>
                                 </div>
@@ -90,7 +90,7 @@
                                     <input type="checkbox" class="form-control"
                                            name="allCustomers" id="field_customer"
                                            [(ngModel)]="allCustomers"/>
-                                    <label jhiTranslate="niopdcgatewayApp.dailySalesStatistical.customer"
+                                    <label jhiTranslate="samtagatewayApp.dailySalesStatistical.customer"
                                            for="field_customer">customer</label>
                                     <jhi-customer-selector *ngIf="!allCustomers" class="form-control"
                                                    [multiSelect]="true" widthGrid="500px"
@@ -120,7 +120,7 @@
                                     <input type="checkbox" class="form-control"
                                            name="allProducts" id="field_product"
                                            [(ngModel)]="allProducts"/>
-                                    <label jhiTranslate="niopdcgatewayApp.dailySalesStatistical.product"
+                                    <label jhiTranslate="samtagatewayApp.dailySalesStatistical.product"
                                            for="field_product">product</label>
                                     <p-multiSelect *ngIf="!allProducts" class="form-control"
                                                    [options]="products"
@@ -148,7 +148,7 @@
                                     <input type="checkbox" class="form-control"
                                            name="allBuyGroup" id="field_buyGroup"
                                            [(ngModel)]="allBuyGroup"/>
-                                    <label jhiTranslate="niopdcgatewayApp.dailySalesStatistical.buyGroup"
+                                    <label jhiTranslate="samtagatewayApp.dailySalesStatistical.buyGroup"
                                            for="field_buyGroup">BuyGroup</label>
                                     <p-multiSelect *ngIf="!allBuyGroup" class="form-control"
                                                    [options]="buyGroups"
@@ -178,7 +178,7 @@
                             <input type="checkbox" class="form-control"
                                    name="allLocation" id="field_location"
                                    [(ngModel)]="allLocation"/>
-                            <label jhiTranslate="niopdcgatewayApp.dailySalesStatistical.location"
+                            <label jhiTranslate="samtagatewayApp.dailySalesStatistical.location"
                                    for="field_location">Location</label>
 
                             <app-location-selector *ngIf="!allLocation"
@@ -236,39 +236,39 @@
             </button>
         </ng-template>
 
-        <kendo-grid-column field="date" [title]="'niopdcgatewayApp.dailySalesStatistical.date' | translate" width="130">
+        <kendo-grid-column field="date" [title]="'samtagatewayApp.dailySalesStatistical.date' | translate" width="130">
             <ng-template kendoGridCellTemplate let-dataItem>
                 <span>{{dataItem.date | dateJalali}}</span>
             </ng-template>
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="locationTitle"
-                           [title]="'niopdcgatewayApp.dailySalesStatistical.locationTitle' | translate" width="130">
+                           [title]="'samtagatewayApp.dailySalesStatistical.locationTitle' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="customerName"
-                           [title]="'niopdcgatewayApp.dailySalesStatistical.customerName' | translate" width="130">
+                           [title]="'samtagatewayApp.dailySalesStatistical.customerName' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="productSrc"
-                           [title]="'niopdcgatewayApp.dailySalesStatistical.productSrc' | translate" width="130">
+                           [title]="'samtagatewayApp.dailySalesStatistical.productSrc' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="productTitle"
-                           [title]="'niopdcgatewayApp.dailySalesStatistical.productTitle' | translate" width="130">
+                           [title]="'samtagatewayApp.dailySalesStatistical.productTitle' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
 
-        <kendo-grid-column field="ratePrice" [title]="'niopdcgatewayApp.dailySalesStatistical.ratePrice' | translate" width="130">
+        <kendo-grid-column field="ratePrice" [title]="'samtagatewayApp.dailySalesStatistical.ratePrice' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="amount" [title]="'niopdcgatewayApp.dailySalesStatistical.amount' | translate" width="130">
+        <kendo-grid-column field="amount" [title]="'samtagatewayApp.dailySalesStatistical.amount' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="count" [title]="'niopdcgatewayApp.dailySalesStatistical.count' | translate" width="130">
+        <kendo-grid-column field="count" [title]="'samtagatewayApp.dailySalesStatistical.count' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="totalPrice" [title]="'niopdcgatewayApp.dailySalesStatistical.totalPrice' | translate"
+        <kendo-grid-column field="totalPrice" [title]="'samtagatewayApp.dailySalesStatistical.totalPrice' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -276,23 +276,23 @@
                 let-aggregates>{{('report.sum' | translate) + ':' + aggregates['totalPrice']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="basePrice" [title]="'niopdcgatewayApp.dailySalesStatistical.basePrice' | translate" width="130">
+        <kendo-grid-column field="basePrice" [title]="'samtagatewayApp.dailySalesStatistical.basePrice' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="buyGroup" [title]="'niopdcgatewayApp.dailySalesStatistical.buyGroup' | translate" width="130">
+        <kendo-grid-column field="buyGroup" [title]="'samtagatewayApp.dailySalesStatistical.buyGroup' | translate" width="130">
             <ng-template kendoGridCellTemplate let-dataItem>
-                <span jhiTranslate="{{'niopdcgatewayApp.BuyGroup.' + dataItem.buyGroup}}">{{dataItem.buyGroup}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.BuyGroup.' + dataItem.buyGroup}}">{{dataItem.buyGroup}}</span>
             </ng-template>
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
 
-        <kendo-grid-column field="costLadder" [title]="'niopdcgatewayApp.dailySalesStatistical.costLadder' | translate" width="130">
+        <kendo-grid-column field="costLadder" [title]="'samtagatewayApp.dailySalesStatistical.costLadder' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="costPrice" [title]="'niopdcgatewayApp.dailySalesStatistical.costPrice' | translate" width="130">
+        <kendo-grid-column field="costPrice" [title]="'samtagatewayApp.dailySalesStatistical.costPrice' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="costCash" [title]="'niopdcgatewayApp.dailySalesStatistical.costCash' | translate" width="130">
+        <kendo-grid-column field="costCash" [title]="'samtagatewayApp.dailySalesStatistical.costCash' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
 

@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "TankType" : {
             "null": "",
             "CUBE": "مکعبی",

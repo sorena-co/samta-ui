@@ -144,7 +144,7 @@ export class MainDayDepotComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.mainDayDepot.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.mainDayDepot.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

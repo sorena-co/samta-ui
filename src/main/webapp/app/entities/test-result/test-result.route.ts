@@ -36,7 +36,7 @@ export const testResultRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_TEST_RESULT'],
-            pageTitle: 'niopdcgatewayApp.testResult.home.title'
+            pageTitle: 'samtagatewayApp.testResult.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const testResultPopupRoute: Routes = [
         component: TestResultPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_TEST_RESULT'],
-            pageTitle: 'niopdcgatewayApp.testResult.home.title'
+            pageTitle: 'samtagatewayApp.testResult.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const testResultPopupRoute: Routes = [
         component: TestResultPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_TEST_RESULT'],
-            pageTitle: 'niopdcgatewayApp.testResult.home.title'
+            pageTitle: 'samtagatewayApp.testResult.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const testResultPopupRoute: Routes = [
         component: TestResultDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_TEST_RESULT'],
-            pageTitle: 'niopdcgatewayApp.testResult.home.title'
+            pageTitle: 'samtagatewayApp.testResult.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const testResultPopupRoute: Routes = [
         component: TestResultPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_TEST_RESULT'],
-            pageTitle: 'niopdcgatewayApp.testResult.home.title'
+            pageTitle: 'samtagatewayApp.testResult.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

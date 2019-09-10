@@ -37,7 +37,7 @@ export const locationRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_LOCATION'],
-            pageTitle: 'niopdcgatewayApp.location.home.title'
+            pageTitle: 'samtagatewayApp.location.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -48,7 +48,7 @@ export const locationRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_LOCATION'],
-            pageTitle: 'niopdcgatewayApp.location.home.title'
+            pageTitle: 'samtagatewayApp.location.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -60,7 +60,7 @@ export const locationPopupRoute: Routes = [
         component: LocationPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_LOCATION'],
-            pageTitle: 'niopdcgatewayApp.location.home.title'
+            pageTitle: 'samtagatewayApp.location.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -70,7 +70,7 @@ export const locationPopupRoute: Routes = [
         component: LocationPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_LOCATION'],
-            pageTitle: 'niopdcgatewayApp.location.home.title'
+            pageTitle: 'samtagatewayApp.location.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -80,7 +80,7 @@ export const locationPopupRoute: Routes = [
         component: LocationDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_LOCATION'],
-            pageTitle: 'niopdcgatewayApp.location.home.title'
+            pageTitle: 'samtagatewayApp.location.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -90,7 +90,7 @@ export const locationPopupRoute: Routes = [
         component: LocationOpenPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'OPEN_LOCATION'],
-            pageTitle: 'niopdcgatewayApp.location.home.title'
+            pageTitle: 'samtagatewayApp.location.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -100,7 +100,7 @@ export const locationPopupRoute: Routes = [
         component: LocationClosePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CLOSE_LOCATION'],
-            pageTitle: 'niopdcgatewayApp.location.home.title'
+            pageTitle: 'samtagatewayApp.location.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -110,7 +110,7 @@ export const locationPopupRoute: Routes = [
         component: LocationPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_LOCATION'],
-            pageTitle: 'niopdcgatewayApp.location.home.title'
+            pageTitle: 'samtagatewayApp.location.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

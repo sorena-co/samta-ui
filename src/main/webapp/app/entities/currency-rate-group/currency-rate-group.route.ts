@@ -35,7 +35,7 @@ export const currencyRateGroupRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CURRENCY_RATE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.currencyRateGroup.home.title'
+            pageTitle: 'samtagatewayApp.currencyRateGroup.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -47,7 +47,7 @@ export const currencyRateGroupPopupRoute: Routes = [
         component: CurrencyRateGroupPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_CURRENCY_RATE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.currencyRateGroup.home.title'
+            pageTitle: 'samtagatewayApp.currencyRateGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -57,7 +57,7 @@ export const currencyRateGroupPopupRoute: Routes = [
         component: CurrencyRateGroupPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_CURRENCY_RATE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.currencyRateGroup.home.title'
+            pageTitle: 'samtagatewayApp.currencyRateGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -67,7 +67,7 @@ export const currencyRateGroupPopupRoute: Routes = [
         component: CurrencyRateGroupDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_CURRENCY_RATE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.currencyRateGroup.home.title'
+            pageTitle: 'samtagatewayApp.currencyRateGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -77,7 +77,7 @@ export const currencyRateGroupPopupRoute: Routes = [
         component: CurrencyRateGroupPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_CURRENCY_RATE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.currencyRateGroup.home.title'
+            pageTitle: 'samtagatewayApp.currencyRateGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

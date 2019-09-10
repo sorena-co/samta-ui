@@ -35,7 +35,7 @@ export const loanRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_LOAN'],
-            pageTitle: 'niopdcgatewayApp.loan.home.title'
+            pageTitle: 'samtagatewayApp.loan.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -47,7 +47,7 @@ export const loanPopupRoute: Routes = [
     component: LoanPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_LOAN'],
-        pageTitle: 'niopdcgatewayApp.loan.home.title'
+        pageTitle: 'samtagatewayApp.loan.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -57,7 +57,7 @@ export const loanPopupRoute: Routes = [
     component: LoanPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_LOAN'],
-        pageTitle: 'niopdcgatewayApp.loan.home.title'
+        pageTitle: 'samtagatewayApp.loan.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -67,7 +67,7 @@ export const loanPopupRoute: Routes = [
     component: LoanDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_LOAN'],
-        pageTitle: 'niopdcgatewayApp.loan.home.title'
+        pageTitle: 'samtagatewayApp.loan.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -77,7 +77,7 @@ export const loanPopupRoute: Routes = [
       component: LoanPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_LOAN'],
-          pageTitle: 'niopdcgatewayApp.loan.home.title'
+          pageTitle: 'samtagatewayApp.loan.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "CostGroupAccessType" : {
             "null": "",
             "PRODUCT": "فرآورده",

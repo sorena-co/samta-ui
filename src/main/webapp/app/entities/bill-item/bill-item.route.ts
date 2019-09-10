@@ -33,7 +33,7 @@ export const billItemRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.billItem.home.title'
+            pageTitle: 'samtagatewayApp.billItem.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -41,7 +41,7 @@ export const billItemRoute: Routes = [
         component: BillItemDetailComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.billItem.home.title'
+            pageTitle: 'samtagatewayApp.billItem.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -53,7 +53,7 @@ export const billItemPopupRoute: Routes = [
         component: BillItemPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.billItem.home.title'
+            pageTitle: 'samtagatewayApp.billItem.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -63,7 +63,7 @@ export const billItemPopupRoute: Routes = [
         component: BillItemPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.billItem.home.title'
+            pageTitle: 'samtagatewayApp.billItem.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -73,7 +73,7 @@ export const billItemPopupRoute: Routes = [
         component: BillItemDeletePopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.billItem.home.title'
+            pageTitle: 'samtagatewayApp.billItem.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

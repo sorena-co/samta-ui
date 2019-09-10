@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "OrderType" : {
             "null": "",
             "BOUNDARY_TRANSIT": "مرزی-ترانزیت",

@@ -36,7 +36,7 @@ export const requestTestResultRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_REQUEST_TEST_RESULT'],
-            pageTitle: 'niopdcgatewayApp.requestTestResult.home.title'
+            pageTitle: 'samtagatewayApp.requestTestResult.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const requestTestResultPopupRoute: Routes = [
         component: RequestTestResultPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_REQUEST_TEST_RESULT'],
-            pageTitle: 'niopdcgatewayApp.requestTestResult.home.title'
+            pageTitle: 'samtagatewayApp.requestTestResult.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const requestTestResultPopupRoute: Routes = [
         component: RequestTestResultPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_REQUEST_TEST_RESULT'],
-            pageTitle: 'niopdcgatewayApp.requestTestResult.home.title'
+            pageTitle: 'samtagatewayApp.requestTestResult.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const requestTestResultPopupRoute: Routes = [
         component: RequestTestResultDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_REQUEST_TEST_RESULT'],
-            pageTitle: 'niopdcgatewayApp.requestTestResult.home.title'
+            pageTitle: 'samtagatewayApp.requestTestResult.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const requestTestResultPopupRoute: Routes = [
         component: RequestTestResultPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_REQUEST_TEST_RESULT'],
-            pageTitle: 'niopdcgatewayApp.requestTestResult.home.title'
+            pageTitle: 'samtagatewayApp.requestTestResult.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

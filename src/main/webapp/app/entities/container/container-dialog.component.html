@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="container.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.container.home.createLabel">
+            jhiTranslate="samtagatewayApp.container.home.createLabel">
             Create</h4>
         <h4 *ngIf="container.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.container.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.container.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.container.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.container.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.container.title"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.container.title"
                            for="field_title">Title</label>
                     <input
                         [disabled]="isView"
@@ -53,7 +53,7 @@
             <div class="col-xs-12 col-md-6">
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.container.code"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.container.code"
                            for="field_code">Code</label>
                     <input
                         [disabled]="isView"
@@ -91,7 +91,7 @@
 
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.container.capacity"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.container.capacity"
                            for="field_capacity">Capacity</label>
                     <input [disabled]="isView" type="number" class="form-control" name="capacity"
                            id="field_capacity"
@@ -117,7 +117,7 @@
             <div class="col-xs-12 col-md-6">
 
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.container.productUnit" for="field_productUnit">Product
+                    <label jhiTranslate="samtagatewayApp.container.productUnit" for="field_productUnit">Product
                         Unit</label>
                     <select [disabled]="isView" class="form-control" id="field_productUnit" name="productUnit"
                             [(ngModel)]="container.productUnitId" required>

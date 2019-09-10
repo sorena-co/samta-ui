@@ -164,7 +164,7 @@ export class LoanComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
         this.breadcrumbItems.push({label: title, routerLink: ['/']});
             });
-        this.translateService.get('niopdcgatewayApp.loan.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.loan.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

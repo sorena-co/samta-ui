@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "VerifyStatus" : {
             "null": "",
             "ACTIVE": "ACTIVE",

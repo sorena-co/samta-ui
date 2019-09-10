@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "consumption" : {
             "home": {
                 "title": "Consumptions",

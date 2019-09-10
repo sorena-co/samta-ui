@@ -33,7 +33,7 @@ export const plaqueRuleRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_PLAQUE_RULE'],
-            pageTitle: 'niopdcgatewayApp.plaqueRule.home.title'
+            pageTitle: 'samtagatewayApp.plaqueRule.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const plaqueRulePopupRoute: Routes = [
     component: PlaqueRulePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_PLAQUE_RULE'],
-        pageTitle: 'niopdcgatewayApp.plaqueRule.home.title'
+        pageTitle: 'samtagatewayApp.plaqueRule.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const plaqueRulePopupRoute: Routes = [
     component: PlaqueRulePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_PLAQUE_RULE'],
-        pageTitle: 'niopdcgatewayApp.plaqueRule.home.title'
+        pageTitle: 'samtagatewayApp.plaqueRule.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const plaqueRulePopupRoute: Routes = [
     component: PlaqueRuleDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_PLAQUE_RULE'],
-        pageTitle: 'niopdcgatewayApp.plaqueRule.home.title'
+        pageTitle: 'samtagatewayApp.plaqueRule.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const plaqueRulePopupRoute: Routes = [
       component: PlaqueRulePopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_PLAQUE_RULE'],
-          pageTitle: 'niopdcgatewayApp.plaqueRule.home.title'
+          pageTitle: 'samtagatewayApp.plaqueRule.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

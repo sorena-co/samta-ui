@@ -71,7 +71,7 @@ export class SellReportByProductComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.sellReportByProduct.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.sellReportByProduct.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

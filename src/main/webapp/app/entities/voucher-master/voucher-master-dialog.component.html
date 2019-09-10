@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMaster.confirmDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMaster.confirmDate"
                            for="field_confirmDate">Confirm Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00" id="field_confirmDate"
@@ -43,7 +43,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMaster.locationId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMaster.locationId"
                            for="field_locationId">Location Id</label>
                     <input-location-selector [disabled]="isView" class="form-control"
                                              [(ngModel)]="voucherMaster.locationId"
@@ -72,7 +72,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMaster.userConfirm"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMaster.userConfirm"
                            for="field_userConfirm">User Confirm</label>
                     <input [disabled]="isView" type="text" class="form-control" name="userConfirm"
                            id="field_userConfirm"
@@ -88,7 +88,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMaster.docNumber"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMaster.docNumber"
                            for="field_docNumber">Doc Number</label>
                     <input [disabled]="isView" type="text" class="form-control" name="docNumber" id="field_docNumber"
                            [(ngModel)]="voucherMaster.docNumber" maxlength="30"/>
@@ -105,10 +105,10 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMaster.status" for="field_status">Status</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMaster.status" for="field_status">Status</label>
                     <select class="form-control" name="status" [(ngModel)]="voucherMaster.status" id="field_status"  required>
-                        <option value="CONFIRM">{{'niopdcgatewayApp.VoucherMasterStatus.CONFIRM' | translate}}</option>
-                        <option value="PENDING">{{'niopdcgatewayApp.VoucherMasterStatus.PENDING' | translate}}</option>
+                        <option value="CONFIRM">{{'samtagatewayApp.VoucherMasterStatus.CONFIRM' | translate}}</option>
+                        <option value="PENDING">{{'samtagatewayApp.VoucherMasterStatus.PENDING' | translate}}</option>
                     </select>
                     <div [hidden]="!(editForm.controls.status?.dirty && editForm.controls.status?.invalid)">
                         <small class="form-text text-danger"
@@ -120,7 +120,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMaster.voucherType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMaster.voucherType"
                            for="field_voucherType">Voucher Type</label>
                     <select class="form-control" id="field_voucherType" name="voucherType"
                             [(ngModel)]="voucherMaster.voucherTypeId" required>
@@ -143,7 +143,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMaster.description"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMaster.description"
                            for="field_description">Description</label>
                     <textarea [disabled]="isView" type="text" class="form-control" name="description"
                            id="field_description"

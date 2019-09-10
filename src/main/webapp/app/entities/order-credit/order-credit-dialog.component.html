@@ -1,7 +1,7 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="myOrderCreditLabel" jhiTranslate="niopdcgatewayApp.orderCredit.home.createOrEditLabel">Create or edit a Order Credit</h4>
+        <h4 class="modal-title" id="myOrderCreditLabel" jhiTranslate="samtagatewayApp.orderCredit.home.createOrEditLabel">Create or edit a Order Credit</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;</button>
     </div>
@@ -13,55 +13,55 @@
                    [(ngModel)]="orderCredit.id" readonly />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderCredit.customerCreditId" for="field_customerCreditId">Customer Credit Id</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.orderCredit.customerCreditId" for="field_customerCreditId">Customer Credit Id</label>
             <input type="number" class="form-control" name="customerCreditId" id="field_customerCreditId"
                 [(ngModel)]="orderCredit.customerCreditId" />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderCredit.decreasedCredit" for="field_decreasedCredit">Decreased Credit</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.orderCredit.decreasedCredit" for="field_decreasedCredit">Decreased Credit</label>
             <input type="number" class="form-control" name="decreasedCredit" id="field_decreasedCredit"
                 [(ngModel)]="orderCredit.decreasedCredit" />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderCredit.decreasedAmount" for="field_decreasedAmount">Decreased Amount</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.orderCredit.decreasedAmount" for="field_decreasedAmount">Decreased Amount</label>
             <input type="number" class="form-control" name="decreasedAmount" id="field_decreasedAmount"
                 [(ngModel)]="orderCredit.decreasedAmount" />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderCredit.decreasedCost" for="field_decreasedCost">Decreased Cost</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.orderCredit.decreasedCost" for="field_decreasedCost">Decreased Cost</label>
             <input type="number" class="form-control" name="decreasedCost" id="field_decreasedCost"
                 [(ngModel)]="orderCredit.decreasedCost" />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderCredit.creditNumber" for="field_creditNumber">Credit Number</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.orderCredit.creditNumber" for="field_creditNumber">Credit Number</label>
             <input type="number" class="form-control" name="creditNumber" id="field_creditNumber"
                 [(ngModel)]="orderCredit.creditNumber" />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderCredit.buyTypeUsage" for="field_buyTypeUsage">Buy Type Usage</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.orderCredit.buyTypeUsage" for="field_buyTypeUsage">Buy Type Usage</label>
             <select class="form-control" name="buyTypeUsage" [(ngModel)]="orderCredit.buyTypeUsage" id="field_buyTypeUsage" >
-                <option value="COST">{{'niopdcgatewayApp.BuyTypeUsage.COST' | translate}}</option>
-                <option value="PRODUCT">{{'niopdcgatewayApp.BuyTypeUsage.PRODUCT' | translate}}</option>
-                <option value="BOTH">{{'niopdcgatewayApp.BuyTypeUsage.BOTH' | translate}}</option>
+                <option value="COST">{{'samtagatewayApp.BuyTypeUsage.COST' | translate}}</option>
+                <option value="PRODUCT">{{'samtagatewayApp.BuyTypeUsage.PRODUCT' | translate}}</option>
+                <option value="BOTH">{{'samtagatewayApp.BuyTypeUsage.BOTH' | translate}}</option>
             </select>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderCredit.settled" for="field_settled">Settled</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.orderCredit.settled" for="field_settled">Settled</label>
             <input type="checkbox" class="form-control" name="settled" id="field_settled"
                 [(ngModel)]="orderCredit.settled" />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderCredit.buyGroup" for="field_buyGroup">Buy Group</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.orderCredit.buyGroup" for="field_buyGroup">Buy Group</label>
             <select class="form-control" name="buyGroup" [(ngModel)]="orderCredit.buyGroup" id="field_buyGroup" >
-                <option value="QUOTA">{{'niopdcgatewayApp.BuyGroup.QUOTA' | translate}}</option>
-                <option value="CREDIT">{{'niopdcgatewayApp.BuyGroup.CREDIT' | translate}}</option>
-                <option value="PREBUY">{{'niopdcgatewayApp.BuyGroup.PREBUY' | translate}}</option>
-                <option value="FINANCIAL_LICENSE">{{'niopdcgatewayApp.BuyGroup.FINANCIAL_LICENSE' | translate}}</option>
+                <option value="QUOTA">{{'samtagatewayApp.BuyGroup.QUOTA' | translate}}</option>
+                <option value="CREDIT">{{'samtagatewayApp.BuyGroup.CREDIT' | translate}}</option>
+                <option value="PREBUY">{{'samtagatewayApp.BuyGroup.PREBUY' | translate}}</option>
+                <option value="FINANCIAL_LICENSE">{{'samtagatewayApp.BuyGroup.FINANCIAL_LICENSE' | translate}}</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderCredit.order" for="field_order">Order</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.orderCredit.order" for="field_order">Order</label>
             <select class="form-control" id="field_order" name="order" [(ngModel)]="orderCredit.orderId"  required>
                 <option *ngIf="!editForm.value.order" [ngValue]="null" selected></option>
                 <option [ngValue]="orderOption.id" *ngFor="let orderOption of orders; trackBy: trackOrderById">{{orderOption.orderNo}}</option>
@@ -74,7 +74,7 @@
             </small>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.orderCredit.orderProduct" for="field_orderProduct">Order Product</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.orderCredit.orderProduct" for="field_orderProduct">Order Product</label>
             <select class="form-control" id="field_orderProduct" name="orderProduct" [(ngModel)]="orderCredit.orderProductId" >
                 <option [ngValue]="null"></option>
                 <option [ngValue]="orderProductOption.id" *ngFor="let orderProductOption of orderproducts; trackBy: trackOrderProductById">{{orderProductOption.id}}</option>

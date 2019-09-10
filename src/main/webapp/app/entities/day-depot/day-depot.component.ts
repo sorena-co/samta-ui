@@ -201,14 +201,14 @@ export class DayDepotComponent implements OnInit, OnDestroy {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
         if (this.mainDayOperationId != null) {
-            this.translateService.get('niopdcgatewayApp.mainDayOperation.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.mainDayOperation.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: `${title} (${dateJalaliPipe.transform(this.mainDayOperation.day)})`,
                     routerLink: ['/main-day-operation']
                 });
             });
         } else if (this.mainDayDepotId != null) {
-            this.translateService.get('niopdcgatewayApp.dayDepot.home.mainDayDepotTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.dayDepot.home.mainDayDepotTitle').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: `${title} (${dateJalaliPipe.transform(this.mainDayDepot.day)})`,
                     routerLink: ['/main-day-depot']
@@ -216,7 +216,7 @@ export class DayDepotComponent implements OnInit, OnDestroy {
             });
         }
 
-        this.translateService.get('niopdcgatewayApp.dayDepot.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.dayDepot.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

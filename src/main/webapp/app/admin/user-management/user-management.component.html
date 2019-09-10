@@ -82,10 +82,10 @@
                         <select [disabled]="isView" class="form-control" name="userType"
                                 [(ngModel)]="user.userType" id="field_userType" (change)="search()">
                             <option ></option>
-                            <option *ngIf="currentUserType==='HEAD'" value="HEAD">{{'niopdcgatewayApp.userType.HEAD' | translate}}</option>
-                            <option *ngIf="currentUserType==='HEAD'||currentUserType==='AREA'" value="AREA">{{'niopdcgatewayApp.userType.AREA' | translate}}</option>
-                            <option *ngIf="currentUserType==='HEAD'||currentUserType==='REFUEL_CENTER'" value="REFUEL_CENTER">{{'niopdcgatewayApp.userType.REFUEL_CENTER' | translate}}</option>
-                            <option *ngIf="currentUserType==='HEAD'||currentUserType==='AREA'||currentUserType==='ZONE'" value="ZONE">{{'niopdcgatewayApp.userType.ZONE' | translate}}</option>
+                            <option *ngIf="currentUserType==='HEAD'" value="HEAD">{{'samtagatewayApp.userType.HEAD' | translate}}</option>
+                            <option *ngIf="currentUserType==='HEAD'||currentUserType==='AREA'" value="AREA">{{'samtagatewayApp.userType.AREA' | translate}}</option>
+                            <option *ngIf="currentUserType==='HEAD'||currentUserType==='REFUEL_CENTER'" value="REFUEL_CENTER">{{'samtagatewayApp.userType.REFUEL_CENTER' | translate}}</option>
+                            <option *ngIf="currentUserType==='HEAD'||currentUserType==='AREA'||currentUserType==='ZONE'" value="ZONE">{{'samtagatewayApp.userType.ZONE' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -127,7 +127,7 @@
         <p-column field="userType" [header]="'userManagement.userType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>
-                   {{'niopdcgatewayApp.userType.'+item.userType | translate}}
+                   {{'samtagatewayApp.userType.'+item.userType | translate}}
                 </span>
             </ng-template>
         </p-column>
@@ -172,27 +172,27 @@
                                 *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_USER_DATA_ACCESS']"
                                 [routerLink]="['/user-management', item.login, 'user-data-access']">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.userDataAccess.home.title">User Data Access</span>
+                            <span jhiTranslate="samtagatewayApp.userDataAccess.home.title">User Data Access</span>
                         </button>
                         <button class="dropdown-item"
 
                                 *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_IP_FILTER']"
                                 [routerLink]="['/user-management', item.login, 'ip-filter']">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.ipFilter.home.title">Ip Filter</span>
+                            <span jhiTranslate="samtagatewayApp.ipFilter.home.title">Ip Filter</span>
                         </button>
                         <button class="dropdown-item"
                                 *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_USER_TOKEN']"
                                 [routerLink]="['/user-management', item.login, 'user-token']">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.userToken.home.title">User-token</span>
+                            <span jhiTranslate="samtagatewayApp.userToken.home.title">User-token</span>
                         </button>
                         <button class="dropdown-item"
                                 *jhiHasAnyAuthority="['ROLE_ADMIN', 'CREATE_REFUEL_CENTER_USER']"
                                 replaceUrl="true"
                                 [routerLink]="['/', { outlets: { popup: 'user-refuel-center-new/'+ item.login} }]">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.userRefuelCenter.home.title">refuelCenter-user</span>
+                            <span jhiTranslate="samtagatewayApp.userRefuelCenter.home.title">refuelCenter-user</span>
                         </button>
                     </div>
                 </div>

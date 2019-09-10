@@ -159,10 +159,10 @@ export class CarTypeLimitComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.carTypeLimit.home.customerTypeTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.carTypeLimit.home.customerTypeTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + ` (${this.customerType.title})`, routerLink: ['/customer-type']});
         });
-        this.translateService.get('niopdcgatewayApp.carTypeLimit.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.carTypeLimit.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

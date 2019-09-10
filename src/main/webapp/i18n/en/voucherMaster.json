@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "voucherMaster" : {
             "home": {
                 "title": "Voucher Masters",

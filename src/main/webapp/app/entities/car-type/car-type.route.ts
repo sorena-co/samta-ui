@@ -33,7 +33,7 @@ export const carTypeRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CAR_TYPE'],
-            pageTitle: 'niopdcgatewayApp.carType.home.title'
+            pageTitle: 'samtagatewayApp.carType.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const carTypePopupRoute: Routes = [
     component: CarTypePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_CAR_TYPE'],
-        pageTitle: 'niopdcgatewayApp.carType.home.title'
+        pageTitle: 'samtagatewayApp.carType.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const carTypePopupRoute: Routes = [
     component: CarTypePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_CAR_TYPE'],
-        pageTitle: 'niopdcgatewayApp.carType.home.title'
+        pageTitle: 'samtagatewayApp.carType.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const carTypePopupRoute: Routes = [
     component: CarTypeDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_CAR_TYPE'],
-        pageTitle: 'niopdcgatewayApp.carType.home.title'
+        pageTitle: 'samtagatewayApp.carType.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const carTypePopupRoute: Routes = [
       component: CarTypePopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_CAR_TYPE'],
-          pageTitle: 'niopdcgatewayApp.carType.home.title'
+          pageTitle: 'samtagatewayApp.carType.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

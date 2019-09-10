@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "voucherTemplate" : {
             "home": {
                 "title": "الگوهای سند",

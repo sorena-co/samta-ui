@@ -36,7 +36,7 @@ export const measurementOilTankRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_MEASUREMENT_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.measurementOilTank.home.title'
+            pageTitle: 'samtagatewayApp.measurementOilTank.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const measurementOilTankPopupRoute: Routes = [
         component: MeasurementOilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_MEASUREMENT_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.measurementOilTank.home.title'
+            pageTitle: 'samtagatewayApp.measurementOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const measurementOilTankPopupRoute: Routes = [
         component: MeasurementOilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_MEASUREMENT_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.measurementOilTank.home.title'
+            pageTitle: 'samtagatewayApp.measurementOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const measurementOilTankPopupRoute: Routes = [
         component: MeasurementOilTankDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_MEASUREMENT_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.measurementOilTank.home.title'
+            pageTitle: 'samtagatewayApp.measurementOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const measurementOilTankPopupRoute: Routes = [
         component: MeasurementOilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_MEASUREMENT_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.measurementOilTank.home.title'
+            pageTitle: 'samtagatewayApp.measurementOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

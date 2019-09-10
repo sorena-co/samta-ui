@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "customerReport": {
             "startDate":"شروع تاریخ ثبت",
             "finishDate":"پایان تاریخ ثبت",

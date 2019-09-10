@@ -1,12 +1,12 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 *ngIf="testResult.id==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.testResult.home.createLabel">
+        <h4 *ngIf="testResult.id==null" class="modal-title" id="createLabel" jhiTranslate="samtagatewayApp.testResult.home.createLabel">
             Create</h4>
         <h4 *ngIf="testResult.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.testResult.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.testResult.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.testResult.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.testResult.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.appearance"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.appearance"
                        for="field_appearance">Appearance</label>
                 <input [disabled]="isView" type="text" class="form-control" name="appearance" id="field_appearance"
                        [(ngModel)]="testResult.appearance" required/>
@@ -33,7 +33,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.densityAt15"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.densityAt15"
                        for="field_densityAt15">Density At 15</label>
                 <input [disabled]="isView" type="text" class="form-control" name="densityAt15" id="field_densityAt15"
                        [(ngModel)]="testResult.densityAt15" required/>
@@ -48,7 +48,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.distillation"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.distillation"
                        for="field_distillation">Distillation</label>
                 <input [disabled]="isView" type="text" class="form-control" name="distillation" id="field_distillation"
                        [(ngModel)]="testResult.distillation" required/>
@@ -65,7 +65,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.ibp"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.ibp"
                        for="field_ibp">Ibp</label>
                 <input [disabled]="isView" type="text" class="form-control" name="ibp" id="field_ibp"
                        [(ngModel)]="testResult.ibp" required/>
@@ -80,7 +80,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.tenPresentRecovered"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.tenPresentRecovered"
                        for="field_tenPresentRecovered">Ten Present Recovered</label>
                 <input [disabled]="isView" type="text" class="form-control" name="tenPresentRecovered"
                        id="field_tenPresentRecovered"
@@ -97,7 +97,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.fiftyPresentRecovered"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.fiftyPresentRecovered"
                        for="field_fiftyPresentRecovered">Fifty Present Recovered</label>
                 <input [disabled]="isView" type="text" class="form-control" name="fiftyPresentRecovered"
                        id="field_fiftyPresentRecovered"
@@ -116,7 +116,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.ninetyPresentRecovered"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.ninetyPresentRecovered"
                        for="field_ninetyPresentRecovered">Ninety Present Recovered</label>
                 <input [disabled]="isView" type="text" class="form-control" name="ninetyPresentRecovered"
                        id="field_ninetyPresentRecovered"
@@ -133,7 +133,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.fbp"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.fbp"
                        for="field_fbp">Fbp</label>
                 <input [disabled]="isView" type="text" class="form-control" name="fbp" id="field_fbp"
                        [(ngModel)]="testResult.fbp" required/>
@@ -148,7 +148,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.rl"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.rl"
                        for="field_rl">Rl</label>
                 <input [disabled]="isView" type="text" class="form-control" name="rl" id="field_rl"
                        [(ngModel)]="testResult.rl" required/>
@@ -164,7 +164,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.existentGum"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.existentGum"
                        for="field_existentGum">Existent Gum</label>
                 <input [disabled]="isView" type="text" class="form-control" name="existentGum" id="field_existentGum"
                        [(ngModel)]="testResult.existentGum" required/>
@@ -179,7 +179,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.flashPoint"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.flashPoint"
                        for="field_flashPoint">Flash Point</label>
                 <input [disabled]="isView" type="text" class="form-control" name="flashPoint" id="field_flashPoint"
                        [(ngModel)]="testResult.flashPoint" required/>
@@ -194,7 +194,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.copperCorrosion"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.copperCorrosion"
                        for="field_copperCorrosion">Copper Corrosion</label>
                 <input [disabled]="isView" type="text" class="form-control" name="copperCorrosion"
                        id="field_copperCorrosion"
@@ -213,7 +213,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.freezing"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.freezing"
                        for="field_freezing">Freezing</label>
                 <input [disabled]="isView" type="text" class="form-control" name="freezing" id="field_freezing"
                        [(ngModel)]="testResult.freezing" required/>
@@ -228,7 +228,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.conductivity"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.conductivity"
                        for="field_conductivity">Conductivity</label>
                 <input [disabled]="isView" type="text" class="form-control" name="conductivity" id="field_conductivity"
                        [(ngModel)]="testResult.conductivity" required/>
@@ -243,7 +243,7 @@
             </div>
             <div class="col-xs-12 col-md-4" style="text-align: center;margin-top: auto">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.testResult.isSend" for="field_isSend">Is
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.testResult.isSend" for="field_isSend">Is
                     Send</label>
                 <input [disabled]="isView" type="checkbox" class="form-control" name="isSend" id="field_isSend"
                        [(ngModel)]="testResult.isSend"/>

@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.refuelCenter"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.refuelCenter"
                                    for="field_refuelCenter">RefuelCenter</label>
                             <select class="form-control" id="field_refuelCenter"
                                     name="refuelCenter"
@@ -33,7 +33,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.totalSell.startDate"
+                                   jhiTranslate="samtagatewayApp.totalSell.startDate"
                                    for="field_startDate">startDate</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00:00"
@@ -60,7 +60,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.totalSell.finishDate"
+                                   jhiTranslate="samtagatewayApp.totalSell.finishDate"
                                    for="field_finishDate">finishDate</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="23:59:59"
@@ -119,7 +119,7 @@
             </button>
         </ng-template>
 
-        <kendo-grid-column field="day" [title]="'niopdcgatewayApp.totalSell.day' | translate"
+        <kendo-grid-column field="day" [title]="'samtagatewayApp.totalSell.day' | translate"
                            width="130">
             <ng-template kendoGridCellTemplate let-dataItem>
                 <span>{{dataItem.day | dateJalali}}</span>
@@ -129,19 +129,19 @@
 
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="productName" [title]="'niopdcgatewayApp.totalSell.productName' | translate"
+        <kendo-grid-column field="productName" [title]="'samtagatewayApp.totalSell.productName' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="airportName" [title]="'niopdcgatewayApp.totalSell.airportName' | translate"
+        <kendo-grid-column field="airportName" [title]="'samtagatewayApp.totalSell.airportName' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="amount" [title]="'niopdcgatewayApp.totalSell.amount' | translate"
+        <kendo-grid-column field="amount" [title]="'samtagatewayApp.totalSell.amount' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="price" [title]="'niopdcgatewayApp.totalSell.price' | translate"
+        <kendo-grid-column field="price" [title]="'samtagatewayApp.totalSell.price' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>

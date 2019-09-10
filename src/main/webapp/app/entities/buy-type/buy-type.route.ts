@@ -34,7 +34,7 @@ export const buyTypeRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_BUY_TYPE'],
-            pageTitle: 'niopdcgatewayApp.buyType.home.title'
+            pageTitle: 'samtagatewayApp.buyType.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -46,7 +46,7 @@ export const buyTypePopupRoute: Routes = [
     component: BuyTypePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'CREATE_BUY_TYPE'],
-        pageTitle: 'niopdcgatewayApp.buyType.home.title'
+        pageTitle: 'samtagatewayApp.buyType.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -56,7 +56,7 @@ export const buyTypePopupRoute: Routes = [
     component: BuyTypePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'EDIT_BUY_TYPE'],
-        pageTitle: 'niopdcgatewayApp.buyType.home.title'
+        pageTitle: 'samtagatewayApp.buyType.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -66,7 +66,7 @@ export const buyTypePopupRoute: Routes = [
     component: BuyTypeDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'DELETE_BUY_TYPE'],
-        pageTitle: 'niopdcgatewayApp.buyType.home.title'
+        pageTitle: 'samtagatewayApp.buyType.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -76,7 +76,7 @@ export const buyTypePopupRoute: Routes = [
       component: BuyTypePopupComponent,
       data: {
           authorities: ['ROLE_ADMIN', 'VIEW_BUY_TYPE'],
-          pageTitle: 'niopdcgatewayApp.buyType.home.title'
+          pageTitle: 'samtagatewayApp.buyType.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

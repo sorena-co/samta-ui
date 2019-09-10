@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "allowedPath" : {
             "home": {
                 "title": "Allowed Paths",

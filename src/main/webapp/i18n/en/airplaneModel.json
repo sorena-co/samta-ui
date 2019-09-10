@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "airplaneModel" : {
             "home": {
                 "title": "Airplane Models",

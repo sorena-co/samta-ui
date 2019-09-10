@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "transferPlatformToUnit" : {
             "home": {
                 "title": "Transfer Platform To Units",

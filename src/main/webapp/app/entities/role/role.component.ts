@@ -139,7 +139,7 @@ export class RoleComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.role.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.role.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

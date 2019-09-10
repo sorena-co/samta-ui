@@ -145,7 +145,7 @@ export class CostDialogComponent implements OnInit {
                         if (parentCost.contractTypes && parentCost.contractTypes.length > 0) {
                             this.contractTypes = [];
                             parentCost.contractTypes.forEach((value) => {
-                                this.translateService.get('niopdcgatewayApp.ContractType.' + value).subscribe((title) => {
+                                this.translateService.get('samtagatewayApp.ContractType.' + value).subscribe((title) => {
                                     const newVar = {
                                         label: title,
                                         'value': value
@@ -163,7 +163,7 @@ export class CostDialogComponent implements OnInit {
                             }
                             this.allContractTypes.forEach((value: ContractType) => {
 
-                                this.translateService.get('niopdcgatewayApp.ContractType.' + value).subscribe((title) => {
+                                this.translateService.get('samtagatewayApp.ContractType.' + value).subscribe((title) => {
                                     const newVar = {
                                         label: title,
                                         'value': value
@@ -212,7 +212,7 @@ export class CostDialogComponent implements OnInit {
                 if (this.costGroup.contractTypes && this.costGroup.contractTypes.length > 0) {
                     this.contractTypes = [];
                     this.costGroup.contractTypes.forEach((value) => {
-                        this.translateService.get('niopdcgatewayApp.ContractType.' + value).subscribe((title) => {
+                        this.translateService.get('samtagatewayApp.ContractType.' + value).subscribe((title) => {
                             const newVar = {
                                 label: title,
                                 'value': value
@@ -230,7 +230,7 @@ export class CostDialogComponent implements OnInit {
                     }
                     this.allContractTypes.forEach((value: ContractType) => {
 
-                        this.translateService.get('niopdcgatewayApp.ContractType.' + value).subscribe((title) => {
+                        this.translateService.get('samtagatewayApp.ContractType.' + value).subscribe((title) => {
                             const newVar = {
                                 label: title,
                                 'value': value

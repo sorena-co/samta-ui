@@ -142,10 +142,10 @@ export class CurrencyRateComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.currencyRate.home.currencyTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.currencyRate.home.currencyTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + ` (${this.currency.title})`, routerLink: ['/currency']});
         });
-        this.translateService.get('niopdcgatewayApp.currencyRate.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.currencyRate.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

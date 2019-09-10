@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "bankTransaction" : {
             "home": {
                 "title": "Bank Transactions",

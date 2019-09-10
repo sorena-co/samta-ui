@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.momentSheet.refuelCenter"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.momentSheet.refuelCenter"
                                    for="field_refuelCenter">RefuelCenter</label>
                             <select class="form-control" id="field_refuelCenter"
                                     name="refuelCenter"
@@ -32,7 +32,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.momentSheet.startTime"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.momentSheet.startTime"
                                    for="field_startTime">Register Date</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00:00"
@@ -45,7 +45,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.momentSheet.endTime"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.momentSheet.endTime"
                                    for="field_endTime">Register Date</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="23:59:59"
@@ -90,24 +90,24 @@
             </button>
         </ng-template>
 
-        <kendo-grid-column [locked]="true" field="oilTankCode" [title]="'niopdcgatewayApp.momentSheet.oilTankCode' | translate"
+        <kendo-grid-column [locked]="true" field="oilTankCode" [title]="'samtagatewayApp.momentSheet.oilTankCode' | translate"
                            width="200">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="startMeasurementOilTankAmount"
-                           [title]="'niopdcgatewayApp.momentSheet.startMeasurementOilTankAmount' | translate"
+                           [title]="'samtagatewayApp.momentSheet.startMeasurementOilTankAmount' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
 
-        <kendo-grid-column field="day" [title]="'niopdcgatewayApp.metreSheet.date' | translate" width="130">
+        <kendo-grid-column field="day" [title]="'samtagatewayApp.metreSheet.date' | translate" width="130">
             <ng-template kendoGridCellTemplate let-dataItem>
                 <span>{{dataItem.day | dateTimeJalali}}</span>
             </ng-template>
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="receivedFromOilTanks"
-                           [title]="'niopdcgatewayApp.momentSheet.receivedFromOilTanks' | translate" width="130">
+                           [title]="'samtagatewayApp.momentSheet.receivedFromOilTanks' | translate" width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
                 let-group="group"
@@ -121,7 +121,7 @@
             </ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="receivedFromLogBooks"
-                           [title]="'niopdcgatewayApp.momentSheet.receivedFromLogBooks' | translate" width="130">
+                           [title]="'samtagatewayApp.momentSheet.receivedFromLogBooks' | translate" width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
                 let-group="group"
@@ -135,7 +135,7 @@
             </ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="receivedFromUnitOilTanks"
-                           [title]="'niopdcgatewayApp.momentSheet.receivedFromUnitOilTanks' | translate" width="130">
+                           [title]="'samtagatewayApp.momentSheet.receivedFromUnitOilTanks' | translate" width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
                 let-group="group"
@@ -148,7 +148,7 @@
                 {{('report.sum' | translate) + ':' + total['receivedFromUnitOilTanks']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="sumOfReceive" [title]="'niopdcgatewayApp.momentSheet.sumOfReceive' | translate"
+        <kendo-grid-column field="sumOfReceive" [title]="'samtagatewayApp.momentSheet.sumOfReceive' | translate"
                            width="200">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -163,7 +163,7 @@
             </ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="sendToUnitOilTanks"
-                           [title]="'niopdcgatewayApp.momentSheet.sendToUnitOilTanks' | translate"
+                           [title]="'samtagatewayApp.momentSheet.sendToUnitOilTanks' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -178,7 +178,7 @@
             </ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="sendToServiceOilTanks"
-                           [title]="'niopdcgatewayApp.momentSheet.sendToServiceOilTanks' | translate" width="200">
+                           [title]="'samtagatewayApp.momentSheet.sendToServiceOilTanks' | translate" width="200">
             <ng-template
                 kendoGridGroupFooterTemplate
                 let-group="group"
@@ -192,7 +192,7 @@
             </ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="sendToContaminatedOilTanks"
-                           [title]="'niopdcgatewayApp.momentSheet.sendToContaminatedOilTanks' | translate" width="200">
+                           [title]="'samtagatewayApp.momentSheet.sendToContaminatedOilTanks' | translate" width="200">
             <ng-template
                 kendoGridGroupFooterTemplate
                 let-group="group"
@@ -206,7 +206,7 @@
             </ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="sendToOilTanks"
-                           [title]="'niopdcgatewayApp.momentSheet.sendToOilTanks' | translate" width="130">
+                           [title]="'samtagatewayApp.momentSheet.sendToOilTanks' | translate" width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
                 let-group="group"
@@ -220,7 +220,7 @@
             </ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="sendToLogBooks"
-                           [title]="'niopdcgatewayApp.momentSheet.sendToLogBooks' | translate" width="130">
+                           [title]="'samtagatewayApp.momentSheet.sendToLogBooks' | translate" width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
                 let-group="group"
@@ -233,7 +233,7 @@
                 {{('report.sum' | translate) + ':' + total['sendToLogBooks']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="sumOfSends" [title]="'niopdcgatewayApp.momentSheet.sumOfSends' | translate"
+        <kendo-grid-column field="sumOfSends" [title]="'samtagatewayApp.momentSheet.sumOfSends' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -247,7 +247,7 @@
                 {{('report.sum' | translate) + ':' + total['sumOfSends']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="addition" [title]="'niopdcgatewayApp.momentSheet.addition' | translate" width="130">
+        <kendo-grid-column field="addition" [title]="'samtagatewayApp.momentSheet.addition' | translate" width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
                 let-group="group"
@@ -260,7 +260,7 @@
                 {{('report.sum' | translate) + ':' + total['addition']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="deductible" [title]="'niopdcgatewayApp.momentSheet.deductible' | translate"
+        <kendo-grid-column field="deductible" [title]="'samtagatewayApp.momentSheet.deductible' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -275,7 +275,7 @@
             </ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="endMeasurementOilTankAmount"
-                           [title]="'niopdcgatewayApp.momentSheet.endMeasurementOilTankAmount' | translate"
+                           [title]="'samtagatewayApp.momentSheet.endMeasurementOilTankAmount' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>

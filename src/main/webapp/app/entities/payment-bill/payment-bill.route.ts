@@ -35,7 +35,7 @@ export const paymentBillRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.paymentBill.home.title'
+            pageTitle: 'samtagatewayApp.paymentBill.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -47,7 +47,7 @@ export const paymentBillPopupRoute: Routes = [
         component: PaymentBillPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.paymentBill.home.title'
+            pageTitle: 'samtagatewayApp.paymentBill.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -57,7 +57,7 @@ export const paymentBillPopupRoute: Routes = [
         component: PaymentBillPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.paymentBill.home.title'
+            pageTitle: 'samtagatewayApp.paymentBill.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -67,7 +67,7 @@ export const paymentBillPopupRoute: Routes = [
         component: PaymentBillDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.paymentBill.home.title'
+            pageTitle: 'samtagatewayApp.paymentBill.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

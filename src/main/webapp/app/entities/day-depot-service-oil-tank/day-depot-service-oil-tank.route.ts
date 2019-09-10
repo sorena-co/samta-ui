@@ -36,7 +36,7 @@ export const dayDepotServiceOilTankRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_DAY_DEPOT_SERVICE_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.dayDepotServiceOilTank.home.title'
+            pageTitle: 'samtagatewayApp.dayDepotServiceOilTank.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const dayDepotServiceOilTankPopupRoute: Routes = [
         component: DayDepotServiceOilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_DAY_DEPOT_SERVICE_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.dayDepotServiceOilTank.home.title'
+            pageTitle: 'samtagatewayApp.dayDepotServiceOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const dayDepotServiceOilTankPopupRoute: Routes = [
         component: DayDepotServiceOilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_DAY_DEPOT_SERVICE_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.dayDepotServiceOilTank.home.title'
+            pageTitle: 'samtagatewayApp.dayDepotServiceOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const dayDepotServiceOilTankPopupRoute: Routes = [
         component: DayDepotServiceOilTankDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_DAY_DEPOT_SERVICE_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.dayDepotServiceOilTank.home.title'
+            pageTitle: 'samtagatewayApp.dayDepotServiceOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const dayDepotServiceOilTankPopupRoute: Routes = [
         component: DayDepotServiceOilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_DAY_DEPOT_SERVICE_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.dayDepotServiceOilTank.home.title'
+            pageTitle: 'samtagatewayApp.dayDepotServiceOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -88,7 +88,7 @@ export const dayDepotServiceOilTankPopupRoute: Routes = [
         component: FullEndMeasurementPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CLOSE_MAIN_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.mainDayDepot.home.title'
+            pageTitle: 'samtagatewayApp.mainDayDepot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

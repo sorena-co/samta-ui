@@ -10,7 +10,7 @@ export const momentSheetRoute: Routes = [
         component: MomentSheetAoComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_REPORT_MOMENT_SHEET_AO'],
-            pageTitle: 'niopdcgatewayApp.momentSheet.home.aoTitle'
+            pageTitle: 'samtagatewayApp.momentSheet.home.aoTitle'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -19,7 +19,7 @@ export const momentSheetRoute: Routes = [
         component: MomentSheetDepotComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_REPORT_MOMENT_SHEET_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.momentSheet.home.depotTitle'
+            pageTitle: 'samtagatewayApp.momentSheet.home.depotTitle'
         },
         canActivate: [UserRouteAccessService]
     }

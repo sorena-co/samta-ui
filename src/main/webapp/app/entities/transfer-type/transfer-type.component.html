@@ -21,27 +21,27 @@
             <p-row>
                 <p-column field="title" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.transferType.title">Title</span>
+                        <span jhiTranslate="samtagatewayApp.transferType.title">Title</span>
                     </ng-template>
                 </p-column>
                 <p-column field="transferFrom" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.transferType.transferFrom">Transfer From</span>
+                        <span jhiTranslate="samtagatewayApp.transferType.transferFrom">Transfer From</span>
                     </ng-template>
                 </p-column>
                 <p-column field="transferTo" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.transferType.transferTo">Transfer To</span>
+                        <span jhiTranslate="samtagatewayApp.transferType.transferTo">Transfer To</span>
                     </ng-template>
                 </p-column>
                 <p-column field="activeMetre" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.transferType.activeMetre">Active Metre</span>
+                        <span jhiTranslate="samtagatewayApp.transferType.activeMetre">Active Metre</span>
                     </ng-template>
                 </p-column>
                 <p-column field="transferToHimself" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.transferType.transferToHimself">Transfer To Himself</span>
+                        <span jhiTranslate="samtagatewayApp.transferType.transferToHimself">Transfer To Himself</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -61,14 +61,14 @@
                         <select class="form-control" name="transferFrom" (change)="search()"
                                 [(ngModel)]="transferType.transferFrom" id="field_transferFrom">
                             <option></option>
-                            <option value="MAIN">{{'niopdcgatewayApp.oilTankType.MAIN' | translate}}</option>
-                            <option value="CONTAMINATED">{{'niopdcgatewayApp.oilTankType.CONTAMINATED' | translate}}</option>
-                            <option value="SERVICE_TANK">{{'niopdcgatewayApp.oilTankType.SERVICE_TANK' | translate}}</option>
-                            <option value="UNIT">{{'niopdcgatewayApp.oilTankType.UNIT' | translate}}</option>
-                            <option value="PLATFORM">{{'niopdcgatewayApp.oilTankType.PLATFORM' | translate}}</option>
-                            <option value="WATER_METHANOL">{{'niopdcgatewayApp.oilTankType.WATER_METHANOL' | translate}}</option>
-                            <option value="EARTH">{{'niopdcgatewayApp.oilTankType.EARTH' | translate}}</option>
-                            <option value="BASE_PRODUCT">{{'niopdcgatewayApp.oilTankType.BASE_PRODUCT' | translate}}</option>
+                            <option value="MAIN">{{'samtagatewayApp.oilTankType.MAIN' | translate}}</option>
+                            <option value="CONTAMINATED">{{'samtagatewayApp.oilTankType.CONTAMINATED' | translate}}</option>
+                            <option value="SERVICE_TANK">{{'samtagatewayApp.oilTankType.SERVICE_TANK' | translate}}</option>
+                            <option value="UNIT">{{'samtagatewayApp.oilTankType.UNIT' | translate}}</option>
+                            <option value="PLATFORM">{{'samtagatewayApp.oilTankType.PLATFORM' | translate}}</option>
+                            <option value="WATER_METHANOL">{{'samtagatewayApp.oilTankType.WATER_METHANOL' | translate}}</option>
+                            <option value="EARTH">{{'samtagatewayApp.oilTankType.EARTH' | translate}}</option>
+                            <option value="BASE_PRODUCT">{{'samtagatewayApp.oilTankType.BASE_PRODUCT' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -76,14 +76,14 @@
                     <ng-template pTemplate="header">
                         <select class="form-control" name="transferTo" (change)="search()" [(ngModel)]="transferType.transferTo" id="field_transferTo">
                             <option></option>
-                            <option value="MAIN">{{'niopdcgatewayApp.oilTankType.MAIN' | translate}}</option>
-                            <option value="CONTAMINATED">{{'niopdcgatewayApp.oilTankType.CONTAMINATED' | translate}}</option>
-                            <option value="SERVICE_TANK">{{'niopdcgatewayApp.oilTankType.SERVICE_TANK' | translate}}</option>
-                            <option value="UNIT">{{'niopdcgatewayApp.oilTankType.UNIT' | translate}}</option>
-                            <option value="PLATFORM">{{'niopdcgatewayApp.oilTankType.PLATFORM' | translate}}</option>
-                            <option value="WATER_METHANOL">{{'niopdcgatewayApp.oilTankType.WATER_METHANOL' | translate}}</option>
-                            <option value="EARTH">{{'niopdcgatewayApp.oilTankType.EARTH' | translate}}</option>
-                            <option value="BASE_PRODUCT">{{'niopdcgatewayApp.oilTankType.BASE_PRODUCT' | translate}}</option>
+                            <option value="MAIN">{{'samtagatewayApp.oilTankType.MAIN' | translate}}</option>
+                            <option value="CONTAMINATED">{{'samtagatewayApp.oilTankType.CONTAMINATED' | translate}}</option>
+                            <option value="SERVICE_TANK">{{'samtagatewayApp.oilTankType.SERVICE_TANK' | translate}}</option>
+                            <option value="UNIT">{{'samtagatewayApp.oilTankType.UNIT' | translate}}</option>
+                            <option value="PLATFORM">{{'samtagatewayApp.oilTankType.PLATFORM' | translate}}</option>
+                            <option value="WATER_METHANOL">{{'samtagatewayApp.oilTankType.WATER_METHANOL' | translate}}</option>
+                            <option value="EARTH">{{'samtagatewayApp.oilTankType.EARTH' | translate}}</option>
+                            <option value="BASE_PRODUCT">{{'samtagatewayApp.oilTankType.BASE_PRODUCT' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -91,8 +91,8 @@
                     <ng-template pTemplate="header">
                         <select class="form-control" name="activeMetre" (change)="search()" [(ngModel)]="transferType.activeMetre" id="field_activeMetre">
                             <option></option>
-                            <option value="SOURCE">{{'niopdcgatewayApp.ActiveMetre.SOURCE' | translate}}</option>
-                            <option value="TARGET">{{'niopdcgatewayApp.ActiveMetre.TARGET' | translate}}</option>
+                            <option value="SOURCE">{{'samtagatewayApp.ActiveMetre.SOURCE' | translate}}</option>
+                            <option value="TARGET">{{'samtagatewayApp.ActiveMetre.TARGET' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -101,10 +101,10 @@
                         <select class="form-control" (change)="search()" name="transferToHimself"
                                 [(ngModel)]="transferType.transferToHimself">
                             <option></option>
-                            <option value="true" jhiTranslate="niopdcgatewayApp.transferType.transferToHimselfTrue">
+                            <option value="true" jhiTranslate="samtagatewayApp.transferType.transferToHimselfTrue">
                                 true
                             </option>
-                            <option value="false" jhiTranslate="niopdcgatewayApp.transferType.transferToHimselfFalse">
+                            <option value="false" jhiTranslate="samtagatewayApp.transferType.transferToHimselfFalse">
                                 false
                             </option>
                         </select>
@@ -123,20 +123,20 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="title" [header]="'niopdcgatewayApp.transferType.title' | translate"></p-column>
-        <p-column field="transferFrom" [header]="'niopdcgatewayApp.transferType.transferFrom' | translate">
+        <p-column field="title" [header]="'samtagatewayApp.transferType.title' | translate"></p-column>
+        <p-column field="transferFrom" [header]="'samtagatewayApp.transferType.transferFrom' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.oilTankType.' + item.transferFrom}}">{{item.transferFrom}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.oilTankType.' + item.transferFrom}}">{{item.transferFrom}}</span>
             </ng-template></p-column>
-        <p-column field="transferTo" [header]="'niopdcgatewayApp.transferType.transferTo' | translate">
+        <p-column field="transferTo" [header]="'samtagatewayApp.transferType.transferTo' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.oilTankType.' + item.transferTo}}">{{item.transferTo}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.oilTankType.' + item.transferTo}}">{{item.transferTo}}</span>
             </ng-template></p-column>
-        <p-column field="activeMetre" [header]="'niopdcgatewayApp.transferType.activeMetre' | translate">
+        <p-column field="activeMetre" [header]="'samtagatewayApp.transferType.activeMetre' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.ActiveMetre.' + item.activeMetre}}">{{item.activeMetre}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.ActiveMetre.' + item.activeMetre}}">{{item.activeMetre}}</span>
             </ng-template></p-column>
-        <p-column field="transferToHimself" [header]="'niopdcgatewayApp.transferType.transferToHimself' | translate">
+        <p-column field="transferToHimself" [header]="'samtagatewayApp.transferType.transferToHimself' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span class="fa" [ngClass]="{'fa-check':item.transferToHimself,'fa-close':!item.transferToHimself}"></span>
             </ng-template></p-column>

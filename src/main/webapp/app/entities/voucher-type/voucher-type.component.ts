@@ -149,13 +149,13 @@ export class VoucherTypeComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.voucherTypeGroup.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.voucherTypeGroup.home.title').subscribe((title) => {
             this.breadcrumbItems.push({
                 label: `${title} (${this.voucherTypeGroup.title})`,
                 routerLink: ['/voucher-type-group']
             });
         });
-        this.translateService.get('niopdcgatewayApp.voucherType.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.voucherType.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

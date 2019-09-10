@@ -36,7 +36,7 @@ export const waterMethanolMixerRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_WATER_METHANOL_MIXER'],
-            pageTitle: 'niopdcgatewayApp.waterMethanolMixer.home.title'
+            pageTitle: 'samtagatewayApp.waterMethanolMixer.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const waterMethanolMixerPopupRoute: Routes = [
         component: WaterMethanolMixerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_WATER_METHANOL_MIXER'],
-            pageTitle: 'niopdcgatewayApp.waterMethanolMixer.home.title'
+            pageTitle: 'samtagatewayApp.waterMethanolMixer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const waterMethanolMixerPopupRoute: Routes = [
         component: WaterMethanolMixerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_WATER_METHANOL_MIXER'],
-            pageTitle: 'niopdcgatewayApp.waterMethanolMixer.home.title'
+            pageTitle: 'samtagatewayApp.waterMethanolMixer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const waterMethanolMixerPopupRoute: Routes = [
         component: WaterMethanolMixerDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_WATER_METHANOL_MIXER'],
-            pageTitle: 'niopdcgatewayApp.waterMethanolMixer.home.title'
+            pageTitle: 'samtagatewayApp.waterMethanolMixer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const waterMethanolMixerPopupRoute: Routes = [
         component: WaterMethanolMixerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_WATER_METHANOL_MIXER'],
-            pageTitle: 'niopdcgatewayApp.waterMethanolMixer.home.title'
+            pageTitle: 'samtagatewayApp.waterMethanolMixer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

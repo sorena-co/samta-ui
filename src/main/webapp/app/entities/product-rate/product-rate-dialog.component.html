@@ -3,23 +3,23 @@
     <div class="modal-header">
         <div *ngIf="productRate.productId!=null">
             <h4 *ngIf="productRate.id==null" class="modal-title" id="createLabel"
-                jhiTranslate="niopdcgatewayApp.productRate.home.createLabel">
+                jhiTranslate="samtagatewayApp.productRate.home.createLabel">
                 Create</h4>
             <h4 *ngIf="productRate.id!=null && !isView" class="modal-title" id="editLabel"
-                jhiTranslate="niopdcgatewayApp.productRate.home.createOrEditLabel">
+                jhiTranslate="samtagatewayApp.productRate.home.createOrEditLabel">
                 Edit</h4>
-            <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.productRate.home.view">
+            <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.productRate.home.view">
                 View</h4>
         </div>
         <div *ngIf="productRate.containerId!=null">
             <h4 *ngIf="productRate.id==null" class="modal-title" id="containerCreateLabel"
-                jhiTranslate="niopdcgatewayApp.containerRate.home.createLabel">
+                jhiTranslate="samtagatewayApp.containerRate.home.createLabel">
                 Create</h4>
             <h4 *ngIf="productRate.id!=null && !isView" class="modal-title" id="containerEditLabel"
-                jhiTranslate="niopdcgatewayApp.containerRate.home.createOrEditLabel">
+                jhiTranslate="samtagatewayApp.containerRate.home.createOrEditLabel">
                 Edit</h4>
             <h4 *ngIf="isView" class="modal-title" id="containerViewLabel"
-                jhiTranslate="niopdcgatewayApp.containerRate.home.view">
+                jhiTranslate="samtagatewayApp.containerRate.home.view">
                 View</h4>
         </div>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
@@ -33,9 +33,9 @@
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
                     <label *ngIf="!productRate.containerId" class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.productRate.src" for="field_src">Src</label>
+                           jhiTranslate="samtagatewayApp.productRate.src" for="field_src">Src</label>
                     <label *ngIf="productRate.containerId" class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.containerRate.src" for="field_src">Src</label>
+                           jhiTranslate="samtagatewayApp.containerRate.src" for="field_src">Src</label>
                     <input [disabled]="isView || disableFields" type="text" class="form-control" name="src"
                            id="field_src"
                            [(ngModel)]="productRate.src"
@@ -63,10 +63,10 @@
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
                     <label *ngIf="!productRate.containerId" class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.productRate.price"
+                           jhiTranslate="samtagatewayApp.productRate.price"
                            for="field_price">Price</label>
                     <label *ngIf="productRate.containerId" class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.containerRate.price"
+                           jhiTranslate="samtagatewayApp.containerRate.price"
                            for="field_price">Price</label>
                     <input [disabled]="isView || disableFields" type="number" class="form-control" name="price"
                            id="field_price"
@@ -90,9 +90,9 @@
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
                     <label *ngIf="!productRate.containerId" class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.productRate.src" for="field_src">Src</label>
+                           jhiTranslate="samtagatewayApp.productRate.src" for="field_src">Src</label>
                     <label *ngIf="productRate.containerId" class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.containerRate.src" for="field_src">Src</label>
+                           jhiTranslate="samtagatewayApp.containerRate.src" for="field_src">Src</label>
                     <input [disabled]="isView || disableFields" type="text" class="form-control" name="src"
                            id="field_src1"
                            [(ngModel)]="productRate.src"
@@ -120,10 +120,10 @@
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
                     <label *ngIf="!productRate.containerId" class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.productRate.price"
+                           jhiTranslate="samtagatewayApp.productRate.price"
                            for="field_price">Price</label>
                     <label *ngIf="productRate.containerId" class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.containerRate.price"
+                           jhiTranslate="samtagatewayApp.containerRate.price"
                            for="field_price">Price</label>
                     <input [disabled]="isView || disableFields || galon" type="number" class="form-control" name="price"
                            id="field_price1"
@@ -147,7 +147,7 @@
                 <div class="form-group">
                     <div class="row">
                         <label class="form-control-label col-md-2"
-                               jhiTranslate="niopdcgatewayApp.productRate.galon"
+                               jhiTranslate="samtagatewayApp.productRate.galon"
                                for="field_price">Price</label>
                         <input type="checkbox" [(ngModel)]="galon" class="col-md-1 form-control" name="galon-check"
                                style="text-align: center;margin-top: 7px"/>
@@ -163,7 +163,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.productRate.startDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.productRate.startDate"
                            for="field_startDate">Start Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView || disableFields" [rtlActive]="true" time="00:00:00"
@@ -188,7 +188,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.productRate.finishDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.productRate.finishDate"
                            for="field_finishDate">Finish Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [minDateTime]="(maxDate)?maxDate:{year: 2000, month: 12, day: 31}"
@@ -203,7 +203,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.productRate.currency"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.productRate.currency"
                            for="field_currency">Currency</label>
                     <select [disabled]="isView || disableFields" class="form-control" id="field_currency"
                             name="currency"
@@ -225,7 +225,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.productRate.rateGroup"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.productRate.rateGroup"
                            for="field_rateGroup">Rate Group</label>
                     <select [disabled]="isView || disableFields" class="form-control" id="field_rateGroup"
                             name="rateGroup" required

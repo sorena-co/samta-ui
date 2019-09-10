@@ -141,7 +141,7 @@ export class UserMgmtDialogComponent implements OnInit {
                 (res: HttpResponse<Role[]>) => {
                     this.roles = res.body;
                     for (let i = 0; i < this.roles.length; i++) {
-                        this.roles[i].label = this.roles[i].name + '[' + this.translateService.instant('niopdcgatewayApp.userType.' + this.roles[i].userType) + ']';
+                        this.roles[i].label = this.roles[i].name + '[' + this.translateService.instant('samtagatewayApp.userType.' + this.roles[i].userType) + ']';
                         this.roles[i].value = this.roles[i].id;
                     }
 

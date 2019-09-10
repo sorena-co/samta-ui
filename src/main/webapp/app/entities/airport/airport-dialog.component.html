@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="airport.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.airport.home.createLabel">
+            jhiTranslate="samtagatewayApp.airport.home.createLabel">
             Create</h4>
         <h4 *ngIf="airport.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.airport.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.airport.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.airport.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.airport.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.airport.persianTitle"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.airport.persianTitle"
                            for="field_persianTitle">Persian Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="persianTitle"
                            id="field_persianTitle"
@@ -46,7 +46,7 @@
             <div class="col-md-6">
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.airport.englishTitle"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.airport.englishTitle"
                            for="field_englishTitle">English Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="englishTitle"
                            id="field_englishTitle"
@@ -76,7 +76,7 @@
             <div class="col-md-4">
 
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.airport.targetAirports" for="field_targetAirports">Target
+                    <label jhiTranslate="samtagatewayApp.airport.targetAirports" for="field_targetAirports">Target
                         Airports</label>
                     <jhi-airport-selector [disabled]="isView" class="form-control" id="field_targetAirports"
                                           (onChange)="onChangeTargetAirport($event)"
@@ -104,7 +104,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.airport.code"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.airport.code"
                            for="field_code">Code</label>
                     <input [disabled]="isView" type="number" [numeric]="{min:0,max:9999}" class="form-control"
                            name="code" id="field_code"
@@ -130,7 +130,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.airport.globalCode"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.airport.globalCode"
                            for="field_globalCode">global Code</label>
                     <input [disabled]="isView" type="text" class="form-control" name="globalCode"
                            id="field_globalCode"
@@ -149,7 +149,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.airport.countryId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.airport.countryId"
                            for="field_country">Country</label>
                     <select [disabled]="isView" class="form-control" id="field_country" name="country"
                             [(ngModel)]="airport.countryId"
@@ -165,7 +165,7 @@
             </div>
             <div class="col-md-6" *ngIf="airport.countryId">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.airport.regionId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.airport.regionId"
                            for="field_regionId">Region Id</label>
                     <!--<input [disabled]="isView" type="number" class="form-control" name="regionId"
                            id="field_regionId"

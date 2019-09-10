@@ -321,13 +321,13 @@ export class ChangeFilterElementComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.changeFilterElement.home.requestFilterElementTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.changeFilterElement.home.requestFilterElementTitle').subscribe((title) => {
             this.breadcrumbItems.push({
                 label: title + ` (${this.requestFilterElement.id})`,
                 routerLink: ['/request-filter-element']
             });
         });
-        this.translateService.get('niopdcgatewayApp.changeFilterElement.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.changeFilterElement.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

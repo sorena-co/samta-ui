@@ -148,10 +148,10 @@ export class PosComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.pos.home.airportTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.pos.home.airportTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + ` (${this.airport.persianTitle})`, routerLink: ['/airport']});
         });
-        this.translateService.get('niopdcgatewayApp.pos.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.pos.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

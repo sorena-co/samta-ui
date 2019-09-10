@@ -213,13 +213,13 @@ export class SendProductComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.transfer.home.mainDayDepotTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.transfer.home.mainDayDepotTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: [mainDayDepotUrl]});
         });
-        this.translateService.get('niopdcgatewayApp.transfer.home.dayDepotTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.transfer.home.dayDepotTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + `(${this.dayDepot.oilTankTitle})`, routerLink: [dayDepotUrl]});
         });
-        this.translateService.get('niopdcgatewayApp.sendProduct.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.sendProduct.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

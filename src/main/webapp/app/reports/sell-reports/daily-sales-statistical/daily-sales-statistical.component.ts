@@ -58,7 +58,7 @@ export class DailySalesStatisticalComponent implements OnInit, OnDestroy {
         for (const buyGroup in BuyGroup) {
             if (parseInt(buyGroup, 10) >= 0) {
                 this.buyGroups.push({
-                    label: this.translateService.instant('niopdcgatewayApp.BuyGroup.' + BuyGroup[buyGroup]),
+                    label: this.translateService.instant('samtagatewayApp.BuyGroup.' + BuyGroup[buyGroup]),
                     value: BuyGroup[buyGroup]
                 });
             }
@@ -77,7 +77,7 @@ export class DailySalesStatisticalComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.dailySalesStatistical.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.dailySalesStatistical.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

@@ -33,7 +33,7 @@ export const airplaneModelRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.airplaneModel.home.title'
+            pageTitle: 'samtagatewayApp.airplaneModel.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -41,7 +41,7 @@ export const airplaneModelRoute: Routes = [
         component: AirplaneModelDetailComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.airplaneModel.home.title'
+            pageTitle: 'samtagatewayApp.airplaneModel.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -53,7 +53,7 @@ export const airplaneModelPopupRoute: Routes = [
         component: AirplaneModelPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.airplaneModel.home.title'
+            pageTitle: 'samtagatewayApp.airplaneModel.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -63,7 +63,7 @@ export const airplaneModelPopupRoute: Routes = [
         component: AirplaneModelPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.airplaneModel.home.title'
+            pageTitle: 'samtagatewayApp.airplaneModel.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -73,7 +73,7 @@ export const airplaneModelPopupRoute: Routes = [
         component: AirplaneModelDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.airplaneModel.home.title'
+            pageTitle: 'samtagatewayApp.airplaneModel.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

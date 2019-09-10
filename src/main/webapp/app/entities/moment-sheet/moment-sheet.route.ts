@@ -33,7 +33,7 @@ export const momentSheetRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_MOMENT_SHEETS'],
-            pageTitle: 'niopdcgatewayApp.momentSheets.home.title'
+            pageTitle: 'samtagatewayApp.momentSheets.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

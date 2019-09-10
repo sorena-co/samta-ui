@@ -21,17 +21,17 @@
             <p-row>
                 <p-column field="rate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.currencyRate.rate">Rate</span>
+                        <span jhiTranslate="samtagatewayApp.currencyRate.rate">Rate</span>
                     </ng-template>
                 </p-column>
                 <p-column field="activeStartDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.currencyRate.activeStartDate">Active Start Date</span>
+                        <span jhiTranslate="samtagatewayApp.currencyRate.activeStartDate">Active Start Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="activeFinishDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.currencyRate.activeFinishDate">Active Finish Date</span>
+                        <span jhiTranslate="samtagatewayApp.currencyRate.activeFinishDate">Active Finish Date</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -75,12 +75,12 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="rate" [header]="'niopdcgatewayApp.currencyRate.rate' | translate"></p-column>
-        <p-column field="activeStartDate" [header]="'niopdcgatewayApp.currencyRate.activeStartDate' | translate">
+        <p-column field="rate" [header]="'samtagatewayApp.currencyRate.rate' | translate"></p-column>
+        <p-column field="activeStartDate" [header]="'samtagatewayApp.currencyRate.activeStartDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.activeStartDate | dateJalali}}</span>
             </ng-template></p-column>
-        <p-column field="activeFinishDate" [header]="'niopdcgatewayApp.currencyRate.activeFinishDate' | translate">
+        <p-column field="activeFinishDate" [header]="'samtagatewayApp.currencyRate.activeFinishDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.activeFinishDate | dateJalali}}</span>
             </ng-template></p-column>

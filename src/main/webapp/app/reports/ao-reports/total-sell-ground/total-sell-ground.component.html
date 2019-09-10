@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.refuelCenter"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.refuelCenter"
                                    for="field_refuelCenter">RefuelCenter</label>
                             <select class="form-control" id="field_refuelCenter"
                                     name="refuelCenter"
@@ -33,7 +33,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.totalSellGround.startDate"
+                                   jhiTranslate="samtagatewayApp.totalSellGround.startDate"
                                    for="field_startDate">startDate</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00:00"
@@ -60,7 +60,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.totalSellGround.finishDate"
+                                   jhiTranslate="samtagatewayApp.totalSellGround.finishDate"
                                    for="field_finishDate">finishDate</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="23:59:59"
@@ -119,27 +119,27 @@
             </button>
         </ng-template>
 
-        <kendo-grid-column field="amount" [title]="'niopdcgatewayApp.totalSellGround.amount' | translate"
+        <kendo-grid-column field="amount" [title]="'samtagatewayApp.totalSellGround.amount' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="rate" [title]="'niopdcgatewayApp.totalSellGround.rate' | translate"
+        <kendo-grid-column field="rate" [title]="'samtagatewayApp.totalSellGround.rate' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="totalPrice" [title]="'niopdcgatewayApp.totalSellGround.totalPrice' | translate"
+        <kendo-grid-column field="totalPrice" [title]="'samtagatewayApp.totalSellGround.totalPrice' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="productTitle" [title]="'niopdcgatewayApp.totalSellGround.productTitle' | translate"
+        <kendo-grid-column field="productTitle" [title]="'samtagatewayApp.totalSellGround.productTitle' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="productCode" [title]="'niopdcgatewayApp.totalSellGround.productCode' | translate"
+        <kendo-grid-column field="productCode" [title]="'samtagatewayApp.totalSellGround.productCode' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="sellToDifferent" [title]="'niopdcgatewayApp.totalSellGround.sellToDifferent' | translate"
+        <kendo-grid-column field="sellToDifferent" [title]="'samtagatewayApp.totalSellGround.sellToDifferent' | translate"
                            width="130">
             <ng-template kendoGridCellTemplate let-item>
                 <span class="fa" [ngClass]="{'fa-check':item.sellToDifferent,'fa-close':!item.sellToDifferent}"></span>

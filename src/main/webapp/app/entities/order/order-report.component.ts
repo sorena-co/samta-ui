@@ -64,7 +64,7 @@ export class OrderReportComponent implements OnInit/*, OnDestroy */ {
         this.translateService.get('global.menu.sell.order' + (this.mode === 'order' ? '' : '_' + this.mode)).subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/order', this.mode]});
         });
-        this.translateService.get('niopdcgatewayApp.order.home.report').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.order.home.report').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

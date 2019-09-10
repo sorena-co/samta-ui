@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "factor" : {
             "home": {
                 "title": "لیست فاکتورها",

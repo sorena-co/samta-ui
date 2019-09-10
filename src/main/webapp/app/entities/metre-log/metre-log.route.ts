@@ -36,7 +36,7 @@ export const metreLogRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_METRE_LOG'],
-            pageTitle: 'niopdcgatewayApp.metreLog.home.title'
+            pageTitle: 'samtagatewayApp.metreLog.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const metreLogPopupRoute: Routes = [
         component: MetreLogPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_METRE_LOG'],
-            pageTitle: 'niopdcgatewayApp.metreLog.home.title'
+            pageTitle: 'samtagatewayApp.metreLog.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const metreLogPopupRoute: Routes = [
         component: MetreLogPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_METRE_LOG'],
-            pageTitle: 'niopdcgatewayApp.metreLog.home.title'
+            pageTitle: 'samtagatewayApp.metreLog.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const metreLogPopupRoute: Routes = [
         component: MetreLogDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_METRE_LOG'],
-            pageTitle: 'niopdcgatewayApp.metreLog.home.title'
+            pageTitle: 'samtagatewayApp.metreLog.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const metreLogPopupRoute: Routes = [
         component: MetreLogPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_METRE_LOG'],
-            pageTitle: 'niopdcgatewayApp.metreLog.home.title'
+            pageTitle: 'samtagatewayApp.metreLog.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

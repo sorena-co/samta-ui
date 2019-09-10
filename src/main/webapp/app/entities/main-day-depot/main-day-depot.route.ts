@@ -39,7 +39,7 @@ export const mainDayDepotRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_MAIN_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.mainDayDepot.home.title'
+            pageTitle: 'samtagatewayApp.mainDayDepot.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -51,7 +51,7 @@ export const mainDayDepotPopupRoute: Routes = [
         component: MainDayDepotPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_MAIN_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.mainDayDepot.home.title'
+            pageTitle: 'samtagatewayApp.mainDayDepot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -61,7 +61,7 @@ export const mainDayDepotPopupRoute: Routes = [
         component: MainDayDepotPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_MAIN_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.mainDayDepot.home.title'
+            pageTitle: 'samtagatewayApp.mainDayDepot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -71,7 +71,7 @@ export const mainDayDepotPopupRoute: Routes = [
         component: MainDayDepotDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_MAIN_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.mainDayDepot.home.title'
+            pageTitle: 'samtagatewayApp.mainDayDepot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -81,7 +81,7 @@ export const mainDayDepotPopupRoute: Routes = [
         component: MainDayDepotClosePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CLOSE_MAIN_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.mainDayDepot.home.title'
+            pageTitle: 'samtagatewayApp.mainDayDepot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -91,7 +91,7 @@ export const mainDayDepotPopupRoute: Routes = [
         component: MainDayDepotUpdatePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'UPDATE_MAIN_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.mainDayDepot.home.title'
+            pageTitle: 'samtagatewayApp.mainDayDepot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -101,7 +101,7 @@ export const mainDayDepotPopupRoute: Routes = [
         component: MainDayDepotOpenPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'OPEN_MAIN_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.mainDayDepot.home.title'
+            pageTitle: 'samtagatewayApp.mainDayDepot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -111,7 +111,7 @@ export const mainDayDepotPopupRoute: Routes = [
         component: MainDayDepotPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_MAIN_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.mainDayDepot.home.title'
+            pageTitle: 'samtagatewayApp.mainDayDepot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

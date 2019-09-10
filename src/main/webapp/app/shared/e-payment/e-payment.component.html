@@ -5,7 +5,7 @@
                 <div class="row" *ngIf="state === BankTransactionState[BankTransactionState.BEGIN]">
                     <div class="col-md-12" style="text-align: center; margin-bottom: 10px">
                         <label class="form-control-label"
-                               jhiTranslate="niopdcgatewayApp.payment.lastPayment"
+                               jhiTranslate="samtagatewayApp.payment.lastPayment"
                                for="payment">Payment</label>
                     </div>
                     <jhi-payment-selector style="margin: auto; border: 2px solid #ccc;"
@@ -21,7 +21,7 @@
                 </div>
                 <ngb-tabset (tabChange)="changeType($event)"
                     *ngIf="!onlyPayment && state === BankTransactionState[BankTransactionState.BEGIN]">
-                    <ngb-tab id="EPAYMENT"  [title]="'niopdcgatewayApp.payment.ePayment' | translate">
+                    <ngb-tab id="EPAYMENT"  [title]="'samtagatewayApp.payment.ePayment' | translate">
                         <ng-template ngbTabContent>
                             <div>
                                 <input type='text' hidden name='RequestIdentifier' value='{{requestIdentifier}}'/>
@@ -33,7 +33,7 @@
                                     <div class="col-md-12"
                                          style="text-align: center; margin-bottom: 10px;margin-top: 10px; ">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.payment.amountPay"
+                                               jhiTranslate="samtagatewayApp.payment.amountPay"
                                                for="Amount">Amount</label>
                                     </div>
                                     <div class="flex" style="margin: auto">
@@ -57,12 +57,12 @@
                             </div>
                         </ng-template>
                     </ngb-tab>
-                    <ngb-tab id="POS" [title]="'niopdcgatewayApp.payment.pos' | translate" *ngIf="this.pos.ip">
+                    <ngb-tab id="POS" [title]="'samtagatewayApp.payment.pos' | translate" *ngIf="this.pos.ip">
                         <ng-template ngbTabContent>
                             <div class="row">
                                 <div class="col-md-12"
                                      style="text-align: center; margin-bottom: 10px;margin-top: 10px; ">
-                                    <label jhiTranslate="niopdcgatewayApp.payment.device"
+                                    <label jhiTranslate="samtagatewayApp.payment.device"
                                            for="field_device">device</label>
                                 </div>
                                 <div class="col-md-4" style="margin: auto">
@@ -79,7 +79,7 @@
                                 <div class="col-md-12"
                                      style="text-align: center; margin-bottom: 10px;margin-top: 10px; ">
                                     <label class="form-control-label"
-                                           jhiTranslate="niopdcgatewayApp.payment.amountPay"
+                                           jhiTranslate="samtagatewayApp.payment.amountPay"
                                            for="Amount2">Amount</label>
                                 </div>
                                 <div class="flex col-md-4" style="margin: auto">

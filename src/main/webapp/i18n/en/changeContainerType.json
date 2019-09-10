@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "ChangeContainerType" : {
             "null": "",
             "WITH_CONTAINER": "WITH_CONTAINER",

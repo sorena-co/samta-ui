@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "carTypeLimit" : {
             "home": {
                 "title": "Car Type Limits",

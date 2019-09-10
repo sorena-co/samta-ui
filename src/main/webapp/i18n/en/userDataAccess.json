@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "userDataAccess" : {
             "home": {
                 "title": "User Data Accesses",

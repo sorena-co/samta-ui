@@ -35,7 +35,7 @@ export const sellContractProductRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_SELL_CONTRACT_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.sellContractProduct.home.title'
+            pageTitle: 'samtagatewayApp.sellContractProduct.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -47,7 +47,7 @@ export const sellContractProductPopupRoute: Routes = [
         component: SellContractProductPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_SELL_CONTRACT_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.sellContractProduct.home.title'
+            pageTitle: 'samtagatewayApp.sellContractProduct.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -57,7 +57,7 @@ export const sellContractProductPopupRoute: Routes = [
         component: SellContractProductPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_SELL_CONTRACT_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.sellContractProduct.home.title'
+            pageTitle: 'samtagatewayApp.sellContractProduct.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -67,7 +67,7 @@ export const sellContractProductPopupRoute: Routes = [
         component: SellContractProductDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_SELL_CONTRACT_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.sellContractProduct.home.title'
+            pageTitle: 'samtagatewayApp.sellContractProduct.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -77,7 +77,7 @@ export const sellContractProductPopupRoute: Routes = [
         component: SellContractProductPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_SELL_CONTRACT_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.sellContractProduct.home.title'
+            pageTitle: 'samtagatewayApp.sellContractProduct.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

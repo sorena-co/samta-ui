@@ -1,9 +1,9 @@
 <div>
     <h2>
-        <span jhiTranslate="niopdcgatewayApp.paymentBill.home.title">Payment Bills</span>
+        <span jhiTranslate="samtagatewayApp.paymentBill.home.title">Payment Bills</span>
         <button class="btn btn-primary float-right jh-create-entity create-payment-bill" [routerLink]="['/', { outlets: { popup: ['payment-bill-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="niopdcgatewayApp.paymentBill.home.createLabel">
+            <span  jhiTranslate="samtagatewayApp.paymentBill.home.createLabel">
             Create new Payment Bill
             </span>
         </button>
@@ -17,13 +17,13 @@
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="spentDate"><span jhiTranslate="niopdcgatewayApp.paymentBill.spentDate">Spent Date</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="amount"><span jhiTranslate="niopdcgatewayApp.paymentBill.amount">Amount</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="customerId"><span jhiTranslate="niopdcgatewayApp.paymentBill.customerId">Customer Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="personId"><span jhiTranslate="niopdcgatewayApp.paymentBill.personId">Person Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="type"><span jhiTranslate="niopdcgatewayApp.paymentBill.type">Type</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="billId"><span jhiTranslate="niopdcgatewayApp.paymentBill.billId">Bill Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="paymentId"><span jhiTranslate="niopdcgatewayApp.paymentBill.payment">Payment</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="spentDate"><span jhiTranslate="samtagatewayApp.paymentBill.spentDate">Spent Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="amount"><span jhiTranslate="samtagatewayApp.paymentBill.amount">Amount</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="customerId"><span jhiTranslate="samtagatewayApp.paymentBill.customerId">Customer Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="personId"><span jhiTranslate="samtagatewayApp.paymentBill.personId">Person Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="type"><span jhiTranslate="samtagatewayApp.paymentBill.type">Type</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="billId"><span jhiTranslate="samtagatewayApp.paymentBill.billId">Bill Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="paymentId"><span jhiTranslate="samtagatewayApp.paymentBill.payment">Payment</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>
@@ -34,7 +34,7 @@
                 <td>{{paymentBill.amount}}</td>
                 <td>{{paymentBill.customerId}}</td>
                 <td>{{paymentBill.personId}}</td>
-                <td jhiTranslate="{{'niopdcgatewayApp.SpentType.' + paymentBill.type}}">{{paymentBill.type}}</td>
+                <td jhiTranslate="{{'samtagatewayApp.SpentType.' + paymentBill.type}}">{{paymentBill.type}}</td>
                 <td>{{paymentBill.billId}}</td>
                 <td>
                     <div *ngIf="paymentBill.paymentId">

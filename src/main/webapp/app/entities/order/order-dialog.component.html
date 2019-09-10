@@ -11,10 +11,10 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label *ngIf="mode==='airplane'" class="form-control-label"
-                               jhiTranslate="niopdcgatewayApp.order.locationCustomer"
+                               jhiTranslate="samtagatewayApp.order.locationCustomer"
                                for="field_locationId">Location Id</label>
                         <label *ngIf="mode!=='airplane'" class="form-control-label"
-                               jhiTranslate="niopdcgatewayApp.order.locationId"
+                               jhiTranslate="samtagatewayApp.order.locationId"
                                for="field_locationId">Location Id</label>
                         <app-location-level-selector
                             [multiSelect]="false"
@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.customerId"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.customerId"
                                for="field_customerPersons">field_customerPersons</label>
                         <sell-contract-customer-person-selector
                             [selectObject]="true"
@@ -67,11 +67,11 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label *ngIf="mode==='airplane'" class="form-control-label"
-                               jhiTranslate="niopdcgatewayApp.refuelCenter.home.title"
+                               jhiTranslate="samtagatewayApp.refuelCenter.home.title"
                                for="field_depotId">Depot
                             Id</label>
                         <label *ngIf="mode!=='airplane'" class="form-control-label"
-                               jhiTranslate="niopdcgatewayApp.order.depotId"
+                               jhiTranslate="samtagatewayApp.order.depotId"
                                for="field_depotId">Depot
                             Id</label>
                         <select [disabled]="isView"
@@ -92,7 +92,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.registerDate"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.registerDate"
                                for="field_registerDate">Register Date</label>
                         <div class="d-flex">
                             <ng2-datetimepicker [disableTime]="true" [disabled]="true" [rtlActive]="true" time="00:00"
@@ -114,7 +114,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.orderNo"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.orderNo"
                                for="field_orderNo">Order
                             No</label>
                         <input [disabled]="mode!=='airplane'||isView" type="text" class="form-control" name="orderNo"
@@ -131,7 +131,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.currencyId"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.currencyId"
                                for="field_currencyId">Currency Id</label>
 
                         <select [disabled]="isView"
@@ -151,7 +151,7 @@
                 </div>
                 <div class="col-md-3" *ngIf="currency.isNationalCurrency!==true">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.currencyRateGroupId"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.currencyRateGroupId"
                                for="field_currencyRateGroupId">Currency Rate Group Id</label>
 
                         <select [disabled]="isView"
@@ -172,7 +172,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.buyType"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.buyType"
                                for="field_buyType">Pay
                             Type</label>
                         <select [disabled]="isView"
@@ -185,7 +185,7 @@
                         >
                             <option [ngValue]="buyTypeListOption"
                                     *ngFor="let buyTypeListOption of buyGroups">
-                                {{'niopdcgatewayApp.BuyGroup.'+buyTypeListOption | translate}}
+                                {{'samtagatewayApp.BuyGroup.'+buyTypeListOption | translate}}
                             </option>
                         </select>
                     </div>
@@ -195,23 +195,23 @@
                 <ng-container *ngIf="mode==='airplane'">
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.typeOfFuelReceipt"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.order.typeOfFuelReceipt"
                                    for="field_typeOfFuelReceipt">Type Of Fuel Receipt</label>
                             <!--                            <select class="form-control" name="typeOfFuelReceipt" [(ngModel)]="order.typeOfFuelReceipt"
                                                                 (ngModelChange)="changeTypeOfFuelReceipt($event)"
                                                                 id="field_typeOfFuelReceipt">
-                                                            <option value="TANKER_SALES">{{'niopdcgatewayApp.TypeOfFuelReceipt.TANKER_SALES' |
+                                                            <option value="TANKER_SALES">{{'samtagatewayApp.TypeOfFuelReceipt.TANKER_SALES' |
                                                                 translate}}
                                                             </option>
-                                                            <option value="PIPE_LINE_SALES">{{'niopdcgatewayApp.TypeOfFuelReceipt.PIPE_LINE_SALES' |
+                                                            <option value="PIPE_LINE_SALES">{{'samtagatewayApp.TypeOfFuelReceipt.PIPE_LINE_SALES' |
                                                                 translate}}
                                                             </option>
-                                                            <option value="UNIT_TO_AIRPLANE">{{'niopdcgatewayApp.TypeOfFuelReceipt.UNIT_TO_AIRPLANE'
+                                                            <option value="UNIT_TO_AIRPLANE">{{'samtagatewayApp.TypeOfFuelReceipt.UNIT_TO_AIRPLANE'
                                                                 |
                                                                 translate}}
                                                             </option>
                                                             <option value="UNIT_TO_CUSTOMERS">
-                                                                {{'niopdcgatewayApp.TypeOfFuelReceipt.UNIT_TO_CUSTOMERS' |
+                                                                {{'samtagatewayApp.TypeOfFuelReceipt.UNIT_TO_CUSTOMERS' |
                                                                 translate}}
                                                             </option>
                                                         </select>-->
@@ -225,7 +225,7 @@
                             >
                                 <option [ngValue]="typeOfFuelReceiptListOption"
                                         *ngFor="let typeOfFuelReceiptListOption of typeOfFuelReceipt">
-                                    {{'niopdcgatewayApp.TypeOfFuelReceipt.'+typeOfFuelReceiptListOption | translate}}
+                                    {{'samtagatewayApp.TypeOfFuelReceipt.'+typeOfFuelReceiptListOption | translate}}
                                 </option>
                             </select>
                         </div>
@@ -238,18 +238,18 @@
                                  *ngIf="order.typeOfFuelReceipt===TypeOfFuelReceipt[TypeOfFuelReceipt.UNIT_TO_AIRPLANE]">
                                 <div class="form-group">
                                     <label class="form-control-label"
-                                           jhiTranslate="niopdcgatewayApp.order.flightConditions"
+                                           jhiTranslate="samtagatewayApp.order.flightConditions"
                                            for="field_flightConditions">Flight Conditions</label>
                                     <select class="form-control" name="flightConditions"
                                             [(ngModel)]="order.flightConditions"
                                             (ngModelChange)="onChangeFlightConditions($event)"
                                             id="field_flightConditions">
-                                        <option value="VIP">{{'niopdcgatewayApp.FlightConditions.VIP' | translate}}
+                                        <option value="VIP">{{'samtagatewayApp.FlightConditions.VIP' | translate}}
                                         </option>
-                                        <option value="EMERGENCY">{{'niopdcgatewayApp.FlightConditions.EMERGENCY' |
+                                        <option value="EMERGENCY">{{'samtagatewayApp.FlightConditions.EMERGENCY' |
                                             translate}}
                                         </option>
-                                        <option value="NORMAL">{{'niopdcgatewayApp.FlightConditions.NORMAL' |
+                                        <option value="NORMAL">{{'samtagatewayApp.FlightConditions.NORMAL' |
                                             translate}}
                                         </option>
                                     </select>
@@ -261,15 +261,15 @@
                                  *ngIf="order.typeOfFuelReceipt!==TypeOfFuelReceipt[TypeOfFuelReceipt.PIPE_LINE_SALES]">
                                 <div class="form-group">
                                     <label class="form-control-label"
-                                           jhiTranslate="niopdcgatewayApp.logBook.fuelType" for="field_fuelType">Fuel
+                                           jhiTranslate="samtagatewayApp.logBook.fuelType" for="field_fuelType">Fuel
                                         Type</label>
                                     <select class="form-control" name="fuelType" [(ngModel)]="order.fuelType"
                                             (ngModelChange)="onChangeFuelType($event)"
                                             [disabled]="isView || order.typeOfFuelReceipt===TypeOfFuelReceipt[TypeOfFuelReceipt.TANKER_SALES]"
                                             id="field_fuelType" required>
-                                        <option value="FUEL">{{'niopdcgatewayApp.FuelType.FUEL' | translate}}
+                                        <option value="FUEL">{{'samtagatewayApp.FuelType.FUEL' | translate}}
                                         </option>
-                                        <option value="DE_FUEL">{{'niopdcgatewayApp.FuelType.DE_FUEL' |
+                                        <option value="DE_FUEL">{{'samtagatewayApp.FuelType.DE_FUEL' |
                                             translate}}
                                         </option>
                                     </select>
@@ -280,7 +280,7 @@
                     <div class="col-md-3">
 
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.sourceAirport"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.order.sourceAirport"
                                    for="field_sourceAirport">Source RefuelCenter</label>
                             <div class="form-group">
                                 <select class="form-control" id="field_sourceAirport" name="sourceAirport"
@@ -310,7 +310,7 @@
                 <div class="col-md-3"
                      *ngIf="order.typeOfFuelReceipt===TypeOfFuelReceipt[TypeOfFuelReceipt.UNIT_TO_AIRPLANE]">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.targetAirport"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.targetAirport"
                                for="field_targetAirport">Target RefuelCenter</label>
                        <!-- <select class="form-control" id="field_targetAirport" name="targetAirport"
                                 [disabled]="isView || isEdit"
@@ -345,7 +345,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.description"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.description"
                                for="field_description">Description</label>
                         <textarea [disabled]="isView" type="text" class="form-control" name="description"
                                   id="field_description"
@@ -360,7 +360,7 @@
                 <div class="card-header">
                     <div class="row">
                         <h5 class="col-md-3"
-                            jhiTranslate="niopdcgatewayApp.order.home.titleInfo">
+                            jhiTranslate="samtagatewayApp.order.home.titleInfo">
                             Create or edit
                         </h5>
                         <div class="col-md-8"></div>
@@ -370,7 +370,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="col-md-12">
-                                <label jhiTranslate="niopdcgatewayApp.customer.home.title"></label>
+                                <label jhiTranslate="samtagatewayApp.customer.home.title"></label>
                             </div>
                             <div class="col-md-12">
                                 {{order.customerName != null ? order.customerName + "(" + order.customerCode +
@@ -379,9 +379,9 @@
                         </div>
                         <div class="col-md-2">
                             <div class="col-md-12">
-                                <label *ngIf="mode == 'order'" jhiTranslate="niopdcgatewayApp.order.orderNo"></label>
+                                <label *ngIf="mode == 'order'" jhiTranslate="samtagatewayApp.order.orderNo"></label>
                                 <label *ngIf="mode == 'airplane'"
-                                       jhiTranslate="niopdcgatewayApp.order.orderNoFuelReceipt"></label>
+                                       jhiTranslate="samtagatewayApp.order.orderNoFuelReceipt"></label>
                             </div>
                             <div class="col-md-12">
                                 {{order.orderNo}}
@@ -389,7 +389,7 @@
                         </div>
                         <div class="col-md-2">
                             <div class="col-md-12">
-                                <label jhiTranslate="niopdcgatewayApp.depot.home.title"></label>
+                                <label jhiTranslate="samtagatewayApp.depot.home.title"></label>
                             </div>
                             <div class="col-md-12">
                                 {{order.depotTitle}}
@@ -397,15 +397,15 @@
                         </div>
                         <div class="col-md-2">
                             <div class="col-md-12">
-                                <label jhiTranslate="niopdcgatewayApp.buyType.home.title"></label>
+                                <label jhiTranslate="samtagatewayApp.buyType.home.title"></label>
                             </div>
                             <div class="col-md-12">
-                                {{'niopdcgatewayApp.BuyGroup.'+order.buyGroup | translate}}
+                                {{'samtagatewayApp.BuyGroup.'+order.buyGroup | translate}}
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="col-md-12">
-                                <label jhiTranslate="niopdcgatewayApp.order.registerDate"></label>
+                                <label jhiTranslate="samtagatewayApp.order.registerDate"></label>
                             </div>
                             <div class="col-md-12">
                                 {{order.registerDate | dateJalali}}
@@ -419,7 +419,7 @@
                 <div class="card-header">
                     <div class="row">
                         <h5 class="col-md-3"
-                            jhiTranslate="niopdcgatewayApp.sellContractProduct.home.cardTitle">
+                            jhiTranslate="samtagatewayApp.sellContractProduct.home.cardTitle">
                             Create or edit
                         </h5>
                         <div class="col-md-8"></div>
@@ -433,7 +433,7 @@
                                 [ngClass]="{'col-xs-12 col-md-6':mode!='airplane'
                                 ,'col-xs-12 col-md-4':mode==='airplane'}">
                                 <div class="form-group">
-                                    <label jhiTranslate="niopdcgatewayApp.sellContractProduct.product"
+                                    <label jhiTranslate="samtagatewayApp.sellContractProduct.product"
                                            for="field_product">Product</label>
                                     <!--  <sell-contract-product-selector
                                           [multiSelect]="false"
@@ -469,7 +469,7 @@
                                 ,'col-xs-12 col-md-4':mode==='airplane'}">
                                 <div class="form-group">
                                     <label class="form-control-label"
-                                           jhiTranslate="niopdcgatewayApp.orderProduct.amount"
+                                           jhiTranslate="samtagatewayApp.orderProduct.amount"
                                            for="field_amount">Amount</label>
                                     <input type="number" class="form-control" name="amount" id="field_amount"
                                            [disabled]="isView"
@@ -484,7 +484,7 @@
                                 <div class="col-xs-12 col-md-4">
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.changeContainer.dayDepot"
+                                               jhiTranslate="samtagatewayApp.changeContainer.dayDepot"
                                                for="field_dayDepots">Day Depot</label>
                                         <select [disabled]="isView" class="form-control" id="field_dayDepots"
                                                 name="dayDepots"
@@ -509,7 +509,7 @@
                                 <div class="col-xs-12 col-md-4"
                                      *ngIf="order.typeOfFuelReceipt!==TypeOfFuelReceipt[TypeOfFuelReceipt.PIPE_LINE_SALES]">
                                     <div class="form-group">
-                                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.metre"
+                                        <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.metre"
                                                for="field_metre">Metre</label>
                                         <select class="form-control" id="field_metre" name="metre"
                                                 (ngModelChange)="changeMetre($event)"
@@ -531,7 +531,7 @@
 
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.metreLog.startMeter"
+                                               jhiTranslate="samtagatewayApp.metreLog.startMeter"
                                                for="field_startMeter">Start Meter</label>
                                         <input [disabled]="true" type="number" class="form-control" name="startMeter"
                                                id="field_startMeter"
@@ -546,7 +546,7 @@
 
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.metreLog.endMeter"
+                                               jhiTranslate="samtagatewayApp.metreLog.endMeter"
                                                for="field_endMeter">Start Meter</label>
                                         <input [disabled]="true" type="number" class="form-control" name="endMeter"
                                                id="field_endMeter"
@@ -581,37 +581,37 @@
                             <!--todo background-color-->
                             <p-column field="productTitle" [sortable]="true">
                                 <ng-template pTemplate="header">
-                                    <span jhiTranslate="niopdcgatewayApp.sellContractProduct.product">Product</span>
+                                    <span jhiTranslate="samtagatewayApp.sellContractProduct.product">Product</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="rateGroupTitle" [sortable]="true">
                                 <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.sellContractProduct.rateGroupId">Rate Group Id</span>
+                                    jhiTranslate="samtagatewayApp.sellContractProduct.rateGroupId">Rate Group Id</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="amount" [sortable]="true">
                                 <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.amount">Amount</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.amount">Amount</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="productCost" [sortable]="true">
                                 <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.productCost">Product Cost</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.productCost">Product Cost</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="productRateId" [sortable]="true">
                                 <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.productRateId">productRateId</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.productRateId">productRateId</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="productPrice" [sortable]="true">
                                 <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.productPrice">Product Price</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.productPrice">Product Price</span>
                                 </ng-template>
                             </p-column>
                             <p-column styleClass="col-button">
@@ -621,25 +621,25 @@
                         </p-row>
                     </p-headerColumnGroup>
                     <p-column field="sellContractProductTitle"
-                              [header]="'niopdcgatewayApp.sellContractProduct.product' | translate">
+                              [header]="'samtagatewayApp.sellContractProduct.product' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span [style.color]="item.productColor">{{item.sellContractProductTitle}}</span>
                         </ng-template>
                     </p-column>
                     <p-column field="rateGroupTitle"
-                              [header]="'niopdcgatewayApp.sellContractProduct.rateGroupId' | translate">
+                              [header]="'samtagatewayApp.sellContractProduct.rateGroupId' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span [style.color]="item.productColor">{{item.rateGroupTitle}}</span>
                         </ng-template>
                     </p-column>
                     <p-column field="amount"
-                              [header]="'niopdcgatewayApp.orderProduct.amount' | translate">
+                              [header]="'samtagatewayApp.orderProduct.amount' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span [style.color]="item.productColor">{{item.amount}}</span>
                         </ng-template>
                     </p-column>
                     <p-column field="productCost"
-                              [header]="'niopdcgatewayApp.orderProduct.productCost' | translate">
+                              [header]="'samtagatewayApp.orderProduct.productCost' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <app-order-cost-table
                                 [multiSelect]="false"
@@ -655,13 +655,13 @@
                         </ng-template>
                     </p-column>
                     <p-column field="ratePrice"
-                              [header]="'niopdcgatewayApp.orderProduct.productRateId' | translate">
+                              [header]="'samtagatewayApp.orderProduct.productRateId' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span [style.color]="item.productColor">{{item.ratePrice}}</span>
                         </ng-template>
                     </p-column>
                     <p-column field="price"
-                              [header]="'niopdcgatewayApp.orderProduct.productPrice' | translate">
+                              [header]="'samtagatewayApp.orderProduct.productPrice' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span [style.color]="item.productColor">{{item.price}}</span>
                         </ng-template>
@@ -687,14 +687,14 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.price" for="field_price">Price</label>
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.price" for="field_price">Price</label>
                         <input [disabled]="true" type="number" class="form-control" name="price" id="field_price"
                                [(ngModel)]="order.price"/>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.productPrice"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.productPrice"
                                for="field_productPrice">Product Price</label>
                         <input [disabled]="true" type="number" class="form-control" name="productPrice"
                                id="field_productPrice"
@@ -703,7 +703,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.containerPrice"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.containerPrice"
                                for="field_containerPrice">Container Price</label>
                         <input [disabled]="true" type="number" class="form-control" name="containerPrice"
                                id="field_containerPrice"
@@ -712,7 +712,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.costPrice"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.costPrice"
                                for="field_costPrice">Cost Price</label>
                         <input [disabled]="true" type="number" class="form-control" name="costPrice"
                                id="field_costPrice"
@@ -727,7 +727,7 @@
                 <div class="card-header">
                     <div class="row">
                         <h5 class="col-md-3"
-                            jhiTranslate="niopdcgatewayApp.order.home.titleInfo">
+                            jhiTranslate="samtagatewayApp.order.home.titleInfo">
                             Create or edit
                         </h5>
                         <div class="col-md-8"></div>
@@ -737,7 +737,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="col-md-12">
-                                <label jhiTranslate="niopdcgatewayApp.customer.home.title"></label>
+                                <label jhiTranslate="samtagatewayApp.customer.home.title"></label>
                             </div>
                             <div class="col-md-12">
                                 {{order.customerName != null ? order.customerName + "(" + order.customerCode +
@@ -746,9 +746,9 @@
                         </div>
                         <div class="col-md-2">
                             <div class="col-md-12">
-                                <label *ngIf="mode == 'order'" jhiTranslate="niopdcgatewayApp.order.orderNo"></label>
+                                <label *ngIf="mode == 'order'" jhiTranslate="samtagatewayApp.order.orderNo"></label>
                                 <label *ngIf="mode == 'airplane'"
-                                       jhiTranslate="niopdcgatewayApp.order.orderNoFuelReceipt"></label>
+                                       jhiTranslate="samtagatewayApp.order.orderNoFuelReceipt"></label>
                             </div>
                             <div class="col-md-12">
                                 {{order.orderNo}}
@@ -756,7 +756,7 @@
                         </div>
                         <div class="col-md-2">
                             <div class="col-md-12">
-                                <label jhiTranslate="niopdcgatewayApp.depot.home.title"></label>
+                                <label jhiTranslate="samtagatewayApp.depot.home.title"></label>
                             </div>
                             <div class="col-md-12">
                                 {{order.depotTitle}}
@@ -764,15 +764,15 @@
                         </div>
                         <div class="col-md-2">
                             <div class="col-md-12">
-                                <label jhiTranslate="niopdcgatewayApp.buyType.home.title"></label>
+                                <label jhiTranslate="samtagatewayApp.buyType.home.title"></label>
                             </div>
                             <div class="col-md-12">
-                                {{'niopdcgatewayApp.BuyGroup.'+order.buyGroup | translate}}
+                                {{'samtagatewayApp.BuyGroup.'+order.buyGroup | translate}}
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="col-md-12">
-                                <label jhiTranslate="niopdcgatewayApp.order.registerDate"></label>
+                                <label jhiTranslate="samtagatewayApp.order.registerDate"></label>
                             </div>
                             <div class="col-md-12">
                                 {{order.registerDate | dateJalali}}
@@ -791,7 +791,7 @@
                 <div class="card-header">
                     <div class="row">
                         <h5 class="col-md-3"
-                            jhiTranslate="niopdcgatewayApp.order.home.titleInfo">
+                            jhiTranslate="samtagatewayApp.order.home.titleInfo">
                             Create or edit
                         </h5>
                         <div class="col-md-8"></div>
@@ -801,7 +801,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="col-md-12">
-                                <label jhiTranslate="niopdcgatewayApp.customer.home.title"></label>
+                                <label jhiTranslate="samtagatewayApp.customer.home.title"></label>
                             </div>
                             <div class="col-md-12">
                                 {{order.customerName != null ? order.customerName + "(" + order.customerCode +
@@ -810,9 +810,9 @@
                         </div>
                         <div class="col-md-2">
                             <div class="col-md-12">
-                                <label *ngIf="mode == 'order'" jhiTranslate="niopdcgatewayApp.order.orderNo"></label>
+                                <label *ngIf="mode == 'order'" jhiTranslate="samtagatewayApp.order.orderNo"></label>
                                 <label *ngIf="mode == 'airplane'"
-                                       jhiTranslate="niopdcgatewayApp.order.orderNoFuelReceipt"></label>
+                                       jhiTranslate="samtagatewayApp.order.orderNoFuelReceipt"></label>
                             </div>
                             <div class="col-md-12">
                                 {{order.orderNo}}
@@ -820,7 +820,7 @@
                         </div>
                         <div class="col-md-2">
                             <div class="col-md-12">
-                                <label jhiTranslate="niopdcgatewayApp.depot.home.title"></label>
+                                <label jhiTranslate="samtagatewayApp.depot.home.title"></label>
                             </div>
                             <div class="col-md-12">
                                 {{order.depotTitle}}
@@ -828,15 +828,15 @@
                         </div>
                         <div class="col-md-2">
                             <div class="col-md-12">
-                                <label jhiTranslate="niopdcgatewayApp.buyType.home.title"></label>
+                                <label jhiTranslate="samtagatewayApp.buyType.home.title"></label>
                             </div>
                             <div class="col-md-12">
-                                {{'niopdcgatewayApp.BuyGroup.'+order.buyGroup | translate}}
+                                {{'samtagatewayApp.BuyGroup.'+order.buyGroup | translate}}
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="col-md-12">
-                                <label jhiTranslate="niopdcgatewayApp.order.registerDate"></label>
+                                <label jhiTranslate="samtagatewayApp.order.registerDate"></label>
                             </div>
                             <div class="col-md-12">
                                 {{order.registerDate | dateJalali}}
@@ -849,7 +849,7 @@
             <div class="card">
                 <div class="card-header">
                     <h5 class="mb-0"
-                        jhiTranslate="niopdcgatewayApp.sellContractProduct.home.cardTitle">
+                        jhiTranslate="samtagatewayApp.sellContractProduct.home.cardTitle">
                         Create or edit
                     </h5>
                 </div>
@@ -864,39 +864,39 @@
                         <p-row>
                             <p-column field="productTitle" [sortable]="true">
                                 <ng-template pTemplate="header">
-                                    <span jhiTranslate="niopdcgatewayApp.sellContractProduct.product">Product</span>
+                                    <span jhiTranslate="samtagatewayApp.sellContractProduct.product">Product</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="amount" [sortable]="true">
                                 <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.amount">Amount</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.amount">Amount</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="productRateId" [sortable]="true">
                                 <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.productRateId">productRateId</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.productRateId">productRateId</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="productPrice" [sortable]="true">
                                 <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.productPrice">Product Price</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.productPrice">Product Price</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="productCost" [sortable]="true">
                                 <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.productCost">Product Cost</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.productCost">Product Cost</span>
                                 </ng-template>
                             </p-column>
                         </p-row>
                     </p-headerColumnGroup>
                     <p-column field="sellContractProductTitle"
-                              [header]="'niopdcgatewayApp.sellContractProduct.product' | translate"></p-column>
+                              [header]="'samtagatewayApp.sellContractProduct.product' | translate"></p-column>
                     <p-column field="amount"
-                              [header]="'niopdcgatewayApp.orderProduct.amount' | translate">
+                              [header]="'samtagatewayApp.orderProduct.amount' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <label class="text-primary">
                                 {{item.amount}}
@@ -907,7 +907,7 @@
                         </ng-template>
                     </p-column>
                     <p-column field="ratePrice"
-                              [header]="'niopdcgatewayApp.orderProduct.productRateId' | translate">
+                              [header]="'samtagatewayApp.orderProduct.productRateId' | translate">
 
                     </p-column>
                     <p-column class="component">
@@ -935,7 +935,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.price"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.price"
                                for="field_price2">Price</label>
                         <input [disabled]="true" type="number" class="form-control" name="price" id="field_price2"
                                [(ngModel)]="order.price"/>
@@ -943,7 +943,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.productPrice"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.productPrice"
                                for="field_productPrice2">Product Price</label>
                         <input [disabled]="true" type="number" class="form-control" name="productPrice"
                                id="field_productPrice2"
@@ -952,7 +952,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.containerPrice"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.containerPrice"
                                for="field_containerPrice2">Container Price</label>
                         <input [disabled]="true" type="number" class="form-control" name="containerPrice"
                                id="field_containerPrice2"
@@ -961,7 +961,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.costPrice"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.order.costPrice"
                                for="field_costPrice2">Cost Price</label>
                         <input [disabled]="true" type="number" class="form-control" name="costPrice"
                                id="field_costPrice2"
@@ -972,7 +972,7 @@
             <div class="card">
                 <div class="card-header">
                     <h5 class="mb-0"
-                        jhiTranslate="niopdcgatewayApp.orderProduct.creditList">
+                        jhiTranslate="samtagatewayApp.orderProduct.creditList">
                         Create or edit
                     </h5>
                 </div>
@@ -992,34 +992,34 @@
                             <p-column field="creditNumber" [sortable]="true">
                                 <ng-template pTemplate="header">
                                     <span
-                                        jhiTranslate="niopdcgatewayApp.customerCredit.creditNumber">Credit Number</span>
+                                        jhiTranslate="samtagatewayApp.customerCredit.creditNumber">Credit Number</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="startDate" [sortable]="true">
                                 <ng-template pTemplate="header">
-                                    <span jhiTranslate="niopdcgatewayApp.customerCredit.startDate">Start Date</span>
+                                    <span jhiTranslate="samtagatewayApp.customerCredit.startDate">Start Date</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="finishDate" [sortable]="true">
                                 <ng-template pTemplate="header">
-                                    <span jhiTranslate="niopdcgatewayApp.customerCredit.finishDate">Finish Date</span>
+                                    <span jhiTranslate="samtagatewayApp.customerCredit.finishDate">Finish Date</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="currentCredit" [sortable]="true">
                                 <ng-template pTemplate="header">
                                     <span
-                                        jhiTranslate="niopdcgatewayApp.customerCredit.currentCredit">Current Credit</span>
+                                        jhiTranslate="samtagatewayApp.customerCredit.currentCredit">Current Credit</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="currentAmount" [sortable]="true">
                                 <ng-template pTemplate="header">
                                     <span
-                                        jhiTranslate="niopdcgatewayApp.customerCredit.currentAmount">Current Amount</span>
+                                        jhiTranslate="samtagatewayApp.customerCredit.currentAmount">Current Amount</span>
                                 </ng-template>
                             </p-column>
                             <p-column field="productTitle" [sortable]="true">
                                 <ng-template pTemplate="header">
-                                    <span jhiTranslate="niopdcgatewayApp.customerCredit.product">productId</span>
+                                    <span jhiTranslate="samtagatewayApp.customerCredit.product">productId</span>
                                 </ng-template>
                             </p-column>
                         </p-row>
@@ -1029,25 +1029,25 @@
                         <ng-template let-item="rowData" pTemplate="body">
                             <span>{{item.creditNumber}}</span>
                             <label class="text-info"
-                                   jhiTranslate="{{'niopdcgatewayApp.BuyTypeUsage.' + item.parentBuyTypeUsage}}">{{item.parentBuyTypeUsage}}</label>
+                                   jhiTranslate="{{'samtagatewayApp.BuyTypeUsage.' + item.parentBuyTypeUsage}}">{{item.parentBuyTypeUsage}}</label>
                         </ng-template>
                     </p-column>
-                    <p-column field="startDate" [header]="'niopdcgatewayApp.customerCredit.startDate' | translate">
+                    <p-column field="startDate" [header]="'samtagatewayApp.customerCredit.startDate' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span>{{item.startDate | dateJalali}}</span>
                         </ng-template>
                     </p-column>
-                    <p-column field="finishDate" [header]="'niopdcgatewayApp.customerCredit.finishDate' | translate">
+                    <p-column field="finishDate" [header]="'samtagatewayApp.customerCredit.finishDate' | translate">
                         <ng-template let-item="rowData" pTemplate="body">
                             <span>{{item.finishDate | dateJalali}}</span>
                         </ng-template>
                     </p-column>
                     <p-column field="currentCredit"
-                              [header]="'niopdcgatewayApp.customerCredit.currentCredit' | translate"></p-column>
+                              [header]="'samtagatewayApp.customerCredit.currentCredit' | translate"></p-column>
                     <p-column field="currentAmount"
-                              [header]="'niopdcgatewayApp.customerCredit.currentAmount' | translate"></p-column>
+                              [header]="'samtagatewayApp.customerCredit.currentAmount' | translate"></p-column>
                     <p-column field="productTitle"
-                              [header]="'niopdcgatewayApp.customerCredit.product' | translate"></p-column>
+                              [header]="'samtagatewayApp.customerCredit.product' | translate"></p-column>
                 </p-dataTable>
             </div>
 
@@ -1071,7 +1071,7 @@
                 *ngIf="activeIndex==0 ||  (activeIndex==1 && (mode !=='airplane'||(mode ==='airplane' && order.buyGroup === 'CASH')))"
         >
             <span class="fa fa-credit-card"></span>&nbsp;<span
-            jhiTranslate="niopdcgatewayApp.order.nextStep">nextStep</span>
+            jhiTranslate="samtagatewayApp.order.nextStep">nextStep</span>
         </button>
         <button type="button"
                 class="btn btn-secondary"
@@ -1079,7 +1079,7 @@
                 (click)="back()"
                 *ngIf="activeIndex==1||activeIndex==2"
         >
-            <span class="fa fa-arrow-right"></span>&nbsp;<span jhiTranslate="niopdcgatewayApp.order.back">back</span>
+            <span class="fa fa-arrow-right"></span>&nbsp;<span jhiTranslate="samtagatewayApp.order.back">back</span>
         </button>
         <button type="button"
                 [disabled]="(disableButtons && activeIndex==2 && order.buyGroup !== 'CASH' )||(activeIndex==1&&order.productPrice == 0)"
@@ -1088,7 +1088,7 @@
                 (click)="paymentFinal()"
                 *ngIf="(activeIndex === 2 && (order.buyGroup !== 'CASH' || payStatus === 'BEGIN' )) ||(mode==='airplane' && order.buyGroup !== 'CASH' && activeIndex==1)"
         >
-            <span class="fa fa-credit-card"></span>&nbsp;<span jhiTranslate="niopdcgatewayApp.order.paymentFinal">paymentFinal</span>
+            <span class="fa fa-credit-card"></span>&nbsp;<span jhiTranslate="samtagatewayApp.order.paymentFinal">paymentFinal</span>
         </button>
         <button type="button"
                 class="btn btn-success"
@@ -1105,7 +1105,7 @@
                 (click)="nextStep()"
                 *ngIf="activeIndex === 2 && order.buyGroup === 'CASH' && payStatus === 'PENDING'"
         >
-            <span class="fa fa-refresh"></span>&nbsp;<span jhiTranslate="niopdcgatewayApp.order.paymentFinalAgain">paymentFinalAgain</span>
+            <span class="fa fa-refresh"></span>&nbsp;<span jhiTranslate="samtagatewayApp.order.paymentFinalAgain">paymentFinalAgain</span>
         </button>
     </div>
 </form>

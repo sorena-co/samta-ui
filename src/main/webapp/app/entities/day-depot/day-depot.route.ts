@@ -38,7 +38,7 @@ export const dayDepotRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.dayDepot.home.title'
+            pageTitle: 'samtagatewayApp.dayDepot.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -49,7 +49,7 @@ export const dayDepotRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.dayDepot.home.title'
+            pageTitle: 'samtagatewayApp.dayDepot.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -61,7 +61,7 @@ export const dayDepotPopupRoute: Routes = [
         component: FullEndMeasurementPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CLOSE_MAIN_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.mainDayDepot.home.title'
+            pageTitle: 'samtagatewayApp.mainDayDepot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -71,7 +71,7 @@ export const dayDepotPopupRoute: Routes = [
         component: DayDepotPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.dayDepot.home.title'
+            pageTitle: 'samtagatewayApp.dayDepot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -81,7 +81,7 @@ export const dayDepotPopupRoute: Routes = [
         component: DayDepotDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.dayDepot.home.title'
+            pageTitle: 'samtagatewayApp.dayDepot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -91,7 +91,7 @@ export const dayDepotPopupRoute: Routes = [
         component: DayDepotPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_DAY_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.dayDepot.home.title'
+            pageTitle: 'samtagatewayApp.dayDepot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

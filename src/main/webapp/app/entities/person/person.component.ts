@@ -120,14 +120,14 @@ export class PersonComponent implements OnInit, OnDestroy {
         });
 
         if (this.company) {
-            this.translateService.get('niopdcgatewayApp.person.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.person.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({label: title + ' (' + this.company.fullName + ')', routerLink: ['/person']});
             });
-            this.translateService.get('niopdcgatewayApp.stakeholder.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.stakeholder.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({label: title});
             });
         } else {
-            this.translateService.get('niopdcgatewayApp.person.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.person.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({label: title});
             });
         }

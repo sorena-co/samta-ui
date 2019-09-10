@@ -1,7 +1,7 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="myPaymentBillLabel" jhiTranslate="niopdcgatewayApp.paymentBill.home.createOrEditLabel">Create or edit a Payment Bill</h4>
+        <h4 class="modal-title" id="myPaymentBillLabel" jhiTranslate="samtagatewayApp.paymentBill.home.createOrEditLabel">Create or edit a Payment Bill</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;</button>
     </div>
@@ -13,7 +13,7 @@
                    [(ngModel)]="paymentBill.id" readonly />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.paymentBill.spentDate" for="field_spentDate">Spent Date</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.paymentBill.spentDate" for="field_spentDate">Spent Date</label>
             <div class="d-flex">
                 <input id="field_spentDate" type="datetime-local" class="form-control" name="spentDate" [(ngModel)]="paymentBill.spentDate"
                 required/>
@@ -30,36 +30,36 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.paymentBill.amount" for="field_amount">Amount</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.paymentBill.amount" for="field_amount">Amount</label>
             <input type="number" class="form-control" name="amount" id="field_amount"
                 [(ngModel)]="paymentBill.amount" />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.paymentBill.customerId" for="field_customerId">Customer Id</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.paymentBill.customerId" for="field_customerId">Customer Id</label>
             <input type="number" class="form-control" name="customerId" id="field_customerId"
                 [(ngModel)]="paymentBill.customerId" />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.paymentBill.personId" for="field_personId">Person Id</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.paymentBill.personId" for="field_personId">Person Id</label>
             <input type="number" class="form-control" name="personId" id="field_personId"
                 [(ngModel)]="paymentBill.personId" />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.paymentBill.type" for="field_type">Type</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.paymentBill.type" for="field_type">Type</label>
             <select class="form-control" name="type" [(ngModel)]="paymentBill.type" id="field_type" >
-                <option value="PRODUCT">{{'niopdcgatewayApp.SpentType.PRODUCT' | translate}}</option>
-                <option value="COST">{{'niopdcgatewayApp.SpentType.COST' | translate}}</option>
-                <option value="WALLET">{{'niopdcgatewayApp.SpentType.WALLET' | translate}}</option>
+                <option value="PRODUCT">{{'samtagatewayApp.SpentType.PRODUCT' | translate}}</option>
+                <option value="COST">{{'samtagatewayApp.SpentType.COST' | translate}}</option>
+                <option value="WALLET">{{'samtagatewayApp.SpentType.WALLET' | translate}}</option>
             </select>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.paymentBill.billId" for="field_billId">Bill Id</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.paymentBill.billId" for="field_billId">Bill Id</label>
             <input type="number" class="form-control" name="billId" id="field_billId"
                 [(ngModel)]="paymentBill.billId" />
         </div>
 
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.paymentBill.payment" for="field_payment">Payment</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.paymentBill.payment" for="field_payment">Payment</label>
             <select class="form-control" id="field_payment" name="payment" [(ngModel)]="paymentBill.paymentId"  required>
                 <option *ngIf="!editForm.value.payment" [ngValue]="null" selected></option>
                 <option [ngValue]="paymentOption.id" *ngFor="let paymentOption of payments; trackBy: trackPaymentById">{{paymentOption.id}}</option>

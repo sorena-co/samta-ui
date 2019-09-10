@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ir.donyapardaz.niopdc</groupId>
-    <artifactId>niopdcgateway</artifactId>
+    <artifactId>samtagateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Niopdcgateway</name>
@@ -589,7 +589,7 @@
                     <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
                     <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                     <driver></driver>
-                    <url>jdbc:sqlserver://localhost:1433;database=niopdcgateway</url>
+                    <url>jdbc:sqlserver://localhost:1433;database=samtagateway</url>
                     <defaultSchemaName></defaultSchemaName>
                     <username>SA</username>
                     <password>yourStrong(!)Password</password>
@@ -658,7 +658,7 @@
                 </executions>
                 -->
                 <configuration>
-                    <repository>niopdcgateway</repository>
+                    <repository>samtagateway</repository>
                     <tag>latest</tag>
                     <contextDirectory>${project.build.directory}</contextDirectory>
                 </configuration>

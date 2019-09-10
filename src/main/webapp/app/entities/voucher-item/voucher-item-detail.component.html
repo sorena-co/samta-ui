@@ -1,46 +1,46 @@
 
 <div *ngIf="voucherItem">
-    <h2><span jhiTranslate="niopdcgatewayApp.voucherItem.detail.title">Voucher Item</span> {{voucherItem.id}}</h2>
+    <h2><span jhiTranslate="samtagatewayApp.voucherItem.detail.title">Voucher Item</span> {{voucherItem.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
-        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.rowNo">Row No</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.voucherItem.rowNo">Row No</span></dt>
         <dd>
             <span>{{voucherItem.rowNo}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.extra">Extra</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.voucherItem.extra">Extra</span></dt>
         <dd>
             <span>{{voucherItem.extra}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.special">Special</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.voucherItem.special">Special</span></dt>
         <dd>
             <span>{{voucherItem.special}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.credit">Credit</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.voucherItem.credit">Credit</span></dt>
         <dd>
             <span>{{voucherItem.credit}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.debit">Debit</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.voucherItem.debit">Debit</span></dt>
         <dd>
             <span>{{voucherItem.debit}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.description">Description</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.voucherItem.description">Description</span></dt>
         <dd>
             <span>{{voucherItem.description}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.accountNo">Account No</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.voucherItem.accountNo">Account No</span></dt>
         <dd>
             <span>{{voucherItem.accountNo}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.suffix">Suffix</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.voucherItem.suffix">Suffix</span></dt>
         <dd>
             <span>{{voucherItem.suffix}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.key">Key</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.voucherItem.key">Key</span></dt>
         <dd>
             <span>{{voucherItem.key}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.voucherItem.voucherMaster">Voucher Master</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.voucherItem.voucherMaster">Voucher Master</span></dt>
         <dd>
             <div *ngIf="voucherItem.voucherMasterId">
                 <a [routerLink]="['/voucher-master', voucherItem.voucherMasterId]">{{voucherItem.voucherMasterId}}</a>

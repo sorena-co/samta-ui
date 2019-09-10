@@ -36,7 +36,7 @@ export const transferTypeRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_TRANSFER_TYPE'],
-            pageTitle: 'niopdcgatewayApp.transferType.home.title'
+            pageTitle: 'samtagatewayApp.transferType.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const transferTypePopupRoute: Routes = [
         component: TransferTypePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_TRANSFER_TYPE'],
-            pageTitle: 'niopdcgatewayApp.transferType.home.title'
+            pageTitle: 'samtagatewayApp.transferType.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const transferTypePopupRoute: Routes = [
         component: TransferTypePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_TRANSFER_TYPE'],
-            pageTitle: 'niopdcgatewayApp.transferType.home.title'
+            pageTitle: 'samtagatewayApp.transferType.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const transferTypePopupRoute: Routes = [
         component: TransferTypeDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_TRANSFER_TYPE'],
-            pageTitle: 'niopdcgatewayApp.transferType.home.title'
+            pageTitle: 'samtagatewayApp.transferType.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const transferTypePopupRoute: Routes = [
         component: TransferTypePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_TRANSFER_TYPE'],
-            pageTitle: 'niopdcgatewayApp.transferType.home.title'
+            pageTitle: 'samtagatewayApp.transferType.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

@@ -1,6 +1,6 @@
 version: '2'
 services:
-    niopdcgateway-mssql:
+    samtagateway-mssql:
         image: microsoft/mssql-server-linux:latest
         # volumes are not supported on macOS
         # volumes:

@@ -18,7 +18,7 @@
                 <button style="margin-left: 10px" class="btn btn-primary float-right" *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_REGION']"
                         [routerLink]="['/country', 1, 'region']">
                     <span class="fa fa-external-link"></span>
-                    <span jhiTranslate="niopdcgatewayApp.region.home.title">Region</span> ( ایران )
+                    <span jhiTranslate="samtagatewayApp.region.home.title">Region</span> ( ایران )
                 </button>
 
             </div>
@@ -28,12 +28,12 @@
             <p-row>
                 <p-column field="name" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.country.name">Name</span>
+                        <span jhiTranslate="samtagatewayApp.country.name">Name</span>
                     </ng-template>
                 </p-column>
                 <p-column field="code" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.country.code">Code</span>
+                        <span jhiTranslate="samtagatewayApp.country.code">Code</span>
                     </ng-template>
                 </p-column>
 
@@ -72,8 +72,8 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="name" [header]="'niopdcgatewayApp.country.name' | translate"></p-column>
-        <p-column field="code" [header]="'niopdcgatewayApp.country.code' | translate"></p-column>
+        <p-column field="name" [header]="'samtagatewayApp.country.name' | translate"></p-column>
+        <p-column field="code" [header]="'samtagatewayApp.country.code' | translate"></p-column>
 
         <p-column class="component">
             <ng-template let-item="rowData" pTemplate="body">
@@ -105,7 +105,7 @@
                         <button class="dropdown-item" *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_REGION']"
                                 [routerLink]="['/country', item.id, 'region']">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.region.home.title">Region</span>
+                            <span jhiTranslate="samtagatewayApp.region.home.title">Region</span>
                         </button>
                     </div>
                 </div>

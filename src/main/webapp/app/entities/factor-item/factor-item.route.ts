@@ -33,7 +33,7 @@ export const factorItemRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_FACTOR_ITEM'],
-            pageTitle: 'niopdcgatewayApp.factorItem.home.title'
+            pageTitle: 'samtagatewayApp.factorItem.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const factorItemPopupRoute: Routes = [
     component: FactorItemPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_FACTOR_ITEM'],
-        pageTitle: 'niopdcgatewayApp.factorItem.home.title'
+        pageTitle: 'samtagatewayApp.factorItem.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const factorItemPopupRoute: Routes = [
     component: FactorItemPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_FACTOR_ITEM'],
-        pageTitle: 'niopdcgatewayApp.factorItem.home.title'
+        pageTitle: 'samtagatewayApp.factorItem.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const factorItemPopupRoute: Routes = [
     component: FactorItemDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_FACTOR_ITEM'],
-        pageTitle: 'niopdcgatewayApp.factorItem.home.title'
+        pageTitle: 'samtagatewayApp.factorItem.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const factorItemPopupRoute: Routes = [
       component: FactorItemPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_FACTOR_ITEM'],
-          pageTitle: 'niopdcgatewayApp.factorItem.home.title'
+          pageTitle: 'samtagatewayApp.factorItem.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

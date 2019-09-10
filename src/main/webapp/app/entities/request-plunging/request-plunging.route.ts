@@ -36,7 +36,7 @@ export const requestPlungingRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_REQUEST_PLUNGING'],
-            pageTitle: 'niopdcgatewayApp.requestPlunging.home.title'
+            pageTitle: 'samtagatewayApp.requestPlunging.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const requestPlungingPopupRoute: Routes = [
         component: RequestPlungingPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_REQUEST_PLUNGING'],
-            pageTitle: 'niopdcgatewayApp.requestPlunging.home.title'
+            pageTitle: 'samtagatewayApp.requestPlunging.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const requestPlungingPopupRoute: Routes = [
         component: RequestPlungingPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_REQUEST_PLUNGING'],
-            pageTitle: 'niopdcgatewayApp.requestPlunging.home.title'
+            pageTitle: 'samtagatewayApp.requestPlunging.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const requestPlungingPopupRoute: Routes = [
         component: RequestPlungingDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_REQUEST_PLUNGING'],
-            pageTitle: 'niopdcgatewayApp.requestPlunging.home.title'
+            pageTitle: 'samtagatewayApp.requestPlunging.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const requestPlungingPopupRoute: Routes = [
         component: RequestPlungingPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_REQUEST_PLUNGING'],
-            pageTitle: 'niopdcgatewayApp.requestPlunging.home.title'
+            pageTitle: 'samtagatewayApp.requestPlunging.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

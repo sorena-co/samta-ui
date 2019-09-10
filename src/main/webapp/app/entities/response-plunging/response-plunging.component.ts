@@ -150,13 +150,13 @@ export class ResponsePlungingComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.responsePlunging.home.requestPlungingTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.responsePlunging.home.requestPlungingTitle').subscribe((title) => {
             this.breadcrumbItems.push({
                 label: title + ` (${this.requestPlunging.id})`,
                 routerLink: ['/request-plunging']
             });
         });
-        this.translateService.get('niopdcgatewayApp.responsePlunging.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.responsePlunging.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

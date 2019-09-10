@@ -33,7 +33,7 @@ export const customerDeactiveRuleRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CUSTOMER_DEACTIVE_RULE'],
-            pageTitle: 'niopdcgatewayApp.customerDeactiveRule.home.title'
+            pageTitle: 'samtagatewayApp.customerDeactiveRule.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const customerDeactiveRulePopupRoute: Routes = [
     component: CustomerDeactiveRulePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_CUSTOMER_DEACTIVE_RULE'],
-        pageTitle: 'niopdcgatewayApp.customerDeactiveRule.home.title'
+        pageTitle: 'samtagatewayApp.customerDeactiveRule.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const customerDeactiveRulePopupRoute: Routes = [
     component: CustomerDeactiveRulePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_CUSTOMER_DEACTIVE_RULE'],
-        pageTitle: 'niopdcgatewayApp.customerDeactiveRule.home.title'
+        pageTitle: 'samtagatewayApp.customerDeactiveRule.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const customerDeactiveRulePopupRoute: Routes = [
     component: CustomerDeactiveRuleDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_CUSTOMER_DEACTIVE_RULE'],
-        pageTitle: 'niopdcgatewayApp.customerDeactiveRule.home.title'
+        pageTitle: 'samtagatewayApp.customerDeactiveRule.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const customerDeactiveRulePopupRoute: Routes = [
       component: CustomerDeactiveRulePopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_CUSTOMER_DEACTIVE_RULE'],
-          pageTitle: 'niopdcgatewayApp.customerDeactiveRule.home.title'
+          pageTitle: 'samtagatewayApp.customerDeactiveRule.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

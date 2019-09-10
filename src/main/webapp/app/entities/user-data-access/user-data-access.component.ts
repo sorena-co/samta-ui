@@ -177,7 +177,7 @@ export class UserDataAccessComponent implements OnInit, OnDestroy {
                 routerLink: ['/user-management']
             });
         });
-        this.translateService.get('niopdcgatewayApp.userDataAccess.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.userDataAccess.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

@@ -1,9 +1,9 @@
 <div>
     <h2>
-        <span jhiTranslate="niopdcgatewayApp.loanPayment.home.title">Loan Payments</span>
+        <span jhiTranslate="samtagatewayApp.loanPayment.home.title">Loan Payments</span>
         <button class="btn btn-primary float-right jh-create-entity create-loan-payment" [routerLink]="['/', { outlets: { popup: ['loan-payment-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="niopdcgatewayApp.loanPayment.home.createLabel">
+            <span  jhiTranslate="samtagatewayApp.loanPayment.home.createLabel">
             Create new Loan Payment
             </span>
         </button>
@@ -17,11 +17,11 @@
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="paymentId"><span jhiTranslate="niopdcgatewayApp.loanPayment.paymentId">Payment Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="price"><span jhiTranslate="niopdcgatewayApp.loanPayment.price">Price</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="data"><span jhiTranslate="niopdcgatewayApp.loanPayment.data">Data</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="loanId"><span jhiTranslate="niopdcgatewayApp.loanPayment.loan">Loan</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="billItemId"><span jhiTranslate="niopdcgatewayApp.loanPayment.billItem">Bill Item</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="paymentId"><span jhiTranslate="samtagatewayApp.loanPayment.paymentId">Payment Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="price"><span jhiTranslate="samtagatewayApp.loanPayment.price">Price</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="data"><span jhiTranslate="samtagatewayApp.loanPayment.data">Data</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="loanId"><span jhiTranslate="samtagatewayApp.loanPayment.loan">Loan</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="billItemId"><span jhiTranslate="samtagatewayApp.loanPayment.billItem">Bill Item</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>

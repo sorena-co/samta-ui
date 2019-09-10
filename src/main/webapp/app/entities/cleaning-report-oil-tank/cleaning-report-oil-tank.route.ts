@@ -35,7 +35,7 @@ export const cleaningReportOilTankRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CLEANING_REPORT_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.cleaningReportOilTank.home.title'
+            pageTitle: 'samtagatewayApp.cleaningReportOilTank.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -47,7 +47,7 @@ export const cleaningReportOilTankPopupRoute: Routes = [
         component: CleaningReportOilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_CLEANING_REPORT_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.cleaningReportOilTank.home.title'
+            pageTitle: 'samtagatewayApp.cleaningReportOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -57,7 +57,7 @@ export const cleaningReportOilTankPopupRoute: Routes = [
         component: CleaningReportOilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_CLEANING_REPORT_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.cleaningReportOilTank.home.title'
+            pageTitle: 'samtagatewayApp.cleaningReportOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -67,7 +67,7 @@ export const cleaningReportOilTankPopupRoute: Routes = [
         component: CleaningReportOilTankDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_CLEANING_REPORT_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.cleaningReportOilTank.home.title'
+            pageTitle: 'samtagatewayApp.cleaningReportOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -77,7 +77,7 @@ export const cleaningReportOilTankPopupRoute: Routes = [
         component: CleaningReportOilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_CLEANING_REPORT_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.cleaningReportOilTank.home.title'
+            pageTitle: 'samtagatewayApp.cleaningReportOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

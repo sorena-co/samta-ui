@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "transportContract": {
             "home": {
                 "title": "قرارداد حمل و نقل",

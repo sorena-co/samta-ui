@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "customerScore" : {
             "home": {
                 "title": "امتیاز مشتری",

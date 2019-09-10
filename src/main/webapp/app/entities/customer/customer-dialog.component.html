@@ -1,12 +1,12 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
     <div class="modal-header">
         <h4 *ngIf="customer.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.customer.home.createLabel">
+            jhiTranslate="samtagatewayApp.customer.home.createLabel">
             Create</h4>
         <h4 *ngIf="customer.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.customer.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.customer.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.customer.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.customer.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.name"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customer.name"
                            for="field_name">Name</label>
                     <input [disabled]="isView" type="text" class="form-control" name="name" id="field_name"
                            [(ngModel)]="customer.name"
@@ -45,27 +45,27 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.customerType.customerGroup"
+                           jhiTranslate="samtagatewayApp.customerType.customerGroup"
                            for="field_customerGroup">Customer Group</label>
                     <select [disabled]="isView" class="form-control" name="customerGroup"
                             [(ngModel)]="customerGroup" (ngModelChange)="onChangeCustomerGroup()"
                             id="field_customerGroup" required>
                         <option value="STATION"
-                                jhiTranslate="niopdcgatewayApp.CustomerGroup.STATION">
+                                jhiTranslate="samtagatewayApp.CustomerGroup.STATION">
                             SUPPLIER
                         </option>
-                        <option value="SELLER" jhiTranslate="niopdcgatewayApp.CustomerGroup.SELLER">
+                        <option value="SELLER" jhiTranslate="samtagatewayApp.CustomerGroup.SELLER">
                             CONSUMER
                         </option>
                         <option value="MAJOR_CONSUMER"
-                                jhiTranslate="niopdcgatewayApp.CustomerGroup.MAJOR_CONSUMER">
+                                jhiTranslate="samtagatewayApp.CustomerGroup.MAJOR_CONSUMER">
                             SUPPLIER
                         </option>
                         <option value="AIRPLANE"
-                                jhiTranslate="niopdcgatewayApp.CustomerGroup.AIRPLANE">
+                                jhiTranslate="samtagatewayApp.CustomerGroup.AIRPLANE">
                             AIRLINE
                         </option>
-                        <option value="LIQUID_GAS">{{'niopdcgatewayApp.CustomerGroup.LIQUID_GAS' |
+                        <option value="LIQUID_GAS">{{'samtagatewayApp.CustomerGroup.LIQUID_GAS' |
                             translate}}
                         </option>
                     </select>
@@ -81,7 +81,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.customer.type"
+                    <label jhiTranslate="samtagatewayApp.customer.type"
                            for="field_type">Type</label>
                     <select [disabled]="isView" class="form-control" id="field_type" name="type"
                             (ngModelChange)="onChangeCustomerType($event)"
@@ -108,13 +108,13 @@
                     <label
                     *ngIf="customerType?.locationType === LocationType[LocationType.FIXED]"
                     class="form-control-label"
-                    jhiTranslate="niopdcgatewayApp.customer.postalCode"
+                    jhiTranslate="samtagatewayApp.customer.postalCode"
                     for="field_postalCode">postalCode</label>
 
                     <label
                         *ngIf="customerGroup === CustomerGroup[CustomerGroup.AIRPLANE] && customerType?.locationType === LocationType[LocationType.MOVABLE]"
                         class="form-control-label"
-                        jhiTranslate="niopdcgatewayApp.customer.registerCode"
+                        jhiTranslate="samtagatewayApp.customer.registerCode"
                         for="field_registerCode">Code</label>
 
                     <label
@@ -177,7 +177,7 @@
             <div class="col-md-4"
                  *ngIf="customerType && customerType.hasGsId && customerGroup === CustomerGroup[CustomerGroup.STATION] || customerGroup === CustomerGroup[CustomerGroup.AIRPLANE]">
                 <div *ngIf="customerGroup === CustomerGroup[CustomerGroup.STATION]" class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.gsId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customer.gsId"
                            for="field_gsId">gsId</label>
                     <input [disabled]="isView" type="text"
                            class="form-control"
@@ -189,11 +189,11 @@
                 <div *ngIf="customerGroup === CustomerGroup[CustomerGroup.AIRPLANE]" class="form-group">
                     <label class="form-control-label"
                            *ngIf="customerType?.locationType !== LocationType[LocationType.FIXED]"
-                           jhiTranslate="niopdcgatewayApp.customer.vehicleModel"
+                           jhiTranslate="samtagatewayApp.customer.vehicleModel"
                            for="field_vehicleModel1">Vehicle Model</label>
                     <label class="form-control-label"
                            *ngIf="customerType?.locationType === LocationType[LocationType.FIXED]"
-                           jhiTranslate="niopdcgatewayApp.customer.capacity"
+                           jhiTranslate="samtagatewayApp.customer.capacity"
                            for="field_vehicleModel1">Vehicle Model</label>
                     <select [disabled]="isView"
                             class="form-control" id="field_vehicleModel1" name="vehicleModel"
@@ -215,7 +215,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.registerDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customer.registerDate"
                            for="field_registerDate">Register Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="true" [disabled]="true" [rtlActive]="true"
@@ -230,7 +230,7 @@
 
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.creditAccount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customer.creditAccount"
                            for="field_creditAccount1">creditAccount</label>
                     <input [disabled]="isView" type="text" class="form-control" name="creditAccount"
                            id="field_creditAccount1"
@@ -258,14 +258,14 @@
                            name="selectiveContractTypes" id="field_createCodeBySystem"
                            [(ngModel)]="enterCode"/>
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.customer.createCodeBySystem"
+                           jhiTranslate="samtagatewayApp.customer.createCodeBySystem"
                            for="field_createCodeBySystem">Identify Code</label>
                 </div>
             </div>
             <div class="col-md-4" *ngIf="customerType?.locationType === LocationType[LocationType.FIXED]">
                 <div class="form-group" >
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.customer.identifyCode"
+                           jhiTranslate="samtagatewayApp.customer.identifyCode"
                            for="field_identifyCode">Identify Code</label>
                     <input
                         [disabled]="isView || enterCode || (customer.id && customer.identifyCode)"
@@ -285,7 +285,7 @@
             <ng-container *ngIf="customerType?.locationType === LocationType[LocationType.FIXED]">
                 <div class="col-xs-12 col-md-4">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.telephone"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.customer.telephone"
                                for="field_telephone">Telephone</label>
                         <input [disabled]="isView" type="text" class="form-control" name="telephone"
                                id="field_telephone"
@@ -309,7 +309,7 @@
                 </div>
                 <div class="col-xs-12 col-md-12">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.address"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.customer.address"
                                for="field_address">Address</label>
                         <textarea
                             [disabled]="isView || (customerGroup !== CustomerGroup[CustomerGroup.AIRPLANE] && customerType?.locationType !== LocationType[LocationType.MOVABLE])"
@@ -337,7 +337,7 @@
             <div class="col-md-6"
                  *ngIf="customerType?.locationType === LocationType[LocationType.FIXED]">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.customer.region"
+                    <label jhiTranslate="samtagatewayApp.customer.region"
                            for="field_region">Region</label>
 
                     <input-region-selector [disabled]="isView" class="form-control" [idSelector]="true"
@@ -358,7 +358,7 @@
             <div class="col-md-6"
                  *ngIf="customerType?.locationType === LocationType[LocationType.FIXED]">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.customer.location"
+                    <label jhiTranslate="samtagatewayApp.customer.location"
                            for="field_location">Location</label>
 
                     <input-location-selector
@@ -384,7 +384,7 @@
             <div class="col-md-6" *ngIf="customerGroup === CustomerGroup[CustomerGroup.AIRPLANE] && customerType?.locationType === LocationType[LocationType.FIXED]">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.customer.refuelCenterIds"
+                           jhiTranslate="samtagatewayApp.customer.refuelCenterIds"
                            for="field_refuelCenterIds">refuelCenter</label>
                     <p-multiSelect [disabled]="isView" class="form-control" id="field_refuelCenterIds"
                                    [options]="refuelCenters"

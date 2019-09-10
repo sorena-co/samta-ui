@@ -169,7 +169,7 @@ export class SellContractProductDialogComponent implements OnInit {
 
         for (const typeOfFuelReceiptKey in TypeOfFuelReceipt) {
             if (isNaN(parseInt(typeOfFuelReceiptKey, 10))) {
-                this.translateService.get('niopdcgatewayApp.TypeOfFuelReceipt.' + typeOfFuelReceiptKey)
+                this.translateService.get('samtagatewayApp.TypeOfFuelReceipt.' + typeOfFuelReceiptKey)
                     .subscribe((value) => {
                         this.typeOfFuelReceipts.push({
                             value: typeOfFuelReceiptKey,

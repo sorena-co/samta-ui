@@ -22,7 +22,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.vehicleModel.title"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.vehicleModel.title"
                            for="field_title">Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="title" id="field_title"
                            [(ngModel)]="vehicleModel.title" required/>
@@ -37,20 +37,20 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.vehicleModel.customerGroup"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.vehicleModel.customerGroup"
                            for="field_customerGroup">Customer Group</label>
                     <select [disabled]="isView" class="form-control" name="customerGroup"
                             [(ngModel)]="vehicleModel.customerGroup" id="field_customerGroup">
-                        <option value="AIRPLANE">{{'niopdcgatewayApp.CustomerGroup.AIRPLANE_VEHICLE' | translate}}
+                        <option value="AIRPLANE">{{'samtagatewayApp.CustomerGroup.AIRPLANE_VEHICLE' | translate}}
                         </option>
-                        <option value="BOUNDARY">{{'niopdcgatewayApp.CustomerGroup.BOUNDARY_VEHICLE' | translate}}
+                        <option value="BOUNDARY">{{'samtagatewayApp.CustomerGroup.BOUNDARY_VEHICLE' | translate}}
                         </option>
                     </select>
                 </div>
             </div>
             <div class="col-md-4" style="text-align: center;margin-top: auto">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.vehicleModel.havePrimitiveMeasure"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.vehicleModel.havePrimitiveMeasure"
                            for="field_havePrimitiveMeasure">Have Primitive Measure</label>
                     <input [disabled]="isView" type="checkbox" class="form-control" name="havePrimitiveMeasure"
                            id="field_havePrimitiveMeasure"

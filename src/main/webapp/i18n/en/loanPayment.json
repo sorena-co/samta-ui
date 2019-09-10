@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "loanPayment" : {
             "home": {
                 "title": "Loan Payments",

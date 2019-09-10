@@ -67,10 +67,10 @@ export class BillReportComponent implements OnInit/*, OnDestroy */ {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.bill.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.bill.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/bill']});
         });
-        this.translateService.get('niopdcgatewayApp.bill.home.report').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.bill.home.report').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

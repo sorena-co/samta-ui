@@ -132,7 +132,7 @@ export class ConsumptionComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.consumption.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.consumption.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

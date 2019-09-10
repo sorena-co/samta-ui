@@ -10,7 +10,7 @@ export const totalSellGroundRoute: Routes = [
         component: TotalSellGroundComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_TOTAL_SELL_GROUND'],
-            pageTitle: 'niopdcgatewayApp.totalSellGround.home.title'
+            pageTitle: 'samtagatewayApp.totalSellGround.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

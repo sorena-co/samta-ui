@@ -157,10 +157,10 @@ export class MetreComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.metre.home.oilTankTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.metre.home.oilTankTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + ` (${this.oilTank.title})`, routerLink: ['/oil-tank']});
         });
-        this.translateService.get('niopdcgatewayApp.metre.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.metre.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

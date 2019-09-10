@@ -21,22 +21,22 @@
             <p-row>
                 <p-column field="title" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.metre.title">Title</span>
+                        <span jhiTranslate="samtagatewayApp.metre.title">Title</span>
                     </ng-template>
                 </p-column>
                 <p-column field="maxMetre" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.metre.maxMetre">Max Metre</span>
+                        <span jhiTranslate="samtagatewayApp.metre.maxMetre">Max Metre</span>
                     </ng-template>
                 </p-column>
                 <p-column field="amount" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.metre.amount">Amount</span>
+                        <span jhiTranslate="samtagatewayApp.metre.amount">Amount</span>
                     </ng-template>
                 </p-column>
                 <p-column field="active" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.metre.active">Active</span>
+                        <span jhiTranslate="samtagatewayApp.metre.active">Active</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -73,10 +73,10 @@
                         <select class="form-control" name="active" (change)="search()"
                                 [(ngModel)]="metre.active">
                             <option></option>
-                            <option value="true" jhiTranslate="niopdcgatewayApp.metre.activeTrue">
+                            <option value="true" jhiTranslate="samtagatewayApp.metre.activeTrue">
                                 true
                             </option>
-                            <option value="false" jhiTranslate="niopdcgatewayApp.metre.activeFalse">
+                            <option value="false" jhiTranslate="samtagatewayApp.metre.activeFalse">
                                 false
                             </option>
                         </select>
@@ -95,10 +95,10 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="title" [header]="'niopdcgatewayApp.metre.title' | translate"></p-column>
-        <p-column field="maxMetre" [header]="'niopdcgatewayApp.metre.maxMetre' | translate"></p-column>
-        <p-column field="amount" [header]="'niopdcgatewayApp.metre.amount' | translate"></p-column>
-        <p-column field="active" [header]="'niopdcgatewayApp.metre.active' | translate">
+        <p-column field="title" [header]="'samtagatewayApp.metre.title' | translate"></p-column>
+        <p-column field="maxMetre" [header]="'samtagatewayApp.metre.maxMetre' | translate"></p-column>
+        <p-column field="amount" [header]="'samtagatewayApp.metre.amount' | translate"></p-column>
+        <p-column field="active" [header]="'samtagatewayApp.metre.active' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span class="fa" [ngClass]="{'fa-check':item.active,'fa-close':!item.active}"></span>
             </ng-template></p-column>

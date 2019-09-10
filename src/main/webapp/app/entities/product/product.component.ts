@@ -152,7 +152,7 @@ export class ProductComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.product.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.product.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

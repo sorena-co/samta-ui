@@ -14,7 +14,7 @@
                 <div class="card-block container">
                     <div class="row">
                         <div class="col-md-6">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.searchRfId"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.customer.searchRfId"
                                    for="field_searchRfId">Order
                                 No</label>
                             <input [disabled]="isView" type="text" class="form-control" name="searchRfId"
@@ -22,7 +22,7 @@
                                    [(ngModel)]="searchRfId"/>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.plaque"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.customer.plaque"
                                    for="field_plaque">Name</label>
                             <jhi-plaque [disabled]="isView" [plaqueId]="searchPlaqueTemplateId"
                                         id="field_plaque"
@@ -73,7 +73,7 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.vehicleModel.home.title"
+                                       jhiTranslate="samtagatewayApp.vehicleModel.home.title"
                                        for="field_vehicleModel">Product</label>
                                 <input disabled type="text" class="form-control" name="vehicleModelTItleee"
                                        id="field_vehicleModel1"
@@ -91,7 +91,7 @@
                         <div class="col-md-3"
                              *ngIf="vehicleModel.havePrimitiveMeasure">
                             <div class="form-group">
-                                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.productId"
+                                <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.productId"
                                        for="field_product">Product</label>
                                 <input disabled type="text" class="form-control" name="product"
                                        id="field_product"
@@ -108,7 +108,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.plaque"
+                                <label class="form-control-label" jhiTranslate="samtagatewayApp.customer.plaque"
                                        for="field_plaque">Name</label>
                                 <jhi-plaque [disabled]="isView" [plaqueId]="customer.plaqueTemplateId"
                                             id="field_plaque232"
@@ -125,7 +125,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.vehicleModel.home.title"
+                                               jhiTranslate="samtagatewayApp.vehicleModel.home.title"
                                                for="field_vehicleModel">Vehicle Model</label>
                                         <p-dropdown [options]="customVehicleModels"
                                                     [(ngModel)]="customer.vehicleModelId"
@@ -144,7 +144,7 @@
                                 <div class="col-md-3" *ngIf="vehicleModel.havePrimitiveMeasure">
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.oilTank.productId"
+                                               jhiTranslate="samtagatewayApp.oilTank.productId"
                                                for="field_product">Product</label>
                                         <p-dropdown [options]="customProducts" [(ngModel)]="customer.productId"
                                                     [filter]="true"
@@ -169,7 +169,7 @@
                                 <div class="col-md-3" *ngIf="vehicleModel.havePrimitiveMeasure">
                                     <div class="form-group">
                                         <label class="form-control-label"
-                                               jhiTranslate="niopdcgatewayApp.customer.rfId"
+                                               jhiTranslate="samtagatewayApp.customer.rfId"
                                                for="field_rfId">Name</label>
                                         <input [disabled]="isView" type="text" class="form-control"
                                                name="rfId"
@@ -180,7 +180,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.plaque"
+                                        <label class="form-control-label" jhiTranslate="samtagatewayApp.customer.plaque"
                                                for="field_plaque">Name</label>
                                         <jhi-plaque [disabled]="isView" [plaqueId]="customer.plaqueTemplateId"
                                                     id="field_plaque2323232"
@@ -199,14 +199,14 @@
                                     <p-column field="vehicleModel" [sortable]="false">
                                         <ng-template pTemplate="header">
                                             <span
-                                                jhiTranslate="niopdcgatewayApp.vehicleModel.home.title">Person</span>
+                                                jhiTranslate="samtagatewayApp.vehicleModel.home.title">Person</span>
                                         </ng-template>
                                     </p-column>
                                     <p-column *ngIf="vehicleModel.havePrimitiveMeasure" field="productTitle"
                                               [sortable]="false">
                                         <ng-template pTemplate="header">
                                             <span
-                                                jhiTranslate="niopdcgatewayApp.customer.product">Share Percent</span>
+                                                jhiTranslate="samtagatewayApp.customer.product">Share Percent</span>
                                         </ng-template>
                                     </p-column>
                                     <p-column styleClass="col-button2" *ngIf="!isView">
@@ -217,9 +217,9 @@
                             </p-headerColumnGroup>
 
                             <p-column field="vehicleModelTitle"
-                                      [header]="'niopdcgatewayApp.carTank.tankNo' | translate"></p-column>
+                                      [header]="'samtagatewayApp.carTank.tankNo' | translate"></p-column>
                             <p-column *ngIf="vehicleModel.havePrimitiveMeasure" field="productTitle"
-                                      [header]="'niopdcgatewayApp.oilTank.oilTankType' | translate">
+                                      [header]="'samtagatewayApp.oilTank.oilTankType' | translate">
                             </p-column>
                             <p-column class="component" *ngIf="!isView">
                                 <ng-template let-item="rowData" pTemplate="body">
@@ -284,21 +284,21 @@
                                     <p-column field="tankNo" [sortable]="false">
                                         <ng-template pTemplate="header">
                                             <span
-                                                jhiTranslate="niopdcgatewayApp.carTank.tankNo">Person</span>
+                                                jhiTranslate="samtagatewayApp.carTank.tankNo">Person</span>
                                         </ng-template>
                                     </p-column>
                                     <p-column field="tankType" [sortable]="false">
                                         <ng-template pTemplate="header">
                                             <span
-                                                jhiTranslate="niopdcgatewayApp.carTank.tankType">Share Percent</span>
+                                                jhiTranslate="samtagatewayApp.carTank.tankType">Share Percent</span>
                                         </ng-template>
                                     </p-column>
                                 </p-row>
                             </p-headerColumnGroup>
 
                             <p-column field="tankNo"
-                                      [header]="'niopdcgatewayApp.carTank.tankNo' | translate"></p-column>
-                            <p-column field="tankType" [header]="'niopdcgatewayApp.oilTank.oilTankType' | translate">
+                                      [header]="'samtagatewayApp.carTank.tankNo' | translate"></p-column>
+                            <p-column field="tankType" [header]="'samtagatewayApp.oilTank.oilTankType' | translate">
                                 <ng-template let-item="rowData" pTemplate="body">
                                     <span>{{item.title}}</span>
                                 </ng-template>
@@ -311,7 +311,7 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label jhiTranslate="niopdcgatewayApp.carTank.tankNo"
+                                        <label jhiTranslate="samtagatewayApp.carTank.tankNo"
                                                for="field_tankNo">Type</label>
                                         <input [disabled]="isView" class="form-control" id="field_tankNo" name="tankNo1"
                                                [(ngModel)]="carTank.tankNo" required/>
@@ -319,22 +319,22 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label jhiTranslate="niopdcgatewayApp.carTank.tankType"
+                                        <label jhiTranslate="samtagatewayApp.carTank.tankType"
                                                for="field_tankType">Type</label>
                                         <select [disabled]="isView" class="form-control" name="tankType"
                                                 [(ngModel)]="carTank.tankType"
                                                 (ngModelChange)="changeTankType()"
                                                 id="field_tankType" required>
-                                            <option value="CUBE">{{'niopdcgatewayApp.TankType.CUBE' | translate}}
+                                            <option value="CUBE">{{'samtagatewayApp.TankType.CUBE' | translate}}
                                             </option>
-                                            <option value="CONE">{{'niopdcgatewayApp.TankType.CONE' | translate}}
+                                            <option value="CONE">{{'samtagatewayApp.TankType.CONE' | translate}}
                                             </option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-3" *ngIf="carTank.tankType===TankType[TankType.CUBE]">
                                     <div class="form-group">
-                                        <label jhiTranslate="niopdcgatewayApp.carTank.longitude"
+                                        <label jhiTranslate="samtagatewayApp.carTank.longitude"
                                                for="field_longitude">Type</label>
                                         <input [disabled]="isView" class="form-control" id="field_longitude"
                                                name="longitude"
@@ -344,7 +344,7 @@
                                 </div>
                                 <div class="col-md-3" *ngIf="carTank.tankType===TankType[TankType.CUBE]">
                                     <div class="form-group">
-                                        <label jhiTranslate="niopdcgatewayApp.carTank.latitude"
+                                        <label jhiTranslate="samtagatewayApp.carTank.latitude"
                                                for="field_latitude">Type</label>
                                         <input [disabled]="isView" class="form-control" id="field_latitude"
                                                name="latitude"
@@ -354,7 +354,7 @@
                                 </div>
                                 <div class="col-md-3" *ngIf="carTank.tankType===TankType[TankType.CONE]">
                                     <div class="form-group">
-                                        <label jhiTranslate="niopdcgatewayApp.carTank.radius"
+                                        <label jhiTranslate="samtagatewayApp.carTank.radius"
                                                for="field_radius">Type</label>
                                         <input [disabled]="isView" class="form-control" id="field_radius"
                                                name="radius"
@@ -364,7 +364,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label jhiTranslate="niopdcgatewayApp.carTank.height"
+                                        <label jhiTranslate="samtagatewayApp.carTank.height"
                                                for="field_height">Type</label>
                                         <input [disabled]="isView" class="form-control" id="field_height" name="height"
                                                [numeric]="{min:0}"
@@ -381,13 +381,13 @@
                                     <p-column field="tankNo" [sortable]="false">
                                         <ng-template pTemplate="header">
                                             <span
-                                                jhiTranslate="niopdcgatewayApp.carTank.tankNo">Person</span>
+                                                jhiTranslate="samtagatewayApp.carTank.tankNo">Person</span>
                                         </ng-template>
                                     </p-column>
                                     <p-column field="tankType" [sortable]="false">
                                         <ng-template pTemplate="header">
                                             <span
-                                                jhiTranslate="niopdcgatewayApp.carTank.tankType">Share Percent</span>
+                                                jhiTranslate="samtagatewayApp.carTank.tankType">Share Percent</span>
                                         </ng-template>
                                     </p-column>
                                     <p-column styleClass="col-button2" *ngIf="!isView">
@@ -398,8 +398,8 @@
                             </p-headerColumnGroup>
 
                             <p-column field="tankNo"
-                                      [header]="'niopdcgatewayApp.carTank.tankNo' | translate"></p-column>
-                            <p-column field="tankType" [header]="'niopdcgatewayApp.oilTank.oilTankType' | translate">
+                                      [header]="'samtagatewayApp.carTank.tankNo' | translate"></p-column>
+                            <p-column field="tankType" [header]="'samtagatewayApp.oilTank.oilTankType' | translate">
                                 <ng-template let-item="rowData" pTemplate="body">
                                     <span>{{item.title}}</span>
                                 </ng-template>
@@ -464,7 +464,7 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.vehicleModel.home.title"
+                                       jhiTranslate="samtagatewayApp.vehicleModel.home.title"
                                        for="field_vehicleModel">Product</label>
                                 <input disabled type="text" class="form-control" name="vehicleModelTItleee"
                                        id="field_vehicleModel223"
@@ -482,7 +482,7 @@
                         <div class="col-md-3"
                              *ngIf="vehicleModel.havePrimitiveMeasure">
                             <div class="form-group">
-                                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.productId"
+                                <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.productId"
                                        for="field_product">Product</label>
                                 <input disabled type="text" class="form-control" name="product"
                                        id="field_product2334"
@@ -499,7 +499,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.plaque"
+                                <label class="form-control-label" jhiTranslate="samtagatewayApp.customer.plaque"
                                        for="field_plaque">Name</label>
                                 <jhi-plaque [disabled]="true" [plaqueId]="customer.plaqueTemplateId"
                                             id="field_plaque23232"
@@ -532,7 +532,7 @@
                 <div class="card-block container">
                     <div class="row">
                         <div class="col-md-4">
-                            <label jhiTranslate="niopdcgatewayApp.order.locationId"
+                            <label jhiTranslate="samtagatewayApp.order.locationId"
                                    for="field_locations">Location</label>
                             <p-dropdown required [options]="customLocation" [(ngModel)]="boundaryDTO.locationId"
                                         [filter]="true"
@@ -554,7 +554,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.targetCountry"
+                                <label class="form-control-label" jhiTranslate="samtagatewayApp.order.targetCountry"
                                        for="field_country">Country</label>
                                 <input class="form-control" type="text" id="field_country" name="target_country"
                                        [(ngModel)]="country.name" disabled/>
@@ -582,7 +582,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.currency"
+                                <label class="form-control-label" jhiTranslate="samtagatewayApp.order.currency"
                                        for="field_currency">Country</label>
                                 <select [disabled]="isView" class="form-control" id="field_currency" name="currency"
                                         [(ngModel)]="boundaryDTO.currencyId"
@@ -597,7 +597,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.cmr"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.order.cmr"
                                    for="field_cmr">Order
                                 No</label>
                             <input [disabled]="isView" type="text" class="form-control" name="cmr"
@@ -606,7 +606,7 @@
                         </div>
                         <div class="col-md-4">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.order.carnet"
+                                   jhiTranslate="samtagatewayApp.order.carnet"
                                    for="field_carnet">Order
                                 No</label>
                             <input [disabled]="isView" type="text" class="form-control" name="carnet"
@@ -691,14 +691,14 @@
                                                   [sortable]="false">
                                             <ng-template pTemplate="header">
                                             <span
-                                                jhiTranslate="niopdcgatewayApp.carTank.tankType">Share Percent</span>
+                                                jhiTranslate="samtagatewayApp.carTank.tankType">Share Percent</span>
                                             </ng-template>
                                         </p-column>
                                         <p-column *ngIf="vehicleModel.havePrimitiveMeasure" field="measureHeight"
                                                   [sortable]="false">
                                             <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.measureHeight">Share Percent</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.measureHeight">Share Percent</span>
                                             </ng-template>
                                         </p-column>
                                         <ng-container *ngIf="orderType===OrderType[OrderType.BOUNDARY_TRANSIT]">
@@ -706,14 +706,14 @@
                                                       [sortable]="false">
                                                 <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.amount">Share Percent</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.amount">Share Percent</span>
                                                 </ng-template>
                                             </p-column>
                                             <p-column *ngIf="!vehicleModel.havePrimitiveMeasure" field="productTitle"
                                                       [sortable]="false">
                                                 <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.productId">Share Percent</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.productId">Share Percent</span>
                                                 </ng-template>
                                             </p-column>
                                         </ng-container>
@@ -731,7 +731,7 @@
                                     </p-column>
 
                                     <p-column field="measureHeight"
-                                              [header]="'niopdcgatewayApp.carTank.radius'| translate">
+                                              [header]="'samtagatewayApp.carTank.radius'| translate">
                                         <ng-template let-item="rowData" pTemplate="body">
                                             <div class="row" *ngIf="item.amountType===AmountType[AmountType.NORMAL]">
                                                 <div class="col-md-6">
@@ -770,9 +770,9 @@
                                 </ng-container>
                                 <ng-container *ngIf="orderType===OrderType[OrderType.BOUNDARY_TRANSIT]">
                                     <p-column *ngIf="!vehicleModel.havePrimitiveMeasure" field="amount"
-                                              [header]="'niopdcgatewayApp.carTank.radius'| translate"></p-column>
+                                              [header]="'samtagatewayApp.carTank.radius'| translate"></p-column>
                                     <p-column *ngIf="!vehicleModel.havePrimitiveMeasure" field="productTitle"
-                                              [header]="'niopdcgatewayApp.carTank.radius'| translate"></p-column>
+                                              [header]="'samtagatewayApp.carTank.radius'| translate"></p-column>
                                 </ng-container>
                             </p-dataTable>
                         </div>
@@ -807,14 +807,14 @@
                                                   [sortable]="false">
                                             <ng-template pTemplate="header">
                                             <span
-                                                jhiTranslate="niopdcgatewayApp.carTank.tankType">Share Percent</span>
+                                                jhiTranslate="samtagatewayApp.carTank.tankType">Share Percent</span>
                                             </ng-template>
                                         </p-column>
                                         <p-column *ngIf="vehicleModel.havePrimitiveMeasure" field="measureHeight"
                                                   [sortable]="false">
                                             <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.measureHeight">Share Percent</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.measureHeight">Share Percent</span>
                                             </ng-template>
                                         </p-column>
                                         <ng-container *ngIf="orderType===OrderType[OrderType.BOUNDARY_TRANSIT]">
@@ -822,14 +822,14 @@
                                                       [sortable]="false">
                                                 <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.amount">Share Percent</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.amount">Share Percent</span>
                                                 </ng-template>
                                             </p-column>
                                             <p-column *ngIf="!vehicleModel.havePrimitiveMeasure" field="productTitle"
                                                       [sortable]="false">
                                                 <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.productId">Share Percent</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.productId">Share Percent</span>
                                                 </ng-template>
                                             </p-column>
                                         </ng-container>
@@ -847,7 +847,7 @@
                                     </p-column>
 
                                     <p-column field="measureHeight"
-                                              [header]="'niopdcgatewayApp.carTank.radius'| translate">
+                                              [header]="'samtagatewayApp.carTank.radius'| translate">
                                         <ng-template let-item="rowData" pTemplate="body">
                                             <div class="row"
                                                  *ngIf="item.amountType===AmountType[AmountType.NORMAL]">
@@ -920,7 +920,7 @@
                                         </ng-template>
                                     </p-column>
                                     <p-column *ngIf="!vehicleModel.havePrimitiveMeasure" field="productTitle"
-                                              [header]="'niopdcgatewayApp.carTank.radius'| translate"></p-column>
+                                              [header]="'samtagatewayApp.carTank.radius'| translate"></p-column>
                                 </ng-container>
                             </p-dataTable>
                         </div>
@@ -964,19 +964,19 @@
                                 <p-column field="amount" [sortable]="false">
                                     <ng-template pTemplate="header">
                                             <span
-                                                jhiTranslate="niopdcgatewayApp.orderProduct.amount">Person</span>
+                                                jhiTranslate="samtagatewayApp.orderProduct.amount">Person</span>
                                     </ng-template>
                                 </p-column>
                                 <p-column field="productRatePrice" [sortable]="false">
                                     <ng-template pTemplate="header">
                                             <span
-                                                jhiTranslate="niopdcgatewayApp.orderProduct.productRatePrice">Share Percent</span>
+                                                jhiTranslate="samtagatewayApp.orderProduct.productRatePrice">Share Percent</span>
                                     </ng-template>
                                 </p-column>
                                 <p-column field="productPrice" [sortable]="false">
                                     <ng-template pTemplate="header">
                                 <span
-                                    jhiTranslate="niopdcgatewayApp.orderProduct.productPrice">Share Percent</span>
+                                    jhiTranslate="samtagatewayApp.orderProduct.productPrice">Share Percent</span>
                                     </ng-template>
                                 </p-column>
                             </p-row>
@@ -993,11 +993,11 @@
                             </ng-template>
                         </p-column>
                         <p-column field="amount"
-                                  [header]="'niopdcgatewayApp.carTank.tankNo' | translate"></p-column>
+                                  [header]="'samtagatewayApp.carTank.tankNo' | translate"></p-column>
                         <p-column field="productRatePrice"
-                                  [header]="'niopdcgatewayApp.orderProduct.productRatePrice' | translate"></p-column>
+                                  [header]="'samtagatewayApp.orderProduct.productRatePrice' | translate"></p-column>
                         <p-column field="price"
-                                  [header]="'niopdcgatewayApp.orderProduct.price' | translate">
+                                  [header]="'samtagatewayApp.orderProduct.price' | translate">
                             <ng-template let-item="rowData" pTemplate="body">
                                 {{item.price}} {{boundaryDTO.currencyTitle}}
                             </ng-template>
@@ -1036,7 +1036,7 @@
             data-dismiss="modal"
             (click)="save()">
             <span class="fa fa-arrow-left"></span>&nbsp;<span
-            jhiTranslate="niopdcgatewayApp.order.nextStep">Cancel</span>
+            jhiTranslate="samtagatewayApp.order.nextStep">Cancel</span>
         </button>
         <button type="button"
                 *ngIf="activeIndex===1"
@@ -1044,7 +1044,7 @@
                 data-dismiss="modal"
                 (click)="previousStep()">
             <span class="fa fa-arrow-right"></span>&nbsp;<span
-            jhiTranslate="niopdcgatewayApp.order.back">Cancel</span>
+            jhiTranslate="samtagatewayApp.order.back">Cancel</span>
         </button>
         <button type="button"
                 [disabled]="editForm.form.invalid ||(vehicleModel.havePrimitiveMeasure && boundaryDTO.boundaryItems.length === 0 && orderType===OrderType[OrderType.BOUNDARY_TRANSIT]) || isView"
@@ -1062,14 +1062,14 @@
                 data-dismiss="modal"
                 (click)="saveOrder(true,false)">
             <span class="fa fa-arrow-left"></span>&nbsp;<span
-            jhiTranslate="niopdcgatewayApp.order.paymentCredit">Cancel</span>
+            jhiTranslate="samtagatewayApp.order.paymentCredit">Cancel</span>
         </button>
         <button type="button"
                 class="btn btn-success"
                 (click)="saveOrder(true,true)"
                 *ngIf="activeIndex === 2 && payStatus === 'PENDING'"
         >
-            <span class="fa fa-refresh"></span>&nbsp;<span jhiTranslate="niopdcgatewayApp.order.paymentFinalAgain">paymentFinalAgain</span>
+            <span class="fa fa-refresh"></span>&nbsp;<span jhiTranslate="samtagatewayApp.order.paymentFinalAgain">paymentFinalAgain</span>
         </button>
     </div>
 </form>

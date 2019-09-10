@@ -36,7 +36,7 @@ export const walletRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_WALLET'],
-            pageTitle: 'niopdcgatewayApp.wallet.home.title'
+            pageTitle: 'samtagatewayApp.wallet.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const walletPopupRoute: Routes = [
         component: WalletPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_WALLET'],
-            pageTitle: 'niopdcgatewayApp.wallet.home.title'
+            pageTitle: 'samtagatewayApp.wallet.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const walletPopupRoute: Routes = [
         component: WalletPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_WALLET'],
-            pageTitle: 'niopdcgatewayApp.wallet.home.title'
+            pageTitle: 'samtagatewayApp.wallet.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const walletPopupRoute: Routes = [
         component: WalletDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_WALLET'],
-            pageTitle: 'niopdcgatewayApp.wallet.home.title'
+            pageTitle: 'samtagatewayApp.wallet.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const walletPopupRoute: Routes = [
         component: WalletPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_WALLET'],
-            pageTitle: 'niopdcgatewayApp.wallet.home.title'
+            pageTitle: 'samtagatewayApp.wallet.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

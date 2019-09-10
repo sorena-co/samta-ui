@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "customerDeactiveRule" : {
             "home": {
                 "title": " غیر فعال کردن فروش",

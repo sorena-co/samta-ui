@@ -143,7 +143,7 @@ export class NewsComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.news.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.news.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="product.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.product.home.createLabel">
+            jhiTranslate="samtagatewayApp.product.home.createLabel">
             Create</h4>
         <h4 *ngIf="product.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.product.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.product.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.product.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.product.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-xs-12 col-md-4">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.product.code"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.product.code"
                                for="field_code">Code</label>
                         <input [disabled]="isView" type="text" class="form-control" name="code" id="field_code"
                                [(ngModel)]="product.code"
@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.product.title"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.product.title"
                                for="field_title">Title</label>
                         <input [disabled]="isView" type="text" class="form-control" name="title" id="field_title"
                                [(ngModel)]="product.title"
@@ -73,7 +73,7 @@
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <div class="form-group">
-                        <label jhiTranslate="niopdcgatewayApp.product.productGroup"
+                        <label jhiTranslate="samtagatewayApp.product.productGroup"
                                for="field_productGroup">Product
                             Group</label>
                         <select [disabled]="isView" class="form-control" id="field_productGroup" name="productGroup"
@@ -100,7 +100,7 @@
             <div class="row">
                 <div class="col-xs-12 col-md-3">
                     <div class="form-group">
-                        <label jhiTranslate="niopdcgatewayApp.product.productUnit"
+                        <label jhiTranslate="samtagatewayApp.product.productUnit"
                                for="field_productUnit">Product
                             Unit</label>
                         <select [disabled]="isView" class="form-control" id="field_productUnit" name="productUnit"
@@ -127,14 +127,14 @@
                         <input [disabled]="isView" type="checkbox" class="form-control" name="hasContainer"
                                id="field_hasContainer"
                                [(ngModel)]="product.hasContainer" (change)="checkContainer()"/>
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.product.hasContainer"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.product.hasContainer"
                                for="field_hasContainer">Has Container</label>
                     </div>
                 </div>
                 <div class="col-md-3" *ngIf="product?.hasContainer" style="text-align: center;margin-top: auto">
                     <div class="form-group">
                         <label class="form-control-label"
-                               jhiTranslate="niopdcgatewayApp.product.calculateContainerPrice"
+                               jhiTranslate="samtagatewayApp.product.calculateContainerPrice"
                                for="field_calculateContainerPrice">Calculate Container Price</label>
                         <input [disabled]="isView" type="checkbox" class="form-control" name="calculateContainerPrice"
                                id="field_calculateContainerPrice"
@@ -143,7 +143,7 @@
                 </div>
                 <div class="col-xs-12 col-md-3" *ngIf="product?.hasContainer">
                     <div class="form-group">
-                        <label jhiTranslate="niopdcgatewayApp.product.container" for="field_container">Container</label>
+                        <label jhiTranslate="samtagatewayApp.product.container" for="field_container">Container</label>
                         <select [disabled]="isView" required class="form-control" id="field_container" name="container"
                                 [(ngModel)]="product.containerId">
                             <option [ngValue]="null"></option>

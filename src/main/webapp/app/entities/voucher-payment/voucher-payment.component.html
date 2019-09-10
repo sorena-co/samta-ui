@@ -19,12 +19,12 @@
             <p-row>
                 <p-column field="locationId" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.voucherPayment.locationId">Location Id</span>
+                        <span jhiTranslate="samtagatewayApp.voucherPayment.locationId">Location Id</span>
                     </ng-template>
                 </p-column>
                 <p-column field="voucherTypeId" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.voucherPayment.voucherType">Voucher Type</span>
+                        <span jhiTranslate="samtagatewayApp.voucherPayment.voucherType">Voucher Type</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -61,8 +61,8 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="locationTitle" [header]="'niopdcgatewayApp.voucherPayment.locationId' | translate"></p-column>
-        <p-column field="voucherTypeId" [header]="'niopdcgatewayApp.voucherPayment.voucherType' | translate">
+        <p-column field="locationTitle" [header]="'samtagatewayApp.voucherPayment.locationId' | translate"></p-column>
+        <p-column field="voucherTypeId" [header]="'samtagatewayApp.voucherPayment.voucherType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
             {{item.voucherTypeGroupTitle+'/'+item.voucherTypeTitle}}
             </ng-template>

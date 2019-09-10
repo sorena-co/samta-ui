@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="costGroup.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.costGroup.home.createLabel">
+            jhiTranslate="samtagatewayApp.costGroup.home.createLabel">
             Create</h4>
         <h4 *ngIf="costGroup.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.costGroup.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.costGroup.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.costGroup.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.costGroup.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.costGroup.title" for="field_title">Title</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.costGroup.title" for="field_title">Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="title" id="field_title"
                            [(ngModel)]="costGroup.title" required minlength="3" maxlength="42"/>
                     <div [hidden]="!(editForm.controls.title?.dirty && editForm.controls.title?.invalid)">
@@ -43,7 +43,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.costGroup.code" for="field_code">Code</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.costGroup.code" for="field_code">Code</label>
                     <input [disabled]="isView" type="text" class="form-control" name="code" id="field_code"
                            [(ngModel)]="costGroup.code" required minlength="4" maxlength="4"/>
                     <div [hidden]="!(editForm.controls.code?.dirty && editForm.controls.code?.invalid)">
@@ -67,15 +67,15 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.costGroup.costGroupType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.costGroup.costGroupType"
                            for="field_costGroupType">Cost Group Type</label>
                     <select [disabled]="isView" class="form-control" name="costGroupType"
                             [(ngModel)]="costGroup.costGroupType" id="field_costGroupType" required>
-                        <option value="CASH">{{'niopdcgatewayApp.CostGroupType.CASH' | translate}}</option>
-                        <option value="LADDER">{{'niopdcgatewayApp.CostGroupType.LADDER' | translate}}</option>
-                        <option value="ENCOURAGEMENT">{{'niopdcgatewayApp.CostGroupType.ENCOURAGEMENT' | translate}}
+                        <option value="CASH">{{'samtagatewayApp.CostGroupType.CASH' | translate}}</option>
+                        <option value="LADDER">{{'samtagatewayApp.CostGroupType.LADDER' | translate}}</option>
+                        <option value="ENCOURAGEMENT">{{'samtagatewayApp.CostGroupType.ENCOURAGEMENT' | translate}}
                         </option>
-                        <option value="SUPPLEMENT">{{'niopdcgatewayApp.CostGroupType.SUPPLEMENT' | translate}}</option>
+                        <option value="SUPPLEMENT">{{'samtagatewayApp.CostGroupType.SUPPLEMENT' | translate}}</option>
                     </select>
                     <div
                         [hidden]="!(editForm.controls.costGroupType?.dirty && editForm.controls.costGroupType?.invalid)">
@@ -89,12 +89,12 @@
             </div>
            <!-- <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.costGroup.costGroupAccessType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.costGroup.costGroupAccessType"
                            for="field_costGroupAccessType">Cost Group Access Type</label>
                     <select [disabled]="isView" class="form-control" name="costGroupAccessType"
                             [(ngModel)]="costGroup.costGroupAccessType" id="field_costGroupAccessType" required>
-                        <option value="PRODUCT">{{'niopdcgatewayApp.CostGroupAccessType.PRODUCT' | translate}}</option>
-                        <option value="CUSTOMER">{{'niopdcgatewayApp.CostGroupAccessType.CUSTOMER' | translate}}
+                        <option value="PRODUCT">{{'samtagatewayApp.CostGroupAccessType.PRODUCT' | translate}}</option>
+                        <option value="CUSTOMER">{{'samtagatewayApp.CostGroupAccessType.CUSTOMER' | translate}}
                         </option>
                     </select>
                     <div
@@ -114,7 +114,7 @@
                     <input [disabled]="isView" type="checkbox" class="form-control"
                            name="selectiveContractTypes" id="field_contractType"
                            [(ngModel)]="costGroup.selectiveContractTypes"/>
-                    <label jhiTranslate="niopdcgatewayApp.costGroup.contractTypeId" for="field_contractType">contract Type</label>
+                    <label jhiTranslate="samtagatewayApp.costGroup.contractTypeId" for="field_contractType">contract Type</label>
                     <p-multiSelect *ngIf="costGroup.selectiveContractTypes"
                                    [disabled]="isView" class="form-control"
                                    [options]="contractTypes"
@@ -135,7 +135,7 @@
                     <input [disabled]="isView" type="checkbox" class="form-control"
                            name="canSetCustomerTypeIds" id="field_product_ch"
                            [(ngModel)]="costGroup.canSetProductIds"/>
-                    <label jhiTranslate="niopdcgatewayApp.costGroup.product" for="field_product_ch">product</label>
+                    <label jhiTranslate="samtagatewayApp.costGroup.product" for="field_product_ch">product</label>
                     <p-multiSelect *ngIf="costGroup.canSetProductIds" [disabled]="isView" class="form-control"
                                    id="field_product"
                                    [options]="products"
@@ -157,7 +157,7 @@
                     <input [disabled]="isView" type="checkbox" class="form-control"
                            name="canSetCustomerTypeIds" id="canSetCustomerTypeIds"
                            [(ngModel)]="costGroup.canSetCustomerTypeIds"/>
-                    <label jhiTranslate="niopdcgatewayApp.costGroup.customerType" for="canSetCustomerTypeIds">customerType</label>
+                    <label jhiTranslate="samtagatewayApp.costGroup.customerType" for="canSetCustomerTypeIds">customerType</label>
                     <p-multiSelect *ngIf="costGroup.canSetCustomerTypeIds" [disabled]="isView" class="form-control"
                                    id="field_customerType"
                                    [options]="customerTypes"
@@ -175,12 +175,12 @@
         <div class="row">
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.costGroup.forced"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.costGroup.forced"
                            for="field_forced">Forced</label>
                     <select [disabled]="isView" class="form-control" name="forced" [(ngModel)]="costGroup.forced" id="field_forced"
                             required>
-                        <option value="FORCE">{{'niopdcgatewayApp.Forced.FORCE' | translate}}</option>
-                        <option value="OPTIONAL">{{'niopdcgatewayApp.Forced.OPTIONAL' | translate}}</option>
+                        <option value="FORCE">{{'samtagatewayApp.Forced.FORCE' | translate}}</option>
+                        <option value="OPTIONAL">{{'samtagatewayApp.Forced.OPTIONAL' | translate}}</option>
                     </select>
                     <div [hidden]="!(editForm.controls.forced?.dirty && editForm.controls.forced?.invalid)">
                         <small class="form-text text-danger"
@@ -194,16 +194,16 @@
             <div class="col-xs-12 col-md-3"
                  *ngIf="costGroup.costGroupAccessType&&(costGroup.costGroupType!==CostGroupType[CostGroupType.CASH])">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.costGroup.paymentPeriod"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.costGroup.paymentPeriod"
                            for="field_paymentPeriod">Payment Period</label>
                     <select [disabled]="isView" class="form-control" name="paymentPeriod" [(ngModel)]="costGroup.paymentPeriod"
                             id="field_paymentPeriod" required>
-                        <option value="DAY">{{'niopdcgatewayApp.PaymentPeriod.DAY' | translate}}</option>
-                        <option value="MONTH">{{'niopdcgatewayApp.PaymentPeriod.MONTH' |
+                        <option value="DAY">{{'samtagatewayApp.PaymentPeriod.DAY' | translate}}</option>
+                        <option value="MONTH">{{'samtagatewayApp.PaymentPeriod.MONTH' |
                             translate}}
                         </option>
-                        <option value="SEASON">{{'niopdcgatewayApp.PaymentPeriod.SEASON' | translate}}</option>
-                        <option value="YEAR">{{'niopdcgatewayApp.PaymentPeriod.YEAR' | translate}}</option>
+                        <option value="SEASON">{{'samtagatewayApp.PaymentPeriod.SEASON' | translate}}</option>
+                        <option value="YEAR">{{'samtagatewayApp.PaymentPeriod.YEAR' | translate}}</option>
                     </select>
                     <div
                         [hidden]="!(editForm.controls.paymentPeriod?.dirty && editForm.controls.paymentPeriod?.invalid)">
@@ -217,13 +217,13 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.costGroup.costMethod"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.costGroup.costMethod"
                            for="field_costMethod">Cost Method</label>
 
                     <select [disabled]="isView" class="form-control" name="costMethod" [(ngModel)]="costGroup.costMethod"
                             id="field_costMethod"  required>
-                        <option value="NORMAL_SALES">{{'niopdcgatewayApp.CostMethod.NORMAL_SALES' | translate}}</option>
-                        <option value="DEFUEL">{{'niopdcgatewayApp.CostMethod.DEFUEL' |
+                        <option value="NORMAL_SALES">{{'samtagatewayApp.CostMethod.NORMAL_SALES' | translate}}</option>
+                        <option value="DEFUEL">{{'samtagatewayApp.CostMethod.DEFUEL' |
                             translate}}
                         </option>
                     </select>
@@ -246,13 +246,13 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.cost.costType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.cost.costType"
                            for="field_costType">Cost Type</label>
                     <select [disabled]="isView" class="form-control" name="costType" [(ngModel)]="costGroup.costType"
                             id="field_costType" required>
                         <option value=""></option>
-                        <option value="WITH_ORDER">{{'niopdcgatewayApp.CostType.WITH_ORDER' | translate}}</option>
-                        <option value="BILL">{{'niopdcgatewayApp.CostType.BILL' | translate}}</option>
+                        <option value="WITH_ORDER">{{'samtagatewayApp.CostType.WITH_ORDER' | translate}}</option>
+                        <option value="BILL">{{'samtagatewayApp.CostType.BILL' | translate}}</option>
                     </select>
                     <div [hidden]="!(editForm.controls.costType?.dirty && editForm.controls.costType?.invalid)">
                         <small class="form-text text-danger"
@@ -269,7 +269,7 @@
                  *ngIf="costGroup.costGroupAccessType">
                 <div class="form-group">
 
-                    <label jhiTranslate="niopdcgatewayApp.customer.location"
+                    <label jhiTranslate="samtagatewayApp.customer.location"
                            for="field_location">Location</label>
 
                     <input-location-selector [disabled]="isView"

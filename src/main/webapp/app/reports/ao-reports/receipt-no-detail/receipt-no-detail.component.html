@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.refuelCenter"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.refuelCenter"
                                    for="field_refuelCenter">RefuelCenter</label>
                             <select class="form-control" id="field_refuelCenter"
                                     name="refuelCenter"
@@ -33,7 +33,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.receiptNoDetail.startDate"
+                                   jhiTranslate="samtagatewayApp.receiptNoDetail.startDate"
                                    for="field_startDate">startDate</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00:00"
@@ -60,7 +60,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.receiptNoDetail.finishDate"
+                                   jhiTranslate="samtagatewayApp.receiptNoDetail.finishDate"
                                    for="field_finishDate">finishDate</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="23:59:59"
@@ -118,50 +118,50 @@
             </button>
         </ng-template>
 
-        <kendo-grid-column field="receiptNo" [title]="'niopdcgatewayApp.receiptNoDetail.receiptNo' | translate"
+        <kendo-grid-column field="receiptNo" [title]="'samtagatewayApp.receiptNoDetail.receiptNo' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="dateTime" [title]="'niopdcgatewayApp.receiptNoDetail.dateTime' | translate"
+        <kendo-grid-column field="dateTime" [title]="'samtagatewayApp.receiptNoDetail.dateTime' | translate"
                            width="130">
             <ng-template kendoGridCellTemplate let-dataItem>
                 <span>{{dataItem.dateTime | dateTimeJalali}}</span>
             </ng-template>
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="airplaneName" [title]="'niopdcgatewayApp.receiptNoDetail.airplaneName' | translate"
+        <kendo-grid-column field="airplaneName" [title]="'samtagatewayApp.receiptNoDetail.airplaneName' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="personName" [title]="'niopdcgatewayApp.receiptNoDetail.personName' | translate"
+        <kendo-grid-column field="personName" [title]="'samtagatewayApp.receiptNoDetail.personName' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="fuelType" [title]="'niopdcgatewayApp.receiptNoDetail.fuelType' | translate"
+        <kendo-grid-column field="fuelType" [title]="'samtagatewayApp.receiptNoDetail.fuelType' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="currency" [title]="'niopdcgatewayApp.receiptNoDetail.currency' | translate"
+        <kendo-grid-column field="currency" [title]="'samtagatewayApp.receiptNoDetail.currency' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="productCode" [title]="'niopdcgatewayApp.receiptNoDetail.productCode' | translate"
+        <kendo-grid-column field="productCode" [title]="'samtagatewayApp.receiptNoDetail.productCode' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="productTitle" [title]="'niopdcgatewayApp.receiptNoDetail.productTitle' | translate"
+        <kendo-grid-column field="productTitle" [title]="'samtagatewayApp.receiptNoDetail.productTitle' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="username" [title]="'niopdcgatewayApp.receiptNoDetail.username' | translate"
+        <kendo-grid-column field="username" [title]="'samtagatewayApp.receiptNoDetail.username' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="oilTank" [title]="'niopdcgatewayApp.receiptNoDetail.oilTank' | translate"
+        <kendo-grid-column field="oilTank" [title]="'samtagatewayApp.receiptNoDetail.oilTank' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="amount" [title]="'niopdcgatewayApp.receiptNoDetail.amount' | translate"
+        <kendo-grid-column field="amount" [title]="'samtagatewayApp.receiptNoDetail.amount' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>

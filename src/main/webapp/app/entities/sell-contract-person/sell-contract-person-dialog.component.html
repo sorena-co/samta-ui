@@ -2,12 +2,12 @@
 
 
     <div class="modal-header">
-        <h4 *ngIf="sellContractPerson.id==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.sellContractPerson.home.createLabel">
+        <h4 *ngIf="sellContractPerson.id==null" class="modal-title" id="createLabel" jhiTranslate="samtagatewayApp.sellContractPerson.home.createLabel">
             Create</h4>
         <h4 *ngIf="sellContractPerson.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.sellContractPerson.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.sellContractPerson.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.sellContractPerson.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.sellContractPerson.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -17,7 +17,7 @@
         <jhi-alert-error></jhi-alert-error>
         <div class="row">
             <div class="col-xs-12 col-md-6">
-                <label jhiTranslate="niopdcgatewayApp.sellContractPerson.person" for="field_person">Person</label>
+                <label jhiTranslate="samtagatewayApp.sellContractPerson.person" for="field_person">Person</label>
                 <app-person-selector widthGrid="600px"
                                     [(ngModel)]="sellContractPerson.personId" required
                                     [disabled]="isView"
@@ -32,7 +32,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.sellContractPerson.sharePercent"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.sellContractPerson.sharePercent"
                            for="field_sharePercent">Share Percent</label>
                     <input type="number" class="form-control" name="sharePercent" id="field_sharePercent"
                            [numeric]="{min:0}"

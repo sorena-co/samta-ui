@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.location.name"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.location.name"
                            for="field_name">Name</label>
                     <input [disabled]="isView" type="text" class="form-control" name="name" id="field_name"
                            [(ngModel)]="location.name"
@@ -37,7 +37,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.location.code"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.location.code"
                            for="field_code">Code</label>
                     <div style="position:relative;">
                         <input [disabled]="isView" type="text" class="form-control" name="code" id="field_code"
@@ -74,7 +74,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-6" *ngIf="!hiddenFinancialCode">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.location.financialCode"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.location.financialCode"
                            for="field_financialCode">Financial Code</label>
                     <input [disabled]="isView" type="text" class="form-control" name="financialCode"
                            id="field_financialCode"
@@ -104,7 +104,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.location.costAccount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.location.costAccount"
                            for="field_costAccount">Cost Account</label>
                     <input [disabled]="isView" type="text" class="form-control" name="costAccount"
                            id="field_costAccount"
@@ -129,7 +129,7 @@
         <div class="row" *ngIf="location.level === 0 || location.level === 2 || location.level === 3">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.location.startOrderNumber"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.location.startOrderNumber"
                            for="field_startOrderNumber">Start Order Number</label>
                     <input type="text" [disabled]="isView"
                            class="form-control" (input)="changeStartOrderNumber($event.target.value)"
@@ -139,7 +139,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.location.endOrderNumber"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.location.endOrderNumber"
                            for="field_endOrderNumber">End Order Number</label>
                     <input type="text" [disabled]="isView" class="form-control" name="endOrderNumber"
                            id="field_endOrderNumber" maxlength="8"
@@ -148,7 +148,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.location.currentOrderNumber"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.location.currentOrderNumber"
                            for="field_currentOrderNumber">Current Order Number</label>
                     <input type="text" class="form-control" [disabled]="true" name="currentOrderNumber"
                            id="field_currentOrderNumber" maxlength="8"
@@ -158,7 +158,7 @@
         </div>
         <div class="row" *ngIf="location.level === 2">
             <div class="col-xs-12 col-md-6">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.location.region"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.location.region"
                        for="field_region">Current Order Number</label>
                 <input-region-selector [disabled]="isView" [idSelector]="false"
                                        [oneSelection]="false"
@@ -176,7 +176,7 @@
                            [(ngModel)]="location.haveBoundarySell"
                     />
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.location.haveBoundarySell"
+                           jhiTranslate="samtagatewayApp.location.haveBoundarySell"
                            for="field_haveBoundarySell">have Boundary Sell</label>
                 </div>
             </div>
@@ -185,21 +185,21 @@
             <div class="col-xs-12 col-md-3 vertical-center-group">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.location.primitiveMeasure"
+                           jhiTranslate="samtagatewayApp.location.primitiveMeasure"
                            for="field_transhipType">have Boundary Sell</label>
                     <select [disabled]="isView" class="form-control" name="transhipType"
                             [(ngModel)]="location.transhipType" id="field_transhipType" required>
-                        <option value="INSIDE_TO_OUT">{{'niopdcgatewayApp.TranshipType.INSIDE_TO_OUT' | translate}}</option>
-                        <option value="OUT_TO_INSIDE_WHIT_PRIMITIVE">{{'niopdcgatewayApp.TranshipType.OUT_TO_INSIDE_WHIT_PRIMITIVE' | translate}}</option>
-                        <option value="OUT_TO_INSIDE_WHIT_OUT_PRIMITIVE">{{'niopdcgatewayApp.TranshipType.OUT_TO_INSIDE_WHIT_OUT_PRIMITIVE' | translate}}</option>
-                        <option value="ONLY_PUMP_NOZZLE">{{'niopdcgatewayApp.TranshipType.ONLY_PUMP_NOZZLE' | translate}}</option>
+                        <option value="INSIDE_TO_OUT">{{'samtagatewayApp.TranshipType.INSIDE_TO_OUT' | translate}}</option>
+                        <option value="OUT_TO_INSIDE_WHIT_PRIMITIVE">{{'samtagatewayApp.TranshipType.OUT_TO_INSIDE_WHIT_PRIMITIVE' | translate}}</option>
+                        <option value="OUT_TO_INSIDE_WHIT_OUT_PRIMITIVE">{{'samtagatewayApp.TranshipType.OUT_TO_INSIDE_WHIT_OUT_PRIMITIVE' | translate}}</option>
+                        <option value="ONLY_PUMP_NOZZLE">{{'samtagatewayApp.TranshipType.ONLY_PUMP_NOZZLE' | translate}}</option>
 
                     </select>
                 </div>
             </div>
             <div class="col-xs-12 col-md-3 vertical-center-group">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.order.targetCountry"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.order.targetCountry"
                            for="field_targetCountry">Country</label>
                     <p-dropdown [options]="customCountries" [(ngModel)]="location.country.id"
                                 [filter]="true"
@@ -218,7 +218,7 @@
                 <div class="form-group">
                     <div class="form-group">
                         <label class="form-control-label"
-                               jhiTranslate="niopdcgatewayApp.location.beforeControl"
+                               jhiTranslate="samtagatewayApp.location.beforeControl"
                                for="field_primitiveMeasure">have Boundary Sell</label>
                         <input [disabled]="isView" type="checkbox" class="form-control"
                                name="beforeControl"

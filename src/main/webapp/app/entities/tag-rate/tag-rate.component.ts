@@ -136,13 +136,13 @@ export class TagRateComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.tagRate.home.locationTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.tagRate.home.locationTitle').subscribe((title) => {
             this.breadcrumbItems.push({
                 label: title + ` (${this.location.name})`,
                 routerLink: ['/location/' + this.location.locationId + '/sub-locations']
             });
         });
-        this.translateService.get('niopdcgatewayApp.tagRate.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.tagRate.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

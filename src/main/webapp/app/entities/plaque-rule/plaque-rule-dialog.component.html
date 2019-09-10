@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.plaqueRule.priority"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.plaqueRule.priority"
                            for="field_priority">Priority</label>
                     <input [disabled]="isView" type="number" class="form-control" name="priority" id="field_priority"
                            [(ngModel)]="plaqueRule.priority" required/>
@@ -39,7 +39,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.plaqueRule.digit"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.plaqueRule.digit"
                            for="field_digit">Digit</label>
                     <input [disabled]="isView" type="number" class="form-control" name="digit" id="field_digit"
                            [(ngModel)]="plaqueRule.digit" required/>
@@ -59,13 +59,13 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.plaqueRule.digitType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.plaqueRule.digitType"
                            for="field_digitType">Digit Type</label>
                     <select [disabled]="isView" class="form-control" name="digitType" [(ngModel)]="plaqueRule.digitType"
                             id="field_digitType" required>
-                        <option value="NUMBER">{{'niopdcgatewayApp.DigitType.NUMBER' | translate}}</option>
-                        <option value="PERSIAN_WORD">{{'niopdcgatewayApp.DigitType.PERSIAN_WORD' | translate}}</option>
-                        <option value="ENGLISH_WORD">{{'niopdcgatewayApp.DigitType.ENGLISH_WORD' | translate}}</option>
+                        <option value="NUMBER">{{'samtagatewayApp.DigitType.NUMBER' | translate}}</option>
+                        <option value="PERSIAN_WORD">{{'samtagatewayApp.DigitType.PERSIAN_WORD' | translate}}</option>
+                        <option value="ENGLISH_WORD">{{'samtagatewayApp.DigitType.ENGLISH_WORD' | translate}}</option>
                     </select>
                     <div [hidden]="!(editForm.controls.digitType?.dirty && editForm.controls.digitType?.invalid)">
                         <small class="form-text text-danger"

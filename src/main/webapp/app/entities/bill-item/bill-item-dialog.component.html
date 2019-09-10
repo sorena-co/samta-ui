@@ -1,7 +1,7 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="myBillItemLabel" jhiTranslate="niopdcgatewayApp.billItem.home.createOrEditLabel">Create or edit a Bill Item</h4>
+        <h4 class="modal-title" id="myBillItemLabel" jhiTranslate="samtagatewayApp.billItem.home.createOrEditLabel">Create or edit a Bill Item</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;</button>
     </div>
@@ -13,7 +13,7 @@
                    [(ngModel)]="billItem.id" readonly />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.title" for="field_title">Title</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.billItem.title" for="field_title">Title</label>
             <input type="text" class="form-control" name="title" id="field_title"
                 [(ngModel)]="billItem.title" required/>
             <div [hidden]="!(editForm.controls.title?.dirty && editForm.controls.title?.invalid)">
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.productId" for="field_productId">Product Id</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.billItem.productId" for="field_productId">Product Id</label>
             <input type="number" class="form-control" name="productId" id="field_productId"
                 [(ngModel)]="billItem.productId" required/>
             <div [hidden]="!(editForm.controls.productId?.dirty && editForm.controls.productId?.invalid)">
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.litre" for="field_litre">Litre</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.billItem.litre" for="field_litre">Litre</label>
             <input type="number" class="form-control" name="litre" id="field_litre"
                 [(ngModel)]="billItem.litre" required/>
             <div [hidden]="!(editForm.controls.litre?.dirty && editForm.controls.litre?.invalid)">
@@ -54,7 +54,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.costId" for="field_costId">Cost Id</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.billItem.costId" for="field_costId">Cost Id</label>
             <input type="number" class="form-control" name="costId" id="field_costId"
                 [(ngModel)]="billItem.costId" required/>
             <div [hidden]="!(editForm.controls.costId?.dirty && editForm.controls.costId?.invalid)">
@@ -69,7 +69,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.price" for="field_price">Price</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.billItem.price" for="field_price">Price</label>
             <input type="number" class="form-control" name="price" id="field_price"
                 [(ngModel)]="billItem.price" required/>
             <div [hidden]="!(editForm.controls.price?.dirty && editForm.controls.price?.invalid)">
@@ -84,7 +84,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.costRatePrice" for="field_costRatePrice">Cost Rate Price</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.billItem.costRatePrice" for="field_costRatePrice">Cost Rate Price</label>
             <input type="number" class="form-control" name="costRatePrice" id="field_costRatePrice"
                 [(ngModel)]="billItem.costRatePrice" required/>
             <div [hidden]="!(editForm.controls.costRatePrice?.dirty && editForm.controls.costRatePrice?.invalid)">
@@ -99,7 +99,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.costElementId" for="field_costElementId">Cost Element Id</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.billItem.costElementId" for="field_costElementId">Cost Element Id</label>
             <input type="number" class="form-control" name="costElementId" id="field_costElementId"
                 [(ngModel)]="billItem.costElementId" required/>
             <div [hidden]="!(editForm.controls.costElementId?.dirty && editForm.controls.costElementId?.invalid)">
@@ -115,7 +115,7 @@
         </div>
 
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.billItem.bill" for="field_bill">Bill</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.billItem.bill" for="field_bill">Bill</label>
             <select class="form-control" id="field_bill" name="bill" [(ngModel)]="billItem.billId"  required>
                 <option *ngIf="!editForm.value.bill" [ngValue]="null" selected></option>
                 <option [ngValue]="billOption.id" *ngFor="let billOption of bills; trackBy: trackBillById">{{billOption.id}}</option>

@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "plaqueRule" : {
             "home": {
                 "title": "Plaque Rules",

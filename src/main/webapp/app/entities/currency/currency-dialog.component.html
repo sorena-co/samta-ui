@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="currency.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.currency.home.createLabel">
+            jhiTranslate="samtagatewayApp.currency.home.createLabel">
             Create</h4>
         <h4 *ngIf="currency.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.currency.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.currency.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.currency.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.currency.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -20,7 +20,7 @@
             <div class="col-md-6">
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.currency.title" for="field_title">Title</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.currency.title" for="field_title">Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="title" id="field_title"
                            [(ngModel)]="currency.title" required minlength="3" maxlength="42"/>
                     <div [hidden]="!(editForm.controls.title?.dirty && editForm.controls.title?.invalid)">
@@ -45,7 +45,7 @@
             </div>
             <div class="col-md-6" style="text-align: center;margin-top: auto">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.currency.isNationalCurrency"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.currency.isNationalCurrency"
                            for="field_isNationalCurrency">Is National Currency</label>
                     <input type="checkbox" class="form-control" name="isNationalCurrency" id="field_isNationalCurrency"
                            [(ngModel)]="currency.isNationalCurrency"/>

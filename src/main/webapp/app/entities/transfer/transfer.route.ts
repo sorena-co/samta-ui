@@ -36,7 +36,7 @@ export const transferRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_TRANSFER'],
-            pageTitle: 'niopdcgatewayApp.transfer.home.title'
+            pageTitle: 'samtagatewayApp.transfer.home.title'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -48,7 +48,7 @@ export const transferRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_TRANSFER'],
-            pageTitle: 'niopdcgatewayApp.transfer.home.title'
+            pageTitle: 'samtagatewayApp.transfer.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -60,7 +60,7 @@ export const transferPopupRoute: Routes = [
         component: TransferPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_TRANSFER'],
-            pageTitle: 'niopdcgatewayApp.transfer.home.title'
+            pageTitle: 'samtagatewayApp.transfer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -70,7 +70,7 @@ export const transferPopupRoute: Routes = [
         component: TransferPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_TRANSFER'],
-            pageTitle: 'niopdcgatewayApp.transfer.home.title'
+            pageTitle: 'samtagatewayApp.transfer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -80,7 +80,7 @@ export const transferPopupRoute: Routes = [
         component: TransferDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_TRANSFER'],
-            pageTitle: 'niopdcgatewayApp.transfer.home.title'
+            pageTitle: 'samtagatewayApp.transfer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -90,7 +90,7 @@ export const transferPopupRoute: Routes = [
         component: TransferPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_TRANSFER'],
-            pageTitle: 'niopdcgatewayApp.transfer.home.title'
+            pageTitle: 'samtagatewayApp.transfer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

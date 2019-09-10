@@ -194,7 +194,7 @@ export class UserTokenComponent implements OnInit, OnDestroy {
                 });
             });
         }
-        this.translateService.get('niopdcgatewayApp.userToken.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.userToken.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

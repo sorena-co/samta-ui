@@ -64,7 +64,7 @@ export class CostGroupDialogComponent implements OnInit {
         this.contractTypes = [];
         this.allContractTypes.forEach((value: ContractType) => {
 
-            this.translateService.get('niopdcgatewayApp.ContractType.' + value).subscribe((title) => {
+            this.translateService.get('samtagatewayApp.ContractType.' + value).subscribe((title) => {
                 const newVar = {
                     label: title,
                     'value': value
@@ -76,11 +76,11 @@ export class CostGroupDialogComponent implements OnInit {
 
 
         /* this.costMethods.push({
-             label: this.translateService.instant('niopdcgatewayApp.costMethod.' + this.CostMethod[this.CostMethod.NORMAL_SALES]),
+             label: this.translateService.instant('samtagatewayApp.costMethod.' + this.CostMethod[this.CostMethod.NORMAL_SALES]),
              value: this.CostMethod[this.CostMethod.NORMAL_SALES]
          });
          this.costMethods.push({
-             label: this.translateService.instant('niopdcgatewayApp.costMethod.' + this.CostMethod[this.CostMethod.DEFUEL]),
+             label: this.translateService.instant('samtagatewayApp.costMethod.' + this.CostMethod[this.CostMethod.DEFUEL]),
              value: this.CostMethod[this.CostMethod.DEFUEL]
          });
          if (this.costGroup.id != null) {

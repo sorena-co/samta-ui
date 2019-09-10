@@ -33,7 +33,7 @@ export const salesCodeRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.salesCode.home.title'
+            pageTitle: 'samtagatewayApp.salesCode.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -41,7 +41,7 @@ export const salesCodeRoute: Routes = [
         component: SalesCodeDetailComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.salesCode.home.title'
+            pageTitle: 'samtagatewayApp.salesCode.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -53,7 +53,7 @@ export const salesCodePopupRoute: Routes = [
         component: SalesCodePopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.salesCode.home.title'
+            pageTitle: 'samtagatewayApp.salesCode.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -63,7 +63,7 @@ export const salesCodePopupRoute: Routes = [
         component: SalesCodePopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.salesCode.home.title'
+            pageTitle: 'samtagatewayApp.salesCode.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -73,7 +73,7 @@ export const salesCodePopupRoute: Routes = [
         component: SalesCodeDeletePopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.salesCode.home.title'
+            pageTitle: 'samtagatewayApp.salesCode.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

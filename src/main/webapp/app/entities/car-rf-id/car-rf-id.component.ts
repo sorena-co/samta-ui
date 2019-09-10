@@ -156,10 +156,10 @@ export class CarRfIdComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.carRfId.home.customerTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.carRfId.home.customerTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/boundary-customer']});
         });
-        this.translateService.get('niopdcgatewayApp.carRfId.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.carRfId.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

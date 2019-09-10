@@ -188,14 +188,14 @@ export class LogBookComponent implements OnInit, OnDestroy {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
         if (this.mainDayDepotId) {
-            this.translateService.get('niopdcgatewayApp.mainDayDepot.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.mainDayDepot.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: `${title} (${dateJalaliPipe.transform(this.mainDayDepot.day)})`,
                     routerLink: ['/main-day-depot']
                 });
             });
 
-            this.translateService.get('niopdcgatewayApp.dayDepot.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.dayDepot.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: title + ` (${this.dayDepot.oilTankTitle})`,
                     routerLink: ['/main-day-depot', this.mainDayDepotId, 'day-depot']
@@ -204,14 +204,14 @@ export class LogBookComponent implements OnInit, OnDestroy {
 
         } else {
 
-            this.translateService.get('niopdcgatewayApp.mainDayOperation.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.mainDayOperation.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: `${title} (${dateJalaliPipe.transform(this.mainDayOperation.day)})`,
                     routerLink: ['/main-day-operation']
                 });
             });
 
-            this.translateService.get('niopdcgatewayApp.dayDepot.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.dayDepot.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: title + ` (${this.dayDepot.oilTankTitle})`,
                     routerLink: ['/main-day-operation', this.mainDayOperationId, 'day-depot']
@@ -220,7 +220,7 @@ export class LogBookComponent implements OnInit, OnDestroy {
 
         }
 
-        this.translateService.get('niopdcgatewayApp.logBook.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.logBook.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

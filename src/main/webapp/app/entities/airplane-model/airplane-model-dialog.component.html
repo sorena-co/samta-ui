@@ -1,7 +1,7 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="myAirplaneModelLabel" jhiTranslate="niopdcgatewayApp.airplaneModel.home.createOrEditLabel">Create or edit a Airplane Model</h4>
+        <h4 class="modal-title" id="myAirplaneModelLabel" jhiTranslate="samtagatewayApp.airplaneModel.home.createOrEditLabel">Create or edit a Airplane Model</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;</button>
     </div>
@@ -13,7 +13,7 @@
                    [(ngModel)]="airplaneModel.id" readonly />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.airplaneModel.title" for="field_title">Title</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.airplaneModel.title" for="field_title">Title</label>
             <input type="text" class="form-control" name="title" id="field_title"
                 [(ngModel)]="airplaneModel.title" required/>
             <div [hidden]="!(editForm.controls.title?.dirty && editForm.controls.title?.invalid)">
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.airplaneModel.capacity" for="field_capacity">Capacity</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.airplaneModel.capacity" for="field_capacity">Capacity</label>
             <input type="number" class="form-control" name="capacity" id="field_capacity"
                 [(ngModel)]="airplaneModel.capacity" required/>
             <div [hidden]="!(editForm.controls.capacity?.dirty && editForm.controls.capacity?.invalid)">
@@ -40,7 +40,7 @@
         </div>
 
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.airplaneModel.product" for="field_product">Product</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.airplaneModel.product" for="field_product">Product</label>
             <select class="form-control" id="field_product" name="product" [(ngModel)]="airplaneModel.productId"  required>
                 <option *ngIf="!editForm.value.product" [ngValue]="null" selected></option>
                 <option [ngValue]="productOption.id" *ngFor="let productOption of products; trackBy: trackProductById">{{productOption.title}}</option>

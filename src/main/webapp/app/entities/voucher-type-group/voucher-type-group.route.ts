@@ -36,7 +36,7 @@ export const voucherTypeGroupRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_VOUCHER_TYPE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.voucherTypeGroup.home.title'
+            pageTitle: 'samtagatewayApp.voucherTypeGroup.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const voucherTypeGroupPopupRoute: Routes = [
         component: VoucherTypeGroupPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_VOUCHER_TYPE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.voucherTypeGroup.home.title'
+            pageTitle: 'samtagatewayApp.voucherTypeGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const voucherTypeGroupPopupRoute: Routes = [
         component: VoucherTypeGroupPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_VOUCHER_TYPE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.voucherTypeGroup.home.title'
+            pageTitle: 'samtagatewayApp.voucherTypeGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const voucherTypeGroupPopupRoute: Routes = [
         component: VoucherTypeGroupDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_VOUCHER_TYPE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.voucherTypeGroup.home.title'
+            pageTitle: 'samtagatewayApp.voucherTypeGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const voucherTypeGroupPopupRoute: Routes = [
         component: VoucherTypeGroupPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_VOUCHER_TYPE_GROUP'],
-            pageTitle: 'niopdcgatewayApp.voucherTypeGroup.home.title'
+            pageTitle: 'samtagatewayApp.voucherTypeGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

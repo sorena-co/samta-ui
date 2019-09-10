@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.factor.startDate"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.factor.startDate"
                                    for="field_startDate">Start Date</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00"
@@ -48,7 +48,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.factor.finishDate"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.factor.finishDate"
                                    for="field_finishDate">Finish Date</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="23:59:59"
@@ -78,7 +78,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.factor.person"
+                                <label class="form-control-label" jhiTranslate="samtagatewayApp.factor.person"
                                        for="field_personId">Customer Id</label>
                                 <app-sell-contract-person-selector
                                     id="field_personId"
@@ -111,7 +111,7 @@
                 <div class="row" *ngIf="isView">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.factor.price"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.factor.price"
                                    for="field_price">Price</label>
                             <input [disabled]="isView" type="number" class="form-control" name="price" id="field_price"
                                    [(ngModel)]="factor.price" required/>
@@ -131,7 +131,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.factor.active"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.factor.active"
                                    for="field_active">Active</label>
                             <input [disabled]="isView" type="checkbox" class="form-control" name="active"
                                    id="field_active"

@@ -159,11 +159,11 @@ export class ServiceOilTankComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.serviceOilTank.home.oilTankTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.serviceOilTank.home.oilTankTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + ` (${this.oilTank.title})`, routerLink: ['/oil-tank']});
         });
 
-        this.translateService.get('niopdcgatewayApp.serviceOilTank.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.serviceOilTank.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.startMeter"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.startMeter"
                            for="field_startMeter">Start Meter</label>
                     <input [disabled]="isView" type="number" class="form-control" name="startMeter"
                            id="field_startMeter"
@@ -40,7 +40,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.endMeter"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.endMeter"
                            for="field_endMeter">End Meter</label>
                     <input [disabled]="isView" type="number" class="form-control" name="endMeter" id="field_endMeter"
                            [(ngModel)]="metreLog.endMeter" required/>
@@ -60,7 +60,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.amount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.amount"
                            for="field_amount">Amount</label>
                     <input [disabled]="isView" type="number" class="form-control" name="amount" id="field_amount"
                            [(ngModel)]="metreLog.amount" required/>
@@ -82,7 +82,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.registerDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.registerDate"
                            for="field_registerDate">Register Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="true"[disabled]="isView" [rtlActive]="true" time="00:00:00" id="field_registerDate"
@@ -106,12 +106,12 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.fuelType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.fuelType"
                            for="field_fuelType">Fuel Type</label>
                     <select [disabled]="isView" class="form-control" name="fuelType" [(ngModel)]="metreLog.fuelType"
                             id="field_fuelType" required>
-                        <option value="FUEL">{{'niopdcgatewayApp.FuelType.FUEL' | translate}}</option>
-                        <option value="DE_FUEL">{{'niopdcgatewayApp.FuelType.DE_FUEL' | translate}}</option>
+                        <option value="FUEL">{{'samtagatewayApp.FuelType.FUEL' | translate}}</option>
+                        <option value="DE_FUEL">{{'samtagatewayApp.FuelType.DE_FUEL' | translate}}</option>
                     </select>
                     <div [hidden]="!(editForm.controls.fuelType?.dirty && editForm.controls.fuelType?.invalid)">
                         <small class="form-text text-danger"
@@ -124,7 +124,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.transfer"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.transfer"
                            for="field_transfer">Transfer</label>
                     <select class="form-control" id="field_transfer" name="transfer" [(ngModel)]="metreLog.transferId">
                         <option [ngValue]="null"></option>
@@ -140,7 +140,7 @@
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.metreLog.transferPlatformToUnit"
+                           jhiTranslate="samtagatewayApp.metreLog.transferPlatformToUnit"
                            for="field_transferPlatformToUnit">Transfer Platform To Unit</label>
                     <select class="form-control" id="field_transferPlatformToUnit" name="transferPlatformToUnit"
                             [(ngModel)]="metreLog.transferPlatformToUnitId">
@@ -154,7 +154,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.logBook"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.logBook"
                            for="field_logBook">Log
                         Book</label>
                     <select class="form-control" id="field_logBook" name="logBook"
@@ -169,7 +169,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.metre"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.metre"
                            for="field_metre">Metre</label>
                     <select class="form-control" id="field_metre" name="metre" [(ngModel)]="metreLog.metreId"
                             required>

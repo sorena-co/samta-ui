@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "customerTypeProductConsumption" : {
             "home": {
                 "title": "Customer Type Product Consumptions",

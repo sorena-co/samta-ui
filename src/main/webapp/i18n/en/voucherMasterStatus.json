@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "VoucherMasterStatus" : {
             "null": "",
             "CONFIRM": "CONFIRM",

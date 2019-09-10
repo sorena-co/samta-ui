@@ -10,7 +10,7 @@ export const customerRoute: Routes = [
         component: CustomerComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_REPORT_DAILY_SALES'],
-            pageTitle: 'niopdcgatewayApp.dailySales.home.title'
+            pageTitle: 'samtagatewayApp.dailySales.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

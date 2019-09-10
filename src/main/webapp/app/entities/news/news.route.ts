@@ -36,7 +36,7 @@ export const newsRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_NEWS'],
-            pageTitle: 'niopdcgatewayApp.news.home.title'
+            pageTitle: 'samtagatewayApp.news.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const newsPopupRoute: Routes = [
         component: NewsPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_NEWS'],
-            pageTitle: 'niopdcgatewayApp.news.home.title'
+            pageTitle: 'samtagatewayApp.news.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const newsPopupRoute: Routes = [
         component: NewsPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_NEWS'],
-            pageTitle: 'niopdcgatewayApp.news.home.title'
+            pageTitle: 'samtagatewayApp.news.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const newsPopupRoute: Routes = [
         component: NewsDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_NEWS'],
-            pageTitle: 'niopdcgatewayApp.news.home.title'
+            pageTitle: 'samtagatewayApp.news.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const newsPopupRoute: Routes = [
         component: NewsPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_NEWS'],
-            pageTitle: 'niopdcgatewayApp.news.home.title'
+            pageTitle: 'samtagatewayApp.news.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

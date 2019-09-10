@@ -11,15 +11,15 @@ public final class HeaderUtil {
 
     private static final Logger log = LoggerFactory.getLogger(HeaderUtil.class);
 
-    private static final String APPLICATION_NAME = "niopdcgatewayApp";
+    private static final String APPLICATION_NAME = "samtagatewayApp";
 
     private HeaderUtil() {
     }
 
     public static HttpHeaders createAlert(String message, String param) {
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-niopdcgatewayApp-alert", message);
-        headers.add("X-niopdcgatewayApp-params", param);
+        headers.add("X-samtagatewayApp-alert", message);
+        headers.add("X-samtagatewayApp-params", param);
         return headers;
     }
 
@@ -38,8 +38,8 @@ public final class HeaderUtil {
     public static HttpHeaders createFailureAlert(String entityName, String errorKey, String defaultMessage) {
         log.error("Entity processing failed, {}", defaultMessage);
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-niopdcgatewayApp-error", "error." + errorKey);
-        headers.add("X-niopdcgatewayApp-params", entityName);
+        headers.add("X-samtagatewayApp-error", "error." + errorKey);
+        headers.add("X-samtagatewayApp-params", entityName);
         return headers;
     }
 }

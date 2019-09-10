@@ -21,17 +21,17 @@
             <p-row>
                 <p-column field="title" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.costGroup.title">Title</span>
+                        <span jhiTranslate="samtagatewayApp.costGroup.title">Title</span>
                     </ng-template>
                 </p-column>
                 <p-column field="code" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.costGroup.code">Code</span>
+                        <span jhiTranslate="samtagatewayApp.costGroup.code">Code</span>
                     </ng-template>
                 </p-column>
                 <p-column field="costGroupType" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.costGroup.costGroupType">Cost Group Type</span>
+                        <span jhiTranslate="samtagatewayApp.costGroup.costGroupType">Cost Group Type</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -60,10 +60,10 @@
                         <select class="form-control" name="costGroupType" (change)="search()"
                                 [(ngModel)]="costGroup.costGroupType" id="field_costGroupType">
                             <option></option>
-                            <option value="CASH">{{'niopdcgatewayApp.CostGroupType.CASH' | translate}}</option>
-                            <option value="LADDER">{{'niopdcgatewayApp.CostGroupType.LADDER' | translate}}</option>
-                            <option value="ENCOURAGEMENT">{{'niopdcgatewayApp.CostGroupType.ENCOURAGEMENT' | translate}}</option>
-                            <option value="SUPPLEMENT">{{'niopdcgatewayApp.CostGroupType.SUPPLEMENT' | translate}}</option>
+                            <option value="CASH">{{'samtagatewayApp.CostGroupType.CASH' | translate}}</option>
+                            <option value="LADDER">{{'samtagatewayApp.CostGroupType.LADDER' | translate}}</option>
+                            <option value="ENCOURAGEMENT">{{'samtagatewayApp.CostGroupType.ENCOURAGEMENT' | translate}}</option>
+                            <option value="SUPPLEMENT">{{'samtagatewayApp.CostGroupType.SUPPLEMENT' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -80,11 +80,11 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="title" [header]="'niopdcgatewayApp.costGroup.title' | translate"></p-column>
-        <p-column field="code" [header]="'niopdcgatewayApp.costGroup.code' | translate"></p-column>
-        <p-column field="costGroupType" [header]="'niopdcgatewayApp.costGroup.costGroupType' | translate">
+        <p-column field="title" [header]="'samtagatewayApp.costGroup.title' | translate"></p-column>
+        <p-column field="code" [header]="'samtagatewayApp.costGroup.code' | translate"></p-column>
+        <p-column field="costGroupType" [header]="'samtagatewayApp.costGroup.costGroupType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.CostGroupType.' + item.costGroupType}}">{{item.costGroupType}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.CostGroupType.' + item.costGroupType}}">{{item.costGroupType}}</span>
             </ng-template></p-column>
         <p-column class="component">
             <ng-template let-item="rowData" pTemplate="body">
@@ -119,13 +119,13 @@
                                 *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_COST']"
                                 [routerLink]="['/cost-group', item.id, 'cost']">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.cost.home.title">Cost</span>
+                            <span jhiTranslate="samtagatewayApp.cost.home.title">Cost</span>
                         </button>
                         <button class="dropdown-item"
                                 *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_COST_ELEMENT']"
                                 [routerLink]="['/cost-group', item.id, 'cost-element']">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.costElement.home.title">Cost</span>
+                            <span jhiTranslate="samtagatewayApp.costElement.home.title">Cost</span>
                         </button>
                     </div>
                 </div>

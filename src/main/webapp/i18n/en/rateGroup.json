@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "rateGroup" : {
             "home": {
                 "title": "Rate Groups",

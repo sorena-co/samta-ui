@@ -23,27 +23,27 @@
             <p-row>
                 <p-column field="fullName" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.person.fullName">Full Name</span>
+                        <span jhiTranslate="samtagatewayApp.person.fullName">Full Name</span>
                     </ng-template>
                 </p-column>
                 <p-column field="code" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.person.code">Code</span>
+                        <span jhiTranslate="samtagatewayApp.person.code">Code</span>
                     </ng-template>
                 </p-column>
                 <p-column field="personality" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.person.personality">Personality</span>
+                        <span jhiTranslate="samtagatewayApp.person.personality">Personality</span>
                     </ng-template>
                 </p-column>
                 <p-column *ngIf="companyId" field="sharePercent" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.stakeholder.sharePercent">Share Percent</span>
+                        <span jhiTranslate="samtagatewayApp.stakeholder.sharePercent">Share Percent</span>
                     </ng-template>
                 </p-column>
                 <p-column field="verifyStatus" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.person.verifyStatus">Active</span>
+                        <span jhiTranslate="samtagatewayApp.person.verifyStatus">Active</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -72,8 +72,8 @@
                         <select class="form-control" name="personality" [(ngModel)]="person.personality"
                                 id="field_personality" (change)="search()">
                             <option></option>
-                            <option value="LEGAL">{{'niopdcgatewayApp.Personality.LEGAL' | translate}}</option>
-                            <option value="NATURAL">{{'niopdcgatewayApp.Personality.NATURAL' | translate}}</option>
+                            <option value="LEGAL">{{'samtagatewayApp.Personality.LEGAL' | translate}}</option>
+                            <option value="NATURAL">{{'samtagatewayApp.Personality.NATURAL' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -90,10 +90,10 @@
                     <ng-template pTemplate="header">
                         <select class="form-control" name="verifyStatus" [(ngModel)]="person.status" id="field_status"
                                 (change)="search()">
-                            <option value="ACTIVE">{{'niopdcgatewayApp.VerifyStatus.PENDING' | translate}}</option>
-                            <option value="FAILED">{{'niopdcgatewayApp.VerifyStatus.ACTIVE' | translate}}</option>
-                            <option value="PENDING">{{'niopdcgatewayApp.VerifyStatus.REJECT' | translate}}</option>
-                            <option value="REJECT">{{'niopdcgatewayApp.VerifyStatus.DEACTIVE' | translate}}</option>
+                            <option value="ACTIVE">{{'samtagatewayApp.VerifyStatus.PENDING' | translate}}</option>
+                            <option value="FAILED">{{'samtagatewayApp.VerifyStatus.ACTIVE' | translate}}</option>
+                            <option value="PENDING">{{'samtagatewayApp.VerifyStatus.REJECT' | translate}}</option>
+                            <option value="REJECT">{{'samtagatewayApp.VerifyStatus.DEACTIVE' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -110,18 +110,18 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="fullName" [header]="'niopdcgatewayApp.person.fullName' | translate"></p-column>
-        <p-column field="code" [header]="'niopdcgatewayApp.person.code' | translate"></p-column>
-        <p-column field="personality" [header]="'niopdcgatewayApp.person.personality' | translate">
+        <p-column field="fullName" [header]="'samtagatewayApp.person.fullName' | translate"></p-column>
+        <p-column field="code" [header]="'samtagatewayApp.person.code' | translate"></p-column>
+        <p-column field="personality" [header]="'samtagatewayApp.person.personality' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.Personality.' + item.personality}}">{{item.personality}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.Personality.' + item.personality}}">{{item.personality}}</span>
             </ng-template>
         </p-column>
         <p-column *ngIf="companyId" field="sharePercent"
-                  [header]="'niopdcgatewayApp.stakeholder.sharePercent' | translate"></p-column>
-        <p-column field="status" [header]="'niopdcgatewayApp.person.verifyStatus' | translate">
+                  [header]="'samtagatewayApp.stakeholder.sharePercent' | translate"></p-column>
+        <p-column field="status" [header]="'samtagatewayApp.person.verifyStatus' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.VerifyStatus.'+item.status}}"></span>
+                <span jhiTranslate="{{'samtagatewayApp.VerifyStatus.'+item.status}}"></span>
             </ng-template>
         </p-column>
         <p-column class="component">
@@ -186,7 +186,7 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_STAKEHOLDER']"
                                     [routerLink]="['/person', item.id, 'stakeholder']">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.stakeholder.home.title">Stakeholder</span>
+                                <span jhiTranslate="samtagatewayApp.stakeholder.home.title">Stakeholder</span>
                             </button>
                         </ng-container>
                         <ng-container *ngIf="!item.username">
@@ -194,7 +194,7 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN', 'CREATE_USER']"
                                     [routerLink]="['/', { outlets: { popup: 'person/'+ item.id + '/create/user'} }]">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.person.createUser">Create User</span>
+                                <span jhiTranslate="samtagatewayApp.person.createUser">Create User</span>
                             </button>
                         </ng-container>
                         <ng-container *ngIf="item.username">
@@ -202,20 +202,20 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN', 'EDIT_USER']"
                                     [routerLink]="['/', { outlets: { popup: 'person/'+ item.id + '/edit/user'} }]">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.person.editUser">Edit User</span>
+                                <span jhiTranslate="samtagatewayApp.person.editUser">Edit User</span>
                             </button>
                         </ng-container>
                         <button class="dropdown-item"
                                 *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_SELL_CONTRACT']"
                                 [routerLink]="['/sell-contract']" [queryParams]="{person : item.id}">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.sellContract.home.title">SellContract</span>
+                            <span jhiTranslate="samtagatewayApp.sellContract.home.title">SellContract</span>
                         </button>
                         <button class="dropdown-item"
                                 *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_PERSON_CREDIT']"
                                 [routerLink]="['/person', item.id, 'person-credit']">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.personCredit.home.title">person Credit</span>
+                            <span jhiTranslate="samtagatewayApp.personCredit.home.title">person Credit</span>
                         </button>
                     </div>
                 </div>

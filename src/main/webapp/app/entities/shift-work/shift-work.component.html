@@ -20,12 +20,12 @@
             <p-row>
                 <p-column field="fromDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.shiftWork.fromDate">From Date</span>
+                        <span jhiTranslate="samtagatewayApp.shiftWork.fromDate">From Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="toDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.shiftWork.toDate">To Date</span>
+                        <span jhiTranslate="samtagatewayApp.shiftWork.toDate">To Date</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -60,12 +60,12 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="fromDate" [header]="'niopdcgatewayApp.shiftWork.fromDate' | translate">
+        <p-column field="fromDate" [header]="'samtagatewayApp.shiftWork.fromDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.fromDate | dateTimeJalali}}</span>
             </ng-template>
         </p-column>
-        <p-column field="toDate" [header]="'niopdcgatewayApp.shiftWork.toDate' | translate">
+        <p-column field="toDate" [header]="'samtagatewayApp.shiftWork.toDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.toDate | dateTimeJalali}}</span>
             </ng-template>

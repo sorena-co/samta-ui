@@ -2,13 +2,13 @@
 
     <div class="modal-header">
         <h4 *ngIf="sellContractProduct.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.sellContractProduct.home.createLabel">
+            jhiTranslate="samtagatewayApp.sellContractProduct.home.createLabel">
             Create</h4>
         <h4 *ngIf="sellContractProduct.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.sellContractProduct.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.sellContractProduct.home.createOrEditLabel">
             Edit</h4>
         <h4 *ngIf="isView" class="modal-title" id="viewLabel"
-            jhiTranslate="niopdcgatewayApp.sellContractProduct.home.view">
+            jhiTranslate="samtagatewayApp.sellContractProduct.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -23,7 +23,7 @@
             'col-md-6':sellContract?.contractType === ContractType[ContractType.EXPORT] || sellContract?.contractType === ContractType[ContractType.EXCHANGE]
             }">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.sellContractProduct.product"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.sellContractProduct.product"
                            for="field_product">Product</label>
                     <!--  <select [disabled]="isView" class="form-control" id="field_product" name="product"
                               (ngModelChange)="productChanged($event)"
@@ -56,7 +56,7 @@
                  *ngIf="sellContract?.contractType !== ContractType[ContractType.EXPORT] && sellContract?.contractType !== ContractType[ContractType.EXCHANGE]">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.sellContractProduct.sellContractCustomer"
+                           jhiTranslate="samtagatewayApp.sellContractProduct.sellContractCustomer"
                            for="field_sellContractCustomer">Sell Contract Customer</label>
                     <p-dropdown *ngIf="sellContract?.contractType === ContractType[ContractType.AIRPLANE]"
                                 [options]="sellcontractcustomersA"
@@ -104,7 +104,7 @@
                            name="selectiveAllDepot" id="field_check_depot"
                            *ngIf="sellContract && sellContract.contractType===ContractType[ContractType.AIRPLANE]"
                            [(ngModel)]="allDepotCheck"/>
-                    <label jhiTranslate="niopdcgatewayApp.sellContractProduct.depot" for="field_depot">Depot</label>
+                    <label jhiTranslate="samtagatewayApp.sellContractProduct.depot" for="field_depot">Depot</label>
                     <p-multiSelect [disabled]="isView" class="form-control" id="field_depot"
                                    *ngIf="allDepotCheck||sellContract && sellContract.contractType!==ContractType[ContractType.AIRPLANE]"
                                    required
@@ -133,7 +133,7 @@
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.sellContractProduct.startDate"
+                           jhiTranslate="samtagatewayApp.sellContractProduct.startDate"
                            for="field_startDate">Start Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="true" [disabled]="isView" id="field_startDate"
@@ -163,7 +163,7 @@
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.sellContractProduct.finishDate"
+                           jhiTranslate="samtagatewayApp.sellContractProduct.finishDate"
                            for="field_finishDate">Finish Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="true" [disabled]="isView" id="field_finishDate"
@@ -194,7 +194,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.sellContractProduct.rateGroupId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.sellContractProduct.rateGroupId"
                            for="field_rateGroupId">Rate Group Id</label>
                     <select [disabled]="isView" class="form-control" name="rateGroupId"
                             [(ngModel)]="sellContractProduct.rateGroupId" required
@@ -219,7 +219,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.sellContractProduct.currencyRateGroupId"
+                           jhiTranslate="samtagatewayApp.sellContractProduct.currencyRateGroupId"
                            for="field_currencyRateGroupId">Currency Rate Group Id</label>
 
                     <select [disabled]="isView" class="form-control" name="currencyRateGroupId"
@@ -243,7 +243,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.sellContractProduct.consumption"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.sellContractProduct.consumption"
                            for="field_consumption">Consumption</label>
                     <select [disabled]="isView" class="form-control" id="field_consumption" name="consumption"
                             [(ngModel)]="sellContractProduct.consumptionId" required>
@@ -266,7 +266,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.sellContractProduct.costGroup" for="field_costGroup">Cost
+                    <label jhiTranslate="samtagatewayApp.sellContractProduct.costGroup" for="field_costGroup">Cost
                         Groups</label>
                     <p-multiSelect [disabled]="isView" class="form-control" id="field_costGroup"
                                    [options]="costGroups"
@@ -286,7 +286,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.sellContractProduct.currency"
+                    <label jhiTranslate="samtagatewayApp.sellContractProduct.currency"
                            for="field_currency">currency</label>
                     <p-multiSelect [disabled]="isView" class="form-control" id="field_currency"
                                    [options]="currencies"
@@ -305,7 +305,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.sellContractProduct.buyType"
+                    <label jhiTranslate="samtagatewayApp.sellContractProduct.buyType"
                            for="field_buyType">buyType</label>
                     <p-multiSelect [disabled]="isView" class="form-control" id="field_buyType"
                                    [options]="buyTypes"
@@ -326,7 +326,7 @@
         </div>
         <div class="row">
             <div class="col-md-4" *ngIf="customerGroup && customerGroup===CustomerGroup[CustomerGroup.AIRPLANE]">
-                <label jhiTranslate="niopdcgatewayApp.sellContractProduct.typeOfFuelReceipts"
+                <label jhiTranslate="samtagatewayApp.sellContractProduct.typeOfFuelReceipts"
                        for="field_typeOfReceipt">buyType</label>
                 <p-multiSelect [disabled]="isView" class="form-control" id="field_typeOfReceipt"
                                [options]="typeOfFuelReceipts"

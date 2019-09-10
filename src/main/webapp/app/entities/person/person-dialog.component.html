@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="person.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.person.home.createLabel">
+            jhiTranslate="samtagatewayApp.person.home.createLabel">
             Create</h4>
         <h4 *ngIf="person.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.person.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.person.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.person.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.person.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -19,13 +19,13 @@
             <div class="row">
                 <div [ngClass]="{'col-md-6':!person.companyId || !person.personality, 'col-md-3':person.companyId}">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.personality"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.person.personality"
                                for="field_personality">Personality</label>
                         <select [disabled]="isView || person.id" class="form-control" name="personality"
                                 [(ngModel)]="person.personality"
                                 id="field_personality" required>
-                            <option value="LEGAL">{{'niopdcgatewayApp.Personality.LEGAL' | translate}}</option>
-                            <option value="NATURAL">{{'niopdcgatewayApp.Personality.NATURAL' | translate}}</option>
+                            <option value="LEGAL">{{'samtagatewayApp.Personality.LEGAL' | translate}}</option>
+                            <option value="NATURAL">{{'samtagatewayApp.Personality.NATURAL' | translate}}</option>
                         </select>
                         <div
                             [hidden]="!(editForm.controls.personality?.dirty && editForm.controls.personality?.invalid)">
@@ -40,7 +40,7 @@
                 <div [ngClass]="{'col-md-6':!person.companyId || !person.personality, 'col-md-3':person.companyId}"
                      *ngIf="person.personality && person.personality === Personality[Personality.LEGAL]">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.country"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.person.country"
                                for="field_country">Country</label>
                         <select class="custom-select" id="field_country" name="country"
                                 [(ngModel)]="person.countryId"
@@ -65,7 +65,7 @@
                 <div [ngClass]="{'col-md-6':!person.companyId || !person.personality, 'col-md-3':person.companyId}"
                      *ngIf="person.personality && person.personality === Personality[Personality.NATURAL]">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.nationality"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.person.nationality"
                                for="field_nationality">Country</label>
                         <select [disabled]="isView" class="form-control" id="field_nationality" name="nationality"
                                 [(ngModel)]="person.nationalityId"
@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-md-3" *ngIf="person.companyId && person.personality">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.stakeholder.sharePercent"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.stakeholder.sharePercent"
                                for="field_sharePercent">Share Percent</label>
                         <input class="form-control" type="number"
                                name="sharePercent" id="field_sharePercent"
@@ -98,13 +98,13 @@
                 </div>
                 <div class="col-md-3" *ngIf="person.companyId && person.personality">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.stakeholder.stakeholderType"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.stakeholder.stakeholderType"
                                for="field_stakeholderType">Stakeholder Type</label>
                         <select [disabled]="isView" class="form-control" name="stakeholderType"
                                 [(ngModel)]="person.stakeholderType"
                                 id="field_stakeholderType">
-                            <option value="CEO">{{'niopdcgatewayApp.StakeholderType.CEO' | translate}}</option>
-                            <option value="OTHER">{{'niopdcgatewayApp.StakeholderType.OTHER' | translate}}</option>
+                            <option value="CEO">{{'samtagatewayApp.StakeholderType.CEO' | translate}}</option>
+                            <option value="OTHER">{{'samtagatewayApp.StakeholderType.OTHER' | translate}}</option>
                         </select>
                     </div>
                 </div>
@@ -126,17 +126,17 @@
                             <label
                                 *ngIf="person.personality === Personality[Personality.LEGAL] && country.checkNationalCode"
                                 class="form-control-label"
-                                jhiTranslate="niopdcgatewayApp.person.codeLegal"
+                                jhiTranslate="samtagatewayApp.person.codeLegal"
                                 for="field_code">National Code</label>
                             <label
                                 *ngIf="person.personality === Personality[Personality.NATURAL] && nationality.checkNationalCode"
                                 class="form-control-label"
-                                jhiTranslate="niopdcgatewayApp.person.nationalCode"
+                                jhiTranslate="samtagatewayApp.person.nationalCode"
                                 for="field_code">National Code</label>
                             <label
                                 *ngIf="(person.personality === Personality[Personality.NATURAL] && !nationality.checkNationalCode)||(person.personality === Personality[Personality.LEGAL] && !country.checkNationalCode)"
                                 class="form-control-label"
-                                jhiTranslate="niopdcgatewayApp.person.codeOther"
+                                jhiTranslate="samtagatewayApp.person.codeOther"
                                 for="field_code">National Code</label>
                             <input [disabled]="isView" type="text" class="form-control" name="code"
                                    required national-code
@@ -166,10 +166,10 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-control-label" *ngIf="person.personality && person.personality === Personality[Personality.NATURAL]"
-                                   jhiTranslate="niopdcgatewayApp.person.birthday"
+                                   jhiTranslate="samtagatewayApp.person.birthday"
                                    for="field_birthday">Birthday</label>
                             <label class="form-control-label" *ngIf="person.personality && person.personality === Personality[Personality.LEGAL]"
-                                   jhiTranslate="niopdcgatewayApp.person.registerDate"
+                                   jhiTranslate="samtagatewayApp.person.registerDate"
                                    for="field_birthday">Birthday</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker  [rtlActive]="true" time="00:00:00"
@@ -183,7 +183,7 @@
                     </div>
                     <div class="col-md-4" *ngIf="person.personality === Personality[Personality.NATURAL]">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.idCode"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.idCode"
                                    for="field_idCode">Id
                                 Code</label>
                             <input  type="text" class="form-control"
@@ -207,7 +207,7 @@
                     </div>
                     <div class="col-md-4" *ngIf="person.personality === Personality[Personality.LEGAL]">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.registerNo"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.registerNo"
                                    for="field_registerNo">Register No</label>
                             <input  type="text" class="form-control" name="registerNo"
                                     id="field_registerNo" required
@@ -233,7 +233,7 @@
                 <div class="row" *ngIf="person.personality === Personality[Personality.LEGAL]">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.name"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.name"
                                    for="field_name">Name</label>
                             <input [disabled]="isView || country.checkNationalCode" type="text" class="form-control"
                                    name="name" id="field_name" required
@@ -254,7 +254,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.postalCode"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.postalCode"
                                    for="field_postalCode">Postal Code</label>
                             <input [disabled]="isView || country.checkNationalCode" type="text" class="form-control" name="postalCode"
                                    id="field_postalCode"
@@ -278,7 +278,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.person.economicCode"
+                                   jhiTranslate="samtagatewayApp.person.economicCode"
                                    for="field_economicCode">Economic Code</label>
                             <input  type="text" class="form-control" name="economicCode"
                                     required id="field_economicCode"
@@ -303,7 +303,7 @@
                 <div class="row" *ngIf="person.personality === Personality[Personality.LEGAL]">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.telephone"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.telephone"
                                    for="field_telephone">Telephone</label>
                             <input [disabled]="isView" type="text" class="form-control" name="telephone"
                                    id="field_telephone" required
@@ -325,7 +325,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.cellphone"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.cellphone"
                                    for="field_cellphone">Cellphone</label>
                             <input [disabled]="isView" type="text" class="form-control" name="cellphone"
                                    id="field_cellphone" required
@@ -347,7 +347,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.email"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.email"
                                    for="field_email">email</label>
                             <input [disabled]="isView" type="email" class="form-control" name="email"
                                    id="field_email"
@@ -374,7 +374,7 @@
                 <div class="row" *ngIf="person.personality === Personality[Personality.NATURAL]">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.firstName"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.firstName"
                                    for="field_firstName">First Name</label>
                             <input [disabled]="isView" type="text" class="form-control" name="firstName"
                                    id="field_firstName" required
@@ -396,7 +396,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.lastName"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.lastName"
                                    for="field_lastName">Last
                                 Name</label>
                             <input [disabled]="isView" type="text" class="form-control" name="lastName"
@@ -418,7 +418,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.fatherName"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.fatherName"
                                    for="field_fatherName">Father Name</label>
                             <input [disabled]="isView" type="text" class="form-control" name="fatherName"
                                    id="field_fatherName" required
@@ -442,7 +442,7 @@
                 <div class="row" *ngIf="person.personality === Personality[Personality.NATURAL]">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.birthRegion"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.birthRegion"
                                    for="field_birthRegion">Birth Region</label>
                             <select [disabled]="isView" class="form-control" id="field_birthRegion" name="birthRegion"
                                     [(ngModel)]="person.birthRegionId">
@@ -464,7 +464,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.telephone"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.telephone"
                                    for="field_telephone1">Telephone</label>
                             <input [disabled]="isView" type="text" class="form-control" name="telephone"
                                    id="field_telephone1" required
@@ -486,7 +486,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.cellphone"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.cellphone"
                                    for="field_cellphone1">Cellphone</label>
                             <input [disabled]="isView" type="text" class="form-control" name="cellphone"
                                    id="field_cellphone1" required
@@ -510,7 +510,7 @@
                 <div class="row" *ngIf="person.personality === Personality[Personality.NATURAL]">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.email"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.email"
                                    for="field_email1">email</label>
                             <input [disabled]="isView" type="email" class="form-control" name="email"
                                    id="field_email1"
@@ -532,7 +532,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.country"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.country"
                                    for="field_country1">Country</label>
                             <select [disabled]="isView" class="form-control" id="field_country1" name="country"
                                     [(ngModel)]="person.countryId"
@@ -555,7 +555,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.postalCode"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.postalCode"
                                    for="field_postalCode1">Postal Code</label>
                             <input [disabled]="isView" type="text" class="form-control" name="postalCode"
                                    id="field_postalCode1" [required]="country.checkNationalCode"
@@ -582,7 +582,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.creditAccount"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.creditAccount"
                                    for="field_creditAccount1">creditAccount</label>
                             <input [disabled]="isView" type="text" class="form-control" name="creditAccount"
                                    id="field_creditAccount1"
@@ -604,7 +604,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.costAccount"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.costAccount"
                                    for="field_costAccount">Cost Account</label>
                             <input type="text" class="form-control" name="costAccount" id="field_costAccount"
                                    [disabled]="isView"
@@ -626,7 +626,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.username"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.username"
                                    for="field_username">Cost Account</label>
                             <input type="text" class="form-control" name="username" id="field_username"
                                    [disabled]="true"
@@ -650,7 +650,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.address"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.address"
                                    for="field_address">Address</label>
                             <textarea [disabled]="isView || country?.checkNationalCode" type="text" class="form-control"
                                       name="address"
@@ -675,10 +675,10 @@
                     <div class="col-md-6" *ngIf="country.checkNationalCode">
                         <div class="form-group">
                             <label *ngIf="person.personality === Personality[Personality.LEGAL]"
-                                   class="form-control-label" jhiTranslate="niopdcgatewayApp.person.regionLegal"
+                                   class="form-control-label" jhiTranslate="samtagatewayApp.person.regionLegal"
                                    for="field_region">Region</label>
                             <label *ngIf="person.personality === Personality[Personality.NATURAL]"
-                                   class="form-control-label" jhiTranslate="niopdcgatewayApp.person.region"
+                                   class="form-control-label" jhiTranslate="samtagatewayApp.person.region"
                                    for="field_region">Region</label>
                             <input-region-selector [disabled]="isView" [idSelector]="true"
                                                    [oneSelection]="true"
@@ -698,7 +698,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.location"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.location"
                                    for="field_location">Location</label>
                             <input-location-selector [disabled]="isView" [idSelector]="false"
                                                      [selectByPriority]="true" required

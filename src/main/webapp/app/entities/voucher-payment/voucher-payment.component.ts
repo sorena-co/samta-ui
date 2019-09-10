@@ -150,7 +150,7 @@ export class VoucherPaymentComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.voucherPayment.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.voucherPayment.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

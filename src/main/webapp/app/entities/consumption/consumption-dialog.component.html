@@ -1,12 +1,12 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 *ngIf="consumption.id==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.consumption.home.createLabel">
+        <h4 *ngIf="consumption.id==null" class="modal-title" id="createLabel" jhiTranslate="samtagatewayApp.consumption.home.createLabel">
             Create</h4>
         <h4 *ngIf="consumption.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.consumption.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.consumption.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.consumption.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.consumption.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.consumption.title"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.consumption.title"
                            for="field_title">Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="title" id="field_title"
                            [(ngModel)]="consumption.title"
@@ -44,7 +44,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.consumption.code"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.consumption.code"
                            for="field_code">Code</label>
                     <input [disabled]="isView" type="text" class="form-control" name="code" id="field_code"
                            [(ngModel)]="consumption.code"

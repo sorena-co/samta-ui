@@ -1,12 +1,12 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 *ngIf="mainAuthority.name==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.mainAuthority.home.createLabel">
+        <h4 *ngIf="mainAuthority.name==null" class="modal-title" id="createLabel" jhiTranslate="samtagatewayApp.mainAuthority.home.createLabel">
             Create</h4>
         <h4 *ngIf="mainAuthority.name!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.mainAuthority.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.mainAuthority.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.mainAuthority.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.mainAuthority.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.mainAuthority.name"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.mainAuthority.name"
                            for="field_name">Name</label>
                     <input [disabled]="isView" type="text" class="form-control" name="name" id="field_name"
                            [(ngModel)]="mainAuthority.name"
@@ -43,7 +43,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.mainAuthority.persianName"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.mainAuthority.persianName"
                            for="field_persianName">Persian Name</label>
                     <input [disabled]="isView" type="text" class="form-control" name="persianName" id="field_persianName"
                            [(ngModel)]="mainAuthority.persianName"

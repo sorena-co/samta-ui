@@ -35,7 +35,7 @@ export const baseQueryRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_BASE_QUERY'],
-            pageTitle: 'niopdcgatewayApp.baseQuery.home.title'
+            pageTitle: 'samtagatewayApp.baseQuery.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -47,7 +47,7 @@ export const baseQueryPopupRoute: Routes = [
     component: BaseQueryPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'CREATE_BASE_QUERY'],
-        pageTitle: 'niopdcgatewayApp.baseQuery.home.title'
+        pageTitle: 'samtagatewayApp.baseQuery.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -57,7 +57,7 @@ export const baseQueryPopupRoute: Routes = [
     component: BaseQueryPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'EDIT_BASE_QUERY'],
-        pageTitle: 'niopdcgatewayApp.baseQuery.home.title'
+        pageTitle: 'samtagatewayApp.baseQuery.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -67,7 +67,7 @@ export const baseQueryPopupRoute: Routes = [
     component: BaseQueryDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'DELETE_BASE_QUERY'],
-        pageTitle: 'niopdcgatewayApp.baseQuery.home.title'
+        pageTitle: 'samtagatewayApp.baseQuery.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -77,7 +77,7 @@ export const baseQueryPopupRoute: Routes = [
       component: BaseQueryPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN', 'VIEW_BASE_QUERY'],
-          pageTitle: 'niopdcgatewayApp.baseQuery.home.title'
+          pageTitle: 'samtagatewayApp.baseQuery.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

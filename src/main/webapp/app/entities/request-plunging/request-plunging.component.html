@@ -22,7 +22,7 @@
             <p-row>
                 <p-column field="isSend" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.requestPlunging.isSend">Is Send</span>
+                        <span jhiTranslate="samtagatewayApp.requestPlunging.isSend">Is Send</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -33,10 +33,10 @@
                         <select class="form-control" name="isSend" (change)="search()"
                                 [(ngModel)]="requestPlunging.isSend">
                             <option></option>
-                            <option value="true" jhiTranslate="niopdcgatewayApp.requestPlunging.isSendTrue">
+                            <option value="true" jhiTranslate="samtagatewayApp.requestPlunging.isSendTrue">
                                 true
                             </option>
-                            <option value="false" jhiTranslate="niopdcgatewayApp.requestPlunging.isSendFalse">
+                            <option value="false" jhiTranslate="samtagatewayApp.requestPlunging.isSendFalse">
                                 false
                             </option>
                         </select>
@@ -55,7 +55,7 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="isSend" [header]="'niopdcgatewayApp.requestPlunging.isSend' | translate">
+        <p-column field="isSend" [header]="'samtagatewayApp.requestPlunging.isSend' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span class="fa" [ngClass]="{'fa-check':item.isSend,'fa-close':!item.isSend}"></span>
             </ng-template>
@@ -94,7 +94,7 @@
                                 *jhiHasAnyAuthority="['ROLE_ADMIN','LIST_RESPONSE_PLUNGING']"
                                 [routerLink]="['/request-plunging', item.id, 'response-plunging']">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.responsePlunging.home.title">Response Plunging</span>
+                            <span jhiTranslate="samtagatewayApp.responsePlunging.home.title">Response Plunging</span>
                         </button>
                     </div>
                 </div>

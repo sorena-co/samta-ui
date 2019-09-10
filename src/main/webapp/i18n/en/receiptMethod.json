@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "ReceiptMethod" : {
             "null": "",
             "BRANCH": "BRANCH",

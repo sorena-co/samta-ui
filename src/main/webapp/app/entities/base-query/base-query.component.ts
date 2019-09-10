@@ -132,7 +132,7 @@ export class BaseQueryComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.baseQuery.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.baseQuery.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

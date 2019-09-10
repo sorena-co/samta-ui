@@ -1,6 +1,6 @@
 <form name="editForm" (ngSubmit)="createUser()" #editForm="ngForm">
     <div class="modal-header">
-        <h4 class="modal-title" jhiTranslate="niopdcgatewayApp.person.createUserTitle">Confirm delete operation</h4>
+        <h4 class="modal-title" jhiTranslate="samtagatewayApp.person.createUserTitle">Confirm delete operation</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
         </button>
@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.name"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.person.name"
                                for="field_name">Name</label>
                         <input disabled type="text" class="form-control"
                                name="name" id="field_name"
@@ -23,17 +23,17 @@
                         <label
                             *ngIf="person.personality === Personality[Personality.LEGAL] && country?.checkNationalCode"
                             class="form-control-label"
-                            jhiTranslate="niopdcgatewayApp.person.codeLegal"
+                            jhiTranslate="samtagatewayApp.person.codeLegal"
                             for="field_code">National Code</label>
                         <label
                             *ngIf="person.personality !== Personality[Personality.LEGAL] && nationality?.checkNationalCode"
                             class="form-control-label"
-                            jhiTranslate="niopdcgatewayApp.person.nationalCode"
+                            jhiTranslate="samtagatewayApp.person.nationalCode"
                             for="field_code">National Code</label>
                         <label
                             *ngIf="(person.personality !== Personality[Personality.LEGAL] && !nationality?.checkNationalCode)||(person.personality === Personality[Personality.LEGAL] && !country?.checkNationalCode)"
                             class="form-control-label"
-                            jhiTranslate="niopdcgatewayApp.person.codeOther"
+                            jhiTranslate="samtagatewayApp.person.codeOther"
                             for="field_code">National Code</label>
                         <input disabled type="text" class="form-control" name="code"
                                id="field_code"
@@ -49,7 +49,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="form-control-label"
-                               jhiTranslate="niopdcgatewayApp.person.username"
+                               jhiTranslate="samtagatewayApp.person.username"
                                for="field_username">Share Percent</label>
                         <input class="form-control"
                                pattern="^[_'.@A-Za-z0-9-]*$"
@@ -61,7 +61,7 @@
                         />
                         <div *ngIf="existUser">
                             <small class="form-text text-danger"
-                                   jhiTranslate="niopdcgatewayApp.person.message.existUser"></small>
+                                   jhiTranslate="samtagatewayApp.person.message.existUser"></small>
                         </div>
                         <div
                             [hidden]="!(editForm.controls.username?.dirty && editForm.controls.username?.invalid)">
@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.email"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.person.email"
                                for="field_email">email</label>
                         <input class="form-control"
                                type="email"
@@ -86,7 +86,7 @@
                         />
                         <div *ngIf="existEmail">
                             <small class="form-text text-danger"
-                                   jhiTranslate="niopdcgatewayApp.person.message.existEmail"></small>
+                                   jhiTranslate="samtagatewayApp.person.message.existEmail"></small>
                         </div>
                         <div
                             [hidden]="!(editForm.controls.email?.dirty && editForm.controls.email?.invalid)">
@@ -106,7 +106,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="form-control-label"
-                               jhiTranslate="niopdcgatewayApp.person.password"
+                               jhiTranslate="samtagatewayApp.person.password"
                                for="field_password">Share Percent</label>
                         <input class="form-control"
                                type="password"
@@ -132,7 +132,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="form-control-label"
-                               jhiTranslate="niopdcgatewayApp.person.confirmPassword"
+                               jhiTranslate="samtagatewayApp.person.confirmPassword"
                                for="field_confirmPassword">Share Percent</label>
                         <input class="form-control"
                                type="password"
@@ -142,7 +142,7 @@
                         />
                         <div *ngIf="(person.confirmPassword && (person.confirmPassword!==person.password))">
                             <small class="form-text text-danger"
-                                   jhiTranslate="niopdcgatewayApp.person.message.wrongConfirmPassword"></small>
+                                   jhiTranslate="samtagatewayApp.person.message.wrongConfirmPassword"></small>
                         </div>
                     </div>
                 </div>

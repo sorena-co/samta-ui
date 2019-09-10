@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.payment.personId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.payment.personId"
                            for="field_personId">Person Id</label>
 
                     <app-person-selector
@@ -43,7 +43,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.payment.receiptNo"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.payment.receiptNo"
                            for="field_receiptNo">Receipt No</label>
                     <input [disabled]="isView" type="text" class="form-control" name="receiptNo"
                            id="field_receiptNo"
@@ -59,11 +59,11 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.payment.registerMethod"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.payment.registerMethod"
                            for="field_receiptNo">Receipt No</label>
                     <select disabled class="form-control" name="registerMethod" [(ngModel)]="payment.registerMethod" id="field_registerMethod"  required>
-                        <option value="BRANCH">{{'niopdcgatewayApp.ReceiptMethod.BRANCH' | translate}}</option>
-                        <option value="EPAYMENT">{{'niopdcgatewayApp.ReceiptMethod.EPAYMENT' | translate}}</option>
+                        <option value="BRANCH">{{'samtagatewayApp.ReceiptMethod.BRANCH' | translate}}</option>
+                        <option value="EPAYMENT">{{'samtagatewayApp.ReceiptMethod.EPAYMENT' | translate}}</option>
                     </select>
                 </div>
             </div>
@@ -71,7 +71,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.payment.receiptDateTime"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.payment.receiptDateTime"
                            for="field_receiptDateTime">Receipt Date Time</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00"
@@ -96,7 +96,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.payment.amount" for="field_amount">Amount</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.payment.amount" for="field_amount">Amount</label>
                     <input [disabled]="isView" type="number" class="form-control" name="amount" id="field_amount"
                            [(ngModel)]="payment.amount" required/>
                     <div [hidden]="!(editForm.controls.amount?.dirty && editForm.controls.amount?.invalid)">
@@ -115,7 +115,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.payment.currency" for="field_currency">Currency</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.payment.currency" for="field_currency">Currency</label>
                     <select class="form-control" id="field_currency" name="currency" [(ngModel)]="payment.currencyId" required>
                         <option [ngValue]="null"></option>
                         <option [ngValue]="currencyOption.id" *ngFor="let currencyOption of currencies; trackBy: trackCurrencyById">{{currencyOption.title}}</option>

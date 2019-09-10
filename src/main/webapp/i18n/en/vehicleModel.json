@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "vehicleModel" : {
             "home": {
                 "title": "Vehicle Models",

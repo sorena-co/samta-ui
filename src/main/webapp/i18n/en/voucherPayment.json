@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "voucherPayment" : {
             "home": {
                 "title": "Voucher Payments",

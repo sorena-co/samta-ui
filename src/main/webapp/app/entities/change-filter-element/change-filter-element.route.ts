@@ -34,7 +34,7 @@ export const changeFilterElementRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CHANGE_FILTER_ELEMENT'],
-            pageTitle: 'niopdcgatewayApp.changeFilterElement.home.title'
+            pageTitle: 'samtagatewayApp.changeFilterElement.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -46,7 +46,7 @@ export const changeFilterElementPopupRoute: Routes = [
     component: ChangeFilterElementPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'CREATE_CHANGE_FILTER_ELEMENT'],
-        pageTitle: 'niopdcgatewayApp.changeFilterElement.home.title'
+        pageTitle: 'samtagatewayApp.changeFilterElement.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -56,7 +56,7 @@ export const changeFilterElementPopupRoute: Routes = [
     component: ChangeFilterElementPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'EDIT_CHANGE_FILTER_ELEMENT'],
-        pageTitle: 'niopdcgatewayApp.changeFilterElement.home.title'
+        pageTitle: 'samtagatewayApp.changeFilterElement.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -66,7 +66,7 @@ export const changeFilterElementPopupRoute: Routes = [
     component: ChangeFilterElementDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'DELETE_CHANGE_FILTER_ELEMENT'],
-        pageTitle: 'niopdcgatewayApp.changeFilterElement.home.title'
+        pageTitle: 'samtagatewayApp.changeFilterElement.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -76,7 +76,7 @@ export const changeFilterElementPopupRoute: Routes = [
       component: ChangeFilterElementPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN', 'VIEW_CHANGE_FILTER_ELEMENT'],
-          pageTitle: 'niopdcgatewayApp.changeFilterElement.home.title'
+          pageTitle: 'samtagatewayApp.changeFilterElement.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

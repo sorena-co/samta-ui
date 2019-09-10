@@ -1,12 +1,12 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
     <div class="modal-header">
         <h4 *ngIf="customer.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.customer.home.createLabel">
+            jhiTranslate="samtagatewayApp.customer.home.createLabel">
             Create</h4>
         <h4 *ngIf="customer.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.customer.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.customer.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.customer.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.customer.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.vehicleModel.home.title"
+                           jhiTranslate="samtagatewayApp.vehicleModel.home.title"
                            for="field_vehicleModel">Vehicle Model</label>
                     <select [disabled]="isView"
                             (ngModelChange)="onChangeVehicleModel($event)"
@@ -34,7 +34,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.plaque"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customer.plaque"
                            for="field_plaque">Name</label>
                     <!--<input [disabled]="isView" type="text" class="form-control" name="plaque" id="field_plaque"
                            [(ngModel)]="customer.plaque"/>-->
@@ -50,7 +50,7 @@
         <div class="row">
             <div class="col-md-6" *ngIf="vehicleModel.havePrimitiveMeasure">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.productId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.productId"
                            for="field_product">Product</label>
                     <p-dropdown [options]="customProducts" [(ngModel)]="selectedProduct"
                                 [filter]="true"
@@ -75,7 +75,7 @@
             <div class="col-md-6" *ngIf="vehicleModel && vehicleModel.havePrimitiveMeasure">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.carRfId.detail.title"
+                           jhiTranslate="samtagatewayApp.carRfId.detail.title"
                            for="field_vehicleModel">Vehicle Model</label>
                     <input [disabled]="customer.id"
                            class="form-control" id="field_carRfId" name="carRfId"

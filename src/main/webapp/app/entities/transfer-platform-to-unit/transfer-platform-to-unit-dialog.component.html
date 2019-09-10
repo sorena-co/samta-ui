@@ -2,13 +2,13 @@
 
     <div class="modal-header">
         <h4 *ngIf="transferPlatformToUnit.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.home.createLabel">
+            jhiTranslate="samtagatewayApp.transferPlatformToUnit.home.createLabel">
             Create</h4>
         <h4 *ngIf="transferPlatformToUnit.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.transferPlatformToUnit.home.createOrEditLabel">
             Edit</h4>
         <h4 *ngIf="isView" class="modal-title" id="viewLabel"
-            jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.home.view">
+            jhiTranslate="samtagatewayApp.transferPlatformToUnit.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -20,7 +20,7 @@
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.unitMetreNumber"
+                           jhiTranslate="samtagatewayApp.transferPlatformToUnit.unitMetreNumber"
                            for="field_unitMetreNumber">Unit Metre Number</label>
                     <input [disabled]="isView" type="number" class="form-control" name="unitMetreNumber"
                            id="field_unitMetreNumber"
@@ -43,7 +43,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.platform"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transferPlatformToUnit.platform"
                            for="field_platform">Platform</label>
                     <input [disabled]="true" class="form-control" id="field_platform" name="platform"
                            [(ngModel)]="platformTitle"/>
@@ -51,7 +51,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.metre"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transferPlatformToUnit.metre"
                            for="field_metre">Metre</label>
                     <select class="form-control" id="field_metre" name="metre"
                             [disabled]="isView"
@@ -76,7 +76,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.specialWeight"
+                           jhiTranslate="samtagatewayApp.transferPlatformToUnit.specialWeight"
                            for="field_specialWeight">Special Weight</label>
                     <input [disabled]="isView" type="number" class="form-control" name="specialWeight" id="field_specialWeight"
                            [(ngModel)]="transferPlatformToUnit.specialWeight" required/>
@@ -98,7 +98,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.environmentTemperature"
+                           jhiTranslate="samtagatewayApp.transferPlatformToUnit.environmentTemperature"
                            for="field_environmentTemperature">Environment Temperature</label>
                     <input [disabled]="isView" type="number" class="form-control" name="environmentTemperature"
                            id="field_environmentTemperature"
@@ -121,7 +121,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.productTemperature"
+                           jhiTranslate="samtagatewayApp.transferPlatformToUnit.productTemperature"
                            for="field_productTemperature">Product Temperature</label>
                     <input [disabled]="isView" type="number" class="form-control" name="productTemperature" id="field_productTemperature"
                            [(ngModel)]="transferPlatformToUnit.productTemperature" required/>
@@ -145,7 +145,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.natureAmount"
+                           jhiTranslate="samtagatewayApp.transferPlatformToUnit.natureAmount"
                            for="field_natureAmount">Nature Amount</label>
                     <input [disabled]="isView"type="number" class="form-control" name="natureAmount" id="field_natureAmount"
                            (input)="onChangeAmount($event.target.value)"
@@ -168,7 +168,7 @@
             </div>
             <div class="col-md-5">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.sixtyAmount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transferPlatformToUnit.sixtyAmount"
                            for="field_sixtyAmount">Sixty Amount</label>
                     <input disabled type="number" class="form-control" name="sixtyAmount" id="field_sixtyAmount"
                            [(ngModel)]="transferPlatformToUnit.sixtyAmount" required/>
@@ -199,7 +199,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.startMeter"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.startMeter"
                            for="field_startMeter">Start Meter</label>
                     <input [disabled]="true" type="number" class="form-control" name="startMeter" id="field_startMeter"
                            [(ngModel)]="transferPlatformToUnit.startMeter" required/>
@@ -219,7 +219,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.endMeter"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.endMeter"
                            for="field_endMeter">End Meter</label>
                     <input [disabled]="true" type="number" class="form-control" name="endMeter" id="field_endMeter"
                            [(ngModel)]="transferPlatformToUnit.endMeter" required/>
@@ -239,7 +239,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transferPlatformToUnit.unit"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transferPlatformToUnit.unit"
                            for="field_unit">Unit</label>
                     <select [disabled]="isView" class="form-control" id="field_unit" name="unit"
                             [(ngModel)]="transferPlatformToUnit.unitId"

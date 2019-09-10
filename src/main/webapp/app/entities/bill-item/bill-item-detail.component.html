@@ -1,38 +1,38 @@
 
 <div *ngIf="billItem">
-    <h2><span jhiTranslate="niopdcgatewayApp.billItem.detail.title">Bill Item</span> {{billItem.id}}</h2>
+    <h2><span jhiTranslate="samtagatewayApp.billItem.detail.title">Bill Item</span> {{billItem.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
-        <dt><span jhiTranslate="niopdcgatewayApp.billItem.title">Title</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.billItem.title">Title</span></dt>
         <dd>
             <span>{{billItem.title}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.billItem.productId">Product Id</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.billItem.productId">Product Id</span></dt>
         <dd>
             <span>{{billItem.productId}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.billItem.litre">Litre</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.billItem.litre">Litre</span></dt>
         <dd>
             <span>{{billItem.litre}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.billItem.costId">Cost Id</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.billItem.costId">Cost Id</span></dt>
         <dd>
             <span>{{billItem.costId}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.billItem.price">Price</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.billItem.price">Price</span></dt>
         <dd>
             <span>{{billItem.price}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.billItem.costRatePrice">Cost Rate Price</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.billItem.costRatePrice">Cost Rate Price</span></dt>
         <dd>
             <span>{{billItem.costRatePrice}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.billItem.costElementId">Cost Element Id</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.billItem.costElementId">Cost Element Id</span></dt>
         <dd>
             <span>{{billItem.costElementId}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.billItem.bill">Bill</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.billItem.bill">Bill</span></dt>
         <dd>
             <div *ngIf="billItem.billId">
                 <a [routerLink]="['/bill', billItem.billId]">{{billItem.billId}}</a>

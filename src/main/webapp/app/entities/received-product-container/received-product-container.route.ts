@@ -36,7 +36,7 @@ export const receivedProductContainerRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_RECEIVED_PRODUCT_CONTAINER'],
-            pageTitle: 'niopdcgatewayApp.receivedProductContainer.home.title'
+            pageTitle: 'samtagatewayApp.receivedProductContainer.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const receivedProductContainerPopupRoute: Routes = [
         component: ReceivedProductContainerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_RECEIVED_PRODUCT_CONTAINER'],
-            pageTitle: 'niopdcgatewayApp.receivedProductContainer.home.title'
+            pageTitle: 'samtagatewayApp.receivedProductContainer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const receivedProductContainerPopupRoute: Routes = [
         component: ReceivedProductContainerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_RECEIVED_PRODUCT_CONTAINER'],
-            pageTitle: 'niopdcgatewayApp.receivedProductContainer.home.title'
+            pageTitle: 'samtagatewayApp.receivedProductContainer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const receivedProductContainerPopupRoute: Routes = [
         component: ReceivedProductContainerDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_RECEIVED_PRODUCT_CONTAINER'],
-            pageTitle: 'niopdcgatewayApp.receivedProductContainer.home.title'
+            pageTitle: 'samtagatewayApp.receivedProductContainer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const receivedProductContainerPopupRoute: Routes = [
         component: ReceivedProductContainerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_RECEIVED_PRODUCT_CONTAINER'],
-            pageTitle: 'niopdcgatewayApp.receivedProductContainer.home.title'
+            pageTitle: 'samtagatewayApp.receivedProductContainer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

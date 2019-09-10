@@ -221,33 +221,33 @@ export class TransferPlatformToUnitComponent implements OnInit, OnDestroy {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
         if (this.mainDayDepotId != null) {
-            this.translateService.get('niopdcgatewayApp.transfer.home.mainDayDepotTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.transfer.home.mainDayDepotTitle').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: `${title} (${dateJalaliPipe.transform(this.mainDayDepot.day)})`,
                     routerLink: [mainDayDepotUrl]
                 });
             });
-            this.translateService.get('niopdcgatewayApp.transferPlatformToUnit.home.dayDepotTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.transferPlatformToUnit.home.dayDepotTitle').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: title + `(${this.dayDepot.oilTankTitle})`,
                     routerLink: [dayDepotUrl]
                 });
             });
         } else if (this.mainDayOperationId != null) {
-            this.translateService.get('niopdcgatewayApp.mainDayOperation.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.mainDayOperation.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: `${title} (${dateJalaliPipe.transform(this.mainDayOperation.day)})`,
                     routerLink: [mainDayOperationUrl]
                 });
             });
-            this.translateService.get('niopdcgatewayApp.dayDepot.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.dayDepot.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: title + `(${this.dayDepot.oilTankTitle})`,
                     routerLink: [dayOperationUrl]
                 });
             });
         }
-        this.translateService.get('niopdcgatewayApp.transferPlatformToUnit.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.transferPlatformToUnit.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

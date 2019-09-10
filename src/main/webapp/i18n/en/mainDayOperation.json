@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "mainDayOperation" : {
             "home": {
                 "title": "Main Day Operations",

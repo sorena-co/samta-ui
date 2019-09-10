@@ -152,10 +152,10 @@ export class TransportContractComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.transportContract.home.customerTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.transportContract.home.customerTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + ` (${this.customer.name})`, routerLink: ['/customer']});
         });
-        this.translateService.get('niopdcgatewayApp.transportContract.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.transportContract.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="role.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.role.home.createLabel">
+            jhiTranslate="samtagatewayApp.role.home.createLabel">
             Create</h4>
         <h4 *ngIf="role.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.role.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.role.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.role.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.role.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.role.name"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.role.name"
                                    for="field_name">Name</label>
                             <input type="text" class="form-control" name="name" id="field_name"
                                    [(ngModel)]="role.name"
@@ -49,23 +49,23 @@
                 </div>
                 <div class="row">
                     <div class="col-md-5">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.role.userType"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.role.userType"
                                for="field_roleType">userType</label>
                         <select [disabled]="isView" class="form-control" name="userType"
                                 [(ngModel)]="role.userType" id="field_userType" required>
-                            <option *ngIf="currentUserType==='HEAD'" value="HEAD">{{'niopdcgatewayApp.userType.HEAD'| translate}}</option>
-                            <option *ngIf="currentUserType==='HEAD'||currentUserType==='AREA'" value="AREA">{{'niopdcgatewayApp.userType.AREA' | translate}}</option>
-                            <option *ngIf="currentUserType==='HEAD'||currentUserType==='REFUEL_CENTER'"value="REFUEL_CENTER">{{'niopdcgatewayApp.userType.REFUEL_CENTER' |translate}}</option>
-                            <option *ngIf="currentUserType==='HEAD'||currentUserType==='AREA'||currentUserType==='ZONE'"value="ZONE">{{'niopdcgatewayApp.userType.ZONE' | translate}}</option>
+                            <option *ngIf="currentUserType==='HEAD'" value="HEAD">{{'samtagatewayApp.userType.HEAD'| translate}}</option>
+                            <option *ngIf="currentUserType==='HEAD'||currentUserType==='AREA'" value="AREA">{{'samtagatewayApp.userType.AREA' | translate}}</option>
+                            <option *ngIf="currentUserType==='HEAD'||currentUserType==='REFUEL_CENTER'"value="REFUEL_CENTER">{{'samtagatewayApp.userType.REFUEL_CENTER' |translate}}</option>
+                            <option *ngIf="currentUserType==='HEAD'||currentUserType==='AREA'||currentUserType==='ZONE'"value="ZONE">{{'samtagatewayApp.userType.ZONE' | translate}}</option>
                         </select>
                     </div>
                     <div *jhiHasAnyAuthority="['ROLE_ADMIN']" class="col-md-5">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.role.roleType"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.role.roleType"
                                for="field_roleType">Oil Tank Type</label>
                         <select [disabled]="isView" class="form-control" name="roleType"
                                 [(ngModel)]="role.roleType" id="field_roleType" required>
-                            <option value="ROLE">{{'niopdcgatewayApp.role.ROLE' | translate}}</option>
-                            <option value="PERSON">{{'niopdcgatewayApp.role.PERSON' | translate}}
+                            <option value="ROLE">{{'samtagatewayApp.role.ROLE' | translate}}</option>
+                            <option value="PERSON">{{'samtagatewayApp.role.PERSON' | translate}}
                             </option>
                         </select>
                     </div>
@@ -75,7 +75,7 @@
                                 <input type="checkbox" class="form-control" name="activated" id="field_activated"
                                        [(ngModel)]="role.activated"
                                 />
-                                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.role.activated"
+                                <label class="form-control-label" jhiTranslate="samtagatewayApp.role.activated"
                                        for="field_activated">Activated</label>
                                 <div
                                     [hidden]="!(editForm.controls.activated?.dirty && editForm.controls.activated?.invalid)">
@@ -92,7 +92,7 @@
             </div>
             <div class="col-md-6">
 
-                <label jhiTranslate="niopdcgatewayApp.role.authorities" for="field_authorities">Authorities</label>
+                <label jhiTranslate="samtagatewayApp.role.authorities" for="field_authorities">Authorities</label>
                 <div class="form-group">
                     <app-authority-selector class="form-control" id="field_authorities"
                                             [disabled]="isView"

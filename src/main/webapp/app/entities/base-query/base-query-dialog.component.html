@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="baseQuery.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.baseQuery.home.createLabel">
+            jhiTranslate="samtagatewayApp.baseQuery.home.createLabel">
             Create</h4>
         <h4 *ngIf="baseQuery.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.baseQuery.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.baseQuery.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.baseQuery.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.baseQuery.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.baseQuery.title"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.baseQuery.title"
                                for="field_title">Title</label>
                         <input [disabled]="isView" type="text" class="form-control" name="title"
                                id="field_title"
@@ -41,7 +41,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.momentSheet.startTime"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.momentSheet.startTime"
                            for="field_startTime">Register Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="false" [rtlActive]="true"
@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.location"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.person.location"
                                for="field_location">Location</label>
                         <input-location-selector
                             [idSelector]="true"
@@ -71,7 +71,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.baseQuery.tempQuery"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.baseQuery.tempQuery"
                                for="field_tempQuery">Temp Query</label>
                         <textarea [disabled]="isView" style="direction: ltr;height: 300px" type="text"
                                   class="form-control"

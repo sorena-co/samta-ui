@@ -1,12 +1,12 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 *ngIf="waterMethanolMixer.id==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.waterMethanolMixer.home.createLabel">
+        <h4 *ngIf="waterMethanolMixer.id==null" class="modal-title" id="createLabel" jhiTranslate="samtagatewayApp.waterMethanolMixer.home.createLabel">
             Create</h4>
         <h4 *ngIf="waterMethanolMixer.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.waterMethanolMixer.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.waterMethanolMixer.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.waterMethanolMixer.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.waterMethanolMixer.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.waterMethanolMixer.waterAmount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.waterMethanolMixer.waterAmount"
                            for="field_waterAmount">Water Amount</label>
                     <input [disabled]="isView" type="number" class="form-control" name="waterAmount"
                            id="field_waterAmount"
@@ -38,7 +38,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.waterMethanolMixer.methanolAmount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.waterMethanolMixer.methanolAmount"
                            for="field_methanolAmount">Methanol Amount</label>
                     <input [disabled]="isView" type="number" class="form-control" name="methanolAmount"
                            id="field_methanolAmount"
@@ -60,7 +60,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.waterMethanolMixer.water"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.waterMethanolMixer.water"
                            for="field_water">Water</label>
                     <select class="form-control" id="field_water" name="water" [(ngModel)]="waterMethanolMixer.waterId"
                             required>
@@ -76,7 +76,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.waterMethanolMixer.methanol"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.waterMethanolMixer.methanol"
                            for="field_methanol">Methanol</label>
                     <select class="form-control" id="field_methanol" name="methanol"
                             [(ngModel)]="waterMethanolMixer.methanolId" required>
@@ -90,7 +90,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.waterMethanolMixer.methanolMixer"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.waterMethanolMixer.methanolMixer"
                            for="field_methanolMixer">Methanol Mixer</label>
                     <select class="form-control" id="field_methanolMixer" name="methanolMixer"
                             [(ngModel)]="waterMethanolMixer.methanolMixerId" required>

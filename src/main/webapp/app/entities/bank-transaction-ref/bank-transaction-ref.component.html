@@ -1,9 +1,9 @@
 <div>
     <h2>
-        <span jhiTranslate="niopdcgatewayApp.bankTransactionRef.home.title">Bank Transaction Refs</span>
+        <span jhiTranslate="samtagatewayApp.bankTransactionRef.home.title">Bank Transaction Refs</span>
         <button class="btn btn-primary float-right jh-create-entity create-bank-transaction-ref" [routerLink]="['/', { outlets: { popup: ['bank-transaction-ref-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="niopdcgatewayApp.bankTransactionRef.home.createLabel">
+            <span  jhiTranslate="samtagatewayApp.bankTransactionRef.home.createLabel">
             Create new Bank Transaction Ref
             </span>
         </button>
@@ -17,11 +17,11 @@
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="orderId"><span jhiTranslate="niopdcgatewayApp.bankTransactionRef.orderId">Order Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="personId"><span jhiTranslate="niopdcgatewayApp.bankTransactionRef.personId">Person Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="customerId"><span jhiTranslate="niopdcgatewayApp.bankTransactionRef.customerId">Customer Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="amount"><span jhiTranslate="niopdcgatewayApp.bankTransactionRef.amount">Amount</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="bankTransactionId"><span jhiTranslate="niopdcgatewayApp.bankTransactionRef.bankTransaction">Bank Transaction</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="orderId"><span jhiTranslate="samtagatewayApp.bankTransactionRef.orderId">Order Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="personId"><span jhiTranslate="samtagatewayApp.bankTransactionRef.personId">Person Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="customerId"><span jhiTranslate="samtagatewayApp.bankTransactionRef.customerId">Customer Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="amount"><span jhiTranslate="samtagatewayApp.bankTransactionRef.amount">Amount</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="bankTransactionId"><span jhiTranslate="samtagatewayApp.bankTransactionRef.bankTransaction">Bank Transaction</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>

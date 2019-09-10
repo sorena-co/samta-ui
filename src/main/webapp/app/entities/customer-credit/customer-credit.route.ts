@@ -35,7 +35,7 @@ export const customerCreditRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CUSTOMER_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.customerCredit.home.title'
+            pageTitle: 'samtagatewayApp.customerCredit.home.title'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -47,7 +47,7 @@ export const customerCreditRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_PERSON_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.personCredit.home.title'
+            pageTitle: 'samtagatewayApp.personCredit.home.title'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -59,7 +59,7 @@ export const customerCreditRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CUSTOMER_CREDIT','LIST_PERSON_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.personCredit.home.title'
+            pageTitle: 'samtagatewayApp.personCredit.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -71,7 +71,7 @@ export const customerCreditPopupRoute: Routes = [
         component: CustomerCreditPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_CUSTOMER_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.customerCredit.home.title'
+            pageTitle: 'samtagatewayApp.customerCredit.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -81,7 +81,7 @@ export const customerCreditPopupRoute: Routes = [
         component: CustomerCreditPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_PERSON_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.personCredit.home.title'
+            pageTitle: 'samtagatewayApp.personCredit.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -91,7 +91,7 @@ export const customerCreditPopupRoute: Routes = [
         component: CustomerCreditPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_CUSTOMER_CREDIT','CREATE_PERSON_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.personCredit.home.title'
+            pageTitle: 'samtagatewayApp.personCredit.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -101,7 +101,7 @@ export const customerCreditPopupRoute: Routes = [
         component: CustomerCreditPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_CUSTOMER_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.customerCredit.home.title'
+            pageTitle: 'samtagatewayApp.customerCredit.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -111,7 +111,7 @@ export const customerCreditPopupRoute: Routes = [
         component: CustomerCreditPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_PERSON_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.personCredit.home.title'
+            pageTitle: 'samtagatewayApp.personCredit.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -121,7 +121,7 @@ export const customerCreditPopupRoute: Routes = [
         component: CustomerCreditPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_CUSTOMER_CREDIT','EDIT_PERSON_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.personCredit.home.title'
+            pageTitle: 'samtagatewayApp.personCredit.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -131,7 +131,7 @@ export const customerCreditPopupRoute: Routes = [
         component: CustomerCreditDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_CUSTOMER_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.customerCredit.home.title',
+            pageTitle: 'samtagatewayApp.customerCredit.home.title',
             isPerson: false
         },
         canActivate: [UserRouteAccessService],
@@ -142,7 +142,7 @@ export const customerCreditPopupRoute: Routes = [
         component: CustomerCreditDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_PERSON_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.customerCredit.home.title',
+            pageTitle: 'samtagatewayApp.customerCredit.home.title',
             isPerson: true
         },
         canActivate: [UserRouteAccessService],
@@ -153,7 +153,7 @@ export const customerCreditPopupRoute: Routes = [
         component: CustomerCreditDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_CUSTOMER_CREDIT','DELETE_PERSON_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.customerCredit.home.title',
+            pageTitle: 'samtagatewayApp.customerCredit.home.title',
             isPerson: true
         },
         canActivate: [UserRouteAccessService],
@@ -164,7 +164,7 @@ export const customerCreditPopupRoute: Routes = [
         component: CustomerCreditPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_CUSTOMER_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.customerCredit.home.title'
+            pageTitle: 'samtagatewayApp.customerCredit.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -173,7 +173,7 @@ export const customerCreditPopupRoute: Routes = [
         component: CustomerCreditPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_PERSON_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.personCredit.home.title'
+            pageTitle: 'samtagatewayApp.personCredit.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -182,7 +182,7 @@ export const customerCreditPopupRoute: Routes = [
         component: CustomerCreditPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_CUSTOMER_CREDIT','VIEW_PERSON_CREDIT'],
-            pageTitle: 'niopdcgatewayApp.personCredit.home.title'
+            pageTitle: 'samtagatewayApp.personCredit.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "boundaryTag" : {
             "home": {
                 "title": "Boundary Tags",

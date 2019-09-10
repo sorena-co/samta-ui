@@ -33,7 +33,7 @@ export const airportRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_AIRPORT'],
-            pageTitle: 'niopdcgatewayApp.airport.home.title'
+            pageTitle: 'samtagatewayApp.airport.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const airportPopupRoute: Routes = [
     component: AirportPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'CREATE_AIRPORT'],
-        pageTitle: 'niopdcgatewayApp.airport.home.title'
+        pageTitle: 'samtagatewayApp.airport.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const airportPopupRoute: Routes = [
     component: AirportPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'EDIT_AIRPORT'],
-        pageTitle: 'niopdcgatewayApp.airport.home.title'
+        pageTitle: 'samtagatewayApp.airport.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const airportPopupRoute: Routes = [
     component: AirportDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'DELETE_AIRPORT'],
-        pageTitle: 'niopdcgatewayApp.airport.home.title'
+        pageTitle: 'samtagatewayApp.airport.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const airportPopupRoute: Routes = [
       component: AirportPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN', 'VIEW_AIRPORT'],
-          pageTitle: 'niopdcgatewayApp.airport.home.title'
+          pageTitle: 'samtagatewayApp.airport.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

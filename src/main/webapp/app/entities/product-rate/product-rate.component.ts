@@ -199,17 +199,17 @@ export class ProductRateComponent implements OnInit, OnDestroy {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
         if (this.productId) {
-            this.translateService.get('niopdcgatewayApp.productRate.home.productTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.productRate.home.productTitle').subscribe((title) => {
                 this.breadcrumbItems.push({label: title + ` (${this.product.title})`, routerLink: ['/product']});
             });
-            this.translateService.get('niopdcgatewayApp.containerRate.home.titleProduct').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.containerRate.home.titleProduct').subscribe((title) => {
                 this.breadcrumbItems.push({label: title});
             });
         } else if (this.containerId) {
-            this.translateService.get('niopdcgatewayApp.productRate.home.containerTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.productRate.home.containerTitle').subscribe((title) => {
                 this.breadcrumbItems.push({label: title + ` (${this.container.title})`, routerLink: ['/container']});
             });
-            this.translateService.get('niopdcgatewayApp.containerRate.home.titleContainer').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.containerRate.home.titleContainer').subscribe((title) => {
                 this.breadcrumbItems.push({label: title});
             });
         }

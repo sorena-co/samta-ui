@@ -1,9 +1,9 @@
 <div>
     <h2>
-        <span jhiTranslate="niopdcgatewayApp.billItem.home.title">Bill Items</span>
+        <span jhiTranslate="samtagatewayApp.billItem.home.title">Bill Items</span>
         <button class="btn btn-primary float-right jh-create-entity create-bill-item" [routerLink]="['/', { outlets: { popup: ['bill-item-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="niopdcgatewayApp.billItem.home.createLabel">
+            <span  jhiTranslate="samtagatewayApp.billItem.home.createLabel">
             Create new Bill Item
             </span>
         </button>
@@ -17,14 +17,14 @@
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="title"><span jhiTranslate="niopdcgatewayApp.billItem.title">Title</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="productId"><span jhiTranslate="niopdcgatewayApp.billItem.productId">Product Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="litre"><span jhiTranslate="niopdcgatewayApp.billItem.litre">Litre</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="costId"><span jhiTranslate="niopdcgatewayApp.billItem.costId">Cost Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="price"><span jhiTranslate="niopdcgatewayApp.billItem.price">Price</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="costRatePrice"><span jhiTranslate="niopdcgatewayApp.billItem.costRatePrice">Cost Rate Price</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="costElementId"><span jhiTranslate="niopdcgatewayApp.billItem.costElementId">Cost Element Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="billId"><span jhiTranslate="niopdcgatewayApp.billItem.bill">Bill</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="title"><span jhiTranslate="samtagatewayApp.billItem.title">Title</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="productId"><span jhiTranslate="samtagatewayApp.billItem.productId">Product Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="litre"><span jhiTranslate="samtagatewayApp.billItem.litre">Litre</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="costId"><span jhiTranslate="samtagatewayApp.billItem.costId">Cost Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="price"><span jhiTranslate="samtagatewayApp.billItem.price">Price</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="costRatePrice"><span jhiTranslate="samtagatewayApp.billItem.costRatePrice">Cost Rate Price</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="costElementId"><span jhiTranslate="samtagatewayApp.billItem.costElementId">Cost Element Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="billId"><span jhiTranslate="samtagatewayApp.billItem.bill">Bill</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>

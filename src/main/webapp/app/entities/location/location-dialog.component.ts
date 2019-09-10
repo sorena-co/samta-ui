@@ -163,7 +163,7 @@ export class LocationDialogComponent implements OnInit {
     returnTitle() {
         let result = '';
         if (!this.location.id) {
-            result = 'niopdcgatewayApp.location.home.createLabel';
+            result = 'samtagatewayApp.location.home.createLabel';
             if (this.location.locationId) {
                 this.locationService.find(this.location.locationId)
                     .subscribe((res: HttpResponse<Location>) => {
@@ -183,7 +183,7 @@ export class LocationDialogComponent implements OnInit {
                 });
             }
         } else if (this.location.id && !this.isView) {
-            result = 'niopdcgatewayApp.location.home.createOrEditLabel';
+            result = 'samtagatewayApp.location.home.createOrEditLabel';
             if (this.location.locationId) {
                 this.locationService.find(this.location.locationId)
                     .subscribe((res: HttpResponse<Location>) => {
@@ -205,7 +205,7 @@ export class LocationDialogComponent implements OnInit {
                 });
             }
         } else if (this.location.id && this.isView) {
-            result = 'niopdcgatewayApp.location.home.view';
+            result = 'samtagatewayApp.location.home.view';
             if (this.location.locationId) {
                 this.locationService.find(this.location.locationId)
                     .subscribe((res: HttpResponse<Location>) => {

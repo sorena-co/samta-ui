@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="receivedProduct.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.receivedProduct.home.createLabel">
+            jhiTranslate="samtagatewayApp.receivedProduct.home.createLabel">
             Create</h4>
         <h4 *ngIf="receivedProduct.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.receivedProduct.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.receivedProduct.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.receivedProduct.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.receivedProduct.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.receivedProduct.registerDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.receivedProduct.registerDate"
                            for="field_registerDate">Register Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00" id="field_registerDate"
@@ -43,12 +43,12 @@
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.receivedProduct.receivedProductType"
+                           jhiTranslate="samtagatewayApp.receivedProduct.receivedProductType"
                            for="field_receivedProductType">Received Product Type</label>
                     <select [disabled]="isView" class="form-control" name="receivedProductType"
                             [(ngModel)]="receivedProduct.receivedProductType" id="field_receivedProductType" required>
-                        <option value="TANKER">{{'niopdcgatewayApp.ReceivedProductType.TANKER' | translate}}</option>
-                        <option value="PIPE">{{'niopdcgatewayApp.ReceivedProductType.PIPE' | translate}}</option>
+                        <option value="TANKER">{{'samtagatewayApp.ReceivedProductType.TANKER' | translate}}</option>
+                        <option value="PIPE">{{'samtagatewayApp.ReceivedProductType.PIPE' | translate}}</option>
                     </select>
                     <div
                         [hidden]="!(editForm.controls.receivedProductType?.dirty && editForm.controls.receivedProductType?.invalid)">
@@ -62,7 +62,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.receivedProduct.startDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.receivedProduct.startDate"
                            for="field_startDate">Start Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00" id="field_startDate"
@@ -88,7 +88,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.receivedProduct.finishDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.receivedProduct.finishDate"
                            for="field_finishDate">Finish Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="23:59:59" id="field_finishDate"
@@ -112,7 +112,7 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.receivedProduct.productId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.receivedProduct.productId"
                            for="field_productId">Product Id</label>
                     <select [disabled]="true" class="form-control" id="field_productID" name="product"
                             [(ngModel)]="receivedProduct.productId"
@@ -137,7 +137,7 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.receivedProduct.inventoryId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.receivedProduct.inventoryId"
                            for="field_inventoryId">Inventory Id</label>
                     <select [disabled]="isView" class="form-control" id="field_inventoryId" name="inventory"
                             [(ngModel)]="receivedProduct.inventoryId"
@@ -163,7 +163,7 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.receivedProduct.waybillNumber"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.receivedProduct.waybillNumber"
                            for="field_waybillNumber">Waybill Number</label>
                     <input [disabled]="isView" type="text" class="form-control" name="waybillNumber"
                            id="field_waybillNumber"
@@ -188,7 +188,7 @@
         <div class="row" *ngIf="receivedProduct.receivedProductType===receivedProductType[receivedProductType.TANKER]">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.receivedProduct.vehicleId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.receivedProduct.vehicleId"
                            for="field_vehicleId">Vehicle Id</label>
                     <input [disabled]="isView" type="text" class="form-control" name="vehicleId" id="field_vehicleId"
                            [(ngModel)]="receivedProduct.vehicleId" required/>
@@ -203,7 +203,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.receivedProduct.driverName"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.receivedProduct.driverName"
                            for="field_driverName">Driver Name</label>
                     <input [disabled]="isView" type="text" class="form-control" name="driverName" id="field_driverName"
                            [(ngModel)]="receivedProduct.driverName" minlength="3" maxlength="40"/>
@@ -223,7 +223,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.receivedProduct.contractorNumber"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.receivedProduct.contractorNumber"
                            for="field_contractorNumber">Contractor Number</label>
                     <input [disabled]="isView" type="number" class="form-control" name="contractorNumber"
                            id="field_contractorNumber"
@@ -238,7 +238,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.receivedProduct.receivedNatureAmount"
+                                   jhiTranslate="samtagatewayApp.receivedProduct.receivedNatureAmount"
                                    for="field_receivedNatureAmount">Received Nature Amount</label>
                             <input type="number" class="form-control" name="receivedNatureAmount"
                                    id="field_receivedNatureAmount"
@@ -264,7 +264,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.receivedProduct.receivedProductTemperature"
+                                   jhiTranslate="samtagatewayApp.receivedProduct.receivedProductTemperature"
                                    for="field_receivedProductTemperature">Received Product Temperature</label>
                             <input type="number" class="form-control" name="receivedProductTemperature"
                                    id="field_receivedProductTemperature"
@@ -290,7 +290,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.receivedProduct.receivedSpecialWeight"
+                                   jhiTranslate="samtagatewayApp.receivedProduct.receivedSpecialWeight"
                                    for="field_receivedSpecialWeight">Received Special Weight</label>
                             <input type="number" class="form-control" name="receivedSpecialWeight"
                                    [disabled]="isView"
@@ -316,7 +316,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.receivedProduct.receivedEnvironmentTemperature"
+                                   jhiTranslate="samtagatewayApp.receivedProduct.receivedEnvironmentTemperature"
                                    for="field_receivedEnvironmentTemperature">Received Environment Temperature</label>
                             <input type="number" class="form-control" name="receivedEnvironmentTemperature"
                                    id="field_receivedEnvironmentTemperature"
@@ -342,7 +342,7 @@
                     <div class="col-md-10">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.receivedProduct.receivedSixtyAmount"
+                                   jhiTranslate="samtagatewayApp.receivedProduct.receivedSixtyAmount"
                                    for="field_receivedSixtyAmount">Received Sixty Amount</label>
                             <input type="number" class="form-control" name="receivedSixtyAmount"
                                    id="field_receivedSixtyAmount"
@@ -380,7 +380,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.receivedProduct.sendNatureAmount"
+                                   jhiTranslate="samtagatewayApp.receivedProduct.sendNatureAmount"
                                    for="field_sendNatureAmount">Send Nature Amount</label>
                             <input type="number" class="form-control" name="sendNatureAmount"
                                    [disabled]="isView"
@@ -406,7 +406,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.receivedProduct.sendSpecialWeight"
+                                   jhiTranslate="samtagatewayApp.receivedProduct.sendSpecialWeight"
                                    for="field_sendSpecialWeight">Send Special Weight</label>
                             <input type="number" class="form-control" name="sendSpecialWeight"
                                    id="field_sendSpecialWeight"
@@ -432,7 +432,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.receivedProduct.sendEnvironmentTemperature"
+                                   jhiTranslate="samtagatewayApp.receivedProduct.sendEnvironmentTemperature"
                                    for="field_sendEnvironmentTemperature">Send Environment Temperature</label>
                             <input type="number" class="form-control" name="sendEnvironmentTemperature"
                                    id="field_sendEnvironmentTemperature"
@@ -458,7 +458,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.receivedProduct.sendProductTemperature"
+                                   jhiTranslate="samtagatewayApp.receivedProduct.sendProductTemperature"
                                    for="field_sendProductTemperature">Send Product Temperature</label>
                             <input type="number" class="form-control" name="sendProductTemperature"
                                    id="field_sendProductTemperature"
@@ -484,7 +484,7 @@
                     <div class="col-md-10">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.receivedProduct.sendSixtyAmount"
+                                   jhiTranslate="samtagatewayApp.receivedProduct.sendSixtyAmount"
                                    for="field_sendSixtyAmount">Send Sixty Amount</label>
                             <input type="number" class="form-control" [disabled]="true" name="sendSixtyAmount"
                                    id="field_sendSixtyAmount"
@@ -526,7 +526,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.receivedProduct.description"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.receivedProduct.description"
                            for="field_description">Description</label>
                     <textarea [disabled]="isView" type="text" class="form-control" name="description"
                               id="field_description"

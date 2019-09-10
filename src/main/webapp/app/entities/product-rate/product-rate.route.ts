@@ -36,7 +36,7 @@ export const productRateRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_PRODUCT_RATE'],
-            pageTitle: 'niopdcgatewayApp.productRate.home.title'
+            pageTitle: 'samtagatewayApp.productRate.home.title'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -48,7 +48,7 @@ export const productRateRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_PRODUCT_RATE'],
-            pageTitle: 'niopdcgatewayApp.containerRate.home.title'
+            pageTitle: 'samtagatewayApp.containerRate.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -60,7 +60,7 @@ export const productRatePopupRoute: Routes = [
         component: ProductRatePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_PRODUCT_RATE'],
-            pageTitle: 'niopdcgatewayApp.productRate.home.title'
+            pageTitle: 'samtagatewayApp.productRate.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -70,7 +70,7 @@ export const productRatePopupRoute: Routes = [
         component: ProductRatePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_PRODUCT_RATE'],
-            pageTitle: 'niopdcgatewayApp.containerRate.home.title'
+            pageTitle: 'samtagatewayApp.containerRate.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -80,7 +80,7 @@ export const productRatePopupRoute: Routes = [
         component: ProductRatePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_PRODUCT_RATE'],
-            pageTitle: 'niopdcgatewayApp.productRate.home.title'
+            pageTitle: 'samtagatewayApp.productRate.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -90,7 +90,7 @@ export const productRatePopupRoute: Routes = [
         component: ProductRatePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_PRODUCT_RATE'],
-            pageTitle: 'niopdcgatewayApp.containerRate.home.title'
+            pageTitle: 'samtagatewayApp.containerRate.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -100,7 +100,7 @@ export const productRatePopupRoute: Routes = [
         component: ProductRateDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_PRODUCT_RATE'],
-            pageTitle: 'niopdcgatewayApp.productRate.home.title'
+            pageTitle: 'samtagatewayApp.productRate.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -110,7 +110,7 @@ export const productRatePopupRoute: Routes = [
         component: ProductRatePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_PRODUCT_RATE'],
-            pageTitle: 'niopdcgatewayApp.productRate.home.title'
+            pageTitle: 'samtagatewayApp.productRate.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -120,7 +120,7 @@ export const productRatePopupRoute: Routes = [
         component: ProductRatePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_PRODUCT_RATE'],
-            pageTitle: 'niopdcgatewayApp.containerRate.home.title'
+            pageTitle: 'samtagatewayApp.containerRate.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

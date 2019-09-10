@@ -111,7 +111,7 @@ export class PersonRegisterDialogComponent implements OnInit {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.mapSiteItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.person.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.person.home.title').subscribe((title) => {
             this.mapSiteItems.push({
                     label: title
                     , routerLink: ['/person']
@@ -119,11 +119,11 @@ export class PersonRegisterDialogComponent implements OnInit {
             );
         });
         if (this.person && this.person.id) {
-            this.translateService.get('niopdcgatewayApp.person.home.editLabel').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.person.home.editLabel').subscribe((title) => {
                 this.mapSiteItems.push({label: title});
             });
         } else {
-            this.translateService.get('niopdcgatewayApp.person.home.createLabel').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.person.home.createLabel').subscribe((title) => {
                 this.mapSiteItems.push({label: title});
             });
 

@@ -145,7 +145,7 @@ export class RefuelCenterComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.refuelCenter.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.refuelCenter.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

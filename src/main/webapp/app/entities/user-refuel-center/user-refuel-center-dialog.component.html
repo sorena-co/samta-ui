@@ -1,12 +1,12 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 *ngIf="userRefuelCenter.id==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.userRefuelCenter.home.createLabel">
+        <h4 *ngIf="userRefuelCenter.id==null" class="modal-title" id="createLabel" jhiTranslate="samtagatewayApp.userRefuelCenter.home.createLabel">
             Create</h4>
         <h4 *ngIf="userRefuelCenter.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.userRefuelCenter.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.userRefuelCenter.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.userRefuelCenter.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.userRefuelCenter.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userRefuelCenter.username"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.userRefuelCenter.username"
                            for="field_username">Username</label>
                     <input type="text" class="form-control" name="username" id="field_username" [disabled]="true"
                            [(ngModel)]="userRefuelCenter.username" required/>
@@ -32,7 +32,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.userRefuelCenter.refuelCenter" for="field_refuelCenter">RefuelCenter</label>
+                    <label jhiTranslate="samtagatewayApp.userRefuelCenter.refuelCenter" for="field_refuelCenter">RefuelCenter</label>
                     <p-multiSelect class="form-control" id="field_refuelCenter"
                                    [options]="refuelCenters"
                                    name="refuelCenter"

@@ -34,7 +34,7 @@ export const containerRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CONTAINER'],
-            pageTitle: 'niopdcgatewayApp.container.home.title'
+            pageTitle: 'samtagatewayApp.container.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -46,7 +46,7 @@ export const containerPopupRoute: Routes = [
         component: ContainerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_CONTAINER'],
-            pageTitle: 'niopdcgatewayApp.container.home.title'
+            pageTitle: 'samtagatewayApp.container.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -56,7 +56,7 @@ export const containerPopupRoute: Routes = [
         component: ContainerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_CONTAINER'],
-            pageTitle: 'niopdcgatewayApp.container.home.title'
+            pageTitle: 'samtagatewayApp.container.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -66,7 +66,7 @@ export const containerPopupRoute: Routes = [
         component: ContainerDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_CONTAINER'],
-            pageTitle: 'niopdcgatewayApp.container.home.title'
+            pageTitle: 'samtagatewayApp.container.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -75,7 +75,7 @@ export const containerPopupRoute: Routes = [
         component: ContainerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_CONTAINER'],
-            pageTitle: 'niopdcgatewayApp.container.home.title'
+            pageTitle: 'samtagatewayApp.container.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

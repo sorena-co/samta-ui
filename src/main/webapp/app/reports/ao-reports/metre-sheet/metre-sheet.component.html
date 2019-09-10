@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-3">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.refuelCenter"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.refuelCenter"
                                    for="field_refuelCenter">RefuelCenter</label>
                             <select class="form-control" id="field_refuelCenter"
                                     name="refuelCenter"
@@ -33,7 +33,7 @@
                     </div>
                     <div class="col-xs-12 col-md-3">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepot.oilTank"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepot.oilTank"
                                    for="field_oilTank">Oil
                                 Tank</label>
                             <select
@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-xs-12 col-md-3">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.metre"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.metre"
                                    for="field_metres">Metre</label>
                             <select class="form-control"
                                     id="field_metres"
@@ -69,15 +69,15 @@
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreSheet.reportType"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.metreSheet.reportType"
                                    for="Type"></label>
                             <select  class="form-control" name="Type" [(ngModel)]="type"
                                     id="type">
                                 <option value="1">
-                                    {{'niopdcgatewayApp.metreSheet.meterSheet' | translate}}
+                                    {{'samtagatewayApp.metreSheet.meterSheet' | translate}}
                                 </option>
                                 <option
-                                    value="2">{{'niopdcgatewayApp.metreSheet.hourToHour' | translate}}
+                                    value="2">{{'samtagatewayApp.metreSheet.hourToHour' | translate}}
                                 </option>
                             </select>
                         </div>
@@ -88,7 +88,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.metreSheet.startDate"
+                                   jhiTranslate="samtagatewayApp.metreSheet.startDate"
                                    for="field_startDate">startDate</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00:00"
@@ -115,7 +115,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.metreSheet.finishDate"
+                                   jhiTranslate="samtagatewayApp.metreSheet.finishDate"
                                    for="field_finishDate">finishDate</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="23:59:59"
@@ -176,48 +176,48 @@
             </button>
         </ng-template>
 
-        <kendo-grid-column *ngIf="type==1 || type==2" [locked]="true" field="oilTank" [title]="'niopdcgatewayApp.metreSheet.oilTank' | translate" width="100">
+        <kendo-grid-column *ngIf="type==1 || type==2" [locked]="true" field="oilTank" [title]="'samtagatewayApp.metreSheet.oilTank' | translate" width="100">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column *ngIf="type==1 || type==2" field="receiptNo" [title]="'niopdcgatewayApp.metreSheet.receiptNo' | translate" width="100">
+        <kendo-grid-column *ngIf="type==1 || type==2" field="receiptNo" [title]="'samtagatewayApp.metreSheet.receiptNo' | translate" width="100">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column *ngIf="type==1 || type==2 " field="dateTime" [title]="'niopdcgatewayApp.metreSheet.dayDate' | translate" width="100">
+        <kendo-grid-column *ngIf="type==1 || type==2 " field="dateTime" [title]="'samtagatewayApp.metreSheet.dayDate' | translate" width="100">
             <ng-template kendoGridCellTemplate let-dataItem>
                 <span>{{dataItem.dayDate| dateJalali}}</span>
             </ng-template>
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column *ngIf="type==1 || type==2" field="dateTime" [title]="'niopdcgatewayApp.metreSheet.date' | translate" width="130">
+        <kendo-grid-column *ngIf="type==1 || type==2" field="dateTime" [title]="'samtagatewayApp.metreSheet.date' | translate" width="130">
             <ng-template kendoGridCellTemplate let-dataItem>
                 <span>{{dataItem.dateTime | dateTimeJalali}}</span>
             </ng-template>
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column *ngIf="type==1 || type==2" field="airplaneName" [title]="'niopdcgatewayApp.metreSheet.airplaneName' | translate"
+        <kendo-grid-column *ngIf="type==1 || type==2" field="airplaneName" [title]="'samtagatewayApp.metreSheet.airplaneName' | translate"
                            width="100">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column *ngIf="type==2" field="airplaneModel" [title]="'niopdcgatewayApp.metreSheet.airplaneModel' | translate"
+        <kendo-grid-column *ngIf="type==2" field="airplaneModel" [title]="'samtagatewayApp.metreSheet.airplaneModel' | translate"
                            width="100">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column *ngIf="type==2" field="personName" [title]="'niopdcgatewayApp.metreSheet.personName' | translate"
+        <kendo-grid-column *ngIf="type==2" field="personName" [title]="'samtagatewayApp.metreSheet.personName' | translate"
                            width="100">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column *ngIf="type==1 || type==2" field="productCode"
-                           [title]="'niopdcgatewayApp.metreSheet.productCode' | translate" width="100">
+                           [title]="'samtagatewayApp.metreSheet.productCode' | translate" width="100">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column *ngIf="type==3" field="productGroupTitle"
-                           [title]="'niopdcgatewayApp.metreSheet.productGroupTitle' | translate" width="100">
+                           [title]="'samtagatewayApp.metreSheet.productGroupTitle' | translate" width="100">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column *ngIf="type==1" field="type" [title]="'niopdcgatewayApp.metreSheet.type' | translate" width="100">
+        <kendo-grid-column *ngIf="type==1" field="type" [title]="'samtagatewayApp.metreSheet.type' | translate" width="100">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column *ngIf="type==1 || type==2" field="amount" [title]="'niopdcgatewayApp.metreSheet.amount' | translate"
+        <kendo-grid-column *ngIf="type==1 || type==2" field="amount" [title]="'samtagatewayApp.metreSheet.amount' | translate"
                            width="100">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -232,39 +232,39 @@
             </ng-template>
 
         </kendo-grid-column>
-        <kendo-grid-column *ngIf="type==1" field="agoMetre" [title]="'niopdcgatewayApp.metreSheet.agoMetre' | translate" width="150">
+        <kendo-grid-column *ngIf="type==1" field="agoMetre" [title]="'samtagatewayApp.metreSheet.agoMetre' | translate" width="150">
 
             <ng-template
                 kendoGridGroupFooterTemplate
                 let-group="group"
                 let-aggregates>
-                {{('niopdcgatewayApp.metreSheet.agoMetre.min' | translate) + ':' + aggregates['agoMetre']?.min }}
+                {{('samtagatewayApp.metreSheet.agoMetre.min' | translate) + ':' + aggregates['agoMetre']?.min }}
             </ng-template>
             <ng-template
                 kendoGridFooterTemplate
                 let-column="column">
-                {{('niopdcgatewayApp.metreSheet.agoMetre.min' | translate) + ':' + total['agoMetre']?.min }}
+                {{('samtagatewayApp.metreSheet.agoMetre.min' | translate) + ':' + total['agoMetre']?.min }}
             </ng-template>
         </kendo-grid-column>
         <kendo-grid-column *ngIf="type==1" field="nextMetre"
-                           [title]="'niopdcgatewayApp.metreSheet.nextMetre' | translate" width="150">
+                           [title]="'samtagatewayApp.metreSheet.nextMetre' | translate" width="150">
 
             <ng-template
                 kendoGridGroupFooterTemplate
                 let-group="group"
                 let-aggregates>
-                {{('niopdcgatewayApp.metreSheet.nextMetre.max' | translate) + ':' + aggregates['nextMetre']?.max }}
+                {{('samtagatewayApp.metreSheet.nextMetre.max' | translate) + ':' + aggregates['nextMetre']?.max }}
             </ng-template>
             <ng-template
                 kendoGridFooterTemplate
                 let-column="column">
-                {{('niopdcgatewayApp.metreSheet.nextMetre.max' | translate) + ':' + total['nextMetre']?.max }}
+                {{('samtagatewayApp.metreSheet.nextMetre.max' | translate) + ':' + total['nextMetre']?.max }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column *ngIf="type==1" field="diffMetre" [title]="'niopdcgatewayApp.metreSheet.diffMetre' | translate" width="100">
+        <kendo-grid-column *ngIf="type==1" field="diffMetre" [title]="'samtagatewayApp.metreSheet.diffMetre' | translate" width="100">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column *ngIf="type==2" field="createUser" [title]="'niopdcgatewayApp.metreSheet.createUser' | translate"
+        <kendo-grid-column *ngIf="type==2" field="createUser" [title]="'samtagatewayApp.metreSheet.createUser' | translate"
                            width="100">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>

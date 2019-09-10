@@ -1,24 +1,24 @@
 
 <div *ngIf="stakeholder">
-    <h2><span jhiTranslate="niopdcgatewayApp.stakeholder.detail.title">Stakeholder</span> {{stakeholder.id}}</h2>
+    <h2><span jhiTranslate="samtagatewayApp.stakeholder.detail.title">Stakeholder</span> {{stakeholder.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
-        <dt><span jhiTranslate="niopdcgatewayApp.stakeholder.sharePercent">Share Percent</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.stakeholder.sharePercent">Share Percent</span></dt>
         <dd>
             <span>{{stakeholder.sharePercent}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.stakeholder.stakeholderType">Stakeholder Type</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.stakeholder.stakeholderType">Stakeholder Type</span></dt>
         <dd>
-            <span jhiTranslate="{{'niopdcgatewayApp.StakeholderType.' + stakeholder.stakeholderType}}">{{stakeholder.stakeholderType}}</span>
+            <span jhiTranslate="{{'samtagatewayApp.StakeholderType.' + stakeholder.stakeholderType}}">{{stakeholder.stakeholderType}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.stakeholder.company">Company</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.stakeholder.company">Company</span></dt>
         <dd>
             <div *ngIf="stakeholder.companyId">
                 <a [routerLink]="['/person', stakeholder.companyId]">{{stakeholder.companyName}}</a>
             </div>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.stakeholder.person">Person</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.stakeholder.person">Person</span></dt>
         <dd>
             <div *ngIf="stakeholder.personId">
                 <a [routerLink]="['/person', stakeholder.personId]">{{stakeholder.personName}}</a>

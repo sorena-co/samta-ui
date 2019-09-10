@@ -21,32 +21,32 @@
             <p-row>
                 <p-column field="title" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.buyType.title">Title</span>
+                        <span jhiTranslate="samtagatewayApp.buyType.title">Title</span>
                     </ng-template>
                 </p-column>
                 <p-column field="buyGroup" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.buyType.buyGroup">Buy Group</span>
+                        <span jhiTranslate="samtagatewayApp.buyType.buyGroup">Buy Group</span>
                     </ng-template>
                 </p-column>
                 <p-column field="effectDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.buyType.effectDate">Effect Date</span>
+                        <span jhiTranslate="samtagatewayApp.buyType.effectDate">Effect Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="buyTypeUsage" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.buyType.buyTypeUsage">Buy Type Usage</span>
+                        <span jhiTranslate="samtagatewayApp.buyType.buyTypeUsage">Buy Type Usage</span>
                     </ng-template>
                 </p-column>
                 <p-column field="typeEffect" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.buyType.typeEffect">Type Effect</span>
+                        <span jhiTranslate="samtagatewayApp.buyType.typeEffect">Type Effect</span>
                     </ng-template>
                 </p-column>
                 <p-column field="sellLimit" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.buyType.sellLimit">Sell Limit</span>
+                        <span jhiTranslate="samtagatewayApp.buyType.sellLimit">Sell Limit</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -66,11 +66,11 @@
                         <select class="form-control" name="buyGroup" (change)="search()"
                                 [(ngModel)]="buyType.buyGroup" id="field_buyGroup">
                             <option></option>
-                            <option value="CASH">{{'niopdcgatewayApp.BuyGroup.CASH' | translate}}</option>
-                            <option value="QUOTA">{{'niopdcgatewayApp.BuyGroup.QUOTA' | translate}}</option>
-                            <option value="CREDIT">{{'niopdcgatewayApp.BuyGroup.CREDIT' | translate}}</option>
-                            <option value="PREBUY">{{'niopdcgatewayApp.BuyGroup.PREBUY' | translate}}</option>
-                            <option value="FINANCIAL_LICENSE">{{'niopdcgatewayApp.BuyGroup.FINANCIAL_LICENSE' | translate}}</option>
+                            <option value="CASH">{{'samtagatewayApp.BuyGroup.CASH' | translate}}</option>
+                            <option value="QUOTA">{{'samtagatewayApp.BuyGroup.QUOTA' | translate}}</option>
+                            <option value="CREDIT">{{'samtagatewayApp.BuyGroup.CREDIT' | translate}}</option>
+                            <option value="PREBUY">{{'samtagatewayApp.BuyGroup.PREBUY' | translate}}</option>
+                            <option value="FINANCIAL_LICENSE">{{'samtagatewayApp.BuyGroup.FINANCIAL_LICENSE' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -89,9 +89,9 @@
                         <select class="form-control" name="buyTypeUsage" (change)="search()"
                                 [(ngModel)]="buyType.buyTypeUsage" id="field_buyTypeUsage">
                             <option></option>
-                            <option value="COST">{{'niopdcgatewayApp.BuyTypeUsage.COST' | translate}}</option>
-                            <option value="PRODUCT">{{'niopdcgatewayApp.BuyTypeUsage.PRODUCT' | translate}}</option>
-                            <option value="BOTH">{{'niopdcgatewayApp.BuyTypeUsage.BOTH' | translate}}</option>
+                            <option value="COST">{{'samtagatewayApp.BuyTypeUsage.COST' | translate}}</option>
+                            <option value="PRODUCT">{{'samtagatewayApp.BuyTypeUsage.PRODUCT' | translate}}</option>
+                            <option value="BOTH">{{'samtagatewayApp.BuyTypeUsage.BOTH' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -101,9 +101,9 @@
                                 (change)="search()"
                                 [(ngModel)]="buyType.typeEffect" id="field_typeEffect">
                             <option></option>
-                            <option value="CREDIT">{{'niopdcgatewayApp.TypeEffect.CREDIT' | translate}}</option>
-                            <option value="AMOUNT">{{'niopdcgatewayApp.TypeEffect.AMOUNT' | translate}}</option>
-                            <option value="BOTH">{{'niopdcgatewayApp.TypeEffect.BOTH' | translate}}</option>
+                            <option value="CREDIT">{{'samtagatewayApp.TypeEffect.CREDIT' | translate}}</option>
+                            <option value="AMOUNT">{{'samtagatewayApp.TypeEffect.AMOUNT' | translate}}</option>
+                            <option value="BOTH">{{'samtagatewayApp.TypeEffect.BOTH' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -112,10 +112,10 @@
                         <select class="form-control" name="sellLimit" (change)="search()"
                                 [(ngModel)]="buyType.sellLimit">
                             <option></option>
-                            <option value="true" jhiTranslate="niopdcgatewayApp.buyType.sellLimitTrue">
+                            <option value="true" jhiTranslate="samtagatewayApp.buyType.sellLimitTrue">
                                 true
                             </option>
-                            <option value="false" jhiTranslate="niopdcgatewayApp.buyType.sellLimitFalse">
+                            <option value="false" jhiTranslate="samtagatewayApp.buyType.sellLimitFalse">
                                 false
                             </option>
                         </select>
@@ -134,21 +134,21 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="title" [header]="'niopdcgatewayApp.buyType.title' | translate"></p-column>
-        <p-column field="buyGroup" [header]="'niopdcgatewayApp.buyType.buyGroup' | translate">
+        <p-column field="title" [header]="'samtagatewayApp.buyType.title' | translate"></p-column>
+        <p-column field="buyGroup" [header]="'samtagatewayApp.buyType.buyGroup' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.BuyGroup.' + item.buyGroup}}">{{item.buyGroup}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.BuyGroup.' + item.buyGroup}}">{{item.buyGroup}}</span>
             </ng-template></p-column>
-        <p-column field="effectDate" [header]="'niopdcgatewayApp.buyType.effectDate' | translate"></p-column>
-        <p-column field="buyTypeUsage" [header]="'niopdcgatewayApp.buyType.buyTypeUsage' | translate">
+        <p-column field="effectDate" [header]="'samtagatewayApp.buyType.effectDate' | translate"></p-column>
+        <p-column field="buyTypeUsage" [header]="'samtagatewayApp.buyType.buyTypeUsage' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.BuyTypeUsage.' + item.buyTypeUsage}}">{{item.buyTypeUsage}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.BuyTypeUsage.' + item.buyTypeUsage}}">{{item.buyTypeUsage}}</span>
             </ng-template></p-column>
-        <p-column field="typeEffect" [header]="'niopdcgatewayApp.buyType.typeEffect' | translate">
+        <p-column field="typeEffect" [header]="'samtagatewayApp.buyType.typeEffect' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.TypeEffect.' + item.typeEffect}}">{{item.typeEffect}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.TypeEffect.' + item.typeEffect}}">{{item.typeEffect}}</span>
             </ng-template></p-column>
-        <p-column field="sellLimit" [header]="'niopdcgatewayApp.buyType.sellLimit' | translate">
+        <p-column field="sellLimit" [header]="'samtagatewayApp.buyType.sellLimit' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span class="fa" [ngClass]="{'fa-check':item.sellLimit,'fa-close':!item.sellLimit}"></span>
             </ng-template></p-column>

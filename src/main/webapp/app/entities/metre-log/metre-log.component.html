@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-xs-12 col-md-2">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.refuelCenter"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.refuelCenter"
                        for="field_refuelCenter">RefuelCenter</label>
                 <select class="form-control" id="field_refuelCenter"
                         name="refuelCenter"
@@ -23,7 +23,7 @@
         </div>
         <div class="col-xs-12 col-md-2">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepot.oilTank"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepot.oilTank"
                        for="field_oilTank">Oil
                     Tank</label>
                 <select
@@ -43,7 +43,7 @@
         </div>
         <div class="col-xs-12 col-md-2">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.metre" for="field_metres">Metre</label>
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.metre" for="field_metres">Metre</label>
                 <select class="form-control"
                         id="field_metres"
                         name="metre"
@@ -60,7 +60,7 @@
         </div>
         <div class="col-xs-12 col-md-3">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.registerDate"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.registerDate"
                        for="field_startTime">Register Date</label>
                 <div class="d-flex">
                     <ng2-datetimepicker [disableTime]="true"  [rtlActive]="true" time="00:00:00"
@@ -74,7 +74,7 @@
         </div>
         <div class="col-xs-12 col-md-3">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metreLog.registerDate"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.metreLog.registerDate"
                        for="field_endTime">Register Date</label>
                 <div class="d-flex">
                     <ng2-datetimepicker [disableTime]="true"  [rtlActive]="true" time="00:00:00"
@@ -95,47 +95,47 @@
             <p-row>
                 <p-column field="startMeter" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.metreLog.startMeter">Start Meter</span>
+                        <span jhiTranslate="samtagatewayApp.metreLog.startMeter">Start Meter</span>
                     </ng-template>
                 </p-column>
                 <p-column field="endMeter" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.metreLog.endMeter">End Meter</span>
+                        <span jhiTranslate="samtagatewayApp.metreLog.endMeter">End Meter</span>
                     </ng-template>
                 </p-column>
                 <p-column field="amount" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.metreLog.amount">Amount</span>
+                        <span jhiTranslate="samtagatewayApp.metreLog.amount">Amount</span>
                     </ng-template>
                 </p-column>
                 <p-column field="registerDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.metreLog.registerDate">Register Date</span>
+                        <span jhiTranslate="samtagatewayApp.metreLog.registerDate">Register Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="fuelType" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.metreLog.fuelType">Fuel Type</span>
+                        <span jhiTranslate="samtagatewayApp.metreLog.fuelType">Fuel Type</span>
                     </ng-template>
                 </p-column>
                 <p-column field="useType" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.metreLog.useType">Metre</span>
+                        <span jhiTranslate="samtagatewayApp.metreLog.useType">Metre</span>
                     </ng-template>
                 </p-column>
                 <p-column field="difference" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.metreLog.difference">Metre</span>
+                        <span jhiTranslate="samtagatewayApp.metreLog.difference">Metre</span>
                     </ng-template>
                 </p-column>
                 <p-column field="productTitle" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.metreLog.productTitle">Metre</span>
+                        <span jhiTranslate="samtagatewayApp.metreLog.productTitle">Metre</span>
                     </ng-template>
                 </p-column>
                 <p-column field="productGroupTitle" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.metreLog.productGroupTitle">Metre</span>
+                        <span jhiTranslate="samtagatewayApp.metreLog.productGroupTitle">Metre</span>
                     </ng-template>
                 </p-column>
 
@@ -143,17 +143,17 @@
 
         </p-headerColumnGroup>
 
-        <p-column field="startMeter" [header]="'niopdcgatewayApp.metreLog.startMeter' | translate"></p-column>
-        <p-column field="endMeter" [header]="'niopdcgatewayApp.metreLog.endMeter' | translate"></p-column>
-        <p-column field="amount" [header]="'niopdcgatewayApp.metreLog.amount' | translate"></p-column>
-        <p-column field="registerDate" [header]="'niopdcgatewayApp.metreLog.registerDate' | translate">
+        <p-column field="startMeter" [header]="'samtagatewayApp.metreLog.startMeter' | translate"></p-column>
+        <p-column field="endMeter" [header]="'samtagatewayApp.metreLog.endMeter' | translate"></p-column>
+        <p-column field="amount" [header]="'samtagatewayApp.metreLog.amount' | translate"></p-column>
+        <p-column field="registerDate" [header]="'samtagatewayApp.metreLog.registerDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.registerDate | dateJalali}}</span>
             </ng-template>
         </p-column>
-        <p-column field="fuelType" [header]="'niopdcgatewayApp.metreLog.fuelType' | translate">
+        <p-column field="fuelType" [header]="'samtagatewayApp.metreLog.fuelType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.FuelType.' + item.fuelType}}">{{item.fuelType}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.FuelType.' + item.fuelType}}">{{item.fuelType}}</span>
             </ng-template>
         </p-column>
         <p-column class="component">
@@ -174,9 +174,9 @@
                 </div>
             </ng-template>
         </p-column>
-        <p-column field="difference" [header]="'niopdcgatewayApp.metreLog.difference' | translate"> </p-column>
-        <p-column field="productTitle" [header]="'niopdcgatewayApp.metreLog.difference' | translate"> </p-column>
-        <p-column field="productGroupTitle" [header]="'niopdcgatewayApp.metreLog.difference' | translate"> </p-column>
+        <p-column field="difference" [header]="'samtagatewayApp.metreLog.difference' | translate"> </p-column>
+        <p-column field="productTitle" [header]="'samtagatewayApp.metreLog.difference' | translate"> </p-column>
+        <p-column field="productGroupTitle" [header]="'samtagatewayApp.metreLog.difference' | translate"> </p-column>
 
 
     </p-dataTable>

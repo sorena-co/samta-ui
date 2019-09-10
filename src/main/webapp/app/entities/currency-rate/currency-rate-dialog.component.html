@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="currencyRate.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.currencyRate.home.createLabel">
+            jhiTranslate="samtagatewayApp.currencyRate.home.createLabel">
             Create</h4>
         <h4 *ngIf="currencyRate.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.currencyRate.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.currencyRate.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.currencyRate.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.currencyRate.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.currencyRate.rate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.currencyRate.rate"
                            for="field_rate">Rate</label>
                     <input [disabled]="isView" type="number" class="form-control" name="rate" id="field_rate"
                            [(ngModel)]="currencyRate.rate" required/>
@@ -38,7 +38,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.currencyRate.currencyRateGroup"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.currencyRate.currencyRateGroup"
                            for="field_currencyRateGroup">Currency Rate Group</label>
                     <select [disabled]="isView" class="form-control" id="field_currencyRateGroup" name="currencyRateGroup"
                             [(ngModel)]="currencyRate.currencyRateGroupId" required>
@@ -62,7 +62,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.currencyRate.activeStartDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.currencyRate.activeStartDate"
                            for="field_activeStartDate">Active Start Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="true"[disabled]="isView" [rtlActive]="true" time="00:00:00"
@@ -87,7 +87,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.currencyRate.activeFinishDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.currencyRate.activeFinishDate"
                            for="field_activeFinishDate">Active Finish Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="23:59:59"

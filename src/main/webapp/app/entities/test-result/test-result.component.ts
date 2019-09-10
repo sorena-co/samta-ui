@@ -180,13 +180,13 @@ export class TestResultComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.testResult.home.requestTestResultTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.testResult.home.requestTestResultTitle').subscribe((title) => {
             this.breadcrumbItems.push({
                 label: title + ` (${this.requestTestResult.id})`,
                 routerLink: ['/request-test-result']
             });
         });
-        this.translateService.get('niopdcgatewayApp.testResult.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.testResult.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

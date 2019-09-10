@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="dayDepot.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.dayDepot.home.createLabel">
+            jhiTranslate="samtagatewayApp.dayDepot.home.createLabel">
             Create</h4>
         <h4 *ngIf="dayDepot.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.dayDepot.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.dayDepot.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.dayDepot.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.dayDepot.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepot.natureDeductible"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepot.natureDeductible"
                            for="field_natureDeductible">Nature Deductible</label>
                     <input [disabled]="true" type="number" class="form-control" name="natureDeductible"
                            id="field_natureDeductible"
@@ -40,7 +40,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepot.natureAddition"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepot.natureAddition"
                            for="field_natureAddition">Nature Addition</label>
                     <input [disabled]="true" type="number" class="form-control" name="natureAddition"
                            id="field_natureAddition"
@@ -62,7 +62,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepot.natureSystemAmount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepot.natureSystemAmount"
                            for="field_natureSystemAmount">Nature System Amount</label>
                     <input [disabled]="true" type="number" class="form-control" name="natureSystemAmount"
                            id="field_natureSystemAmount"
@@ -86,7 +86,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepot.sixtyDeductible"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepot.sixtyDeductible"
                            for="field_sixtyDeductible">Sixty Deductible</label>
                     <input [disabled]="true" type="number" class="form-control" name="sixtyDeductible"
                            id="field_sixtyDeductible"
@@ -108,7 +108,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepot.sixtyAddition"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepot.sixtyAddition"
                            for="field_sixtyAddition">Sixty Addition</label>
                     <input [disabled]="true" type="number" class="form-control" name="sixtyAddition"
                            id="field_sixtyAddition"
@@ -130,7 +130,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepot.sixtySystemAmount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepot.sixtySystemAmount"
                            for="field_sixtySystemAmount">Sixty System Amount</label>
                     <input [disabled]="true" type="number" class="form-control" name="sixtySystemAmount"
                            id="field_sixtySystemAmount"
@@ -155,7 +155,7 @@
             <div class="card">
                 <div class="card-header">
                     <h5 class="mb-0"
-                        jhiTranslate="niopdcgatewayApp.dayDepot.home.start">
+                        jhiTranslate="samtagatewayApp.dayDepot.home.start">
                     </h5>
                 </div>
                 <div class="card-block container">
@@ -163,7 +163,7 @@
                         <div *ngIf="dayDepot.mainDayOperationId==null" class="col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.measurementOilTank.sixtyAmount"
+                                       jhiTranslate="samtagatewayApp.measurementOilTank.sixtyAmount"
                                        for="field_sixtyAmount">Sixty Amount</label>
                                 <input [disabled]="true" type="number" class="form-control" name="sixtyAmount"
                                        id="field_sixtyAmount"
@@ -186,7 +186,7 @@
                         <div *ngIf="dayDepot.mainDayOperationId==null" class="col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.measurementOilTank.specialWeight"
+                                       jhiTranslate="samtagatewayApp.measurementOilTank.specialWeight"
                                        for="field_specialWeight">Special Weight</label>
                                 <input
                                     [disabled]="isView || haveOldDayDepot || dayDepot.oilTankOilTankType===OilTankType[OilTankType.SERVICE_TANK]"
@@ -212,7 +212,7 @@
                         <div *ngIf="dayDepot.mainDayOperationId==null" class="col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.measurementOilTank.environmentTemperature"
+                                       jhiTranslate="samtagatewayApp.measurementOilTank.environmentTemperature"
                                        for="field_environmentTemperature">Environment Temperature</label>
                                 <input
                                     [disabled]="isView || haveOldDayDepot  ||  dayDepot.oilTankOilTankType===OilTankType[OilTankType.SERVICE_TANK]"
@@ -238,7 +238,7 @@
                         <div *ngIf="dayDepot.mainDayOperationId==null" class="col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.measurementOilTank.productTemperature"
+                                       jhiTranslate="samtagatewayApp.measurementOilTank.productTemperature"
                                        for="field_productTemperature">Product Temperature</label>
                                 <input
                                     [disabled]="isView || haveOldDayDepot ||  dayDepot.oilTankOilTankType===OilTankType[OilTankType.SERVICE_TANK]"
@@ -266,7 +266,7 @@
                         <div class="col-xs-12 col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.dayDepot.startMeasurementOilTankAmountDeep"
+                                       jhiTranslate="samtagatewayApp.dayDepot.startMeasurementOilTankAmountDeep"
                                        for="field_description">Description</label>
                                 <ng-container *ngIf="dayDepot.oilTankOilTankType!=='SERVICE_TANK'">
                                     <select
@@ -318,7 +318,7 @@
                         <div class="col-xs-12 col-md-4">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.dayDepot.startMeasurementOilTankAmount"
+                                       jhiTranslate="samtagatewayApp.dayDepot.startMeasurementOilTankAmount"
                                        for="field_description">Description</label>
                                 <input [disabled]="true" type="number" class="form-control"
                                        name="startMeasurementOilTankAmount"
@@ -342,7 +342,7 @@
                         <div class="col-xs-12 col-md-4">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.dayDepot.startMeasurementOilTankRegisterDate"
+                                       jhiTranslate="samtagatewayApp.dayDepot.startMeasurementOilTankRegisterDate"
                                        for="field_startMeasurementOilTankRegisterDate">Register Date</label>
                                 <div class="d-flex">
                                     <ng2-datetimepicker [disabled]="isView || haveOldDayDepot" [rtlActive]="true"
@@ -380,7 +380,7 @@
             <div class="card">
                 <div class="card-header">
                     <h5 class="mb-0"
-                        jhiTranslate="niopdcgatewayApp.dayDepot.home.end">
+                        jhiTranslate="samtagatewayApp.dayDepot.home.end">
                     </h5>
                 </div>
                 <div class="card-block container">
@@ -388,7 +388,7 @@
                         <div *ngIf="dayDepot.mainDayOperationId==null" class="col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.measurementOilTank.sixtyAmount"
+                                       jhiTranslate="samtagatewayApp.measurementOilTank.sixtyAmount"
                                        for="field_endSixtyAmount">Sixty Amount</label>
                                 <input [disabled]="true" type="number" class="form-control" name="endSixtyAmount"
                                        id="field_endSixtyAmount"
@@ -411,7 +411,7 @@
                         <div *ngIf="dayDepot.mainDayOperationId==null" class="col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.measurementOilTank.specialWeight"
+                                       jhiTranslate="samtagatewayApp.measurementOilTank.specialWeight"
                                        for="field_endSpecialWeight">Special Weight</label>
                                 <input
                                     [disabled]="isView || dayDepot.oilTankOilTankType===OilTankType[OilTankType.SERVICE_TANK]"
@@ -437,7 +437,7 @@
                         <div *ngIf="dayDepot.mainDayOperationId==null" class="col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.measurementOilTank.environmentTemperature"
+                                       jhiTranslate="samtagatewayApp.measurementOilTank.environmentTemperature"
                                        for="field_endEnvironmentTemperature">Environment Temperature</label>
                                 <input
                                     [disabled]="isView ||  dayDepot.oilTankOilTankType===OilTankType[OilTankType.SERVICE_TANK]"
@@ -463,7 +463,7 @@
                         <div *ngIf="dayDepot.mainDayOperationId==null" class="col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.measurementOilTank.productTemperature"
+                                       jhiTranslate="samtagatewayApp.measurementOilTank.productTemperature"
                                        for="field_endProductTemperature">Product Temperature</label>
                                 <input
                                     [disabled]="isView ||  dayDepot.oilTankOilTankType===OilTankType[OilTankType.SERVICE_TANK]"
@@ -491,7 +491,7 @@
                         <div class="col-xs-12 col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.dayDepot.endMeasurementOilTankAmountDeep"
+                                       jhiTranslate="samtagatewayApp.dayDepot.endMeasurementOilTankAmountDeep"
                                        for="field_description">Description</label>
                                 <ng-container *ngIf="dayDepot.oilTankOilTankType!='SERVICE_TANK'">
                                     <select
@@ -543,7 +543,7 @@
                         <div class="col-xs-12 col-md-4">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.dayDepot.endMeasurementOilTankAmount"
+                                       jhiTranslate="samtagatewayApp.dayDepot.endMeasurementOilTankAmount"
                                        for="field_endMeasurementOilTankAmount">Description</label>
                                 <input [disabled]="true" type="number" class="form-control"
                                        name="endMeasurementOilTankAmount"
@@ -568,7 +568,7 @@
                         <div class="col-xs-12 col-md-4">
                             <div class="form-group">
                                 <label class="form-control-label"
-                                       jhiTranslate="niopdcgatewayApp.dayDepot.endMeasurementOilTankRegisterDate"
+                                       jhiTranslate="samtagatewayApp.dayDepot.endMeasurementOilTankRegisterDate"
                                        for="field_endMeasurementOilTankDate">Register Date</label>
                                 <div class="d-flex">
                                     <ng2-datetimepicker [disabled]="isView" [rtlActive]="true"
@@ -607,7 +607,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepot.oilTank"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepot.oilTank"
                            for="field_oilTank">Oil
                         Tank</label>
                     <input [disabled]="true" class="form-control" id="field_oilTank" name="oilTank"
@@ -626,7 +626,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepot.description"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepot.description"
                            for="field_description">Description</label>
                     <textarea [disabled]="isView" class="form-control" name="description"
                               id="field_description"

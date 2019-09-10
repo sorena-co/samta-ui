@@ -34,7 +34,7 @@ export const milliPoorRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_MILLI_POOR'],
-            pageTitle: 'niopdcgatewayApp.milliPoor.home.title'
+            pageTitle: 'samtagatewayApp.milliPoor.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -46,7 +46,7 @@ export const milliPoorPopupRoute: Routes = [
     component: MilliPoorPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'CREATE_MILLI_POOR'],
-        pageTitle: 'niopdcgatewayApp.milliPoor.home.title'
+        pageTitle: 'samtagatewayApp.milliPoor.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -56,7 +56,7 @@ export const milliPoorPopupRoute: Routes = [
     component: MilliPoorPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'EDIT_MILLI_POOR'],
-        pageTitle: 'niopdcgatewayApp.milliPoor.home.title'
+        pageTitle: 'samtagatewayApp.milliPoor.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -66,7 +66,7 @@ export const milliPoorPopupRoute: Routes = [
     component: MilliPoorDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'DELETE_MILLI_POOR'],
-        pageTitle: 'niopdcgatewayApp.milliPoor.home.title'
+        pageTitle: 'samtagatewayApp.milliPoor.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -76,7 +76,7 @@ export const milliPoorPopupRoute: Routes = [
       component: MilliPoorPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN', 'VIEW_MILLI_POOR'],
-          pageTitle: 'niopdcgatewayApp.milliPoor.home.title'
+          pageTitle: 'samtagatewayApp.milliPoor.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

@@ -33,7 +33,7 @@ export const carTypeLimitRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CAR_TYPE_LIMIT'],
-            pageTitle: 'niopdcgatewayApp.carTypeLimit.home.title'
+            pageTitle: 'samtagatewayApp.carTypeLimit.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const carTypeLimitPopupRoute: Routes = [
     component: CarTypeLimitPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_CAR_TYPE_LIMIT'],
-        pageTitle: 'niopdcgatewayApp.carTypeLimit.home.title'
+        pageTitle: 'samtagatewayApp.carTypeLimit.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const carTypeLimitPopupRoute: Routes = [
     component: CarTypeLimitPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_CAR_TYPE_LIMIT'],
-        pageTitle: 'niopdcgatewayApp.carTypeLimit.home.title'
+        pageTitle: 'samtagatewayApp.carTypeLimit.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const carTypeLimitPopupRoute: Routes = [
     component: CarTypeLimitDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_CAR_TYPE_LIMIT'],
-        pageTitle: 'niopdcgatewayApp.carTypeLimit.home.title'
+        pageTitle: 'samtagatewayApp.carTypeLimit.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const carTypeLimitPopupRoute: Routes = [
       component: CarTypeLimitPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_CAR_TYPE_LIMIT'],
-          pageTitle: 'niopdcgatewayApp.carTypeLimit.home.title'
+          pageTitle: 'samtagatewayApp.carTypeLimit.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

@@ -33,7 +33,7 @@ export const boundaryTagRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_BOUNDARY_TAG'],
-            pageTitle: 'niopdcgatewayApp.boundaryTag.home.title'
+            pageTitle: 'samtagatewayApp.boundaryTag.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const boundaryTagPopupRoute: Routes = [
     component: BoundaryTagPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_BOUNDARY_TAG'],
-        pageTitle: 'niopdcgatewayApp.boundaryTag.home.title'
+        pageTitle: 'samtagatewayApp.boundaryTag.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const boundaryTagPopupRoute: Routes = [
     component: BoundaryTagPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_BOUNDARY_TAG'],
-        pageTitle: 'niopdcgatewayApp.boundaryTag.home.title'
+        pageTitle: 'samtagatewayApp.boundaryTag.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const boundaryTagPopupRoute: Routes = [
     component: BoundaryTagDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_BOUNDARY_TAG'],
-        pageTitle: 'niopdcgatewayApp.boundaryTag.home.title'
+        pageTitle: 'samtagatewayApp.boundaryTag.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const boundaryTagPopupRoute: Routes = [
       component: BoundaryTagPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_BOUNDARY_TAG'],
-          pageTitle: 'niopdcgatewayApp.boundaryTag.home.title'
+          pageTitle: 'samtagatewayApp.boundaryTag.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

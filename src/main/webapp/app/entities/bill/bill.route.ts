@@ -35,7 +35,7 @@ export const billRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_BILL'],
-            pageTitle: 'niopdcgatewayApp.bill.home.title'
+            pageTitle: 'samtagatewayApp.bill.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -46,7 +46,7 @@ export const billRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_BILL_REPORT'],
-            pageTitle: 'niopdcgatewayApp.bill.home.title'
+            pageTitle: 'samtagatewayApp.bill.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -58,7 +58,7 @@ export const billPopupRoute: Routes = [
         component: BillPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_BILL'],
-            pageTitle: 'niopdcgatewayApp.bill.home.title'
+            pageTitle: 'samtagatewayApp.bill.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const billPopupRoute: Routes = [
         component: BillPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_BILL'],
-            pageTitle: 'niopdcgatewayApp.bill.home.title'
+            pageTitle: 'samtagatewayApp.bill.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const billPopupRoute: Routes = [
         component: BillDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_BILL'],
-            pageTitle: 'niopdcgatewayApp.bill.home.title'
+            pageTitle: 'samtagatewayApp.bill.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -88,7 +88,7 @@ export const billPopupRoute: Routes = [
         component: BillPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_BILL'],
-            pageTitle: 'niopdcgatewayApp.bill.home.title'
+            pageTitle: 'samtagatewayApp.bill.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

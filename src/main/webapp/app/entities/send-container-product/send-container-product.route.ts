@@ -35,7 +35,7 @@ export const sendContainerProductRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_SEND_CONTAINER_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.sendContainerProduct.home.title'
+            pageTitle: 'samtagatewayApp.sendContainerProduct.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -47,7 +47,7 @@ export const sendContainerProductPopupRoute: Routes = [
         component: SendContainerProductPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_SEND_CONTAINER_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.sendContainerProduct.home.title'
+            pageTitle: 'samtagatewayApp.sendContainerProduct.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -57,7 +57,7 @@ export const sendContainerProductPopupRoute: Routes = [
         component: SendContainerProductPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_SEND_CONTAINER_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.sendContainerProduct.home.title'
+            pageTitle: 'samtagatewayApp.sendContainerProduct.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -67,7 +67,7 @@ export const sendContainerProductPopupRoute: Routes = [
         component: SendContainerProductDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_SEND_CONTAINER_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.sendContainerProduct.home.title'
+            pageTitle: 'samtagatewayApp.sendContainerProduct.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -77,7 +77,7 @@ export const sendContainerProductPopupRoute: Routes = [
         component: SendContainerProductPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_SEND_CONTAINER_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.sendContainerProduct.home.title'
+            pageTitle: 'samtagatewayApp.sendContainerProduct.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

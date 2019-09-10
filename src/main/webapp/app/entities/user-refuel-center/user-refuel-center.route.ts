@@ -36,7 +36,7 @@ export const userRefuelCenterRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.userRefuelCenter.home.title'
+            pageTitle: 'samtagatewayApp.userRefuelCenter.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -44,7 +44,7 @@ export const userRefuelCenterRoute: Routes = [
         component: UserRefuelCenterDetailComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.userRefuelCenter.home.title'
+            pageTitle: 'samtagatewayApp.userRefuelCenter.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -56,7 +56,7 @@ export const userRefuelCenterPopupRoute: Routes = [
         component: UserRefuelCenterPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_REFUEL_CENTER_USER'],
-            pageTitle: 'niopdcgatewayApp.userRefuelCenter.home.title'
+            pageTitle: 'samtagatewayApp.userRefuelCenter.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -66,7 +66,7 @@ export const userRefuelCenterPopupRoute: Routes = [
         component: UserRefuelCenterPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.userRefuelCenter.home.title'
+            pageTitle: 'samtagatewayApp.userRefuelCenter.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -76,7 +76,7 @@ export const userRefuelCenterPopupRoute: Routes = [
         component: UserRefuelCenterDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.userRefuelCenter.home.title'
+            pageTitle: 'samtagatewayApp.userRefuelCenter.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

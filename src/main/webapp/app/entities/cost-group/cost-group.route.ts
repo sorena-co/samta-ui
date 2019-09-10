@@ -36,7 +36,7 @@ export const costGroupRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_COST_GROUP'],
-            pageTitle: 'niopdcgatewayApp.costGroup.home.title'
+            pageTitle: 'samtagatewayApp.costGroup.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const costGroupPopupRoute: Routes = [
         component: CostGroupPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_COST_GROUP'],
-            pageTitle: 'niopdcgatewayApp.costGroup.home.title'
+            pageTitle: 'samtagatewayApp.costGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const costGroupPopupRoute: Routes = [
         component: CostGroupPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_COST_GROUP'],
-            pageTitle: 'niopdcgatewayApp.costGroup.home.title'
+            pageTitle: 'samtagatewayApp.costGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const costGroupPopupRoute: Routes = [
         component: CostGroupDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_COST_GROUP'],
-            pageTitle: 'niopdcgatewayApp.costGroup.home.title'
+            pageTitle: 'samtagatewayApp.costGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const costGroupPopupRoute: Routes = [
         component: CostGroupPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_COST_GROUP'],
-            pageTitle: 'niopdcgatewayApp.costGroup.home.title'
+            pageTitle: 'samtagatewayApp.costGroup.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

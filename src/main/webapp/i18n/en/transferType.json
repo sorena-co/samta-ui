@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "transferType" : {
             "home": {
                 "title": "Transfer Types",

@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "currencyRateGroup" : {
             "home": {
                 "title": "Currency Rate Groups",

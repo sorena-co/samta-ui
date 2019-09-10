@@ -10,7 +10,7 @@ export const consumptionRoute: Routes = [
         component: ConsumptionComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_REPORT_CONSUMPTION'],
-            pageTitle: 'niopdcgatewayApp.consumption.home.title'
+            pageTitle: 'samtagatewayApp.consumption.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

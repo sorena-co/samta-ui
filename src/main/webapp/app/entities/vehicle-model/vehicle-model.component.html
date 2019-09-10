@@ -20,18 +20,18 @@
             <p-row>
                 <p-column field="title" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.vehicleModel.title">Title</span>
+                        <span jhiTranslate="samtagatewayApp.vehicleModel.title">Title</span>
                     </ng-template>
                 </p-column>
                 <p-column field="customerGroup" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.vehicleModel.customerGroup">Customer Group</span>
+                        <span jhiTranslate="samtagatewayApp.vehicleModel.customerGroup">Customer Group</span>
                     </ng-template>
                 </p-column>
                 <p-column field="havePrimitiveMeasure" [sortable]="true">
                     <ng-template pTemplate="header">
                         <span
-                            jhiTranslate="niopdcgatewayApp.vehicleModel.havePrimitiveMeasure">Have Primitive Measure</span>
+                            jhiTranslate="samtagatewayApp.vehicleModel.havePrimitiveMeasure">Have Primitive Measure</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -51,9 +51,9 @@
                         <select class="form-control" (change)="search()" name="customerGroup" [(ngModel)]="vehicleModel.customerGroup"
                                 id="field_customerGroup">
                             <option></option>
-                            <option value="AIRPLANE">{{'niopdcgatewayApp.CustomerGroup.AIRPLANE_VEHICLE' | translate}}
+                            <option value="AIRPLANE">{{'samtagatewayApp.CustomerGroup.AIRPLANE_VEHICLE' | translate}}
                             </option>
-                            <option value="BOUNDARY">{{'niopdcgatewayApp.CustomerGroup.BOUNDARY_VEHICLE' | translate}}
+                            <option value="BOUNDARY">{{'samtagatewayApp.CustomerGroup.BOUNDARY_VEHICLE' | translate}}
                             </option>
                         </select>
                     </ng-template>
@@ -63,11 +63,11 @@
                         <select class="form-control" (change)="search()" name="havePrimitiveMeasure"
                                 [(ngModel)]="vehicleModel.havePrimitiveMeasure">
                             <option></option>
-                            <option value="true" jhiTranslate="niopdcgatewayApp.vehicleModel.havePrimitiveMeasureTrue">
+                            <option value="true" jhiTranslate="samtagatewayApp.vehicleModel.havePrimitiveMeasureTrue">
                                 true
                             </option>
                             <option value="false"
-                                    jhiTranslate="niopdcgatewayApp.vehicleModel.havePrimitiveMeasureFalse">
+                                    jhiTranslate="samtagatewayApp.vehicleModel.havePrimitiveMeasureFalse">
                                 false
                             </option>
                         </select>
@@ -86,15 +86,15 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="title" [header]="'niopdcgatewayApp.vehicleModel.title' | translate"></p-column>
-        <p-column field="customerGroup" [header]="'niopdcgatewayApp.vehicleModel.customerGroup' | translate">
+        <p-column field="title" [header]="'samtagatewayApp.vehicleModel.title' | translate"></p-column>
+        <p-column field="customerGroup" [header]="'samtagatewayApp.vehicleModel.customerGroup' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span
-                    jhiTranslate="{{'niopdcgatewayApp.CustomerGroup.' + item.customerGroup+'_VEHICLE'}}">{{item.customerGroup}}</span>
+                    jhiTranslate="{{'samtagatewayApp.CustomerGroup.' + item.customerGroup+'_VEHICLE'}}">{{item.customerGroup}}</span>
             </ng-template>
         </p-column>
         <p-column field="havePrimitiveMeasure"
-                  [header]="'niopdcgatewayApp.vehicleModel.havePrimitiveMeasure' | translate">
+                  [header]="'samtagatewayApp.vehicleModel.havePrimitiveMeasure' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span class="fa"
                       [ngClass]="{'fa-check':item.havePrimitiveMeasure,'fa-close':!item.havePrimitiveMeasure}"></span>
@@ -133,7 +133,7 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_VEHICLE_CAPACITY']"
                                     [routerLink]="['/vehicle-model', item.id, 'vehicle-capacity']">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.vehicleCapacity.home.title">Pos</span>
+                                <span jhiTranslate="samtagatewayApp.vehicleCapacity.home.title">Pos</span>
                             </button>
                         </ng-container>
                     </div>

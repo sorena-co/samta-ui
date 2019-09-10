@@ -36,7 +36,7 @@ export const logBookRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_LOG_BOOK'],
-            pageTitle: 'niopdcgatewayApp.logBook.home.title'
+            pageTitle: 'samtagatewayApp.logBook.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -47,7 +47,7 @@ export const logBookRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_LOG_BOOK'],
-            pageTitle: 'niopdcgatewayApp.logBook.home.title'
+            pageTitle: 'samtagatewayApp.logBook.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -59,7 +59,7 @@ export const logBookPopupRoute: Routes = [
         component: LogBookPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_LOG_BOOK'],
-            pageTitle: 'niopdcgatewayApp.logBook.home.title'
+            pageTitle: 'samtagatewayApp.logBook.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -69,7 +69,7 @@ export const logBookPopupRoute: Routes = [
         component: LogBookPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_LOG_BOOK'],
-            pageTitle: 'niopdcgatewayApp.logBook.home.title'
+            pageTitle: 'samtagatewayApp.logBook.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -79,7 +79,7 @@ export const logBookPopupRoute: Routes = [
         component: LogBookDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_LOG_BOOK'],
-            pageTitle: 'niopdcgatewayApp.logBook.home.title'
+            pageTitle: 'samtagatewayApp.logBook.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -89,7 +89,7 @@ export const logBookPopupRoute: Routes = [
         component: LogBookPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_LOG_BOOK'],
-            pageTitle: 'niopdcgatewayApp.logBook.home.title'
+            pageTitle: 'samtagatewayApp.logBook.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

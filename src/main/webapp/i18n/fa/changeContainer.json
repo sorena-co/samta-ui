@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "changeContainer" : {
             "home": {
                 "title": "تعویض ظرفها",

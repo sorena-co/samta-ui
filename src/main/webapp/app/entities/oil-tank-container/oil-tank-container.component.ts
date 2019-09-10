@@ -190,11 +190,11 @@ export class OilTankContainerComponent implements OnInit, OnDestroy {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
         if (this.isContainerFull) {
-            this.translateService.get('niopdcgatewayApp.oilTankContainer.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.oilTankContainer.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({label: title});
             });
         } else {
-            this.translateService.get('niopdcgatewayApp.oilTankContainer.home.titleProductUnit').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.oilTankContainer.home.titleProductUnit').subscribe((title) => {
                 this.breadcrumbItems.push({label: title});
             });
         }

@@ -1,12 +1,12 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 *ngIf="dayDepotContainer.id==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.dayDepotContainer.home.createLabel">
+        <h4 *ngIf="dayDepotContainer.id==null" class="modal-title" id="createLabel" jhiTranslate="samtagatewayApp.dayDepotContainer.home.createLabel">
             Create</h4>
         <h4 *ngIf="dayDepotContainer.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.dayDepotContainer.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.dayDepotContainer.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.dayDepotContainer.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.dayDepotContainer.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepotContainer.deductible"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepotContainer.deductible"
                            for="field_deductible">Deductible</label>
                     <input [disabled]="true" type="number" class="form-control" name="deductible"
                            id="field_deductible"
@@ -39,7 +39,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepotContainer.addition"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepotContainer.addition"
                            for="field_addition">Addition</label>
                     <input [disabled]="true" type="number" class="form-control" name="addition" id="field_addition"
                            [(ngModel)]="dayDepotContainer.addition" required/>
@@ -59,7 +59,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepotContainer.systemAmount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepotContainer.systemAmount"
                            for="field_systemAmount">System Amount</label>
                     <input [disabled]="true" type="number" class="form-control" name="systemAmount"
                            id="field_systemAmount"
@@ -82,7 +82,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepotContainer.startCount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepotContainer.startCount"
                            for="field_startCount">Start Count</label>
                     <input [disabled]="true" type="number" class="form-control" name="startCount"
                            id="field_startCount"
@@ -91,7 +91,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepotContainer.endCount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepotContainer.endCount"
                            for="field_endCount">End Count</label>
                     <input [disabled]="isView" type="number" class="form-control" name="endCount" id="field_endCount"
                            [(ngModel)]="dayDepotContainer.endCount"/>
@@ -99,7 +99,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepotContainer.oilTankContainer"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepotContainer.oilTankContainer"
                            for="field_oilTankContainer">Oil Tank Container</label>
                     <select [disabled]="true" class="form-control" id="field_oilTankContainer" name="oilTankContainer"
                             [(ngModel)]="dayDepotContainer.oilTankContainerId" required>
@@ -123,7 +123,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.dayDepotContainer.description"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.dayDepotContainer.description"
                            for="field_description">Description</label>
                     <textarea [disabled]="isView" type="text" class="form-control" name="description"
                            id="field_description"

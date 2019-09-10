@@ -164,7 +164,7 @@ export class IpFilterComponent implements OnInit, OnDestroy {
                 routerLink: ['/user-management']
             });
         });
-        this.translateService.get('niopdcgatewayApp.ipFilter.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.ipFilter.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

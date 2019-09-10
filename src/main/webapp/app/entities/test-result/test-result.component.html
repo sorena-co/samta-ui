@@ -21,32 +21,32 @@
             <p-row>
                 <p-column field="existentGum" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.testResult.existentGum">Existent Gum</span>
+                        <span jhiTranslate="samtagatewayApp.testResult.existentGum">Existent Gum</span>
                     </ng-template>
                 </p-column>
                 <p-column field="flashPoint" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.testResult.flashPoint">Flash Point</span>
+                        <span jhiTranslate="samtagatewayApp.testResult.flashPoint">Flash Point</span>
                     </ng-template>
                 </p-column>
                 <p-column field="copperCorrosion" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.testResult.copperCorrosion">Copper Corrosion</span>
+                        <span jhiTranslate="samtagatewayApp.testResult.copperCorrosion">Copper Corrosion</span>
                     </ng-template>
                 </p-column>
                 <p-column field="freezing" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.testResult.freezing">Freezing</span>
+                        <span jhiTranslate="samtagatewayApp.testResult.freezing">Freezing</span>
                     </ng-template>
                 </p-column>
                 <p-column field="conductivity" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.testResult.conductivity">Conductivity</span>
+                        <span jhiTranslate="samtagatewayApp.testResult.conductivity">Conductivity</span>
                     </ng-template>
                 </p-column>
                 <p-column field="isSend" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.testResult.isSend">Is Send</span>
+                        <span jhiTranslate="samtagatewayApp.testResult.isSend">Is Send</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -97,10 +97,10 @@
                         <select class="form-control" name="isSend" (change)="search()"
                                 [(ngModel)]="testResult.isSend">
                             <option></option>
-                            <option value="true" jhiTranslate="niopdcgatewayApp.testResult.isSendTrue">
+                            <option value="true" jhiTranslate="samtagatewayApp.testResult.isSendTrue">
                                 true
                             </option>
-                            <option value="false" jhiTranslate="niopdcgatewayApp.testResult.isSendFalse">
+                            <option value="false" jhiTranslate="samtagatewayApp.testResult.isSendFalse">
                                 false
                             </option>
                         </select>
@@ -119,12 +119,12 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="existentGum" [header]="'niopdcgatewayApp.testResult.existentGum' | translate"></p-column>
-        <p-column field="flashPoint" [header]="'niopdcgatewayApp.testResult.flashPoint' | translate"></p-column>
-        <p-column field="copperCorrosion" [header]="'niopdcgatewayApp.testResult.copperCorrosion' | translate"></p-column>
-        <p-column field="freezing" [header]="'niopdcgatewayApp.testResult.freezing' | translate"></p-column>
-        <p-column field="conductivity" [header]="'niopdcgatewayApp.testResult.conductivity' | translate"></p-column>
-        <p-column field="isSend" [header]="'niopdcgatewayApp.testResult.isSend' | translate">
+        <p-column field="existentGum" [header]="'samtagatewayApp.testResult.existentGum' | translate"></p-column>
+        <p-column field="flashPoint" [header]="'samtagatewayApp.testResult.flashPoint' | translate"></p-column>
+        <p-column field="copperCorrosion" [header]="'samtagatewayApp.testResult.copperCorrosion' | translate"></p-column>
+        <p-column field="freezing" [header]="'samtagatewayApp.testResult.freezing' | translate"></p-column>
+        <p-column field="conductivity" [header]="'samtagatewayApp.testResult.conductivity' | translate"></p-column>
+        <p-column field="isSend" [header]="'samtagatewayApp.testResult.isSend' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span class="fa" [ngClass]="{'fa-check':item.isSend,'fa-close':!item.isSend}"></span>
             </ng-template></p-column>

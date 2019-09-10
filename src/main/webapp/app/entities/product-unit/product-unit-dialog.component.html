@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="productUnit.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.productUnit.home.createLabel">
+            jhiTranslate="samtagatewayApp.productUnit.home.createLabel">
             Create</h4>
         <h4 *ngIf="productUnit.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.productUnit.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.productUnit.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.productUnit.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.productUnit.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.productUnit.title"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.productUnit.title"
                            for="field_title">Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="title" id="field_title"
                            [(ngModel)]="productUnit.title"
@@ -44,7 +44,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.productUnit.code"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.productUnit.code"
                            for="field_code">Code</label>
                     <input [disabled]="isView" type="text" class="form-control" name="code" id="field_code"
                            [(ngModel)]="productUnit.code"

@@ -33,7 +33,7 @@ export const customerScoreRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CUSTOMER_SCORE'],
-            pageTitle: 'niopdcgatewayApp.customerScore.home.title'
+            pageTitle: 'samtagatewayApp.customerScore.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const customerScorePopupRoute: Routes = [
     component: CustomerScorePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_CUSTOMER_SCORE'],
-        pageTitle: 'niopdcgatewayApp.customerScore.home.title'
+        pageTitle: 'samtagatewayApp.customerScore.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const customerScorePopupRoute: Routes = [
     component: CustomerScorePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_CUSTOMER_SCORE'],
-        pageTitle: 'niopdcgatewayApp.customerScore.home.title'
+        pageTitle: 'samtagatewayApp.customerScore.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const customerScorePopupRoute: Routes = [
     component: CustomerScoreDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_CUSTOMER_SCORE'],
-        pageTitle: 'niopdcgatewayApp.customerScore.home.title'
+        pageTitle: 'samtagatewayApp.customerScore.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const customerScorePopupRoute: Routes = [
       component: CustomerScorePopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_CUSTOMER_SCORE'],
-          pageTitle: 'niopdcgatewayApp.customerScore.home.title'
+          pageTitle: 'samtagatewayApp.customerScore.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

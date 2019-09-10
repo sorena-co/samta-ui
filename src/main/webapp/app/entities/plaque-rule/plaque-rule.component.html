@@ -20,17 +20,17 @@
             <p-row>
                 <p-column field="priority" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.plaqueRule.priority">Priority</span>
+                        <span jhiTranslate="samtagatewayApp.plaqueRule.priority">Priority</span>
                     </ng-template>
                 </p-column>
                 <p-column field="digit" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.plaqueRule.digit">Digit</span>
+                        <span jhiTranslate="samtagatewayApp.plaqueRule.digit">Digit</span>
                     </ng-template>
                 </p-column>
                 <p-column field="digitType" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.plaqueRule.digitType">Digit Type</span>
+                        <span jhiTranslate="samtagatewayApp.plaqueRule.digitType">Digit Type</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -59,10 +59,10 @@
                         <select class="form-control" name="digitType" [(ngModel)]="plaqueRule.digitType"
                                 id="field_digitType">
                             <option></option>
-                            <option value="NUMBER">{{'niopdcgatewayApp.DigitType.NUMBER' | translate}}</option>
-                            <option value="PERSIAN_WORD">{{'niopdcgatewayApp.DigitType.PERSIAN_WORD' | translate}}
+                            <option value="NUMBER">{{'samtagatewayApp.DigitType.NUMBER' | translate}}</option>
+                            <option value="PERSIAN_WORD">{{'samtagatewayApp.DigitType.PERSIAN_WORD' | translate}}
                             </option>
-                            <option value="ENGLISH_WORD">{{'niopdcgatewayApp.DigitType.ENGLISH_WORD' | translate}}
+                            <option value="ENGLISH_WORD">{{'samtagatewayApp.DigitType.ENGLISH_WORD' | translate}}
                             </option>
                         </select>
                     </ng-template>
@@ -80,11 +80,11 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="priority" [header]="'niopdcgatewayApp.plaqueRule.priority' | translate"></p-column>
-        <p-column field="digit" [header]="'niopdcgatewayApp.plaqueRule.digit' | translate"></p-column>
-        <p-column field="digitType" [header]="'niopdcgatewayApp.plaqueRule.digitType' | translate">
+        <p-column field="priority" [header]="'samtagatewayApp.plaqueRule.priority' | translate"></p-column>
+        <p-column field="digit" [header]="'samtagatewayApp.plaqueRule.digit' | translate"></p-column>
+        <p-column field="digitType" [header]="'samtagatewayApp.plaqueRule.digitType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.DigitType.' + item.digitType}}">{{item.digitType}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.DigitType.' + item.digitType}}">{{item.digitType}}</span>
             </ng-template>
         </p-column>
         <p-column class="component">

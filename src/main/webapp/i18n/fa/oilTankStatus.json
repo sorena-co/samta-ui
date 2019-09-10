@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "OilTankStatus" : {
             "null": "",
             "UNDER_REPAIR": "تحت تعمیر",

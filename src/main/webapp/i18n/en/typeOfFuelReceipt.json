@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "TypeOfFuelReceipt" : {
             "null": "",
             "TANKER_SALES": "TANKER_SALES",

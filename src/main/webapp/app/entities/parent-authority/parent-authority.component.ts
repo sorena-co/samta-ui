@@ -132,7 +132,7 @@ export class ParentAuthorityComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.parentAuthority.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.parentAuthority.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

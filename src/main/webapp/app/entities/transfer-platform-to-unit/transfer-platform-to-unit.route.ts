@@ -36,7 +36,7 @@ export const transferPlatformToUnitRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_TRANSFER_PLATFORM_TO_UNIT'],
-            pageTitle: 'niopdcgatewayApp.transferPlatformToUnit.home.title'
+            pageTitle: 'samtagatewayApp.transferPlatformToUnit.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -47,7 +47,7 @@ export const transferPlatformToUnitRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_TRANSFER_PLATFORM_TO_UNIT'],
-            pageTitle: 'niopdcgatewayApp.transferPlatformToUnit.home.title'
+            pageTitle: 'samtagatewayApp.transferPlatformToUnit.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -59,7 +59,7 @@ export const transferPlatformToUnitPopupRoute: Routes = [
         component: TransferPlatformToUnitPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_TRANSFER_PLATFORM_TO_UNIT'],
-            pageTitle: 'niopdcgatewayApp.transferPlatformToUnit.home.title'
+            pageTitle: 'samtagatewayApp.transferPlatformToUnit.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -69,7 +69,7 @@ export const transferPlatformToUnitPopupRoute: Routes = [
         component: TransferPlatformToUnitPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_TRANSFER_PLATFORM_TO_UNIT'],
-            pageTitle: 'niopdcgatewayApp.transferPlatformToUnit.home.title'
+            pageTitle: 'samtagatewayApp.transferPlatformToUnit.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -79,7 +79,7 @@ export const transferPlatformToUnitPopupRoute: Routes = [
         component: TransferPlatformToUnitDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_TRANSFER_PLATFORM_TO_UNIT'],
-            pageTitle: 'niopdcgatewayApp.transferPlatformToUnit.home.title'
+            pageTitle: 'samtagatewayApp.transferPlatformToUnit.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -89,7 +89,7 @@ export const transferPlatformToUnitPopupRoute: Routes = [
         component: TransferPlatformToUnitPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_TRANSFER_PLATFORM_TO_UNIT'],
-            pageTitle: 'niopdcgatewayApp.transferPlatformToUnit.home.title'
+            pageTitle: 'samtagatewayApp.transferPlatformToUnit.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

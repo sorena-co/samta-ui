@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="refuelCenter.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.refuelCenter.home.createLabel">
+            jhiTranslate="samtagatewayApp.refuelCenter.home.createLabel">
             Create</h4>
         <h4 *ngIf="refuelCenter.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.refuelCenter.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.refuelCenter.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.refuelCenter.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.refuelCenter.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.refuelCenter.persianTitle"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.refuelCenter.persianTitle"
                            for="field_persianTitle">Persian Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="persianTitle"
                            id="field_persianTitle"
@@ -44,7 +44,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.refuelCenter.englishTitle"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.refuelCenter.englishTitle"
                            for="field_englishTitle">English Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="englishTitle"
                            id="field_englishTitle"
@@ -71,7 +71,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.refuelCenter.code"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.refuelCenter.code"
                            for="field_code">Code</label>
                     <input [disabled]="isView" type="number" class="form-control" name="code" id="field_code"
                            [(ngModel)]="refuelCenter.code" [numeric]="{min:0,max:9999} "required minlength="3" maxlength="4"/>
@@ -98,7 +98,7 @@
 
         <div class="row" *ngIf="!foreignRefuelCenter">
             <div class="col-md-4">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.refuelCenter.depot"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.refuelCenter.depot"
                        for="field_depot">Persian Title</label>
                 <p-multiSelect class="form-control" id="field_depot"
                                [options]="depots"
@@ -111,7 +111,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.refuelCenter.airport" for="field_airport">Target
+                    <label jhiTranslate="samtagatewayApp.refuelCenter.airport" for="field_airport">Target
                         RefuelCenters</label>
                     <p-multiSelect class="form-control" id="field_airport"
                                    [options]="airports"
@@ -133,7 +133,7 @@
             </div>
             <div class="col-md-4" *ngIf="!foreignRefuelCenter">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.refuelCenter.transferTypes"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.refuelCenter.transferTypes"
                            for="field_depot">Persian Title</label>
                     <p-multiSelect [disabled]="isView" class="form-control" id="field_transferType"
                                    [options]="transfertypes"
@@ -157,7 +157,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.refuelCenter.fuelReceiptStartNumber"
+                           jhiTranslate="samtagatewayApp.refuelCenter.fuelReceiptStartNumber"
                            for="field_fuelReceiptStartNumber">Fuel Receipt Start Number</label>
                     <input
                         [disabled]="isView || disableFuel"
@@ -171,7 +171,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.refuelCenter.fuelReceiptEndNumber"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.refuelCenter.fuelReceiptEndNumber"
                            for="field_fuelReceiptEndNumber">Fuel Receipt End Number</label>
                     <input [disabled]="isView" class="form-control" name="fuelReceiptEndNumber"
                            id="field_fuelReceiptEndNumber"
@@ -183,7 +183,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.refuelCenter.fuelReceiptCurrentNumber"
+                           jhiTranslate="samtagatewayApp.refuelCenter.fuelReceiptCurrentNumber"
                            for="field_fuelReceiptCurrentNumber">Fuel Receipt Current Number</label>
                     <input [disabled]="true" class="form-control" name="fuelReceiptCurrentNumber"
                            id="field_fuelReceiptCurrentNumber"
@@ -195,7 +195,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.refuelCenter.wayBillStartNumber"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.refuelCenter.wayBillStartNumber"
                            for="field_wayBillStartNumber">Way Bill Start Number</label>
                     <input [disabled]="isView || disableWaybill"
                            (input)="changeWayBillStartNumber($event.target.value)"
@@ -207,7 +207,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.refuelCenter.wayBillEndNumber"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.refuelCenter.wayBillEndNumber"
                            for="field_wayBillEndNumber">Way Bill End Number</label>
                     <input [disabled]="isView" class="form-control" name="wayBillEndNumber" id="field_wayBillEndNumber"
                            type="number"
@@ -217,7 +217,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.refuelCenter.wayBillCurrentNumber"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.refuelCenter.wayBillCurrentNumber"
                            for="field_wayBillCurrentNumber">Way Bill Current Number</label>
                     <input [disabled]="true" class="form-control" name="wayBillCurrentNumber"
                            id="field_wayBillCurrentNumber"
@@ -229,7 +229,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.refuelCenter.locationId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.refuelCenter.locationId"
                            for="field_locationId">Location Id</label>
                     <input-location-selector [disabled]="isView" class="form-control"
                                            [(ngModel)]="refuelCenter.locationId"

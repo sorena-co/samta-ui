@@ -37,7 +37,7 @@ export const voucherTemplateRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_VOUCHER_TEMPLATE'],
-            pageTitle: 'niopdcgatewayApp.voucherTemplate.home.title'
+            pageTitle: 'samtagatewayApp.voucherTemplate.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -49,7 +49,7 @@ export const voucherTemplatePopupRoute: Routes = [
         component: VoucherTemplateDialogComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_VOUCHER_TEMPLATE'],
-            pageTitle: 'niopdcgatewayApp.voucherTemplate.home.title'
+            pageTitle: 'samtagatewayApp.voucherTemplate.home.title'
         },
         canActivate: [UserRouteAccessService],
         // outlet: 'popup'
@@ -59,7 +59,7 @@ export const voucherTemplatePopupRoute: Routes = [
         component: VoucherTemplateDialogComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_VOUCHER_TEMPLATE'],
-            pageTitle: 'niopdcgatewayApp.voucherTemplate.home.title'
+            pageTitle: 'samtagatewayApp.voucherTemplate.home.title'
         },
         canActivate: [UserRouteAccessService],
         // outlet: 'popup'
@@ -69,7 +69,7 @@ export const voucherTemplatePopupRoute: Routes = [
         component: VoucherTemplateDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_VOUCHER_TEMPLATE'],
-            pageTitle: 'niopdcgatewayApp.voucherTemplate.home.title'
+            pageTitle: 'samtagatewayApp.voucherTemplate.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -79,7 +79,7 @@ export const voucherTemplatePopupRoute: Routes = [
         component: VoucherTemplateExecuteQueryPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EXECUTE_QUERY_VOUCHER_TEMPLATE'],
-            pageTitle: 'niopdcgatewayApp.voucherTemplate.home.title'
+            pageTitle: 'samtagatewayApp.voucherTemplate.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -89,7 +89,7 @@ export const voucherTemplatePopupRoute: Routes = [
         component: VoucherTemplateDialogComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_VOUCHER_TEMPLATE'],
-            pageTitle: 'niopdcgatewayApp.voucherTemplate.home.title'
+            pageTitle: 'samtagatewayApp.voucherTemplate.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

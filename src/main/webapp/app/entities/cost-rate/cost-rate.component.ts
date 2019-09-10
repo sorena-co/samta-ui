@@ -160,27 +160,27 @@ export class CostRateComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.costRate.home.costGroupTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.costRate.home.costGroupTitle').subscribe((title) => {
             this.breadcrumbItems.push({
                 label: title + ` (${(this.costGroup) ? this.costGroup.title : ''})`,
                 routerLink: ['/cost-group']
             });
         });
-        this.translateService.get('niopdcgatewayApp.costRate.home.costTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.costRate.home.costTitle').subscribe((title) => {
             this.breadcrumbItems.push({
                 label: title,
                 routerLink: ['/cost-group/' + this.costGroupId + '/cost']
             });
         });
         if (this.parentCost) {
-            this.translateService.get('niopdcgatewayApp.costRate.home.costTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.costRate.home.costTitle').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: title,
                     routerLink: ['/cost-group/' + this.costGroupId + '/cost/' + this.parentCost.id + '/cost']
                 });
             });
         }
-        this.translateService.get('niopdcgatewayApp.costRate.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.costRate.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

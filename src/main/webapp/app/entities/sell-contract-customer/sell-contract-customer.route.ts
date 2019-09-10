@@ -36,7 +36,7 @@ export const sellContractCustomerRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.sellContractCustomer.home.title'
+            pageTitle: 'samtagatewayApp.sellContractCustomer.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -44,7 +44,7 @@ export const sellContractCustomerRoute: Routes = [
         component: SellContractCustomerDetailComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.sellContractCustomer.home.title'
+            pageTitle: 'samtagatewayApp.sellContractCustomer.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -56,7 +56,7 @@ export const sellContractCustomerPopupRoute: Routes = [
         component: SellContractCustomerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.sellContractCustomer.home.title'
+            pageTitle: 'samtagatewayApp.sellContractCustomer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -66,7 +66,7 @@ export const sellContractCustomerPopupRoute: Routes = [
         component: SellContractCustomerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.sellContractCustomer.home.title'
+            pageTitle: 'samtagatewayApp.sellContractCustomer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -76,7 +76,7 @@ export const sellContractCustomerPopupRoute: Routes = [
         component: SellContractCustomerDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.sellContractCustomer.home.title'
+            pageTitle: 'samtagatewayApp.sellContractCustomer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.refuelCenter"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.refuelCenter"
                                    for="field_refuelCenter">RefuelCenter</label>
                             <select class="form-control" id="field_refuelCenter"
                                     name="refuelCenter"
@@ -32,7 +32,7 @@
                     </div>
                     <div class="col-xs-12 col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.person.home.title"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.person.home.title"
                                    for="field_person">Person</label>
                             <select
                                 class="form-control"
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-xs-12 col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customer.home.title"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.customer.home.title"
                                    for="field_customer">customer</label>
                             <select
                                 class="form-control"
@@ -72,7 +72,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.aircraftRefuelingRecord.startDate"
+                                   jhiTranslate="samtagatewayApp.aircraftRefuelingRecord.startDate"
                                    for="field_startDate">startDate</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00:00"
@@ -99,7 +99,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.aircraftRefuelingRecord.finishDate"
+                                   jhiTranslate="samtagatewayApp.aircraftRefuelingRecord.finishDate"
                                    for="field_finishDate">finishDate</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="23:59:59"
@@ -158,11 +158,11 @@
             </button>
         </ng-template>
 
-        <kendo-grid-column field="receiptNo" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.receiptNo' | translate"
+        <kendo-grid-column field="receiptNo" [title]="'samtagatewayApp.aircraftRefuelingRecord.receiptNo' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="dateTime" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.dateTime' | translate"
+        <kendo-grid-column field="dateTime" [title]="'samtagatewayApp.aircraftRefuelingRecord.dateTime' | translate"
                            width="130">
             <ng-template kendoGridCellTemplate let-dataItem>
                 <span>{{dataItem.dateTime | dateTimeJalali}}</span>
@@ -170,47 +170,47 @@
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="airportName"
-                           [title]="'niopdcgatewayApp.aircraftRefuelingRecord.airportName' | translate"
+                           [title]="'samtagatewayApp.aircraftRefuelingRecord.airportName' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="amount" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.amount' | translate"
+        <kendo-grid-column field="amount" [title]="'samtagatewayApp.aircraftRefuelingRecord.amount' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="productCode" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.productCode' | translate"
+        <kendo-grid-column field="productCode" [title]="'samtagatewayApp.aircraftRefuelingRecord.productCode' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="productTitle" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.productTitle' | translate"
+        <kendo-grid-column field="productTitle" [title]="'samtagatewayApp.aircraftRefuelingRecord.productTitle' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="type" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.type' | translate"
+        <kendo-grid-column field="type" [title]="'samtagatewayApp.aircraftRefuelingRecord.type' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="personName" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.personName' | translate"
+        <kendo-grid-column field="personName" [title]="'samtagatewayApp.aircraftRefuelingRecord.personName' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="personName" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.personName' | translate"
+        <kendo-grid-column field="personName" [title]="'samtagatewayApp.aircraftRefuelingRecord.personName' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="customerName" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.customerName' | translate"
+        <kendo-grid-column field="customerName" [title]="'samtagatewayApp.aircraftRefuelingRecord.customerName' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="currencyTitle" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.currencyTitle' | translate"
+        <kendo-grid-column field="currencyTitle" [title]="'samtagatewayApp.aircraftRefuelingRecord.currencyTitle' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="costAmount" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.costAmount' | translate"
+        <kendo-grid-column field="costAmount" [title]="'samtagatewayApp.aircraftRefuelingRecord.costAmount' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="userName" [title]="'niopdcgatewayApp.aircraftRefuelingRecord.userName' | translate"
+        <kendo-grid-column field="userName" [title]="'samtagatewayApp.aircraftRefuelingRecord.userName' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>

@@ -122,7 +122,7 @@ export class RegionComponent implements OnInit, OnDestroy {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
         if (this.countryId) {
-            this.translateService.get('niopdcgatewayApp.region.home.countryTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.region.home.countryTitle').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: title + ((this.country) ? '(' + this.country.name + ')' : ''),
                     routerLink: ['/country']
@@ -130,14 +130,14 @@ export class RegionComponent implements OnInit, OnDestroy {
             });
         }
         if (this.region2) {
-            this.translateService.get('niopdcgatewayApp.region.home.regionTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.region.home.regionTitle').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: title + ` (${this.region2.name})`, routerLink:
                         [(this.countryId) ? `/country/${this.countryId}/region` : `/region`]
                 });
             });
         }
-        this.translateService.get((this.region2 ? 'niopdcgatewayApp.region.home.title2' : 'niopdcgatewayApp.region.home.title')).subscribe((title) => {
+        this.translateService.get((this.region2 ? 'samtagatewayApp.region.home.title2' : 'samtagatewayApp.region.home.title')).subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

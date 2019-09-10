@@ -62,7 +62,7 @@
                 <div class="row">
                     <div class="col-md-5">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.momentSheet.startTime"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.momentSheet.startTime"
                                    for="field_startTime">Register Date</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [rtlActive]="true" time="00:00:00"
@@ -76,7 +76,7 @@
                     </div>
                     <div class="col-md-5">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.momentSheet.endTime"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.momentSheet.endTime"
                                    for="field_endTime">Register Date</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="23:59:59"
@@ -104,9 +104,9 @@
         </p-header>
         <p-headerColumnGroup>
             <p-row>
-                <p-column field="oilTankType" [header]="'niopdcgatewayApp.oilTank.oilTankType' | translate">
+                <p-column field="oilTankType" [header]="'samtagatewayApp.oilTank.oilTankType' | translate">
                     <ng-template let-item="rowData" pTemplate="body">
-                        <span jhiTranslate="{{'niopdcgatewayApp.Audit.' + item.action}}">{{item.action}}</span>
+                        <span jhiTranslate="{{'samtagatewayApp.Audit.' + item.action}}">{{item.action}}</span>
                     </ng-template>
                 </p-column>
                 <p-column field="commitVersion">
@@ -197,16 +197,16 @@
                 </p-column>
             </p-row>-->
         </p-headerColumnGroup>
-        <p-column field="action" [header]="'niopdcgatewayApp.airport.persianTitle' | translate"></p-column>
-        <p-column field="commitVersion" [header]="'niopdcgatewayApp.airport.persianTitle' | translate"></p-column>
-        <!--<p-column field="entityValue" [header]="'niopdcgatewayApp.airport.persianTitle' | translate"></p-column>-->
+        <p-column field="action" [header]="'samtagatewayApp.airport.persianTitle' | translate"></p-column>
+        <p-column field="commitVersion" [header]="'samtagatewayApp.airport.persianTitle' | translate"></p-column>
+        <!--<p-column field="entityValue" [header]="'samtagatewayApp.airport.persianTitle' | translate"></p-column>-->
         <p-column class="component">
             <ng-template let-item="rowData" pTemplate="body">
                 {{ item.modifiedDate | dateTimeJalali }}
             </ng-template>
         </p-column>
-        <p-column field="modifiedBy" [header]="'niopdcgatewayApp.airport.persianTitle' | translate"></p-column>
-        <!--<p-column field="modifiedDate" [header]="'niopdcgatewayApp.airport.persianTitle' | translate"></p-column>-->
+        <p-column field="modifiedBy" [header]="'samtagatewayApp.airport.persianTitle' | translate"></p-column>
+        <!--<p-column field="modifiedDate" [header]="'samtagatewayApp.airport.persianTitle' | translate"></p-column>-->
         <p-column class="component">
             <ng-template let-item="rowData" pTemplate="body">
                 <button type="button" class="btn btn-info btn-xs"

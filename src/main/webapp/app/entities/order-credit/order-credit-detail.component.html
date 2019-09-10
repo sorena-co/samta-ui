@@ -1,48 +1,48 @@
 
 <div *ngIf="orderCredit">
-    <h2><span jhiTranslate="niopdcgatewayApp.orderCredit.detail.title">Order Credit</span> {{orderCredit.id}}</h2>
+    <h2><span jhiTranslate="samtagatewayApp.orderCredit.detail.title">Order Credit</span> {{orderCredit.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
-        <dt><span jhiTranslate="niopdcgatewayApp.orderCredit.customerCreditId">Customer Credit Id</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderCredit.customerCreditId">Customer Credit Id</span></dt>
         <dd>
             <span>{{orderCredit.customerCreditId}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderCredit.decreasedCredit">Decreased Credit</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderCredit.decreasedCredit">Decreased Credit</span></dt>
         <dd>
             <span>{{orderCredit.decreasedCredit}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderCredit.decreasedAmount">Decreased Amount</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderCredit.decreasedAmount">Decreased Amount</span></dt>
         <dd>
             <span>{{orderCredit.decreasedAmount}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderCredit.decreasedCost">Decreased Cost</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderCredit.decreasedCost">Decreased Cost</span></dt>
         <dd>
             <span>{{orderCredit.decreasedCost}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderCredit.creditNumber">Credit Number</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderCredit.creditNumber">Credit Number</span></dt>
         <dd>
             <span>{{orderCredit.creditNumber}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderCredit.buyTypeUsage">Buy Type Usage</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderCredit.buyTypeUsage">Buy Type Usage</span></dt>
         <dd>
-            <span jhiTranslate="{{'niopdcgatewayApp.BuyTypeUsage.' + orderCredit.buyTypeUsage}}">{{orderCredit.buyTypeUsage}}</span>
+            <span jhiTranslate="{{'samtagatewayApp.BuyTypeUsage.' + orderCredit.buyTypeUsage}}">{{orderCredit.buyTypeUsage}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderCredit.settled">Settled</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderCredit.settled">Settled</span></dt>
         <dd>
             <span>{{orderCredit.settled}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderCredit.buyGroup">Buy Group</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderCredit.buyGroup">Buy Group</span></dt>
         <dd>
-            <span jhiTranslate="{{'niopdcgatewayApp.BuyGroup.' + orderCredit.buyGroup}}">{{orderCredit.buyGroup}}</span>
+            <span jhiTranslate="{{'samtagatewayApp.BuyGroup.' + orderCredit.buyGroup}}">{{orderCredit.buyGroup}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderCredit.order">Order</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderCredit.order">Order</span></dt>
         <dd>
             <div *ngIf="orderCredit.orderId">
                 <a [routerLink]="['/order', orderCredit.orderId]">{{orderCredit.orderOrderNo}}</a>
             </div>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.orderCredit.orderProduct">Order Product</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.orderCredit.orderProduct">Order Product</span></dt>
         <dd>
             <div *ngIf="orderCredit.orderProductId">
                 <a [routerLink]="['/order-product', orderCredit.orderProductId]">{{orderCredit.orderProductId}}</a>

@@ -169,13 +169,13 @@ export class SellContractProductComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.sellContract.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.sellContract.home.title').subscribe((title) => {
             this.breadcrumbItems.push({
                 label: title + ` (${this.sellContract.contractNo})`,
                 routerLink: ['/sell-contract']
             });
         });
-        this.translateService.get('niopdcgatewayApp.sellContractProduct.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.sellContractProduct.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

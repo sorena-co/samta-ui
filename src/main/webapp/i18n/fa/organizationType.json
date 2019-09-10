@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "OrganizationType" : {
             "null": "",
             "GOVERNMENTAL": "دولتی",

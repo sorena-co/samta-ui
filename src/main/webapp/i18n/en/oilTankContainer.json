@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "oilTankContainer" : {
             "home": {
                 "title": "Oil Tank Containers",

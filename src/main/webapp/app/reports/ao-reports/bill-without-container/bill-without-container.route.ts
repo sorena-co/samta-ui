@@ -10,7 +10,7 @@ export const billWithoutContainerRoute: Routes = [
         component: BillWithoutContainerComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_BILL_WITHOUT_CONTAINER'],
-            pageTitle: 'niopdcgatewayApp.billWithoutContainer.home.title'
+            pageTitle: 'samtagatewayApp.billWithoutContainer.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "CostMethod" : {
             "null": "",
             "NORMAL_SALES": "NORMAL_SALES",

@@ -20,27 +20,27 @@
             <p-row>
                 <p-column field="longitude" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.carTank.longitude">Longitude</span>
+                        <span jhiTranslate="samtagatewayApp.carTank.longitude">Longitude</span>
                     </ng-template>
                 </p-column>
                 <p-column field="latitude" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.carTank.latitude">Latitude</span>
+                        <span jhiTranslate="samtagatewayApp.carTank.latitude">Latitude</span>
                     </ng-template>
                 </p-column>
                 <p-column field="height" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.carTank.height">Height</span>
+                        <span jhiTranslate="samtagatewayApp.carTank.height">Height</span>
                     </ng-template>
                 </p-column>
                 <p-column field="radius" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.carTank.radius">Radius</span>
+                        <span jhiTranslate="samtagatewayApp.carTank.radius">Radius</span>
                     </ng-template>
                 </p-column>
                 <p-column field="tankType" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.carTank.tankType">Tank Type</span>
+                        <span jhiTranslate="samtagatewayApp.carTank.tankType">Tank Type</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -83,8 +83,8 @@
                         <select class="form-control" name="tankType" (change)="search()"
                                 [(ngModel)]="carTank.tankType" id="field_tankType">
                             <option></option>
-                            <option value="CUBE">{{'niopdcgatewayApp.TankType.CUBE' | translate}}</option>
-                            <option value="CONE">{{'niopdcgatewayApp.TankType.CONE' | translate}}</option>
+                            <option value="CUBE">{{'samtagatewayApp.TankType.CUBE' | translate}}</option>
+                            <option value="CONE">{{'samtagatewayApp.TankType.CONE' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -101,13 +101,13 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="longitude" [header]="'niopdcgatewayApp.carTank.longitude' | translate"></p-column>
-        <p-column field="latitude" [header]="'niopdcgatewayApp.carTank.latitude' | translate"></p-column>
-        <p-column field="height" [header]="'niopdcgatewayApp.carTank.height' | translate"></p-column>
-        <p-column field="radius" [header]="'niopdcgatewayApp.carTank.radius' | translate"></p-column>
-        <p-column field="tankType" [header]="'niopdcgatewayApp.carTank.tankType' | translate">
+        <p-column field="longitude" [header]="'samtagatewayApp.carTank.longitude' | translate"></p-column>
+        <p-column field="latitude" [header]="'samtagatewayApp.carTank.latitude' | translate"></p-column>
+        <p-column field="height" [header]="'samtagatewayApp.carTank.height' | translate"></p-column>
+        <p-column field="radius" [header]="'samtagatewayApp.carTank.radius' | translate"></p-column>
+        <p-column field="tankType" [header]="'samtagatewayApp.carTank.tankType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.TankType.' + item.tankType}}">{{item.tankType}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.TankType.' + item.tankType}}">{{item.tankType}}</span>
             </ng-template>
         </p-column>
         <p-column class="component">

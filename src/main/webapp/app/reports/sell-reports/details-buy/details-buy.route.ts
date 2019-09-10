@@ -10,7 +10,7 @@ export const detailsBuyRoute: Routes = [
         component: DetailsBuyComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_REPORT_DETAILS_BUY'],
-            pageTitle: 'niopdcgatewayApp.detailsBuy.home.title'
+            pageTitle: 'samtagatewayApp.detailsBuy.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

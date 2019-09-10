@@ -33,7 +33,7 @@ export const boundaryDiscountRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_BOUNDARY_DISCOUNT'],
-            pageTitle: 'niopdcgatewayApp.boundaryDiscount.home.title'
+            pageTitle: 'samtagatewayApp.boundaryDiscount.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const boundaryDiscountPopupRoute: Routes = [
     component: BoundaryDiscountPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_BOUNDARY_DISCOUNT'],
-        pageTitle: 'niopdcgatewayApp.boundaryDiscount.home.title'
+        pageTitle: 'samtagatewayApp.boundaryDiscount.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const boundaryDiscountPopupRoute: Routes = [
     component: BoundaryDiscountPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_BOUNDARY_DISCOUNT'],
-        pageTitle: 'niopdcgatewayApp.boundaryDiscount.home.title'
+        pageTitle: 'samtagatewayApp.boundaryDiscount.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const boundaryDiscountPopupRoute: Routes = [
     component: BoundaryDiscountDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_BOUNDARY_DISCOUNT'],
-        pageTitle: 'niopdcgatewayApp.boundaryDiscount.home.title'
+        pageTitle: 'samtagatewayApp.boundaryDiscount.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const boundaryDiscountPopupRoute: Routes = [
       component: BoundaryDiscountPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_BOUNDARY_DISCOUNT'],
-          pageTitle: 'niopdcgatewayApp.boundaryDiscount.home.title'
+          pageTitle: 'samtagatewayApp.boundaryDiscount.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

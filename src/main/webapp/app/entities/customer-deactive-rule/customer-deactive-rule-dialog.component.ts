@@ -58,7 +58,7 @@ export class CustomerDeactiveRuleDialogComponent implements OnInit {
         })
         for (const deactiveReason in DeactiveReason) {
             if (isNaN(parseInt(deactiveReason, 10))) {
-                this.translateService.get('niopdcgatewayApp.DeactiveReason.' + deactiveReason)
+                this.translateService.get('samtagatewayApp.DeactiveReason.' + deactiveReason)
                     .subscribe((value) => {
                         this.deactiveReasons.push({
                             value: deactiveReason,

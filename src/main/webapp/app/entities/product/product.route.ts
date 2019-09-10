@@ -35,7 +35,7 @@ export const productRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.product.home.title'
+            pageTitle: 'samtagatewayApp.product.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -47,7 +47,7 @@ export const productPopupRoute: Routes = [
         component: ProductPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.product.home.title'
+            pageTitle: 'samtagatewayApp.product.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -57,7 +57,7 @@ export const productPopupRoute: Routes = [
         component: ProductPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.product.home.title'
+            pageTitle: 'samtagatewayApp.product.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -67,7 +67,7 @@ export const productPopupRoute: Routes = [
         component: ProductDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.product.home.title'
+            pageTitle: 'samtagatewayApp.product.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -77,7 +77,7 @@ export const productPopupRoute: Routes = [
         component: ProductPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.product.home.title'
+            pageTitle: 'samtagatewayApp.product.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

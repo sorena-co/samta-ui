@@ -10,7 +10,7 @@ export const airplaneRoute: Routes = [
         component: AirplaneComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_AIR_PLANE'],
-            pageTitle: 'niopdcgatewayApp.airplane.home.title'
+            pageTitle: 'samtagatewayApp.airplane.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

@@ -36,7 +36,7 @@ export const sellContractRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_SELL_CONTRACT'],
-            pageTitle: 'niopdcgatewayApp.sellContract.home.title'
+            pageTitle: 'samtagatewayApp.sellContract.home.title'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -45,7 +45,7 @@ export const sellContractRoute: Routes = [
         component: SellContractDialogComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_SELL_CONTRACT'],
-            pageTitle: 'niopdcgatewayApp.sellContract.home.title'
+            pageTitle: 'samtagatewayApp.sellContract.home.title'
         },
         canActivate: [UserRouteAccessService],
     },
@@ -54,7 +54,7 @@ export const sellContractRoute: Routes = [
         component: SellContractDialogComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_SELL_CONTRACT'],
-            pageTitle: 'niopdcgatewayApp.sellContract.home.title'
+            pageTitle: 'samtagatewayApp.sellContract.home.title'
         },
         canActivate: [UserRouteAccessService],
     },
@@ -63,7 +63,7 @@ export const sellContractRoute: Routes = [
         component: SellContractDialogComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_SELL_CONTRACT'],
-            pageTitle: 'niopdcgatewayApp.sellContract.home.title',
+            pageTitle: 'samtagatewayApp.sellContract.home.title',
             isView: true
         },
         canActivate: [UserRouteAccessService],
@@ -76,7 +76,7 @@ export const sellContractPopupRoute: Routes = [
         component: SellContractDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_SELL_CONTRACT'],
-            pageTitle: 'niopdcgatewayApp.sellContract.home.title'
+            pageTitle: 'samtagatewayApp.sellContract.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -85,7 +85,7 @@ export const sellContractPopupRoute: Routes = [
         component: SellContractConfirmPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CONFIRM_SELL_CONTRACT'],
-            pageTitle: 'niopdcgatewayApp.sellContract.home.title'
+            pageTitle: 'samtagatewayApp.sellContract.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

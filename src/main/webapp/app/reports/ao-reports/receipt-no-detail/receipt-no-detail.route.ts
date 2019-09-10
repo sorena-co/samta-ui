@@ -10,7 +10,7 @@ export const receiptNoDetailRoute: Routes = [
         component: ReceiptNoDetailComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_RECEIPT_NO_DETAIL'],
-            pageTitle: 'niopdcgatewayApp.receiptNoDetail.home.title'
+            pageTitle: 'samtagatewayApp.receiptNoDetail.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

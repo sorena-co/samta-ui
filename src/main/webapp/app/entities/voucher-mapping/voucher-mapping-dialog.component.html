@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMapping.extraMap" for="field_extraMap">Extra Map</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMapping.extraMap" for="field_extraMap">Extra Map</label>
                     <input [disabled]="isView" type="text" class="form-control" name="extraMap" id="field_extraMap"
                         [(ngModel)]="voucherMapping.extraMap" required maxlength="100" />
                     <div [hidden]="!(editForm.controls.extraMap?.dirty && editForm.controls.extraMap?.invalid)">
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMapping.specialMap" for="field_specialMap">Special Map</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMapping.specialMap" for="field_specialMap">Special Map</label>
                     <input [disabled]="isView" type="text" class="form-control" name="specialMap" id="field_specialMap"
                         [(ngModel)]="voucherMapping.specialMap" required maxlength="100" />
                     <div [hidden]="!(editForm.controls.specialMap?.dirty && editForm.controls.specialMap?.invalid)">
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMapping.creditMap" for="field_creditMap">Credit Map</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMapping.creditMap" for="field_creditMap">Credit Map</label>
                     <input [disabled]="isView" type="text" class="form-control" name="creditMap" id="field_creditMap"
                         [(ngModel)]="voucherMapping.creditMap" required maxlength="100" />
                     <div [hidden]="!(editForm.controls.creditMap?.dirty && editForm.controls.creditMap?.invalid)">
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMapping.debitMap" for="field_debitMap">Debit Map</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMapping.debitMap" for="field_debitMap">Debit Map</label>
                     <input [disabled]="isView" type="text" class="form-control" name="debitMap" id="field_debitMap"
                         [(ngModel)]="voucherMapping.debitMap" required maxlength="100" />
                     <div [hidden]="!(editForm.controls.debitMap?.dirty && editForm.controls.debitMap?.invalid)">
@@ -84,7 +84,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMapping.descriptionMap" for="field_descriptionMap">Description Map</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMapping.descriptionMap" for="field_descriptionMap">Description Map</label>
                     <input [disabled]="isView" type="text" class="form-control" name="descriptionMap" id="field_descriptionMap"
                         [(ngModel)]="voucherMapping.descriptionMap" required maxlength="100" />
                     <div [hidden]="!(editForm.controls.descriptionMap?.dirty && editForm.controls.descriptionMap?.invalid)">
@@ -100,7 +100,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMapping.accountNoMap" for="field_accountNoMap">Account No Map</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMapping.accountNoMap" for="field_accountNoMap">Account No Map</label>
                     <input [disabled]="isView" type="text" class="form-control" name="accountNoMap" id="field_accountNoMap"
                         [(ngModel)]="voucherMapping.accountNoMap" required maxlength="100" />
                     <div [hidden]="!(editForm.controls.accountNoMap?.dirty && editForm.controls.accountNoMap?.invalid)">
@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMapping.suffixMap" for="field_suffixMap">Suffix Map</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMapping.suffixMap" for="field_suffixMap">Suffix Map</label>
                     <input [disabled]="isView" type="text" class="form-control" name="suffixMap" id="field_suffixMap"
                         [(ngModel)]="voucherMapping.suffixMap" required maxlength="100" />
                     <div [hidden]="!(editForm.controls.suffixMap?.dirty && editForm.controls.suffixMap?.invalid)">
@@ -132,7 +132,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMapping.keyMap" for="field_keyMap">Key Map</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMapping.keyMap" for="field_keyMap">Key Map</label>
                     <input [disabled]="isView" type="text" class="form-control" name="keyMap" id="field_keyMap"
                         [(ngModel)]="voucherMapping.keyMap" required maxlength="100" />
                     <div [hidden]="!(editForm.controls.keyMap?.dirty && editForm.controls.keyMap?.invalid)">
@@ -148,7 +148,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMapping.baseQuery" for="field_baseQuery">Base Query</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMapping.baseQuery" for="field_baseQuery">Base Query</label>
                     <select class="form-control" id="field_baseQuery" name="baseQuery" [(ngModel)]="voucherMapping.baseQueryId"  required>
                         <option *ngIf="!editForm.value.baseQuery" [ngValue]="null" selected></option>
                         <option [ngValue]="baseQueryOption.id" *ngFor="let baseQueryOption of basequeries; trackBy: trackBaseQueryById">{{baseQueryOption.id}}</option>
@@ -161,7 +161,7 @@
                     </small>
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherMapping.voucherTemplate" for="field_voucherTemplate">Voucher Template</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherMapping.voucherTemplate" for="field_voucherTemplate">Voucher Template</label>
                     <select class="form-control" id="field_voucherTemplate" name="voucherTemplate" [(ngModel)]="voucherMapping.voucherTemplateId"  required>
                         <option *ngIf="!editForm.value.voucherTemplate" [ngValue]="null" selected></option>
                         <option [ngValue]="voucherTemplateOption.id" *ngFor="let voucherTemplateOption of vouchertemplates; trackBy: trackVoucherTemplateById">{{voucherTemplateOption.id}}</option>

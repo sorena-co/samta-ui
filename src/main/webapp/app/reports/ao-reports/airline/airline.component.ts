@@ -71,7 +71,7 @@ export class AirlineComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.airline.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.airline.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

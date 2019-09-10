@@ -10,7 +10,7 @@ export const amountReportRoute: Routes = [
         component: AmountReportComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_AMOUNT_REPORT'],
-            pageTitle: 'niopdcgatewayApp.amountReport.home.title'
+            pageTitle: 'samtagatewayApp.amountReport.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

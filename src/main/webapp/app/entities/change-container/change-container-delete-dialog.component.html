@@ -6,8 +6,8 @@
     </div>
     <div class="modal-body">
         <jhi-alert-error></jhi-alert-error>
-    <p *ngIf="changeContainer.dayDepotContainerId!=null" jhiTranslate="niopdcgatewayApp.changeContainer.delete.question" translateValues="{id: '{{changeContainer.dayDepotContainerId}}'}">Are you sure you want to delete this Change Container?</p>
-        <p *ngIf="changeContainer.dayDepotId!=null" jhiTranslate="niopdcgatewayApp.changeContainer.delete.question" translateValues="{id: '{{changeContainer.dayDepotId}}'}">Are you sure you want to delete this Change Container?</p>
+    <p *ngIf="changeContainer.dayDepotContainerId!=null" jhiTranslate="samtagatewayApp.changeContainer.delete.question" translateValues="{id: '{{changeContainer.dayDepotContainerId}}'}">Are you sure you want to delete this Change Container?</p>
+        <p *ngIf="changeContainer.dayDepotId!=null" jhiTranslate="samtagatewayApp.changeContainer.delete.question" translateValues="{id: '{{changeContainer.dayDepotId}}'}">Are you sure you want to delete this Change Container?</p>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">

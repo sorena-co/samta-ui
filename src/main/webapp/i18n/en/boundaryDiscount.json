@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "boundaryDiscount" : {
             "home": {
                 "title": "Boundary Discounts",

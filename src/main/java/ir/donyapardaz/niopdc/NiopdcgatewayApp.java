@@ -40,7 +40,7 @@ public class NiopdcgatewayApp {
     }
 
     /**
-     * Initializes niopdcgateway.
+     * Initializes samtagateway.
      * <p>
      * Spring profiles can be configured with a program arguments --spring.profiles.active=your-active-profile
      * <p>

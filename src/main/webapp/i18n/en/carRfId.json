@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "carRfId" : {
             "home": {
                 "title": "Car Rf Ids",

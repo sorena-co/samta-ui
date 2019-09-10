@@ -16,7 +16,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.customerReport.startDate"
+                                   jhiTranslate="samtagatewayApp.customerReport.startDate"
                                    for="field_startDate">startDate</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00:00"
@@ -43,7 +43,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.customerReport.finishDate"
+                                   jhiTranslate="samtagatewayApp.customerReport.finishDate"
                                    for="field_finishDate">finishDate</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="23:59:59"
@@ -73,7 +73,7 @@
                             <input type="checkbox" class="form-control"
                                    name="allLocations" id="field_location"
                                    [(ngModel)]="allLocations"/>
-                            <label jhiTranslate="niopdcgatewayApp.customerReport.location"
+                            <label jhiTranslate="samtagatewayApp.customerReport.location"
                                    for="field_location">Location</label>
 
                             <input-location-selector *ngIf="!allLocations"
@@ -103,26 +103,26 @@
                     <div class="col-xs-12 col-md-4">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.customerType.customerGroup"
+                                   jhiTranslate="samtagatewayApp.customerType.customerGroup"
                                    for="field_customerGroup">Customer Group</label>
                             <select class="form-control" name="customerGroup"
                                     [(ngModel)]="req.customerGroup" (ngModelChange)="onChangeCustomerGroup($event)"
                                     id="field_customerGroup">
                                 <option [ngValue]="null" jhiTranslate="global.string.all"></option>
-                                <option value="STATION" jhiTranslate="niopdcgatewayApp.CustomerGroup.STATION">
+                                <option value="STATION" jhiTranslate="samtagatewayApp.CustomerGroup.STATION">
                                     SUPPLIER
                                 </option>
-                                <option value="SELLER" jhiTranslate="niopdcgatewayApp.CustomerGroup.SELLER">
+                                <option value="SELLER" jhiTranslate="samtagatewayApp.CustomerGroup.SELLER">
                                     CONSUMER
                                 </option>
-                                <option value="MAJOR_CONSUMER" jhiTranslate="niopdcgatewayApp.CustomerGroup.MAJOR_CONSUMER">
+                                <option value="MAJOR_CONSUMER" jhiTranslate="samtagatewayApp.CustomerGroup.MAJOR_CONSUMER">
                                     SUPPLIER
                                 </option>
-                                <option value="AIRPLANE" jhiTranslate="niopdcgatewayApp.CustomerGroup.AIRPLANE">
+                                <option value="AIRPLANE" jhiTranslate="samtagatewayApp.CustomerGroup.AIRPLANE">
                                     AIRLINE
                                 </option>
-                                <option value="LIQUID_GAS">{{'niopdcgatewayApp.CustomerGroup.LIQUID_GAS' | translate}}</option>
-                                <option value="BOUNDARY">{{'niopdcgatewayApp.CustomerGroup.BOUNDARY' | translate}}</option>
+                                <option value="LIQUID_GAS">{{'samtagatewayApp.CustomerGroup.LIQUID_GAS' | translate}}</option>
+                                <option value="BOUNDARY">{{'samtagatewayApp.CustomerGroup.BOUNDARY' | translate}}</option>
                             </select>
                             <div
                                 [hidden]="!(editForm.controls.customerGroup?.dirty && editForm.controls.customerGroup?.invalid)">
@@ -136,7 +136,7 @@
                     </div>
                     <div class="col-xs-12 col-md-4">
                         <div class="form-group">
-                            <label jhiTranslate="niopdcgatewayApp.customer.type"
+                            <label jhiTranslate="samtagatewayApp.customer.type"
                                    for="field_type">Type</label>
                             <select class="form-control" id="field_type" name="type"
                                     [(ngModel)]="req.customerType">
@@ -188,69 +188,69 @@
             </button>
         </ng-template>
 
-        <kendo-grid-column field="name" [title]="'niopdcgatewayApp.customerReport.name' | translate" width="130">
+        <kendo-grid-column field="name" [title]="'samtagatewayApp.customerReport.name' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="code" [title]="'niopdcgatewayApp.customerReport.code' | translate"
+        <kendo-grid-column field="code" [title]="'samtagatewayApp.customerReport.code' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="postalCode"
-                           [title]="'niopdcgatewayApp.customerReport.postalCode' | translate" width="130">
+                           [title]="'samtagatewayApp.customerReport.postalCode' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="registerCode"
-                           [title]="'niopdcgatewayApp.customerReport.registerCode' | translate" width="130">
+                           [title]="'samtagatewayApp.customerReport.registerCode' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="movableCode" [title]="'niopdcgatewayApp.customerReport.movableCode' | translate"
+        <kendo-grid-column field="movableCode" [title]="'samtagatewayApp.customerReport.movableCode' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="registerDate" [title]="'niopdcgatewayApp.customerReport.registerDate' | translate" width="130">
+        <kendo-grid-column field="registerDate" [title]="'samtagatewayApp.customerReport.registerDate' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="buyOneToMany" [title]="'niopdcgatewayApp.customerReport.buyOneToMany' | translate"
+        <kendo-grid-column field="buyOneToMany" [title]="'samtagatewayApp.customerReport.buyOneToMany' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="identifyCode"
-                           [title]="'niopdcgatewayApp.customerReport.identifyCode' | translate" width="130">
+                           [title]="'samtagatewayApp.customerReport.identifyCode' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="gsId"
-                           [title]="'niopdcgatewayApp.customerReport.gsId' | translate" width="130">
+                           [title]="'samtagatewayApp.customerReport.gsId' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="typeTitle"
-                           [title]="'niopdcgatewayApp.customerReport.typeTitle' | translate" width="130">
+                           [title]="'samtagatewayApp.customerReport.typeTitle' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="customerGroupTitle" [title]="'niopdcgatewayApp.customerReport.customerGroupTitle' | translate"
+        <kendo-grid-column field="customerGroupTitle" [title]="'samtagatewayApp.customerReport.customerGroupTitle' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="selfCode" [title]="'niopdcgatewayApp.customerReport.selfCode' | translate"
+        <kendo-grid-column field="selfCode" [title]="'samtagatewayApp.customerReport.selfCode' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="plaque" [title]="'niopdcgatewayApp.customerReport.plaque' | translate" width="130">
+        <kendo-grid-column field="plaque" [title]="'samtagatewayApp.customerReport.plaque' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="transitPlaque" [title]="'niopdcgatewayApp.customerReport.transitPlaque' | translate"
+        <kendo-grid-column field="transitPlaque" [title]="'samtagatewayApp.customerReport.transitPlaque' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="creditAccount"
-                           [title]="'niopdcgatewayApp.customerReport.creditAccount' | translate" width="130">
+                           [title]="'samtagatewayApp.customerReport.creditAccount' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="productTitle"
-                           [title]="'niopdcgatewayApp.customerReport.productTitle' | translate" width="130">
+                           [title]="'samtagatewayApp.customerReport.productTitle' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
         <kendo-grid-column field="vehicleModelTitle"
-                           [title]="'niopdcgatewayApp.customerReport.vehicleModelTitle' | translate" width="130">
+                           [title]="'samtagatewayApp.customerReport.vehicleModelTitle' | translate" width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
 

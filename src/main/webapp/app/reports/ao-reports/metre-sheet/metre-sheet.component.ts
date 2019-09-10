@@ -78,7 +78,7 @@ export class MetreSheetComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.metreSheet.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.metreSheet.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

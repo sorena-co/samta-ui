@@ -153,7 +153,7 @@ export class CustomerTypeComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.customerType.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.customerType.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

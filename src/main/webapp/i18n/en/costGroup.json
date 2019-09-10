@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "costGroup" : {
             "home": {
                 "title": "Cost Groups",

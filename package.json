@@ -1,7 +1,7 @@
 {
-  "name": "niopdcgateway",
+  "name": "samtagateway",
   "version": "0.0.0",
-  "description": "Description for niopdcgateway",
+  "description": "Description for samtagateway",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [

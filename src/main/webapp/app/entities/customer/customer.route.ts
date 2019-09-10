@@ -38,7 +38,7 @@ export const customerRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CUSTOMER'],
-            pageTitle: 'niopdcgatewayApp.customer.home.title'
+            pageTitle: 'samtagatewayApp.customer.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -49,7 +49,7 @@ export const customerRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CUSTOMER'],
-            pageTitle: 'niopdcgatewayApp.customer.home.title'
+            pageTitle: 'samtagatewayApp.customer.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -60,7 +60,7 @@ export const customerRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_BOUNDARY_CUSTOMER'],
-            pageTitle: 'niopdcgatewayApp.customer.home.title'
+            pageTitle: 'samtagatewayApp.customer.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -72,7 +72,7 @@ export const customerPopupRoute: Routes = [
         component: CustomerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_CUSTOMER'],
-            pageTitle: 'niopdcgatewayApp.customer.home.title'
+            pageTitle: 'samtagatewayApp.customer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -81,7 +81,7 @@ export const customerPopupRoute: Routes = [
         component: BoundaryPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_BOUNDARY_CUSTOMER'],
-            pageTitle: 'niopdcgatewayApp.customer.home.title'
+            pageTitle: 'samtagatewayApp.customer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -91,7 +91,7 @@ export const customerPopupRoute: Routes = [
         component: CustomerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_CUSTOMER'],
-            pageTitle: 'niopdcgatewayApp.customer.home.title'
+            pageTitle: 'samtagatewayApp.customer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -101,7 +101,7 @@ export const customerPopupRoute: Routes = [
         component: BoundaryPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_BOUNDARY_CUSTOMER'],
-            pageTitle: 'niopdcgatewayApp.customer.home.title'
+            pageTitle: 'samtagatewayApp.customer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -111,7 +111,7 @@ export const customerPopupRoute: Routes = [
         component: CustomerDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_CUSTOMER'],
-            pageTitle: 'niopdcgatewayApp.customer.home.title'
+            pageTitle: 'samtagatewayApp.customer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -121,7 +121,7 @@ export const customerPopupRoute: Routes = [
         component: CustomerDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_BOUNDARY_CUSTOMER'],
-            pageTitle: 'niopdcgatewayApp.customer.home.title'
+            pageTitle: 'samtagatewayApp.customer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -131,7 +131,7 @@ export const customerPopupRoute: Routes = [
         component: CustomerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_CUSTOMER'],
-            pageTitle: 'niopdcgatewayApp.customer.home.title',
+            pageTitle: 'samtagatewayApp.customer.home.title',
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -141,7 +141,7 @@ export const customerPopupRoute: Routes = [
         component: BoundaryPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_BOUNDARY_CUSTOMER'],
-            pageTitle: 'niopdcgatewayApp.customer.home.title',
+            pageTitle: 'samtagatewayApp.customer.home.title',
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

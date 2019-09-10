@@ -188,14 +188,14 @@ export class CostComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.cost.home.costGroupTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.cost.home.costGroupTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + ` (${this.costGroup.title})`, routerLink: ['/cost-group']});
         });
-        this.translateService.get('niopdcgatewayApp.cost.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.cost.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/cost-group/' + this.costGroupId + '/cost']});
         });
         if (this.costId) {
-            this.translateService.get('niopdcgatewayApp.cost.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.cost.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({label: title});
             });
         }

@@ -10,7 +10,7 @@ export const sellReportByProductRoute: Routes = [
         component: SellReportByProductComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_SELL_REPORT_BY_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.sellReportByProduct.home.title'
+            pageTitle: 'samtagatewayApp.sellReportByProduct.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

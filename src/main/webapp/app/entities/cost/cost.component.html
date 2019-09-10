@@ -32,31 +32,31 @@
             <p-row>
                 <p-column field="rateType" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.cost.rateType">Rate Type</span>
+                        <span jhiTranslate="samtagatewayApp.cost.rateType">Rate Type</span>
                     </ng-template>
                 </p-column>
                 <p-column
                     *ngIf="costGroup.costGroupType === CostGroupType[CostGroupType.LADDER] || costGroup.costMethod == CostMethod[CostMethod.DEFUEL]"
                     field="startLitre" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.cost.startLitre">start Litre</span>
+                        <span jhiTranslate="samtagatewayApp.cost.startLitre">start Litre</span>
                     </ng-template>
                 </p-column>
                 <p-column
                     *ngIf="costGroup.costGroupType === CostGroupType[CostGroupType.LADDER] || costGroup.costMethod == CostMethod[CostMethod.DEFUEL]"
                     field="endLitre" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.cost.endLitre">end Litre</span>
+                        <span jhiTranslate="samtagatewayApp.cost.endLitre">end Litre</span>
                     </ng-template>
                 </p-column>
                 <p-column field="effect" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.cost.effect">Effect</span>
+                        <span jhiTranslate="samtagatewayApp.cost.effect">Effect</span>
                     </ng-template>
                 </p-column>
                 <p-column field="costAction" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.cost.costAction">Cost Action</span>
+                        <span jhiTranslate="samtagatewayApp.cost.costAction">Cost Action</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -68,10 +68,10 @@
                                 (change)="search()"
                                 [(ngModel)]="cost.rateType" id="field_rateType">
                             <option></option>
-                            <option value="PERCENT">{{'niopdcgatewayApp.RateType.PERCENT' | translate}}</option>
-                            <option value="CONST">{{'niopdcgatewayApp.RateType.CONST' | translate}}</option>
-                            <option value="PER_LITRE">{{'niopdcgatewayApp.RateType.PER_LITRE' | translate}}</option>
-                            <option value="PER_LITRE_SCORE">{{'niopdcgatewayApp.RateType.PER_LITRE_SCORE' |
+                            <option value="PERCENT">{{'samtagatewayApp.RateType.PERCENT' | translate}}</option>
+                            <option value="CONST">{{'samtagatewayApp.RateType.CONST' | translate}}</option>
+                            <option value="PER_LITRE">{{'samtagatewayApp.RateType.PER_LITRE' | translate}}</option>
+                            <option value="PER_LITRE_SCORE">{{'samtagatewayApp.RateType.PER_LITRE_SCORE' |
                                 translate}}
                             </option>
                         </select>
@@ -96,9 +96,9 @@
                         <select class="form-control" name="effect" (change)="search()"
                                 [(ngModel)]="cost.effect" id="field_effect">
                             <option></option>
-                            <option value="BASE">{{'niopdcgatewayApp.Effect.BASE' | translate}}</option>
-                            <option value="TOTAL">{{'niopdcgatewayApp.Effect.TOTAL' | translate}}</option>
-                            <option value="PARENT_COST">{{'niopdcgatewayApp.Effect.PARENT_COST' | translate}}</option>
+                            <option value="BASE">{{'samtagatewayApp.Effect.BASE' | translate}}</option>
+                            <option value="TOTAL">{{'samtagatewayApp.Effect.TOTAL' | translate}}</option>
+                            <option value="PARENT_COST">{{'samtagatewayApp.Effect.PARENT_COST' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -108,8 +108,8 @@
                                 [(ngModel)]="cost.costAction"
                                 id="field_costAction">
                             <option></option>
-                            <option value="REDUCER">{{'niopdcgatewayApp.CostAction.REDUCER' | translate}}</option>
-                            <option value="MULTIPLIER">{{'niopdcgatewayApp.CostAction.MULTIPLIER' | translate}}</option>
+                            <option value="REDUCER">{{'samtagatewayApp.CostAction.REDUCER' | translate}}</option>
+                            <option value="MULTIPLIER">{{'samtagatewayApp.CostAction.MULTIPLIER' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -126,33 +126,33 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="rateType" [header]="'niopdcgatewayApp.cost.rateType' | translate">
+        <p-column field="rateType" [header]="'samtagatewayApp.cost.rateType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.RateType.' + item.rateType}}">{{item.rateType}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.RateType.' + item.rateType}}">{{item.rateType}}</span>
             </ng-template>
         </p-column>
         <p-column
             *ngIf="costGroup.costGroupType === CostGroupType[CostGroupType.LADDER] || costGroup.costMethod == CostMethod[CostMethod.DEFUEL]"
-            field="startLitre" [header]="'niopdcgatewayApp.cost.startLitre' | translate">
+            field="startLitre" [header]="'samtagatewayApp.cost.startLitre' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.startLitre}}</span>
             </ng-template>
         </p-column>
         <p-column
             *ngIf="costGroup.costGroupType === CostGroupType[CostGroupType.LADDER] || costGroup.costMethod == CostMethod[CostMethod.DEFUEL]"
-            field="endLitre" [header]="'niopdcgatewayApp.cost.endLitre' | translate">
+            field="endLitre" [header]="'samtagatewayApp.cost.endLitre' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.endLitre}}</span>
             </ng-template>
         </p-column>
-        <p-column field="effect" [header]="'niopdcgatewayApp.cost.effect' | translate">
+        <p-column field="effect" [header]="'samtagatewayApp.cost.effect' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.Effect.' + item.effect}}">{{item.effect}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.Effect.' + item.effect}}">{{item.effect}}</span>
             </ng-template>
         </p-column>
-        <p-column field="costAction" [header]="'niopdcgatewayApp.cost.costAction' | translate">
+        <p-column field="costAction" [header]="'samtagatewayApp.cost.costAction' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.CostAction.' + item.costAction}}">{{item.costAction}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.CostAction.' + item.costAction}}">{{item.costAction}}</span>
             </ng-template>
         </p-column>
         <p-column class="component">
@@ -211,14 +211,14 @@
                                     *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_COST']"
                                     [routerLink]="['/cost-group/'+costGroupId +'/cost', item.id, 'cost']">
                                 <span class="fa fa-external-link"></span>
-                                <span jhiTranslate="niopdcgatewayApp.cost.home.title">Cost Rate</span>
+                                <span jhiTranslate="samtagatewayApp.cost.home.title">Cost Rate</span>
                             </button>
                         </ng-container>
                         <button class="dropdown-item"
                                 *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_COST_RATE']"
                                 [routerLink]="['/cost-group/'+costGroupId +'/cost', item.id, 'cost-rate']">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.costRate.home.title">Cost Rate</span>
+                            <span jhiTranslate="samtagatewayApp.costRate.home.title">Cost Rate</span>
                         </button>
                         <button class="dropdown-item"
                                 *jhiHasAnyAuthority="['ROLE_ADMIN', 'LIST_COST_ELEMENT']"
@@ -226,7 +226,7 @@
                                 ['/cost-group',costGroupId,'cost',item.id,'cost-element']"
                         >
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.costElement.home.title">Cost</span>
+                            <span jhiTranslate="samtagatewayApp.costElement.home.title">Cost</span>
                         </button>
                     </div>
                 </div>

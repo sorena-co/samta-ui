@@ -36,7 +36,7 @@ export const customerTypeProductConsumptionRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CUSTOMER_TYPE_PRODUCT_CONSUMPTION'],
-            pageTitle: 'niopdcgatewayApp.customerTypeProductConsumption.home.title'
+            pageTitle: 'samtagatewayApp.customerTypeProductConsumption.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const customerTypeProductConsumptionPopupRoute: Routes = [
     component: CustomerTypeProductConsumptionPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'CREATE_CUSTOMER_TYPE_PRODUCT_CONSUMPTION'],
-        pageTitle: 'niopdcgatewayApp.customerTypeProductConsumption.home.title'
+        pageTitle: 'samtagatewayApp.customerTypeProductConsumption.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -58,7 +58,7 @@ export const customerTypeProductConsumptionPopupRoute: Routes = [
     component: CustomerTypeProductConsumptionPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'EDIT_CUSTOMER_TYPE_PRODUCT_CONSUMPTION'],
-        pageTitle: 'niopdcgatewayApp.customerTypeProductConsumption.home.title'
+        pageTitle: 'samtagatewayApp.customerTypeProductConsumption.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -68,7 +68,7 @@ export const customerTypeProductConsumptionPopupRoute: Routes = [
     component: CustomerTypeProductConsumptionDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'DELETE_CUSTOMER_TYPE_PRODUCT_CONSUMPTION'],
-        pageTitle: 'niopdcgatewayApp.customerTypeProductConsumption.home.title'
+        pageTitle: 'samtagatewayApp.customerTypeProductConsumption.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -78,7 +78,7 @@ export const customerTypeProductConsumptionPopupRoute: Routes = [
       component: CustomerTypeProductConsumptionPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN', 'VIEW_CUSTOMER_TYPE_PRODUCT_CONSUMPTION'],
-          pageTitle: 'niopdcgatewayApp.customerTypeProductConsumption.home.title'
+          pageTitle: 'samtagatewayApp.customerTypeProductConsumption.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

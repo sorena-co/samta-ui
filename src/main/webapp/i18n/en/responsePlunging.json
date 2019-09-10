@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "responsePlunging" : {
             "home": {
                 "title": "Response Plungings",

@@ -35,7 +35,7 @@ export const sellContractPersonRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_SELL_CONTRACT_PERSON'],
-            pageTitle: 'niopdcgatewayApp.sellContractPerson.home.title'
+            pageTitle: 'samtagatewayApp.sellContractPerson.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -47,7 +47,7 @@ export const sellContractPersonPopupRoute: Routes = [
         component: SellContractPersonPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_SELL_CONTRACT_PERSON'],
-            pageTitle: 'niopdcgatewayApp.sellContractPerson.home.title'
+            pageTitle: 'samtagatewayApp.sellContractPerson.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -57,7 +57,7 @@ export const sellContractPersonPopupRoute: Routes = [
         component: SellContractPersonPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_SELL_CONTRACT_PERSON'],
-            pageTitle: 'niopdcgatewayApp.sellContractPerson.home.title'
+            pageTitle: 'samtagatewayApp.sellContractPerson.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -67,7 +67,7 @@ export const sellContractPersonPopupRoute: Routes = [
         component: SellContractPersonDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_SELL_CONTRACT_PERSON'],
-            pageTitle: 'niopdcgatewayApp.sellContractPerson.home.title'
+            pageTitle: 'samtagatewayApp.sellContractPerson.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -77,7 +77,7 @@ export const sellContractPersonPopupRoute: Routes = [
         component: SellContractPersonPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_SELL_CONTRACT_PERSON'],
-            pageTitle: 'niopdcgatewayApp.sellContractPerson.home.title'
+            pageTitle: 'samtagatewayApp.sellContractPerson.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

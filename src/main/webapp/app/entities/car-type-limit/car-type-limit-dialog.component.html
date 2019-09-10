@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="carTypeLimit.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.carTypeLimit.home.createLabel">
+            jhiTranslate="samtagatewayApp.carTypeLimit.home.createLabel">
             Create</h4>
         <h4 *ngIf="carTypeLimit.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.carTypeLimit.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.carTypeLimit.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.carTypeLimit.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.carTypeLimit.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTypeLimit.hour"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.carTypeLimit.hour"
                            for="field_hour">Hour</label>
                     <input [disabled]="isView" type="number" class="form-control" name="hour" id="field_hour"
                            [(ngModel)]="carTypeLimit.hour" required/>
@@ -39,7 +39,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTypeLimit.fromDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.carTypeLimit.fromDate"
                            for="field_fromDate">From Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00" id="field_fromDate"
@@ -63,7 +63,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTypeLimit.toDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.carTypeLimit.toDate"
                            for="field_toDate">To Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="23:59:59" id="field_toDate"
@@ -77,7 +77,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTypeLimit.location"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.carTypeLimit.location"
                            for="field_location">Location</label>
                     <input-location-selector [disabled]="isView" class="form-control"
                                              [(ngModel)]="carTypeLimit.locationId"

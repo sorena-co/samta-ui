@@ -36,7 +36,7 @@ export const responsePlungingRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_RESPONSE_PLUNGING'],
-            pageTitle: 'niopdcgatewayApp.responsePlunging.home.title'
+            pageTitle: 'samtagatewayApp.responsePlunging.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const responsePlungingPopupRoute: Routes = [
         component: ResponsePlungingPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_RESPONSE_PLUNGING'],
-            pageTitle: 'niopdcgatewayApp.responsePlunging.home.title'
+            pageTitle: 'samtagatewayApp.responsePlunging.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const responsePlungingPopupRoute: Routes = [
         component: ResponsePlungingPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_RESPONSE_PLUNGING'],
-            pageTitle: 'niopdcgatewayApp.responsePlunging.home.title'
+            pageTitle: 'samtagatewayApp.responsePlunging.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const responsePlungingPopupRoute: Routes = [
         component: ResponsePlungingDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_RESPONSE_PLUNGING'],
-            pageTitle: 'niopdcgatewayApp.responsePlunging.home.title'
+            pageTitle: 'samtagatewayApp.responsePlunging.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const responsePlungingPopupRoute: Routes = [
         component: ResponsePlungingPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_RESPONSE_PLUNGING'],
-            pageTitle: 'niopdcgatewayApp.responsePlunging.home.title'
+            pageTitle: 'samtagatewayApp.responsePlunging.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

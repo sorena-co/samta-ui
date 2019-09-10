@@ -36,7 +36,7 @@ export const roleRoute: Routes = [
         },
         data: {
             authorities: ['LIST_ROLE', 'ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.role.home.title'
+            pageTitle: 'samtagatewayApp.role.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const rolePopupRoute: Routes = [
         component: RolePopupComponent,
         data: {
             authorities: ['CREATE_ROLE', 'ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.role.home.title'
+            pageTitle: 'samtagatewayApp.role.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const rolePopupRoute: Routes = [
         component: RolePopupComponent,
         data: {
             authorities: ['EDIT_ROLE', 'ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.role.home.title'
+            pageTitle: 'samtagatewayApp.role.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const rolePopupRoute: Routes = [
         component: RoleDeletePopupComponent,
         data: {
             authorities: ['DELETE_ROLE', 'ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.role.home.title'
+            pageTitle: 'samtagatewayApp.role.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const rolePopupRoute: Routes = [
         component: RolePopupComponent,
         data: {
             authorities: ['VIEW_ROLE', 'ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.role.home.title'
+            pageTitle: 'samtagatewayApp.role.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

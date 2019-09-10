@@ -295,11 +295,11 @@ export class OrderDialogComponent implements OnInit {
             );
         });
         if (this.order && this.order.id) {
-            this.translateService.get('niopdcgatewayApp.sellContract.home.editLabel').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.sellContract.home.editLabel').subscribe((title) => {
                 this.mapSiteItems.push({label: title});
             });
         } else {
-            this.translateService.get('niopdcgatewayApp.sellContract.home.createLabel').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.sellContract.home.createLabel').subscribe((title) => {
                 this.mapSiteItems.push({label: title});
             });
 

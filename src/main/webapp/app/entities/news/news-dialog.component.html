@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.news.title"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.news.title"
                            for="field_title">Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="title" id="field_title"
                            [(ngModel)]="news.title" required/>
@@ -35,7 +35,7 @@
             <div class="col-md-4">
                 <div class="form-group">
 
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.news.startDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.news.startDate"
                            for="field_startDate">Start Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00" id="field_startDate"
@@ -59,7 +59,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.news.finishDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.news.finishDate"
                            for="field_finishDate">Finish Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="23:59:59" id="field_finishDate"
@@ -76,14 +76,14 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.news.newsType"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.news.newsType"
                                    for="field_newsType">News Type</label>
                             <select [disabled]="isView" class="form-control" name="newsType" [(ngModel)]="news.newsType"
                                     id="field_newsType" required>
-                                <option value="ALERT">{{'niopdcgatewayApp.NewsType.ALERT' | translate}}</option>
-                                <option value="NEWS">{{'niopdcgatewayApp.NewsType.NEWS' | translate}}</option>
-                                <option value="EVENT">{{'niopdcgatewayApp.NewsType.EVENT' | translate}}</option>
-                                <option value="INFO">{{'niopdcgatewayApp.NewsType.INFO' | translate}}</option>
+                                <option value="ALERT">{{'samtagatewayApp.NewsType.ALERT' | translate}}</option>
+                                <option value="NEWS">{{'samtagatewayApp.NewsType.NEWS' | translate}}</option>
+                                <option value="EVENT">{{'samtagatewayApp.NewsType.EVENT' | translate}}</option>
+                                <option value="INFO">{{'samtagatewayApp.NewsType.INFO' | translate}}</option>
                             </select>
                             <div [hidden]="!(editForm.controls.newsType?.dirty && editForm.controls.newsType?.invalid)">
                                 <small class="form-text text-danger"
@@ -96,13 +96,13 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.news.newsAccessType"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.news.newsAccessType"
                                    for="field_newsAccessType">News Access Type</label>
                             <select class="form-control" name="newsAccessType" [(ngModel)]="news.newsAccessType"
                                     id="field_newsAccessType" required>
-                                <option value="PUBLIC">{{'niopdcgatewayApp.NewsAccessType.PUBLIC' | translate}}
+                                <option value="PUBLIC">{{'samtagatewayApp.NewsAccessType.PUBLIC' | translate}}
                                 </option>
-                                <option value="INTERNAL">{{'niopdcgatewayApp.NewsAccessType.INTERNAL' | translate}}
+                                <option value="INTERNAL">{{'samtagatewayApp.NewsAccessType.INTERNAL' | translate}}
                                 </option>
                             </select>
                             <div
@@ -119,7 +119,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.news.picture"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.news.picture"
                                    for="field_picture">Picture</label>
                             <div>
                                 <img [src]="'data:' + news.pictureContentType + ';base64,' + news.picture"
@@ -149,7 +149,7 @@
             <div class="col-md-6" style="height: 100%"
                  *ngIf="news.newsAccessType===NewsAccessType[NewsAccessType.INTERNAL]">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.news.location" for="field_locations">Location</label>
+                    <label jhiTranslate="samtagatewayApp.news.location" for="field_locations">Location</label>
                     <input-location-selector [disabled]="isView" class="form-control" required
                                            [oneSelection]="false"
                                            [idSelector]="false"
@@ -172,7 +172,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.news.summary" for="field_summary">Summary</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.news.summary" for="field_summary">Summary</label>
                     <textarea [disabled]="isView" type="text" class="form-control" name="summary" id="field_summary"
                               [(ngModel)]="news.summary"></textarea>
                 </div>
@@ -181,7 +181,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <!--                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.news.content"
+                    <!--                    <label class="form-control-label" jhiTranslate="samtagatewayApp.news.content"
 
                                                for="field_content">Content</label>-->
 

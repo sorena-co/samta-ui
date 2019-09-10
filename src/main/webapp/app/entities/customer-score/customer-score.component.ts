@@ -153,10 +153,10 @@ currentAccount: any;
         this.translateService.get('global.menu.home').subscribe((title) => {
         this.breadcrumbItems.push({label: title, routerLink: ['/']});
             });
-        this.translateService.get('niopdcgatewayApp.customerScore.home.customerTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.customerScore.home.customerTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + ` (${this.customer.name})`, routerLink: ['/customer']});
         });
-        this.translateService.get('niopdcgatewayApp.customerScore.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.customerScore.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

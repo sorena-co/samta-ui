@@ -9,7 +9,7 @@ export const personRoute: Routes = [
         component: PersonComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_REPORT_PERSON'],
-            pageTitle: 'niopdcgatewayApp.person.home.title'
+            pageTitle: 'samtagatewayApp.person.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

@@ -20,12 +20,12 @@
             <p-row>
                 <p-column field="code" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.carRfId.code">Code</span>
+                        <span jhiTranslate="samtagatewayApp.carRfId.code">Code</span>
                     </ng-template>
                 </p-column>
                 <p-column field="active" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.carRfId.active">Active</span>
+                        <span jhiTranslate="samtagatewayApp.carRfId.active">Active</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -44,10 +44,10 @@
                         <select class="form-control" name="active" (change)="search()"
                                 [(ngModel)]="carRfId.active">
                             <option></option>
-                            <option value="true" jhiTranslate="niopdcgatewayApp.carRfId.activeTrue">
+                            <option value="true" jhiTranslate="samtagatewayApp.carRfId.activeTrue">
                                 true
                             </option>
-                            <option value="false" jhiTranslate="niopdcgatewayApp.carRfId.activeFalse">
+                            <option value="false" jhiTranslate="samtagatewayApp.carRfId.activeFalse">
                                 false
                             </option>
                         </select>
@@ -66,8 +66,8 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="code" [header]="'niopdcgatewayApp.carRfId.code' | translate"></p-column>
-        <p-column field="active" [header]="'niopdcgatewayApp.carRfId.active' | translate">
+        <p-column field="code" [header]="'samtagatewayApp.carRfId.code' | translate"></p-column>
+        <p-column field="active" [header]="'samtagatewayApp.carRfId.active' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span class="fa" [ngClass]="{'fa-check':item.active,'fa-close':!item.active}"></span>
             </ng-template>

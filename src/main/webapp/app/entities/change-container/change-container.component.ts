@@ -223,14 +223,14 @@ export class ChangeContainerComponent implements OnInit, OnDestroy {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
         if (this.mainDayDepotId) {
-            this.translateService.get('niopdcgatewayApp.transfer.home.mainDayDepotTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.transfer.home.mainDayDepotTitle').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: `${title} (${dateJalaliPipe.transform(this.mainDayDepot.day)})`,
                     routerLink: [mainDayDepotUrl]
                 });
             });
         } else if (this.mainDayOperationId) {
-            this.translateService.get('niopdcgatewayApp.mainDayOperation.home.title').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.mainDayOperation.home.title').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: `${title} (${dateJalaliPipe.transform(this.mainDayOperation.day)})`,
                     routerLink: [mainDayOperationUrl]
@@ -238,7 +238,7 @@ export class ChangeContainerComponent implements OnInit, OnDestroy {
             });
         }
         if (this.dayDepotContainerId != null) {
-            this.translateService.get('niopdcgatewayApp.changeContainer.home.dayDepotContainerTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.changeContainer.home.dayDepotContainerTitle').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: title + `(${this.dayDepotContainerTitle})`,
                     routerLink: [dayDepotContainerUrl]
@@ -246,14 +246,14 @@ export class ChangeContainerComponent implements OnInit, OnDestroy {
             });
         } else if (this.dayDepotId != null) {
             if (this.mainDayOperationId) {
-                this.translateService.get('niopdcgatewayApp.changeContainer.home.dayDepotTitle').subscribe((title) => {
+                this.translateService.get('samtagatewayApp.changeContainer.home.dayDepotTitle').subscribe((title) => {
                     this.breadcrumbItems.push({
                         label: title + `(${this.dayDepot.oilTankTitle})`,
                         routerLink: [dayDepotOperationUrl]
                     });
                 });
             } else if (this.mainDayDepotId) {
-                this.translateService.get('niopdcgatewayApp.changeContainer.home.dayDepotTitle').subscribe((title) => {
+                this.translateService.get('samtagatewayApp.changeContainer.home.dayDepotTitle').subscribe((title) => {
                     this.breadcrumbItems.push({
                         label: title + `(${this.dayDepot.oilTankTitle})`,
                         routerLink: [dayDepotUrl]
@@ -261,7 +261,7 @@ export class ChangeContainerComponent implements OnInit, OnDestroy {
                 });
             }
         }
-        this.translateService.get('niopdcgatewayApp.changeContainer.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.changeContainer.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

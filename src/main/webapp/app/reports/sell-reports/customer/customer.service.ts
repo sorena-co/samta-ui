@@ -37,7 +37,7 @@ export class CustomerService {
      */
     private convertItemFromServer(customer: CustomerReport): CustomerReport {
         const copy: CustomerReport = Object.assign({}, customer);
-        this.translateService.get('niopdcgatewayApp.CustomerGroup.' + copy.customerGroupTitle).subscribe((title) => {
+        this.translateService.get('samtagatewayApp.CustomerGroup.' + copy.customerGroupTitle).subscribe((title) => {
             copy.customerGroupTitle = title;
         });
         copy.registerDate = new DateTimeJalaliPipe().transform(copy.registerDate);

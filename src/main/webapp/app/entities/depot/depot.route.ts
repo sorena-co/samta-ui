@@ -36,7 +36,7 @@ export const depotRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.depot.home.title'
+            pageTitle: 'samtagatewayApp.depot.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const depotPopupRoute: Routes = [
         component: DepotPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.depot.home.title'
+            pageTitle: 'samtagatewayApp.depot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const depotPopupRoute: Routes = [
         component: DepotPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.depot.home.title'
+            pageTitle: 'samtagatewayApp.depot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const depotPopupRoute: Routes = [
         component: DepotDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.depot.home.title'
+            pageTitle: 'samtagatewayApp.depot.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const depotPopupRoute: Routes = [
         component: DepotPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_DEPOT'],
-            pageTitle: 'niopdcgatewayApp.bank.home.title'
+            pageTitle: 'samtagatewayApp.bank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

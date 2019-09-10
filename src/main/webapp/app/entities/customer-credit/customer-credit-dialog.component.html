@@ -2,13 +2,13 @@
 
     <div class="modal-header">
         <h4 *ngIf="customerCredit.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.{{customerCredit.personId?'personCredit':'customerCredit'}}.home.createLabel">
+            jhiTranslate="samtagatewayApp.{{customerCredit.personId?'personCredit':'customerCredit'}}.home.createLabel">
             Create</h4>
         <h4 *ngIf="customerCredit.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.{{customerCredit.personId?'personCredit':'customerCredit'}}.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.{{customerCredit.personId?'personCredit':'customerCredit'}}.home.createOrEditLabel">
             Edit</h4>
         <h4 *ngIf="isView" class="modal-title" id="viewLabel"
-            jhiTranslate="niopdcgatewayApp.{{customerCredit.personId?'personCredit':'customerCredit'}}.home.view">
+            jhiTranslate="samtagatewayApp.{{customerCredit.personId?'personCredit':'customerCredit'}}.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.startDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerCredit.startDate"
                            for="field_startDate">Start Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="true" [disabled]="isView" [rtlActive]="true" time="00:00:00"
@@ -45,7 +45,7 @@
             <div class="col-xs-12 col-md-6"
             >
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.finishDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerCredit.finishDate"
                            for="field_finishDate">Finish Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="true" [disabled]="isView" [rtlActive]="true" time="23:59:59"
@@ -72,7 +72,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-3" [hidden]="!customerCredit.id">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.creditNumber"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerCredit.creditNumber"
                            for="field_creditNumber">Credit Number</label>
                     <input disabled type="text" class
                         ="form-control" name="creditNumber" id="field_creditNumber"
@@ -91,7 +91,7 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.parentBuyType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerCredit.parentBuyType"
                            for="field_parentBuyType">Parent Credit</label>
                     <select
                         class="form-control"
@@ -111,7 +111,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-3" *ngIf="customerCredit.parentBuyGroup !== buyGroup[buyGroup.QUOTA]">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.credit"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerCredit.credit"
                            for="field_credit">Credit</label>
                     <input [disabled]="isView || customerCredit.parentTypeEffect === typeEffect[typeEffect.AMOUNT]"
                            type="number"
@@ -132,7 +132,7 @@
                             This field should be a number.
                         </small>
                         <small class="form-text text-danger"
-                               jhiTranslate="niopdcgatewayApp.customerCredit.creditError">
+                               jhiTranslate="samtagatewayApp.customerCredit.creditError">
                             This field should be a number.
                         </small>
                     </div>
@@ -140,7 +140,7 @@
             </div>
             <div class="col-xs-12 col-md-3" *ngIf="customerCredit.parentBuyGroup !== buyGroup[buyGroup.QUOTA]">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.currentCredit"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerCredit.currentCredit"
                            for="field_currentCredit">Current Credit</label>
                     <input disabled type="number" class="form-control" name="currentCredit"
                            id="field_currentCredit"
@@ -150,7 +150,7 @@
             </div>
             <div class="col-xs-12 col-md-3" *ngIf="customerCredit.parentBuyGroup!==buyGroup[buyGroup.CREDIT]">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.amount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerCredit.amount"
                            for="field_amount">Amount</label>
                     <input [disabled]="isView || customerCredit.parentTypeEffect===typeEffect[typeEffect.CREDIT]"
                            type="number"
@@ -176,7 +176,7 @@
             </div>
             <div class="col-xs-12 col-md-3" *ngIf="customerCredit.parentBuyGroup!==buyGroup[buyGroup.CREDIT]">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.currentAmount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerCredit.currentAmount"
                            for="field_currentAmount">Current Amount</label>
                     <input [disabled]="isView" disabled type="number" class="form-control" name="currentAmount"
                            id="field_currentAmount"
@@ -186,7 +186,7 @@
             </div>
             <div class="col-xs-12 col-md-4" *ngIf="(customerId ) && !sellContractProductId">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.product"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerCredit.product"
                            for="field_product">Product</label>
                     <sell-contract-product-selector
                         [multiSelect]="false"
@@ -216,7 +216,7 @@
             </div>
             <div class="col-xs-12 col-md-4" *ngIf="customerCredit.parentTypeEffect!==typeEffect[typeEffect.AMOUNT]">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.customerCredit.currencyId"
+                    <label jhiTranslate="samtagatewayApp.customerCredit.currencyId"
                            for="field_currency">Currency</label>
                     <select [disabled]="isView" class="form-control" id="field_currency"
                             (change)="changeCurrency()" name="currency"
@@ -242,7 +242,7 @@
             <div class="col-xs-12 col-md-4" *ngIf="customerCredit.parentBuyGroup===buyGroup[buyGroup.FINANCIAL_LICENSE]||customerCredit.parentBuyGroup===buyGroup[buyGroup.CREDIT]">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.customerCredit.currencyRateGroupId"
+                           jhiTranslate="samtagatewayApp.customerCredit.currencyRateGroupId"
                            for="field_currencyRateGroupId">Currency Rate Type</label>
                     <select class="form-control" name="currencyRateGroupId"
                             [disabled]="isView"
@@ -261,7 +261,7 @@
 
             <div *ngIf="customerCredit.parentTypeEffect=='CREDIT'|| customerCredit.parentTypeEffect=='BOTH'" class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.minCredit"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerCredit.minCredit"
                            for="field_minCredit">minCredit</label>
                     <input [disabled]="isView" type="number" class="form-control" name="minCredit" id="field_minCredit"
                            [(ngModel)]="customerCredit.minCredit"/>
@@ -269,7 +269,7 @@
             </div>
             <div *ngIf="customerCredit.parentTypeEffect=='AMOUNT'|| customerCredit.parentTypeEffect=='BOTH'" class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerCredit.minAmount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerCredit.minAmount"
                            for="field_minAmount">minAmount</label>
                     <input [disabled]="isView" type="number" class="form-control" name="minAmount" id="field_minAmount"
                            [(ngModel)]="customerCredit.minAmount"/>

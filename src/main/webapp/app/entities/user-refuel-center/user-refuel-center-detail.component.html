@@ -1,18 +1,18 @@
 
 <div *ngIf="userRefuelCenter">
-    <h2><span jhiTranslate="niopdcgatewayApp.userRefuelCenter.detail.title">User RefuelCenter</span> {{userRefuelCenter.id}}</h2>
+    <h2><span jhiTranslate="samtagatewayApp.userRefuelCenter.detail.title">User RefuelCenter</span> {{userRefuelCenter.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
-        <dt><span jhiTranslate="niopdcgatewayApp.userRefuelCenter.username">Username</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.userRefuelCenter.username">Username</span></dt>
         <dd>
             <span>{{userRefuelCenter.username}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.userRefuelCenter.accessType">Access Type</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.userRefuelCenter.accessType">Access Type</span></dt>
         <dd>
-            <span jhiTranslate="{{'niopdcgatewayApp.AccessType.' + userRefuelCenter.accessType}}">{{userRefuelCenter.accessType}}</span>
+            <span jhiTranslate="{{'samtagatewayApp.AccessType.' + userRefuelCenter.accessType}}">{{userRefuelCenter.accessType}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.userRefuelCenter.refuelCenter">RefuelCenter</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.userRefuelCenter.refuelCenter">RefuelCenter</span></dt>
         <dd>
             <span *ngFor="let refuelCenter of userRefuelCenter.refuelCenters; let last = last">
                 <a [routerLink]="['/refuel-center', refuelCenter?.id ]">{{refuelCenter.persianTitle}}</a>{{last ? '' : ', '}}

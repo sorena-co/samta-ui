@@ -1,7 +1,7 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="myVoucherItemLabel" jhiTranslate="niopdcgatewayApp.voucherItem.home.createOrEditLabel">Create or edit a Voucher Item</h4>
+        <h4 class="modal-title" id="myVoucherItemLabel" jhiTranslate="samtagatewayApp.voucherItem.home.createOrEditLabel">Create or edit a Voucher Item</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;</button>
     </div>
@@ -13,7 +13,7 @@
                    [(ngModel)]="voucherItem.id" readonly />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherItem.rowNo" for="field_rowNo">Row No</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherItem.rowNo" for="field_rowNo">Row No</label>
             <input type="number" class="form-control" name="rowNo" id="field_rowNo"
                 [(ngModel)]="voucherItem.rowNo" required/>
             <div [hidden]="!(editForm.controls.rowNo?.dirty && editForm.controls.rowNo?.invalid)">
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherItem.extra" for="field_extra">Extra</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherItem.extra" for="field_extra">Extra</label>
             <input type="text" class="form-control" name="extra" id="field_extra"
                 [(ngModel)]="voucherItem.extra" required maxlength="20"/>
             <div [hidden]="!(editForm.controls.extra?.dirty && editForm.controls.extra?.invalid)">
@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherItem.special" for="field_special">Special</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherItem.special" for="field_special">Special</label>
             <input type="text" class="form-control" name="special" id="field_special"
                 [(ngModel)]="voucherItem.special" required maxlength="20"/>
             <div [hidden]="!(editForm.controls.special?.dirty && editForm.controls.special?.invalid)">
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherItem.credit" for="field_credit">Credit</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherItem.credit" for="field_credit">Credit</label>
             <input type="number" class="form-control" name="credit" id="field_credit"
                 [(ngModel)]="voucherItem.credit" required/>
             <div [hidden]="!(editForm.controls.credit?.dirty && editForm.controls.credit?.invalid)">
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherItem.debit" for="field_debit">Debit</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherItem.debit" for="field_debit">Debit</label>
             <input type="number" class="form-control" name="debit" id="field_debit"
                 [(ngModel)]="voucherItem.debit" required/>
             <div [hidden]="!(editForm.controls.debit?.dirty && editForm.controls.debit?.invalid)">
@@ -88,7 +88,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherItem.description" for="field_description">Description</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherItem.description" for="field_description">Description</label>
             <input type="text" class="form-control" name="description" id="field_description"
                 [(ngModel)]="voucherItem.description" minlength="3" maxlength="200"/>
             <div [hidden]="!(editForm.controls.description?.dirty && editForm.controls.description?.invalid)">
@@ -103,7 +103,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherItem.accountNo" for="field_accountNo">Account No</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherItem.accountNo" for="field_accountNo">Account No</label>
             <input type="text" class="form-control" name="accountNo" id="field_accountNo"
                 [(ngModel)]="voucherItem.accountNo" required maxlength="23"/>
             <div [hidden]="!(editForm.controls.accountNo?.dirty && editForm.controls.accountNo?.invalid)">
@@ -118,7 +118,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherItem.suffix" for="field_suffix">Suffix</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherItem.suffix" for="field_suffix">Suffix</label>
             <input type="text" class="form-control" name="suffix" id="field_suffix"
                 [(ngModel)]="voucherItem.suffix" required maxlength="8"/>
             <div [hidden]="!(editForm.controls.suffix?.dirty && editForm.controls.suffix?.invalid)">
@@ -133,13 +133,13 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherItem.key" for="field_key">Key</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherItem.key" for="field_key">Key</label>
             <input type="text" class="form-control" name="key" id="field_key"
                 [(ngModel)]="voucherItem.key" />
         </div>
 
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.voucherItem.voucherMaster" for="field_voucherMaster">Voucher Master</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.voucherItem.voucherMaster" for="field_voucherMaster">Voucher Master</label>
             <select class="form-control" id="field_voucherMaster" name="voucherMaster" [(ngModel)]="voucherItem.voucherMasterId"  required>
                 <option *ngIf="!editForm.value.voucherMaster" [ngValue]="null" selected></option>
                 <option [ngValue]="voucherMasterOption.id" *ngFor="let voucherMasterOption of vouchermasters; trackBy: trackVoucherMasterById">{{voucherMasterOption.id}}</option>

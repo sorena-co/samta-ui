@@ -166,7 +166,7 @@ export class OilTankComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.oilTank.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.oilTank.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

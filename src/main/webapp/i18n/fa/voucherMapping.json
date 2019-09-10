@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "voucherMapping" : {
             "home": {
                 "title": "نگاشت های سند",

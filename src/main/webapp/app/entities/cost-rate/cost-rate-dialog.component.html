@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="costRate.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.costRate.home.createLabel">
+            jhiTranslate="samtagatewayApp.costRate.home.createLabel">
             Create</h4>
         <h4 *ngIf="costRate.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.costRate.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.costRate.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.costRate.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.costRate.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.costRate.startDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.costRate.startDate"
                            for="field_startDate">Start Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="true" [disabled]="isView" [rtlActive]="true" time="00:00:00"
@@ -43,7 +43,7 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.costRate.finishDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.costRate.finishDate"
                            for="field_finishDate">Finish Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="true" [disabled]="isView" [rtlActive]="true" time="23:59:59"
@@ -56,7 +56,7 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.costRate.rate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.costRate.rate"
                            for="field_rate1">Rate</label>
                     <input [disabled]="isView" type="number" *ngIf="!isPercent" class="form-control" name="rate"
                            id="field_rate1"
@@ -89,7 +89,7 @@
             </div>
             <div class="col-xs-12 col-md-3" *ngIf="cost && cost.rateType!==RateType[RateType.PERCENT]">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.costRate.currency" for="field_currency">Currency</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.costRate.currency" for="field_currency">Currency</label>
                     <select class="form-control" id="field_currency" name="currency" [(ngModel)]="costRate.currencyId" [required]="cost && cost.rateType!==RateType[RateType.PERCENT]">
                         <option [ngValue]="null"></option>
                         <option [ngValue]="currencyOption.id" *ngFor="let currencyOption of currencies; trackBy: trackCurrencyById">{{currencyOption.title}}</option>

@@ -10,7 +10,7 @@ export const aircraftRefuelingRecordRoute: Routes = [
         component: AircraftRefuelingRecordComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'ROLE_AIRCRAFT_REFUELING_RECORD'],
-            pageTitle: 'niopdcgatewayApp.aircraftRefuelingRecord.home.title'
+            pageTitle: 'samtagatewayApp.aircraftRefuelingRecord.home.title'
         },
         canActivate: [UserRouteAccessService]
     }

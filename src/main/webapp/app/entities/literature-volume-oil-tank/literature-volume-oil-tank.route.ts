@@ -36,7 +36,7 @@ export const literatureVolumeOilTankRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_LITERATURE_VOLUME_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.literatureVolumeOilTank.home.title'
+            pageTitle: 'samtagatewayApp.literatureVolumeOilTank.home.title'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -48,7 +48,7 @@ export const literatureVolumeOilTankRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_LITERATURE_VOLUME_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.literatureVolumeOilTank.home.title'
+            pageTitle: 'samtagatewayApp.literatureVolumeOilTank.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -60,7 +60,7 @@ export const literatureVolumeOilTankPopupRoute: Routes = [
         component: LiteratureVolumeOilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_LITERATURE_VOLUME_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.literatureVolumeOilTank.home.title'
+            pageTitle: 'samtagatewayApp.literatureVolumeOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -70,7 +70,7 @@ export const literatureVolumeOilTankPopupRoute: Routes = [
         component: LiteratureVolumeOilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_LITERATURE_VOLUME_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.literatureVolumeOilTank.home.title'
+            pageTitle: 'samtagatewayApp.literatureVolumeOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -80,7 +80,7 @@ export const literatureVolumeOilTankPopupRoute: Routes = [
         component: LiteratureVolumeOilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_LITERATURE_VOLUME_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.literatureVolumeOilTank.home.title'
+            pageTitle: 'samtagatewayApp.literatureVolumeOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -90,7 +90,7 @@ export const literatureVolumeOilTankPopupRoute: Routes = [
         component: LiteratureVolumeOilTankDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_LITERATURE_VOLUME_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.literatureVolumeOilTank.home.title'
+            pageTitle: 'samtagatewayApp.literatureVolumeOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -100,7 +100,7 @@ export const literatureVolumeOilTankPopupRoute: Routes = [
         component: LiteratureVolumeOilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_LITERATURE_VOLUME_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.literatureVolumeOilTank.home.title'
+            pageTitle: 'samtagatewayApp.literatureVolumeOilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

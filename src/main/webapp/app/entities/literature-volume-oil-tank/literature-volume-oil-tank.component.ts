@@ -227,18 +227,18 @@ export class LiteratureVolumeOilTankComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.literatureVolumeOilTank.home.oilTankTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.literatureVolumeOilTank.home.oilTankTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: `${title} (${this.oilTank.title})`, routerLink: ['/oil-tank']});
         });
         if (this.serviceOilTankId != null && this.serviceOilTank != null) {
-            this.translateService.get('niopdcgatewayApp.literatureVolumeOilTank.home.serviceOilTankTitle').subscribe((title) => {
+            this.translateService.get('samtagatewayApp.literatureVolumeOilTank.home.serviceOilTankTitle').subscribe((title) => {
                 this.breadcrumbItems.push({
                     label: `${title} (${this.serviceOilTank.title})`,
                     routerLink: ['/oil-tank/' + this.oilTankId + '/service-oil-tank']
                 });
             });
         }
-        this.translateService.get('niopdcgatewayApp.literatureVolumeOilTank.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.literatureVolumeOilTank.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

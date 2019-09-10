@@ -16,7 +16,7 @@
         <div class="col-md-6">
             <div class="row">
                 <div class="col-md-3">
-                    <span><label jhiTranslate="niopdcgatewayApp.order.price">Price</label></span>
+                    <span><label jhiTranslate="samtagatewayApp.order.price">Price</label></span>
                 </div>
                 <div class="col-md-6">
                     <input [disabled]="true" type="number" class="form-control" name="price" id="field_price"
@@ -27,7 +27,7 @@
                     <button class="btn btn-success"
                             (click)="payment()">
                         <span class="fa fa-credit-card"></span>
-                        <span jhiTranslate="niopdcgatewayApp.order.paymentCredit">paymentFinal</span>
+                        <span jhiTranslate="samtagatewayApp.order.paymentCredit">paymentFinal</span>
                     </button>
                 </div>
             </div>
@@ -51,37 +51,37 @@
                 </p-column>
                 <p-column field="customerId" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.customerId">Customer Id</span>
+                        <span jhiTranslate="samtagatewayApp.order.customerId">Customer Id</span>
                     </ng-template>
                 </p-column>
                 <p-column field="personId" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.personId">Customer Id</span>
+                        <span jhiTranslate="samtagatewayApp.order.personId">Customer Id</span>
                     </ng-template>
                 </p-column>
                 <p-column field="locationId" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.locationId">Location Id</span>
+                        <span jhiTranslate="samtagatewayApp.order.locationId">Location Id</span>
                     </ng-template>
                 </p-column>
                 <p-column field="orderNo" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.orderNo">Order No</span>
+                        <span jhiTranslate="samtagatewayApp.order.orderNo">Order No</span>
                     </ng-template>
                 </p-column>
                 <p-column field="registerDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.registerDate">Register Date</span>
+                        <span jhiTranslate="samtagatewayApp.order.registerDate">Register Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="priceAmount" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.priceAmount">priceAmount</span>
+                        <span jhiTranslate="samtagatewayApp.order.priceAmount">priceAmount</span>
                     </ng-template>
                 </p-column>
                 <p-column field="depotId" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.order.depotId">Depot Id</span>
+                        <span jhiTranslate="samtagatewayApp.order.depotId">Depot Id</span>
                     </ng-template>
                 </p-column>
             </p-row>
@@ -149,17 +149,17 @@
             </p-row>
         </p-headerColumnGroup>
         <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
-        <p-column field="customerName" [header]="'niopdcgatewayApp.order.customerId' | translate"></p-column>
-        <p-column field="personName" [header]="'niopdcgatewayApp.order.personTitle' | translate"></p-column>
-        <p-column field="locationName" [header]="'niopdcgatewayApp.order.locationId' | translate"></p-column>
-        <p-column field="orderNo" [header]="'niopdcgatewayApp.order.orderNo' | translate"></p-column>
-        <p-column field="registerDate" [header]="'niopdcgatewayApp.order.registerDate' | translate">
+        <p-column field="customerName" [header]="'samtagatewayApp.order.customerId' | translate"></p-column>
+        <p-column field="personName" [header]="'samtagatewayApp.order.personTitle' | translate"></p-column>
+        <p-column field="locationName" [header]="'samtagatewayApp.order.locationId' | translate"></p-column>
+        <p-column field="orderNo" [header]="'samtagatewayApp.order.orderNo' | translate"></p-column>
+        <p-column field="registerDate" [header]="'samtagatewayApp.order.registerDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.registerDate | dateJalali}}</span>
             </ng-template>
         </p-column>
-        <p-column field="price" [header]="'niopdcgatewayApp.order.priceAmount' | translate"></p-column>
-        <p-column field="depotTitle" [header]="'niopdcgatewayApp.order.depotId' | translate"></p-column>
+        <p-column field="price" [header]="'samtagatewayApp.order.priceAmount' | translate"></p-column>
+        <p-column field="depotTitle" [header]="'samtagatewayApp.order.depotId' | translate"></p-column>
     </p-dataTable>
 
 </div>

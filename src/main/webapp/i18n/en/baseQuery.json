@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "baseQuery" : {
             "home": {
                 "title": "Base Queries",

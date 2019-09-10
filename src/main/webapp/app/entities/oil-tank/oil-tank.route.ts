@@ -36,7 +36,7 @@ export const oilTankRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.oilTank.home.title'
+            pageTitle: 'samtagatewayApp.oilTank.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const oilTankPopupRoute: Routes = [
         component: OilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.oilTank.home.title'
+            pageTitle: 'samtagatewayApp.oilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const oilTankPopupRoute: Routes = [
         component: OilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.oilTank.home.title'
+            pageTitle: 'samtagatewayApp.oilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const oilTankPopupRoute: Routes = [
         component: OilTankDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.oilTank.home.title'
+            pageTitle: 'samtagatewayApp.oilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const oilTankPopupRoute: Routes = [
         component: OilTankPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_OIL_TANK'],
-            pageTitle: 'niopdcgatewayApp.oilTank.home.title'
+            pageTitle: 'samtagatewayApp.oilTank.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

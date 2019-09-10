@@ -40,7 +40,7 @@ export const personRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_PERSON'],
-            pageTitle: 'niopdcgatewayApp.person.home.title'
+            pageTitle: 'samtagatewayApp.person.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -51,7 +51,7 @@ export const personRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_STAKEHOLDER'],
-            pageTitle: 'niopdcgatewayApp.stakeholder.home.title'
+            pageTitle: 'samtagatewayApp.stakeholder.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -63,7 +63,7 @@ export const personPopupRoute: Routes = [
         component: PersonRegisterDialogComponent,
         data: {
             authorities: [],
-            pageTitle: 'niopdcgatewayApp.person.home.title',
+            pageTitle: 'samtagatewayApp.person.home.title',
             created: false
         }
     },
@@ -72,7 +72,7 @@ export const personPopupRoute: Routes = [
         component: PersonRegisterDialogComponent,
         data: {
             authorities: [],
-            pageTitle: 'niopdcgatewayApp.person.home.title',
+            pageTitle: 'samtagatewayApp.person.home.title',
             created: true
         }
     },
@@ -81,7 +81,7 @@ export const personPopupRoute: Routes = [
         component: PersonCreateUserPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_USER'],
-            pageTitle: 'niopdcgatewayApp.person.home.titleCreateUser'
+            pageTitle: 'samtagatewayApp.person.home.titleCreateUser'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -90,7 +90,7 @@ export const personPopupRoute: Routes = [
         component: PersonCreateUserPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_USER'],
-            pageTitle: 'niopdcgatewayApp.person.home.titleEditUser'
+            pageTitle: 'samtagatewayApp.person.home.titleEditUser'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -100,7 +100,7 @@ export const personPopupRoute: Routes = [
         component: PersonPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_PERSON'],
-            pageTitle: 'niopdcgatewayApp.person.home.title'
+            pageTitle: 'samtagatewayApp.person.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -109,7 +109,7 @@ export const personPopupRoute: Routes = [
         component: PersonPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_STAKEHOLDER'],
-            pageTitle: 'niopdcgatewayApp.stakeholder.home.title'
+            pageTitle: 'samtagatewayApp.stakeholder.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -119,7 +119,7 @@ export const personPopupRoute: Routes = [
         component: PersonPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_PERSON'],
-            pageTitle: 'niopdcgatewayApp.person.home.title'
+            pageTitle: 'samtagatewayApp.person.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -129,7 +129,7 @@ export const personPopupRoute: Routes = [
         component: PersonPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_STAKEHOLDER'],
-            pageTitle: 'niopdcgatewayApp.stakeholder.home.title',
+            pageTitle: 'samtagatewayApp.stakeholder.home.title',
             stakeholder: true
         },
         canActivate: [UserRouteAccessService],
@@ -140,7 +140,7 @@ export const personPopupRoute: Routes = [
         component: PersonDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_PERSON'],
-            pageTitle: 'niopdcgatewayApp.person.home.title'
+            pageTitle: 'samtagatewayApp.person.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -150,7 +150,7 @@ export const personPopupRoute: Routes = [
         component: StakeholderDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_STAKEHOLDER'],
-            pageTitle: 'niopdcgatewayApp.person.home.title'
+            pageTitle: 'samtagatewayApp.person.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -159,7 +159,7 @@ export const personPopupRoute: Routes = [
         component: PersonChangeStatusPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CONFIRM_PERSON'],
-            pageTitle: 'niopdcgatewayApp.person.home.title',
+            pageTitle: 'samtagatewayApp.person.home.title',
             status:'active'
 
         },
@@ -170,7 +170,7 @@ export const personPopupRoute: Routes = [
         component: PersonChangeStatusPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CONFIRM_PERSON'],
-            pageTitle: 'niopdcgatewayApp.person.home.title',
+            pageTitle: 'samtagatewayApp.person.home.title',
             status:'de-active'
         },
         canActivate: [UserRouteAccessService],
@@ -180,7 +180,7 @@ export const personPopupRoute: Routes = [
         component: PersonChangeStatusPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CONFIRM_PERSON'],
-            pageTitle: 'niopdcgatewayApp.person.home.title',
+            pageTitle: 'samtagatewayApp.person.home.title',
             status:'reject'
 
         },
@@ -192,7 +192,7 @@ export const personPopupRoute: Routes = [
         component: PersonPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_PERSON'],
-            pageTitle: 'niopdcgatewayApp.person.home.title'
+            pageTitle: 'samtagatewayApp.person.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -202,7 +202,7 @@ export const personPopupRoute: Routes = [
         component: PersonPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_STAKEHOLDER'],
-            pageTitle: 'niopdcgatewayApp.stakeholder.home.title'
+            pageTitle: 'samtagatewayApp.stakeholder.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

@@ -171,10 +171,10 @@ export class FactorItemComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
         this.breadcrumbItems.push({label: title, routerLink: ['/']});
             });
-        this.translateService.get('niopdcgatewayApp.factorItem.home.factorTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.factorItem.home.factorTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + ` (${this.factor.factorNo})`, routerLink: ['/factor']});
         });
-        this.translateService.get('niopdcgatewayApp.factorItem.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.factorItem.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

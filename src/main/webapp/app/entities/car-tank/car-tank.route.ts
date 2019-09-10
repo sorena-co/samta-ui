@@ -33,7 +33,7 @@ export const carTankRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CAR_TANK'],
-            pageTitle: 'niopdcgatewayApp.carTank.home.title'
+            pageTitle: 'samtagatewayApp.carTank.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const carTankPopupRoute: Routes = [
     component: CarTankPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_CAR_TANK'],
-        pageTitle: 'niopdcgatewayApp.carTank.home.title'
+        pageTitle: 'samtagatewayApp.carTank.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const carTankPopupRoute: Routes = [
     component: CarTankPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_CAR_TANK'],
-        pageTitle: 'niopdcgatewayApp.carTank.home.title'
+        pageTitle: 'samtagatewayApp.carTank.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const carTankPopupRoute: Routes = [
     component: CarTankDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_CAR_TANK'],
-        pageTitle: 'niopdcgatewayApp.carTank.home.title'
+        pageTitle: 'samtagatewayApp.carTank.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const carTankPopupRoute: Routes = [
       component: CarTankPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_CAR_TANK'],
-          pageTitle: 'niopdcgatewayApp.carTank.home.title'
+          pageTitle: 'samtagatewayApp.carTank.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

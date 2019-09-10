@@ -21,22 +21,22 @@
             <p-row>
                 <p-column field="title" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.news.title">Title</span>
+                        <span jhiTranslate="samtagatewayApp.news.title">Title</span>
                     </ng-template>
                 </p-column>
                 <p-column field="startDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.news.startDate">Start Date</span>
+                        <span jhiTranslate="samtagatewayApp.news.startDate">Start Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="finishDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.news.finishDate">Finish Date</span>
+                        <span jhiTranslate="samtagatewayApp.news.finishDate">Finish Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="newsType" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.news.newsType">News Type</span>
+                        <span jhiTranslate="samtagatewayApp.news.newsType">News Type</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -71,10 +71,10 @@
                         <select class="form-control" name="newsType" (change)="search()"
                                 [(ngModel)]="news.newsType" id="field_newsType">
                             <option></option>
-                            <option value="ALERT">{{'niopdcgatewayApp.NewsType.ALERT' | translate}}</option>
-                            <option value="NEWS">{{'niopdcgatewayApp.NewsType.NEWS' | translate}}</option>
-                            <option value="EVENT">{{'niopdcgatewayApp.NewsType.EVENT' | translate}}</option>
-                            <option value="INFO">{{'niopdcgatewayApp.NewsType.INFO' | translate}}</option>
+                            <option value="ALERT">{{'samtagatewayApp.NewsType.ALERT' | translate}}</option>
+                            <option value="NEWS">{{'samtagatewayApp.NewsType.NEWS' | translate}}</option>
+                            <option value="EVENT">{{'samtagatewayApp.NewsType.EVENT' | translate}}</option>
+                            <option value="INFO">{{'samtagatewayApp.NewsType.INFO' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -91,18 +91,18 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="title" [header]="'niopdcgatewayApp.news.title' | translate"></p-column>
-        <p-column field="startDate" [header]="'niopdcgatewayApp.news.startDate' | translate">
+        <p-column field="title" [header]="'samtagatewayApp.news.title' | translate"></p-column>
+        <p-column field="startDate" [header]="'samtagatewayApp.news.startDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.startDate | dateJalali}}</span>
             </ng-template></p-column>
-        <p-column field="finishDate" [header]="'niopdcgatewayApp.news.finishDate' | translate">
+        <p-column field="finishDate" [header]="'samtagatewayApp.news.finishDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.finishDate | dateJalali}}</span>
             </ng-template></p-column>
-        <p-column field="newsType" [header]="'niopdcgatewayApp.news.newsType' | translate">
+        <p-column field="newsType" [header]="'samtagatewayApp.news.newsType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.NewsType.' + item.newsType}}">{{item.newsType}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.NewsType.' + item.newsType}}">{{item.newsType}}</span>
             </ng-template></p-column>
         <p-column class="component">
             <ng-template let-item="rowData" pTemplate="body">

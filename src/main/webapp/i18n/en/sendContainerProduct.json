@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "sendContainerProduct" : {
             "home": {
                 "title": "Send Container Products",

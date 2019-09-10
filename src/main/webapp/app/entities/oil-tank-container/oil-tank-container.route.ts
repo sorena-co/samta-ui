@@ -36,7 +36,7 @@ export const oilTankContainerRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_OIL_TANK_CONTAINER','LIST_OIL_TANK_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.oilTankContainer.home.title'
+            pageTitle: 'samtagatewayApp.oilTankContainer.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const oilTankContainerPopupRoute: Routes = [
         component: OilTankContainerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_OIL_TANK_CONTAINER', 'CREATE_OIL_TANK_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.oilTankContainer.home.title'
+            pageTitle: 'samtagatewayApp.oilTankContainer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -59,7 +59,7 @@ export const oilTankContainerPopupRoute: Routes = [
         component: OilTankContainerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_OIL_TANK_CONTAINER', 'EDIT_OIL_TANK_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.oilTankContainer.home.title'
+            pageTitle: 'samtagatewayApp.oilTankContainer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -69,7 +69,7 @@ export const oilTankContainerPopupRoute: Routes = [
         component: OilTankContainerDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_OIL_TANK_CONTAINER', 'DELETE_OIL_TANK_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.oilTankContainer.home.title'
+            pageTitle: 'samtagatewayApp.oilTankContainer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -79,7 +79,7 @@ export const oilTankContainerPopupRoute: Routes = [
         component: OilTankContainerPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_OIL_TANK_CONTAINER', 'VIEW_OIL_TANK_PRODUCT'],
-            pageTitle: 'niopdcgatewayApp.oilTankContainer.home.title'
+            pageTitle: 'samtagatewayApp.oilTankContainer.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

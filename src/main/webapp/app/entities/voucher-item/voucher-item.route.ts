@@ -33,7 +33,7 @@ export const voucherItemRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.voucherItem.home.title'
+            pageTitle: 'samtagatewayApp.voucherItem.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -41,7 +41,7 @@ export const voucherItemRoute: Routes = [
         component: VoucherItemDetailComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.voucherItem.home.title'
+            pageTitle: 'samtagatewayApp.voucherItem.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -53,7 +53,7 @@ export const voucherItemPopupRoute: Routes = [
         component: VoucherItemPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.voucherItem.home.title'
+            pageTitle: 'samtagatewayApp.voucherItem.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -63,7 +63,7 @@ export const voucherItemPopupRoute: Routes = [
         component: VoucherItemPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.voucherItem.home.title'
+            pageTitle: 'samtagatewayApp.voucherItem.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -73,7 +73,7 @@ export const voucherItemPopupRoute: Routes = [
         component: VoucherItemDeletePopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'niopdcgatewayApp.voucherItem.home.title'
+            pageTitle: 'samtagatewayApp.voucherItem.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

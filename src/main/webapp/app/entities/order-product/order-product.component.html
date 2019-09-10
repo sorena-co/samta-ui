@@ -1,9 +1,9 @@
 <div>
     <h2>
-        <span jhiTranslate="niopdcgatewayApp.orderProduct.home.title">Order Products</span>
+        <span jhiTranslate="samtagatewayApp.orderProduct.home.title">Order Products</span>
         <button class="btn btn-primary float-right jh-create-entity create-order-product" [routerLink]="['/', { outlets: { popup: ['order-product-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="niopdcgatewayApp.orderProduct.home.createLabel">
+            <span  jhiTranslate="samtagatewayApp.orderProduct.home.createLabel">
             Create new Order Product
             </span>
         </button>
@@ -17,18 +17,18 @@
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="sellContractProductId"><span jhiTranslate="niopdcgatewayApp.orderProduct.sellContractProductId">Sell Contract Product Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="productId"><span jhiTranslate="niopdcgatewayApp.orderProduct.productId">Product Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="rateGroupId"><span jhiTranslate="niopdcgatewayApp.orderProduct.rateGroupId">Rate Group Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="totalPrice"><span jhiTranslate="niopdcgatewayApp.orderProduct.totalPrice">Total Price</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="basePrice"><span jhiTranslate="niopdcgatewayApp.orderProduct.basePrice">Base Price</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="productRatePrice"><span jhiTranslate="niopdcgatewayApp.orderProduct.productRatePrice">Product Rate Price</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="productRateId"><span jhiTranslate="niopdcgatewayApp.orderProduct.productRateId">Product Rate Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="containerRateId"><span jhiTranslate="niopdcgatewayApp.orderProduct.containerRateId">Container Rate Id</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="containerRatePrice"><span jhiTranslate="niopdcgatewayApp.orderProduct.containerRatePrice">Container Rate Price</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="costPrice"><span jhiTranslate="niopdcgatewayApp.orderProduct.costPrice">Cost Price</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="amount"><span jhiTranslate="niopdcgatewayApp.orderProduct.amount">Amount</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="orderOrderNo"><span jhiTranslate="niopdcgatewayApp.orderProduct.order">Order</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="sellContractProductId"><span jhiTranslate="samtagatewayApp.orderProduct.sellContractProductId">Sell Contract Product Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="productId"><span jhiTranslate="samtagatewayApp.orderProduct.productId">Product Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="rateGroupId"><span jhiTranslate="samtagatewayApp.orderProduct.rateGroupId">Rate Group Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="totalPrice"><span jhiTranslate="samtagatewayApp.orderProduct.totalPrice">Total Price</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="basePrice"><span jhiTranslate="samtagatewayApp.orderProduct.basePrice">Base Price</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="productRatePrice"><span jhiTranslate="samtagatewayApp.orderProduct.productRatePrice">Product Rate Price</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="productRateId"><span jhiTranslate="samtagatewayApp.orderProduct.productRateId">Product Rate Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="containerRateId"><span jhiTranslate="samtagatewayApp.orderProduct.containerRateId">Container Rate Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="containerRatePrice"><span jhiTranslate="samtagatewayApp.orderProduct.containerRatePrice">Container Rate Price</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="costPrice"><span jhiTranslate="samtagatewayApp.orderProduct.costPrice">Cost Price</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="amount"><span jhiTranslate="samtagatewayApp.orderProduct.amount">Amount</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="orderOrderNo"><span jhiTranslate="samtagatewayApp.orderProduct.order">Order</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>

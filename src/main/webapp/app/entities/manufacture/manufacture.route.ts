@@ -35,7 +35,7 @@ export const manufactureRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_MANUFACTURE'],
-            pageTitle: 'niopdcgatewayApp.manufacture.home.title'
+            pageTitle: 'samtagatewayApp.manufacture.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -47,7 +47,7 @@ export const manufacturePopupRoute: Routes = [
         component: ManufacturePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_MANUFACTURE'],
-            pageTitle: 'niopdcgatewayApp.manufacture.home.title'
+            pageTitle: 'samtagatewayApp.manufacture.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -57,7 +57,7 @@ export const manufacturePopupRoute: Routes = [
         component: ManufacturePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_MANUFACTURE'],
-            pageTitle: 'niopdcgatewayApp.manufacture.home.title'
+            pageTitle: 'samtagatewayApp.manufacture.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -67,7 +67,7 @@ export const manufacturePopupRoute: Routes = [
         component: ManufactureDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_MANUFACTURE'],
-            pageTitle: 'niopdcgatewayApp.manufacture.home.title'
+            pageTitle: 'samtagatewayApp.manufacture.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -77,7 +77,7 @@ export const manufacturePopupRoute: Routes = [
         component: ManufacturePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_MANUFACTURE'],
-            pageTitle: 'niopdcgatewayApp.manufacture.home.title'
+            pageTitle: 'samtagatewayApp.manufacture.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

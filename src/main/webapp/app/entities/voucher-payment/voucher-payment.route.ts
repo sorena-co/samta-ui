@@ -33,7 +33,7 @@ export const voucherPaymentRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_VOUCHER_PAYMENT'],
-            pageTitle: 'niopdcgatewayApp.voucherPayment.home.title'
+            pageTitle: 'samtagatewayApp.voucherPayment.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const voucherPaymentPopupRoute: Routes = [
     component: VoucherPaymentPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_VOUCHER_PAYMENT'],
-        pageTitle: 'niopdcgatewayApp.voucherPayment.home.title'
+        pageTitle: 'samtagatewayApp.voucherPayment.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const voucherPaymentPopupRoute: Routes = [
     component: VoucherPaymentPopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_VOUCHER_PAYMENT'],
-        pageTitle: 'niopdcgatewayApp.voucherPayment.home.title'
+        pageTitle: 'samtagatewayApp.voucherPayment.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const voucherPaymentPopupRoute: Routes = [
     component: VoucherPaymentDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_VOUCHER_PAYMENT'],
-        pageTitle: 'niopdcgatewayApp.voucherPayment.home.title'
+        pageTitle: 'samtagatewayApp.voucherPayment.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const voucherPaymentPopupRoute: Routes = [
       component: VoucherPaymentPopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_VOUCHER_PAYMENT'],
-          pageTitle: 'niopdcgatewayApp.voucherPayment.home.title'
+          pageTitle: 'samtagatewayApp.voucherPayment.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

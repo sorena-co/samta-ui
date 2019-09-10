@@ -1,12 +1,12 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 *ngIf="requestFilterElement.id==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.requestFilterElement.home.createLabel">
+        <h4 *ngIf="requestFilterElement.id==null" class="modal-title" id="createLabel" jhiTranslate="samtagatewayApp.requestFilterElement.home.createLabel">
             Create</h4>
         <h4 *ngIf="requestFilterElement.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.requestFilterElement.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.requestFilterElement.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.requestFilterElement.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.requestFilterElement.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.filterNumber"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.filterNumber"
                            for="field_filterNumber">Filter Number</label>
                     <input [disabled]="isView" type="text" class="form-control" name="filterNumber"
                            id="field_filterNumber"
@@ -45,7 +45,7 @@
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.requestFilterElement.lastChangeDate"
+                           jhiTranslate="samtagatewayApp.requestFilterElement.lastChangeDate"
                            for="field_lastChangeDate">Last Change Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="true"[disabled]="isView" [rtlActive]="true" time="00:00:00"
@@ -71,7 +71,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.microFilter"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.microFilter"
                            for="field_microFilter">Micro Filter</label>
                     <input [disabled]="isView" type="text" class="form-control" name="microFilter"
                            id="field_microFilter"
@@ -94,7 +94,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.coalescer"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.coalescer"
                            for="field_coalescer">Coalescer</label>
                     <input [disabled]="isView" type="text" class="form-control" name="coalescer" id="field_coalescer"
                            [(ngModel)]="requestFilterElement.coalescer"/>
@@ -102,7 +102,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.separator"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.separator"
                            for="field_separator">Separator</label>
                     <input [disabled]="isView" type="text" class="form-control" name="separator" id="field_separator"
                            [(ngModel)]="requestFilterElement.separator"/>
@@ -110,7 +110,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.monitor"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.monitor"
                            for="field_monitor">Monitor</label>
                     <input [disabled]="isView" type="text" class="form-control" name="monitor" id="field_monitor"
                            [(ngModel)]="requestFilterElement.monitor"/>
@@ -120,7 +120,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.clay"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.clay"
                            for="field_clay">Clay</label>
                     <input [disabled]="isView" type="text" class="form-control" name="clay" id="field_clay"
                            [(ngModel)]="requestFilterElement.clay"/>
@@ -128,7 +128,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.productId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.productId"
                            for="field_productId">Product Id</label>
                     <select [disabled]="isView" class="form-control" id="field_productID" name="product"
                             [(ngModel)]="requestFilterElement.productId"
@@ -155,19 +155,19 @@
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.requestFilterElement.filterLocation"
+                           jhiTranslate="samtagatewayApp.requestFilterElement.filterLocation"
                            for="field_filterLocation">Filter Location</label>
                     <select [disabled]="isView" class="form-control" name="filterLocation"
                             [(ngModel)]="requestFilterElement.filterLocation" id="field_filterLocation" required>
-                        <option value="DRAIN_TANKER">{{'niopdcgatewayApp.FilterLocation.DRAIN_TANKER' | translate}}
+                        <option value="DRAIN_TANKER">{{'samtagatewayApp.FilterLocation.DRAIN_TANKER' | translate}}
                         </option>
                         <option value="BETWEEN_MAIN_AND_SERVICE">
-                            {{'niopdcgatewayApp.FilterLocation.BETWEEN_MAIN_AND_SERVICE' | translate}}
+                            {{'samtagatewayApp.FilterLocation.BETWEEN_MAIN_AND_SERVICE' | translate}}
                         </option>
-                        <option value="LADING_UNIT">{{'niopdcgatewayApp.FilterLocation.LADING_UNIT' | translate}}
+                        <option value="LADING_UNIT">{{'samtagatewayApp.FilterLocation.LADING_UNIT' | translate}}
                         </option>
-                        <option value="OIL_DEPOT">{{'niopdcgatewayApp.FilterLocation.OIL_DEPOT' | translate}}</option>
-                        <option value="UNIT">{{'niopdcgatewayApp.FilterLocation.UNIT' | translate}}</option>
+                        <option value="OIL_DEPOT">{{'samtagatewayApp.FilterLocation.OIL_DEPOT' | translate}}</option>
+                        <option value="UNIT">{{'samtagatewayApp.FilterLocation.UNIT' | translate}}</option>
                     </select>
                     <div
                         [hidden]="!(editForm.controls.filterLocation?.dirty && editForm.controls.filterLocation?.invalid)">
@@ -183,7 +183,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.psi"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.psi"
                            for="field_psi">Psi</label>
                     <input [disabled]="isView" type="number" class="form-control" name="psi" id="field_psi"
                            [(ngModel)]="requestFilterElement.psi"/>
@@ -193,7 +193,7 @@
         <div class="card">
             <div class="card-header">
                 <h5 class="mb-0"
-                    jhiTranslate="niopdcgatewayApp.requestFilterElement.home.detail">
+                    jhiTranslate="samtagatewayApp.requestFilterElement.home.detail">
                     Create or edit a Customer
                 </h5>
             </div>
@@ -202,7 +202,7 @@
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.microFilterModel"
+                                   jhiTranslate="samtagatewayApp.requestFilterElement.microFilterModel"
                                    for="field_microFilterModel">Micro Filter Model</label>
                             <input [disabled]="isView" type="text" class="form-control" name="microFilterModel"
                                    id="field_microFilterModel"
@@ -212,7 +212,7 @@
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.microFilterModelCount"
+                                   jhiTranslate="samtagatewayApp.requestFilterElement.microFilterModelCount"
                                    for="field_microFilterModelCount">Micro Filter Model Count</label>
                             <input [disabled]="isView" type="number" class="form-control" name="microFilterModelCount"
                                    id="field_microFilterModelCount"
@@ -223,7 +223,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.coalesceModel"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.coalesceModel"
                                    for="field_coalesceModel">Coalesce Model</label>
                             <input [disabled]="isView" type="text" class="form-control" name="coalesceModel"
                                    id="field_coalesceModel"
@@ -233,7 +233,7 @@
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.coalesceModelCount"
+                                   jhiTranslate="samtagatewayApp.requestFilterElement.coalesceModelCount"
                                    for="field_coalesceModelCount">Coalesce Model Count</label>
                             <input [disabled]="isView" type="number" class="form-control" name="coalesceModelCount"
                                    id="field_coalesceModelCount"
@@ -244,7 +244,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.monitorModel"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.monitorModel"
                                    for="field_monitorModel">Monitor Model</label>
                             <input [disabled]="isView" type="text" class="form-control" name="monitorModel"
                                    id="field_monitorModel"
@@ -254,7 +254,7 @@
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.monitorModelCount"
+                                   jhiTranslate="samtagatewayApp.requestFilterElement.monitorModelCount"
                                    for="field_monitorModelCount">Monitor Model Count</label>
                             <input [disabled]="isView" type="number" class="form-control" name="monitorModelCount"
                                    id="field_monitorModelCount"
@@ -266,7 +266,7 @@
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.separatorModel"
+                                   jhiTranslate="samtagatewayApp.requestFilterElement.separatorModel"
                                    for="field_separatorModel">Separator Model</label>
                             <input [disabled]="isView" type="text" class="form-control" name="separatorModel"
                                    id="field_separatorModel"
@@ -276,7 +276,7 @@
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.separatorModelCount"
+                                   jhiTranslate="samtagatewayApp.requestFilterElement.separatorModelCount"
                                    for="field_separatorModelCount">Separator Model Count</label>
                             <input [disabled]="isView" type="number" class="form-control" name="separatorModelCount"
                                    id="field_separatorModelCount"
@@ -287,7 +287,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.clayModel"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.clayModel"
                                    for="field_clayModel">Clay Model</label>
                             <input [disabled]="isView" type="text" class="form-control" name="clayModel" id="field_clayModel"
                                    [(ngModel)]="requestFilterElement.clayModel"/>
@@ -296,7 +296,7 @@
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
                             <label class="form-control-label"
-                                   jhiTranslate="niopdcgatewayApp.requestFilterElement.clayModelCount"
+                                   jhiTranslate="samtagatewayApp.requestFilterElement.clayModelCount"
                                    for="field_clayModelCount">Clay Model Count</label>
                             <input [disabled]="isView" type="number" class="form-control" name="clayModelCount"
                                    id="field_clayModelCount"
@@ -311,7 +311,7 @@
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.requestFilterElement.amountFuelPassed"
+                           jhiTranslate="samtagatewayApp.requestFilterElement.amountFuelPassed"
                            for="field_amountFuelPassed">Amount Fuel Passed</label>
                     <input [disabled]="isView" type="number" class="form-control" name="amountFuelPassed"
                            id="field_amountFuelPassed"
@@ -333,7 +333,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.oilTank"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.oilTank"
                            for="field_oilTank">Oil Tank</label>
                     <select [disabled]="isView" class="form-control" id="field_oilTank" name="oilTank"
                             [(ngModel)]="requestFilterElement.oilTankId" required>
@@ -355,30 +355,30 @@
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.requestFilterElement.elementRequestReason"
+                           jhiTranslate="samtagatewayApp.requestFilterElement.elementRequestReason"
                            for="field_elementRequestReason">Element Request Reason</label>
                     <select [disabled]="isView" class="form-control" name="elementRequestReason"
                             [(ngModel)]="requestFilterElement.elementRequestReason" id="field_elementRequestReason"
                             required>
-                        <option value="MAX_DIFF">{{'niopdcgatewayApp.ElementRequestReason.MAX_DIFF' | translate}}
+                        <option value="MAX_DIFF">{{'samtagatewayApp.ElementRequestReason.MAX_DIFF' | translate}}
                         </option>
-                        <option value="MAX_TIME_ELAPSED">{{'niopdcgatewayApp.ElementRequestReason.MAX_TIME_ELAPSED' |
+                        <option value="MAX_TIME_ELAPSED">{{'samtagatewayApp.ElementRequestReason.MAX_TIME_ELAPSED' |
                             translate}}
                         </option>
-                        <option value="UNACCEPTABLE_DROP">{{'niopdcgatewayApp.ElementRequestReason.UNACCEPTABLE_DROP' |
+                        <option value="UNACCEPTABLE_DROP">{{'samtagatewayApp.ElementRequestReason.UNACCEPTABLE_DROP' |
                             translate}}
                         </option>
                         <option value="UNACCEPTABLE_RESULT">
-                            {{'niopdcgatewayApp.ElementRequestReason.UNACCEPTABLE_RESULT' |
+                            {{'samtagatewayApp.ElementRequestReason.UNACCEPTABLE_RESULT' |
                             translate}}
                         </option>
-                        <option value="ABNORMAL_RESULT">{{'niopdcgatewayApp.ElementRequestReason.ABNORMAL_RESULT' |
+                        <option value="ABNORMAL_RESULT">{{'samtagatewayApp.ElementRequestReason.ABNORMAL_RESULT' |
                             translate}}
                         </option>
-                        <option value="TEARING_ELEMENT">{{'niopdcgatewayApp.ElementRequestReason.TEARING_ELEMENT' |
+                        <option value="TEARING_ELEMENT">{{'samtagatewayApp.ElementRequestReason.TEARING_ELEMENT' |
                             translate}}
                         </option>
-                        <option value="SUDDEN_DROP">{{'niopdcgatewayApp.ElementRequestReason.SUDDEN_DROP' | translate}}
+                        <option value="SUDDEN_DROP">{{'samtagatewayApp.ElementRequestReason.SUDDEN_DROP' | translate}}
                         </option>
                     </select>
                     <div
@@ -395,7 +395,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.refuelCenter"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.refuelCenter"
                            for="field_refuelCenter">RefuelCenter</label>
                     <select [disabled]="isView" class="form-control" id="field_refuelCenter" name="refuelCenter"
                             [(ngModel)]="requestFilterElement.refuelCenterId" required>
@@ -418,7 +418,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.requestFilterElement.description"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.requestFilterElement.description"
                            for="field_description">Description</label>
                     <textarea [disabled]="isView" type="text" class="form-control" name="description"
                            id="field_description"

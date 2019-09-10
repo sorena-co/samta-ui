@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.niopdcConfig.startDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.niopdcConfig.startDate"
                            for="field_startDate">Start Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00" id="field_startDate"
@@ -43,7 +43,7 @@
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.niopdcConfig.finishDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.niopdcConfig.finishDate"
                            for="field_finishDate">Finish Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="23:59:59" id="field_finishDate"
@@ -56,7 +56,7 @@
             <div *ngIf="niopdcConfig.configType==='BOUNDARY_SELL'||niopdcConfig.configType==='NORMAL_SELL'" class="col-md-3">
                 <div class="form-group">
                     <label class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.niopdcConfig.boundaryCurrencyRateGroupId"
+                           jhiTranslate="samtagatewayApp.niopdcConfig.boundaryCurrencyRateGroupId"
                            for="field_boundaryCurrencyRateGroupId">Boundary Currency Rate Group Id</label>
                     <select class="form-control" id="field_boundaryCurrencyRateGroupId"
                             name="boundaryCurrencyRateGroupId"
@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div *ngIf="niopdcConfig.configType==='BOUNDARY_SELL'||niopdcConfig.configType==='NORMAL_SELL'" class="col-md-3">
-                <label jhiTranslate="niopdcgatewayApp.niopdcConfig.boundaryCurrencies" for="field_product">product</label>
+                <label jhiTranslate="samtagatewayApp.niopdcConfig.boundaryCurrencies" for="field_product">product</label>
                 <p-multiSelect
                     [disabled]="isView" class="form-control"
                     id="field_product"
@@ -83,7 +83,7 @@
             </div>
             <div *ngIf="niopdcConfig.configType==='NIOPDC_AO'" class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.transfer.transferType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.transfer.transferType"
                            for="field_transferType">Transfer Type</label>
                     <select [disabled]="isView" class="form-control" id="field_transferType" name="transferType"
                             [(ngModel)]="niopdcConfig.transferTypeId"
@@ -97,12 +97,12 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <label jhiTranslate="niopdcgatewayApp.niopdcConfig.configType" for="field_configType">product</label>
+                <label jhiTranslate="samtagatewayApp.niopdcConfig.configType" for="field_configType">product</label>
                 <select [disabled]="isView" class="form-control" name="configType"
                         [(ngModel)]="niopdcConfig.configType" id="field_configType" required>
-                    <option value="BOUNDARY_SELL">{{'niopdcgatewayApp.ConfigType.BOUNDARY_SELL' | translate}}</option>
-                    <option value="NORMAL_SELL">{{'niopdcgatewayApp.ConfigType.NORMAL_SELL' | translate}}</option>
-                    <option value="NIOPDC_AO">{{'niopdcgatewayApp.ConfigType.NIOPDC_AO' | translate}}</option>
+                    <option value="BOUNDARY_SELL">{{'samtagatewayApp.ConfigType.BOUNDARY_SELL' | translate}}</option>
+                    <option value="NORMAL_SELL">{{'samtagatewayApp.ConfigType.NORMAL_SELL' | translate}}</option>
+                    <option value="NIOPDC_AO">{{'samtagatewayApp.ConfigType.NIOPDC_AO' | translate}}</option>
                 </select>
             </div>
 

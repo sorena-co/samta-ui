@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "receivedProduct" : {
             "home": {
                 "title": "Received Products",

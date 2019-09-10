@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="metre.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.metre.home.createLabel">
+            jhiTranslate="samtagatewayApp.metre.home.createLabel">
             Create</h4>
         <h4 *ngIf="metre.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.metre.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.metre.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.metre.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.metre.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metre.title" for="field_title">Title</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metre.title" for="field_title">Title</label>
                     <input [disabled]="isView" class="form-control" name="title" id="field_title"
                            [(ngModel)]="metre.title" required/>
                     <div [hidden]="!(editForm.controls.title?.dirty && editForm.controls.title?.invalid)">
@@ -37,7 +37,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metre.amount" for="field_amount">Amount</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metre.amount" for="field_amount">Amount</label>
                     <input [disabled]="isView" type="number" class="form-control" name="amount" id="field_amount"
                            [numeric]="{min:0}"
                            (input)="onChangeValue($event)"
@@ -58,7 +58,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metre.maxMetre"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metre.maxMetre"
                            for="field_maxMetre">Max Metre</label>
                     <input [disabled]="isView" type="number" class="form-control" name="maxMetre" id="field_maxMetre"
                            [numeric]="{min:0}"
@@ -82,7 +82,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.metre.active" for="field_active">Active</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.metre.active" for="field_active">Active</label>
                     <input [disabled]="isView" type="checkbox" class="form-control" name="active" id="field_active"
                            [(ngModel)]="metre.active"/>
                 </div>

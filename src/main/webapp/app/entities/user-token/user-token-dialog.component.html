@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="userToken.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.userToken.home.createLabel">
+            jhiTranslate="samtagatewayApp.userToken.home.createLabel">
             Create</h4>
         <h4 *ngIf="userToken.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.userToken.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.userToken.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.userToken.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.userToken.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userToken.ip"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.userToken.ip"
                            for="field_ip">ip</label>
                     <input [disabled]="isView" type="text" class="form-control" name="ip" id="field_ip"
                            [(ngModel)]="userToken.ip" [pattern]="regexCode"
@@ -45,7 +45,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="form-group">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userToken.netMask"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.userToken.netMask"
                                for="field_netMask">netMask</label>
                         <input [disabled]="isView" type="text" class="form-control" name="netMask" id="field_netMask"
                                [(ngModel)]="userToken.netMask" [pattern]="regexCode"
@@ -72,12 +72,12 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userToken.accessStatus"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.userToken.accessStatus"
                            for="field_accessStatus">Oil Tank Type</label>
                     <select [disabled]="isView" class="form-control" name="accessStatus"
                             [(ngModel)]="userToken.accessStatus" id="field_accessStatus" required>
-                        <option value="ACCESS">{{'niopdcgatewayApp.accessStatus.ACCESS' | translate}}</option>
-                        <option value="DENY">{{'niopdcgatewayApp.accessStatus.DENY' | translate}}</option>
+                        <option value="ACCESS">{{'samtagatewayApp.accessStatus.ACCESS' | translate}}</option>
+                        <option value="DENY">{{'samtagatewayApp.accessStatus.DENY' | translate}}</option>
                     </select>
                     <div
                         [hidden]="!(editForm.controls.accessStatus?.dirty && editForm.controls.accessStatus?.invalid)">

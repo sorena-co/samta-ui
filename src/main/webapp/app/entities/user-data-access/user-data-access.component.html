@@ -21,32 +21,32 @@
             <p-row>
                 <p-column field="locationName" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.userDataAccess.location">Location</span>
+                        <span jhiTranslate="samtagatewayApp.userDataAccess.location">Location</span>
                     </ng-template>
                 </p-column>
                 <p-column field="regionName" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.userDataAccess.region">Region</span>
+                        <span jhiTranslate="samtagatewayApp.userDataAccess.region">Region</span>
                     </ng-template>
                 </p-column>
                 <p-column field="personName" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.userDataAccess.person">Person</span>
+                        <span jhiTranslate="samtagatewayApp.userDataAccess.person">Person</span>
                     </ng-template>
                 </p-column>
                 <p-column field="customerName" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.userDataAccess.customer">Customer</span>
+                        <span jhiTranslate="samtagatewayApp.userDataAccess.customer">Customer</span>
                     </ng-template>
                 </p-column>
                 <p-column field="customerTypeTitle" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.userDataAccess.customerType">Customer Type</span>
+                        <span jhiTranslate="samtagatewayApp.userDataAccess.customerType">Customer Type</span>
                     </ng-template>
                 </p-column>
                 <p-column field="contractType" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.userDataAccess.contractType">Contract Type</span>
+                        <span jhiTranslate="samtagatewayApp.userDataAccess.contractType">Contract Type</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -102,12 +102,12 @@
                     <ng-template pTemplate="header">
                         <select class="form-control" (change)="search()" name="contractType" [(ngModel)]="userDataAccess.contractType" id="field_contractType">
                             <option></option>
-                            <option value="SUPPLY_CHANNEL">{{'niopdcgatewayApp.ContractType.SUPPLY_CHANNEL' | translate}}</option>
-                            <option value="MILITARY">{{'niopdcgatewayApp.ContractType.MILITARY' | translate}}</option>
-                            <option value="EXPORT">{{'niopdcgatewayApp.ContractType.EXPORT' | translate}}</option>
-                            <option value="EXCHANGE">{{'niopdcgatewayApp.ContractType.EXCHANGE' | translate}}</option>
-                            <option value="CONSUMER">{{'niopdcgatewayApp.ContractType.CONSUMER' | translate}}</option>
-                            <option value="AIRPLANE">{{'niopdcgatewayApp.ContractType.AIRPLANE' | translate}}</option>
+                            <option value="SUPPLY_CHANNEL">{{'samtagatewayApp.ContractType.SUPPLY_CHANNEL' | translate}}</option>
+                            <option value="MILITARY">{{'samtagatewayApp.ContractType.MILITARY' | translate}}</option>
+                            <option value="EXPORT">{{'samtagatewayApp.ContractType.EXPORT' | translate}}</option>
+                            <option value="EXCHANGE">{{'samtagatewayApp.ContractType.EXCHANGE' | translate}}</option>
+                            <option value="CONSUMER">{{'samtagatewayApp.ContractType.CONSUMER' | translate}}</option>
+                            <option value="AIRPLANE">{{'samtagatewayApp.ContractType.AIRPLANE' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -125,14 +125,14 @@
         </p-headerColumnGroup>
 
 
-        <p-column field="locationName" [header]="'niopdcgatewayApp.userDataAccess.location' | translate"></p-column>
-        <p-column field="regionName" [header]="'niopdcgatewayApp.userDataAccess.region' | translate"></p-column>
-        <p-column field="personName" [header]="'niopdcgatewayApp.userDataAccess.person' | translate"></p-column>
-        <p-column field="customerName" [header]="'niopdcgatewayApp.userDataAccess.customer' | translate"></p-column>
-        <p-column field="customerTypeTitle" [header]="'niopdcgatewayApp.userDataAccess.customerType' | translate"></p-column>
-        <p-column field="contractType" [header]="'niopdcgatewayApp.userDataAccess.contractType' | translate">
+        <p-column field="locationName" [header]="'samtagatewayApp.userDataAccess.location' | translate"></p-column>
+        <p-column field="regionName" [header]="'samtagatewayApp.userDataAccess.region' | translate"></p-column>
+        <p-column field="personName" [header]="'samtagatewayApp.userDataAccess.person' | translate"></p-column>
+        <p-column field="customerName" [header]="'samtagatewayApp.userDataAccess.customer' | translate"></p-column>
+        <p-column field="customerTypeTitle" [header]="'samtagatewayApp.userDataAccess.customerType' | translate"></p-column>
+        <p-column field="contractType" [header]="'samtagatewayApp.userDataAccess.contractType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span jhiTranslate="{{'niopdcgatewayApp.ContractType.' + item.contractType}}">{{item.contractType}}</span>
+                <span jhiTranslate="{{'samtagatewayApp.ContractType.' + item.contractType}}">{{item.contractType}}</span>
             </ng-template></p-column>
         <p-column class="component">
             <ng-template let-item="rowData" pTemplate="body">

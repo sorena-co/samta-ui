@@ -19,13 +19,13 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTank.tankType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.carTank.tankType"
                            for="field_tankType">Tank
                         Type</label>
                     <select [disabled]="isView" class="form-control" name="tankType" [(ngModel)]="carTank.tankType"
                             id="field_tankType" required>
-                        <option value="CUBE">{{'niopdcgatewayApp.TankType.CUBE' | translate}}</option>
-                        <option value="CONE">{{'niopdcgatewayApp.TankType.CONE' | translate}}</option>
+                        <option value="CUBE">{{'samtagatewayApp.TankType.CUBE' | translate}}</option>
+                        <option value="CONE">{{'samtagatewayApp.TankType.CONE' | translate}}</option>
                     </select>
                     <div [hidden]="!(editForm.controls.tankType?.dirty && editForm.controls.tankType?.invalid)">
                         <small class="form-text text-danger"
@@ -38,7 +38,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTank.tankNo"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.carTank.tankNo"
                            for="field_tankNo">Tank
                         Type</label>
                     <input [disabled]="isView" class="form-control" name="code" [(ngModel)]="carTank.tankNo"
@@ -54,7 +54,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTank.height" for="field_height">Height</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.carTank.height" for="field_height">Height</label>
                     <input [disabled]="isView" type="number" class="form-control" name="height" id="field_height"
                            [(ngModel)]="carTank.height" required/>
                     <div [hidden]="!(editForm.controls.height?.dirty && editForm.controls.height?.invalid)">
@@ -77,7 +77,7 @@
                 <ng-container *ngIf="carTank.tankType === TankType[TankType.CUBE]">
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTank.longitude"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.carTank.longitude"
                                    for="field_longitude">Longitude</label>
                             <input [disabled]="isView" type="number" class="form-control" name="longitude"
                                    id="field_longitude"
@@ -86,7 +86,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTank.latitude"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.carTank.latitude"
                                    for="field_latitude">Latitude</label>
                             <input [disabled]="isView" type="number" class="form-control" name="latitude"
                                    id="field_latitude"
@@ -96,7 +96,7 @@
                 </ng-container>
                 <div class="col-md-3">
                     <div class="form-group" *ngIf="carTank.tankType === TankType[TankType.CONE]">
-                        <label class="form-control-label" jhiTranslate="niopdcgatewayApp.carTank.radius"
+                        <label class="form-control-label" jhiTranslate="samtagatewayApp.carTank.radius"
                                for="field_radius">Radius</label>
                         <input [disabled]="isView" type="number" class="form-control" name="radius" id="field_radius"
                                [(ngModel)]="carTank.radius"/>

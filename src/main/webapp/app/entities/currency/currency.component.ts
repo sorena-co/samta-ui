@@ -128,7 +128,7 @@ export class CurrencyComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.currency.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.currency.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

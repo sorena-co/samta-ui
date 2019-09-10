@@ -142,7 +142,7 @@ export class PaymentComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.payment.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.payment.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

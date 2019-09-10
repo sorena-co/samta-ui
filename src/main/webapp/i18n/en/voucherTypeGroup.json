@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "voucherTypeGroup" : {
             "home": {
                 "title": "Voucher Type Groups",

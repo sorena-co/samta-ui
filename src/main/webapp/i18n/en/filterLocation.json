@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "FilterLocation" : {
             "null": "",
             "DRAIN_TANKER": "DRAIN_TANKER",

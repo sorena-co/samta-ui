@@ -21,38 +21,38 @@
             <div class="col-md-12">
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loan.customerId" for="field_customerId">Customer Id</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.loan.customerId" for="field_customerId">Customer Id</label>
                     <input [disabled]="isView" type="number" class="form-control" name="customerId" id="field_customerId"
                         [(ngModel)]="loan.customerId"  />
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loan.amount" for="field_amount">Amount</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.loan.amount" for="field_amount">Amount</label>
                     <input [disabled]="isView" type="number" class="form-control" name="amount" id="field_amount"
                         [(ngModel)]="loan.amount"  />
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loan.reason" for="field_reason">Reason</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.loan.reason" for="field_reason">Reason</label>
                     <select [disabled]="isView" class="form-control" name="reason" [(ngModel)]="loan.reason" id="field_reason" >
-                        <option value="REPAIRS">{{'niopdcgatewayApp.LoanReason.REPAIRS' | translate}}</option>
+                        <option value="REPAIRS">{{'samtagatewayApp.LoanReason.REPAIRS' | translate}}</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loan.description" for="field_description">Description</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.loan.description" for="field_description">Description</label>
                     <input [disabled]="isView" type="text" class="form-control" name="description" id="field_description"
                         [(ngModel)]="loan.description"  />
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loan.installmentCount" for="field_installmentCount">Installment Count</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.loan.installmentCount" for="field_installmentCount">Installment Count</label>
                     <input [disabled]="isView" type="number" class="form-control" name="installmentCount" id="field_installmentCount"
                         [(ngModel)]="loan.installmentCount"  />
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loan.firstPaymentDate" for="field_firstPaymentDate">First Payment Date</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.loan.firstPaymentDate" for="field_firstPaymentDate">First Payment Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00" [disableTime]="true"
                                             id="field_firstPaymentDate" class="form-control"
@@ -72,25 +72,25 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loan.completed" for="field_completed">Completed</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.loan.completed" for="field_completed">Completed</label>
                     <input [disabled]="isView" type="checkbox" class="form-control" name="completed" id="field_completed"
                         [(ngModel)]="loan.completed"  />
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loan.payByBill" for="field_payByBill">Pay By Bill</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.loan.payByBill" for="field_payByBill">Pay By Bill</label>
                     <input [disabled]="isView" type="checkbox" class="form-control" name="payByBill" id="field_payByBill"
                         [(ngModel)]="loan.payByBill"  />
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loan.penaltyDay" for="field_penaltyDay">Penalty Day</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.loan.penaltyDay" for="field_penaltyDay">Penalty Day</label>
                     <input [disabled]="isView" type="number" class="form-control" name="penaltyDay" id="field_penaltyDay"
                         [(ngModel)]="loan.penaltyDay"  />
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loan.loanType" for="field_loanType">Loan Type</label>
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.loan.loanType" for="field_loanType">Loan Type</label>
                     <select class="form-control" id="field_loanType" name="loanType" [(ngModel)]="loan.loanTypeId"  required>
                         <option *ngIf="!editForm.value.loanType" [ngValue]="null" selected></option>
                         <option [ngValue]="loanTypeOption.id" *ngFor="let loanTypeOption of loantypes; trackBy: trackLoanTypeById">{{loanTypeOption.id}}</option>

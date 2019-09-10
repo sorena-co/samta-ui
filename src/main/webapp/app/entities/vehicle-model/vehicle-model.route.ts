@@ -34,7 +34,7 @@ export const vehicleModelRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_VEHICLE_MODEL'],
-            pageTitle: 'niopdcgatewayApp.vehicleModel.home.title'
+            pageTitle: 'samtagatewayApp.vehicleModel.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -46,7 +46,7 @@ export const vehicleModelPopupRoute: Routes = [
         component: VehicleModelPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_VEHICLE_MODEL'],
-            pageTitle: 'niopdcgatewayApp.vehicleModel.home.title'
+            pageTitle: 'samtagatewayApp.vehicleModel.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -56,7 +56,7 @@ export const vehicleModelPopupRoute: Routes = [
         component: VehicleModelPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_VEHICLE_MODEL'],
-            pageTitle: 'niopdcgatewayApp.vehicleModel.home.title'
+            pageTitle: 'samtagatewayApp.vehicleModel.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -66,7 +66,7 @@ export const vehicleModelPopupRoute: Routes = [
         component: VehicleModelDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_VEHICLE_MODEL'],
-            pageTitle: 'niopdcgatewayApp.vehicleModel.home.title'
+            pageTitle: 'samtagatewayApp.vehicleModel.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -76,7 +76,7 @@ export const vehicleModelPopupRoute: Routes = [
         component: VehicleModelPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_VEHICLE_MODEL'],
-            pageTitle: 'niopdcgatewayApp.vehicleModel.home.title'
+            pageTitle: 'samtagatewayApp.vehicleModel.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

@@ -22,17 +22,17 @@
             <p-row>
                 <p-column field="name" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.role.name">Name</span>
+                        <span jhiTranslate="samtagatewayApp.role.name">Name</span>
                     </ng-template>
                 </p-column>
                 <p-column field="userType" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.role.userType">userType</span>
+                        <span jhiTranslate="samtagatewayApp.role.userType">userType</span>
                     </ng-template>
                 </p-column>
                 <p-column field="activated" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.role.activated">Activated</span>
+                        <span jhiTranslate="samtagatewayApp.role.activated">Activated</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -52,11 +52,11 @@
                         <select [disabled]="isView" class="form-control" name="userType" (change)="search()"
                                 [(ngModel)]="role.userType" id="field_userType" >
                             <option ></option>
-                            <option value="HEAD">{{'niopdcgatewayApp.userType.HEAD' | translate}}</option>
-                            <option value="AREA">{{'niopdcgatewayApp.userType.AREA' | translate}}</option>
-                            <option value="REFUEL_CENTER">{{'niopdcgatewayApp.userType.REFUEL_CENTER' | translate}}</option>
-                            <option value="ZONE">{{'niopdcgatewayApp.userType.ZONE' | translate}}</option>
-                            <option value="PERSON">{{'niopdcgatewayApp.userType.PERSON' | translate}}</option>
+                            <option value="HEAD">{{'samtagatewayApp.userType.HEAD' | translate}}</option>
+                            <option value="AREA">{{'samtagatewayApp.userType.AREA' | translate}}</option>
+                            <option value="REFUEL_CENTER">{{'samtagatewayApp.userType.REFUEL_CENTER' | translate}}</option>
+                            <option value="ZONE">{{'samtagatewayApp.userType.ZONE' | translate}}</option>
+                            <option value="PERSON">{{'samtagatewayApp.userType.PERSON' | translate}}</option>
                         </select>
                     </ng-template>
                 </p-column>
@@ -65,10 +65,10 @@
                         <select class="form-control" name="activated" (change)="search()"
                                 [(ngModel)]="role.activated">
                             <option></option>
-                            <option value="true" jhiTranslate="niopdcgatewayApp.role.activatedTrue">
+                            <option value="true" jhiTranslate="samtagatewayApp.role.activatedTrue">
                                 true
                             </option>
-                            <option value="false" jhiTranslate="niopdcgatewayApp.role.activatedFalse">
+                            <option value="false" jhiTranslate="samtagatewayApp.role.activatedFalse">
                                 false
                             </option>
                         </select>
@@ -87,13 +87,13 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="name" [header]="'niopdcgatewayApp.role.name' | translate"></p-column>
-        <p-column field="userType" [header]="'niopdcgatewayApp.role.userType' | translate">
+        <p-column field="name" [header]="'samtagatewayApp.role.name' | translate"></p-column>
+        <p-column field="userType" [header]="'samtagatewayApp.role.userType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
-                <span>{{'niopdcgatewayApp.userType.'+item.userType | translate}}</span>
+                <span>{{'samtagatewayApp.userType.'+item.userType | translate}}</span>
             </ng-template>
         </p-column>
-        <p-column field="activated" [header]="'niopdcgatewayApp.role.activated' | translate">
+        <p-column field="activated" [header]="'samtagatewayApp.role.activated' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span class="fa" [ngClass]="{'fa-check':item.activated,'fa-close':!item.activated}"></span>
             </ng-template></p-column>

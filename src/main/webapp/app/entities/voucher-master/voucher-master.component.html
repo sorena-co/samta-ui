@@ -22,32 +22,32 @@
             <p-row>
                 <p-column field="locationId" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.voucherMaster.locationId">Location Id</span>
+                        <span jhiTranslate="samtagatewayApp.voucherMaster.locationId">Location Id</span>
                     </ng-template>
                 </p-column>
                 <p-column field="confirmDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.voucherMaster.confirmDate">Confirm Date</span>
+                        <span jhiTranslate="samtagatewayApp.voucherMaster.confirmDate">Confirm Date</span>
                     </ng-template>
                 </p-column>
                 <p-column field="userConfirm" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.voucherMaster.userConfirm">User Confirm</span>
+                        <span jhiTranslate="samtagatewayApp.voucherMaster.userConfirm">User Confirm</span>
                     </ng-template>
                 </p-column>
                 <p-column field="docNumber" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.voucherMaster.docNumber">Doc Number</span>
+                        <span jhiTranslate="samtagatewayApp.voucherMaster.docNumber">Doc Number</span>
                     </ng-template>
                 </p-column>
                 <p-column field="voucherTypeId" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.voucherMaster.voucherType">Voucher Type</span>
+                        <span jhiTranslate="samtagatewayApp.voucherMaster.voucherType">Voucher Type</span>
                     </ng-template>
                 </p-column>
                 <p-column field="status" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.voucherMaster.status">Voucher Type</span>
+                        <span jhiTranslate="samtagatewayApp.voucherMaster.status">Voucher Type</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -103,9 +103,9 @@
                 <p-column>
                     <ng-template pTemplate="header">
                         <select class="form-control" name="status" (change)="search()" [(ngModel)]="voucherMaster.status" id="field_status">
-                            <option value="CONFIRM">{{'niopdcgatewayApp.VoucherMasterStatus.CONFIRM' | translate}}
+                            <option value="CONFIRM">{{'samtagatewayApp.VoucherMasterStatus.CONFIRM' | translate}}
                             </option>
-                            <option value="PENDING">{{'niopdcgatewayApp.VoucherMasterStatus.PENDING' | translate}}
+                            <option value="PENDING">{{'samtagatewayApp.VoucherMasterStatus.PENDING' | translate}}
                             </option>
                         </select>
                     </ng-template>
@@ -123,21 +123,21 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="locationTitle" [header]="'niopdcgatewayApp.voucherMaster.locationId' | translate"></p-column>
-        <p-column field="confirmDate" [header]="'niopdcgatewayApp.voucherMaster.confirmDate' | translate">
+        <p-column field="locationTitle" [header]="'samtagatewayApp.voucherMaster.locationId' | translate"></p-column>
+        <p-column field="confirmDate" [header]="'samtagatewayApp.voucherMaster.confirmDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.confirmDate | dateTimeJalali}}</span>
             </ng-template>
         </p-column>
-        <p-column field="userConfirm" [header]="'niopdcgatewayApp.voucherMaster.userConfirm' | translate"></p-column>
-        <p-column field="docNumber" [header]="'niopdcgatewayApp.voucherMaster.docNumber' | translate"></p-column>
+        <p-column field="userConfirm" [header]="'samtagatewayApp.voucherMaster.userConfirm' | translate"></p-column>
+        <p-column field="docNumber" [header]="'samtagatewayApp.voucherMaster.docNumber' | translate"></p-column>
         <p-column field="voucherTypeTitle"
-                  [header]="'niopdcgatewayApp.voucherMaster.voucherType' | translate">
+                  [header]="'samtagatewayApp.voucherMaster.voucherType' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.voucherTypeGroupTitle+'/'+item.voucherTypeTitle}}</span>
             </ng-template>
         </p-column>
-        <p-column field="status" [header]="'niopdcgatewayApp.voucherMaster.status' | translate">
+        <p-column field="status" [header]="'samtagatewayApp.voucherMaster.status' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span *ngIf="item.status===VoucherMasterStatus[VoucherMasterStatus.CONFIRM]" class="fa fa-check"></span>
                 <ng-container *ngIf="item.status===VoucherMasterStatus[VoucherMasterStatus.PENDING]">
@@ -182,12 +182,12 @@
                                 <!--*jhiHasAnyAuthority="['ROLE_ADMIN','LIST_VOUCHER_DETAIL']"-->
                                 <!--[routerLink]="['/voucher-master', item.id, 'voucher-details']">-->
                             <!--<span class="fa fa-external-link"></span>-->
-                            <!--<span jhiTranslate="niopdcgatewayApp.voucherDetails.home.title">Voucher Details</span>-->
+                            <!--<span jhiTranslate="samtagatewayApp.voucherDetails.home.title">Voucher Details</span>-->
                         <!--</button>-->
                         <button class="dropdown-item"
                                 [routerLink]="['/voucher-master', item.id, 'report']">
                             <span class="fa fa-external-link"></span>
-                            <span jhiTranslate="niopdcgatewayApp.bill.home.report">Factor Item</span>
+                            <span jhiTranslate="samtagatewayApp.bill.home.report">Factor Item</span>
                         </button>
                     </div>
                 </div>

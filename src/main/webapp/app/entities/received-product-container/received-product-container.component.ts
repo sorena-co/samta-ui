@@ -191,16 +191,16 @@ export class ReceivedProductContainerComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.transfer.home.mainDayDepotTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.transfer.home.mainDayDepotTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: [mainDayDepotUrl]});
         });
-        this.translateService.get('niopdcgatewayApp.receivedProductContainer.home.dayDepotContainerTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.receivedProductContainer.home.dayDepotContainerTitle').subscribe((title) => {
             this.breadcrumbItems.push({
                 label: title + `(${this.dayDepotContainerTitle})`,
                 routerLink: [dayDepotContainerUrl]
             });
         });
-        this.translateService.get('niopdcgatewayApp.receivedProductContainer.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.receivedProductContainer.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

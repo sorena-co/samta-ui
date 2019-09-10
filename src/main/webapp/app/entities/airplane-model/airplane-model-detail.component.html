@@ -1,18 +1,18 @@
 
 <div *ngIf="airplaneModel">
-    <h2><span jhiTranslate="niopdcgatewayApp.airplaneModel.detail.title">Airplane Model</span> {{airplaneModel.id}}</h2>
+    <h2><span jhiTranslate="samtagatewayApp.airplaneModel.detail.title">Airplane Model</span> {{airplaneModel.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
-        <dt><span jhiTranslate="niopdcgatewayApp.airplaneModel.title">Title</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.airplaneModel.title">Title</span></dt>
         <dd>
             <span>{{airplaneModel.title}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.airplaneModel.capacity">Capacity</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.airplaneModel.capacity">Capacity</span></dt>
         <dd>
             <span>{{airplaneModel.capacity}}</span>
         </dd>
-        <dt><span jhiTranslate="niopdcgatewayApp.airplaneModel.product">Product</span></dt>
+        <dt><span jhiTranslate="samtagatewayApp.airplaneModel.product">Product</span></dt>
         <dd>
             <div *ngIf="airplaneModel.productId">
                 <a [routerLink]="['/product', airplaneModel.productId]">{{airplaneModel.productTitle}}</a>

@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "ElementRequestReason" : {
             "null": "",
             "MAX_DIFF": "MAX_DIFF",

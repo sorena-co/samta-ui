@@ -137,13 +137,13 @@ export class MainAuthorityComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.mainAuthority.home.parentAuthorityTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.mainAuthority.home.parentAuthorityTitle').subscribe((title) => {
             this.breadcrumbItems.push({
                 label: title + ` (${this.parentAuthority.persianName})`,
                 routerLink: ['/parent-authority']
             });
         });
-        this.translateService.get('niopdcgatewayApp.mainAuthority.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.mainAuthority.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

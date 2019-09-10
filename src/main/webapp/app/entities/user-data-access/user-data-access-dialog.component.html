@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="userDataAccess.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.userDataAccess.home.createLabel">
+            jhiTranslate="samtagatewayApp.userDataAccess.home.createLabel">
             Create</h4>
         <h4 *ngIf="userDataAccess.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.userDataAccess.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.userDataAccess.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.userDataAccess.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.userDataAccess.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userDataAccess.location"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.userDataAccess.location"
                            for="field_location">Location</label>
 
                     <input-location-selector class="form-control" [idSelector]="true"
@@ -33,7 +33,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userDataAccess.region"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.userDataAccess.region"
                            for="field_region">Region</label>
 
                     <input-region-selector class="form-control" [idSelector]="true"
@@ -51,7 +51,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userDataAccess.person"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.userDataAccess.person"
                            for="field_person">Person</label>
                     <select class="form-control" id="field_person" name="person"
                             [disabled]="!userDataAccess.locationId"
@@ -65,7 +65,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userDataAccess.customer"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.userDataAccess.customer"
                            for="field_customer">Customer</label>
                     <select class="form-control" id="field_customer" name="customer"
                             [disabled]="!userDataAccess.personId"
@@ -83,14 +83,14 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userDataAccess.contractType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.userDataAccess.contractType"
                            for="field_contractType">Contract Type</label>
                     <select [disabled]="isView || userDataAccess.personId" class="form-control" name="contractType"
                             [(ngModel)]="userDataAccess.contractType"
                             id="field_contractType">
                         <option [ngValue]="contractTypeOption"
                                 *ngFor="let contractTypeOption of contractTypes">
-                            {{('niopdcgatewayApp.ContractType.' + contractTypeOption) |
+                            {{('samtagatewayApp.ContractType.' + contractTypeOption) |
                             translate}}
                         </option>
                     </select>
@@ -98,7 +98,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.userDataAccess.customerType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.userDataAccess.customerType"
                            for="field_customerType">Customer Type</label>
                     <select [disabled]="isView || userDataAccess.personId" class="form-control" id="field_customerType"
                             name="customerType"

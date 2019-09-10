@@ -1,9 +1,9 @@
 <div>
     <h2>
-        <span jhiTranslate="niopdcgatewayApp.bankTransaction.home.title">Bank Transactions</span>
+        <span jhiTranslate="samtagatewayApp.bankTransaction.home.title">Bank Transactions</span>
         <button class="btn btn-primary float-right jh-create-entity create-bank-transaction" [routerLink]="['/', { outlets: { popup: ['bank-transaction-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="niopdcgatewayApp.bankTransaction.home.createLabel">
+            <span  jhiTranslate="samtagatewayApp.bankTransaction.home.createLabel">
             Create new Bank Transaction
             </span>
         </button>
@@ -17,14 +17,14 @@
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="identifier"><span jhiTranslate="niopdcgatewayApp.bankTransaction.identifier">Identifier</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="username"><span jhiTranslate="niopdcgatewayApp.bankTransaction.username">Username</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="requestDate"><span jhiTranslate="niopdcgatewayApp.bankTransaction.requestDate">Request Date</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="bankTransactionState"><span jhiTranslate="niopdcgatewayApp.bankTransaction.bankTransactionState">Bank Transaction State</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="type"><span jhiTranslate="niopdcgatewayApp.bankTransaction.type">Type</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="responseBody"><span jhiTranslate="niopdcgatewayApp.bankTransaction.responseBody">Response Body</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="responseDate"><span jhiTranslate="niopdcgatewayApp.bankTransaction.responseDate">Response Date</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="error"><span jhiTranslate="niopdcgatewayApp.bankTransaction.error">Error</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="identifier"><span jhiTranslate="samtagatewayApp.bankTransaction.identifier">Identifier</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="username"><span jhiTranslate="samtagatewayApp.bankTransaction.username">Username</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="requestDate"><span jhiTranslate="samtagatewayApp.bankTransaction.requestDate">Request Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="bankTransactionState"><span jhiTranslate="samtagatewayApp.bankTransaction.bankTransactionState">Bank Transaction State</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="type"><span jhiTranslate="samtagatewayApp.bankTransaction.type">Type</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="responseBody"><span jhiTranslate="samtagatewayApp.bankTransaction.responseBody">Response Body</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="responseDate"><span jhiTranslate="samtagatewayApp.bankTransaction.responseDate">Response Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="error"><span jhiTranslate="samtagatewayApp.bankTransaction.error">Error</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>
@@ -34,8 +34,8 @@
                 <td>{{bankTransaction.identifier}}</td>
                 <td>{{bankTransaction.username}}</td>
                 <td>{{bankTransaction.requestDate | date:'medium'}}</td>
-                <td jhiTranslate="{{'niopdcgatewayApp.BankTransactionState.' + bankTransaction.bankTransactionState}}">{{bankTransaction.bankTransactionState}}</td>
-                <td jhiTranslate="{{'niopdcgatewayApp.SpentType.' + bankTransaction.type}}">{{bankTransaction.type}}</td>
+                <td jhiTranslate="{{'samtagatewayApp.BankTransactionState.' + bankTransaction.bankTransactionState}}">{{bankTransaction.bankTransactionState}}</td>
+                <td jhiTranslate="{{'samtagatewayApp.SpentType.' + bankTransaction.type}}">{{bankTransaction.type}}</td>
                 <td>{{bankTransaction.responseBody}}</td>
                 <td>{{bankTransaction.responseDate | date:'medium'}}</td>
                 <td>{{bankTransaction.error}}</td>

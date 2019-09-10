@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "sellContract" : {
             "home": {
                 "title": "قرارداد فروش",

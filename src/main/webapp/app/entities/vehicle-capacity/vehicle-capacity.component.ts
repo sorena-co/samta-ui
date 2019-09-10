@@ -154,10 +154,10 @@ export class VehicleCapacityComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.vehicleCapacity.home.vehicleModelTitle').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.vehicleCapacity.home.vehicleModelTitle').subscribe((title) => {
             this.breadcrumbItems.push({label: title + ` (${this.vehicleModel.title})`, routerLink: ['/vehicle-model']});
         });
-        this.translateService.get('niopdcgatewayApp.vehicleCapacity.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.vehicleCapacity.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

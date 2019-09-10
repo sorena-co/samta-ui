@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "TranshipType" : {
             "null": "",
             "INSIDE_TO_OUT": "داخل به خارج",

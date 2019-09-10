@@ -2,13 +2,13 @@
 
     <div class="modal-header">
         <h4 *ngIf="!changeContainer.id" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.changeContainer.home.createLabel">
+            jhiTranslate="samtagatewayApp.changeContainer.home.createLabel">
             Create</h4>
         <h4 *ngIf="changeContainer.id && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.changeContainer.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.changeContainer.home.createOrEditLabel">
             Edit</h4>
         <h4 *ngIf="changeContainer.id && isView" class="modal-title" id="viewLabel"
-            jhiTranslate="niopdcgatewayApp.changeContainer.home.view">
+            jhiTranslate="samtagatewayApp.changeContainer.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.changeContainer.amount"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.changeContainer.amount"
                            for="field_amount">Amount</label>
                     <input [disabled]="true" type="number" class="form-control" name="amount" id="field_amount"
                            [(ngModel)]="changeContainer.amount" required/>
@@ -40,7 +40,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.changeContainer.dayDepot"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.changeContainer.dayDepot"
                            for="field_dayDepots">Day Depot</label>
                     <select [disabled]="isView || dayDepot" class="form-control" id="field_dayDepots" name="dayDepots"
                             [(ngModel)]="changeContainer.dayDepotId" required>
@@ -63,7 +63,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.changeContainer.source"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.changeContainer.source"
                            for="field_source">Source</label>
                     <select [disabled]="dayDepotContainer || isView" class="form-control" id="field_source"
                             name="source" [(ngModel)]="changeContainer.sourceId"
@@ -87,7 +87,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.changeContainer.target"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.changeContainer.target"
                            for="field_target">Target</label>
                     <select [disabled]="isView" class="form-control" id="field_target"
                             name="target" [(ngModel)]="changeContainer.targetId"
@@ -108,7 +108,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.changeContainer.count"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.changeContainer.count"
                            for="field_count">Count</label>
                     <input [disabled]="isView" type="number" class="form-control" name="count" id="field_count"
                            (ngModelChange)="onChangeCount($event)"

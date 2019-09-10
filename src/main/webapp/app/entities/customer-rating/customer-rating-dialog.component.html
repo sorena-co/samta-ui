@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="customerRating.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.customerRating.home.createLabel">
+            jhiTranslate="samtagatewayApp.customerRating.home.createLabel">
             Create</h4>
         <h4 *ngIf="customerRating.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.customerRating.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.customerRating.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.customerRating.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.customerRating.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerRating.title"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerRating.title"
                            for="field_title">Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="title" id="field_title"
                            [(ngModel)]="customerRating.title" required/>
@@ -33,7 +33,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerRating.level"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerRating.level"
                            for="field_level">Level</label>
                     <input [disabled]="isView" type="number" class="form-control" name="level" id="field_level"
                            [(ngModel)]="customerRating.level" required/>
@@ -55,7 +55,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerRating.fromDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerRating.fromDate"
                            for="field_fromDate">From Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disabled]="isView" [rtlActive]="true" time="00:00:00" id="field_fromDate"
@@ -79,7 +79,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerRating.toDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerRating.toDate"
                            for="field_toDate">To
                         Date</label>
                     <div class="d-flex">
@@ -106,7 +106,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerRating.fromScore"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerRating.fromScore"
                            for="field_fromScore">From Score</label>
                     <input [disabled]="isView" type="number" class="form-control" name="fromScore" id="field_fromScore"
                            [(ngModel)]="customerRating.fromScore" required/>
@@ -126,7 +126,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.customerRating.toScore"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.customerRating.toScore"
                            for="field_toScore">To Score</label>
                     <input [disabled]="isView" type="number" class="form-control" name="toScore" id="field_toScore"
                            [(ngModel)]="customerRating.toScore" required/>
@@ -148,7 +148,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.customerRating.location" for="field_location">Location</label>
+                    <label jhiTranslate="samtagatewayApp.customerRating.location" for="field_location">Location</label>
                     <!--<select class="form-control" id="field_location" multiple name="location"
                             [(ngModel)]="customerRating.locations">
                         <option [ngValue]="getSelected(customerRating.locations, locationOption)"

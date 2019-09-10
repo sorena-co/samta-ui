@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="oilTank.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.oilTank.home.createLabel">
+            jhiTranslate="samtagatewayApp.oilTank.home.createLabel">
             Create</h4>
         <h4 *ngIf="oilTank.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.oilTank.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.oilTank.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.oilTank.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.oilTank.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.title"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.title"
                            for="field_title">Title</label>
                     <input [disabled]="isView" type="text" class="form-control" name="title" id="field_title"
                            [(ngModel)]="oilTank.title" required minlength="3" maxlength="40"/>
@@ -43,7 +43,7 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.code"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.code"
                            for="field_code">Code</label>
                     <input [disabled]="isView" type="text" class="form-control" name="code" id="field_code"
                            pattern="^[0-9]{4}$"
@@ -69,7 +69,7 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.refuelCenter"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.refuelCenter"
                            for="field_refuelCenter">RefuelCenter</label>
                     <select [disabled]="isView" class="form-control" id="field_refuelCenter" name="refuelCenter"
                             [(ngModel)]="oilTank.refuelCenterId"
@@ -91,24 +91,24 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.oilTankType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.oilTankType"
                            for="field_oilTankType">Oil Tank Type</label>
                     <select [disabled]="isView || useOilTankIdDayDepot" class="form-control" name="oilTankType"
                             (ngModelChange)="oilTankChange($event)"
                             [(ngModel)]="oilTank.oilTankType" id="field_oilTankType" required>
-                        <option value="MAIN">{{'niopdcgatewayApp.oilTankType.MAIN' | translate}}</option>
-                        <option value="CONTAMINATED">{{'niopdcgatewayApp.oilTankType.CONTAMINATED' | translate}}
+                        <option value="MAIN">{{'samtagatewayApp.oilTankType.MAIN' | translate}}</option>
+                        <option value="CONTAMINATED">{{'samtagatewayApp.oilTankType.CONTAMINATED' | translate}}
                         </option>
-                        <option value="SERVICE_TANK">{{'niopdcgatewayApp.oilTankType.SERVICE_TANK' | translate}}
+                        <option value="SERVICE_TANK">{{'samtagatewayApp.oilTankType.SERVICE_TANK' | translate}}
                         </option>
-                        <option value="UNIT">{{'niopdcgatewayApp.oilTankType.UNIT' | translate}}</option>
-                        <option value="PLATFORM">{{'niopdcgatewayApp.oilTankType.PLATFORM' | translate}}</option>
-                        <option value="WATER_METHANOL">{{'niopdcgatewayApp.oilTankType.WATER_METHANOL' | translate}}
+                        <option value="UNIT">{{'samtagatewayApp.oilTankType.UNIT' | translate}}</option>
+                        <option value="PLATFORM">{{'samtagatewayApp.oilTankType.PLATFORM' | translate}}</option>
+                        <option value="WATER_METHANOL">{{'samtagatewayApp.oilTankType.WATER_METHANOL' | translate}}
                         </option>
-                        <option value="EARTH">{{'niopdcgatewayApp.oilTankType.EARTH' | translate}}</option>
-                        <option value="BASE_PRODUCT">{{'niopdcgatewayApp.oilTankType.BASE_PRODUCT' | translate}}
+                        <option value="EARTH">{{'samtagatewayApp.oilTankType.EARTH' | translate}}</option>
+                        <option value="BASE_PRODUCT">{{'samtagatewayApp.oilTankType.BASE_PRODUCT' | translate}}
                         </option>
-                        <option value="RECYCLE">{{'niopdcgatewayApp.oilTankType.RECYCLE' | translate}}
+                        <option value="RECYCLE">{{'samtagatewayApp.oilTankType.RECYCLE' | translate}}
                         </option>
                     </select>
                     <div
@@ -125,7 +125,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.productId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.productId"
                            for="field_product">Product</label>
                     <p-dropdown [options]="customProducts" [(ngModel)]="selectedProduct"
                                 [filter]="true"
@@ -149,7 +149,7 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.virtualCapacity"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.virtualCapacity"
                            for="field_virtualCapacity">Virtual Capacity</label>
                     <input [disabled]="isView||oilTank.oilTankType === OilTankType[OilTankType.PLATFORM]||
                         oilTank.oilTankType === OilTankType[OilTankType.SERVICE_TANK]" type="number"
@@ -175,7 +175,7 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.capacity"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.capacity"
                            for="field_capacity">Capacity</label>
                     <input [disabled]="isView||oilTank.oilTankType===OilTankType[OilTankType.PLATFORM]||
                         oilTank.oilTankType===OilTankType[OilTankType.SERVICE_TANK]" type="number" class="form-control"
@@ -200,15 +200,15 @@
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.oilTankStatus"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.oilTankStatus"
                            for="field_oilTankStatus">Oil Tank Status</label>
                     <select class="form-control" name="oilTankStatus" [(ngModel)]="oilTank.oilTankStatus"
                             [disabled]="isView"
                             id="field_oilTankStatus" required>
-                        <option value="ACTIVE" selected>{{'niopdcgatewayApp.OilTankStatus.ACTIVE' | translate}}</option>
-                        <option value="UNDER_REPAIR">{{'niopdcgatewayApp.OilTankStatus.UNDER_REPAIR' | translate}}
+                        <option value="ACTIVE" selected>{{'samtagatewayApp.OilTankStatus.ACTIVE' | translate}}</option>
+                        <option value="UNDER_REPAIR">{{'samtagatewayApp.OilTankStatus.UNDER_REPAIR' | translate}}
                         </option>
-                        <option value="STAGNANT">{{'niopdcgatewayApp.OilTankStatus.STAGNANT' | translate}}</option>
+                        <option value="STAGNANT">{{'samtagatewayApp.OilTankStatus.STAGNANT' | translate}}</option>
                     </select>
                     <div
                         [hidden]="!(editForm.controls.oilTankStatus?.dirty && editForm.controls.oilTankStatus?.invalid)">
@@ -224,12 +224,12 @@
         <div class="row" *ngIf="oilTank.oilTankType!==OilTankType[OilTankType.PLATFORM]&& oilTank.oilTankType!==OilTankType[OilTankType.SERVICE_TANK]">
             <div class="col-xs-12 col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.oilTank.measureType"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.oilTank.measureType"
                            for="field_measureType">Measure Type</label>
                     <select [disabled]="isView||oilTank.id" class="form-control" name="measureType"
                             [(ngModel)]="oilTank.measureType" id="field_measureType" required>
-                        <option value="NORMAL">{{'niopdcgatewayApp.MeasureType.NORMAL' | translate}}</option>
-                        <option value="RATIO">{{'niopdcgatewayApp.MeasureType.RATIO' | translate}}</option>
+                        <option value="NORMAL">{{'samtagatewayApp.MeasureType.NORMAL' | translate}}</option>
+                        <option value="RATIO">{{'samtagatewayApp.MeasureType.RATIO' | translate}}</option>
                     </select>
                     <div [hidden]="!(editForm.controls.measureType?.dirty && editForm.controls.measureType?.invalid)">
                         <small class="form-text text-danger"

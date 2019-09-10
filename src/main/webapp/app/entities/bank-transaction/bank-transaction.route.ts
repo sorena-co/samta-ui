@@ -36,7 +36,7 @@ export const bankTransactionRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.bankTransaction.home.title'
+            pageTitle: 'samtagatewayApp.bankTransaction.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -44,7 +44,7 @@ export const bankTransactionRoute: Routes = [
         component: BankTransactionDetailComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.bankTransaction.home.title'
+            pageTitle: 'samtagatewayApp.bankTransaction.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -56,7 +56,7 @@ export const bankTransactionPopupRoute: Routes = [
         component: BankTransactionPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.bankTransaction.home.title'
+            pageTitle: 'samtagatewayApp.bankTransaction.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -66,7 +66,7 @@ export const bankTransactionPopupRoute: Routes = [
         component: BankTransactionPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.bankTransaction.home.title'
+            pageTitle: 'samtagatewayApp.bankTransaction.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -76,7 +76,7 @@ export const bankTransactionPopupRoute: Routes = [
         component: BankTransactionDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN'],
-            pageTitle: 'niopdcgatewayApp.bankTransaction.home.title'
+            pageTitle: 'samtagatewayApp.bankTransaction.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "ConfigType" : {
             "null": "",
             "BOUNDARY_SELL": "فروش مرزی",

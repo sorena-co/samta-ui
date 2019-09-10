@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "orderProduct" : {
             "home": {
                 "title": "Order Products",

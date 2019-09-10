@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "ContractType" : {
             "null": "",
             "SUPPLY_CHANNEL": "SUPPLY_CHANNEL",

@@ -34,7 +34,7 @@ export const customerTypeRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CUSTOMER_TYPE'],
-            pageTitle: 'niopdcgatewayApp.customerType.home.title'
+            pageTitle: 'samtagatewayApp.customerType.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -46,7 +46,7 @@ export const customerTypePopupRoute: Routes = [
     component: CustomerTypePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'CREATE_CUSTOMER_TYPE'],
-        pageTitle: 'niopdcgatewayApp.customerType.home.title'
+        pageTitle: 'samtagatewayApp.customerType.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -56,7 +56,7 @@ export const customerTypePopupRoute: Routes = [
     component: CustomerTypePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'EDIT_CUSTOMER_TYPE'],
-        pageTitle: 'niopdcgatewayApp.customerType.home.title'
+        pageTitle: 'samtagatewayApp.customerType.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -66,7 +66,7 @@ export const customerTypePopupRoute: Routes = [
     component: CustomerTypeDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN', 'DELETE_CUSTOMER_TYPE'],
-        pageTitle: 'niopdcgatewayApp.customerType.home.title'
+        pageTitle: 'samtagatewayApp.customerType.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -76,7 +76,7 @@ export const customerTypePopupRoute: Routes = [
       component: CustomerTypePopupComponent,
       data: {
           authorities: ['ROLE_ADMIN', 'VIEW_CUSTOMER_TYPE'],
-          pageTitle: 'niopdcgatewayApp.customerType.home.title'
+          pageTitle: 'samtagatewayApp.customerType.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'

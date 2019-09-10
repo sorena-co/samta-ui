@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.momentSheet.refuelCenter"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.momentSheet.refuelCenter"
                                    for="field_refuelCenter">RefuelCenter</label>
                             <select class="form-control" id="field_refuelCenter"
                                     name="refuelCenter"
@@ -32,7 +32,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.momentSheet.startTime"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.momentSheet.startTime"
                                    for="field_startTime">Register Date</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="00:00:00"
@@ -45,7 +45,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.momentSheet.endTime"
+                            <label class="form-control-label" jhiTranslate="samtagatewayApp.momentSheet.endTime"
                                    for="field_endTime">Register Date</label>
                             <div class="d-flex">
                                 <ng2-datetimepicker [disableTime]="true" [rtlActive]="true" time="23:59:59"
@@ -89,25 +89,25 @@
                 Excel
             </button>
         </ng-template>
-        <kendo-grid-column field="oilTankCode"  [locked]="true" [title]="'niopdcgatewayApp.momentSheet.oilTankCode' | translate"
+        <kendo-grid-column field="oilTankCode"  [locked]="true" [title]="'samtagatewayApp.momentSheet.oilTankCode' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="day" [title]="'niopdcgatewayApp.metreSheet.date' | translate" width="130">
+        <kendo-grid-column field="day" [title]="'samtagatewayApp.metreSheet.date' | translate" width="130">
             <ng-template kendoGridCellTemplate let-dataItem>
                 <span>{{dataItem.day | dateTimeJalali}}</span>
             </ng-template>
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="startMeasurementOilTankAmount" [title]="'niopdcgatewayApp.momentSheet.startMeasurementOilTankAmount' | translate"
+        <kendo-grid-column field="startMeasurementOilTankAmount" [title]="'samtagatewayApp.momentSheet.startMeasurementOilTankAmount' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="endMeasurementOilTankAmount" [title]="'niopdcgatewayApp.momentSheet.endMeasurementOilTankAmount' | translate"
+        <kendo-grid-column field="endMeasurementOilTankAmount" [title]="'samtagatewayApp.momentSheet.endMeasurementOilTankAmount' | translate"
                            width="130">
             <ng-template kendoGridGroupHeaderTemplatе></ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="addition" [title]="'niopdcgatewayApp.momentSheet.addition' | translate"
+        <kendo-grid-column field="addition" [title]="'samtagatewayApp.momentSheet.addition' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -121,7 +121,7 @@
                 {{('report.sum' | translate) + ':' + total['addition']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="deductible" [title]="'niopdcgatewayApp.momentSheet.deductible' | translate"
+        <kendo-grid-column field="deductible" [title]="'samtagatewayApp.momentSheet.deductible' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -135,7 +135,7 @@
                 {{('report.sum' | translate) + ':' + total['deductible']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="receiveDepots" [title]="'niopdcgatewayApp.momentSheet.receiveDepots' | translate"
+        <kendo-grid-column field="receiveDepots" [title]="'samtagatewayApp.momentSheet.receiveDepots' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -149,7 +149,7 @@
                 {{('report.sum' | translate) + ':' + total['receiveDepots']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="receiveTransferContaminants" [title]="'niopdcgatewayApp.momentSheet.receiveTransferContaminants' | translate"
+        <kendo-grid-column field="receiveTransferContaminants" [title]="'samtagatewayApp.momentSheet.receiveTransferContaminants' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -163,7 +163,7 @@
                 {{('report.sum' | translate) + ':' + total['receiveTransferContaminants']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="receiveTransferRecycles" [title]="'niopdcgatewayApp.momentSheet.receiveTransferRecycles' | translate"
+        <kendo-grid-column field="receiveTransferRecycles" [title]="'samtagatewayApp.momentSheet.receiveTransferRecycles' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -177,7 +177,7 @@
                 {{('report.sum' | translate) + ':' + total['receiveTransferRecycles']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="receiveTransferMains" [title]="'niopdcgatewayApp.momentSheet.receiveTransferMains' | translate"
+        <kendo-grid-column field="receiveTransferMains" [title]="'samtagatewayApp.momentSheet.receiveTransferMains' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -191,7 +191,7 @@
                 {{('report.sum' | translate) + ':' + total['receiveTransferMains']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="receiveTransferUnits" [title]="'niopdcgatewayApp.momentSheet.receiveTransferUnits' | translate"
+        <kendo-grid-column field="receiveTransferUnits" [title]="'samtagatewayApp.momentSheet.receiveTransferUnits' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -205,7 +205,7 @@
                 {{('report.sum' | translate) + ':' + total['receiveTransferUnits']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="receiveTransferServiceTanks" [title]="'niopdcgatewayApp.momentSheet.receiveTransferServiceTanks' | translate"
+        <kendo-grid-column field="receiveTransferServiceTanks" [title]="'samtagatewayApp.momentSheet.receiveTransferServiceTanks' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -219,7 +219,7 @@
                 {{('report.sum' | translate) + ':' + total['receiveTransferServiceTanks']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="receiveTransferTotals" [title]="'niopdcgatewayApp.momentSheet.receiveTransferTotals' | translate"
+        <kendo-grid-column field="receiveTransferTotals" [title]="'samtagatewayApp.momentSheet.receiveTransferTotals' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -233,7 +233,7 @@
                 {{('report.sum' | translate) + ':' + total['receiveTransferTotals']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="sendDepots" [title]="'niopdcgatewayApp.momentSheet.sendDepots' | translate"
+        <kendo-grid-column field="sendDepots" [title]="'samtagatewayApp.momentSheet.sendDepots' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -247,7 +247,7 @@
                 {{('report.sum' | translate) + ':' + total['sendDepots']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="sendToUnits" [title]="'niopdcgatewayApp.momentSheet.sendToUnits' | translate"
+        <kendo-grid-column field="sendToUnits" [title]="'samtagatewayApp.momentSheet.sendToUnits' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -261,7 +261,7 @@
                 {{('report.sum' | translate) + ':' + total['sendToUnits']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="sendToContaminants" [title]="'niopdcgatewayApp.momentSheet.sendToContaminants' | translate"
+        <kendo-grid-column field="sendToContaminants" [title]="'samtagatewayApp.momentSheet.sendToContaminants' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -275,7 +275,7 @@
                 {{('report.sum' | translate) + ':' + total['sendToContaminants']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="sendToRecycles" [title]="'niopdcgatewayApp.momentSheet.sendToRecycles' | translate"
+        <kendo-grid-column field="sendToRecycles" [title]="'samtagatewayApp.momentSheet.sendToRecycles' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -289,7 +289,7 @@
                 {{('report.sum' | translate) + ':' + total['sendToRecycles']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="sendToServiceTanks" [title]="'niopdcgatewayApp.momentSheet.sendToServiceTanks' | translate"
+        <kendo-grid-column field="sendToServiceTanks" [title]="'samtagatewayApp.momentSheet.sendToServiceTanks' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -303,7 +303,7 @@
                 {{('report.sum' | translate) + ':' + total['sendToServiceTanks']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="sendSells" [title]="'niopdcgatewayApp.momentSheet.sendSells' | translate"
+        <kendo-grid-column field="sendSells" [title]="'samtagatewayApp.momentSheet.sendSells' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -317,7 +317,7 @@
                 {{('report.sum' | translate) + ':' + total['sendSells']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="sendToPlatforms" [title]="'niopdcgatewayApp.momentSheet.sendToPlatforms' | translate"
+        <kendo-grid-column field="sendToPlatforms" [title]="'samtagatewayApp.momentSheet.sendToPlatforms' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate
@@ -331,7 +331,7 @@
                 {{('report.sum' | translate) + ':' + total['sendToPlatforms']?.sum }}
             </ng-template>
         </kendo-grid-column>
-        <kendo-grid-column field="sendTotals" [title]="'niopdcgatewayApp.momentSheet.sendTotals' | translate"
+        <kendo-grid-column field="sendTotals" [title]="'samtagatewayApp.momentSheet.sendTotals' | translate"
                            width="130">
             <ng-template
                 kendoGridGroupFooterTemplate

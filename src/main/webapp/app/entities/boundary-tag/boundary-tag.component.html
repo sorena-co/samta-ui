@@ -19,17 +19,17 @@
             <p-row>
                 <p-column field="amount" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.boundaryTag.amount">Amount</span>
+                        <span jhiTranslate="samtagatewayApp.boundaryTag.amount">Amount</span>
                     </ng-template>
                 </p-column>
                 <p-column field="buyPrice" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.boundaryTag.buyPrice">Buy Price</span>
+                        <span jhiTranslate="samtagatewayApp.boundaryTag.buyPrice">Buy Price</span>
                     </ng-template>
                 </p-column>
                 <p-column field="buyDate" [sortable]="true">
                     <ng-template pTemplate="header">
-                        <span jhiTranslate="niopdcgatewayApp.boundaryTag.buyDate">Buy Date</span>
+                        <span jhiTranslate="samtagatewayApp.boundaryTag.buyDate">Buy Date</span>
                     </ng-template>
                 </p-column>
                 <p-column styleClass="col-button"></p-column>
@@ -76,9 +76,9 @@
             </p-row>
         </p-headerColumnGroup>
 
-        <p-column field="amount" [header]="'niopdcgatewayApp.boundaryTag.amount' | translate"></p-column>
-        <p-column field="buyPrice" [header]="'niopdcgatewayApp.boundaryTag.buyPrice' | translate"></p-column>
-        <p-column field="buyDate" [header]="'niopdcgatewayApp.boundaryTag.buyDate' | translate">
+        <p-column field="amount" [header]="'samtagatewayApp.boundaryTag.amount' | translate"></p-column>
+        <p-column field="buyPrice" [header]="'samtagatewayApp.boundaryTag.buyPrice' | translate"></p-column>
+        <p-column field="buyDate" [header]="'samtagatewayApp.boundaryTag.buyDate' | translate">
             <ng-template let-item="rowData" pTemplate="body">
                 <span>{{item.buyDate | dateTimeJalali}}</span>
             </ng-template></p-column>

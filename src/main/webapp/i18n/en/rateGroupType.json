@@ -1,5 +1,5 @@
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "RateGroupType" : {
             "null": "",
             "SUBSIDY": "SUBSIDY",

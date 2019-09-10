@@ -36,7 +36,7 @@ export const requestFilterElementRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_REQUEST_FILTER_ELEMENT'],
-            pageTitle: 'niopdcgatewayApp.requestFilterElement.home.title'
+            pageTitle: 'samtagatewayApp.requestFilterElement.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -48,7 +48,7 @@ export const requestFilterElementPopupRoute: Routes = [
         component: RequestFilterElementPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_REQUEST_FILTER_ELEMENT'],
-            pageTitle: 'niopdcgatewayApp.requestFilterElement.home.title'
+            pageTitle: 'samtagatewayApp.requestFilterElement.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -58,7 +58,7 @@ export const requestFilterElementPopupRoute: Routes = [
         component: RequestFilterElementPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_REQUEST_FILTER_ELEMENT'],
-            pageTitle: 'niopdcgatewayApp.requestFilterElement.home.title'
+            pageTitle: 'samtagatewayApp.requestFilterElement.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -68,7 +68,7 @@ export const requestFilterElementPopupRoute: Routes = [
         component: RequestFilterElementDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_REQUEST_FILTER_ELEMENT'],
-            pageTitle: 'niopdcgatewayApp.requestFilterElement.home.title'
+            pageTitle: 'samtagatewayApp.requestFilterElement.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -78,7 +78,7 @@ export const requestFilterElementPopupRoute: Routes = [
         component: RequestFilterElementPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_REQUEST_FILTER_ELEMENT'],
-            pageTitle: 'niopdcgatewayApp.requestFilterElement.home.title'
+            pageTitle: 'samtagatewayApp.requestFilterElement.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

@@ -38,22 +38,22 @@
                     <p-column [style]="{'width':'38px'}"></p-column>
                     <p-column field="sellPrice" [sortable]="true">
                         <ng-template pTemplate="header">
-                            <span jhiTranslate="niopdcgatewayApp.tagRate.sellPrice">Sell Price</span>
+                            <span jhiTranslate="samtagatewayApp.tagRate.sellPrice">Sell Price</span>
                         </ng-template>
                     </p-column>
                     <p-column field="startDate" [sortable]="true">
                         <ng-template pTemplate="header">
-                            <span jhiTranslate="niopdcgatewayApp.tagRate.startDate">Start Date</span>
+                            <span jhiTranslate="samtagatewayApp.tagRate.startDate">Start Date</span>
                         </ng-template>
                     </p-column>
                     <p-column field="finishDate" [sortable]="true">
                         <ng-template pTemplate="header">
-                            <span jhiTranslate="niopdcgatewayApp.tagRate.finishDate">Finish Date</span>
+                            <span jhiTranslate="samtagatewayApp.tagRate.finishDate">Finish Date</span>
                         </ng-template>
                     </p-column>
                     <p-column field="locationName" [sortable]="true">
                         <ng-template pTemplate="header">
-                            <span jhiTranslate="niopdcgatewayApp.tagRate.location">Location</span>
+                            <span jhiTranslate="samtagatewayApp.tagRate.location">Location</span>
                         </ng-template>
                     </p-column>
                 </p-row>
@@ -98,18 +98,18 @@
             </p-headerColumnGroup>
 
             <p-column [selectionMode]="multiSelect ? 'multiple' : 'single'"></p-column>
-            <p-column field="sellPrice" [header]="'niopdcgatewayApp.tagRate.sellPrice' | translate"></p-column>
-            <p-column field="startDate" [header]="'niopdcgatewayApp.tagRate.startDate' | translate">
+            <p-column field="sellPrice" [header]="'samtagatewayApp.tagRate.sellPrice' | translate"></p-column>
+            <p-column field="startDate" [header]="'samtagatewayApp.tagRate.startDate' | translate">
                 <ng-template let-item="rowData" pTemplate="body">
                     <span>{{item.startDate | dateTimeJalali}}</span>
                 </ng-template>
             </p-column>
-            <p-column field="finishDate" [header]="'niopdcgatewayApp.tagRate.finishDate' | translate">
+            <p-column field="finishDate" [header]="'samtagatewayApp.tagRate.finishDate' | translate">
                 <ng-template let-item="rowData" pTemplate="body">
                     <span>{{item.finishDate | dateTimeJalali}}</span>
                 </ng-template>
             </p-column>
-            <p-column field="locationName" [header]="'niopdcgatewayApp.tagRate.location' | translate"></p-column>
+            <p-column field="locationName" [header]="'samtagatewayApp.tagRate.location' | translate"></p-column>
         </p-dataTable>
     </div>
 </div>

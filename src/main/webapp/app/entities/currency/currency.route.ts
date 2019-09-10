@@ -35,7 +35,7 @@ export const currencyRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_CURRENCY'],
-            pageTitle: 'niopdcgatewayApp.currency.home.title'
+            pageTitle: 'samtagatewayApp.currency.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -47,7 +47,7 @@ export const currencyPopupRoute: Routes = [
         component: CurrencyPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'CREATE_CURRENCY'],
-            pageTitle: 'niopdcgatewayApp.currency.home.title'
+            pageTitle: 'samtagatewayApp.currency.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -57,7 +57,7 @@ export const currencyPopupRoute: Routes = [
         component: CurrencyPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'EDIT_CURRENCY'],
-            pageTitle: 'niopdcgatewayApp.currency.home.title'
+            pageTitle: 'samtagatewayApp.currency.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -67,7 +67,7 @@ export const currencyPopupRoute: Routes = [
         component: CurrencyDeletePopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'DELETE_CURRENCY'],
-            pageTitle: 'niopdcgatewayApp.currency.home.title'
+            pageTitle: 'samtagatewayApp.currency.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -77,7 +77,7 @@ export const currencyPopupRoute: Routes = [
         component: CurrencyPopupComponent,
         data: {
             authorities: ['ROLE_ADMIN', 'VIEW_CURRENCY'],
-            pageTitle: 'niopdcgatewayApp.currency.home.title'
+            pageTitle: 'samtagatewayApp.currency.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

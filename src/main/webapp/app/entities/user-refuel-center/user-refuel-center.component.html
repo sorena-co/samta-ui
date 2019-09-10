@@ -1,9 +1,9 @@
 <div>
     <h2>
-        <span jhiTranslate="niopdcgatewayApp.userRefuelCenter.home.title">User RefuelCenters</span>
+        <span jhiTranslate="samtagatewayApp.userRefuelCenter.home.title">User RefuelCenters</span>
         <button class="btn btn-primary float-right jh-create-entity create-user-refuel-center" [routerLink]="['/', { outlets: { popup: ['user-refuel-center-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="niopdcgatewayApp.userRefuelCenter.home.createLabel">
+            <span  jhiTranslate="samtagatewayApp.userRefuelCenter.home.createLabel">
             Create new User RefuelCenter
             </span>
         </button>
@@ -17,8 +17,8 @@
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="username"><span jhiTranslate="niopdcgatewayApp.userRefuelCenter.username">Username</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="accessType"><span jhiTranslate="niopdcgatewayApp.userRefuelCenter.accessType">Access Type</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="username"><span jhiTranslate="samtagatewayApp.userRefuelCenter.username">Username</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="accessType"><span jhiTranslate="samtagatewayApp.userRefuelCenter.accessType">Access Type</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>
@@ -26,7 +26,7 @@
             <tr *ngFor="let userRefuelCenter of userRefuelCenters ;trackBy: trackId">
                 <td><a [routerLink]="['../user-refuel-center', userRefuelCenter.id ]">{{userRefuelCenter.id}}</a></td>
                 <td>{{userRefuelCenter.username}}</td>
-                <td jhiTranslate="{{'niopdcgatewayApp.AccessType.' + userRefuelCenter.accessType}}">{{userRefuelCenter.accessType}}</td>
+                <td jhiTranslate="{{'samtagatewayApp.AccessType.' + userRefuelCenter.accessType}}">{{userRefuelCenter.accessType}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"

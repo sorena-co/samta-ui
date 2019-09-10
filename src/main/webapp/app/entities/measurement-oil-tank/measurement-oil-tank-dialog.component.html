@@ -1,12 +1,12 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 *ngIf="measurementOilTank.id==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.measurementOilTank.home.createLabel">
+        <h4 *ngIf="measurementOilTank.id==null" class="modal-title" id="createLabel" jhiTranslate="samtagatewayApp.measurementOilTank.home.createLabel">
             Create</h4>
         <h4 *ngIf="measurementOilTank.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.measurementOilTank.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.measurementOilTank.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.measurementOilTank.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.measurementOilTank.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -16,7 +16,7 @@
         <jhi-alert-error></jhi-alert-error>
         <div class="row">
             <div class="form-group">
-                <label class="form-control-label" jhiTranslate="niopdcgatewayApp.measurementOilTank.amount"
+                <label class="form-control-label" jhiTranslate="samtagatewayApp.measurementOilTank.amount"
                        for="field_amount">Amount</label>
                 <input [disabled]="isView" type="number" class="form-control" name="amount" id="field_amount"
                        [(ngModel)]="measurementOilTank.amount" required/>
@@ -35,7 +35,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.measurementOilTank.amountDeep"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.measurementOilTank.amountDeep"
                            for="field_amountDeep">Amount Deep</label>
                     <input [disabled]="isView" type="number" class="form-control" name="amountDeep"
                            id="field_amountDeep"
@@ -56,7 +56,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.measurementOilTank.registerDate"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.measurementOilTank.registerDate"
                            for="field_registerDate">Register Date</label>
                     <div class="d-flex">
                         <ng2-datetimepicker [disableTime]="true"[disabled]="isView" [rtlActive]="true" time="00:00:00" id="field_registerDate"
@@ -82,7 +82,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.measurementOilTank.oilTank"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.measurementOilTank.oilTank"
                            for="field_oilTank">Oil Tank</label>
                     <select class="form-control" id="field_oilTank" name="oilTank"
                             [(ngModel)]="measurementOilTank.oilTankId" required>

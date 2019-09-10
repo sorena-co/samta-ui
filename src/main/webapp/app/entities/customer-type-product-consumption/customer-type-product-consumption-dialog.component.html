@@ -1,12 +1,12 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 *ngIf="customerTypeProductConsumption.id==null" class="modal-title" id="createLabel" jhiTranslate="niopdcgatewayApp.customerTypeProductConsumption.home.createLabel">
+        <h4 *ngIf="customerTypeProductConsumption.id==null" class="modal-title" id="createLabel" jhiTranslate="samtagatewayApp.customerTypeProductConsumption.home.createLabel">
             Create</h4>
         <h4 *ngIf="customerTypeProductConsumption.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.customerTypeProductConsumption.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.customerTypeProductConsumption.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.customerTypeProductConsumption.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.customerTypeProductConsumption.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
 
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.customerTypeProductConsumption.product"
+                    <label jhiTranslate="samtagatewayApp.customerTypeProductConsumption.product"
                            for="field_product">Product</label>
                     <select [disabled]="isView" class="form-control" id="field_product" name="product"
                             [(ngModel)]="customerTypeProductConsumption.productId" required>
@@ -38,7 +38,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label jhiTranslate="niopdcgatewayApp.customerTypeProductConsumption.consumption"
+                    <label jhiTranslate="samtagatewayApp.customerTypeProductConsumption.consumption"
                            for="field_consumption">Consumption</label>
                     <select [disabled]="isView" class="form-control" id="field_consumption" name="consumption"
                             [(ngModel)]="customerTypeProductConsumption.consumptionId" required>

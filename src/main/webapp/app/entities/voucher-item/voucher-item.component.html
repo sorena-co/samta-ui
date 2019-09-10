@@ -1,9 +1,9 @@
 <div>
     <h2>
-        <span jhiTranslate="niopdcgatewayApp.voucherItem.home.title">Voucher Items</span>
+        <span jhiTranslate="samtagatewayApp.voucherItem.home.title">Voucher Items</span>
         <button class="btn btn-primary float-right jh-create-entity create-voucher-item" [routerLink]="['/', { outlets: { popup: ['voucher-item-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="niopdcgatewayApp.voucherItem.home.createLabel">
+            <span  jhiTranslate="samtagatewayApp.voucherItem.home.createLabel">
             Create new Voucher Item
             </span>
         </button>
@@ -17,16 +17,16 @@
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="rowNo"><span jhiTranslate="niopdcgatewayApp.voucherItem.rowNo">Row No</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="extra"><span jhiTranslate="niopdcgatewayApp.voucherItem.extra">Extra</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="special"><span jhiTranslate="niopdcgatewayApp.voucherItem.special">Special</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="credit"><span jhiTranslate="niopdcgatewayApp.voucherItem.credit">Credit</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="debit"><span jhiTranslate="niopdcgatewayApp.voucherItem.debit">Debit</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="description"><span jhiTranslate="niopdcgatewayApp.voucherItem.description">Description</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="accountNo"><span jhiTranslate="niopdcgatewayApp.voucherItem.accountNo">Account No</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="suffix"><span jhiTranslate="niopdcgatewayApp.voucherItem.suffix">Suffix</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="key"><span jhiTranslate="niopdcgatewayApp.voucherItem.key">Key</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="voucherMasterId"><span jhiTranslate="niopdcgatewayApp.voucherItem.voucherMaster">Voucher Master</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="rowNo"><span jhiTranslate="samtagatewayApp.voucherItem.rowNo">Row No</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="extra"><span jhiTranslate="samtagatewayApp.voucherItem.extra">Extra</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="special"><span jhiTranslate="samtagatewayApp.voucherItem.special">Special</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="credit"><span jhiTranslate="samtagatewayApp.voucherItem.credit">Credit</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="debit"><span jhiTranslate="samtagatewayApp.voucherItem.debit">Debit</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="description"><span jhiTranslate="samtagatewayApp.voucherItem.description">Description</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="accountNo"><span jhiTranslate="samtagatewayApp.voucherItem.accountNo">Account No</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="suffix"><span jhiTranslate="samtagatewayApp.voucherItem.suffix">Suffix</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="key"><span jhiTranslate="samtagatewayApp.voucherItem.key">Key</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="voucherMasterId"><span jhiTranslate="samtagatewayApp.voucherItem.voucherMaster">Voucher Master</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>

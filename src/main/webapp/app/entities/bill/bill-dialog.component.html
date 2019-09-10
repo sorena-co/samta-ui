@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bill.paymentPeriod"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.bill.paymentPeriod"
                            for="field_paymentPeriod">Payment Period</label>
                     <select
                         [disabled]="isView"
@@ -30,10 +30,10 @@
                         (ngModelChange)="paymentPeriodChanged($event)"
                     >
 
-                        <option value="DAY">{{'niopdcgatewayApp.PaymentPeriod.DAY' | translate}}</option>
-                        <option value="MONTH">{{'niopdcgatewayApp.PaymentPeriod.MONTH' | translate}}</option>
-                        <option value="SEASON">{{'niopdcgatewayApp.PaymentPeriod.SEASON' | translate}}</option>
-                        <option value="YEAR">{{'niopdcgatewayApp.PaymentPeriod.YEAR' | translate}}</option>
+                        <option value="DAY">{{'samtagatewayApp.PaymentPeriod.DAY' | translate}}</option>
+                        <option value="MONTH">{{'samtagatewayApp.PaymentPeriod.MONTH' | translate}}</option>
+                        <option value="SEASON">{{'samtagatewayApp.PaymentPeriod.SEASON' | translate}}</option>
+                        <option value="YEAR">{{'samtagatewayApp.PaymentPeriod.YEAR' | translate}}</option>
                     </select>
                     <div
                         [hidden]="!(editForm.controls.paymentPeriod?.dirty && editForm.controls.paymentPeriod?.invalid)">
@@ -47,7 +47,7 @@
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bill.day"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.bill.day"
                            for="field_day">Day</label>
                     <select [disabled]="isView || bill.paymentPeriod!='DAY'" class="form-control" name="day"
                             id="field_day"
@@ -76,63 +76,63 @@
             <div class="col-md-3">
                 <div class="form-group">
                     <label *ngIf="bill.paymentPeriod!='SEASON'" class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.bill.month"
+                           jhiTranslate="samtagatewayApp.bill.month"
                            for="field_month">Month</label>
                     <label *ngIf="bill.paymentPeriod=='SEASON'" class="form-control-label"
-                           jhiTranslate="niopdcgatewayApp.PaymentPeriod.SEASON"
+                           jhiTranslate="samtagatewayApp.PaymentPeriod.SEASON"
                            for="field_month">SEASON</label>
                     <select [disabled]="isView|| bill.paymentPeriod=='YEAR'" class="form-control" name="month"
                             (ngModelChange)="onChangeMonth($event)"
                             [(ngModel)]="bill.month" id="field_month" required>
-                        <option *ngIf="bill.paymentPeriod=='YEAR'" value="0">{{'niopdcgatewayApp.Month.1' |
+                        <option *ngIf="bill.paymentPeriod=='YEAR'" value="0">{{'samtagatewayApp.Month.1' |
                             translate}}
                         </option>
                         <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="0">
-                            {{'niopdcgatewayApp.Month.1' | translate}}
+                            {{'samtagatewayApp.Month.1' | translate}}
                         </option>
                         <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="1">
-                            {{'niopdcgatewayApp.Month.2' | translate}}
+                            {{'samtagatewayApp.Month.2' | translate}}
                         </option>
                         <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="2">
-                            {{'niopdcgatewayApp.Month.3' | translate}}
+                            {{'samtagatewayApp.Month.3' | translate}}
                         </option>
                         <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="3">
-                            {{'niopdcgatewayApp.Month.4' | translate}}
+                            {{'samtagatewayApp.Month.4' | translate}}
                         </option>
                         <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="4">
-                            {{'niopdcgatewayApp.Month.5' | translate}}
+                            {{'samtagatewayApp.Month.5' | translate}}
                         </option>
                         <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="5">
-                            {{'niopdcgatewayApp.Month.6' | translate}}
+                            {{'samtagatewayApp.Month.6' | translate}}
                         </option>
                         <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="6">
-                            {{'niopdcgatewayApp.Month.7' | translate}}
+                            {{'samtagatewayApp.Month.7' | translate}}
                         </option>
                         <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="7">
-                            {{'niopdcgatewayApp.Month.8' | translate}}
+                            {{'samtagatewayApp.Month.8' | translate}}
                         </option>
                         <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="8">
-                            {{'niopdcgatewayApp.Month.9' | translate}}
+                            {{'samtagatewayApp.Month.9' | translate}}
                         </option>
                         <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="9">
-                            {{'niopdcgatewayApp.Month.10' | translate}}
+                            {{'samtagatewayApp.Month.10' | translate}}
                         </option>
                         <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="10">
-                            {{'niopdcgatewayApp.Month.11' | translate}}
+                            {{'samtagatewayApp.Month.11' | translate}}
                         </option>
                         <option *ngIf="bill.paymentPeriod=='MONTH' || bill.paymentPeriod=='DAY'" value="11">
-                            {{'niopdcgatewayApp.Month.12' | translate}}
+                            {{'samtagatewayApp.Month.12' | translate}}
                         </option>
-                        <option *ngIf="bill.paymentPeriod=='SEASON'" value="2">{{'niopdcgatewayApp.Month.spring' |
+                        <option *ngIf="bill.paymentPeriod=='SEASON'" value="2">{{'samtagatewayApp.Month.spring' |
                             translate}}
                         </option>
-                        <option *ngIf="bill.paymentPeriod=='SEASON'" value="5">{{'niopdcgatewayApp.Month.summer' |
+                        <option *ngIf="bill.paymentPeriod=='SEASON'" value="5">{{'samtagatewayApp.Month.summer' |
                             translate}}
                         </option>
-                        <option *ngIf="bill.paymentPeriod=='SEASON'" value="8">{{'niopdcgatewayApp.Month.autumn' |
+                        <option *ngIf="bill.paymentPeriod=='SEASON'" value="8">{{'samtagatewayApp.Month.autumn' |
                             translate}}
                         </option>
-                        <option *ngIf="bill.paymentPeriod=='SEASON'" value="11">{{'niopdcgatewayApp.Month.winter' |
+                        <option *ngIf="bill.paymentPeriod=='SEASON'" value="11">{{'samtagatewayApp.Month.winter' |
                             translate}}
                         </option>
                     </select>
@@ -148,7 +148,7 @@
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bill.year"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.bill.year"
                            for="field_year">Year</label>
                     <select [disabled]="isView" class="form-control" name="year" id="field_year"
                             [(ngModel)]="bill.year"
@@ -178,7 +178,7 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bill.customerId"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.bill.customerId"
                            for="field_customerSellContracts">Customer Id</label>
                     <sell-contract-customer-selector
                         [selectObject]="true"
@@ -203,7 +203,7 @@
             </div>
             <!-- <div class="col-md-3">
                  <div class="form-group">
-                     <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bill.sellContractId"
+                     <label class="form-control-label" jhiTranslate="samtagatewayApp.bill.sellContractId"
                             for="field_sellContractId">Sell Contract Id</label>
                      <input [disabled]="isView" type="number" class="form-control" name="sellContractId"
                             id="field_sellContractId"
@@ -225,7 +225,7 @@
              </div>-->
             <div class="col-md-3">
                 <div *ngIf="bill.totalPrice!=null" class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.bill.totalPrice"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.bill.totalPrice"
                            for="field_totalPrice">Total Price</label>
                     <input [disabled]="true" type="number" class="form-control" name="totalPrice"
                            id="field_totalPrice"

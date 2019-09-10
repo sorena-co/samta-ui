@@ -91,7 +91,7 @@ export class RateGroupDialogComponent implements OnInit {
         this.contractTypes = [];
         this.allContractTypes.forEach((value: ContractType) => {
 
-            this.translateService.get('niopdcgatewayApp.ContractType.' + value).subscribe((title) => {
+            this.translateService.get('samtagatewayApp.ContractType.' + value).subscribe((title) => {
                 const newVar = {
                     label: title,
                     'value': value

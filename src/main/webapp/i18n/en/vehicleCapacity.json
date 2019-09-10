@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "vehicleCapacity" : {
             "home": {
                 "title": "Vehicle Capacities",

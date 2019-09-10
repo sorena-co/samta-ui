@@ -2,12 +2,12 @@
 
     <div class="modal-header">
         <h4 *ngIf="country.id==null" class="modal-title" id="createLabel"
-            jhiTranslate="niopdcgatewayApp.country.home.createLabel">
+            jhiTranslate="samtagatewayApp.country.home.createLabel">
             Create</h4>
         <h4 *ngIf="country.id!=null && !isView" class="modal-title" id="editLabel"
-            jhiTranslate="niopdcgatewayApp.country.home.createOrEditLabel">
+            jhiTranslate="samtagatewayApp.country.home.createOrEditLabel">
             Edit</h4>
-        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="niopdcgatewayApp.country.home.view">
+        <h4 *ngIf="isView" class="modal-title" id="viewLabel" jhiTranslate="samtagatewayApp.country.home.view">
             View</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.country.name"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.country.name"
                            for="field_name">Name</label>
                     <input [disabled]="isView" type="text" class="form-control" name="name" id="field_name"
                            [(ngModel)]="country.name"
@@ -44,7 +44,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.country.code"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.country.code"
                            for="field_code">Code</label>
                     <input [disabled]="isView" type="text" class="form-control" name="code" id="field_code"
                            [(ngModel)]="country.code"
@@ -74,7 +74,7 @@
                     <input [disabled]="isView" type="checkbox" class="form-control" name="checkNationalCode"
                            id="field_checkNationalCode"
                            [(ngModel)]="country.checkNationalCode"/>
-                    <label class="form-control-label" jhiTranslate="niopdcgatewayApp.country.checkNationalCode"
+                    <label class="form-control-label" jhiTranslate="samtagatewayApp.country.checkNationalCode"
                            for="field_checkNationalCode">Check National Code</label>
                 </div>
             </div>

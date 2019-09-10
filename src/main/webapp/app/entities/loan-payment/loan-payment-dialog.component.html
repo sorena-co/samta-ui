@@ -1,7 +1,7 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="myLoanPaymentLabel" jhiTranslate="niopdcgatewayApp.loanPayment.home.createOrEditLabel">Create or edit a Loan Payment</h4>
+        <h4 class="modal-title" id="myLoanPaymentLabel" jhiTranslate="samtagatewayApp.loanPayment.home.createOrEditLabel">Create or edit a Loan Payment</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;</button>
     </div>
@@ -13,7 +13,7 @@
                    [(ngModel)]="loanPayment.id" readonly />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loanPayment.paymentId" for="field_paymentId">Payment Id</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.loanPayment.paymentId" for="field_paymentId">Payment Id</label>
             <input type="number" class="form-control" name="paymentId" id="field_paymentId"
                 [(ngModel)]="loanPayment.paymentId" required/>
             <div [hidden]="!(editForm.controls.paymentId?.dirty && editForm.controls.paymentId?.invalid)">
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loanPayment.price" for="field_price">Price</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.loanPayment.price" for="field_price">Price</label>
             <input type="number" class="form-control" name="price" id="field_price"
                 [(ngModel)]="loanPayment.price" required/>
             <div [hidden]="!(editForm.controls.price?.dirty && editForm.controls.price?.invalid)">
@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loanPayment.data" for="field_data">Data</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.loanPayment.data" for="field_data">Data</label>
             <div class="d-flex">
                 <input id="field_data" type="datetime-local" class="form-control" name="data" [(ngModel)]="loanPayment.data"
                 required/>
@@ -61,7 +61,7 @@
         </div>
 
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loanPayment.loan" for="field_loan">Loan</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.loanPayment.loan" for="field_loan">Loan</label>
             <select class="form-control" id="field_loan" name="loan" [(ngModel)]="loanPayment.loanId"  required>
                 <option *ngIf="!editForm.value.loan" [ngValue]="null" selected></option>
                 <option [ngValue]="loanOption.id" *ngFor="let loanOption of loans; trackBy: trackLoanById">{{loanOption.id}}</option>
@@ -74,7 +74,7 @@
             </small>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="niopdcgatewayApp.loanPayment.billItem" for="field_billItem">Bill Item</label>
+            <label class="form-control-label" jhiTranslate="samtagatewayApp.loanPayment.billItem" for="field_billItem">Bill Item</label>
             <select class="form-control" id="field_billItem" name="billItem" [(ngModel)]="loanPayment.billItemId" >
                 <option [ngValue]="null"></option>
                 <option [ngValue]="billItemOption.id" *ngFor="let billItemOption of billitems; trackBy: trackBillItemById">{{billItemOption.id}}</option>

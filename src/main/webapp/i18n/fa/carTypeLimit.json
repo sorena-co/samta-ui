@@ -1,6 +1,6 @@
 
 {
-    "niopdcgatewayApp": {
+    "samtagatewayApp": {
         "carTypeLimit" : {
             "home": {
                 "title": "محدودیت های عبور",

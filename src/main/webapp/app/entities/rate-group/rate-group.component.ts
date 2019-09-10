@@ -133,7 +133,7 @@ export class RateGroupComponent implements OnInit, OnDestroy {
         this.translateService.get('global.menu.home').subscribe((title) => {
             this.breadcrumbItems.push({label: title, routerLink: ['/']});
         });
-        this.translateService.get('niopdcgatewayApp.rateGroup.home.title').subscribe((title) => {
+        this.translateService.get('samtagatewayApp.rateGroup.home.title').subscribe((title) => {
             this.breadcrumbItems.push({label: title});
         });
     }

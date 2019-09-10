@@ -33,7 +33,7 @@ export const tagRateRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_ADMIN', 'LIST_TAG_RATE'],
-            pageTitle: 'niopdcgatewayApp.tagRate.home.title'
+            pageTitle: 'samtagatewayApp.tagRate.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -45,7 +45,7 @@ export const tagRatePopupRoute: Routes = [
     component: TagRatePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','CREATE_TAG_RATE'],
-        pageTitle: 'niopdcgatewayApp.tagRate.home.title'
+        pageTitle: 'samtagatewayApp.tagRate.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -55,7 +55,7 @@ export const tagRatePopupRoute: Routes = [
     component: TagRatePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','EDIT_TAG_RATE'],
-        pageTitle: 'niopdcgatewayApp.tagRate.home.title'
+        pageTitle: 'samtagatewayApp.tagRate.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -65,7 +65,7 @@ export const tagRatePopupRoute: Routes = [
     component: TagRateDeletePopupComponent,
     data: {
         authorities: ['ROLE_ADMIN','DELETE_TAG_RATE'],
-        pageTitle: 'niopdcgatewayApp.tagRate.home.title'
+        pageTitle: 'samtagatewayApp.tagRate.home.title'
     },
     canActivate: [UserRouteAccessService],
     outlet: 'popup'
@@ -75,7 +75,7 @@ export const tagRatePopupRoute: Routes = [
       component: TagRatePopupComponent,
       data: {
           authorities: ['ROLE_ADMIN','VIEW_TAG_RATE'],
-          pageTitle: 'niopdcgatewayApp.tagRate.home.title'
+          pageTitle: 'samtagatewayApp.tagRate.home.title'
       },
       canActivate: [UserRouteAccessService],
       outlet: 'popup'
