@@ -40,7 +40,7 @@ eureka:
         prefer-ip-address: true
     client:
         service-url:
-            defaultZone: http://admin:${jhipster.registry.password}@172.17.66.13:9090/eureka/
+            defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
 
 spring:
     devtools:
@@ -50,9 +50,9 @@ spring:
             enabled: false
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:sqlserver://172.17.66.10:1433;database=samtagateway_demo
-        username: SA
-        password: 123456aA
+        url: jdbc:postgresql://localhost:5432/samtagateway
+        username: postgres
+        password: 90630690
         hikari:
             data-source-properties:
                 cachePrepStmts: true
